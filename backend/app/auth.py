@@ -16,7 +16,7 @@ from sqlalchemy.orm import Session
 
 from app.config import get_settings
 from app.database import get_db
-from app.models import User
+from app.models import RefreshSession, User
 
 security = HTTPBearer(auto_error=False)
 
@@ -92,6 +92,49 @@ def decode_access_token(token: str) -> dict[str, Any]:
             detail='Token inválido ou expirado',
             headers={'WWW-Authenticate': 'Bearer'},
         ) from exc
+
+
+def create_refresh_token(db: Session, user_id: int, *, days: int = 3650) -> str:
+    raw = secrets.token_urlsafe(48)
+    token_hash = hashlib.sha256(raw.encode('utf-8')).hexdigest()
+    now = datetime.utcnow()
+    session = RefreshSession(
+        user_id=user_id,
+        token_hash=token_hash,
+        created_at=now,
+        expires_at=now + timedelta(days=days),
+    )
+    db.add(session)
+    db.commit()
+    return raw
+
+
+def exchange_refresh_token(db: Session, raw_token: str) -> tuple[str, User]:
+    token_hash = hashlib.sha256(raw_token.encode('utf-8')).hexdigest()
+    session = db.execute(
+        select(RefreshSession).where(RefreshSession.token_hash == token_hash)
+    ).scalar_one_or_none()
+    now = datetime.utcnow()
+    if session is None or session.revoked_at is not None or session.expires_at <= now:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Refresh token inválido ou expirado')
+
+    # Keep a remembered device eligible for a long-lived session after a successful refresh.
+    session.expires_at = now + timedelta(days=3650)
+    db.commit()
+    user = db.execute(select(User).where(User.id == session.user_id)).scalar_one_or_none()
+    if user is None or not user.is_active:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Usuário inválido ou inativo')
+    return create_access_token(user.id), user
+
+
+def revoke_refresh_token(db: Session, raw_token: str) -> None:
+    token_hash = hashlib.sha256(raw_token.encode('utf-8')).hexdigest()
+    session = db.execute(
+        select(RefreshSession).where(RefreshSession.token_hash == token_hash)
+    ).scalar_one_or_none()
+    if session is not None and session.revoked_at is None:
+        session.revoked_at = datetime.utcnow()
+        db.commit()
 
 
 def get_current_user(

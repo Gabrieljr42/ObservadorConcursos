@@ -1,35 +1,41 @@
 {
-  "generated_at": "2026-08-30T03:11:04.584609+00:00",
-  "code_revision": "final-audit-independent-evidence-2026-08-29",
-  "evidence_policy": "MATCH requires an independently observed official value; crawler-only values are UNKNOWN",
+  "generated_at": "2026-08-30T13:26:49.790033+00:00",
+  "code_revision": "separated-independent-metrics-2026-08-30",
+  "evidence_policy": "Observed, relevant and active-valid counts come only from independent portal evidence; processed is crawler output and never fills an unknown metric. visible_valid_items is deprecated.",
   "summary": {
     "total_sources": 99,
-    "success": 42,
-    "empty_valid": 16,
+    "success": 38,
+    "empty_valid": 19,
     "blocked": 3,
-    "failed": 3,
+    "failed": 4,
     "degraded": 35,
     "crawler_status_counts": {
-      "success": 42,
-      "empty_valid": 16,
+      "success": 38,
+      "empty_valid": 19,
       "blocked": 3,
-      "failed": 3,
+      "failed": 4,
       "degraded": 35
     },
     "verification_status_counts": {
-      "VERIFIED": 23,
-      "EMPTY_VERIFIED": 14,
+      "VERIFIED": 8,
+      "EMPTY_VERIFIED": 16,
       "BLOCKED": 5,
-      "FAILED_EXTERNAL": 3,
-      "PARTIAL": 0,
+      "FAILED_EXTERNAL": 4,
+      "PARTIAL": 1,
       "BROKEN": 0,
-      "NOT_AUDITED": 54
+      "NOT_AUDITED": 65
     },
     "total_candidates": 578,
-    "total_processed": 271,
+    "total_processed": 265,
     "total_visible_valid_items": 541,
-    "total_items": 271,
-    "duration_seconds": 675.28
+    "total_items": 265,
+    "duration_seconds": 674.3,
+    "total_items_observed": 559,
+    "total_relevant_items_known": 109,
+    "total_active_valid_items_known": 3,
+    "coverage_rate_known_sources": 0.6667,
+    "coverage_sources_known": 6,
+    "metric_inconsistencies": 0
   },
   "sources": [
     {
@@ -57,16 +63,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "Inscrições abertas: nenhum item cadastrado",
+          "source": "https://concursos.ibfc.org.br/index/abertos/"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://concursos.ibfc.org.br/index/abertos/"
       ],
-      "duration_seconds": 2.45,
+      "duration_seconds": 2.39,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 2,
@@ -89,16 +111,28 @@
       "empty_evidence": true,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": true
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://portal.concursos.idecan.org.br/edital/index/abertos"
       ],
-      "duration_seconds": 1.38,
+      "duration_seconds": 1.39,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 5,
+      "visible_relevant_items": 5,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "Official tabs showed 0 in registration, 3 in progress and 2 finalized.",
+        "observed_basis": "five unique official detail links",
+        "relevant_basis": "all five are public contests or selections",
+        "active_basis": "official registration tab explicitly empty"
+      }
     },
     {
       "index": 3,
@@ -121,16 +155,26 @@
       "empty_evidence": null,
       "error_type": "CloudflareChallenge",
       "error_message": "Site protected by Cloudflare challenge / WAF",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.institutoaocp.org.br"
       ],
-      "duration_seconds": 20.09,
+      "duration_seconds": 20.39,
       "audit_notes": [
         "HTTPStatusError: Client error '403 Forbidden' for url 'https://www.institutoaocp.org.br'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 4,
@@ -142,7 +186,7 @@
       "base_url": "https://www.consulpam.com.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -157,6 +201,21 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "warning",
+            "code": "proof_before_notice",
+            "field": "prova_data",
+            "message": "Data da prova é anterior à data do edital"
+          }
+        ],
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=835",
+          "source": "https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=835"
+        }
+      },
       "sample": {
         "expected": {
           "link_edital": "https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf"
@@ -179,7 +238,7 @@
           "edital_numero": "003/2026",
           "edital_data": "2026-09-09T00:00:00+00:00",
           "inscricao_inicio": "2026-08-21T00:00:00+00:00",
-          "inscricao_fim": "2026-09-09T00:00:00+00:00",
+          "inscricao_fim": "2026-09-09T23:59:00+00:00",
           "link_pagina": "https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=870",
           "link_edital": "https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf",
           "link_inscricao": null
@@ -233,7 +292,7 @@
           "https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:05:34.155196+00:00"
+        "observed_at": "2026-08-30T13:21:22.274584+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -283,7 +342,19 @@
         "https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=870",
         "https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf"
       ],
-      "duration_seconds": 346.47
+      "duration_seconds": 354.75,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 9,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 5,
@@ -306,6 +377,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_inscricao": "https://www.ibam-concursos.org.br/candidato.asp"
@@ -371,7 +443,7 @@
           "https://www.ibam-concursos.org.br/inscricao.asp?task=novo&cod=374&car=1769"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:05:40.295992+00:00"
+        "observed_at": "2026-08-30T13:21:56.224145+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -410,10 +482,19 @@
         "https://www.ibam-concursos.org.br",
         "https://www.ibam-concursos.org.br/inscricao.asp?task=novo&cod=374&car=1769"
       ],
-      "duration_seconds": 357.55,
+      "duration_seconds": 390.16,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 6,
@@ -425,7 +506,7 @@
       "base_url": "https://portal.ibade.selecao.site",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -436,6 +517,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_edital": "https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf",
@@ -541,7 +623,7 @@
           "https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:01:05.540336+00:00"
+        "observed_at": "2026-08-30T13:16:45.881939+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -619,7 +701,19 @@
         "https://portal.ibade.selecao.site/edital/ver/126",
         "https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf"
       ],
-      "duration_seconds": 96.08
+      "duration_seconds": 98.55,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 6,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 7,
@@ -646,16 +740,32 @@
       },
       "error_type": "CloudflareChallenge",
       "error_message": "Site protected by Cloudflare challenge / WAF",
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Consulplan portal currently has zero active registrations open",
+          "source": "https://www.consulplan.net"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.consulplan.net"
       ],
-      "duration_seconds": 14.55,
+      "duration_seconds": 14.94,
       "audit_notes": [
         "HTTPStatusError: Client error '403 Forbidden' for url 'https://www.consulplan.net'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 8,
@@ -678,17 +788,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.seprod.com.br/concursos/?utm_refererencia=em_andamento"
       ],
-      "duration_seconds": 1.81,
+      "duration_seconds": 10.77,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 9,
@@ -700,7 +822,7 @@
       "base_url": "https://www.concursosfcc.com.br",
       "status": "empty_valid",
       "crawler_status": "empty_valid",
-      "verification_status": "EMPTY_VERIFIED",
+      "verification_status": "PARTIAL",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -715,16 +837,50 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Evaluated FCC candidate https://www.concursosfcc.com.br/concursos/semef125/index.html whose registration window has ended",
+          "source": "https://www.concursosfcc.com.br/concursos/semef125/index.html"
+        },
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          }
+        ],
+        "sanity_rejections": [
+          {
+            "title": "Secretaria da Fazenda do Estado do Ceará",
+            "link_pagina": "https://www.concursosfcc.com.br/concursos/sface125/index.html",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          }
+        ]
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.concursosfcc.com.br/concursoAndamento.html"
       ],
-      "duration_seconds": 169.5,
+      "duration_seconds": 179.11,
       "audit_notes": [
-        "crawler sample has no official detail URL"
-      ]
+        "crawler sample has no official detail URL",
+        "Verification status changed to PARTIAL: independent active count is greater than zero"
+      ],
+      "visible_items_observed": 37,
+      "visible_relevant_items": 33,
+      "visible_active_valid_items": 1,
+      "metric_evidence": {
+        "basis": "37 unique official contest detail links; 2 vestibular and 2 CFP certification entries excluded from product scope; PM/PI detail had open registrations.",
+        "observed_basis": "unique /concursos/*/index.html links",
+        "relevant_basis": "public contests/processes, excluding vestibular and certification",
+        "active_basis": "one relevant PM/PI detail explicitly showed open registrations"
+      }
     },
     {
       "index": 10,
@@ -751,6 +907,13 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://conhecimento.fgv.br/concursos/pmesqos2022",
+          "source": "https://conhecimento.fgv.br/concursos/pmesqos2022"
+        }
+      },
       "sample": {
         "expected": {
           "titulo": "Concurso Público para a Prefeitura Municipal do Salvador 2026",
@@ -858,11 +1021,20 @@
         "https://conhecimento.fgv.br/concursos/pms2026",
         "https://conhecimento.fgv.br/sites/default/files/concursos/edital-preliminar-pref-salvador-prof-e-coordenador-academico-01.2026-09.07-ret2.pdf"
       ],
-      "duration_seconds": 228.99,
+      "duration_seconds": 240.95,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": 33,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 11,
@@ -885,6 +1057,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {},
         "actual": {
@@ -951,7 +1124,7 @@
           "https://www.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T02:59:58.181942+00:00"
+        "observed_at": "2026-08-30T13:15:44.147757+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -993,10 +1166,19 @@
         "https://www.cebraspe.org.br/concursos/",
         "https://www.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26"
       ],
-      "duration_seconds": 9.25,
+      "duration_seconds": 9.41,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 12,
@@ -1006,126 +1188,98 @@
       "category": "banca",
       "url": "https://www.cesgranrio.org.br/concursos/",
       "base_url": "https://www.cesgranrio.org.br",
-      "status": "success",
-      "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "status": "degraded",
+      "crawler_status": "degraded",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": 4,
       "candidates_found": 4,
-      "candidates_rejected": 0,
-      "processed": 4,
+      "candidates_rejected": 4,
+      "processed": 0,
       "empty_evidence": null,
-      "error_type": null,
-      "error_message": null,
-      "sample": {
-        "expected": {
-          "titulo": "Concurso Transpetro 2026",
-          "link_pagina": "https://www.cesgranrio.org.br/concurso/transpetro-2026/",
-          "link_inscricao": "https://concursos.cesgranrio.org.br/portal/avaliacoes/22"
-        },
-        "actual": {
-          "titulo": "Concurso Transpetro 2026",
-          "orgao": null,
-          "modalidade": "Processo Seletivo",
-          "cargo": "Vários cargos",
-          "area": "saude",
-          "cidade": "Inscreva",
-          "uf": "SE",
-          "status": "Em andamento",
-          "vagas": 281,
-          "salario_min": 15034.81,
-          "salario_max": 15034.81,
-          "escolaridade": null,
-          "taxa": 117.0,
-          "prova_data": null,
-          "edital_numero": null,
-          "edital_data": null,
-          "inscricao_inicio": "2026-11-29T00:00:00+00:00",
-          "inscricao_fim": "2026-09-14T00:00:00+00:00",
-          "link_pagina": "https://www.cesgranrio.org.br/concurso/transpetro-2026/",
-          "link_edital": null,
-          "link_inscricao": "https://concursos.cesgranrio.org.br/portal/avaliacoes/22"
-        },
-        "field_audit": {
-          "titulo": "MATCH",
-          "orgao": "UNKNOWN",
-          "modalidade": "UNKNOWN",
-          "cargo": "UNKNOWN",
-          "area": "UNKNOWN",
-          "cidade": "UNKNOWN",
-          "uf": "UNKNOWN",
-          "status": "UNKNOWN",
-          "vagas": "UNKNOWN",
-          "salario_min": "UNKNOWN",
-          "salario_max": "UNKNOWN",
-          "escolaridade": "UNKNOWN",
-          "taxa": "UNKNOWN",
-          "prova_data": "UNKNOWN",
-          "edital_numero": "UNKNOWN",
-          "edital_data": "UNKNOWN",
-          "inscricao_inicio": "UNKNOWN",
-          "inscricao_fim": "UNKNOWN",
-          "link_pagina": "MATCH",
-          "link_edital": "UNKNOWN",
-          "link_inscricao": "MATCH"
-        },
-        "publication_audit": {
-          "status": "UNKNOWN",
-          "expected_count": 0,
-          "actual_count": 0,
-          "expected_titles": [],
-          "actual_titles": [],
-          "invalid_actual_titles": [],
-          "missing_titles": [],
-          "missing_links": []
-        },
-        "evidence_urls": [
-          "https://www.cesgranrio.org.br/concursos/",
-          "https://www.cesgranrio.org.br/concurso/transpetro-2026/"
+      "error_type": "AllCandidatesRejected",
+      "error_message": "All 4 candidates were rejected by the quality gate",
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          },
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          },
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          },
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          }
         ],
-        "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:52.529666+00:00"
+        "sanity_rejections": [
+          {
+            "title": "Concurso Transpetro 2026",
+            "link_pagina": "https://www.cesgranrio.org.br/concurso/transpetro-2026/",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          },
+          {
+            "title": "Banco do Estado do Sergipe – BANESE – Cesgranrio",
+            "link_pagina": "https://www.cesgranrio.org.br/concurso/banco-do-estado-do-sergipe-banese/",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          },
+          {
+            "title": "Banco da Amazônia – BASA – Cesgranrio",
+            "link_pagina": "https://www.cesgranrio.org.br/concurso/basa/",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          },
+          {
+            "title": "Banco Nacional de Desenvolvimento Econômico e Social – BNDES – Cesgranrio",
+            "link_pagina": "https://www.cesgranrio.org.br/concurso/bndes/",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          }
+        ],
+        "empty_evidence": null
       },
-      "field_audit": {
-        "titulo": "MATCH",
-        "orgao": "UNKNOWN",
-        "modalidade": "UNKNOWN",
-        "cargo": "UNKNOWN",
-        "area": "UNKNOWN",
-        "cidade": "UNKNOWN",
-        "uf": "UNKNOWN",
-        "status": "UNKNOWN",
-        "vagas": "UNKNOWN",
-        "salario_min": "UNKNOWN",
-        "salario_max": "UNKNOWN",
-        "escolaridade": "UNKNOWN",
-        "taxa": "UNKNOWN",
-        "prova_data": "UNKNOWN",
-        "edital_numero": "UNKNOWN",
-        "edital_data": "UNKNOWN",
-        "inscricao_inicio": "UNKNOWN",
-        "inscricao_fim": "UNKNOWN",
-        "link_pagina": "MATCH",
-        "link_edital": "UNKNOWN",
-        "link_inscricao": "MATCH"
-      },
-      "publication_audit": {
-        "status": "UNKNOWN",
-        "expected_count": 0,
-        "actual_count": 0,
-        "expected_titles": [],
-        "actual_titles": [],
-        "invalid_actual_titles": [],
-        "missing_titles": [],
-        "missing_links": []
-      },
+      "sample": null,
+      "field_audit": null,
+      "publication_audit": null,
       "evidence_urls": [
-        "https://www.cesgranrio.org.br/concursos/",
-        "https://www.cesgranrio.org.br/concurso/transpetro-2026/"
+        "https://www.cesgranrio.org.br/concursos/"
       ],
-      "duration_seconds": 75.76
+      "duration_seconds": 54.73,
+      "audit_notes": [
+        "crawler sample has no official detail URL",
+        "NOT_AUDITED_REASON: crawler_status=degraded"
+      ],
+      "visible_items_observed": 4,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 13,
@@ -1152,16 +1306,62 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "rejections": [
+          {
+            "url": "https://www.idcap.org.br/informacoes/251/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/252/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/235/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/249/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/238/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/233/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.idcap.org.br/informacoes/223/",
+            "reason": "quality_gate"
+          }
+        ],
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://www.idcap.org.br/informacoes/224/",
+          "source": "https://www.idcap.org.br/informacoes/224/"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.idcap.org.br"
       ],
-      "duration_seconds": 232.92,
+      "duration_seconds": 229.5,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 60,
+      "visible_relevant_items": 51,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "The broad official listing exposed 60 unique details; 7 private/OGMO, 1 vestibular and 1 social-course entry were outside product scope; open-registration tab had no item.",
+        "observed_basis": "unique /informacoes/* links on /index/1",
+        "relevant_basis": "public contests and selections after explicit scope exclusions",
+        "active_basis": "official /index/abertos page said no item registered"
+      }
     },
     {
       "index": 14,
@@ -1184,6 +1384,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {},
         "actual": {
@@ -1256,7 +1457,7 @@
           "https://novo.ibgpconcursos.com.br/concurso.jsp?cod=704"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:13.596738+00:00"
+        "observed_at": "2026-08-30T13:15:59.427641+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -1304,10 +1505,19 @@
         "https://novo.ibgpconcursos.com.br/inscricoes_abertas.jsp",
         "https://novo.ibgpconcursos.com.br/concurso.jsp?cod=704"
       ],
-      "duration_seconds": 24.92,
+      "duration_seconds": 24.84,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 15,
@@ -1319,7 +1529,7 @@
       "base_url": "https://www.gestaodeconcursos.com.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -1330,6 +1540,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
@@ -1353,7 +1564,7 @@
           "edital_numero": "01/2026",
           "edital_data": "2026-08-17T00:00:00+00:00",
           "inscricao_inicio": "2026-10-19T00:00:00+00:00",
-          "inscricao_fim": "2026-11-18T00:00:00+00:00",
+          "inscricao_fim": "2026-11-18T23:59:00+00:00",
           "link_pagina": "https://fundep.selecao.net.br/informacoes/72/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
           "link_inscricao": "https://gestaodeconcursos.com.br/candidato/CadastroCandidato.aspx"
@@ -1401,7 +1612,7 @@
           "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:27.332245+00:00"
+        "observed_at": "2026-08-30T13:16:12.836107+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -1445,7 +1656,19 @@
         "https://fundep.selecao.net.br/informacoes/72/",
         "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf"
       ],
-      "duration_seconds": 28.05
+      "duration_seconds": 26.17,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 16,
@@ -1468,6 +1691,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {},
         "actual": {
@@ -1550,7 +1774,7 @@
           "https://www.fumarc.com.br/SitePages/Home.aspx?concurso=54&secao=-1"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:28.608754+00:00"
+        "observed_at": "2026-08-30T13:16:15.914197+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -1608,10 +1832,19 @@
         "https://www.fumarc.com.br/SitePages/Home.aspx",
         "https://www.fumarc.com.br/SitePages/Home.aspx?concurso=54&secao=-1"
       ],
-      "duration_seconds": 27.38,
+      "duration_seconds": 27.12,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 17,
@@ -1623,7 +1856,7 @@
       "base_url": "https://portal.imeso.com.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -1634,6 +1867,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_edital": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/134/43830bf553934703208822752bf8293a.pdf",
@@ -1705,7 +1939,7 @@
           "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/134/43830bf553934703208822752bf8293a.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:47.885726+00:00"
+        "observed_at": "2026-08-30T13:16:32.876316+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -1749,7 +1983,19 @@
         "https://portal.imeso.com.br/edital/ver/134",
         "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/134/43830bf553934703208822752bf8293a.pdf"
       ],
-      "duration_seconds": 36.03
+      "duration_seconds": 33.09,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 18,
@@ -1772,6 +2018,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Concurso Público - 002/2024 - Prefeitura Municipal de Papanduva - SC",
@@ -1798,7 +2045,7 @@
           "edital_numero": "002/2024",
           "edital_data": "2024-09-03T00:00:00+00:00",
           "inscricao_inicio": "2024-07-16T00:00:00+00:00",
-          "inscricao_fim": "2024-09-12T00:00:00+00:00",
+          "inscricao_fim": "2024-09-12T23:59:00+00:00",
           "link_pagina": "https://portal.omniconcursospublicos.com.br/informacoes/239/",
           "link_edital": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf",
           "link_inscricao": null
@@ -1934,7 +2181,7 @@
           "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:51.738593+00:00"
+        "observed_at": "2026-08-30T13:16:38.491390+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2066,7 +2313,16 @@
         "https://portal.omniconcursospublicos.com.br/informacoes/239/",
         "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf"
       ],
-      "duration_seconds": 29.88
+      "duration_seconds": 28.28,
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 19,
@@ -2089,6 +2345,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Prefeitura Municipal de Guapimirim/RJ",
@@ -2115,7 +2372,7 @@
           "edital_numero": "1/2026",
           "edital_data": "2026-07-20T00:00:00+00:00",
           "inscricao_inicio": "2026-07-21T00:00:00+00:00",
-          "inscricao_fim": "2026-09-10T00:00:00+00:00",
+          "inscricao_fim": "2026-09-10T23:59:00+00:00",
           "link_pagina": "https://access.selecao.net.br/informacoes/180/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/422/concursos/180/anexos/f2daed72-249a-4291-b551-f71889d13986.pdf",
           "link_inscricao": "https://access.selecao.net.br/login/sair/?redir=%2Ftermo%2F180%2F"
@@ -2171,7 +2428,7 @@
           "https://anexos-r2.selecao.net.br/uploads/422/concursos/180/anexos/f2daed72-249a-4291-b551-f71889d13986.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:00:56.065843+00:00"
+        "observed_at": "2026-08-30T13:16:43.940387+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2223,7 +2480,16 @@
         "https://access.selecao.net.br/informacoes/180/",
         "https://anexos-r2.selecao.net.br/uploads/422/concursos/180/anexos/f2daed72-249a-4291-b551-f71889d13986.pdf"
       ],
-      "duration_seconds": 28.25
+      "duration_seconds": 24.64,
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 20,
@@ -2235,9 +2501,9 @@
       "base_url": "https://concursos.exameconsultores.com.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
-      "browser_used": true,
+      "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": 4,
       "candidates_found": 6,
@@ -2246,6 +2512,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "P.M. de Santana de Pirapama - Concurso Público",
@@ -2270,7 +2537,7 @@
           "edital_numero": "01/2026",
           "edital_data": "2026-08-10T00:00:00+00:00",
           "inscricao_inicio": "2026-10-12T00:00:00+00:00",
-          "inscricao_fim": "2026-11-10T00:00:00+00:00",
+          "inscricao_fim": "2026-11-10T23:59:00+00:00",
           "link_pagina": "https://concursos.exameconsultores.com.br/informacoes/544/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf",
           "link_inscricao": null
@@ -2328,7 +2595,7 @@
           "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:03:44.616985+00:00"
+        "observed_at": "2026-08-30T13:18:34.515231+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2382,7 +2649,19 @@
         "https://concursos.exameconsultores.com.br/informacoes/544/",
         "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf"
       ],
-      "duration_seconds": 184.59
+      "duration_seconds": 132.39,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: fewer_than_two_domain_field_matches"
+      ],
+      "visible_items_observed": 4,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 21,
@@ -2409,16 +2688,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "Nenhum registro cadastrado nessa seção",
+          "source": "https://www.eplconcursos.com.br"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.eplconcursos.com.br"
       ],
-      "duration_seconds": 4.31,
+      "duration_seconds": 3.41,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 22,
@@ -2441,6 +2736,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
@@ -2468,7 +2764,7 @@
           "edital_numero": "001/2026",
           "edital_data": "2026-08-25T00:00:00+00:00",
           "inscricao_inicio": "2026-08-25T00:00:00+00:00",
-          "inscricao_fim": "2026-09-08T00:00:00+00:00",
+          "inscricao_fim": "2026-09-08T23:59:00+00:00",
           "link_pagina": "https://abcp.selecao.net.br/informacoes/2867/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
           "link_inscricao": "https://abcp.selecao.net.br/login/sair/?redir=%2Ftermo%2F2867%2F"
@@ -2516,7 +2812,7 @@
           "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:01:47.310541+00:00"
+        "observed_at": "2026-08-30T13:17:26.772202+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2560,7 +2856,16 @@
         "https://abcp.selecao.net.br/informacoes/2867/",
         "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf"
       ],
-      "duration_seconds": 47.16
+      "duration_seconds": 48.06,
+      "visible_items_observed": 4,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 23,
@@ -2583,16 +2888,26 @@
       "empty_evidence": null,
       "error_type": "CloudflareChallenge",
       "error_message": "Site protected by Cloudflare challenge / WAF",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://main.institutounifil.com.br"
       ],
-      "duration_seconds": 7.58,
+      "duration_seconds": 9.36,
       "audit_notes": [
         "HTTPStatusError: Client error '403 Forbidden' for url 'https://main.institutounifil.com.br'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 24,
@@ -2615,6 +2930,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "GUAPORÉ/RS - Câmara Municipal - Concurso Público 001/2026",
@@ -2642,7 +2958,7 @@
           "edital_numero": "001/2026",
           "edital_data": null,
           "inscricao_inicio": "2026-08-28T00:00:00+00:00",
-          "inscricao_fim": "2026-09-28T00:00:00+00:00",
+          "inscricao_fim": "2026-09-28T23:59:00+00:00",
           "link_pagina": "https://concursos.objetivas.com.br/informacoes/2617/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/361/concursos/2617/anexos/d9ea7903-1506-47f2-ae4b-9c077c93af0a.pdf",
           "link_inscricao": "https://concursos.objetivas.com.br/login/sair/?redir=%2Ftermo%2F2617%2F"
@@ -2690,7 +3006,7 @@
           "https://anexos-r2.selecao.net.br/uploads/361/concursos/2617/anexos/d9ea7903-1506-47f2-ae4b-9c077c93af0a.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:03:38.088487+00:00"
+        "observed_at": "2026-08-30T13:19:30.226078+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2734,7 +3050,16 @@
         "https://concursos.objetivas.com.br/informacoes/2617/",
         "https://anexos-r2.selecao.net.br/uploads/361/concursos/2617/anexos/d9ea7903-1506-47f2-ae4b-9c077c93af0a.pdf"
       ],
-      "duration_seconds": 156.22
+      "duration_seconds": 164.26,
+      "visible_items_observed": 12,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 25,
@@ -2757,16 +3082,26 @@
       "empty_evidence": null,
       "error_type": "Error",
       "error_message": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.leandroferreira.com.br/\nCall log:\n  - navigating to \"https://www.leandroferreira.com.br/\", waiting until \"domcontentloaded\"\n",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.leandroferreira.com.br"
       ],
-      "duration_seconds": 3.33,
+      "duration_seconds": 2.95,
       "audit_notes": [
         "ConnectError: [Errno 11001] getaddrinfo failed"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 26,
@@ -2789,6 +3124,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Prefeitura Municipal de Ponto Chique/MG",
@@ -2815,7 +3151,7 @@
           "edital_numero": "01/2026",
           "edital_data": "2026-05-14T00:00:00+00:00",
           "inscricao_inicio": "2026-07-23T00:00:00+00:00",
-          "inscricao_fim": "2026-09-18T00:00:00+00:00",
+          "inscricao_fim": "2026-09-18T23:59:00+00:00",
           "link_pagina": "https://www.cotec.fadenor.com.br/informacoes/28/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/564c58d4-58da-43ea-b120-23e38c000d71.pdf",
           "link_inscricao": "https://www.cotec.fadenor.com.br/login/sair/?redir=%2Ftermo%2F28%2F"
@@ -2877,7 +3213,7 @@
           "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/564c58d4-58da-43ea-b120-23e38c000d71.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:01:43.714327+00:00"
+        "observed_at": "2026-08-30T13:17:30.793934+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -2935,7 +3271,16 @@
         "https://www.cotec.fadenor.com.br/informacoes/28/",
         "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/564c58d4-58da-43ea-b120-23e38c000d71.pdf"
       ],
-      "duration_seconds": 34.27
+      "duration_seconds": 35.12,
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 27,
@@ -2962,16 +3307,74 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "rejections": [
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/43",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/42",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/40",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/31",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/41",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/36",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/35",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/34",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/33",
+            "reason": "excluded_term:vestibular"
+          },
+          {
+            "url": "https://portal.institutoaguia.org.br/edital/ver/32",
+            "reason": "excluded_term:vestibular"
+          }
+        ],
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://portal.institutoaguia.org.br/edital/ver/15",
+          "source": "https://portal.institutoaguia.org.br/edital/ver/15"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://portal.institutoaguia.org.br/edital"
       ],
-      "duration_seconds": 272.55,
+      "duration_seconds": 270.42,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 28,
+      "visible_relevant_items": 18,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "28 unique official details; 10 entries were vestibular and excluded; the registration tab explicitly showed no contest.",
+        "observed_basis": "unique /edital/ver/* links",
+        "relevant_basis": "18 public contests or selections after vestibular exclusion",
+        "active_basis": "official registration tab explicitly empty"
+      }
     },
     {
       "index": 28,
@@ -2994,17 +3397,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.iuds.org.br"
       ],
-      "duration_seconds": 3.8,
+      "duration_seconds": 2.19,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 29,
@@ -3027,17 +3442,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://novo.reisauditores.com.br/concursos-em-andamento"
       ],
-      "duration_seconds": 7.28,
+      "duration_seconds": 3.17,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 30,
@@ -3064,9 +3491,41 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://www.msconcursos.com.br/concurso/43/processo-seletivo-publico-modalidade-emprego-publico-de-agente-comunitario-de-saude-prefeitura-de-ibiuna-sp",
+          "source": "https://www.msconcursos.com.br/concurso/43/processo-seletivo-publico-modalidade-emprego-publico-de-agente-comunitario-de-saude-prefeitura-de-ibiuna-sp"
+        },
+        "rejections": [
+          {
+            "url": "https://www.msconcursos.com.br/concurso/51/processo-seletivo-para-o-programa-de-ensino-medio-do-sesi-rj-em-parceria-com-o-senai-rj",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.msconcursos.com.br/concurso/19/processo-seletivo-para-o-programa-de-ensino-medio-do-sesi-rj-em-parceria-com-o-senai-rj",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.msconcursos.com.br/concurso/39/curso-de-formacao-de-sargentos-merito-intelectual",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.msconcursos.com.br/concurso/40/curso-de-formacao-de-sargentos-antiguidade",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.msconcursos.com.br/concurso/41/curso-de-formacao-de-sargentos-vagas-adicionais",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://www.msconcursos.com.br/concurso/42/curso-de-habilitacao-de-oficiais-especialistas-choe",
+            "reason": "quality_gate"
+          }
+        ]
+      },
       "sample": {
         "expected": {
-          "titulo": "CONCURSO ABERTO",
           "link_inscricao": "https://msconcursos.com.br/concurso/54/login-area-do-candidato/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
         },
         "actual": {
@@ -3093,141 +3552,6 @@
           "link_inscricao": "https://www.msconcursos.com.br/concurso/54/login-area-do-candidato/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
         },
         "field_audit": {
-          "titulo": "MISMATCH",
-          "orgao": "UNKNOWN",
-          "modalidade": "UNKNOWN",
-          "cargo": "UNKNOWN",
-          "area": "UNKNOWN",
-          "cidade": "UNKNOWN",
-          "uf": "UNKNOWN",
-          "status": "UNKNOWN",
-          "vagas": "UNKNOWN",
-          "salario_min": "UNKNOWN",
-          "salario_max": "UNKNOWN",
-          "escolaridade": "UNKNOWN",
-          "taxa": "UNKNOWN",
-          "prova_data": "UNKNOWN",
-          "edital_numero": "UNKNOWN",
-          "edital_data": "UNKNOWN",
-          "inscricao_inicio": "UNKNOWN",
-          "inscricao_fim": "UNKNOWN",
-          "link_pagina": "UNKNOWN",
-          "link_edital": "UNKNOWN",
-          "link_inscricao": "MISMATCH"
-        },
-        "publication_audit": {
-          "status": "UNKNOWN",
-          "expected_count": 0,
-          "actual_count": 0,
-          "expected_titles": [],
-          "actual_titles": [],
-          "invalid_actual_titles": [],
-          "missing_titles": [],
-          "missing_links": []
-        },
-        "evidence_urls": [
-          "https://www.msconcursos.com.br",
-          "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
-        ],
-        "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:05:30.887705+00:00"
-      },
-      "field_audit": {
-        "titulo": "MISMATCH",
-        "orgao": "UNKNOWN",
-        "modalidade": "UNKNOWN",
-        "cargo": "UNKNOWN",
-        "area": "UNKNOWN",
-        "cidade": "UNKNOWN",
-        "uf": "UNKNOWN",
-        "status": "UNKNOWN",
-        "vagas": "UNKNOWN",
-        "salario_min": "UNKNOWN",
-        "salario_max": "UNKNOWN",
-        "escolaridade": "UNKNOWN",
-        "taxa": "UNKNOWN",
-        "prova_data": "UNKNOWN",
-        "edital_numero": "UNKNOWN",
-        "edital_data": "UNKNOWN",
-        "inscricao_inicio": "UNKNOWN",
-        "inscricao_fim": "UNKNOWN",
-        "link_pagina": "UNKNOWN",
-        "link_edital": "UNKNOWN",
-        "link_inscricao": "MISMATCH"
-      },
-      "publication_audit": {
-        "status": "UNKNOWN",
-        "expected_count": 0,
-        "actual_count": 0,
-        "expected_titles": [],
-        "actual_titles": [],
-        "invalid_actual_titles": [],
-        "missing_titles": [],
-        "missing_links": []
-      },
-      "evidence_urls": [
-        "https://www.msconcursos.com.br",
-        "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
-      ],
-      "duration_seconds": 219.31,
-      "audit_notes": [
-        "NOT_AUDITED_REASON: no_comparable_field_match"
-      ]
-    },
-    {
-      "index": 31,
-      "source_type": "facet_open",
-      "name": "FACET Concursos",
-      "canonical_name": "FACET Concursos",
-      "category": "banca",
-      "url": "https://www.facetconcursos.com.br",
-      "base_url": "https://www.facetconcursos.com.br",
-      "status": "success",
-      "crawler_status": "success",
-      "verification_status": "VERIFIED",
-      "http_status": 200,
-      "browser_used": false,
-      "technology": "HTML",
-      "visible_valid_items": 1,
-      "candidates_found": 25,
-      "candidates_rejected": 24,
-      "processed": 1,
-      "empty_evidence": {
-        "kind": "evaluated_closed",
-        "value": "Status Encerrado on detail https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/",
-        "source": "https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/"
-      },
-      "error_type": null,
-      "error_message": null,
-      "sample": {
-        "expected": {
-          "link_edital": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
-          "link_inscricao": "https://concursos.facetconcursos.com.br/login/sair/?redir=%2Ftermo%2F44%2F"
-        },
-        "actual": {
-          "titulo": "Concurso Público",
-          "orgao": "Prefeitura de Floresta/PE  2026",
-          "modalidade": "Concurso Público",
-          "cargo": "Vários cargos",
-          "area": "multiplas",
-          "cidade": "Floresta",
-          "uf": "PE",
-          "status": "Inscrições abertas",
-          "vagas": null,
-          "salario_min": 3036.0,
-          "salario_max": 3036.0,
-          "escolaridade": null,
-          "taxa": 3036.0,
-          "prova_data": "2026-11-01T00:00:00+00:00",
-          "edital_numero": null,
-          "edital_data": null,
-          "inscricao_inicio": "2026-08-24T00:00:00+00:00",
-          "inscricao_fim": "2026-10-01T00:00:00+00:00",
-          "link_pagina": "https://concursos.facetconcursos.com.br/informacoes/44/",
-          "link_edital": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
-          "link_inscricao": "https://concursos.facetconcursos.com.br/login/sair/?redir=%2Ftermo%2F44%2F"
-        },
-        "field_audit": {
           "titulo": "UNKNOWN",
           "orgao": "UNKNOWN",
           "modalidade": "UNKNOWN",
@@ -3247,30 +3571,25 @@
           "inscricao_inicio": "UNKNOWN",
           "inscricao_fim": "UNKNOWN",
           "link_pagina": "UNKNOWN",
-          "link_edital": "MATCH",
+          "link_edital": "UNKNOWN",
           "link_inscricao": "MATCH"
         },
         "publication_audit": {
-          "status": "MATCH",
-          "expected_count": 1,
-          "actual_count": 1,
-          "expected_titles": [
-            "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026"
-          ],
-          "actual_titles": [
-            "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026"
-          ],
+          "status": "UNKNOWN",
+          "expected_count": 0,
+          "actual_count": 0,
+          "expected_titles": [],
+          "actual_titles": [],
           "invalid_actual_titles": [],
           "missing_titles": [],
           "missing_links": []
         },
         "evidence_urls": [
-          "https://www.facetconcursos.com.br",
-          "https://concursos.facetconcursos.com.br/informacoes/44/",
-          "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf"
+          "https://www.msconcursos.com.br",
+          "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:04:56.117657+00:00"
+        "observed_at": "2026-08-30T13:21:03.325690+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -3292,29 +3611,139 @@
         "inscricao_inicio": "UNKNOWN",
         "inscricao_fim": "UNKNOWN",
         "link_pagina": "UNKNOWN",
-        "link_edital": "MATCH",
+        "link_edital": "UNKNOWN",
         "link_inscricao": "MATCH"
       },
       "publication_audit": {
-        "status": "MATCH",
-        "expected_count": 1,
-        "actual_count": 1,
-        "expected_titles": [
-          "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026"
-        ],
-        "actual_titles": [
-          "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026"
-        ],
+        "status": "UNKNOWN",
+        "expected_count": 0,
+        "actual_count": 0,
+        "expected_titles": [],
+        "actual_titles": [],
         "invalid_actual_titles": [],
         "missing_titles": [],
         "missing_links": []
       },
       "evidence_urls": [
-        "https://www.facetconcursos.com.br",
-        "https://concursos.facetconcursos.com.br/informacoes/44/",
-        "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf"
+        "https://www.msconcursos.com.br",
+        "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
       ],
-      "duration_seconds": 197.26
+      "duration_seconds": 214.03,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: no_independent_official_observation"
+      ],
+      "visible_items_observed": 29,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
+    },
+    {
+      "index": 31,
+      "source_type": "facet_open",
+      "name": "FACET Concursos",
+      "canonical_name": "FACET Concursos",
+      "category": "banca",
+      "url": "https://www.facetconcursos.com.br",
+      "base_url": "https://www.facetconcursos.com.br",
+      "status": "empty_valid",
+      "crawler_status": "empty_valid",
+      "verification_status": "EMPTY_VERIFIED",
+      "http_status": 200,
+      "browser_used": false,
+      "technology": "HTML",
+      "visible_valid_items": 1,
+      "candidates_found": 25,
+      "candidates_rejected": 25,
+      "processed": 0,
+      "empty_evidence": {
+        "kind": "evaluated_closed",
+        "value": "Status Encerrado on detail https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/",
+        "source": "https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/"
+      },
+      "error_type": null,
+      "error_message": null,
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "generic_title",
+            "field": "titulo",
+            "message": "Título parece rótulo de interface: 'Concurso Público'"
+          }
+        ],
+        "sanity_rejections": [
+          {
+            "title": "Concurso Público",
+            "link_pagina": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "errors": [
+              "generic_title"
+            ]
+          }
+        ],
+        "rejections": [
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2026-prefeitura-municipal-de-floresta-pe/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2025-prefeitura-municipal-de-congo-pb/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/01-2025-prefeitura-municipal-de-bom-jardim-pe/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2024-prefeitura-municipal-de-pedro-velho-rn/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-camara-municipal-de-sape-pb/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2024-camara-municipal-de-queimadas-pb/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2024-prefeitura-municipal-de-machados-pe/",
+            "reason": "quality_gate"
+          },
+          {
+            "url": "https://facetconcursos.com.br/concursos/concurso-publico-01-2024-prefeitura-municipal-de-mamanguape-pb/",
+            "reason": "quality_gate"
+          }
+        ],
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/",
+          "source": "https://facetconcursos.com.br/concursos/concurso-publico-prefeitura-municipal-malta-pb/"
+        }
+      },
+      "sample": null,
+      "field_audit": null,
+      "publication_audit": null,
+      "evidence_urls": [
+        "https://www.facetconcursos.com.br"
+      ],
+      "duration_seconds": 204.5,
+      "audit_notes": [
+        "crawler sample has no official detail URL"
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 32,
@@ -3337,17 +3766,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.educapb.com.br"
       ],
-      "duration_seconds": 28.24,
+      "duration_seconds": 21.88,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 33,
@@ -3370,6 +3811,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "PREFEITURA MUNICIPAL DE PIRANHAS-ALAGOAS"
@@ -3398,7 +3840,7 @@
           "link_inscricao": null
         },
         "field_audit": {
-          "titulo": "MISMATCH",
+          "titulo": "MATCH",
           "orgao": "UNKNOWN",
           "modalidade": "UNKNOWN",
           "cargo": "UNKNOWN",
@@ -3441,10 +3883,10 @@
           "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:35.046858+00:00"
+        "observed_at": "2026-08-30T13:22:47.453034+00:00"
       },
       "field_audit": {
-        "titulo": "MISMATCH",
+        "titulo": "MATCH",
         "orgao": "UNKNOWN",
         "modalidade": "UNKNOWN",
         "cargo": "UNKNOWN",
@@ -3486,10 +3928,19 @@
         "https://admtec.org.br/",
         "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx"
       ],
-      "duration_seconds": 211.88,
+      "duration_seconds": 243.23,
       "audit_notes": [
-        "NOT_AUDITED_REASON: no_comparable_field_match"
-      ]
+        "NOT_AUDITED_REASON: fewer_than_two_domain_field_matches"
+      ],
+      "visible_items_observed": 4,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 34,
@@ -3499,10 +3950,10 @@
       "category": "banca",
       "url": "https://www.contemaxconsultoria.com.br",
       "base_url": "https://www.contemaxconsultoria.com.br",
-      "status": "degraded",
-      "crawler_status": "degraded",
-      "verification_status": "NOT_AUDITED",
-      "http_status": 200,
+      "status": "failed",
+      "crawler_status": "failed",
+      "verification_status": "FAILED_EXTERNAL",
+      "http_status": 508,
       "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": null,
@@ -3510,19 +3961,28 @@
       "candidates_rejected": 0,
       "processed": 0,
       "empty_evidence": null,
-      "error_type": "UnconfirmedEmpty",
-      "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "error_type": "HTTPStatusError",
+      "error_message": "Server error '508 Insufficient Resource' for url 'http://www.contemaxconsultoria.com.br/site/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.contemaxconsultoria.com.br"
       ],
-      "duration_seconds": 5.78,
+      "duration_seconds": 1.91,
       "audit_notes": [
-        "crawler sample has no official detail URL",
-        "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+        "HTTPStatusError: Server error '508 Insufficient Resource' for url 'http://www.contemaxconsultoria.com.br/site/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508"
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 35,
@@ -3545,6 +4005,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "PREFEITURA MUNICIPAL DE GUARABIRA",
@@ -3571,7 +4032,7 @@
           "inscricao_inicio": "2026-08-13T00:00:00+00:00",
           "inscricao_fim": "2026-08-19T23:59:00+00:00",
           "link_pagina": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/",
-          "link_edital": "https://cpcon.uepb.edu.br/download/retificacao-edital-normativo-de-concurso-publico-no-001-2026-pmg-pb/?wpdmdl=10225&refresh=6a939d92ab4bd1788059026",
+          "link_edital": "https://cpcon.uepb.edu.br/download/retificacao-edital-normativo-de-concurso-publico-no-001-2026-pmg-pb/?wpdmdl=10225&refresh=6a942dce9947b1788095950",
           "link_inscricao": "https://sistemas.cpcon.uepb.edu.br/sigeps-app/login"
         },
         "field_audit": {
@@ -3624,7 +4085,7 @@
           "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:14.098384+00:00"
+        "observed_at": "2026-08-30T13:22:02.925199+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -3675,10 +4136,19 @@
         "https://cpcon.uepb.edu.br",
         "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/"
       ],
-      "duration_seconds": 171.98,
+      "duration_seconds": 204.25,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 36,
@@ -3696,11 +4166,30 @@
       "technology": "HTML",
       "visible_valid_items": null,
       "candidates_found": 7,
-      "candidates_rejected": 0,
-      "processed": 7,
+      "candidates_rejected": 1,
+      "processed": 6,
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "inscricao_interval_inverted",
+            "field": "inscricao_inicio/inscricao_fim",
+            "message": "Início da inscrição é posterior ao fim"
+          }
+        ],
+        "sanity_rejections": [
+          {
+            "title": "PREFEITURA MUNICIPAL DE CAJUEIRO – AL",
+            "link_pagina": "https://funvapi.com.br/index.php/2026/04/23/prefeitura-municipal-de-cajueiro-al/",
+            "errors": [
+              "inscricao_interval_inverted"
+            ]
+          }
+        ]
+      },
       "sample": {
         "expected": {
           "titulo": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE",
@@ -3773,7 +4262,7 @@
           "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:57.437307+00:00"
+        "observed_at": "2026-08-30T13:21:43.753470+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -3817,10 +4306,19 @@
         "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
         "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf"
       ],
-      "duration_seconds": 193.69,
+      "duration_seconds": 134.05,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 37,
@@ -3847,16 +4345,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "Abertos: Não há dados",
+          "source": "https://www.consep-pi.com.br"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.consep-pi.com.br"
       ],
-      "duration_seconds": 1.44,
+      "duration_seconds": 3.38,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 9,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 38,
@@ -3883,16 +4397,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Consulplan portal currently has zero active registrations open",
+          "source": "https://institutoconsulplan.azurewebsites.net/Concursos"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://institutoconsulplan.azurewebsites.net/Concursos"
       ],
-      "duration_seconds": 16.14,
+      "duration_seconds": 16.84,
       "audit_notes": [
         "HTTPStatusError: Client error '403 Site Disabled' for url 'https://institutoconsulplan.azurewebsites.net/Concursos'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 39,
@@ -3915,6 +4445,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_inscricao": "https://link.avalia.org.br/open?chave=jG2b886%2B%2FY2BULGuSK4lXqHc2ugVtjcB4KIPk1Pwz6%2BOYWblVub87e3PH4jCE3gKscLHKNIZLfjmTCkRB2O8iUErLKCPXsLWe3j%2FE2OTaXxWeHS2QSetH5i1%2BFMMF3MlrVt3Zy%2BnJlYjQXs%2B5RBuh7RF7PHUyh0JWd3Fr%2FceOqDugXZRhZW4fpb1GGffS9KwFe5L%2FW2bKjmS3WF9%2Bt8hPGuYFZKyBzeyin60OIYXKGuzV6%2BH4I6RbtlXiAlG43vA3d6%2BOXwV9uULQtsClTR%2BS%2FDihFSdrvWaYA29ld5Gl9%2FetXF7hqNAwz1%2FY4v5RtL%2FYOaKIGjcUWLuZxeP0WC9AASLmGULlkfzOaX%2BOYFDALvDpMXLV8YdhOhAnUAxJlpURrYnhhcYSaCOFxq9eBIEIDRBCHWxACQ7ThCDm2bhNJwRu%2FyOeAjr0opIbX2fx%2B2R%2F2%2Btrmz63y4tHDavOsYLhhV%2FPmspraVCXBAfHzBLV76oglChwHor4RfcMMoUIns7kFrgLCXhcIbAJ1ZBgP5KIi%2FFQyg4VwsXXgadNUadhW3NdQ11NaQK%2F9fROfR3iGbyGKW1IM4z3yLBhsPBuVf6V1EJRZmYpGBCuIczdjkIYzhlvweJ4dyX8Pvcz9oTibN%2ByZW7vk7p93%2F%2BWoOAD1ny33NnGbtgHrgtcjpWvuc4XE6e2idp6DH0U1F7K5c4bDBzZARWiWh4t00i7ClJxRGQfLvi7wGHK6TUjn26ZBu3Etac7v%2F20iZwd1IVqZoCpAHH6Wk%2FAOA3LsA4vBh7rur%2FzMIfzFQh45zkKaoYWJDjhJoasAiH7MUaBR83czsf0SLnmMXcPeHqS1PjOhzNaKMJX2sWOw%2FhbXFupI2%2BPqqUbYgVWJEHmzgBSV%2Bv0D9dYD%2FSbXHonkbS6GbAW%2B7ZddP3gamhCQHZoUYLKZc4jzOABaiX7Fqzzn56URDHq%2BP9lDcqU5ri5tFRFkLxzSc01CIpCunlyO924fB4HhXITc1jNPoy%2B4FLmwLAZyd4AzFSghtszowD190aLDARrUULCEWJ96YZv3snxAo1tH0ywLUhNSsA1ednf3W4Ud74QeQbhuJe6MUITViH8HzwFu3QPUEnkr4hdSO%2BeM93H2Ai1yw43yeTnwxE8z33zzzuaCF0esBknMclWvKOvZi3eihN93ZVCMPqSVO8WTWE%2FtpEMxwUq8BBGNcw4Anb2fDarLaHcGg8WoUtE1JuAZMvU2nimL3gH4my7hwCHbuX%2FuukcqYimCQGVCluRYQsd5nmi%2FVZxfeRnvtfka9bu2w7FBclmjxAI6YWZl4SYpGcMY9yyf%2FaNSA%2FvgYFxwa%2BLBGuowF9HCBuANXnZ391uFHe%2BEHkG4biXujFCE1Yh%2FB88Bbt0D1BJ5K%2BIXUjvnjPdx9gItcsON8nk58MRPM998887mghdHrAZBkmIHRO4MiRQnyadsat9F%2B1gWuorX%2B6aWQkYFTZAY%2FPrazU2YocXwKfL7buZ4KmDqreEmJjd8z7yGPMzBBup%2BNam1mXEcF7Uhc%2FtcNUfiXvh7L0vGodXkq4OmkYH9n2qMaulUkHo8sgr3RA5%2BY9J5jXBVHHcy9CZi1pmXChYvn%2Fb9VEcli59IikHq5CJDxZhMoUnkupBVqK234Ajg00mzJIs%2F4TrcHgAYiH4jyDQTcSvtI%2BGR3lqad4PNikiv8iTnUGNB6XPKx9BLa14oowy%2BpQcemnpbNRQc1QVNCr%2BqYwBmAa10UPaYiraCPATjnFItAssTZdxtEwChZDpYEvL6aYJWRb7Uwb6ggV2IOjiYHB4l6OADjbIPwLA3loZawNMt1wmJfu6n%2FqYGKEGWIa93%2FU25r9n1jNBdB%2BJEgOxvCBl0%2B3VbToRrWJgnUDgXp4972LJa%2FfZn210lcS0jsHtd1f8kdcycK4erYH040ik6j4pJGHW2D2Ua1EUBheLxt8m1mpeczJ4ER9OFXFkQXDyk5pCJYonmHkNIZYEdv9qIO%2BHtyf1HNz3cPiTGo%2FtVa7axiWzRHB4vi5n2hxcn3P%2FC4edyk99tjpyL4n%2BQ%2BihAYHOSfpLPNNZV0IMcXhD2zNxaEr0TTfgpmxq21aORSwcVhTFz0RmkOZOFe959ydPFqSkFpT1553swruqLbvpr652MOliGhrWrLsWj3lIlKKKdQBJksV0PbT0llJP146hAi7cyXnt6x1RVxpPrgc0YpnKeyjyFI5F2%2Brup67Ycqj%2FHp3mpwkVDWww%2Bfrv22kQBtbUZHeGxZSspD8Sd5xYzBWRhiS0pvN3PQ6k1sWV0FykvF7mTpHvR7qujCwDevKr%2BmzKKfgb%2FVMMJJuIh4l1ZqOv6gsiE9GZ4kiwmBr6HeXUNzUIKbCdOv37Yz73Ca0XjcdCJzUXMvdPGvVMLPzkCeFwNceBceWOnY0SMomTwrwjdp3K27WsVcDNVEgQTxnIKM39fd%2BHs3olH7aGta3tHFJ14VWXhi0u6llv1PA6bbJXONzj3M7wm5KNItWqJanNVT7Gi7zqxTKJ3QAnuZOjWoF7f3IzEzk0FAmYKdgAUY3zdEUinNDltI2AyMGnXYJrLv5AAmZs4R41ZuABej92ArFyQQW%2FYdTlqA1UUozko9nsyeJDIle7qJ7KulbcnhC1nCM7IgSU%2BxsTAXIE6eUMOv0xNAx2x000kaACt8oW7Cgk6fEQdPQ4jAxj49Wd%2B9mv8Kc6qFeBc9CDTuD8xz%2FcQ2IIhQJpfzNctPGr%2B8dmxRPl4VX97Nhs3gsF1HX%2Ft0DHWDo3OhLDxzIy2%2BvdW%2BSWJlXLGe5pq2tS8TaBHxVCm1ftlnCvFSlm0gXJoliucmkuBaXZe6%2FrmxzOPAUoWzvDoW9bZUbwBfQ7djTK51Jy%2F2M5Ih1Fyu4fbtYkP3%2Fhw1CagCzCq4VCxkOSf2mFGCXfV64X8WA5rKMmHuzuJ87n%2BRoRD1UOXQUfCMh4bfAqnq6%2FHiH%2Fn5vaNd70JjJmjvA271Z35C7wpcqZ6VwCKdOS6yYmvB11PGZXa0I97l30xOklBsvGBaGrkifrxJTe7rjBXVhGv176roAIHNEL61z4%2FuAe6o%3D"
@@ -3980,7 +4511,7 @@
           "https://www2.avalia.org.br/concurso.jsp?id=630"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:04:42.977903+00:00"
+        "observed_at": "2026-08-30T13:20:20.194817+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -4019,10 +4550,19 @@
         "https://www2.avalia.org.br/concursos.jsp",
         "https://www2.avalia.org.br/concurso.jsp?id=630"
       ],
-      "duration_seconds": 50.8,
+      "duration_seconds": 63.0,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": 99,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 40,
@@ -4034,7 +4574,7 @@
       "base_url": "https://www.portalselecao.ufu.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -4045,6 +4585,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_pagina": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
@@ -4123,7 +4664,7 @@
           "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/0981a060af516a1cb54f2f9a1ed5473e"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:32.164077+00:00"
+        "observed_at": "2026-08-30T13:22:11.972852+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -4173,7 +4714,19 @@
         "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
         "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/0981a060af516a1cb54f2f9a1ed5473e"
       ],
-      "duration_seconds": 166.94
+      "duration_seconds": 192.95,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 11,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 41,
@@ -4196,16 +4749,26 @@
       "empty_evidence": null,
       "error_type": "Error",
       "error_message": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://idgran.com.br/\nCall log:\n  - navigating to \"https://idgran.com.br/\", waiting until \"domcontentloaded\"\n",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://idgran.com.br"
       ],
-      "duration_seconds": 3.51,
+      "duration_seconds": 3.22,
       "audit_notes": [
         "ConnectError: [Errno 11001] getaddrinfo failed"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 42,
@@ -4217,7 +4780,7 @@
       "base_url": "https://quadrix.org.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -4228,6 +4791,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf",
@@ -4251,7 +4815,7 @@
           "edital_numero": "01/2026",
           "edital_data": "2026-08-17T00:00:00+00:00",
           "inscricao_inicio": "2026-08-17T00:00:00+00:00",
-          "inscricao_fim": "2026-09-21T00:00:00+00:00",
+          "inscricao_fim": "2026-09-21T23:59:00+00:00",
           "link_pagina": "https://quadrix.org.br/informacoes/3070/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf",
           "link_inscricao": "https://quadrix.org.br/login/sair/?redir=%2Ftermo%2F3070%2F"
@@ -4301,7 +4865,7 @@
           "https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:05:29.753983+00:00"
+        "observed_at": "2026-08-30T13:21:29.741441+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -4347,7 +4911,19 @@
         "https://quadrix.org.br/informacoes/3070/",
         "https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf"
       ],
-      "duration_seconds": 37.41
+      "duration_seconds": 58.02,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 43,
@@ -4370,17 +4946,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.gualimp.com.br"
       ],
-      "duration_seconds": 12.05,
+      "duration_seconds": 14.05,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 44,
@@ -4403,6 +4991,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "IV - Concurso Público da Prefeitura Municipal de Minaçu - GO",
@@ -4541,7 +5130,7 @@
           "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/9-edital/178-edital-de-abertura-nº-01-2026-consolidado-pelo-edital-complementar-nº-02-2026.html"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:06.853504+00:00"
+        "observed_at": "2026-08-30T13:21:52.381624+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -4648,10 +5237,19 @@
         "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/",
         "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/9-edital/178-edital-de-abertura-nº-01-2026-consolidado-pelo-edital-complementar-nº-02-2026.html"
       ],
-      "duration_seconds": 41.75,
+      "duration_seconds": 48.33,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 45,
@@ -4674,6 +5272,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_edital": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf"
@@ -4696,7 +5295,7 @@
           "edital_numero": null,
           "edital_data": null,
           "inscricao_inicio": "2026-07-15T00:00:00+00:00",
-          "inscricao_fim": "2026-08-24T00:00:00+00:00",
+          "inscricao_fim": "2026-08-24T23:59:00+00:00",
           "link_pagina": "https://concurso.idib.org.br/Concurso.aspx?ID=355",
           "link_edital": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf",
           "link_inscricao": null
@@ -4758,7 +5357,7 @@
           "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:49.458226+00:00"
+        "observed_at": "2026-08-30T13:22:42.026045+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -4816,10 +5415,19 @@
         "https://concurso.idib.org.br/Concurso.aspx?ID=355",
         "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf"
       ],
-      "duration_seconds": 96.22,
+      "duration_seconds": 91.06,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 46,
@@ -4846,16 +5454,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "Nenhum item cadastrado",
+          "source": "https://eventos.concursosjcm.com.br"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://eventos.concursosjcm.com.br"
       ],
-      "duration_seconds": 5.12,
+      "duration_seconds": 10.2,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 47,
@@ -4873,11 +5497,31 @@
       "technology": "HTML",
       "visible_valid_items": null,
       "candidates_found": 7,
-      "candidates_rejected": 1,
-      "processed": 6,
+      "candidates_rejected": 0,
+      "processed": 7,
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "api": "https://api.gestaoselecoes.com.br/api/editais",
+        "tenant": "eloassessoria",
+        "api_params": {
+          "page": 0,
+          "size": 100,
+          "situacao": "PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO",
+          "order": "DESC"
+        },
+        "api_total": 7,
+        "api_ids": [
+          "137",
+          "136",
+          "135",
+          "134",
+          "133",
+          "129",
+          "132"
+        ]
+      },
       "sample": {
         "expected": {
           "link_edital": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
@@ -4949,7 +5593,7 @@
           "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:37.855994+00:00"
+        "observed_at": "2026-08-30T13:22:47.073497+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -4993,10 +5637,19 @@
         "https://novo.eloassessoriaeservicos.com.br//concurso/137",
         "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf"
       ],
-      "duration_seconds": 63.88,
+      "duration_seconds": 72.78,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 48,
@@ -5006,16 +5659,16 @@
       "category": "banca",
       "url": "https://www.aptaconcursos.com.br",
       "base_url": "https://www.aptaconcursos.com.br",
-      "status": "success",
-      "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "status": "empty_valid",
+      "crawler_status": "empty_valid",
+      "verification_status": "EMPTY_VERIFIED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": 1,
       "candidates_found": 25,
-      "candidates_rejected": 24,
-      "processed": 1,
+      "candidates_rejected": 25,
+      "processed": 0,
       "empty_evidence": {
         "kind": "evaluated_closed",
         "value": "Status Encerrado on detail https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/682",
@@ -5023,112 +5676,49 @@
       },
       "error_type": null,
       "error_message": null,
-      "sample": {
-        "expected": {
-          "titulo": "Câmara Municipal de Aragarças -GOIÁS",
-          "link_inscricao": "https://www.aptaconcursos.com.br/concursos/login_candidato_sistema/realiza Inscrição/Câmara Municipal de Aragarças /708"
-        },
-        "actual": {
-          "titulo": "Câmara Municipal de Aragarças -GOIÁS",
-          "orgao": "Câmara Municipal de Aragarças -GOIÁS",
-          "modalidade": "Concurso Público",
-          "cargo": "Vários cargos",
-          "area": null,
-          "cidade": "LEIA",
-          "uf": "SE",
-          "status": "Inscrições abertas",
-          "vagas": 2,
-          "salario_min": 1650.0,
-          "salario_max": 2400.0,
-          "escolaridade": null,
-          "taxa": 2100.0,
-          "prova_data": null,
-          "edital_numero": null,
-          "edital_data": null,
-          "inscricao_inicio": "2026-08-17T00:00:00+00:00",
-          "inscricao_fim": "2026-09-20T23:59:00+00:00",
-          "link_pagina": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
-          "link_edital": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
-          "link_inscricao": "https://www.aptaconcursos.com.br/concursos/login_candidato_sistema/realiza Inscrição/Câmara Municipal de Aragarças /708"
-        },
-        "field_audit": {
-          "titulo": "MATCH",
-          "orgao": "UNKNOWN",
-          "modalidade": "UNKNOWN",
-          "cargo": "UNKNOWN",
-          "area": "UNKNOWN",
-          "cidade": "UNKNOWN",
-          "uf": "UNKNOWN",
-          "status": "UNKNOWN",
-          "vagas": "UNKNOWN",
-          "salario_min": "UNKNOWN",
-          "salario_max": "UNKNOWN",
-          "escolaridade": "UNKNOWN",
-          "taxa": "UNKNOWN",
-          "prova_data": "UNKNOWN",
-          "edital_numero": "UNKNOWN",
-          "edital_data": "UNKNOWN",
-          "inscricao_inicio": "UNKNOWN",
-          "inscricao_fim": "UNKNOWN",
-          "link_pagina": "UNKNOWN",
-          "link_edital": "UNKNOWN",
-          "link_inscricao": "MATCH"
-        },
-        "publication_audit": {
-          "status": "UNKNOWN",
-          "expected_count": 0,
-          "actual_count": 0,
-          "expected_titles": [],
-          "actual_titles": [],
-          "invalid_actual_titles": [],
-          "missing_titles": [],
-          "missing_links": []
-        },
-        "evidence_urls": [
-          "https://www.aptaconcursos.com.br",
-          "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708"
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "semantic_city",
+            "field": "cidade",
+            "message": "Cidade parece ação/rótulo de interface: 'LEIA'"
+          }
         ],
-        "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:10:06.644447+00:00"
+        "sanity_rejections": [
+          {
+            "title": "Câmara Municipal de Aragarças -GOIÁS",
+            "link_pagina": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+            "errors": [
+              "semantic_city"
+            ]
+          }
+        ],
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/682",
+          "source": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/682"
+        }
       },
-      "field_audit": {
-        "titulo": "MATCH",
-        "orgao": "UNKNOWN",
-        "modalidade": "UNKNOWN",
-        "cargo": "UNKNOWN",
-        "area": "UNKNOWN",
-        "cidade": "UNKNOWN",
-        "uf": "UNKNOWN",
-        "status": "UNKNOWN",
-        "vagas": "UNKNOWN",
-        "salario_min": "UNKNOWN",
-        "salario_max": "UNKNOWN",
-        "escolaridade": "UNKNOWN",
-        "taxa": "UNKNOWN",
-        "prova_data": "UNKNOWN",
-        "edital_numero": "UNKNOWN",
-        "edital_data": "UNKNOWN",
-        "inscricao_inicio": "UNKNOWN",
-        "inscricao_fim": "UNKNOWN",
-        "link_pagina": "UNKNOWN",
-        "link_edital": "UNKNOWN",
-        "link_inscricao": "MATCH"
-      },
-      "publication_audit": {
-        "status": "UNKNOWN",
-        "expected_count": 0,
-        "actual_count": 0,
-        "expected_titles": [],
-        "actual_titles": [],
-        "invalid_actual_titles": [],
-        "missing_titles": [],
-        "missing_links": []
-      },
+      "sample": null,
+      "field_audit": null,
+      "publication_audit": null,
       "evidence_urls": [
-        "https://www.aptaconcursos.com.br",
-        "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708"
+        "https://www.aptaconcursos.com.br"
       ],
-      "duration_seconds": 267.94
+      "duration_seconds": 254.47,
+      "audit_notes": [
+        "crawler sample has no official detail URL"
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 49,
@@ -5140,7 +5730,7 @@
       "base_url": "https://portal.editais.legalleconcursos.com.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -5155,6 +5745,13 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://portal.editais.legalleconcursos.com.br/edital/ver/2535",
+          "source": "https://portal.editais.legalleconcursos.com.br/edital/ver/2535"
+        }
+      },
       "sample": {
         "expected": {
           "link_edital": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
@@ -5226,7 +5823,7 @@
           "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:49.501387+00:00"
+        "observed_at": "2026-08-30T13:25:40.754198+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -5270,7 +5867,19 @@
         "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
         "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf"
       ],
-      "duration_seconds": 244.8
+      "duration_seconds": 237.31,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: identity_title_not_confirmed"
+      ],
+      "visible_items_observed": 4,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 50,
@@ -5293,6 +5902,13 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "list_url": "https://rboconcursos.selecao.net.br/index/abertos/",
+        "candidate_urls": [
+          "https://rboconcursos.selecao.net.br/informacoes/203/",
+          "https://rboconcursos.selecao.net.br/informacoes/208/"
+        ]
+      },
       "sample": {
         "expected": {
           "titulo": "Concurso Público - 02/2026 - Prefeitura da Estância Turística de Jahu- SP",
@@ -5320,7 +5936,7 @@
           "edital_numero": null,
           "edital_data": null,
           "inscricao_inicio": "2026-08-24T00:00:00+00:00",
-          "inscricao_fim": "2026-09-25T00:00:00+00:00",
+          "inscricao_fim": "2026-09-25T23:59:00+00:00",
           "link_pagina": "https://rboconcursos.selecao.net.br/informacoes/203/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf",
           "link_inscricao": "https://rboconcursos.selecao.net.br/login/sair/?redir=%2Ftermo%2F203%2F"
@@ -5370,7 +5986,7 @@
           "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:10.513498+00:00"
+        "observed_at": "2026-08-30T13:21:57.299865+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -5416,7 +6032,16 @@
         "https://rboconcursos.selecao.net.br/informacoes/203/",
         "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf"
       ],
-      "duration_seconds": 13.03
+      "duration_seconds": 12.06,
+      "visible_items_observed": 2,
+      "visible_relevant_items": 2,
+      "visible_active_valid_items": 2,
+      "metric_evidence": {
+        "basis": "Official open-listing count was 2 and detail 203 showed registration from 24/08/2026 to 25/09/2026.",
+        "observed_basis": "two unique official open-listing links",
+        "relevant_basis": "public contest entries",
+        "active_basis": "open registration window confirmed on detail"
+      }
     },
     {
       "index": 51,
@@ -5439,16 +6064,26 @@
       "empty_evidence": null,
       "error_type": "CloudflareChallenge",
       "error_message": "Site protected by Cloudflare challenge / WAF",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.shdias.com.br/concursos/"
       ],
-      "duration_seconds": 8.67,
+      "duration_seconds": 9.16,
       "audit_notes": [
         "HTTPStatusError: Client error '403 Forbidden' for url 'https://www.shdias.com.br/concursos/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 52,
@@ -5475,16 +6110,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "nenhum concurso",
+          "source": "https://www.zambini.org.br/portal/concursos"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.zambini.org.br/portal/concursos"
       ],
-      "duration_seconds": 6.75,
+      "duration_seconds": 5.34,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 53,
@@ -5507,6 +6158,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_inscricao": "https://nossorumo.org.br/Inscricao/ValidarCpf"
@@ -5574,7 +6226,7 @@
           "https://nossorumo.org.br/#emandamento"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:37.387780+00:00"
+        "observed_at": "2026-08-30T13:22:11.608714+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -5615,10 +6267,19 @@
         "https://www.nossorumo.org.br",
         "https://nossorumo.org.br/#emandamento"
       ],
-      "duration_seconds": 34.66,
+      "duration_seconds": 54.84,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 54,
@@ -5630,7 +6291,7 @@
       "base_url": "https://avancasp.selecao.net.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -5641,6 +6302,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Concurso Público - 01/2026 - CONSELHO REGIONAL DE CORRETORES DE IMÓVEIS DO ESTADO DE SÃO PAULO - CRECI/SP",
@@ -5666,7 +6328,7 @@
           "edital_numero": null,
           "edital_data": null,
           "inscricao_inicio": "2026-08-21T00:00:00+00:00",
-          "inscricao_fim": "2026-09-21T00:00:00+00:00",
+          "inscricao_fim": "2026-09-21T23:59:00+00:00",
           "link_pagina": "https://avancasp.selecao.net.br/informacoes/251/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/301/concursos/251/anexos/efe61c61-d019-4e6e-aa15-91530d3c07cc.pdf",
           "link_inscricao": "https://avancasp.selecao.net.br/login/sair/?redir=%2Ftermo%2F251%2F"
@@ -5718,7 +6380,7 @@
           "https://anexos-r2.selecao.net.br/uploads/301/concursos/251/anexos/efe61c61-d019-4e6e-aa15-91530d3c07cc.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:06:40.588377+00:00"
+        "observed_at": "2026-08-30T13:22:48.213079+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -5766,7 +6428,19 @@
         "https://avancasp.selecao.net.br/informacoes/251/",
         "https://anexos-r2.selecao.net.br/uploads/301/concursos/251/anexos/efe61c61-d019-4e6e-aa15-91530d3c07cc.pdf"
       ],
-      "duration_seconds": 36.84
+      "duration_seconds": 51.77,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: fewer_than_two_domain_field_matches"
+      ],
+      "visible_items_observed": 6,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 55,
@@ -5778,7 +6452,7 @@
       "base_url": "https://www.institutomais.org.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -5789,6 +6463,14 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "rejections": [
+          {
+            "url": "https://www.institutomais.org.br/Concursos/Detalhe/10643",
+            "reason": "excluded_term:residência médica"
+          }
+        ]
+      },
       "sample": {
         "expected": {
           "titulo": "São Sebastião PREV - Concurso Público – Edital Nº 01/2026",
@@ -5802,7 +6484,7 @@
           "area": "multiplas",
           "cidade": "Brasília",
           "uf": "DF",
-          "status": "Inscrições em breve",
+          "status": "Inscrições abertas",
           "vagas": null,
           "salario_min": 69.0,
           "salario_max": 69.0,
@@ -5811,8 +6493,8 @@
           "prova_data": null,
           "edital_numero": "01/2026",
           "edital_data": null,
-          "inscricao_inicio": "2026-10-08T00:00:00+00:00",
-          "inscricao_fim": "2019-06-10T23:59:00+00:00",
+          "inscricao_inicio": "2026-08-17T00:00:00+00:00",
+          "inscricao_fim": "2026-10-08T23:59:00+00:00",
           "link_pagina": "https://www.institutomais.org.br/Concursos/Detalhe/10645",
           "link_edital": "https://www.institutomais.org.br/ckfinder/userfiles/files/Retifica%c3%a7%c3%a3o%20002%20ao%20Edital%200012026.pdf",
           "link_inscricao": "https://www.institutomais.org.br/Cargos/Inscrever/58684"
@@ -5855,7 +6537,7 @@
           "https://www.institutomais.org.br/Concursos/Detalhe/10645"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:48.004002+00:00"
+        "observed_at": "2026-08-30T13:25:38.138375+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -5894,7 +6576,19 @@
         "https://www.institutomais.org.br/Concursos/ConcursosAbertos",
         "https://www.institutomais.org.br/Concursos/Detalhe/10645"
       ],
-      "duration_seconds": 193.17
+      "duration_seconds": 211.94,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: fewer_than_two_domain_field_matches"
+      ],
+      "visible_items_observed": 17,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 56,
@@ -5921,16 +6615,38 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://publiconsult.com.br/Concurso/Detail/539?origem=H",
+          "source": "https://publiconsult.com.br/Concurso/Detail/539?origem=H"
+        },
+        "rejections": [
+          {
+            "url": "https://publiconsult.com.br/Concurso/IndexTodosHomologados",
+            "reason": "quality_gate"
+          }
+        ]
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://publiconsult.com.br/Concurso/Index"
       ],
-      "duration_seconds": 186.17,
+      "duration_seconds": 192.94,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 57,
@@ -5957,16 +6673,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "explicit_text",
+          "value": "Nenhum concurso",
+          "source": "https://www.klcconcursos.com.br"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.klcconcursos.com.br"
       ],
-      "duration_seconds": 5.83,
+      "duration_seconds": 5.22,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 58,
@@ -5993,16 +6725,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://concursos.sigmaassessoria.com.br/informacoes/264/",
+          "source": "https://concursos.sigmaassessoria.com.br/informacoes/264/"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://concursos.sigmaassessoria.com.br"
       ],
-      "duration_seconds": 18.89,
+      "duration_seconds": 10.09,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 59,
@@ -6029,16 +6777,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://www.w2consultores.com.br/informacoes/297/",
+          "source": "https://www.w2consultores.com.br/informacoes/297/"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.w2consultores.com.br/index/todos/"
       ],
-      "duration_seconds": 141.98,
+      "duration_seconds": 147.27,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 10,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 60,
@@ -6048,16 +6812,16 @@
       "category": "banca",
       "url": "https://portal.fenix.selecao.site/edital",
       "base_url": "https://portal.fenix.selecao.site",
-      "status": "success",
-      "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "status": "empty_valid",
+      "crawler_status": "empty_valid",
+      "verification_status": "EMPTY_VERIFIED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": 1,
       "candidates_found": 25,
-      "candidates_rejected": 24,
-      "processed": 1,
+      "candidates_rejected": 25,
+      "processed": 0,
       "empty_evidence": {
         "kind": "evaluated_closed",
         "value": "Status Encerrado on detail https://portal.fenix.selecao.site/edital/ver/105",
@@ -6065,122 +6829,49 @@
       },
       "error_type": null,
       "error_message": null,
-      "sample": {
-        "expected": {
-          "link_edital": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
-          "link_inscricao": "https://candidato.fenix.selecao.site/inscricao/a23ea8e0e31b9e92cf939acff0f15a9b"
-        },
-        "actual": {
-          "titulo": "VER EDITAL",
-          "orgao": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
-          "modalidade": "Concurso Público",
-          "cargo": "MOTORISTA",
-          "area": "saude",
-          "cidade": "Pedrinhas Paulista",
-          "uf": "SP",
-          "status": "Inscrições abertas",
-          "vagas": null,
-          "salario_min": null,
-          "salario_max": null,
-          "escolaridade": null,
-          "taxa": null,
-          "prova_data": null,
-          "edital_numero": null,
-          "edital_data": null,
-          "inscricao_inicio": "2026-08-21T10:00:00+00:00",
-          "inscricao_fim": "2026-09-04T10:00:00+00:00",
-          "link_pagina": "https://portal.fenix.selecao.site/edital/ver/129",
-          "link_edital": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
-          "link_inscricao": "https://candidato.fenix.selecao.site/inscricao/a23ea8e0e31b9e92cf939acff0f15a9b"
-        },
-        "field_audit": {
-          "titulo": "UNKNOWN",
-          "orgao": "UNKNOWN",
-          "modalidade": "UNKNOWN",
-          "cargo": "UNKNOWN",
-          "area": "UNKNOWN",
-          "cidade": "UNKNOWN",
-          "uf": "UNKNOWN",
-          "status": "UNKNOWN",
-          "vagas": "UNKNOWN",
-          "salario_min": "UNKNOWN",
-          "salario_max": "UNKNOWN",
-          "escolaridade": "UNKNOWN",
-          "taxa": "UNKNOWN",
-          "prova_data": "UNKNOWN",
-          "edital_numero": "UNKNOWN",
-          "edital_data": "UNKNOWN",
-          "inscricao_inicio": "UNKNOWN",
-          "inscricao_fim": "UNKNOWN",
-          "link_pagina": "UNKNOWN",
-          "link_edital": "MATCH",
-          "link_inscricao": "MATCH"
-        },
-        "publication_audit": {
-          "status": "MATCH",
-          "expected_count": 1,
-          "actual_count": 1,
-          "expected_titles": [
-            "EDITAL DE ABERTURA"
-          ],
-          "actual_titles": [
-            "EDITAL DE ABERTURA"
-          ],
-          "invalid_actual_titles": [],
-          "missing_titles": [],
-          "missing_links": []
-        },
-        "evidence_urls": [
-          "https://portal.fenix.selecao.site/edital",
-          "https://portal.fenix.selecao.site/edital/ver/129",
-          "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf"
+      "crawler_diagnostics": {
+        "sanity": [
+          {
+            "severity": "error",
+            "code": "generic_title",
+            "field": "titulo",
+            "message": "Título parece rótulo de interface: 'VER EDITAL'"
+          }
         ],
-        "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:49.803168+00:00"
-      },
-      "field_audit": {
-        "titulo": "UNKNOWN",
-        "orgao": "UNKNOWN",
-        "modalidade": "UNKNOWN",
-        "cargo": "UNKNOWN",
-        "area": "UNKNOWN",
-        "cidade": "UNKNOWN",
-        "uf": "UNKNOWN",
-        "status": "UNKNOWN",
-        "vagas": "UNKNOWN",
-        "salario_min": "UNKNOWN",
-        "salario_max": "UNKNOWN",
-        "escolaridade": "UNKNOWN",
-        "taxa": "UNKNOWN",
-        "prova_data": "UNKNOWN",
-        "edital_numero": "UNKNOWN",
-        "edital_data": "UNKNOWN",
-        "inscricao_inicio": "UNKNOWN",
-        "inscricao_fim": "UNKNOWN",
-        "link_pagina": "UNKNOWN",
-        "link_edital": "MATCH",
-        "link_inscricao": "MATCH"
-      },
-      "publication_audit": {
-        "status": "MATCH",
-        "expected_count": 1,
-        "actual_count": 1,
-        "expected_titles": [
-          "EDITAL DE ABERTURA"
+        "sanity_rejections": [
+          {
+            "title": "VER EDITAL",
+            "link_pagina": "https://portal.fenix.selecao.site/edital/ver/129",
+            "errors": [
+              "generic_title"
+            ]
+          }
         ],
-        "actual_titles": [
-          "EDITAL DE ABERTURA"
-        ],
-        "invalid_actual_titles": [],
-        "missing_titles": [],
-        "missing_links": []
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://portal.fenix.selecao.site/edital/ver/105",
+          "source": "https://portal.fenix.selecao.site/edital/ver/105"
+        }
       },
+      "sample": null,
+      "field_audit": null,
+      "publication_audit": null,
       "evidence_urls": [
-        "https://portal.fenix.selecao.site/edital",
-        "https://portal.fenix.selecao.site/edital/ver/129",
-        "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf"
+        "https://portal.fenix.selecao.site/edital"
       ],
-      "duration_seconds": 178.81
+      "duration_seconds": 167.59,
+      "audit_notes": [
+        "crawler sample has no official detail URL"
+      ],
+      "visible_items_observed": 1,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 61,
@@ -6203,17 +6894,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.oppusconcursos.com.br"
       ],
-      "duration_seconds": 13.83,
+      "duration_seconds": 9.45,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 62,
@@ -6231,8 +6934,8 @@
       "technology": "HTML",
       "visible_valid_items": null,
       "candidates_found": 12,
-      "candidates_rejected": 2,
-      "processed": 10,
+      "candidates_rejected": 1,
+      "processed": 11,
       "empty_evidence": {
         "kind": "evaluated_closed",
         "value": "Status Encerrado on detail https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
@@ -6240,8 +6943,19 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "evaluated_closed",
+          "value": "Status Encerrado on detail https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "source": "https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/"
+        }
+      },
       "sample": {
-        "expected": {},
+        "expected": {
+          "titulo": "Concurso e Seleções",
+          "link_edital": "https://www.legatus.org.br/concursos/3221/download/",
+          "link_inscricao": "https://www.legatus.org.br/candidatos/login/"
+        },
         "actual": {
           "titulo": "Concurso e Seleções",
           "orgao": null,
@@ -6266,7 +6980,7 @@
           "link_inscricao": "https://www.legatus.org.br/candidatos/login/"
         },
         "field_audit": {
-          "titulo": "UNKNOWN",
+          "titulo": "MATCH",
           "orgao": "UNKNOWN",
           "modalidade": "UNKNOWN",
           "cargo": "UNKNOWN",
@@ -6285,14 +6999,23 @@
           "inscricao_inicio": "UNKNOWN",
           "inscricao_fim": "UNKNOWN",
           "link_pagina": "UNKNOWN",
-          "link_edital": "UNKNOWN",
-          "link_inscricao": "UNKNOWN"
+          "link_edital": "MATCH",
+          "link_inscricao": "MATCH"
         },
         "publication_audit": {
-          "status": "UNKNOWN",
-          "expected_count": 0,
+          "status": "MATCH",
+          "expected_count": 8,
           "actual_count": 8,
-          "expected_titles": [],
+          "expected_titles": [
+            "EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA",
+            "RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA",
+            "RELAÇÃO PRELIMINAR DE CANDIDATOS COM PEDIDO DE ATENDIMENTO ESPECIAL",
+            "EDITAL N° 02/2026 - PRORROGAÇÃO DAS INSCRIÇÕES",
+            "RESULTADO DA ANÁLISE DE RECURSOS INTERPOSTOS CONTRA O RESULTADO DOS PEDIDOS DE ISENÇÃO",
+            "RESULTADO DA ANÁLISE DOS PEDIDOS DE ISENÇÃO DE PAGAMENTO DA TAXA DE INSCRIÇÃO",
+            "RETIFICAÇÃO Nº 01 AO EDITAL Nº 01/2026",
+            "EDITAL Nº 01/2026 - ABERTURA DO CONCURSO"
+          ],
           "actual_titles": [
             "EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA",
             "RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA",
@@ -6308,13 +7031,15 @@
           "missing_links": []
         },
         "evidence_urls": [
-          "https://www.legatus.org.br"
+          "https://www.legatus.org.br",
+          "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "https://www.legatus.org.br/concursos/3221/download/"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:10:34.527094+00:00"
+        "observed_at": "2026-08-30T13:24:57.883775+00:00"
       },
       "field_audit": {
-        "titulo": "UNKNOWN",
+        "titulo": "MATCH",
         "orgao": "UNKNOWN",
         "modalidade": "UNKNOWN",
         "cargo": "UNKNOWN",
@@ -6333,14 +7058,23 @@
         "inscricao_inicio": "UNKNOWN",
         "inscricao_fim": "UNKNOWN",
         "link_pagina": "UNKNOWN",
-        "link_edital": "UNKNOWN",
-        "link_inscricao": "UNKNOWN"
+        "link_edital": "MATCH",
+        "link_inscricao": "MATCH"
       },
       "publication_audit": {
-        "status": "UNKNOWN",
-        "expected_count": 0,
+        "status": "MATCH",
+        "expected_count": 8,
         "actual_count": 8,
-        "expected_titles": [],
+        "expected_titles": [
+          "EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA",
+          "RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA",
+          "RELAÇÃO PRELIMINAR DE CANDIDATOS COM PEDIDO DE ATENDIMENTO ESPECIAL",
+          "EDITAL N° 02/2026 - PRORROGAÇÃO DAS INSCRIÇÕES",
+          "RESULTADO DA ANÁLISE DE RECURSOS INTERPOSTOS CONTRA O RESULTADO DOS PEDIDOS DE ISENÇÃO",
+          "RESULTADO DA ANÁLISE DOS PEDIDOS DE ISENÇÃO DE PAGAMENTO DA TAXA DE INSCRIÇÃO",
+          "RETIFICAÇÃO Nº 01 AO EDITAL Nº 01/2026",
+          "EDITAL Nº 01/2026 - ABERTURA DO CONCURSO"
+        ],
         "actual_titles": [
           "EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA",
           "RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA",
@@ -6356,13 +7090,23 @@
         "missing_links": []
       },
       "evidence_urls": [
-        "https://www.legatus.org.br"
+        "https://www.legatus.org.br",
+        "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+        "https://www.legatus.org.br/concursos/3221/download/"
       ],
-      "duration_seconds": 246.81,
+      "duration_seconds": 121.03,
       "audit_notes": [
-        "ReadTimeout: The read operation timed out",
-        "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+        "NOT_AUDITED_REASON: no_independent_visible_valid_count"
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 63,
@@ -6385,6 +7129,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_inscricao": "https://2026pseducasj.fepese.org.br/inscricao/#!/edital/39693d61db1f8c777c9c7e4b7cc49bbc"
@@ -6452,7 +7197,7 @@
           "https://2026pseducasj.fepese.org.br"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:30.385619+00:00"
+        "observed_at": "2026-08-30T13:25:38.587206+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -6493,10 +7238,19 @@
         "https://fepese.org.br/concursos/",
         "https://2026pseducasj.fepese.org.br"
       ],
-      "duration_seconds": 147.41,
+      "duration_seconds": 161.39,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 64,
@@ -6519,6 +7273,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Concurso Público Lagoa de Pedras/RN",
@@ -6610,7 +7365,7 @@
           "https://funcern.br/documents/2722/Edital_LagoadePedrasRN_retifica%C3%A7%C3%A3o_1_e_2.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:08:00.787440+00:00"
+        "observed_at": "2026-08-30T13:23:52.544555+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -6670,7 +7425,16 @@
         "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
         "https://funcern.br/documents/2722/Edital_LagoadePedrasRN_retifica%C3%A7%C3%A3o_1_e_2.pdf"
       ],
-      "duration_seconds": 59.39
+      "duration_seconds": 49.55,
+      "visible_items_observed": 2,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 65,
@@ -6693,17 +7457,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapemig.br/pt/editais/"
       ],
-      "duration_seconds": 42.72,
+      "duration_seconds": 32.86,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 66,
@@ -6726,17 +7502,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapes.es.gov.br/editais"
       ],
-      "duration_seconds": 33.95,
+      "duration_seconds": 29.22,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 67,
@@ -6759,17 +7547,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapesq.rpp.br/editais/"
       ],
-      "duration_seconds": 26.8,
+      "duration_seconds": 20.39,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 68,
@@ -6792,9 +7592,15 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "api": "https://api.fundacaouniselva.org.br/SelecaoSimplificada",
+        "api_total": 9,
+        "api_page": 1,
+        "api_total_pages": 1
+      },
       "sample": {
         "expected": {
-          "link_inscricao": "https://inscricao.fundacaouniselva.org.br/cdn-cgi/content?id=HyeReBvl8HlLTHR.O6r5kOQxjD1M0_XMTA1vKe_sOxc-1788059322.9064047-1.2.1.1-_HIOXlV5d0S_xfAnjJhEcWEVowCVs1t1ECRf07g7nPUrI5Y8WoPmrbtbyhA6AI3_"
+          "link_inscricao": "https://inscricao.fundacaouniselva.org.br/cdn-cgi/content?id=Wa8UJGi01x_XeTEqj1dsFrpCBO9ZRR6ccfOAP0.GklM-1788096268.0631468-1.2.1.1-X0.np4crey8u5REhj3XVldb9HbNUUnJ4my_OxeOJU5mmj1LoQh.Wa7DX2uAai6D4"
         },
         "actual": {
           "titulo": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
@@ -6860,7 +7666,7 @@
           "https://inscricao.fundacaouniselva.org.br/selecoes/1363"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:08:41.653418+00:00"
+        "observed_at": "2026-08-30T13:24:26.229374+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -6902,10 +7708,19 @@
         "https://inscricao.fundacaouniselva.org.br/selecoes",
         "https://inscricao.fundacaouniselva.org.br/selecoes/1363"
       ],
-      "duration_seconds": 17.0,
+      "duration_seconds": 19.95,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 69,
@@ -6928,6 +7743,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "Concurso Público do Município de Calmon - SC",
@@ -6955,7 +7771,7 @@
           "edital_numero": "02/2026",
           "edital_data": "2026-08-19T00:00:00+00:00",
           "inscricao_inicio": "2026-08-23T00:00:00+00:00",
-          "inscricao_fim": "2026-09-14T00:00:00+00:00",
+          "inscricao_fim": "2026-09-14T23:59:00+00:00",
           "link_pagina": "https://concursos.fundacaofafipa.org.br/informacoes/4207/",
           "link_edital": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4207/anexos/bffabe06-9ef0-44cd-8986-95abfc804cf5.pdf",
           "link_inscricao": "https://concursos.fundacaofafipa.org.br/login/sair/?redir=%2Ftermo%2F4207%2F"
@@ -7007,7 +7823,7 @@
           "https://anexos-r2.selecao.net.br/uploads/281/concursos/4207/anexos/bffabe06-9ef0-44cd-8986-95abfc804cf5.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:26.181793+00:00"
+        "observed_at": "2026-08-30T13:25:19.936588+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -7055,7 +7871,16 @@
         "https://concursos.fundacaofafipa.org.br/informacoes/4207/",
         "https://anexos-r2.selecao.net.br/uploads/281/concursos/4207/anexos/bffabe06-9ef0-44cd-8986-95abfc804cf5.pdf"
       ],
-      "duration_seconds": 54.67
+      "duration_seconds": 64.84,
+      "visible_items_observed": 9,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 70,
@@ -7078,6 +7903,12 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "api": "https://ieses.org/projetos/api",
+        "api_total": 26,
+        "current_projects": 3,
+        "historical_projects": 23
+      },
       "sample": {
         "expected": {
           "titulo": "Concurso Público - Edital 001/2026",
@@ -7154,7 +7985,7 @@
           "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:16.548393+00:00"
+        "observed_at": "2026-08-30T13:24:58.530761+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -7202,10 +8033,19 @@
         "https://scgas2026.ieses.org/",
         "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf"
       ],
-      "duration_seconds": 34.69,
+      "duration_seconds": 30.64,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_visible_valid_count"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 71,
@@ -7217,7 +8057,7 @@
       "base_url": "https://funpec.br",
       "status": "success",
       "crawler_status": "success",
-      "verification_status": "VERIFIED",
+      "verification_status": "NOT_AUDITED",
       "http_status": 200,
       "browser_used": false,
       "technology": "HTML",
@@ -7228,6 +8068,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "titulo": "PROCESSO SELETIVO 12/2026 – CUIDADOR EM SAÚDE – NEI (CADASTRO DE RESERVA)",
@@ -7301,7 +8142,7 @@
           "https://funpec.br/wp-content/uploads/2026/08/2.-EDITAL-13.2026-VF-2.pdf"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:58.350252+00:00"
+        "observed_at": "2026-08-30T13:25:49.882256+00:00"
       },
       "field_audit": {
         "titulo": "MATCH",
@@ -7345,7 +8186,19 @@
         "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
         "https://funpec.br/wp-content/uploads/2026/08/2.-EDITAL-13.2026-VF-2.pdf"
       ],
-      "duration_seconds": 44.59
+      "duration_seconds": 51.27,
+      "audit_notes": [
+        "NOT_AUDITED_REASON: fewer_than_two_domain_field_matches"
+      ],
+      "visible_items_observed": 10,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 72,
@@ -7368,17 +8221,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fade.org.br"
       ],
-      "duration_seconds": 11.31,
+      "duration_seconds": 20.84,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 73,
@@ -7401,17 +8266,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://master.fapex.org.br/portalrh/"
       ],
-      "duration_seconds": 9.89,
+      "duration_seconds": 9.3,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 74,
@@ -7434,6 +8311,7 @@
       "empty_evidence": null,
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {},
       "sample": {
         "expected": {
           "link_pagina": "https://www.fatecsm.org.br/processos-seletivos/"
@@ -7499,7 +8377,7 @@
           "https://www.fatecsm.org.br/processos-seletivos/#processo-2026-3010088-01"
         ],
         "observation_method": "official_html_observer",
-        "observed_at": "2026-08-30T03:09:39.951286+00:00"
+        "observed_at": "2026-08-30T13:25:38.388483+00:00"
       },
       "field_audit": {
         "titulo": "UNKNOWN",
@@ -7538,10 +8416,19 @@
         "https://www.fatecsm.org.br/processos-seletivos/",
         "https://www.fatecsm.org.br/processos-seletivos/#processo-2026-3010088-01"
       ],
-      "duration_seconds": 20.31,
+      "duration_seconds": 24.44,
       "audit_notes": [
         "NOT_AUDITED_REASON: no_independent_official_observation"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 75,
@@ -7564,17 +8451,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://faped.org.br"
       ],
-      "duration_seconds": 17.14,
+      "duration_seconds": 17.75,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 76,
@@ -7597,17 +8496,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapese.org.br"
       ],
-      "duration_seconds": 11.49,
+      "duration_seconds": 13.0,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 77,
@@ -7634,16 +8545,32 @@
       },
       "error_type": null,
       "error_message": null,
+      "crawler_diagnostics": {
+        "empty_evidence": {
+          "kind": "institutional_non_personnel_fomento",
+          "value": "2 calls evaluated; all are research fomento / zero personnel hiring",
+          "source": "https://www.fapepi.pi.gov.br/editais-fapepi/"
+        }
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.fapepi.pi.gov.br/editais-fapepi/"
       ],
-      "duration_seconds": 8.05,
+      "duration_seconds": 7.17,
       "audit_notes": [
         "crawler sample has no official detail URL"
-      ]
+      ],
+      "visible_items_observed": 106,
+      "visible_relevant_items": 0,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "Official editais are research fomento, grants, prizes or academic scholarships; none is personnel hiring.",
+        "observed_basis": "independent official listing count",
+        "relevant_basis": "institutional_non_personnel_fomento",
+        "active_basis": "zero personnel hiring items"
+      }
     },
     {
       "index": 78,
@@ -7666,17 +8593,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.fapema.br/inicio/"
       ],
-      "duration_seconds": 4.41,
+      "duration_seconds": 4.12,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 79,
@@ -7699,16 +8638,26 @@
       "empty_evidence": null,
       "error_type": "Error",
       "error_message": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://fapece.ce.gov.br/\nCall log:\n  - navigating to \"https://fapece.ce.gov.br/\", waiting until \"domcontentloaded\"\n",
+      "crawler_diagnostics": {},
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapece.ce.gov.br"
       ],
-      "duration_seconds": 2.23,
+      "duration_seconds": 2.05,
       "audit_notes": [
         "ConnectError: [Errno 11001] getaddrinfo failed"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 80,
@@ -7731,17 +8680,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapern.rn.gov.br"
       ],
-      "duration_seconds": 13.61,
+      "duration_seconds": 12.16,
       "audit_notes": [
         "HTTPStatusError: Server error '503 Service Unavailable' for url 'https://www.fapern.rn.gov.br/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 81,
@@ -7764,17 +8725,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapeal.br"
       ],
-      "duration_seconds": 5.74,
+      "duration_seconds": 6.23,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 82,
@@ -7797,17 +8770,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.facepe.br"
       ],
-      "duration_seconds": 5.45,
+      "duration_seconds": 6.19,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 83,
@@ -7830,17 +8815,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.fapesb.ba.gov.br/category/edital/"
       ],
-      "duration_seconds": 13.42,
+      "duration_seconds": 13.73,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 84,
@@ -7863,17 +8860,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://faperj.br"
       ],
-      "duration_seconds": 3.83,
+      "duration_seconds": 3.39,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": 23,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "legacy_independent_observation",
+        "observed_basis": "visible_valid_items",
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 85,
@@ -7896,17 +8905,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapesp.br/oportunidades/"
       ],
-      "duration_seconds": 4.31,
+      "duration_seconds": 4.55,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 86,
@@ -7929,17 +8950,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fappr.pr.gov.br/Pagina/Processos-Seletivos"
       ],
-      "duration_seconds": 5.39,
+      "duration_seconds": 6.08,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 87,
@@ -7962,17 +8995,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapesc.sc.gov.br"
       ],
-      "duration_seconds": 64.81,
+      "duration_seconds": 64.84,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 88,
@@ -7995,17 +9040,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapergs.rs.gov.br/selecao-2025"
       ],
-      "duration_seconds": 10.86,
+      "duration_seconds": 10.25,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 89,
@@ -8028,17 +9085,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://www.fundect.ms.gov.br/informativos/consultas/"
       ],
-      "duration_seconds": 3.48,
+      "duration_seconds": 3.78,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 90,
@@ -8061,17 +9130,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapemat.mt.gov.br"
       ],
-      "duration_seconds": 3.44,
+      "duration_seconds": 3.38,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 91,
@@ -8094,17 +9175,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://goias.gov.br/fapeg/categoria/editais/"
       ],
-      "duration_seconds": 2.3,
+      "duration_seconds": 2.83,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 92,
@@ -8127,17 +9220,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fap.df.gov.br"
       ],
-      "duration_seconds": 2.78,
+      "duration_seconds": 2.88,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 93,
@@ -8151,7 +9256,7 @@
       "crawler_status": "degraded",
       "verification_status": "NOT_AUDITED",
       "http_status": 200,
-      "browser_used": true,
+      "browser_used": false,
       "technology": "HTML",
       "visible_valid_items": null,
       "candidates_found": 0,
@@ -8160,17 +9265,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapt.to.gov.br"
       ],
-      "duration_seconds": 8.08,
+      "duration_seconds": 3.58,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 94,
@@ -8193,17 +9310,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapeam.am.gov.br"
       ],
-      "duration_seconds": 4.39,
+      "duration_seconds": 4.3,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 95,
@@ -8226,17 +9355,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapespa.pa.gov.br"
       ],
-      "duration_seconds": 6.81,
+      "duration_seconds": 9.33,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 96,
@@ -8259,17 +9400,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapeap.ap.gov.br"
       ],
-      "duration_seconds": 58.95,
+      "duration_seconds": 57.48,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 97,
@@ -8292,17 +9445,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://faperr.rr.gov.br"
       ],
-      "duration_seconds": 3.62,
+      "duration_seconds": 4.84,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 98,
@@ -8325,17 +9490,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://rondonia.ro.gov.br/fapero/publicacoes/"
       ],
-      "duration_seconds": 2.22,
+      "duration_seconds": 3.52,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     },
     {
       "index": 99,
@@ -8358,17 +9535,29 @@
       "empty_evidence": null,
       "error_type": "UnconfirmedEmpty",
       "error_message": "No candidates found and no explicit empty-state evidence was recorded",
+      "crawler_diagnostics": {
+        "empty_evidence": null
+      },
       "sample": null,
       "field_audit": null,
       "publication_audit": null,
       "evidence_urls": [
         "https://fapac.ac.gov.br"
       ],
-      "duration_seconds": 4.25,
+      "duration_seconds": 4.22,
       "audit_notes": [
         "crawler sample has no official detail URL",
         "NOT_AUDITED_REASON: crawler_status=degraded"
-      ]
+      ],
+      "visible_items_observed": null,
+      "visible_relevant_items": null,
+      "visible_active_valid_items": null,
+      "metric_evidence": {
+        "method": "unknown",
+        "observed_basis": null,
+        "relevant_basis": "explicit_only",
+        "active_basis": "explicit_only"
+      }
     }
   ]
 }

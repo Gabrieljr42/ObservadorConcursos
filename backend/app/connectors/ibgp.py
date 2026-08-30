@@ -12,6 +12,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 from app.connectors.base import BaseConnector, CandidateItem, CrawlResult, CrawlRunData, HEADERS
+from app.audit_validation import validate_concurso_sanity
 from app.connectors.common import (
     build_hash,
     build_summary,
@@ -49,18 +50,25 @@ class IBGPConnector(BaseConnector):
         candidates = self._fetch_candidates()
         concursos: list[dict[str, Any]] = []
         rejected = 0
+        sanity_diagnostics: list[dict[str, str]] = []
 
         with httpx.Client(timeout=30.0, follow_redirects=True, headers=HEADERS, verify=False) as client:
             for candidate in candidates:
                 try:
                     item = self._fetch_and_parse_json(candidate, client=client)
-                    if item and self._is_valid_item(item):
+                    sanity = validate_concurso_sanity(item) if item else {'valid': False, 'diagnostics': [], 'errors': []}
+                    if item and self._is_valid_item(item) and sanity['valid']:
                         concursos.append(item)
                     else:
                         rejected += 1
+                        sanity_diagnostics.extend(sanity['diagnostics'])
                 except Exception as exc:
                     logger.warning('IBGP parse error for cod=%s: %s', candidate.cod, exc)
                     rejected += 1
+
+        diagnostics_payload = {}
+        if sanity_diagnostics:
+            diagnostics_payload['sanity'] = sanity_diagnostics
 
         return CrawlResult(
             items=concursos,
@@ -70,6 +78,7 @@ class IBGPConnector(BaseConnector):
                 status='success' if concursos else 'degraded',
                 http_status=200,
                 browser_used=self.run_data.browser_used,
+                diagnostics_payload=diagnostics_payload,
             ),
         )
 

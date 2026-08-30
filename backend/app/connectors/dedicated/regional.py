@@ -778,13 +778,17 @@ class NossoRumoConnector(GenericDedicatedBancaConnector):
     def _fetch_candidates(self) -> list[CandidateItem]:
         candidates: list[CandidateItem] = []
         seen: set[str] = set()
+        listing_observed = False
+        saw_cards = False
         try:
             with self._http_client() as client:
                 resp = client.get(self.list_url)
                 self.run_data.http_status = resp.status_code
                 if resp.status_code != 200:
                     return []
+                listing_observed = True
                 soup = BeautifulSoup(resp.text, 'lxml')
+                saw_cards = bool(soup.select('.list-grid-item'))
                 for item_card in soup.select('.list-grid-item'):
                     pub_btn = item_card.select_one('[data-publicacoes]')
                     if not pub_btn:
@@ -821,7 +825,9 @@ class NossoRumoConnector(GenericDedicatedBancaConnector):
         except Exception as exc:
             logger.warning('NossoRumo candidate fetch error: %s', exc)
 
-        if not candidates:
+        # A failed request or a page with no recognized cards is inconclusive;
+        # zero candidates alone must not become empty_valid.
+        if not candidates and listing_observed and saw_cards:
             self.mark_empty_evidence('evaluated_closed', 'Nosso Rumo portal returned zero open certames', self.list_url)
 
         return candidates

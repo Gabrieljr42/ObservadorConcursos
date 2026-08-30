@@ -1,9 +1,15 @@
 from contextlib import asynccontextmanager
+import logging
 
 from fastapi import Depends, FastAPI, HTTPException, Query
 from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
+from app.crawl_lock import (
+    CrawlLockUnavailable,
+    acquire_crawl_all_lock,
+    release_crawl_all_lock,
+)
 from app.config import get_settings
 from app.connectors import seed_master_sources
 from app.database import Base, engine, get_db
@@ -22,6 +28,7 @@ from app.schema_migrations import ensure_runtime_schema
 from app.tasks import crawl_active_sources, crawl_source
 
 settings = get_settings()
+logger = logging.getLogger(__name__)
 
 
 @asynccontextmanager
@@ -482,8 +489,28 @@ def delete_concursos_from_source(source_id: int, db: Session = Depends(get_db)):
 
 @app.post('/crawl/all')
 def enqueue_crawl_all(db: Session = Depends(get_db)):
-    task = crawl_active_sources.delay()
+    try:
+        lock_token = acquire_crawl_all_lock()
+    except CrawlLockUnavailable as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    if lock_token is None:
+        return {
+            'status': 'already_running',
+            'message': 'Já existe um crawl-all em execução',
+        }
+
+    try:
+        task = crawl_active_sources.delay(lock_token)
+    except Exception:
+        try:
+            release_crawl_all_lock(lock_token)
+        except CrawlLockUnavailable:
+            logger.exception('Could not release crawl-all reservation after enqueue failure')
+        raise
+
     return {
+        'status': 'queued',
         'message': 'Coleta de todas as fontes ativas enfileirada',
         'task_id': task.id,
     }
@@ -493,41 +520,78 @@ def enqueue_crawl_all(db: Session = Depends(get_db)):
 def run_crawl_all_sync(db: Session = Depends(get_db)):
     from app.services import CrawlService
 
-    sources = db.execute(select(Source).where(Source.active.is_(True)).order_by(Source.id.asc())).scalars().all()
-    results = []
-    totals = {
-        'processed': 0,
-        'inserted': 0,
-        'updated': 0,
-        'unchanged': 0,
-        'versions_created': 0,
-        'notifications_created': 0,
-        'failed': 0,
-    }
-    for source in sources:
-        service = CrawlService(db)
-        try:
-            result = service.crawl_source(source.id)
+    try:
+        lock_token = acquire_crawl_all_lock()
+    except CrawlLockUnavailable as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    if lock_token is None:
+        return {
+            'status': 'already_running',
+            'processed_sources': 0,
+            'results': [],
+            'success': [],
+            'failed': [],
+        }
+
+    try:
+        source_snapshots = [
+            (source.id, source.name, source.source_type)
+            for source in db.execute(
+                select(Source).where(Source.active.is_(True)).order_by(Source.id.asc())
+            ).scalars().all()
+        ]
+        results = []
+        totals = {
+            'processed': 0,
+            'inserted': 0,
+            'updated': 0,
+            'unchanged': 0,
+            'versions_created': 0,
+            'notifications_created': 0,
+            'failed': 0,
+        }
+        for source_id, source_name, source_type in source_snapshots:
+            service = CrawlService(db)
+            try:
+                result = service.crawl_source(source_id)
+            except Exception as exc:
+                # Roll back before handling the next source.  Do not inspect
+                # the ORM source snapshot after a failed transaction.
+                db.rollback()
+                result = {
+                    'source_id': source_id,
+                    'source_name': source_name,
+                    'source_type': source_type,
+                    'status': 'failed',
+                    'error': f'{exc.__class__.__name__}: {str(exc)}',
+                }
+
             results.append(result)
-            if result.get('status') == 'failed':
+            if result.get('status') in {'failed', 'error'}:
                 totals['failed'] += 1
             for key in totals:
                 if key != 'failed':
                     totals[key] += int(result.get(key, 0) or 0)
-        except Exception as exc:
-            totals['failed'] += 1
-            results.append({
-                'source_id': source.id,
-                'source_name': source.name,
-                'source_type': source.source_type,
-                'status': 'failed',
-                'error': f'{exc.__class__.__name__}: {str(exc)}',
-            })
-    return {
-        'processed_sources': len(sources),
-        **totals,
-        'results': results,
-    }
+
+        failed = [result for result in results if result.get('status') in {'failed', 'error'}]
+        successful = [
+            result for result in results
+            if result.get('status') not in {'failed', 'error'}
+        ]
+        return {
+            'status': 'partial_failure' if failed else 'success',
+            'processed_sources': len(source_snapshots),
+            **totals,
+            'results': results,
+            'success': successful,
+            'failed': failed,
+        }
+    finally:
+        try:
+            release_crawl_all_lock(lock_token)
+        except CrawlLockUnavailable:
+            logger.exception('Could not release crawl-all sync lock')
 
 
 # Alias without a dynamic path segment, useful for clients and to avoid route conflicts.
@@ -561,6 +625,10 @@ def run_crawl_sync(source_id: int, db: Session = Depends(get_db)):
     if not source:
         raise HTTPException(status_code=404, detail='Fonte não encontrada')
 
+    source_id = source.id
+    source_name = source.name
+    source_type = source.source_type
+
     from app.services import CrawlService
 
     service = CrawlService(db)
@@ -569,10 +637,11 @@ def run_crawl_sync(source_id: int, db: Session = Depends(get_db)):
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:
+        db.rollback()
         return {
             'source_id': source_id,
-            'source_name': source.name,
-            'source_type': source.source_type,
+            'source_name': source_name,
+            'source_type': source_type,
             'status': 'failed',
             'error': f'{exc.__class__.__name__}: {str(exc)}',
             'processed': 0,
@@ -592,7 +661,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy.exc import IntegrityError
 
-from app.auth import create_access_token, get_current_user, hash_password, verify_password
+from app.auth import create_access_token, create_refresh_token, exchange_refresh_token, get_current_user, hash_password, verify_password
 from app.models import Alert, FavoriteConcurso, Notification, User, UserPreference
 from app.notifications import alert_matches_concurso, is_concurso_open, run_alerts_for_user
 from app.schemas import (
@@ -603,6 +672,8 @@ from app.schemas import (
     AuthToken,
     FavoriteOut,
     NotificationOut,
+    RefreshTokenIn,
+    SyncCheckpointOut,
     UserLogin,
     UserOut,
     UserPreferenceIn,
@@ -647,7 +718,8 @@ def register_user(payload: UserRegister, db: Session = Depends(get_db)):
     db.refresh(user)
 
     token = create_access_token(user.id)
-    return {'access_token': token, 'token_type': 'bearer', 'user': user}
+    refresh_token = create_refresh_token(db, user.id)
+    return {'access_token': token, 'refresh_token': refresh_token, 'token_type': 'bearer', 'user': user}
 
 
 @app.post('/auth/login', response_model=AuthToken)
@@ -660,12 +732,81 @@ def login_user(payload: UserLogin, db: Session = Depends(get_db)):
         raise HTTPException(status_code=403, detail='Usuário inativo')
 
     token = create_access_token(user.id)
-    return {'access_token': token, 'token_type': 'bearer', 'user': user}
+    refresh_token = create_refresh_token(db, user.id)
+    return {'access_token': token, 'refresh_token': refresh_token, 'token_type': 'bearer', 'user': user}
+
+
+@app.post('/auth/refresh', response_model=AuthToken)
+def refresh_access_token(payload: RefreshTokenIn, db: Session = Depends(get_db)):
+    token, user = exchange_refresh_token(db, payload.refresh_token)
+    return {'access_token': token, 'refresh_token': payload.refresh_token, 'token_type': 'bearer', 'user': user}
 
 
 @app.get('/auth/me', response_model=UserOut)
 def get_me(current_user: User = Depends(get_current_user)):
     return current_user
+
+
+@app.get('/sync/checkpoint', response_model=SyncCheckpointOut)
+def get_sync_checkpoint(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """Return one server snapshot for offline-first clients without starting a crawl."""
+    concursos = db.execute(
+        select(Concurso).order_by(Concurso.updated_at.desc(), Concurso.id.desc())
+    ).scalars().all()
+    publications = db.execute(
+        select(ConcursoPublication).order_by(ConcursoPublication.created_at.desc(), ConcursoPublication.id.desc())
+    ).scalars().all()
+    versions = db.execute(
+        select(ConcursoVersion)
+        .options(selectinload(ConcursoVersion.concurso))
+        .order_by(ConcursoVersion.captured_at.desc(), ConcursoVersion.id.desc())
+    ).scalars().all()
+    preferences = db.execute(
+        select(UserPreference).where(UserPreference.user_id == current_user.id)
+    ).scalar_one_or_none()
+    favorites = db.execute(
+        select(FavoriteConcurso)
+        .options(selectinload(FavoriteConcurso.concurso))
+        .where(FavoriteConcurso.user_id == current_user.id)
+        .order_by(FavoriteConcurso.created_at.desc())
+    ).scalars().all()
+    alerts = db.execute(
+        select(Alert).where(Alert.user_id == current_user.id).order_by(Alert.created_at.desc())
+    ).scalars().all()
+    notifications = db.execute(
+        select(Notification)
+        .options(selectinload(Notification.concurso))
+        .where(Notification.user_id == current_user.id)
+        .order_by(Notification.created_at.desc())
+    ).scalars().all()
+
+    recent_updates = [_version_to_update(version) for version in versions]
+    active_alerts = [alert for alert in alerts if alert.active]
+    my_updates: list[dict] = []
+    for version in versions:
+        concurso = version.concurso
+        if not concurso:
+            continue
+        if active_alerts:
+            if not any(alert_matches_concurso(alert, concurso) for alert in active_alerts):
+                continue
+        elif not _matches_user_preferences(preferences, concurso):
+            continue
+        my_updates.append(_version_to_update(version))
+
+    return {
+        'generated_at': datetime.now(timezone.utc),
+        'user': current_user,
+        'preferences': preferences,
+        'concursos': concursos,
+        'publications': publications,
+        'versions': versions,
+        'recent_updates': recent_updates,
+        'my_updates': my_updates,
+        'favorites': favorites,
+        'alerts': alerts,
+        'notifications': notifications,
+    }
 
 
 @app.get('/me/preferences', response_model=UserPreferenceOut | None)

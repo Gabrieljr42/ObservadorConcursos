@@ -657,6 +657,7 @@ class CebraspeConnector(GenericDedicatedBancaConnector):
         candidates: list[CandidateItem] = []
         seen: set[str] = set()
         phases = ['inscricoes-abertas'] if self.mode == 'open' else ['inscricoes-abertas', 'em-andamento']
+        valid_api_payload = False
         try:
             with self._http_client() as client:
                 for phase in phases:
@@ -666,6 +667,9 @@ class CebraspeConnector(GenericDedicatedBancaConnector):
                     data = r.json()
                     groups = data if isinstance(data, list) else [data]
                     for grp in groups:
+                        if not isinstance(grp, dict) or not isinstance(grp.get('eventos'), list):
+                            continue
+                        valid_api_payload = True
                         for ev in grp.get('eventos', []):
                             slug = ev.get('eventoURL')
                             if not slug or slug in seen:
@@ -685,7 +689,10 @@ class CebraspeConnector(GenericDedicatedBancaConnector):
         except Exception as exc:
             logger.warning('CEBRASPE candidate discovery error: %s', exc)
 
-        if not candidates:
+        # A transport/API failure is not evidence that the official catalog is
+        # empty. Only a successfully decoded response with an explicit eventos
+        # collection can support api_empty.
+        if not candidates and valid_api_payload:
             self.mark_empty_evidence('api_empty', 'CEBRASPE REST API returned zero open events', f'{self.api_base}/tipo/concursos/fase/inscricoes-abertas')
 
         return candidates

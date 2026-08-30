@@ -1,6 +1,6 @@
 # Questões da auditoria LIVE
 
-> Gerado em: 2026-08-30T03:11:04.584609+00:00
+> Gerado em: 2026-08-30T13:26:49.790033+00:00
 
 Este documento é derivado exclusivamente de `audit_live_99.json`; não contém contagens ou alegações manuais.
 
@@ -8,29 +8,42 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 
 ### Crawler
 
-- `success`: 42
-- `empty_valid`: 16
+- `success`: 38
+- `empty_valid`: 19
 - `blocked`: 3
-- `failed`: 3
+- `failed`: 4
 - `degraded`: 35
 
 ### Verificação
 
-- `VERIFIED`: 23
-- `EMPTY_VERIFIED`: 14
+- `VERIFIED`: 8
+- `EMPTY_VERIFIED`: 17
 - `BLOCKED`: 5
-- `FAILED_EXTERNAL`: 3
+- `FAILED_EXTERNAL`: 4
 - `PARTIAL`: 0
 - `BROKEN`: 0
-- `NOT_AUDITED`: 54
+- `NOT_AUDITED`: 65
 
 ## Fontes que exigem atenção
+
+### 04. CONSULPAM Concursos (`consulpam_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 25; processados: 9; visíveis: 9
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
+- Evidência de vazio: {'kind': 'evaluated_closed', 'value': 'Status Encerrado on detail https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=835', 'source': 'https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=835'}
 
 ### 05. IBAM Concursos (`ibam_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 30; processados: 26; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
+
+### 06. IBADE Concursos (`ibade_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 6; processados: 6; visíveis: 6
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
 
 ### 08. SEPROD Concursos (`seprod_open`)
 - Crawler: `degraded`; verificação: `NOT_AUDITED`
@@ -53,17 +66,42 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
 
+### 12. Fundação Cesgranrio (`cesgranrio_open`)
+- Crawler: `degraded`; verificação: `NOT_AUDITED`
+- Candidatos: 4; processados: 0; visíveis: 4
+- Erro: AllCandidatesRejected All 4 candidates were rejected by the quality gate
+- Nota: crawler sample has no official detail URL
+- Nota: NOT_AUDITED_REASON: crawler_status=degraded
+
 ### 14. IBGP - Inscrições Abertas (`ibgp_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 15; processados: 15; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
 
+### 15. FUNDEP - Gestão de Concursos (`fundep_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 2; processados: 1; visíveis: 1
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
+
 ### 16. FUMARC Concursos (`fumarc_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 34; processados: 33; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
+
+### 17. IMESO - Concursos e Seletivos (`imeso_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 2; processados: 2; visíveis: 2
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
+
+### 20. Exame Consultores e Auditores (`exame_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 6; processados: 4; visíveis: 4
+- Erro:
+- Nota: NOT_AUDITED_REASON: fewer_than_two_domain_field_matches
 
 ### 25. Leandro Ferreira & Consultoria (`leandroferreira_open`)
 - Crawler: `failed`; verificação: `FAILED_EXTERNAL`
@@ -89,7 +127,7 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 25; processados: 2; visíveis: 29
 - Erro:
-- Nota: NOT_AUDITED_REASON: no_comparable_field_match
+- Nota: NOT_AUDITED_REASON: no_independent_official_observation
 - Evidência de vazio: {'kind': 'evaluated_closed', 'value': 'Status Encerrado on detail https://www.msconcursos.com.br/concurso/43/processo-seletivo-publico-modalidade-emprego-publico-de-agente-comunitario-de-saude-prefeitura-de-ibiuna-sp', 'source': 'https://www.msconcursos.com.br/concurso/43/processo-seletivo-publico-modalidade-emprego-publico-de-agente-comunitario-de-saude-prefeitura-de-ibiuna-sp'}
 
 ### 32. EDUCA PB Concursos (`educapb_open`)
@@ -103,14 +141,13 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 4; processados: 4; visíveis: 4
 - Erro:
-- Nota: NOT_AUDITED_REASON: no_comparable_field_match
+- Nota: NOT_AUDITED_REASON: fewer_than_two_domain_field_matches
 
 ### 34. CONTEMAX Consultoria (`contemax_open`)
-- Crawler: `degraded`; verificação: `NOT_AUDITED`
+- Crawler: `failed`; verificação: `FAILED_EXTERNAL`
 - Candidatos: 0; processados: 0; visíveis: UNKNOWN
-- Erro: UnconfirmedEmpty No candidates found and no explicit empty-state evidence was recorded
-- Nota: crawler sample has no official detail URL
-- Nota: NOT_AUDITED_REASON: crawler_status=degraded
+- Erro: HTTPStatusError Server error '508 Insufficient Resource' for url 'http://www.contemaxconsultoria.com.br/site/' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508
+- Nota: HTTPStatusError: Server error '508 Insufficient Resource' for url 'http://www.contemaxconsultoria.com.br/site/' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508
 
 ### 35. CPCon / UEPB Concursos (`cpcon_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
@@ -120,7 +157,7 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 
 ### 36. FUNVAPI Concursos (`funvapi_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Candidatos: 7; processados: 7; visíveis: UNKNOWN
+- Candidatos: 7; processados: 6; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_visible_valid_count
 
@@ -130,11 +167,23 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
 
+### 40. UFU / DIRPS - Seleções e Concursos (`ufu_selection`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 11; processados: 11; visíveis: 11
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
+
 ### 41. IDGRAN Concursos (`idgran_open`)
 - Crawler: `failed`; verificação: `FAILED_EXTERNAL`
 - Candidatos: 0; processados: 0; visíveis: UNKNOWN
 - Erro: Error Page.goto: net::ERR_NAME_NOT_RESOLVED at https://idgran.com.br/ Call log: - navigating to "https://idgran.com.br/", waiting until "domcontentloaded"
 - Nota: ConnectError: [Errno 11001] getaddrinfo failed
+
+### 42. Instituto Quadrix (`quadrix_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 2; processados: 2; visíveis: 2
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
 
 ### 43. Gualimp Assessoria e Consultoria (`gualimp_open`)
 - Crawler: `degraded`; verificação: `NOT_AUDITED`
@@ -157,15 +206,34 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 
 ### 47. Elo Assessoria e Serviços (`elo_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Candidatos: 7; processados: 6; visíveis: UNKNOWN
+- Candidatos: 7; processados: 7; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_visible_valid_count
+
+### 49. Legalle Concursos (`legalle_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 25; processados: 4; visíveis: 4
+- Erro:
+- Nota: NOT_AUDITED_REASON: identity_title_not_confirmed
+- Evidência de vazio: {'kind': 'evaluated_closed', 'value': 'Status Encerrado on detail https://portal.editais.legalleconcursos.com.br/edital/ver/2535', 'source': 'https://portal.editais.legalleconcursos.com.br/edital/ver/2535'}
 
 ### 53. Instituto Nosso Rumo (`nossorumo_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
 - Candidatos: 2; processados: 2; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_official_observation
+
+### 54. Avança SP Concursos (`avancasp_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 6; processados: 6; visíveis: 6
+- Erro:
+- Nota: NOT_AUDITED_REASON: fewer_than_two_domain_field_matches
+
+### 55. Instituto Mais de Gestão e Concursos (`institutomais_open`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 18; processados: 17; visíveis: 17
+- Erro:
+- Nota: NOT_AUDITED_REASON: fewer_than_two_domain_field_matches
 
 ### 61. Oppus Concursos (`oppus_open`)
 - Crawler: `degraded`; verificação: `NOT_AUDITED`
@@ -176,10 +244,9 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 
 ### 62. Instituto Legatus (`legatus_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Candidatos: 12; processados: 10; visíveis: UNKNOWN
+- Candidatos: 12; processados: 11; visíveis: UNKNOWN
 - Erro:
-- Nota: ReadTimeout: The read operation timed out
-- Nota: NOT_AUDITED_REASON: no_independent_official_observation
+- Nota: NOT_AUDITED_REASON: no_independent_visible_valid_count
 - Evidência de vazio: {'kind': 'evaluated_closed', 'value': 'Status Encerrado on detail https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/', 'source': 'https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/'}
 
 ### 63. Fundação FEPESE (`fepese_open`)
@@ -220,6 +287,12 @@ Este documento é derivado exclusivamente de `audit_live_99.json`; não contém 
 - Candidatos: 26; processados: 3; visíveis: UNKNOWN
 - Erro:
 - Nota: NOT_AUDITED_REASON: no_independent_visible_valid_count
+
+### 71. FUNPEC - Processos Seletivos (`funpec_selection`)
+- Crawler: `success`; verificação: `NOT_AUDITED`
+- Candidatos: 10; processados: 10; visíveis: 10
+- Erro:
+- Nota: NOT_AUDITED_REASON: fewer_than_two_domain_field_matches
 
 ### 72. FADE - Fundação de Apoio ao Desenvolvimento (`fade_selection`)
 - Crawler: `degraded`; verificação: `NOT_AUDITED`

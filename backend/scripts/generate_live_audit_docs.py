@@ -2,8 +2,17 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
+
+# Support both ``python scripts/...`` from backend and direct invocation from
+# the repository root.
+BACKEND_ROOT = Path(__file__).resolve().parents[1]
+if str(BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(BACKEND_ROOT))
+
+from app.audit_metrics import build_metric_summary, metric_coherence_issues, source_metrics
 
 CRAWLER_STATUSES = ('success', 'empty_valid', 'blocked', 'failed', 'degraded')
 VERIFICATION_STATUSES = ('VERIFIED', 'EMPTY_VERIFIED', 'BLOCKED', 'FAILED_EXTERNAL', 'PARTIAL', 'BROKEN', 'NOT_AUDITED')
@@ -23,6 +32,10 @@ def sanitize_md_cell(val: Any) -> str:
 
 def display_value(val: Any, default: str = 'UNKNOWN') -> str:
     return default if val is None or val == '' else sanitize_md_cell(val)
+
+
+def _metric(source: dict[str, Any], field: str) -> Any:
+    return source_metrics(source).get(field)
 
 
 def _crawler_status(source: dict[str, Any]) -> str:
@@ -67,6 +80,11 @@ def generate_live_sources_audit_md(data: dict[str, Any], out_file: Path) -> None
     crawler, verification = _summary_counts(data, sources)
     generated_at = sanitize_str(data.get('generated_at'))
     total_items = summary.get('total_processed', summary.get('total_items', 0))
+    calculated_metrics = build_metric_summary(sources)
+    observed_total = summary.get('total_items_observed', calculated_metrics['total_items_observed'])
+    relevant_total = summary.get('total_relevant_items_known', calculated_metrics['total_relevant_items_known'])
+    active_total = summary.get('total_active_valid_items_known', calculated_metrics['total_active_valid_items_known'])
+    coverage_rate = summary.get('coverage_rate_known_sources', calculated_metrics['coverage_rate_known_sources'])
     lines = [
         '# Auditoria LIVE das 99 fontes do MASTER_SOURCES',
         '',
@@ -96,23 +114,30 @@ def generate_live_sources_audit_md(data: dict[str, Any], out_file: Path) -> None
         '',
         f'- Candidatos encontrados: {summary.get("total_candidates", "UNKNOWN")}',
         f'- Processados: {total_items}',
-        f'- Visíveis independentemente: {display_value(summary.get("total_visible_valid_items"))}',
+        f'- Itens observados independentemente: {display_value(observed_total)}',
+        f'- Itens relevantes conhecidos: {display_value(relevant_total)}',
+        f'- Itens ativos válidos conhecidos: {display_value(active_total)}',
+        f'- Cobertura nas fontes com ativo conhecido: {display_value(coverage_rate)}',
         '',
         '## Política de evidência',
         '',
-        'A auditoria compara `expected` observado no site/PDF oficial com `actual` retornado pelo crawler. Campo presente apenas em `actual` é `UNKNOWN`; nunca é `MATCH`. `visible_valid_items` é uma observação independente e não é calculado a partir de `processed`.',
+        'A auditoria compara `expected` observado no site/PDF oficial com `actual` retornado pelo crawler. Campo presente apenas em `actual` é `UNKNOWN`; nunca é `MATCH`.',
+        '`visible_items_observed`, `visible_relevant_items` e `visible_active_valid_items` são evidências independentes. `processed` nunca preenche um campo desconhecido.',
+        '`visible_valid_items` é mantido apenas como campo legado/deprecated.',
         '',
         '## Matriz das fontes',
         '',
-        '| # | Fonte | `source_type` | Crawler | Verificação | Visíveis | Candidatos | Processados |',
-        '|---:|---|---|---|---|---:|---:|---:|',
+        '| # | Fonte | `source_type` | Observed | Relevant | Active valid | Processed | Verification |',
+        '|---:|---|---|---:|---:|---:|---:|---|',
     ])
     for source in sources:
         lines.append(
             f'| {int(source.get("index", 0)):02d} | {sanitize_md_cell(source.get("name"))} | '
-            f'`{sanitize_md_cell(source.get("source_type"))}` | `{_crawler_status(source)}` | '
-            f'`{_verification_status(source)}` | {display_value(source.get("visible_valid_items"))} | '
-            f'{source.get("candidates_found", 0)} | {source.get("processed", 0)} |'
+            f'`{sanitize_md_cell(source.get("source_type"))}` | '
+            f'{display_value(_metric(source, "visible_items_observed"))} | '
+            f'{display_value(_metric(source, "visible_relevant_items"))} | '
+            f'{display_value(_metric(source, "visible_active_valid_items"))} | '
+            f'{source.get("processed", 0)} | `{_verification_status(source)}` |'
         )
 
     lines.extend(['', '## Amostras e comparações', ''])
@@ -123,7 +148,7 @@ def generate_live_sources_audit_md(data: dict[str, Any], out_file: Path) -> None
         lines.extend([
             f'### {int(source.get("index", 0)):02d}. {sanitize_str(source.get("name"))} (`{sanitize_str(source.get("source_type"))}`)',
             f'- Crawler: `{_crawler_status(source)}`; verificação: `{_verification_status(source)}`',
-            f'- Visíveis independentemente: {display_value(source.get("visible_valid_items"))}; processados: {source.get("processed", 0)}',
+            f'- Observed: {display_value(_metric(source, "visible_items_observed"))}; relevant: {display_value(_metric(source, "visible_relevant_items"))}; active valid: {display_value(_metric(source, "visible_active_valid_items"))}; processed: {source.get("processed", 0)}',
             f'- Método: {sanitize_str(sample.get("observation_method")) or "não informado"}',
             f'- URLs de evidência: {", ".join(sanitize_str(url) for url in sample.get("evidence_urls", source.get("evidence_urls", [])))}',
             '',
@@ -145,6 +170,8 @@ def generate_live_sources_audit_md(data: dict[str, Any], out_file: Path) -> None
 def generate_live_audit_issues_md(data: dict[str, Any], out_file: Path) -> None:
     sources = data.get('sources', [])
     crawler, verification = _summary_counts(data, sources)
+    calculated_metrics = build_metric_summary(sources)
+    summary = data.get('summary') or {}
     lines = [
         '# Questões da auditoria LIVE',
         '',
@@ -160,11 +187,21 @@ def generate_live_audit_issues_md(data: dict[str, Any], out_file: Path) -> None:
     lines.extend(f'- `{status}`: {crawler[status]}' for status in CRAWLER_STATUSES)
     lines.extend(['', '### Verificação', ''])
     lines.extend(f'- `{status}`: {verification[status]}' for status in VERIFICATION_STATUSES)
+    lines.extend([
+        '',
+        '### Métricas independentes',
+        '',
+        f'- `total_items_observed`: {display_value(summary.get("total_items_observed", calculated_metrics["total_items_observed"]))}',
+        f'- `total_relevant_items_known`: {display_value(summary.get("total_relevant_items_known", calculated_metrics["total_relevant_items_known"]))}',
+        f'- `total_active_valid_items_known`: {display_value(summary.get("total_active_valid_items_known", calculated_metrics["total_active_valid_items_known"]))}',
+        f'- `coverage_rate_known_sources`: {display_value(summary.get("coverage_rate_known_sources", calculated_metrics["coverage_rate_known_sources"]))}',
+    ])
     lines.extend(['', '## Fontes que exigem atenção', ''])
     attention = [
         source for source in sources
         if _crawler_status(source) in {'degraded', 'failed'}
         or _verification_status(source) in {'PARTIAL', 'BROKEN', 'NOT_AUDITED', 'FAILED_EXTERNAL'}
+        or metric_coherence_issues(source)
     ]
     if not attention:
         lines.append('Nenhuma fonte classificada como problema no JSON.')
@@ -172,9 +209,11 @@ def generate_live_audit_issues_md(data: dict[str, Any], out_file: Path) -> None:
         lines.extend([
             f'### {int(source.get("index", 0)):02d}. {sanitize_str(source.get("name"))} (`{sanitize_str(source.get("source_type"))}`)',
             f'- Crawler: `{_crawler_status(source)}`; verificação: `{_verification_status(source)}`',
-            f'- Candidatos: {source.get("candidates_found", 0)}; processados: {source.get("processed", 0)}; visíveis: {display_value(source.get("visible_valid_items"))}',
+            f'- Observed: {display_value(_metric(source, "visible_items_observed"))}; relevant: {display_value(_metric(source, "visible_relevant_items"))}; active valid: {display_value(_metric(source, "visible_active_valid_items"))}; processed: {source.get("processed", 0)}',
             f'- Erro: {sanitize_str(source.get("error_type"))} {sanitize_str(source.get("error_message"))}'.strip(),
         ])
+        for issue in metric_coherence_issues(source):
+            lines.append(f'- Inconsistência de métricas: `{sanitize_str(issue.get("code"))}` — {sanitize_str(issue.get("message"))}')
         for note in source.get('audit_notes', []):
             lines.append(f'- Nota: {sanitize_str(note)}')
         publication = source.get('publication_audit') or {}

@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 from app.connectors.base import CrawlResult, CrawlRunData
 from app.database import Base
-from app.models import Concurso, ConcursoVersion, Source
+from app.models import Concurso, ConcursoPublication, ConcursoVersion, Source
 from app.services import CrawlService
 
 
@@ -54,7 +54,26 @@ def test_crawl_service_idempotency():
                 'link_edital': 'https://example.com/edital1001.pdf',
                 'link_inscricao': None,
                 'resumo': 'Concurso teste',
-                'raw_data': {'publications': []},
+                'raw_data': {
+                    'publications': [
+                        {
+                            'title': 'Convocação',
+                            'publication_type': 'convocacao',
+                            'publication_date': '2026-08-01T00:00:00+00:00',
+                            'link': 'https://example.com/convocacao.pdf',
+                            'content_hash': 'publication_hash_1',
+                        },
+                        # The same publication can appear twice in one
+                        # connector payload.  It must be inserted once.
+                        {
+                            'title': 'Convocação',
+                            'publication_type': 'convocacao',
+                            'publication_date': '2026-08-01T00:00:00+00:00',
+                            'link': 'https://example.com/convocacao.pdf',
+                            'content_hash': 'publication_hash_1',
+                        },
+                    ]
+                },
                 'content_hash': 'hash_test_123',
                 'fetched_at': datetime.now(timezone.utc),
             }
@@ -86,6 +105,8 @@ def test_crawl_service_idempotency():
             assert len(concursos) == 1
             versions = db.execute(select(ConcursoVersion)).scalars().all()
             assert len(versions) == 1
+            publications = db.execute(select(ConcursoPublication)).scalars().all()
+            assert len(publications) == 1
 
             # Second run with exact same data: should be 100% idempotent
             res2 = service.crawl_source(source.id)
@@ -99,6 +120,8 @@ def test_crawl_service_idempotency():
             assert len(concursos_after) == 1
             versions_after = db.execute(select(ConcursoVersion)).scalars().all()
             assert len(versions_after) == 1
+            publications_after = db.execute(select(ConcursoPublication)).scalars().all()
+            assert len(publications_after) == 1
 
     finally:
         db.close()

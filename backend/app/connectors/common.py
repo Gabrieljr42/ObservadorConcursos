@@ -37,9 +37,26 @@ VALID_UFS = {
     'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC',
     'SP', 'SE', 'TO',
 }
+SEMANTIC_CITY_VALUES = {
+    'inscreva', 'inscreva-se', 'clique aqui', 'concurso público',
+    'processo seletivo', 'edital', 'saiba mais', 'detalhes', 'acessar',
+    'online', 'leia', 'leia mais', 'ver edital', 'ver detalhes', 'confira',
+}
+SEMANTIC_CITY_PREFIX_RE = re.compile(
+    r'^(?:inscreva(?:-se)?|clique(?:\s+aqui)?|acesse|saiba(?:\s+mais)?|'
+    r'leia(?:\s+mais)?|confira|ver(?:\s+(?:edital|detalhes))?)\b',
+    re.IGNORECASE,
+)
 MONEY_RE = re.compile(r'R\$\s*\d{1,3}(?:\.\d{3})*,\d{2}')
 DATE_NUM_RE = re.compile(r'\b(\d{1,2})/(\d{1,2})/(\d{2,4})\b')
 DATE_PT_RE = re.compile(r'\b(\d{1,2})\s+de\s+([a-zçãé]+)\s+de\s+(\d{4})\b', re.IGNORECASE)
+DATE_TOKEN_PATTERN = (
+    r'(?:'
+    r'\d{1,2}/\d{1,2}/\d{2,4}(?:\s*(?:às|as|-)?\s*\d{1,2}[:h]\d{2})?'
+    r'|'
+    r'\d{1,2}\s+de\s+[a-zçãé]+\s+de\s+\d{4}'
+    r')'
+)
 
 AREA_RULES = [
     ('assistencia_social', ['assistente social', 'serviço social', 'servico social', 'cras', 'creas']),
@@ -126,8 +143,12 @@ def parse_money(value: str | None) -> Decimal | None:
 def parse_numeric_date(day: str, month: str, year: str, hour: str | None = None, minute: str | None = None) -> datetime | None:
     try:
         y = int(year)
-        if y < 100:
+        if y < 100 and len(year) <= 2:
             y += 2000
+        # Some legacy portals use 01/01/0001 as a database sentinel for an
+        # unknown end date. Never expose that impossible date as real data.
+        if y < 1900:
+            return None
         return datetime(y, int(month), int(day), int(hour or 0), int(minute or 0), tzinfo=UTC)
     except ValueError:
         return None
@@ -155,6 +176,44 @@ def first_date(value: str | None) -> datetime | None:
 def parse_date_interval(value: str | None) -> tuple[datetime | None, datetime | None]:
     if not value:
         return None, None
+
+    # Many Brazilian portals abbreviate a range as ``17 de agosto a 08 de
+    # outubro de 2026``.  The year belongs to the second date, so the generic
+    # full-date matcher would otherwise skip the first date and fall back to an
+    # unrelated legal/publication date.
+    shared_year = re.search(
+        r'(\d{1,2})\s+de\s+([a-zçãé]+)(?:\s+de\s+(\d{4}))?\s+'
+        r'(?:a|até|e|[-–])\s*(\d{1,2})\s+de\s+([a-zçãé]+)\s+de\s+(\d{4})',
+        value,
+        flags=re.IGNORECASE,
+    )
+    if shared_year:
+        first_year = shared_year.group(3) or shared_year.group(6)
+        start = parse_pt_date(shared_year.group(1), shared_year.group(2), first_year)
+        end = parse_pt_date(shared_year.group(4), shared_year.group(5), shared_year.group(6), '23', '59')
+        if start and end:
+            return start, end
+
+    # Detail pages commonly mention a law/publication date before the actual
+    # registration window. Prefer an interval explicitly attached to the
+    # registration/period label so that e.g. ``17 de março de 1995`` cannot be
+    # paired with a later registration date.
+    contextual_patterns = [
+        rf'(?:no\s+)?per[ií]odo\s+(?:de\s+)?({DATE_TOKEN_PATTERN}).{{0,160}}?(?:a|até|e|[-–])\s*({DATE_TOKEN_PATTERN})',
+        rf'inscri[cç][oõ]e?s?.{{0,250}}?(?:de|:)\s*({DATE_TOKEN_PATTERN}).{{0,160}}?(?:a|até|e|[-–])\s*({DATE_TOKEN_PATTERN})',
+    ]
+    for pattern in contextual_patterns:
+        match = re.search(pattern, value, flags=re.IGNORECASE | re.DOTALL)
+        if not match:
+            continue
+        start = first_date(match.group(1))
+        end = first_date(match.group(2))
+        if start and end:
+            # A date written without a time represents the full end day.
+            if not re.search(r'\d{1,2}[:h]\d{2}', match.group(2)):
+                end = end.replace(hour=23, minute=59)
+            return start, end
+
     # Numeric format: 04/05/2026 - 10:00 até 08/06/2026 - 17:00
     nums = list(re.finditer(r'(\d{1,2})/(\d{1,2})/(\d{2,4})(?:\s*(?:às|as|-)?\s*(\d{1,2})[:h](\d{2}))?', value, flags=re.IGNORECASE))
     if len(nums) >= 2:
@@ -216,6 +275,8 @@ def extract_city_uf(value: str | None) -> tuple[str | None, str | None]:
         if uf not in VALID_UFS:
             return None, None
         # Narrative fragments such as "conclusão da avaliação e - OU" are not cities.
+        if city.casefold().strip(' .-_/') in {value.casefold() for value in SEMANTIC_CITY_VALUES} or SEMANTIC_CITY_PREFIX_RE.match(city):
+            return None, None
         if len(city.split()) > 8 or any(token in city.lower() for token in (
             'conclus', 'avaliação', 'resultado', 'inscriç', 'conselho regional',
             'autarquia municipal', 'agência de', 'agencia de',

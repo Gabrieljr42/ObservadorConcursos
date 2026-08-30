@@ -10,6 +10,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 from app.connectors.base import CandidateItem, CrawlResult, CrawlRunData
+from app.audit_validation import validate_concurso_sanity
 from app.publications import parse_publications_from_dom, parse_publications_from_lines
 
 from app.connectors.common import (
@@ -67,17 +68,22 @@ class FundepConnector:
                         response = client.get(candidate.detail_url)
                         response.raise_for_status()
                         parsed = self._parse_detail(candidate, response.text, client=client)
-                        if parsed:
+                        sanity = validate_concurso_sanity(parsed) if parsed else {'valid': False, 'diagnostics': [], 'errors': []}
+                        if parsed and sanity['valid']:
                             items.append(parsed)
                         else:
                             run_data.candidates_rejected += 1
+                            if sanity['diagnostics']:
+                                run_data.diagnostics_payload.setdefault('sanity', []).extend(sanity['diagnostics'])
                     except Exception:
                         run_data.candidates_rejected += 1
             if items:
                 run_data.status = 'success'
             else:
-                run_data.status = 'empty_valid'
-                run_data.diagnostics_payload['empty_evidence'] = True
+                run_data.status = 'degraded'
+                run_data.diagnostics_payload['empty_evidence'] = None
+                run_data.error_type = 'UnconfirmedEmpty'
+                run_data.error_message = 'No FUNDEP items returned without explicit empty-state evidence'
             return CrawlResult(items=items, run_data=run_data)
         except Exception as exc:
             run_data.status = 'failed'

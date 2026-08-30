@@ -44,6 +44,13 @@ CRAWL_RUNS_SQL = [
     "CREATE INDEX IF NOT EXISTS ix_crawl_runs_status ON crawl_runs (status)",
 ]
 
+REFRESH_SESSIONS_SQL = [
+    "CREATE TABLE IF NOT EXISTS refresh_sessions (id BIGSERIAL PRIMARY KEY, user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE, token_hash VARCHAR(64) NOT NULL UNIQUE, created_at TIMESTAMP DEFAULT now() NOT NULL, expires_at TIMESTAMP NOT NULL, revoked_at TIMESTAMP)",
+    "CREATE INDEX IF NOT EXISTS ix_refresh_sessions_user_id ON refresh_sessions (user_id)",
+    "CREATE INDEX IF NOT EXISTS ix_refresh_sessions_token_hash ON refresh_sessions (token_hash)",
+    "CREATE INDEX IF NOT EXISTS ix_refresh_sessions_expires_at ON refresh_sessions (expires_at)",
+]
+
 
 def ensure_runtime_schema(engine: Engine) -> None:
     """Small development migration layer.
@@ -61,4 +68,5 @@ def ensure_runtime_schema(engine: Engine) -> None:
             connection.execute(text(statement))
         for statement in CRAWL_RUNS_SQL:
             connection.execute(text(statement))
-
+        for statement in REFRESH_SESSIONS_SQL:
+            connection.execute(text(statement))

@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
+from app.audit_validation import validate_concurso_sanity
 from app.connectors.common import (
     HEADERS,
     build_hash,
@@ -256,6 +257,25 @@ class BaseConnector:
         """Override in subclasses to parse detail page HTML into a standardized concurso dict."""
         raise NotImplementedError
 
+    def _record_sanity_diagnostics(
+        self,
+        item: dict[str, Any] | None,
+        *,
+        run_data: CrawlRunData | None = None,
+    ) -> bool:
+        """Record structural diagnostics and reject clearly unsafe items."""
+        target = run_data or self.run_data
+        result = validate_concurso_sanity(item)
+        if result['diagnostics']:
+            target.diagnostics_payload.setdefault('sanity', []).extend(result['diagnostics'])
+        if not result['valid']:
+            target.diagnostics_payload.setdefault('sanity_rejections', []).append({
+                'title': (item or {}).get('titulo'),
+                'link_pagina': (item or {}).get('link_pagina'),
+                'errors': result['errors'],
+            })
+        return result['valid']
+
     def _is_valid_certame(
         self,
         title: str | None,
@@ -310,7 +330,7 @@ class BaseConnector:
                     try:
                         html = self._fetch_html(candidate.detail_url)
                         parsed = self._parse_detail(candidate, html, client=client)
-                        if parsed:
+                        if parsed and self._record_sanity_diagnostics(parsed):
                             items.append(parsed)
                         else:
                             self.run_data.candidates_rejected += 1

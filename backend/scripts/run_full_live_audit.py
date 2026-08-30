@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 import logging
 import os
 import re
@@ -25,6 +26,16 @@ from app.audit_validation import (  # noqa: E402
     build_field_audit,
     has_value,
     normalize_for_audit,
+)
+from app.audit_metrics import (  # noqa: E402
+    METRIC_FIELDS,
+    audit_summary_matches_sources,
+    build_metric_summary,
+    coverage_explanation,
+    enrich_source,
+    has_explicit_empty_evidence,
+    metric_coherence_issues,
+    source_metrics,
 )
 from app.connectors.common import (  # noqa: E402
     HEADERS,
@@ -78,7 +89,8 @@ def _same_host(left: str, right: str) -> bool:
 def _canonical_url(url: str) -> str:
     parsed = urlparse(url)
     path = parsed.path.rstrip('/') or '/'
-    return f'{parsed.scheme.casefold()}://{parsed.netloc.casefold()}{path}' + (f'?{parsed.query}' if parsed.query else '')
+    netloc = parsed.netloc.casefold().removeprefix('www.')
+    return f'{parsed.scheme.casefold()}://{netloc}{path}' + (f'?{parsed.query}' if parsed.query else '')
 
 
 def _official_text(soup: BeautifulSoup) -> str:
@@ -129,7 +141,7 @@ def _first_heading(soup: BeautifulSoup) -> str | None:
     generic_headings = (
         'informações do concurso', 'informacoes do concurso', 'detalhes do concurso',
         'detalhes do processo', 'detalhes do edital', 'concursos em andamento',
-        'concursos abertos', 'concursos', 'processos seletivos', 'editais',
+        'concursos abertos', 'concurso aberto', 'concurso fechado', 'concursos', 'processos seletivos', 'editais',
         'arquivos', 'documentos', 'home', 'início', 'inicio', 'área do candidato',
         'area do candidato', 'portal de seleção', 'portal de selecao', 'ver edital',
         'encontre seu próximo caminho', 'encontre seu proximo caminho',
@@ -354,6 +366,10 @@ def collect_independent_evidence(defn, item: dict[str, Any] | None) -> dict[str,
         'evidence_urls': [defn.list_urls[0] if defn.list_urls else defn.base_url],
         'publication_observation': {'observed': False, 'expected_titles': [], 'expected_links': []},
         'visible_valid_items': None,
+        'visible_items_observed': None,
+        'visible_relevant_items': None,
+        'visible_active_valid_items': None,
+        'metric_evidence': None,
         'observation_error': None,
     }
     list_url = defn.list_urls[0] if defn.list_urls else defn.base_url
@@ -570,7 +586,15 @@ def collect_independent_evidence(defn, item: dict[str, Any] | None) -> dict[str,
                 ):
                     list_links.add(_canonical_url(url))
             if list_links:
-                evidence['visible_valid_items'] = len(list_links)
+                observed_count = len(list_links)
+                evidence['visible_valid_items'] = observed_count
+                evidence['visible_items_observed'] = observed_count
+                evidence['metric_evidence'] = {
+                    'method': 'official_html_observer',
+                    'observed_basis': 'unique_independent_listing_links',
+                    'relevant_basis': 'explicit_only',
+                    'active_basis': 'explicit_only',
+                }
 
             if not detail_url:
                 evidence['observation_error'] = 'crawler sample has no official detail URL'
@@ -599,6 +623,19 @@ def _merge_evidence(static: dict[str, Any], dynamic: dict[str, Any]) -> dict[str
     merged['publication_observation'] = static.get('publication_observation') or dynamic.get('publication_observation', {})
     if static.get('visible_valid_items') is not None:
         merged['visible_valid_items'] = static['visible_valid_items']
+    for field in METRIC_FIELDS:
+        if field in static:
+            merged[field] = static[field]
+        elif field in dynamic:
+            merged[field] = dynamic[field]
+    merged['metric_evidence'] = {
+        **(dynamic.get('metric_evidence') or {}),
+        **(static.get('metric_evidence') or {}),
+    } or None
+    resolved_metrics = source_metrics(merged)
+    for field in METRIC_FIELDS:
+        if field in merged or field in (merged.get('metric_evidence') or {}):
+            merged[field] = resolved_metrics[field]
     merged['independent'] = bool(static.get('independent') or dynamic.get('independent'))
     merged['method'] = '+'.join(dict.fromkeys(filter(None, [dynamic.get('method'), static.get('method')])))
     if static.get('observed_at'):
@@ -675,22 +712,41 @@ def _verification_status(entry: dict[str, Any], evidence: dict[str, Any], field_
     if crawler_status == 'failed':
         return 'FAILED_EXTERNAL'
     if crawler_status == 'empty_valid':
-        return 'EMPTY_VERIFIED' if entry.get('empty_evidence') else 'NOT_AUDITED'
+        active = entry.get('visible_active_valid_items')
+        if isinstance(active, int) and not isinstance(active, bool) and active > 0:
+            return 'PARTIAL'
+        return 'EMPTY_VERIFIED' if has_explicit_empty_evidence(entry.get('empty_evidence')) else 'NOT_AUDITED'
     if crawler_status != 'success':
         return 'NOT_AUDITED'
     if not evidence.get('independent') or not evidence.get('expected'):
         return 'NOT_AUDITED'
-    if not field_audit or not any(value == 'MATCH' for value in field_audit.values()):
+    if not field_audit:
         return 'NOT_AUDITED'
     if any(value == 'MISMATCH' for value in field_audit.values()):
         return 'BROKEN'
     if publication_audit and publication_audit.get('status') == 'MISMATCH':
         return 'BROKEN'
-    visible = entry.get('visible_valid_items')
-    if visible is None:
+    observed = entry.get('visible_items_observed')
+    if observed is None:
+        observed = entry.get('visible_valid_items')
+    if observed is None:
         return 'NOT_AUDITED'
-    if visible != entry.get('processed', 0):
-        return 'PARTIAL'
+    active = entry.get('visible_active_valid_items')
+    if isinstance(active, int) and not isinstance(active, bool) and active != entry.get('processed', 0):
+        if not coverage_explanation(entry):
+            return 'PARTIAL'
+    expected = evidence.get('expected') or {}
+    if field_audit.get('titulo') != 'MATCH':
+        return 'NOT_AUDITED'
+    if has_value(expected.get('orgao')) and field_audit.get('orgao') != 'MATCH':
+        return 'NOT_AUDITED'
+    domain_fields = (
+        'cidade', 'uf', 'vagas', 'salario_min', 'salario_max',
+        'inscricao_inicio', 'inscricao_fim', 'taxa', 'prova_data',
+        'edital_numero', 'edital_data', 'link_edital',
+    )
+    if sum(field_audit.get(field) == 'MATCH' for field in domain_fields) < 2:
+        return 'NOT_AUDITED'
     return 'VERIFIED'
 
 
@@ -703,10 +759,22 @@ def _not_audited_reason(entry: dict[str, Any], evidence: dict[str, Any], field_a
         return 'NOT_AUDITED_REASON: no_independent_official_observation'
     if not evidence.get('expected'):
         return 'NOT_AUDITED_REASON: no_independent_official_value'
-    if not field_audit or not any(value == 'MATCH' for value in field_audit.values()):
+    if not field_audit:
         return 'NOT_AUDITED_REASON: no_comparable_field_match'
-    if entry.get('visible_valid_items') is None:
-        return 'NOT_AUDITED_REASON: no_independent_visible_valid_count'
+    if entry.get('visible_items_observed') is None and entry.get('visible_valid_items') is None:
+        return 'NOT_AUDITED_REASON: no_independent_visible_observation_count'
+    expected = evidence.get('expected') or {}
+    if field_audit.get('titulo') != 'MATCH':
+        return 'NOT_AUDITED_REASON: identity_title_not_confirmed'
+    if has_value(expected.get('orgao')) and field_audit.get('orgao') != 'MATCH':
+        return 'NOT_AUDITED_REASON: identity_orgao_not_confirmed'
+    domain_fields = (
+        'cidade', 'uf', 'vagas', 'salario_min', 'salario_max',
+        'inscricao_inicio', 'inscricao_fim', 'taxa', 'prova_data',
+        'edital_numero', 'edital_data', 'link_edital',
+    )
+    if sum(field_audit.get(field) == 'MATCH' for field in domain_fields) < 2:
+        return 'NOT_AUDITED_REASON: fewer_than_two_domain_field_matches'
     return 'NOT_AUDITED_REASON: verification_criteria_inconclusive'
 
 
@@ -730,12 +798,17 @@ def audit_single_source(index: int, defn, static_evidence: dict[str, dict[str, A
         'browser_used': False,
         'technology': 'HTML',
         'visible_valid_items': None,
+        'visible_items_observed': None,
+        'visible_relevant_items': None,
+        'visible_active_valid_items': None,
+        'metric_evidence': None,
         'candidates_found': 0,
         'candidates_rejected': 0,
         'processed': 0,
         'empty_evidence': None,
         'error_type': None,
         'error_message': None,
+        'crawler_diagnostics': {},
         'sample': None,
         'field_audit': None,
         'publication_audit': None,
@@ -754,6 +827,7 @@ def audit_single_source(index: int, defn, static_evidence: dict[str, dict[str, A
             res_entry['candidates_found'] = run_data.candidates_found
             res_entry['candidates_rejected'] = run_data.candidates_rejected
             res_entry['empty_evidence'] = run_data.diagnostics_payload.get('empty_evidence')
+            res_entry['crawler_diagnostics'] = serialize_val(run_data.diagnostics_payload)
             res_entry['error_type'] = run_data.error_type
             res_entry['error_message'] = run_data.error_message
         else:
@@ -771,7 +845,11 @@ def audit_single_source(index: int, defn, static_evidence: dict[str, dict[str, A
 
         dynamic_evidence = collect_independent_evidence(defn, sample)
         evidence = _merge_evidence(sample_static, dynamic_evidence)
+        resolved_metrics = source_metrics(evidence)
+        for field in METRIC_FIELDS:
+            res_entry[field] = resolved_metrics[field]
         res_entry['visible_valid_items'] = evidence.get('visible_valid_items')
+        res_entry['metric_evidence'] = evidence.get('metric_evidence')
         res_entry['evidence_urls'] = list(dict.fromkeys([*res_entry['evidence_urls'], *evidence.get('evidence_urls', [])]))
 
         if sample is not None:
@@ -836,8 +914,77 @@ def _count_by(sources: list[dict[str, Any]], field: str, allowed: tuple[str, ...
     return {value: sum(1 for source in sources if source.get(field) == value) for value in allowed}
 
 
-def main() -> None:
+def _load_audit_payload(path: Path) -> dict[str, Any]:
+    with path.open('r', encoding='utf-8') as handle:
+        payload = json.load(handle)
+    if not isinstance(payload, dict) or not isinstance(payload.get('sources'), list):
+        raise ValueError(f'Invalid audit payload: {path}')
+    return payload
+
+
+def migrate_existing_audit(input_path: Path | None = None, output_path: Path | None = None) -> dict[str, Any]:
+    """Migrate the saved audit without crawling any source.
+
+    This is the default operation.  It keeps the legacy field for consumers
+    that still read it, but all new totals come from the three separated
+    independent-evidence metrics.
+    """
+    input_path = input_path or (BACKEND_ROOT / 'audit_live_99.json')
+    output_path = output_path or (BACKEND_ROOT / 'audit_live_99.json')
+    payload = _load_audit_payload(input_path)
     static_evidence = load_independent_evidence()
+    sources = payload['sources']
+    for source in sources:
+        static = static_evidence.get(source.get('source_type'), {})
+        if isinstance(static, dict):
+            for field in METRIC_FIELDS:
+                if field in static:
+                    source[field] = static[field]
+            if static.get('metric_evidence'):
+                source['metric_evidence'] = static['metric_evidence']
+        enrich_source(source)
+        issues = metric_coherence_issues(source)
+        if issues:
+            source['metric_inconsistencies'] = issues
+            if (
+                source.get('verification_status') == 'EMPTY_VERIFIED'
+                and any(issue['code'] == 'empty_verified_active_items' for issue in issues)
+            ):
+                source['verification_status'] = 'PARTIAL'
+                source.setdefault('audit_notes', []).append(
+                    'Verification status changed to PARTIAL: independent active count is greater than zero',
+                )
+        else:
+            source.pop('metric_inconsistencies', None)
+
+    summary = dict(payload.get('summary') or {})
+    metric_summary = build_metric_summary(sources)
+    summary.update(metric_summary)
+    crawler_values = ('success', 'empty_valid', 'blocked', 'failed', 'degraded')
+    verification_values = ('VERIFIED', 'EMPTY_VERIFIED', 'BLOCKED', 'FAILED_EXTERNAL', 'PARTIAL', 'BROKEN', 'NOT_AUDITED')
+    crawler_counts = _count_by(sources, 'crawler_status', crawler_values)
+    verification_counts = _count_by(sources, 'verification_status', verification_values)
+    summary.update({
+        **crawler_counts,
+        'crawler_status_counts': crawler_counts,
+        'verification_status_counts': verification_counts,
+    })
+    # Compatibility only: this remains the old, deprecated field total.
+    legacy_values = [source.get('visible_valid_items') for source in sources if isinstance(source.get('visible_valid_items'), int)]
+    summary['total_visible_valid_items'] = sum(legacy_values) if legacy_values else None
+    summary['total_items'] = metric_summary['total_processed']
+    payload['summary'] = summary
+    payload['code_revision'] = 'separated-independent-metrics-2026-08-30'
+    payload['evidence_policy'] = (
+        'Observed, relevant and active-valid counts come only from independent portal evidence; '
+        'processed is crawler output and never fills an unknown metric. visible_valid_items is deprecated.'
+    )
+    with output_path.open('w', encoding='utf-8') as handle:
+        json.dump(payload, handle, indent=2, ensure_ascii=False)
+    return payload
+
+
+def _run_full_live_audit(static_evidence: dict[str, dict[str, Any]]) -> dict[str, Any]:
     print(f'Starting Full LIVE Audit of {len(MASTER_SOURCES)} sources with independent evidence checks...')
     start_total = time.monotonic()
     results_by_index: dict[int, dict[str, Any]] = {}
@@ -861,6 +1008,7 @@ def main() -> None:
     total_duration = round(time.monotonic() - start_total, 2)
     total_processed = sum(int(source.get('processed') or 0) for source in ordered_sources)
     total_candidates = sum(int(source.get('candidates_found') or 0) for source in ordered_sources)
+    metric_summary = build_metric_summary(ordered_sources)
     visible_values = [source.get('visible_valid_items') for source in ordered_sources if isinstance(source.get('visible_valid_items'), int)]
     summary = {
         'total_sources': len(ordered_sources),
@@ -868,14 +1016,14 @@ def main() -> None:
         'crawler_status_counts': crawler_counts,
         'verification_status_counts': verification_counts,
         'total_candidates': total_candidates,
-        'total_processed': total_processed,
         'total_visible_valid_items': sum(visible_values) if visible_values else None,
+        **metric_summary,
         'total_items': total_processed,
         'duration_seconds': total_duration,
     }
     final_payload = {
         'generated_at': datetime.now(timezone.utc).isoformat(),
-        'code_revision': 'final-audit-independent-evidence-2026-08-29',
+        'code_revision': 'final-quality-pass-independent-evidence-2026-08-30',
         'evidence_policy': 'MATCH requires an independently observed official value; crawler-only values are UNKNOWN',
         'summary': summary,
         'sources': ordered_sources,
@@ -895,6 +1043,26 @@ def main() -> None:
     print(f'  Duration        : {total_duration}s')
     print('==================================================')
     print(f'Saved to {out_path}')
+    return final_payload
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description='Migrate or audit the 99-source live audit.')
+    parser.add_argument(
+        '--full-live',
+        action='store_true',
+        help='Run the complete 99-source live audit. Omitted by default to keep metric passes short.',
+    )
+    args = parser.parse_args()
+    if args.full_live:
+        _run_full_live_audit(load_independent_evidence())
+        return
+    payload = migrate_existing_audit()
+    print(f'Migrated existing audit without live crawling: {len(payload["sources"])} sources')
+    print(json.dumps({key: payload['summary'].get(key) for key in (
+        'total_items_observed', 'total_relevant_items_known', 'total_active_valid_items_known',
+        'total_processed', 'coverage_rate_known_sources', 'metric_inconsistencies',
+    )}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

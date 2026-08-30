@@ -89,7 +89,9 @@ def _is_noise_title(line: str) -> bool:
         'aceitar', 'recusar', 'fechar', 'continuar', 'privacidade', 'cookies',
         'concursos', 'concursos realizados', 'concursos em andamento', 'concursos abertos',
         'processos seletivos', 'editais', 'homologados', 'fundação', 'fundacao',
-        'ibade', 'todos', 'concluídos', 'concluidos', 'em andamento',
+        'ibade', 'todos', 'concluídos', 'concluidos', 'em andamento', 'menu', 'rodapé',
+        'rodape', 'footer', 'social', 'manual', 'manual do candidato', 'documento',
+        'documentos', 'aviso',
     }
     if lowered in noise_exact:
         return True

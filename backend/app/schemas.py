@@ -135,8 +135,13 @@ class UserOut(BaseModel):
 
 class AuthToken(BaseModel):
     access_token: str
+    refresh_token: str | None = None
     token_type: str = 'bearer'
     user: UserOut
+
+
+class RefreshTokenIn(BaseModel):
+    refresh_token: str
 
 
 class UserPreferenceIn(BaseModel):
@@ -260,3 +265,16 @@ class SourceMasterSeedOut(BaseModel):
     updated: int
     unchanged: int
 
+
+class SyncCheckpointOut(BaseModel):
+    generated_at: datetime
+    user: UserOut
+    preferences: UserPreferenceOut | None
+    concursos: list[ConcursoOut]
+    publications: list[ConcursoPublicationOut]
+    versions: list[ConcursoVersionOut]
+    recent_updates: list[UpdateOut]
+    my_updates: list[UpdateOut]
+    favorites: list[FavoriteOut]
+    alerts: list[AlertOut]
+    notifications: list[NotificationOut]

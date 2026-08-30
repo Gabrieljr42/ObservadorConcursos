@@ -91,6 +91,22 @@ def test_money_formatting_matches_independent_value():
     assert audit['salario_min'] == 'MATCH'
 
 
+def test_url_comparison_ignores_www_alias():
+    audit = build_field_audit(
+        {'link_inscricao': 'https://msconcursos.com.br/inscricao'},
+        {'link_inscricao': 'https://www.msconcursos.com.br/inscricao'},
+    )
+    assert audit['link_inscricao'] == 'MATCH'
+
+
+def test_title_comparison_ignores_state_suffix():
+    audit = build_field_audit(
+        {'titulo': 'Prefeitura Municipal de Piranhas-Alagoas'},
+        {'titulo': 'Prefeitura Municipal de Piranhas'},
+    )
+    assert audit['titulo'] == 'MATCH'
+
+
 def test_unknown_independent_count_does_not_become_verified():
     from scripts.run_full_live_audit import _verification_status
 
@@ -100,12 +116,67 @@ def test_unknown_independent_count_does_not_become_verified():
     assert _verification_status(entry, evidence, field_audit, {'status': 'UNKNOWN'}) == 'NOT_AUDITED'
 
 
+def test_verified_requires_identity_and_two_domain_matches():
+    from scripts.run_full_live_audit import _verification_status
+
+    entry = {'crawler_status': 'success', 'processed': 1, 'visible_valid_items': 1}
+    evidence = {
+        'independent': True,
+        'expected': {
+            'titulo': 'Concurso Público 01/2026',
+            'orgao': 'Prefeitura de Teste',
+            'cidade': 'Teste',
+            'uf': 'MG',
+            'link_edital': 'https://example.org/edital.pdf',
+        },
+    }
+    field_audit = build_field_audit(evidence['expected'], evidence['expected'])
+    assert _verification_status(entry, evidence, field_audit, {'status': 'MATCH'}) == 'VERIFIED'
+
+
+def test_verified_without_identity_is_not_audited():
+    from scripts.run_full_live_audit import _verification_status
+
+    entry = {'crawler_status': 'success', 'processed': 1, 'visible_valid_items': 1}
+    evidence = {
+        'independent': True,
+        'expected': {'link_edital': 'https://example.org/edital.pdf', 'uf': 'MG', 'cidade': 'Teste'},
+    }
+    field_audit = build_field_audit(evidence['expected'], evidence['expected'])
+    assert _verification_status(entry, evidence, field_audit, {'status': 'MATCH'}) == 'NOT_AUDITED'
+
+
+def test_verified_with_only_one_domain_match_is_not_audited():
+    from scripts.run_full_live_audit import _verification_status
+
+    entry = {'crawler_status': 'success', 'processed': 1, 'visible_valid_items': 1}
+    evidence = {
+        'independent': True,
+        'expected': {'titulo': 'Concurso Público 01/2026', 'orgao': 'Prefeitura de Teste', 'uf': 'MG'},
+    }
+    actual = {'titulo': 'Concurso Público 01/2026', 'orgao': 'Prefeitura de Teste', 'uf': 'MG'}
+    field_audit = build_field_audit(evidence['expected'], actual)
+    assert _verification_status(entry, evidence, field_audit, {'status': 'MATCH'}) == 'NOT_AUDITED'
+
+
 def test_generic_official_heading_is_not_used_as_expected_title():
     from bs4 import BeautifulSoup
     from scripts.run_full_live_audit import _extract_official_expected
 
     expected, _ = _extract_official_expected(
         BeautifulSoup('<html><head><title>IBAM - Instituto</title></head><body><h1>Informações do concurso</h1></body></html>', 'lxml'),
+        'https://example.org/concursos/1',
+    )
+
+    assert 'titulo' not in expected
+
+
+def test_singular_generic_official_heading_is_not_used_as_expected_title():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup('<html><body><h1>Concurso aberto</h1></body></html>', 'lxml'),
         'https://example.org/concursos/1',
     )
 

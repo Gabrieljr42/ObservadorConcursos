@@ -178,6 +178,10 @@ class User(Base):
         back_populates='user',
         cascade='all, delete-orphan',
     )
+    refresh_sessions: Mapped[list['RefreshSession']] = relationship(
+        back_populates='user',
+        cascade='all, delete-orphan',
+    )
 
 
 class UserPreference(Base):
@@ -265,6 +269,19 @@ class Notification(Base):
     concurso: Mapped[Concurso | None] = relationship()
 
 
+class RefreshSession(Base):
+    __tablename__ = 'refresh_sessions'
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey('users.id', ondelete='CASCADE'), nullable=False, index=True)
+    token_hash: Mapped[str] = mapped_column(String(64), nullable=False, unique=True, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, index=True)
+    revoked_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+    user: Mapped[User] = relationship(back_populates='refresh_sessions')
+
+
 class CrawlRun(Base):
     __tablename__ = 'crawl_runs'
 
@@ -293,4 +310,3 @@ class CrawlRun(Base):
     diagnostics_payload: Mapped[dict | None] = mapped_column(JSON, nullable=True)
 
     source: Mapped[Source] = relationship(back_populates='runs')
-

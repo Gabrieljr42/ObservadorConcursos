@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 
 from app.connectors.base import HEADERS, BaseConnector, CrawlResult
 from app.connectors.registry import MASTER_SOURCES, get_connector
+from app.audit_metrics import METRIC_FIELDS
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 logger = logging.getLogger('live_auditor')
@@ -43,6 +44,16 @@ def inspect_live_source(source_def_or_type: str | Any, verbose: bool = False) ->
         'browser_needed': False,
         'technology': 'Unknown',
         'visible_items_estimated': 0,
+        # A connector-only probe is not independent portal evidence.  Keep all
+        # three semantic metrics unknown until an independent listing review is
+        # available.
+        **{field: None for field in METRIC_FIELDS},
+        'metric_evidence': {
+            'method': 'connector_probe_only',
+            'observed_basis': None,
+            'relevant_basis': 'explicit_only',
+            'active_basis': 'explicit_only',
+        },
         'candidates_found': 0,
         'candidates_rejected': 0,
         'processed': 0,

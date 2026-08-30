@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 
 from app.pdf.extractor import extract_pdf_text_from_url
 from app.pdf.parsers.ibfc import parse_ibfc_pdf
+from app.audit_validation import validate_concurso_sanity
 from app.connectors.common import extract_pdf_link
 from app.publications import parse_publications_from_dom
 
@@ -59,16 +60,19 @@ class IBFCOpenConnector:
         candidates = self._fetch_candidates()
         concursos: list[dict[str, Any]] = []
         rejected = 0
+        sanity_diagnostics: list[dict[str, str]] = []
         with httpx.Client(timeout=45.0, follow_redirects=True, headers=self._headers()) as client:
             for candidate in candidates:
                 try:
                     detail_response = client.get(candidate.detail_url)
                     detail_response.raise_for_status()
                     item = self._parse_detail(candidate, detail_response.text, client=client)
-                    if item and self._is_valid_item(item):
+                    sanity = validate_concurso_sanity(item) if item else {'valid': False, 'diagnostics': []}
+                    if item and self._is_valid_item(item) and sanity['valid']:
                         concursos.append(item)
                     else:
                         rejected += 1
+                        sanity_diagnostics.extend(sanity['diagnostics'])
                 except Exception as exc:
                     logger.warning('IBFC detail error for %s: %s', candidate.detail_url, exc)
                     rejected += 1
@@ -79,6 +83,9 @@ class IBFCOpenConnector:
             'source': self.list_url,
         } if self._last_listing_empty else None
 
+        diagnostics_payload = {'empty_evidence': empty_ev}
+        if sanity_diagnostics:
+            diagnostics_payload['sanity'] = sanity_diagnostics
         return CrawlResult(
             items=concursos,
             run_data=CrawlRunData(
@@ -87,7 +94,7 @@ class IBFCOpenConnector:
                 status='success' if concursos else ('empty_valid' if self._last_listing_empty else 'degraded'),
                 http_status=200,
                 browser_used=False,
-                diagnostics_payload={'empty_evidence': empty_ev},
+                diagnostics_payload=diagnostics_payload,
             ),
         )
 

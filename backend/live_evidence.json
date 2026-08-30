@@ -39,6 +39,104 @@
         ],
         "expected_links": []
       }
+    },
+    "idecan_open": {
+      "method": "targeted_live_listing_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://portal.concursos.idecan.org.br/edital/index/abertos"
+      ],
+      "visible_items_observed": 5,
+      "visible_relevant_items": 5,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "Official tabs showed 0 in registration, 3 in progress and 2 finalized.",
+        "observed_basis": "five unique official detail links",
+        "relevant_basis": "all five are public contests or selections",
+        "active_basis": "official registration tab explicitly empty"
+      }
+    },
+    "fcc_open": {
+      "method": "targeted_live_listing_and_detail_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://www.concursosfcc.com.br/concursoAndamento.html"
+      ],
+      "visible_items_observed": 37,
+      "visible_relevant_items": 33,
+      "visible_active_valid_items": 1,
+      "metric_evidence": {
+        "basis": "37 unique official contest detail links; 2 vestibular and 2 CFP certification entries excluded from product scope; PM/PI detail had open registrations.",
+        "observed_basis": "unique /concursos/*/index.html links",
+        "relevant_basis": "public contests/processes, excluding vestibular and certification",
+        "active_basis": "one relevant PM/PI detail explicitly showed open registrations"
+      }
+    },
+    "idcap_open": {
+      "method": "targeted_live_listing_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://www.idcap.org.br/index/1",
+        "https://www.idcap.org.br/index/abertos"
+      ],
+      "visible_items_observed": 60,
+      "visible_relevant_items": 51,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "The broad official listing exposed 60 unique details; 7 private/OGMO, 1 vestibular and 1 social-course entry were outside product scope; open-registration tab had no item.",
+        "observed_basis": "unique /informacoes/* links on /index/1",
+        "relevant_basis": "public contests and selections after explicit scope exclusions",
+        "active_basis": "official /index/abertos page said no item registered"
+      }
+    },
+    "aguia_open": {
+      "method": "targeted_live_listing_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://portal.institutoaguia.org.br/edital"
+      ],
+      "visible_items_observed": 28,
+      "visible_relevant_items": 18,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "28 unique official details; 10 entries were vestibular and excluded; the registration tab explicitly showed no contest.",
+        "observed_basis": "unique /edital/ver/* links",
+        "relevant_basis": "18 public contests or selections after vestibular exclusion",
+        "active_basis": "official registration tab explicitly empty"
+      }
+    },
+    "fapepi_selection": {
+      "method": "targeted_live_listing_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://www.fapepi.pi.gov.br/editais-fapepi/"
+      ],
+      "visible_items_observed": 106,
+      "visible_relevant_items": 0,
+      "visible_active_valid_items": 0,
+      "metric_evidence": {
+        "basis": "Official editais are research fomento, grants, prizes or academic scholarships; none is personnel hiring.",
+        "observed_basis": "independent official listing count",
+        "relevant_basis": "institutional_non_personnel_fomento",
+        "active_basis": "zero personnel hiring items"
+      }
+    },
+    "rbo_open": {
+      "method": "targeted_live_listing_and_detail_review",
+      "observed_at": "2026-08-30",
+      "evidence_urls": [
+        "https://rboconcursos.selecao.net.br/index/abertos/",
+        "https://rboconcursos.selecao.net.br/informacoes/203/"
+      ],
+      "visible_items_observed": 2,
+      "visible_relevant_items": 2,
+      "visible_active_valid_items": 2,
+      "metric_evidence": {
+        "basis": "Official open-listing count was 2 and detail 203 showed registration from 24/08/2026 to 25/09/2026.",
+        "observed_basis": "two unique official open-listing links",
+        "relevant_basis": "public contest entries",
+        "active_basis": "open registration window confirmed on detail"
+      }
     }
   }
 }
