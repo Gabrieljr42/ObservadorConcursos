@@ -105,6 +105,15 @@ class FumarcConnector(BaseConnector):
                     modalidade = 'Processo Seletivo' if 'processo seletivo' in title.lower() else 'Concurso Público'
                     status = status_from_dates(inicio, fim)
                     cidade, uf = extract_city_uf(f'{title} {orgao}')
+                    # "CREA" and similar organization acronyms are not city
+                    # names.  Keep location empty unless the official API/title
+                    # provides a valid city/UF pair.
+                    cidade_lower = cidade.casefold() if cidade else ''
+                    if cidade and (
+                        cidade_lower in {'crea', 'concurso publico', 'concurso'}
+                        or 'crea' in cidade_lower
+                    ):
+                        cidade = None
                     if not uf:
                         uf = 'MG'
 

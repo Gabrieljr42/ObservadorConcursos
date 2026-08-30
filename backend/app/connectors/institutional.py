@@ -147,12 +147,10 @@ class InstitutionalSelectionConnector(ConfigurableHTMLConnector):
                     value=f'{len(raw_candidates)} calls evaluated; all are research fomento / zero personnel hiring',
                     source=self.list_url,
                 )
-            elif not self.empty_evidence:
-                self.mark_empty_evidence(
-                    kind='institutional_non_personnel_fomento',
-                    value='portal editais/chamadas evaluated; zero personnel hiring found',
-                    source=self.list_url,
-                )
+            # A zero-row result is ambiguous: the selector may be broken, the
+            # content may be JS-only, or the portal may really be empty.  Do
+            # not manufacture institutional evidence when no official row or
+            # explicit empty-state/API evidence was discovered.
 
         return candidates
 

@@ -252,6 +252,18 @@ class FUNVAPIConnector(GenericDedicatedBancaConnector):
         parsed = super()._parse_detail(candidate, html, client=client)
         if not parsed:
             return None
+        parsed['titulo'] = re.sub(
+            r'\s*[-–]\s*Funda[cç][aã]o\s+Vale\s+do\s+Piau[ií]\s*$',
+            '',
+            parsed.get('titulo') or '',
+            flags=re.IGNORECASE,
+        ).strip()
+        parsed['resumo'] = build_summary(
+            parsed.get('titulo') or '', parsed.get('modalidade'), parsed.get('status'),
+            parsed.get('inscricao_inicio'), parsed.get('inscricao_fim'), cargo=parsed.get('cargo'),
+            area=parsed.get('area'), vagas=parsed.get('vagas'), salario_min=parsed.get('salario_min'),
+            salario_max=parsed.get('salario_max'),
+        )
         soup = BeautifulSoup(html, 'lxml')
         content_div = soup.select_one('.entry-content, article') or soup
 
@@ -585,6 +597,20 @@ class ABCPConnector(GenericDedicatedBancaConnector):
         canonical = 'https://abcp.selecao.net.br'
         super().__init__(base_url=canonical, list_url=list_url or canonical + '/index/abertos/')
 
+    def _parse_detail(self, candidate: CandidateItem, html: str, *, client) -> dict[str, Any] | None:
+        parsed = super()._parse_detail(candidate, html, client=client)
+        if parsed and parsed.get('cidade'):
+            # Keep the municipality as the semantic city.  The official title
+            # includes the legal tourism designation, which is not part of the
+            # city value used by the audit and downstream filters.
+            parsed['cidade'] = re.sub(
+                r'^(?:Estância|Estancia)\s+Turística\s+de\s+',
+                '',
+                parsed['cidade'],
+                flags=re.IGNORECASE,
+            )
+        return parsed
+
 
 class ObjetivaConnector(GenericDedicatedBancaConnector):
     banca = 'OBJETIVA Concursos'
@@ -701,6 +727,35 @@ class LegatusConnector(GenericDedicatedBancaConnector):
         canonical = 'https://www.legatus.org.br'
         super().__init__(base_url=canonical, list_url=list_url or canonical)
 
+    def _parse_detail(self, candidate: CandidateItem, html: str, *, client) -> dict[str, Any] | None:
+        parsed = super()._parse_detail(candidate, html, client=client)
+        if not parsed:
+            return None
+        publications = (parsed.get('raw_data') or {}).get('publications') or []
+        # Legatus exposes the current extension edital before the original
+        # opening edital. Use that visible primary document; result/list files
+        # remain in the publication collection.
+        preferred = next(
+            (
+                publication.get('link') for publication in publications
+                if publication.get('link')
+                and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+                and re.search(r'prorroga[cç][aã]o', publication.get('title') or '', re.I)
+            ),
+            None,
+        ) or next(
+            (
+                publication.get('link') for publication in publications
+                if publication.get('link')
+                and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+                and not re.search(r'resultado|rela[cç][aã]o|retifica[cç][aã]o', publication.get('title') or '', re.I)
+                and not re.search(r'altera|cronograma', publication.get('title') or '', re.I)
+            ),
+            None,
+        )
+        if preferred:
+            parsed['link_edital'] = preferred
+        return parsed
 
 class AvancaSPConnector(GenericDedicatedBancaConnector):
     banca = 'Avança SP'

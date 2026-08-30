@@ -10,7 +10,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 from app.connectors.base import CandidateItem, CrawlResult, CrawlRunData
-from app.publications import parse_publications_from_lines
+from app.publications import parse_publications_from_dom, parse_publications_from_lines
 
 from app.connectors.common import (
     HEADERS,
@@ -135,11 +135,16 @@ class FundepConnector:
         return candidates
 
     def _nearby_text(self, anchor) -> str | None:
-        for parent in [anchor.parent, anchor.parent.parent if anchor.parent else None, anchor.parent.parent.parent if anchor.parent and anchor.parent.parent else None]:
-            if parent:
-                value = clean(parent.get_text(' ', strip=True))
-                if value and len(value) > 8:
-                    return value[:700]
+        generic = {'saiba mais', 'mais detalhes', 'ver detalhes'}
+        for parent in anchor.parents:
+            if getattr(parent, 'name', None) not in {'div', 'article', 'li', 'tr', 'section'}:
+                continue
+            value = clean(parent.get_text(' ', strip=True))
+            if not value or len(value) <= 8 or value.casefold() in generic:
+                continue
+            if len(value) > 1600:
+                break
+            return value[:700]
         return clean(anchor.get_text(' ', strip=True))
 
     def _infer_status_from_card(self, text: str | None) -> str | None:
@@ -178,7 +183,9 @@ class FundepConnector:
         taxa = pdf_fields.get('taxa') or self._extract_taxa(text)
         prova_data = pdf_fields.get('prova_data') or self._extract_prova_data(text)
 
-        publications = parse_publications_from_lines(lines, source='fundep')
+        publications = parse_publications_from_dom(soup, candidate.detail_url, source='fundep')
+        if not publications:
+            publications = parse_publications_from_lines(lines, source='fundep')
         raw_payload = {
             'title_hint': candidate.title_hint,
             'detail_url': candidate.detail_url,
@@ -228,6 +235,7 @@ class FundepConnector:
         haystack = f'{title or ""} {modalidade or ""} {(text or "")[:2500]}'.lower()
         excluded_terms = [
             'vestibular',
+            'seriado',
             'faculdade de medicina de barbacena',
             'fame/funjob',
             'funjobe',

@@ -11,7 +11,9 @@ from sqlalchemy.orm import sessionmaker
 
 from app.connectors.base import BaseConnector, CandidateItem, CrawlResult, CrawlRunData
 from app.connectors.configurable import ConfigurableHTMLConnector, SourceDefinition
+from app.connectors.institutional import InstitutionalSelectionConnector
 from app.connectors.registry import MASTER_SOURCES, get_connector
+from app.audit_validation import build_field_audit
 from app.database import Base
 from app.models import Concurso, Source
 from app.services import CrawlService
@@ -65,6 +67,139 @@ def test_api_empty_yields_empty_valid():
     res = conn.crawl_with_diagnostics()
     assert res.run_data.status == 'empty_valid'
     assert res.run_data.diagnostics_payload['empty_evidence']['kind'] == 'api_empty'
+
+
+def test_crawler_only_populated_field_is_unknown_not_match():
+    audit = build_field_audit({}, {'titulo': 'Concurso Público 01/2026', 'vagas': 42})
+    assert audit['titulo'] == 'UNKNOWN'
+    assert audit['vagas'] == 'UNKNOWN'
+
+
+def test_independent_expected_difference_is_mismatch():
+    audit = build_field_audit(
+        {'titulo': 'Concurso Público para Salvador'},
+        {'titulo': 'Concurso Público para Recife'},
+    )
+    assert audit['titulo'] == 'MISMATCH'
+
+
+def test_money_formatting_matches_independent_value():
+    audit = build_field_audit(
+        {'salario_min': 'R$ 1.500,00'},
+        {'salario_min': 1500.0},
+    )
+    assert audit['salario_min'] == 'MATCH'
+
+
+def test_unknown_independent_count_does_not_become_verified():
+    from scripts.run_full_live_audit import _verification_status
+
+    entry = {'crawler_status': 'success', 'processed': 1, 'visible_valid_items': None}
+    evidence = {'independent': True, 'expected': {'titulo': 'Official contest'}}
+    field_audit = build_field_audit(evidence['expected'], {'titulo': 'Official contest'})
+    assert _verification_status(entry, evidence, field_audit, {'status': 'UNKNOWN'}) == 'NOT_AUDITED'
+
+
+def test_generic_official_heading_is_not_used_as_expected_title():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup('<html><head><title>IBAM - Instituto</title></head><body><h1>Informações do concurso</h1></body></html>', 'lxml'),
+        'https://example.org/concursos/1',
+    )
+
+    assert 'titulo' not in expected
+
+
+def test_empty_official_heading_does_not_crash_observer():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup('<html><head><title>IBAM</title></head><body><h1></h1><h2> </h2></body></html>', 'lxml'),
+        'https://example.org/concursos/1',
+    )
+
+    assert 'titulo' not in expected
+def test_publication_noise_is_not_accepted():
+    from app.publications import is_valid_publication_title
+
+    assert not is_valid_publication_title('Aviso de Privacidade')
+    assert not is_valid_publication_title('Aviso de Cookies')
+    assert not is_valid_publication_title('Aceitar')
+    assert not is_valid_publication_title('Privacidade')
+    assert not is_valid_publication_title('Pular para o conteúdo principal')
+    assert is_valid_publication_title('Edital de abertura')
+
+
+def test_unobserved_publications_are_unknown():
+    from scripts.run_full_live_audit import _audit_publications
+
+    result = _audit_publications(
+        {'expected_titles': ['Edital de abertura'], 'expected_links': []},
+        [],
+        actual_observed=False,
+    )
+
+    assert result['status'] == 'UNKNOWN'
+    assert result['actual_count'] is None
+
+
+def test_institutional_zero_candidates_without_evidence_is_degraded(monkeypatch):
+    definition = SourceDefinition(
+        source_type='institutional_empty_test',
+        name='Institutional empty test',
+        banca='TEST',
+        base_url='https://example.org',
+        list_urls=['https://example.org/editais'],
+        category='institutional_selection',
+    )
+    connector = InstitutionalSelectionConnector(definition)
+    monkeypatch.setattr(connector, '_fetch_html', lambda url: '<html><body><h1>Editais</h1><p>Conteúdo carregado.</p></body></html>')
+    result = connector.crawl_with_diagnostics()
+    assert result.items == []
+    assert result.run_data.status == 'degraded'
+    assert result.run_data.diagnostics_payload.get('empty_evidence') is None
+
+
+def test_source_specific_explicit_empty_state_is_accepted():
+    definition = SourceDefinition(
+        source_type='explicit_empty_test',
+        name='Explicit empty test',
+        banca='TEST',
+        base_url='https://example.org',
+        list_urls=['https://example.org/andamento'],
+        empty_state_patterns=[r'nenhum item cadastrado'],
+    )
+    connector = ConfigurableHTMLConnector(definition)
+    monkeypatch = lambda url: '<html><body><p>Nenhum item cadastrado.</p></body></html>'
+    # Avoid network while exercising the same source-specific empty matcher.
+    connector._fetch_html = monkeypatch
+    result = connector.crawl_with_diagnostics()
+    assert result.items == []
+    assert result.run_data.status == 'empty_valid'
+    assert result.run_data.diagnostics_payload['empty_evidence']['kind'] == 'explicit_text'
+
+
+def test_fgv_candidate_filter_excludes_portfolio_and_fragment_links(monkeypatch):
+    from app.connectors.dedicated.national import FGVConnector
+
+    definition = next(source for source in MASTER_SOURCES if source.source_type == 'fgv_open')
+    connector = FGVConnector(base_url=definition.base_url, list_url=definition.list_urls[0])
+    html = '''
+    <html><body>
+      <a href="/concursos/pms2026">Prefeitura de Salvador</a>
+      <a href="/concursos/pms2026#arquivos">Fragmento</a>
+      <a href="/nosso-portfolio#tabs">Nosso Portfólio</a>
+      <a href="/concursos/busca">Busca</a>
+    </body></html>
+    '''
+    monkeypatch.setattr(connector, '_fetch_html', lambda url: html)
+
+    candidates = connector._fetch_candidates()
+
+    assert [candidate.detail_url for candidate in candidates] == ['https://conhecimento.fgv.br/concursos/pms2026']
 
 
 def test_consulplan_cross_source_deduplication():

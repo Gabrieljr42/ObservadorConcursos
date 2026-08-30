@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from decimal import Decimal
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 import httpx
 from bs4 import BeautifulSoup
@@ -55,6 +55,10 @@ class SourceDefinition:
     default_uf: str | None = None
     default_cidade: str | None = None
     default_orgao: str | None = None
+    # Source-specific text that is an explicit empty state on the official
+    # listing.  Generic words such as "no results" are intentionally not
+    # accepted unless a source opts in here.
+    empty_state_patterns: list[str] = field(default_factory=list)
 
 
 class ConfigurableHTMLConnector(BaseConnector):
@@ -106,7 +110,7 @@ class ConfigurableHTMLConnector(BaseConnector):
             page_text = clean(soup.get_text(' ', strip=True)) or ''
 
             # Check for explicit empty state phrases on the page
-            empty_patterns = [
+            empty_patterns = list(self.definition.empty_state_patterns) + [
                 r'nenhum\s+(?:concurso|processo\s+seletivo|edital|registro|resultado|evento)\b',
                 r'n[ãa]o\s+h[áa]\s+(?:concursos?|inscri[cç][oõ]es?|processos?\s+seletivos?|editais?|certames?|eventos?)\b',
                 r'n[ãa]o\s+existem?\s+(?:concursos?|inscri[cç][oõ]es?|processos?\s+seletivos?|editais?|certames?)\b',
@@ -138,6 +142,16 @@ class ConfigurableHTMLConnector(BaseConnector):
                             if not self._looks_like_candidate(url, haystack):
                                 continue
                             status_hint = self._infer_status(card_text)
+                            if self.definition.source_type == 'consulpam_open':
+                                # CONSULPAM marks the status on each row's
+                                # image alt, not in visible text.
+                                marker = card.select_one('img[alt]')
+                                marker_text = clean(marker.get('alt')) if marker else None
+                                if marker_text and re.search(r'encerrad|realizad', marker_text, re.I):
+                                    total_closed_cards += 1
+                                    continue
+                                if marker_text and re.search(r'abert|andament', marker_text, re.I):
+                                    status_hint = 'Inscrições abertas' if re.search(r'abert', marker_text, re.I) else 'Em andamento'
                             if self.mode == 'open' and status_hint == 'Finalizado':
                                 total_closed_cards += 1
                                 continue
@@ -213,6 +227,11 @@ class ConfigurableHTMLConnector(BaseConnector):
         # A list/category page, section anchor or PDF is not a detail page.
         if normalized in list_urls or not path or parsed.fragment:
             return False
+        if (
+            self.definition.source_type == 'institutomais_open'
+            and re.search(r'/concursos/concursosencerrados/?$', path, re.IGNORECASE)
+        ):
+            return False
         if path.endswith('.pdf') or any(token in path for token in (
             '/category/', '/categoria/', '/tag/', '/noticias', '/noticia/',
             '/login', '/contato', '/institucional', '/politica-', '/termos',
@@ -278,6 +297,21 @@ class ConfigurableHTMLConnector(BaseConnector):
         # Apply exclusions to the contest content, not global navigation/footer.
         content_haystack = f'{title} {text[:5000]}'.lower()
         matched_exclusion = next((term for term in self.excluded_terms if term in content_haystack), None)
+        if (
+            matched_exclusion
+            and self.definition.source_type == 'institutomais_open'
+            and re.search(r'resid[eê]ncia\s+m[eé]dica', matched_exclusion, re.IGNORECASE)
+            and not re.search(
+                r'resid[eê]ncia\s+m[eé]dica',
+                f'{title} {candidate.title_hint or ""}',
+                re.IGNORECASE,
+            )
+        ):
+            # The Instituto Mais detail page can include a site-wide/sidebar
+            # mention of medical residency unrelated to the current card.
+            # Exclude residency only when the card/detail identity itself says
+            # so; otherwise a valid municipal contest is lost.
+            matched_exclusion = None
         if matched_exclusion:
             self._record_rejection(candidate.detail_url, f'excluded_term:{matched_exclusion}')
             return None
@@ -321,6 +355,55 @@ class ConfigurableHTMLConnector(BaseConnector):
         publications = parse_publications_from_dom(soup, candidate.detail_url, source=self.banca.lower())
         if not publications:
             publications = parse_publications_from_lines(lines, source=self.banca.lower())
+        if self.definition.source_type == 'consulpam_open':
+            # CONSULPAM orders amendments before the original edital.  The
+            # opening edital is the stable primary document; amendments remain
+            # in ``publications`` and are not silently promoted to the main
+            # ``link_edital`` field.
+            primary = next(
+                (
+                    publication.get('link')
+                    for publication in publications
+                    if publication.get('link')
+                    and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+                    and not re.search(r'\b(?:aditivo|retifica|errata|cronograma)\b', publication.get('title') or '', re.I)
+                ),
+                None,
+            )
+            if not primary:
+                primary = next(
+                    (
+                        publication.get('link')
+                        for publication in publications
+                        if publication.get('link')
+                        and re.search(r'\b(?:edital|aditivo|retifica|errata)\b', publication.get('title') or '', re.I)
+                        and not re.search(r'cronograma', publication.get('title') or '', re.I)
+                    ),
+                    None,
+                )
+            if primary:
+                edital_url = primary
+        else:
+            normative_titles = [
+                publication for publication in publications
+                if publication.get('link')
+                and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+                and not re.search(
+                    r'\b(?:resultado|gabarito|convoca|portaria|homologa|deferimento|'
+                    r'isen[cç][aã]o|retifica|rerratifica|cronograma|prorroga|altera|anexo)\b',
+                    publication.get('title') or '',
+                    re.I,
+                )
+            ]
+            primary = next(
+                (
+                    publication.get('link') for publication in normative_titles
+                    if re.search(r'\babertura\b', publication.get('title') or '', re.I)
+                ),
+                None,
+            ) or next((publication.get('link') for publication in normative_titles), None)
+            if primary:
+                edital_url = primary
         raw_payload = {
             'title_hint': candidate.title_hint,
             'detail_url': candidate.detail_url,
@@ -379,9 +462,37 @@ class ConfigurableHTMLConnector(BaseConnector):
             self.banca.lower(),
         }
         candidates = []
-        if hint:
-            candidates.extend(re.split(r'\s{2,}|\s\|\s|\s+»\s+', hint))
-        candidates.extend(lines[:100])
+        if self.definition.source_type == 'apta_open':
+            # APTA repeats the contest identity in a clean h2, while the
+            # surrounding page text also contains the candidate menu labels.
+            # Prefer the identity line before considering the noisy card hint.
+            for raw in lines[:40]:
+                line = clean(raw)
+                if not line or line.lower().endswith('- apta'):
+                    continue
+                if re.search(
+                    r'\b(?:c[âa]mara\s+municipal|prefeitura\s+municipal|secretaria|autarquia|fund[aã]ção)\b',
+                    line,
+                    flags=re.IGNORECASE,
+                ) and not re.search(r'\b(?:inscreva|inscri[cç][aã]o|documentos|cargos|boleto)\b', line, flags=re.IGNORECASE):
+                    return line
+            if hint:
+                candidates.extend(re.split(r'\s{2,}|\s\|\s|\s+»\s+', hint))
+            candidates.extend(lines[:100])
+        elif self.definition.source_type == 'funpec_selection':
+            # FUNPEC's list-card text converts the typographic dash in the
+            # official detail heading to a plain hyphen; prefer the detail
+            # heading for the stored identity.
+            # The first extracted line is the HTML title tag (which appends
+            # ``- FUNPEC`` and uses the list-card punctuation).  Skip it so
+            # the visible detail heading is selected below.
+            candidates.extend(lines[1:100])
+            if hint:
+                candidates.extend(re.split(r'\s{2,}|\s\|\s|\s+»\s+', hint))
+        else:
+            if hint:
+                candidates.extend(re.split(r'\s{2,}|\s\|\s|\s+»\s+', hint))
+            candidates.extend(lines[:100])
         for raw in candidates:
             line = clean(raw)
             if not line:
@@ -390,6 +501,10 @@ class ConfigurableHTMLConnector(BaseConnector):
             if lowered in bad or len(line) < 10 or len(line) > 220:
                 continue
             if re.search(r'\b(?:concurso|processo seletivo|seleção pública|selecao publica|edital|prefeitura|c[âa]mara|secretaria|minist[eé]rio|defensoria|tribunal|pol[ií]cia|fundação|funda[cç][aã]o|conselho|guarda|hospital)\b', line, flags=re.IGNORECASE):
+                if self.definition.source_type == 'institutomais_open':
+                    line = re.sub(r'\s*/\s*[A-Z]{2}\s*[-–]\s*', ' - ', line)
+                elif self.definition.source_type == 'funpec_selection':
+                    line = re.sub(r'\s*[-–]\s*FUNPEC\s*$', '', line, flags=re.IGNORECASE)
                 return line
         return f'Processo Seletivo / Concurso {self.banca}'
 
@@ -426,7 +541,17 @@ class ConfigurableHTMLConnector(BaseConnector):
             t = clean(a.get_text(' ', strip=True)) or ''
             href = a.get('href')
             h = f'{t} {href or ""}'.lower()
-            if any(k in h for k in ['inscrição', 'inscricao', 'inscreva-se', 'formulario de inscricao', 'faça sua inscrição']):
+            if not href:
+                continue
+            href_lower = href.lower()
+            if any(token in href_lower for token in ('.pdf', '.doc', '.docx', '/arquivos/', 'download')):
+                continue
+            if any(k in h for k in [
+                'inscreva-se', 'inscreva', 'inscrever-me', 'inscrever',
+                'realizar inscrição', 'realizar inscricao',
+                'inscrição online', 'inscricao online',
+                'formulario de inscricao', 'faça sua inscrição', 'faca sua inscricao',
+            ]) or '/termo/' in unquote(href_lower):
                 return normalize_url(base, href)
         return None
 

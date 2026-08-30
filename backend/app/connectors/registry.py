@@ -480,6 +480,7 @@ MASTER_SOURCES: list[SourceDefinition] = [
         banca='JCM Consultoria',
         base_url='https://eventos.concursosjcm.com.br',
         list_urls=['https://eventos.concursosjcm.com.br'],
+        empty_state_patterns=[r'nenhum\s+item\s+cadastrado'],
         frequency_minutes=360,
     ),
     # 47. Elo Assessoria
@@ -563,6 +564,10 @@ MASTER_SOURCES: list[SourceDefinition] = [
         base_url='https://www.institutomais.org.br',
         list_urls=['https://www.institutomais.org.br/Concursos/ConcursosAbertos'],
         detail_url_patterns=[r'/Concursos/Detalhe/\d+'],
+        # This official listing is already the "Concursos Abertos" scope;
+        # detail pages contain historical dates that must not veto a row that
+        # remains visibly listed there.
+        mode='all',
         frequency_minutes=360,
     ),
     # 56. Publiconsult

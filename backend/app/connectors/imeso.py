@@ -9,7 +9,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 from app.connectors.base import CandidateItem, CrawlResult, CrawlRunData
-from app.publications import parse_publications_from_lines
+from app.publications import parse_publications_from_dom, parse_publications_from_lines
 
 from app.connectors.common import (
     HEADERS,
@@ -243,7 +243,9 @@ class IMESOConnector:
         salario_min, salario_max = self._extract_salary_range(lines, pdf_fields)
         escolaridade = pdf_fields.get('escolaridade') or self._extract_escolaridade(lines)
 
-        publications = parse_publications_from_lines(lines, source='imeso')
+        publications = parse_publications_from_dom(soup, candidate.detail_url, source='imeso')
+        if not publications:
+            publications = parse_publications_from_lines(lines, source='imeso')
         raw_payload = {
             'title_hint': candidate.title_hint,
             'detail_url': candidate.detail_url,
@@ -393,12 +395,22 @@ class IMESOConnector:
         return match.group(1) if match else None
 
     def _extract_inscricao_link(self, soup: BeautifulSoup, base_url: str) -> str | None:
+        candidates: list[tuple[int, str]] = []
         for anchor in soup.select('a[href]'):
             text = (clean(anchor.get_text(' ', strip=True)) or '').lower()
-            href = anchor.get('href')
-            if 'inscri' in text or 'candidato' in (href or '').lower():
-                return normalize_url(base_url, href)
-        return 'https://candidato.imeso.com.br/'
+            href = anchor.get('href') or ''
+            if not href or any(token in href.lower() for token in ('.pdf', '.doc', '.docx', 'download')):
+                continue
+            if 'realizar inscri' in text or 'inscreva-se' in text or 'inscreva' in text:
+                priority = 0
+            elif 'inscri' in text and 'acompanhar' not in text:
+                priority = 1
+            else:
+                continue
+            url = normalize_url(base_url, href)
+            if url:
+                candidates.append((priority, url))
+        return min(candidates, key=lambda item: item[0])[1] if candidates else None
 
     def _extract_download_link(self, soup: BeautifulSoup, base_url: str) -> str | None:
         # IMESO lists many downloadable files. Prefer the actual edital file,

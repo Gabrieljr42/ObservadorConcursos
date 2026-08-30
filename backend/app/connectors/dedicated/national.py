@@ -31,6 +31,7 @@ from app.connectors.common import (
 )
 from app.publications import (
     build_publication_hash,
+    is_valid_publication_title,
     normalize_publication_type,
     parse_publications_from_dom,
     parse_publications_from_lines,
@@ -199,7 +200,13 @@ class GenericDedicatedBancaConnector(BaseConnector):
         title = self._extract_title(lines, candidate.title_hint)
         orgao = self._extract_orgao(title, lines, candidate.title_hint)
         cidade, uf = extract_city_uf(f'{title} {orgao} {text[:2000]}')
-        modalidade = 'Concurso Público' if 'concurso' in title.lower() else 'Processo Seletivo'
+        modalidade_text = f'{title} {text[:2500]}'.lower()
+        if 'processo seletivo simplificado' in modalidade_text or re.search(r'\bpss\b', modalidade_text):
+            modalidade = 'Processo Seletivo Simplificado'
+        elif 'processo seletivo' in modalidade_text or 'seleção pública' in modalidade_text or 'selecao publica' in modalidade_text:
+            modalidade = 'Processo Seletivo'
+        else:
+            modalidade = 'Concurso Público'
         inicio, fim = parse_date_interval(text)
         detail_status = self._extract_detail_status(lines)
         status = status_from_dates(inicio, fim, fallback=detail_status or candidate.status_hint)
@@ -245,6 +252,26 @@ class GenericDedicatedBancaConnector(BaseConnector):
         publications = parse_publications_from_dom(soup, candidate.detail_url, source=self.banca.lower())
         if not publications:
             publications = parse_publications_from_lines(lines, source=self.banca.lower())
+        normative_titles = [
+            publication for publication in publications
+            if publication.get('link')
+            and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+            and not re.search(
+                r'\b(?:resultado|gabarito|convoca|portaria|homologa|deferimento|'
+                r'isen[cç][aã]o|retifica|rerratifica|cronograma|prorroga|altera|anexo)\b',
+                publication.get('title') or '',
+                re.I,
+            )
+        ]
+        primary_edital = next(
+            (
+                publication.get('link') for publication in normative_titles
+                if re.search(r'\babertura\b', publication.get('title') or '', re.I)
+            ),
+            None,
+        ) or next((publication.get('link') for publication in normative_titles), None)
+        if primary_edital:
+            edital_url = primary_edital
         raw_payload = {
             'title_hint': candidate.title_hint,
             'detail_url': candidate.detail_url,
@@ -408,12 +435,28 @@ class GenericDedicatedBancaConnector(BaseConnector):
         }
 
     def _extract_inscricao_link(self, soup: BeautifulSoup, base: str) -> str | None:
+        candidates: list[tuple[int, str]] = []
         for a in soup.select('a[href]'):
             t = clean(a.get_text(' ', strip=True)) or ''
             href = a.get('href')
-            if any(k in f'{t} {href}'.lower() for k in ['inscrição', 'inscricao', 'inscreva-se', 'área do candidato', 'area do candidato']):
-                return normalize_url(base, href)
-        return None
+            if not href:
+                continue
+            lowered = f'{t} {href}'.lower()
+            normalized = normalize_url(base, href)
+            if not normalized or any(token in normalized.lower() for token in ('.pdf', '.doc', '.docx', '/arquivos/', 'download')):
+                continue
+            if '/painel' in normalized.lower() and '/termo/' not in normalized.lower():
+                continue
+            if '/termo/' in normalized.lower() or any(token in lowered for token in ('inscreva-se', 'inscreva', 'realizar inscrição', 'realizar inscricao')):
+                priority = 0
+            elif any(token in lowered for token in ('inscrição', 'inscricao')):
+                priority = 1
+            elif any(token in lowered for token in ('área do candidato', 'area do candidato', 'candidato')):
+                priority = 2
+            else:
+                continue
+            candidates.append((priority, normalized))
+        return min(candidates, key=lambda value: value[0])[1] if candidates else None
 
     def _extract_edital_numero(self, text: str, title: str) -> str | None:
         for value in (text[:5000], title):
@@ -517,10 +560,89 @@ class FCCConnector(GenericDedicatedBancaConnector):
 
 class FGVConnector(GenericDedicatedBancaConnector):
     banca = 'FGV'
-    detail_patterns = (r'/concursos/\w+', r'/conhecimento/concursos/\w+')
+    detail_patterns = (r'/concursos/[^/?#]+$', r'/conhecimento/concursos/[^/?#]+$')
+    _excluded_slugs = {'nosso-portfolio', 'index', 'buscar', 'busca'}
 
     def __init__(self, base_url: str = 'https://conhecimento.fgv.br', list_url: str | None = None):
         super().__init__(base_url=base_url, list_url=list_url or 'https://conhecimento.fgv.br/concursos')
+
+    def _fetch_candidates(self) -> list[CandidateItem]:
+        """Discover only canonical FGV contest pages.
+
+        The old generic matcher accepted ``/concursos/nosso-portfolio#tabs``
+        and other navigation fragments as contests.  FGV's listing uses one
+        canonical slug per contest, so require that exact shape and reject
+        fragments/query views before creating a candidate.
+        """
+        html = self._fetch_html(self.list_url)
+        soup = BeautifulSoup(html, 'lxml')
+        candidates: list[CandidateItem] = []
+        seen: set[str] = set()
+        for anchor in soup.select('a[href]'):
+            raw_href = anchor.get('href') or ''
+            url = normalize_url(self.list_url, raw_href)
+            if not url:
+                continue
+            parsed = urlparse(url)
+            if parsed.netloc.replace('www.', '') != urlparse(self.base_url).netloc.replace('www.', ''):
+                continue
+            match = re.fullmatch(r'/concursos/([^/?#]+)', parsed.path.rstrip('/'))
+            if not match or parsed.query or parsed.fragment:
+                continue
+            slug = match.group(1).casefold()
+            if slug in self._excluded_slugs or url in seen:
+                continue
+            title_hint = clean(anchor.get_text(' ', strip=True))
+            if not title_hint or len(title_hint) < 12:
+                title_hint = self._candidate_context_text(anchor)
+            if not title_hint or any(term in title_hint.casefold() for term in (
+                'aviso de privacidade', 'aviso de cookies', 'política de privacidade',
+                'politica de privacidade', 'nosso portfólio', 'nosso portfolio',
+            )):
+                continue
+            seen.add(url)
+            candidates.append(CandidateItem(
+                title_hint=title_hint[:500],
+                detail_url=url,
+                external_id=slug,
+            ))
+            if len(candidates) >= self.max_candidates:
+                break
+        return candidates
+
+    def _extract_fgv_heading(self, soup: BeautifulSoup, fallback: str | None) -> str | None:
+        for heading in soup.select('h1, h2'):
+            value = clean(heading.get_text(' ', strip=True))
+            if value and len(value) >= 12 and 'nosso portfolio' not in value.casefold():
+                return value
+        return clean(fallback)
+
+    def _parse_detail(self, candidate: CandidateItem, html: str, *, client) -> dict[str, Any] | None:
+        parsed = super()._parse_detail(candidate, html, client=client)
+        if not parsed:
+            return None
+        soup = BeautifulSoup(html, 'lxml')
+        title = self._extract_fgv_heading(soup, parsed.get('titulo'))
+        if not title or 'nosso portfolio' in title.casefold() or 'nosso portfólio' in title.casefold():
+            return None
+        parsed['titulo'] = title
+
+        # Rebuild publications from the official detail DOM after the strict
+        # navigation/consent filter.  Privacy and cookie links are never valid
+        # publication evidence, even when their URL happens to contain a file.
+        publications = [
+            pub for pub in parse_publications_from_dom(soup, candidate.detail_url, source='fgv')
+            if is_valid_publication_title(pub.get('title'))
+        ]
+        parsed.setdefault('raw_data', {})['publications'] = publications
+        parsed['link_edital'] = next(
+            (pub.get('link') for pub in publications if pub.get('publication_type') == 'edital'),
+            parsed.get('link_edital'),
+        )
+        if parsed.get('link_edital') and any(term in parsed['link_edital'].casefold() for term in ('privacidade', 'cookies')):
+            parsed['link_edital'] = None
+        parsed['content_hash'] = build_hash(parsed.get('raw_data') or {})
+        return parsed
 
 
 class CebraspeConnector(GenericDedicatedBancaConnector):
@@ -663,10 +785,106 @@ class CebraspeConnector(GenericDedicatedBancaConnector):
 
 class CesgranrioConnector(GenericDedicatedBancaConnector):
     banca = 'CESGRANRIO'
+    # The public index is the source's current-status authority.  Some legacy
+    # detail pages retain historical registration dates even while the index
+    # marks the certame as ongoing.
+    mode = 'all'
     detail_patterns = (r'/concurso/[^/]+/?', r'/concursos/\w+', r'id=\d+')
 
     def __init__(self, base_url: str = 'https://www.cesgranrio.org.br', list_url: str | None = None):
         super().__init__(base_url=base_url, list_url=list_url or 'https://www.cesgranrio.org.br/concursos/')
+
+    def _fetch_candidates(self) -> list[CandidateItem]:
+        for attempt in range(2):
+            try:
+                html = self._fetch_html(self.list_url)
+            except Exception as exc:
+                logger.warning('%s: error fetching list %s: %s', self.banca, self.list_url, exc)
+                return []
+            candidates = self._candidates_from_list_soup(BeautifulSoup(html, 'lxml'))
+            if candidates or attempt == 1:
+                return candidates
+            logger.warning('%s: list page had no current cards; retrying official list', self.banca)
+        return []
+
+    def _candidates_from_list_soup(self, soup: BeautifulSoup) -> list[CandidateItem]:
+        candidates: list[CandidateItem] = []
+        seen: set[str] = set()
+        for heading in soup.select('h3.t-entry-title'):
+            anchor = heading.select_one('a[href]')
+            card = heading.find_parent(class_='t-entry')
+            card_text = clean(card.get_text(' ', strip=True)) if card else ''
+            if not anchor or not card_text:
+                continue
+            if re.search(r'conclu[ií]d|vestibular', card_text, re.I):
+                continue
+            if not re.search(r'em andamento', card_text, re.I):
+                continue
+            url = normalize_url(self.list_url, anchor.get('href'))
+            if not url or url in seen or not self._same_domain(url):
+                continue
+            seen.add(url)
+            candidates.append(CandidateItem(
+                title_hint=clean(heading.get_text(' ', strip=True)),
+                detail_url=url,
+                status_hint='Em andamento',
+            ))
+            if len(candidates) >= self.max_candidates:
+                break
+        return candidates
+
+    def _is_valid_certame(
+        self,
+        title: str | None,
+        orgao: str | None,
+        cidade: str | None,
+        uf: str | None,
+        inicio,
+        fim,
+        edital_url: str | None,
+        cargo_candidates: list[str],
+        text: str,
+    ) -> bool:
+        # The Cesgranrio detail pages for BANESE/BASA/BNDES use a marketing
+        # heading such as "Concurso BASA" and contain no municipality.  The
+        # official index already supplied the certame identity, so requiring a
+        # prefeitura/UF here would reject valid cards from that index.
+        if title and re.search(r'\b(?:concurso|banco|transpetro|banese|basa|bndes)\b', title, re.I):
+            return bool(edital_url or cargo_candidates or inicio or fim)
+        return super()._is_valid_certame(
+            title, orgao, cidade, uf, inicio, fim, edital_url, cargo_candidates, text,
+        )
+
+    def _parse_detail(self, candidate: CandidateItem, html: str, *, client: httpx.Client) -> dict[str, Any] | None:
+        parsed = super()._parse_detail(candidate, html, client=client)
+        if not parsed:
+            return None
+
+        soup = BeautifulSoup(html, 'lxml')
+        article = soup.select_one('article.concurso') or soup
+        heading = article.select_one('h1')
+        if heading:
+            title = clean(heading.get_text(' ', strip=True))
+            if title:
+                parsed['titulo'] = title
+        if candidate.status_hint:
+            parsed['status'] = candidate.status_hint
+        if isinstance(parsed.get('cargo'), str) and 'armazenamento ou acesso técnico' in parsed['cargo'].casefold():
+            parsed['cargo'] = None
+            parsed['area'] = None
+
+        # Cesgranrio's detail page carries institutional footer PDFs and menu
+        # links.  Only a document row inside the contest article can populate
+        # link_edital/publications; otherwise those values remain unknown.
+        publications = parse_publications_from_dom(article, candidate.detail_url, source='cesgranrio')
+        parsed.setdefault('raw_data', {})['publications'] = publications
+        parsed['link_edital'] = next(
+            (publication.get('link') for publication in publications
+             if publication.get('link') and 'edital' in (publication.get('title') or '').casefold()),
+            None,
+        )
+        parsed['content_hash'] = build_hash(parsed['raw_data'])
+        return parsed
 
 
 class IBAMConnector(GenericDedicatedBancaConnector):
@@ -680,9 +898,64 @@ class IBAMConnector(GenericDedicatedBancaConnector):
 class IBADEConnector(GenericDedicatedBancaConnector):
     banca = 'IBADE'
     detail_patterns = (r'/edital/ver/\d+', r'/concurso\.aspx\?id=\d+', r'id=\d+')
+    max_candidates = 30
 
     def __init__(self, base_url: str = 'https://portal.ibade.selecao.site', list_url: str | None = None):
         super().__init__(base_url=base_url, list_url=list_url or f'{self.base_url}/edital')
+
+    def _fetch_candidates(self) -> list[CandidateItem]:
+        try:
+            html = self._fetch_html(self.list_url)
+        except Exception as exc:
+            logger.warning('%s: error fetching list %s: %s', self.banca, self.list_url, exc)
+            return []
+
+        soup = BeautifulSoup(html, 'lxml')
+        section = soup.select_one('#andamento') or soup
+        candidates: list[CandidateItem] = []
+        seen: set[str] = set()
+        for card in section.select('div.card.rounded'):
+            anchor = card.select_one('a[href*="/edital/ver/"]')
+            if not anchor:
+                continue
+            url = normalize_url(self.base_url, anchor.get('href'))
+            if not url or url in seen:
+                continue
+            parts = [clean(node.get_text(' ', strip=True)) for node in card.select('p')]
+            parts = [part for part in parts if part]
+            title_hint = parts[0] if parts else clean(card.get_text(' ', strip=True))
+            context = clean(card.get_text(' ', strip=True)) or ''
+            if self._candidate_is_excluded(context):
+                continue
+            seen.add(url)
+            candidates.append(CandidateItem(
+                title_hint=title_hint,
+                detail_url=url,
+                status_hint='Em andamento',
+                external_id=extract_external_id(url, [r'/edital/ver/(\d+)']),
+            ))
+            if len(candidates) >= self.max_candidates:
+                break
+        return candidates
+
+    def _parse_detail(self, candidate: CandidateItem, html: str, *, client: httpx.Client) -> dict[str, Any] | None:
+        parsed = super()._parse_detail(candidate, html, client=client)
+        if not parsed:
+            return None
+        soup = BeautifulSoup(html, 'lxml')
+        publications = parse_publications_from_dom(soup, candidate.detail_url, source='ibade')
+        parsed.setdefault('raw_data', {})['publications'] = publications
+        primary = next(
+            (publication.get('link') for publication in publications
+             if publication.get('link')
+             and re.search(r'\bedital\b', publication.get('title') or '', re.IGNORECASE)
+             and not re.search(r'\banexo\b', publication.get('title') or '', re.IGNORECASE)),
+            None,
+        )
+        if primary:
+            parsed['link_edital'] = primary
+        parsed['content_hash'] = build_hash(parsed['raw_data'])
+        return parsed
 
 
 class QuadrixConnector(GenericDedicatedBancaConnector):
@@ -1215,7 +1488,16 @@ class IESESConnector(GenericDedicatedBancaConnector):
             pdf_fim,
             fallback='Inscrições abertas' if is_registration_open else 'Em andamento',
         )
-        title = clean(f'{project.get("evento") or ""} - {project.get("entidade") or ""}') or parsed['titulo']
+        page_title = next(
+            (
+                clean(node.get_text(' ', strip=True))
+                for node in soup.select('h1, h2, h3')
+                if re.search(r'\b(?:concurso|processo\s+seletivo)\b', node.get_text(' ', strip=True), re.I)
+                and re.search(r'\bedital\b', node.get_text(' ', strip=True), re.I)
+            ),
+            None,
+        )
+        title = page_title or clean(f'{project.get("evento") or ""} - {project.get("entidade") or ""}') or parsed['titulo']
         orgao = clean(project.get('entidade')) or clean(project.get('orgao')) or parsed.get('orgao')
         publications = self._ieses_publications(soup, candidate.detail_url)
         raw_payload = parsed.get('raw_data') or {}
@@ -1261,3 +1543,10 @@ class FAFIPAConnector(GenericDedicatedBancaConnector):
 
     def __init__(self, base_url: str = 'https://concursos.fundacaofafipa.org.br', list_url: str | None = None):
         super().__init__(base_url=base_url, list_url=list_url or f'{self.base_url}/')
+
+    def _fetch_candidates(self) -> list[CandidateItem]:
+        candidates = super()._fetch_candidates()
+        # The public root mixes expired and upcoming cards with the live
+        # section.  FAFIPA explicitly marks the rows in scope with
+        # "Inscrições Abertas"; retain only those rows for this *_open source.
+        return [candidate for candidate in candidates if candidate.status_hint == 'Inscrições abertas']

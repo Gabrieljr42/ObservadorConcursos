@@ -285,7 +285,7 @@ class BaseConnector:
             return False
 
         title_has_identity = bool(re.search(
-            r'\b(?:prefeitura|c[âa]mara|secretaria|tribunal|conselho|universidade|instituto|funda[cç][aã]o|estado|munic[ií]pio)\b',
+            r'\b(?:prefeitura|c[âa]mara|secretaria|tribunal|conselho|universidade|instituto|funda[cç][aã]o|cons[oó]rcio|estado|munic[ií]pio)\b',
             clean_title,
         ))
         has_identity = bool(orgao or cidade or uf or title_has_identity)

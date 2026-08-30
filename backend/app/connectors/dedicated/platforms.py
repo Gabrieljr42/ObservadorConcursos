@@ -428,6 +428,16 @@ class EloOpenConnector(BaseConnector):
             salary_min = min(salary_min, min(frontend_salaries)) if salary_min is not None else min(frontend_salaries)
             salary_max = max(salary_max, max(frontend_salaries)) if salary_max is not None else max(frontend_salaries)
 
+        frontend_registration = next(
+            (
+                normalize_url(candidate.detail_url, anchor.get('href'))
+                for anchor in frontend_soup.select('a[href]')
+                if re.search(r'candidat|inscri', anchor.get_text(' ', strip=True) or '', re.I)
+                and normalize_url(candidate.detail_url, anchor.get('href'))
+            ),
+            None,
+        )
+
         edital_url = None
         for document in documents:
             link = _document_url(document)
@@ -475,7 +485,7 @@ class EloOpenConnector(BaseConnector):
             'inscricao_fim': end,
             'link_pagina': candidate.detail_url,
             'link_edital': edital_url,
-            'link_inscricao': self._field_text(data, 'linkInscricao', 'inscricaoUrl', 'urlInscricao') or next((normalize_url(candidate.detail_url, anchor.get('href')) for anchor in frontend_soup.select('a[href]') if 'inscri' in (anchor.get_text(' ', strip=True) or '').lower()), None),
+            'link_inscricao': self._field_text(data, 'linkInscricao', 'inscricaoUrl', 'urlInscricao') or frontend_registration,
             'resumo': resumo,
             'raw_data': raw_payload,
             'edital_pdf_text_hash': pdf_payload.get('text_hash'),
@@ -596,11 +606,26 @@ class RBOOpenConnector(BaseConnector):
         publications = parse_publications_from_dom(soup, candidate.detail_url, source='rbo')
         if not publications:
             publications = parse_publications_from_lines(lines, source='rbo')
-        if not edital_url:
-            for publication in publications:
-                if publication.get('publication_type') == 'edital' and publication.get('link'):
-                    edital_url = publication['link']
-                    break
+        primary_edital = next(
+            (
+                publication.get('link') for publication in publications
+                if publication.get('link')
+                and re.search(r'\bedital\b', publication.get('title') or '', re.I)
+                and re.search(r'\babertura\b', publication.get('title') or '', re.I)
+                and not re.search(r'retifica[cç][aã]o\s+n', publication.get('title') or '', re.I)
+            ),
+            None,
+        )
+        if primary_edital:
+            edital_url = primary_edital
+        elif not edital_url:
+            edital_url = next(
+                (
+                    publication.get('link') for publication in publications
+                    if publication.get('publication_type') == 'edital' and publication.get('link')
+                ),
+                None,
+            )
         if not self._is_valid_certame(title, orgao, cidade, uf, start, end, edital_url, roles, text):
             _record_rejection(self, candidate.detail_url, 'quality_gate')
             return None

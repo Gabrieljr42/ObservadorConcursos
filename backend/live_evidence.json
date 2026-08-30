@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "policy": "Only values observed independently on an official page or official PDF may be used as expected values.",
+  "observations": {
+    "fgv_open": {
+      "method": "official_page_and_pdf_review",
+      "observed_at": "2026-08-29",
+      "sample_url": "https://conhecimento.fgv.br/concursos/pms2026",
+      "evidence_urls": [
+        "https://conhecimento.fgv.br/concursos/pms2026",
+        "https://conhecimento.fgv.br/sites/default/files/concursos/edital-preliminar-pref-salvador-prof-e-coordenador-academico-01.2026-09.07-ret2.pdf"
+      ],
+      "expected": {
+        "titulo": "Concurso Público para a Prefeitura Municipal do Salvador 2026",
+        "orgao": "Prefeitura Municipal do Salvador",
+        "modalidade": "Concurso Público",
+        "cidade": "Salvador",
+        "uf": "BA",
+        "status": "Em Andamento",
+        "vagas": 190,
+        "salario_min": 2565.32,
+        "salario_max": 6156.76,
+        "taxa": 220.0,
+        "prova_data": "27/09/2026",
+        "edital_numero": "01/2026",
+        "edital_data": "09/07/2026",
+        "inscricao_inicio": "09/07/2026",
+        "inscricao_fim": "07/08/2026",
+        "link_pagina": "https://conhecimento.fgv.br/concursos/pms2026",
+        "link_edital": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-preliminar-pref-salvador-prof-e-coordenador-academico-01.2026-09.07-ret2.pdf"
+      },
+      "publication_observation": {
+        "observed": true,
+        "source_url": "https://conhecimento.fgv.br/concursos/pms2026",
+        "expected_titles": [
+          "Edital (retificado em 07/08/2026)",
+          "2ª Retificação",
+          "1ª Retificação"
+        ],
+        "expected_links": []
+      }
+    }
+  }
+}
