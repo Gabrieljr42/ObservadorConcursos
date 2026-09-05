@@ -126,6 +126,9 @@ def parse_money(value: str | None) -> Decimal | None:
     match = MONEY_RE.search(value)
     raw = match.group(0) if match else str(value)
     raw = raw.replace('R$', '').strip()
+    # Some portals insert a formatting space after the decimal comma, e.g.
+    # ``R$ 15.034, 81``.  It is still one monetary value.
+    raw = re.sub(r'\s+', '', raw)
     # Already-normalized decimal strings can arrive from PDF parsers/JSON
     # (e.g. "1673.24"). Do not treat the dot as thousands separator.
     if ',' not in raw and re.fullmatch(r'\d+(?:\.\d{1,2})?', raw):
@@ -173,6 +176,41 @@ def first_date(value: str | None) -> datetime | None:
     return None
 
 
+def _parse_interval_endpoint(match: re.Match[str], context: str, *, is_start: bool) -> datetime | None:
+    """Parse one endpoint without assigning an end time to the start date.
+
+    Phrases such as "Das 10h do dia 03/08/2026 às 23h59min do dia
+    04/09/2026" put the first endpoint's time before its date. The generic
+    token matcher sees "às 23h59" after the first date and would otherwise
+    attach that end-of-day time to the start.
+    """
+    raw = match.group(0)
+    numeric = DATE_NUM_RE.search(raw)
+    if numeric:
+        day, month, year = numeric.groups()
+        prefix = context[max(0, match.start() - 50):match.start()]
+        leading_time = re.search(r'(\d{1,2})(?::(\d{2})|h(?:\s*(\d{2}))?)\s+(?:do\s+)?dia\s*$', prefix, re.IGNORECASE)
+        trailing_time = re.search(r'(?:às|as|-)\s*(\d{1,2})(?::(\d{2})|h(?:\s*(\d{2}))?)', raw, re.IGNORECASE)
+        time_match = leading_time if is_start and leading_time else trailing_time
+        if time_match:
+            minute = time_match.group(2) or time_match.group(3)
+            return parse_numeric_date(day, month, year, time_match.group(1), minute)
+        return parse_numeric_date(day, month, year) if is_start else parse_numeric_date(day, month, year, '23', '59')
+
+    textual = DATE_PT_RE.search(raw)
+    if textual:
+        day, month, year = textual.groups()
+        prefix = context[max(0, match.start() - 50):match.start()]
+        leading_time = re.search(r'(\d{1,2})(?::(\d{2})|h(?:\s*(\d{2}))?)\s+(?:do\s+)?dia\s*$', prefix, re.IGNORECASE)
+        trailing_time = re.search(r'(?:às|as|-)\s*(\d{1,2})(?::(\d{2})|h(?:\s*(\d{2}))?)', raw, re.IGNORECASE)
+        time_match = leading_time if is_start and leading_time else trailing_time
+        if time_match:
+            minute = time_match.group(2) or time_match.group(3)
+            return parse_pt_date(day, month, year, time_match.group(1), minute)
+        return parse_pt_date(day, month, year) if is_start else parse_pt_date(day, month, year, '23', '59')
+    return None
+
+
 def parse_date_interval(value: str | None) -> tuple[datetime | None, datetime | None]:
     if not value:
         return None, None
@@ -193,6 +231,86 @@ def parse_date_interval(value: str | None) -> tuple[datetime | None, datetime | 
         end = parse_pt_date(shared_year.group(4), shared_year.group(5), shared_year.group(6), '23', '59')
         if start and end:
             return start, end
+
+    # Several portals render the same range in compact numeric form, with the
+    # year only on the second endpoint (``12/08 a 14/09/2026``).  Without this
+    # pass, the generic fallback can pair an earlier proof date with the
+    # registration end date and produce an inverted interval.
+    numeric_shared_year = re.search(
+        r'(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?\s*'
+        r'(?:a|até|e|[-–])\s*'
+        r'(\d{1,2})/(\d{1,2})/(\d{2,4})',
+        value,
+        flags=re.IGNORECASE,
+    )
+    if numeric_shared_year:
+        first_year = numeric_shared_year.group(3) or numeric_shared_year.group(6)
+        start = parse_numeric_date(
+            numeric_shared_year.group(1), numeric_shared_year.group(2), first_year,
+        )
+        end = parse_numeric_date(
+            numeric_shared_year.group(4), numeric_shared_year.group(5), numeric_shared_year.group(6),
+            '23', '59',
+        )
+        if start and end:
+            return start, end
+
+    # Prefer a date pair that is locally attached to an inscription-period
+    # label. Long detail pages often contain publication/update dates before
+    # the real registration window. A broad DOTALL expression can therefore
+    # pair unrelated dates (for example a retification publication date with a
+    # later communication date) and make a valid contest look inverted.
+    lines = [line.strip() for line in value.splitlines() if line.strip()]
+    contextual_candidates: list[tuple[int, int, datetime | None, datetime | None]] = []
+    inscription_re = r'inscri[cç](?:[aã]o|[õo]es?)'
+    marker_re = re.compile(
+        rf'per[ií]odo|{inscription_re}|abert',
+        flags=re.IGNORECASE,
+    )
+    for index, line in enumerate(lines):
+        normalized = line.casefold()
+        if not re.search(rf'per[ií]odo|{inscription_re}|abert', normalized):
+            continue
+        # Keep the window small and line-oriented. This still covers portals
+        # that put the label on one line and the date range on the next, while
+        # preventing a distant publication list from becoming the interval.
+        fragment = ' '.join(lines[index:index + 4])
+        date_matches = list(re.finditer(DATE_TOKEN_PATTERN, fragment, flags=re.IGNORECASE))
+        for marker in marker_re.finditer(fragment):
+            matches = [match for match in date_matches if match.start() >= marker.end()]
+            if len(matches) < 2:
+                continue
+            start = _parse_interval_endpoint(matches[0], fragment, is_start=True)
+            end = _parse_interval_endpoint(matches[1], fragment, is_start=False)
+            if not start:
+                continue
+            marker_context = fragment[marker.start():marker.end() + 180].casefold()
+            score = 0
+            if re.match(rf'per[ií]odo\s+(?:de\s+)?{inscription_re}', fragment[marker.start():], flags=re.IGNORECASE):
+                score += 100
+            elif re.match(inscription_re, fragment[marker.start():], flags=re.IGNORECASE):
+                score += 70
+            elif marker.group(0).casefold().startswith('abert'):
+                score += 60
+            else:
+                score += 40
+            if re.search(rf'{inscription_re}\s+abert', marker_context):
+                score += 80
+            if re.search(r'isen[cç][aã]o|requerimento', marker_context):
+                score -= 90
+            if re.search(r'publicad|divulgad|edi[cç][aã]o|atualiza[cç][aã]o', marker_context):
+                score -= 60
+            # Valid intervals win over an accidental pair from an unrelated
+            # section. If the only evidence is genuinely inverted, retain it
+            # so the sanity gate can report the source defect.
+            valid_order = int(bool(start and end and start <= end))
+            contextual_candidates.append((score, valid_order, start, end))
+
+    if contextual_candidates:
+        valid_candidates = [candidate for candidate in contextual_candidates if candidate[1]]
+        pool = valid_candidates or contextual_candidates
+        _, _, start, end = max(pool, key=lambda candidate: candidate[0])
+        return start, end
 
     # Detail pages commonly mention a law/publication date before the actual
     # registration window. Prefer an interval explicitly attached to the

@@ -450,10 +450,17 @@ class ConfigurableHTMLConnector(BaseConnector):
             'fetched_at': datetime.now(UTC),
         }
 
-    def _record_rejection(self, url: str, reason: str) -> None:
-        rejections = self.run_data.diagnostics_payload.setdefault('rejections', [])
-        if len(rejections) < 10:
-            rejections.append({'url': url, 'reason': reason})
+    def _record_rejection(self, url: str, reason: str, **details: Any) -> None:
+        # Keep the complete rejection trail. A ten-item sample hid whether a
+        # source was mostly filtering valid-looking rows or merely skipping a
+        # handful of known exclusions.
+        diagnostics = self.run_data.diagnostics_payload
+        counts = diagnostics.setdefault('rejection_counts', {})
+        counts[reason] = int(counts.get(reason, 0)) + 1
+        rejection = {'url': url, 'reason': reason}
+        if details:
+            rejection.update(details)
+        diagnostics.setdefault('rejections', []).append(rejection)
 
     def _extract_title(self, lines: list[str], hint: str | None) -> str:
         bad = {

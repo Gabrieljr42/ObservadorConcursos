@@ -1,8 +1,8 @@
 # Auditoria LIVE das 99 fontes do MASTER_SOURCES
 
-> Gerado em: 2026-08-30T13:26:49.790033+00:00  
+> Gerado em: 2026-08-30T17:00:57.155006+00:00  
 > Fontes: 99  
-> Duração: 674.3s
+> Duração: 771.81s
 
 ## Resumo separado
 
@@ -10,147 +10,156 @@
 
 | Status | Quantidade |
 |---|---:|
-| `success` | 38 |
-| `empty_valid` | 19 |
+| `success` | 40 |
+| `empty_valid` | 18 |
 | `blocked` | 3 |
 | `failed` | 4 |
-| `degraded` | 35 |
+| `degraded` | 34 |
 
 ### VERIFICATION STATUS
 
 | Status | Quantidade |
 |---|---:|
-| `VERIFIED` | 8 |
-| `EMPTY_VERIFIED` | 17 |
+| `VERIFIED` | 4 |
+| `EMPTY_VERIFIED` | 16 |
 | `BLOCKED` | 5 |
 | `FAILED_EXTERNAL` | 4 |
 | `PARTIAL` | 0 |
-| `BROKEN` | 0 |
-| `NOT_AUDITED` | 65 |
+| `BROKEN` | 17 |
+| `NOT_AUDITED` | 53 |
 
-- Candidatos encontrados: 578
-- Processados: 265
-- Visíveis independentemente: 541
+- Candidatos encontrados: 581
+- Processados: 267
+- Itens observados independentemente: 559
+- Itens relevantes conhecidos: 109
+- Itens ativos válidos conhecidos: 3
+- Cobertura nas fontes com ativo conhecido: 1.0
 
 ## Política de evidência
 
-A auditoria compara `expected` observado no site/PDF oficial com `actual` retornado pelo crawler. Campo presente apenas em `actual` é `UNKNOWN`; nunca é `MATCH`. `visible_valid_items` é uma observação independente e não é calculado a partir de `processed`.
+A auditoria compara `expected` observado no site/PDF oficial com `actual` retornado pelo crawler. Campo presente apenas em `actual` é `UNKNOWN`; nunca é `MATCH`.
+`visible_items_observed`, `visible_relevant_items` e `visible_active_valid_items` são evidências independentes. `processed` nunca preenche um campo desconhecido.
+`visible_valid_items` é mantido apenas como campo legado/deprecated.
 
 ## Matriz das fontes
 
-| # | Fonte | `source_type` | Crawler | Verificação | Visíveis | Candidatos | Processados |
-|---:|---|---|---|---|---:|---:|---:|
-| 01 | IBFC - Inscrições Abertas | `ibfc_open` | `empty_valid` | `EMPTY_VERIFIED` | UNKNOWN | 0 | 0 |
-| 02 | IDECAN - Concursos | `idecan_open` | `empty_valid` | `EMPTY_VERIFIED` | 5 | 0 | 0 |
-| 03 | Instituto AOCP - Concursos | `aocp_open` | `blocked` | `BLOCKED` | UNKNOWN | 0 | 0 |
-| 04 | CONSULPAM Concursos | `consulpam_open` | `success` | `NOT_AUDITED` | 9 | 25 | 9 |
-| 05 | IBAM Concursos | `ibam_open` | `success` | `NOT_AUDITED` | UNKNOWN | 30 | 26 |
-| 06 | IBADE Concursos | `ibade_open` | `success` | `NOT_AUDITED` | 6 | 6 | 6 |
-| 07 | CONSULPLAN / Instituto Consulplan | `consulplan_open` | `empty_valid` | `BLOCKED` | UNKNOWN | 0 | 0 |
-| 08 | SEPROD Concursos | `seprod_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 09 | Fundação Carlos Chagas - FCC | `fcc_open` | `empty_valid` | `EMPTY_VERIFIED` | 19 | 30 | 0 |
-| 10 | FGV Conhecimento Concursos | `fgv_open` | `success` | `NOT_AUDITED` | 33 | 30 | 4 |
-| 11 | Cebraspe Concursos | `cebraspe_open` | `success` | `NOT_AUDITED` | UNKNOWN | 6 | 6 |
-| 12 | Fundação Cesgranrio | `cesgranrio_open` | `degraded` | `NOT_AUDITED` | 4 | 4 | 0 |
-| 13 | IDCAP Concursos | `idcap_open` | `empty_valid` | `EMPTY_VERIFIED` | 60 | 25 | 0 |
-| 14 | IBGP - Inscrições Abertas | `ibgp_open` | `success` | `NOT_AUDITED` | UNKNOWN | 15 | 15 |
-| 15 | FUNDEP - Gestão de Concursos | `fundep_open` | `success` | `NOT_AUDITED` | 1 | 2 | 1 |
-| 16 | FUMARC Concursos | `fumarc_open` | `success` | `NOT_AUDITED` | UNKNOWN | 34 | 33 |
-| 17 | IMESO - Concursos e Seletivos | `imeso_open` | `success` | `NOT_AUDITED` | 2 | 2 | 2 |
-| 18 | OMNI Concursos Públicos | `omni_open` | `success` | `VERIFIED` | 2 | 2 | 2 |
-| 19 | Instituto ACCESS | `access_open` | `success` | `VERIFIED` | 2 | 2 | 2 |
-| 20 | Exame Consultores e Auditores | `exame_open` | `success` | `NOT_AUDITED` | 4 | 6 | 4 |
-| 21 | EPL Concursos | `epl_open` | `empty_valid` | `EMPTY_VERIFIED` | UNKNOWN | 0 | 0 |
-| 22 | ABCP Concursos | `abcp_open` | `success` | `VERIFIED` | 4 | 4 | 4 |
-| 23 | Instituto UniFil | `unifil_open` | `blocked` | `BLOCKED` | UNKNOWN | 0 | 0 |
-| 24 | OBJETIVA Concursos | `objetiva_open` | `success` | `VERIFIED` | 12 | 12 | 12 |
-| 25 | Leandro Ferreira & Consultoria | `leandroferreira_open` | `failed` | `FAILED_EXTERNAL` | UNKNOWN | 0 | 0 |
-| 26 | COTEC / FADENOR Concursos | `cotec_open` | `success` | `VERIFIED` | 2 | 2 | 2 |
-| 27 | Instituto Águia Concursos | `aguia_open` | `empty_valid` | `EMPTY_VERIFIED` | 28 | 25 | 0 |
-| 28 | IUDS Concursos | `iuds_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 29 | Reis & Reis Auditores Associados | `reisesreis_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 30 | MS Concursos | `msconcursos_open` | `success` | `NOT_AUDITED` | 29 | 25 | 2 |
-| 31 | FACET Concursos | `facet_open` | `empty_valid` | `EMPTY_VERIFIED` | 1 | 25 | 0 |
-| 32 | EDUCA PB Concursos | `educapb_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 33 | Instituto ADM&TEC | `admtec_open` | `success` | `NOT_AUDITED` | 4 | 4 | 4 |
-| 34 | CONTEMAX Consultoria | `contemax_open` | `failed` | `FAILED_EXTERNAL` | UNKNOWN | 0 | 0 |
-| 35 | CPCon / UEPB Concursos | `cpcon_open` | `success` | `NOT_AUDITED` | UNKNOWN | 10 | 10 |
-| 36 | FUNVAPI Concursos | `funvapi_open` | `success` | `NOT_AUDITED` | UNKNOWN | 7 | 6 |
-| 37 | CONSEP - Consultoria e Estudos | `consep_open` | `empty_valid` | `EMPTY_VERIFIED` | 9 | 0 | 0 |
-| 38 | Instituto Consulplan | `institutoconsulplan_open` | `empty_valid` | `BLOCKED` | UNKNOWN | 0 | 0 |
-| 39 | Instituto Avalia | `avalia_open` | `success` | `NOT_AUDITED` | 99 | 2 | 1 |
-| 40 | UFU / DIRPS - Seleções e Concursos | `ufu_selection` | `success` | `NOT_AUDITED` | 11 | 11 | 11 |
-| 41 | IDGRAN Concursos | `idgran_open` | `failed` | `FAILED_EXTERNAL` | UNKNOWN | 0 | 0 |
-| 42 | Instituto Quadrix | `quadrix_open` | `success` | `NOT_AUDITED` | 2 | 2 | 2 |
-| 43 | Gualimp Assessoria e Consultoria | `gualimp_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 44 | Instituto Verbena / UFG | `verbena_selection` | `success` | `NOT_AUDITED` | UNKNOWN | 5 | 4 |
-| 45 | Instituto IDIB | `idib_open` | `success` | `NOT_AUDITED` | UNKNOWN | 6 | 6 |
-| 46 | JCM Consultoria Municipal | `jcm_open` | `empty_valid` | `EMPTY_VERIFIED` | UNKNOWN | 0 | 0 |
-| 47 | Elo Assessoria e Serviços | `elo_open` | `success` | `NOT_AUDITED` | UNKNOWN | 7 | 7 |
-| 48 | Apta Concursos e Assessoria | `apta_open` | `empty_valid` | `EMPTY_VERIFIED` | 1 | 25 | 0 |
-| 49 | Legalle Concursos | `legalle_open` | `success` | `NOT_AUDITED` | 4 | 25 | 4 |
-| 50 | RBO Concursos e Assessoria | `rbo_open` | `success` | `VERIFIED` | 2 | 2 | 2 |
-| 51 | SHDias Consultoria e Concursos | `shdias_open` | `blocked` | `BLOCKED` | UNKNOWN | 0 | 0 |
-| 52 | Instituto Zambini | `zambini_open` | `empty_valid` | `EMPTY_VERIFIED` | 1 | 0 | 0 |
-| 53 | Instituto Nosso Rumo | `nossorumo_open` | `success` | `NOT_AUDITED` | UNKNOWN | 2 | 2 |
-| 54 | Avança SP Concursos | `avancasp_open` | `success` | `NOT_AUDITED` | 6 | 6 | 6 |
-| 55 | Instituto Mais de Gestão e Concursos | `institutomais_open` | `success` | `NOT_AUDITED` | 17 | 18 | 17 |
-| 56 | Publiconsult Concursos | `publiconsult_open` | `empty_valid` | `EMPTY_VERIFIED` | UNKNOWN | 14 | 0 |
-| 57 | KLC Concursos | `klc_open` | `empty_valid` | `EMPTY_VERIFIED` | UNKNOWN | 0 | 0 |
-| 58 | Sigma Assessoria e Consultoria | `sigma_open` | `empty_valid` | `EMPTY_VERIFIED` | 1 | 1 | 0 |
-| 59 | W2 Auditores e Consultores | `w2_open` | `empty_valid` | `EMPTY_VERIFIED` | 10 | 10 | 0 |
-| 60 | Fênix Concursos | `fenix_open` | `empty_valid` | `EMPTY_VERIFIED` | 1 | 25 | 0 |
-| 61 | Oppus Concursos | `oppus_open` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 62 | Instituto Legatus | `legatus_open` | `success` | `NOT_AUDITED` | UNKNOWN | 12 | 11 |
-| 63 | Fundação FEPESE | `fepese_open` | `success` | `NOT_AUDITED` | UNKNOWN | 13 | 13 |
-| 64 | FUNCERN Concursos e Seleções | `funcern_selection` | `success` | `VERIFIED` | 2 | 2 | 2 |
-| 65 | FAPEMIG - Seleções de Pessoal e Editais | `fapemig_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 66 | FAPES (Espírito Santo) - Seleções | `fapes_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 67 | FAPESQ (Paraíba) - Seleções | `fapesq_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 68 | Fundação Uniselva - Processos Seletivos | `uniselva_selection` | `success` | `NOT_AUDITED` | UNKNOWN | 9 | 2 |
-| 69 | Fundação de Apoio à FAFIPA | `fafipa_open` | `success` | `VERIFIED` | 9 | 9 | 9 |
-| 70 | Instituto IESES | `ieses_open` | `success` | `NOT_AUDITED` | UNKNOWN | 26 | 3 |
-| 71 | FUNPEC - Processos Seletivos | `funpec_selection` | `success` | `NOT_AUDITED` | 10 | 10 | 10 |
-| 72 | FADE - Fundação de Apoio ao Desenvolvimento | `fade_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 73 | FAPEX - Fundação de Apoio à Pesquisa e Extensão | `fapex_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 74 | FATEC - Fundação de Apoio | `fatec_selection` | `success` | `NOT_AUDITED` | UNKNOWN | 3 | 3 |
-| 75 | FAPED - Fundação de Apoio | `faped_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 76 | FAPESE - Fundação de Apoio à Extensão e Pesquisa | `fapese_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 77 | FAPEPI (Piauí) - Seleções | `fapepi_selection` | `empty_valid` | `EMPTY_VERIFIED` | 106 | 0 | 0 |
-| 78 | FAPEMA (Maranhão) - Seleções | `fapema_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 79 | FAPECE (Ceará) - Seleções | `fapece_selection` | `failed` | `FAILED_EXTERNAL` | UNKNOWN | 0 | 0 |
-| 80 | FAPERN (Rio Grande do Norte) - Seleções | `fapern_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 81 | FAPEAL (Alagoas) - Seleções | `fapeal_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 82 | FACEPE (Pernambuco) - Seleções | `facepe_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 83 | FAPESB (Bahia) - Seleções | `fapesb_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 84 | FAPERJ (Rio de Janeiro) - Seleções | `faperj_selection` | `degraded` | `NOT_AUDITED` | 23 | 0 | 0 |
-| 85 | FAPESP (São Paulo) - Oportunidades e Seleções | `fapesp_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 86 | Fundação Araucária / FAPPR (Paraná) | `fappr_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 87 | FAPESC (Santa Catarina) - Seleções | `fapesc_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 88 | FAPERGS (Rio Grande do Sul) - Seleções | `fapergs_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 89 | FUNDECT (Mato Grosso do Sul) - Seleções | `fundect_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 90 | FAPEMAT (Mato Grosso) - Seleções | `fapemat_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 91 | FAPEG (Goiás) - Seleções | `fapeg_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 92 | FAPDF (Distrito Federal) - Seleções | `fapdf_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 93 | FAPT (Tocantins) - Seleções | `fapt_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 94 | FAPEAM (Amazonas) - Seleções | `fapeam_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 95 | FAPESPA (Pará) - Seleções | `fapespa_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 96 | FAPEAP (Amapá) - Seleções | `fapeap_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 97 | FAPERR (Roraima) - Seleções | `faperr_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 98 | FAPERO (Rondônia) - Seleções | `fapero_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
-| 99 | FAPAC (Acre) - Seleções | `fapac_selection` | `degraded` | `NOT_AUDITED` | UNKNOWN | 0 | 0 |
+| # | Fonte | `source_type` | Observed | Relevant | Active valid | Processed | Verification |
+|---:|---|---|---:|---:|---:|---:|---|
+| 01 | IBFC - Inscrições Abertas | `ibfc_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 02 | IDECAN - Concursos | `idecan_open` | 5 | 5 | 0 | 0 | `EMPTY_VERIFIED` |
+| 03 | Instituto AOCP - Concursos | `aocp_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `BLOCKED` |
+| 04 | CONSULPAM Concursos | `consulpam_open` | 9 | UNKNOWN | UNKNOWN | 9 | `NOT_AUDITED` |
+| 05 | IBAM Concursos | `ibam_open` | UNKNOWN | UNKNOWN | UNKNOWN | 26 | `NOT_AUDITED` |
+| 06 | IBADE Concursos | `ibade_open` | 6 | UNKNOWN | UNKNOWN | 6 | `NOT_AUDITED` |
+| 07 | CONSULPLAN / Instituto Consulplan | `consulplan_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `BLOCKED` |
+| 08 | SEPROD Concursos | `seprod_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 09 | Fundação Carlos Chagas - FCC | `fcc_open` | 37 | 33 | 1 | 1 | `VERIFIED` |
+| 10 | FGV Conhecimento Concursos | `fgv_open` | 33 | UNKNOWN | UNKNOWN | 4 | `NOT_AUDITED` |
+| 11 | Cebraspe Concursos | `cebraspe_open` | UNKNOWN | UNKNOWN | UNKNOWN | 6 | `NOT_AUDITED` |
+| 12 | Fundação Cesgranrio | `cesgranrio_open` | 4 | UNKNOWN | UNKNOWN | 3 | `VERIFIED` |
+| 13 | IDCAP Concursos | `idcap_open` | 60 | 51 | 0 | 0 | `EMPTY_VERIFIED` |
+| 14 | IBGP - Inscrições Abertas | `ibgp_open` | UNKNOWN | UNKNOWN | UNKNOWN | 15 | `NOT_AUDITED` |
+| 15 | FUNDEP - Gestão de Concursos | `fundep_open` | 1 | UNKNOWN | UNKNOWN | 1 | `BROKEN` |
+| 16 | FUMARC Concursos | `fumarc_open` | UNKNOWN | UNKNOWN | UNKNOWN | 33 | `NOT_AUDITED` |
+| 17 | IMESO - Concursos e Seletivos | `imeso_open` | 2 | UNKNOWN | UNKNOWN | 2 | `BROKEN` |
+| 18 | OMNI Concursos Públicos | `omni_open` | 2 | UNKNOWN | UNKNOWN | 2 | `BROKEN` |
+| 19 | Instituto ACCESS | `access_open` | 2 | UNKNOWN | UNKNOWN | 2 | `BROKEN` |
+| 20 | Exame Consultores e Auditores | `exame_open` | 4 | UNKNOWN | UNKNOWN | 4 | `BROKEN` |
+| 21 | EPL Concursos | `epl_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 22 | ABCP Concursos | `abcp_open` | 4 | UNKNOWN | UNKNOWN | 4 | `BROKEN` |
+| 23 | Instituto UniFil | `unifil_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `BLOCKED` |
+| 24 | OBJETIVA Concursos | `objetiva_open` | 12 | UNKNOWN | UNKNOWN | 12 | `BROKEN` |
+| 25 | Leandro Ferreira & Consultoria | `leandroferreira_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `FAILED_EXTERNAL` |
+| 26 | COTEC / FADENOR Concursos | `cotec_open` | 2 | UNKNOWN | UNKNOWN | 2 | `BROKEN` |
+| 27 | Instituto Águia Concursos | `aguia_open` | 28 | 18 | 0 | 0 | `EMPTY_VERIFIED` |
+| 28 | IUDS Concursos | `iuds_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 29 | Reis & Reis Auditores Associados | `reisesreis_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 30 | MS Concursos | `msconcursos_open` | 29 | UNKNOWN | UNKNOWN | 2 | `NOT_AUDITED` |
+| 31 | FACET Concursos | `facet_open` | 1 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 32 | EDUCA PB Concursos | `educapb_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 33 | Instituto ADM&TEC | `admtec_open` | 4 | UNKNOWN | UNKNOWN | 4 | `BROKEN` |
+| 34 | CONTEMAX Consultoria | `contemax_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `FAILED_EXTERNAL` |
+| 35 | CPCon / UEPB Concursos | `cpcon_open` | UNKNOWN | UNKNOWN | UNKNOWN | 10 | `NOT_AUDITED` |
+| 36 | FUNVAPI Concursos | `funvapi_open` | UNKNOWN | UNKNOWN | UNKNOWN | 6 | `BROKEN` |
+| 37 | CONSEP - Consultoria e Estudos | `consep_open` | 9 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 38 | Instituto Consulplan | `institutoconsulplan_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `BLOCKED` |
+| 39 | Instituto Avalia | `avalia_open` | 99 | UNKNOWN | UNKNOWN | 1 | `NOT_AUDITED` |
+| 40 | UFU / DIRPS - Seleções e Concursos | `ufu_selection` | 11 | UNKNOWN | UNKNOWN | 11 | `NOT_AUDITED` |
+| 41 | IDGRAN Concursos | `idgran_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `FAILED_EXTERNAL` |
+| 42 | Instituto Quadrix | `quadrix_open` | 2 | UNKNOWN | UNKNOWN | 2 | `BROKEN` |
+| 43 | Gualimp Assessoria e Consultoria | `gualimp_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 44 | Instituto Verbena / UFG | `verbena_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 4 | `BROKEN` |
+| 45 | Instituto IDIB | `idib_open` | UNKNOWN | UNKNOWN | UNKNOWN | 6 | `BROKEN` |
+| 46 | JCM Consultoria Municipal | `jcm_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 47 | Elo Assessoria e Serviços | `elo_open` | UNKNOWN | UNKNOWN | UNKNOWN | 7 | `BROKEN` |
+| 48 | Apta Concursos e Assessoria | `apta_open` | 1 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 49 | Legalle Concursos | `legalle_open` | 4 | UNKNOWN | UNKNOWN | 4 | `NOT_AUDITED` |
+| 50 | RBO Concursos e Assessoria | `rbo_open` | 2 | 2 | 2 | 2 | `BROKEN` |
+| 51 | SHDias Consultoria e Concursos | `shdias_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `BLOCKED` |
+| 52 | Instituto Zambini | `zambini_open` | 1 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 53 | Instituto Nosso Rumo | `nossorumo_open` | UNKNOWN | UNKNOWN | UNKNOWN | 2 | `NOT_AUDITED` |
+| 54 | Avança SP Concursos | `avancasp_open` | 6 | UNKNOWN | UNKNOWN | 6 | `BROKEN` |
+| 55 | Instituto Mais de Gestão e Concursos | `institutomais_open` | 17 | UNKNOWN | UNKNOWN | 17 | `NOT_AUDITED` |
+| 56 | Publiconsult Concursos | `publiconsult_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 57 | KLC Concursos | `klc_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 58 | Sigma Assessoria e Consultoria | `sigma_open` | 1 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 59 | W2 Auditores e Consultores | `w2_open` | 10 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 60 | Fênix Concursos | `fenix_open` | 1 | UNKNOWN | UNKNOWN | 0 | `EMPTY_VERIFIED` |
+| 61 | Oppus Concursos | `oppus_open` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 62 | Instituto Legatus | `legatus_open` | UNKNOWN | UNKNOWN | UNKNOWN | 9 | `NOT_AUDITED` |
+| 63 | Fundação FEPESE | `fepese_open` | UNKNOWN | UNKNOWN | UNKNOWN | 13 | `NOT_AUDITED` |
+| 64 | FUNCERN Concursos e Seleções | `funcern_selection` | 2 | UNKNOWN | UNKNOWN | 2 | `VERIFIED` |
+| 65 | FAPEMIG - Seleções de Pessoal e Editais | `fapemig_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 66 | FAPES (Espírito Santo) - Seleções | `fapes_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 67 | FAPESQ (Paraíba) - Seleções | `fapesq_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 68 | Fundação Uniselva - Processos Seletivos | `uniselva_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 2 | `NOT_AUDITED` |
+| 69 | Fundação de Apoio à FAFIPA | `fafipa_open` | 9 | UNKNOWN | UNKNOWN | 9 | `BROKEN` |
+| 70 | Instituto IESES | `ieses_open` | UNKNOWN | UNKNOWN | UNKNOWN | 3 | `NOT_AUDITED` |
+| 71 | FUNPEC - Processos Seletivos | `funpec_selection` | 10 | UNKNOWN | UNKNOWN | 10 | `VERIFIED` |
+| 72 | FADE - Fundação de Apoio ao Desenvolvimento | `fade_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 73 | FAPEX - Fundação de Apoio à Pesquisa e Extensão | `fapex_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 74 | FATEC - Fundação de Apoio | `fatec_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 3 | `NOT_AUDITED` |
+| 75 | FAPED - Fundação de Apoio | `faped_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 76 | FAPESE - Fundação de Apoio à Extensão e Pesquisa | `fapese_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 77 | FAPEPI (Piauí) - Seleções | `fapepi_selection` | 106 | 0 | 0 | 0 | `EMPTY_VERIFIED` |
+| 78 | FAPEMA (Maranhão) - Seleções | `fapema_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 79 | FAPECE (Ceará) - Seleções | `fapece_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `FAILED_EXTERNAL` |
+| 80 | FAPERN (Rio Grande do Norte) - Seleções | `fapern_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 81 | FAPEAL (Alagoas) - Seleções | `fapeal_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 82 | FACEPE (Pernambuco) - Seleções | `facepe_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 83 | FAPESB (Bahia) - Seleções | `fapesb_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 84 | FAPERJ (Rio de Janeiro) - Seleções | `faperj_selection` | 23 | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 85 | FAPESP (São Paulo) - Oportunidades e Seleções | `fapesp_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 86 | Fundação Araucária / FAPPR (Paraná) | `fappr_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 87 | FAPESC (Santa Catarina) - Seleções | `fapesc_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 88 | FAPERGS (Rio Grande do Sul) - Seleções | `fapergs_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 89 | FUNDECT (Mato Grosso do Sul) - Seleções | `fundect_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 90 | FAPEMAT (Mato Grosso) - Seleções | `fapemat_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 91 | FAPEG (Goiás) - Seleções | `fapeg_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 92 | FAPDF (Distrito Federal) - Seleções | `fapdf_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 93 | FAPT (Tocantins) - Seleções | `fapt_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 94 | FAPEAM (Amazonas) - Seleções | `fapeam_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 95 | FAPESPA (Pará) - Seleções | `fapespa_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 96 | FAPEAP (Amapá) - Seleções | `fapeap_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 97 | FAPERR (Roraima) - Seleções | `faperr_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 98 | FAPERO (Rondônia) - Seleções | `fapero_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
+| 99 | FAPAC (Acre) - Seleções | `fapac_selection` | UNKNOWN | UNKNOWN | UNKNOWN | 0 | `NOT_AUDITED` |
 
 ## Amostras e comparações
 
 ### 04. CONSULPAM Concursos (`consulpam_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 9; processados: 9
+- Observed: 9; relevant: UNKNOWN; active valid: UNKNOWN; processed: 9
 - Método: official_html_observer
 - URLs de evidência: https://www.consulpam.com.br/index.php?menu=concursos, https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=870, https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "cidade": "Groaíras",
+    "uf": "CE",
+    "edital_numero": "003/2026",
     "link_edital": "https://www.consulpam.com.br/arquivos/20260821_161654_EDITAL 003 - GROAÍRAS - ACE E ACS.pdf"
   },
   "actual": {
@@ -179,11 +188,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
     "status": "UNKNOWN",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
@@ -191,7 +200,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -224,13 +233,16 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 05. IBAM Concursos (`ibam_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 26
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 26
 - Método: official_html_observer
 - URLs de evidência: https://www.ibam-concursos.org.br, https://www.ibam-concursos.org.br/inscricao.asp?task=novo&cod=374&car=1769
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "cidade": "Concordia",
+    "uf": "SC",
     "link_inscricao": "https://www.ibam-concursos.org.br/candidato.asp"
   },
   "actual": {
@@ -259,11 +271,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
     "status": "UNKNOWN",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
@@ -294,13 +306,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 06. IBADE Concursos (`ibade_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 6; processados: 6
+- Observed: 6; relevant: UNKNOWN; active valid: UNKNOWN; processed: 6
 - Método: official_html_observer
 - URLs de evidência: https://portal.ibade.selecao.site/edital, https://portal.ibade.selecao.site/edital/ver/126, https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
     "link_edital": "https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf",
     "link_inscricao": "https://candidato.ibade.selecao.site/"
   },
@@ -322,7 +335,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-25T00:00:00+00:00",
-    "inscricao_fim": "2026-08-25T00:00:00+00:00",
+    "inscricao_fim": "2026-08-25T23:59:00+00:00",
     "link_pagina": "https://portal.ibade.selecao.site/edital/ver/126",
     "link_edital": "https://ibade.selecao.site/arquivo.php?file=edital/1/126/130a6c954960dd7b114ee62ea32d4ece.pdf",
     "link_inscricao": "https://candidato.ibade.selecao.site/"
@@ -330,7 +343,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -401,9 +414,88 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 }
 ```
 
+### 09. Fundação Carlos Chagas - FCC (`fcc_open`)
+- Crawler: `success`; verificação: `VERIFIED`
+- Observed: 37; relevant: 33; active valid: 1; processed: 1
+- Método: official_html_observer+targeted_live_listing_and_detail_review
+- URLs de evidência: https://www.concursosfcc.com.br/concursoAndamento.html, https://www.concursosfcc.com.br/concursos/tcego125/index.html, https://www.concursosfcc.com.br/rybena/web/index.html?file=https://www.concursosfcc.com.br/concursos/tcego125/edital_de_abertura_versaex771_o_24_08_2026_-_versao_final_com_datas_finais.pdf
+
+```json
+{
+  "expected": {
+    "titulo": "Tribunal de Contas do Estado de Goiás",
+    "orgao": "Tribunal de Contas do Estado de Goiás",
+    "salario_min": 11862.19,
+    "salario_max": 11862.19,
+    "edital_numero": "01/2026",
+    "link_edital": "https://www.concursosfcc.com.br/rybena/web/index.html?file=https://www.concursosfcc.com.br/concursos/tcego125/edital_de_abertura_versaex771_o_24_08_2026_-_versao_final_com_datas_finais.pdf"
+  },
+  "actual": {
+    "titulo": "Tribunal de Contas do Estado de Goiás",
+    "orgao": "Tribunal de Contas do Estado de Goiás",
+    "modalidade": "Concurso Público",
+    "cargo": "Vários cargos",
+    "area": "tecnologia_informacao",
+    "cidade": "Regimento Interno do TCE",
+    "uf": "GO",
+    "status": "Inscrições em breve",
+    "vagas": 2,
+    "salario_min": 11862.19,
+    "salario_max": 11862.19,
+    "escolaridade": null,
+    "taxa": 100.0,
+    "prova_data": "2027-01-17T00:00:00+00:00",
+    "edital_numero": "01/2026",
+    "edital_data": null,
+    "inscricao_inicio": "2026-10-05T10:00:00+00:00",
+    "inscricao_fim": "2026-11-06T23:59:00+00:00",
+    "link_pagina": "https://www.concursosfcc.com.br/concursos/tcego125/index.html",
+    "link_edital": "https://www.concursosfcc.com.br/rybena/web/index.html?file=https://www.concursosfcc.com.br/concursos/tcego125/edital_de_abertura_versaex771_o_24_08_2026_-_versao_final_com_datas_finais.pdf",
+    "link_inscricao": null
+  },
+  "field_audit": {
+    "titulo": "MATCH",
+    "orgao": "MATCH",
+    "modalidade": "UNKNOWN",
+    "cargo": "UNKNOWN",
+    "area": "UNKNOWN",
+    "cidade": "UNKNOWN",
+    "uf": "UNKNOWN",
+    "status": "UNKNOWN",
+    "vagas": "UNKNOWN",
+    "salario_min": "MATCH",
+    "salario_max": "MATCH",
+    "escolaridade": "UNKNOWN",
+    "taxa": "UNKNOWN",
+    "prova_data": "UNKNOWN",
+    "edital_numero": "MATCH",
+    "edital_data": "UNKNOWN",
+    "inscricao_inicio": "UNKNOWN",
+    "inscricao_fim": "UNKNOWN",
+    "link_pagina": "UNKNOWN",
+    "link_edital": "MATCH",
+    "link_inscricao": "UNKNOWN"
+  },
+  "publication_audit": {
+    "status": "MATCH",
+    "expected_count": 1,
+    "actual_count": 1,
+    "expected_titles": [
+      "Edital nº 01/2026 de Abertura de Inscrições"
+    ],
+    "actual_titles": [
+      "Edital nº 01/2026 de Abertura de Inscrições"
+    ],
+    "invalid_actual_titles": [],
+    "missing_titles": [],
+    "missing_links": []
+  }
+}
+```
+
 ### 10. FGV Conhecimento Concursos (`fgv_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 33; processados: 4
+- Observed: 33; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer+official_page_and_pdf_review
 - URLs de evidência: https://conhecimento.fgv.br/concursos, https://conhecimento.fgv.br/concursos/pms2026, https://conhecimento.fgv.br/sites/default/files/concursos/edital-preliminar-pref-salvador-prof-e-coordenador-academico-01.2026-09.07-ret2.pdf
 
@@ -471,7 +563,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 11. Cebraspe Concursos (`cebraspe_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 6
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 6
 - Método: official_html_observer
 - URLs de evidência: https://www.cebraspe.org.br/concursos/, https://www.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26
 
@@ -496,7 +588,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-21T00:00:00+00:00",
-    "inscricao_fim": "2026-09-10T18:00:00+00:00",
+    "inscricao_fim": "2026-09-10T23:59:00+00:00",
     "link_pagina": "https://www.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26",
     "link_edital": "https://cdn.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26/arquivos/4D1A8250B5C31E91D6EF22CD6FFAEAC93329629A1E7618F7A7BCAA271EABA272.pdf",
     "link_inscricao": "https://www.cebraspe.org.br/concursos/CAMARA_MUNICIPAL_PONTAPORA_MS_26"
@@ -540,15 +632,94 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 }
 ```
 
+### 12. Fundação Cesgranrio (`cesgranrio_open`)
+- Crawler: `success`; verificação: `VERIFIED`
+- Observed: 4; relevant: UNKNOWN; active valid: UNKNOWN; processed: 3
+- Método: official_html_observer
+- URLs de evidência: https://www.cesgranrio.org.br/concursos/, https://www.cesgranrio.org.br/concurso/transpetro-2026/
+
+```json
+{
+  "expected": {
+    "titulo": "Concurso Transpetro 2026",
+    "modalidade": "Processo Seletivo",
+    "vagas": 281,
+    "salario_min": 15034.81,
+    "salario_max": 15034.81,
+    "taxa": 81.5,
+    "link_pagina": "https://www.cesgranrio.org.br/concurso/transpetro-2026/",
+    "link_inscricao": "https://concursos.cesgranrio.org.br/portal/avaliacoes/22"
+  },
+  "actual": {
+    "titulo": "Concurso Transpetro 2026",
+    "orgao": null,
+    "modalidade": "Processo Seletivo",
+    "cargo": "Vários cargos",
+    "area": "saude",
+    "cidade": "Rio de Janeiro",
+    "uf": "RJ",
+    "status": "Em andamento",
+    "vagas": 281,
+    "salario_min": 15034.81,
+    "salario_max": 15034.81,
+    "escolaridade": null,
+    "taxa": 81.5,
+    "prova_data": null,
+    "edital_numero": null,
+    "edital_data": null,
+    "inscricao_inicio": "2026-08-12T00:00:00+00:00",
+    "inscricao_fim": "2026-09-14T23:59:00+00:00",
+    "link_pagina": "https://www.cesgranrio.org.br/concurso/transpetro-2026/",
+    "link_edital": null,
+    "link_inscricao": "https://concursos.cesgranrio.org.br/portal/avaliacoes/22"
+  },
+  "field_audit": {
+    "titulo": "MATCH",
+    "orgao": "UNKNOWN",
+    "modalidade": "MATCH",
+    "cargo": "UNKNOWN",
+    "area": "UNKNOWN",
+    "cidade": "UNKNOWN",
+    "uf": "UNKNOWN",
+    "status": "UNKNOWN",
+    "vagas": "MATCH",
+    "salario_min": "MATCH",
+    "salario_max": "MATCH",
+    "escolaridade": "UNKNOWN",
+    "taxa": "MATCH",
+    "prova_data": "UNKNOWN",
+    "edital_numero": "UNKNOWN",
+    "edital_data": "UNKNOWN",
+    "inscricao_inicio": "UNKNOWN",
+    "inscricao_fim": "UNKNOWN",
+    "link_pagina": "MATCH",
+    "link_edital": "UNKNOWN",
+    "link_inscricao": "MATCH"
+  },
+  "publication_audit": {
+    "status": "UNKNOWN",
+    "expected_count": 0,
+    "actual_count": 0,
+    "expected_titles": [],
+    "actual_titles": [],
+    "invalid_actual_titles": [],
+    "missing_titles": [],
+    "missing_links": []
+  }
+}
+```
+
 ### 14. IBGP - Inscrições Abertas (`ibgp_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 15
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 15
 - Método: official_html_observer
 - URLs de evidência: https://novo.ibgpconcursos.com.br/inscricoes_abertas.jsp, https://novo.ibgpconcursos.com.br/concurso.jsp?cod=704
 
 ```json
 {
-  "expected": {},
+  "expected": {
+    "status": "inscrições abertas"
+  },
   "actual": {
     "titulo": "CONCURSO PÚBLICO DO INSTITUTO DE PREVIDÊNCIA DE ITABIRA/MG - ITABIRAPREV - EDITAL Nº 01/2026",
     "orgao": "INSTITUTO DE PREVIDÊNCIA DE ITABIRA - ITABIRAPREV",
@@ -580,7 +751,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
@@ -618,14 +789,17 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 15. FUNDEP - Gestão de Concursos (`fundep_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 1; processados: 1
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 1; relevant: UNKNOWN; active valid: UNKNOWN; processed: 1
 - Método: official_html_observer
 - URLs de evidência: https://www.gestaodeconcursos.com.br/site/site/default.aspx, https://fundep.selecao.net.br/informacoes/72/, https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "status": "em andamento",
+    "edital_numero": "01/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
     "link_inscricao": "https://gestaodeconcursos.com.br/candidato/CadastroCandidato.aspx"
   },
@@ -655,19 +829,19 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -694,7 +868,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 16. FUMARC Concursos (`fumarc_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 33
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 33
 - Método: official_html_observer
 - URLs de evidência: https://www.fumarc.com.br/SitePages/Home.aspx, https://www.fumarc.com.br/SitePages/Home.aspx?concurso=54&secao=-1
 
@@ -780,14 +954,17 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 17. IMESO - Concursos e Seletivos (`imeso_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 2; processados: 2
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://portal.imeso.com.br/edital, https://portal.imeso.com.br/edital/ver/134, https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/134/43830bf553934703208822752bf8293a.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Processo Seletivo",
+    "cidade": "Uruana De Minas",
+    "uf": "MG",
     "link_edital": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/134/43830bf553934703208822752bf8293a.pdf",
     "link_inscricao": "https://candidato.imeso.com.br/inscricao/6e684d376e02a5b69118b37b27b02440"
   },
@@ -817,11 +994,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MISMATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
     "status": "UNKNOWN",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
@@ -855,8 +1032,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 18. OMNI Concursos Públicos (`omni_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 2; processados: 2
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://portal.omniconcursospublicos.com.br, https://portal.omniconcursospublicos.com.br/informacoes/239/, https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf
 
@@ -865,8 +1042,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público - 002/2024 - Prefeitura Municipal de Papanduva - SC",
     "modalidade": "Concurso Público",
+    "status": "em andamento",
     "cidade": "Papanduva",
     "uf": "SC",
+    "vagas": 3,
+    "edital_numero": "002/2024",
     "link_edital": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf"
   },
   "actual": {
@@ -900,14 +1080,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "status": "MATCH",
+    "vagas": "MISMATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1021,8 +1201,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 19. Instituto ACCESS (`access_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 2; processados: 2
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://access.selecao.net.br/index/abertos/, https://access.selecao.net.br/informacoes/180/, https://anexos-r2.selecao.net.br/uploads/422/concursos/180/anexos/f2daed72-249a-4291-b551-f71889d13986.pdf
 
@@ -1030,8 +1210,12 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "Prefeitura Municipal de Guapimirim/RJ",
+    "orgao": "Prefeitura Municipal de Guapimirim/RJ",
+    "modalidade": "Concurso Público",
+    "status": "em andamento",
     "cidade": "Guapimirim",
     "uf": "RJ",
+    "edital_numero": "1/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/422/concursos/180/anexos/f2daed72-249a-4291-b551-f71889d13986.pdf",
     "link_inscricao": "https://access.selecao.net.br/login/sair/?redir=%2Ftermo%2F180%2F"
   },
@@ -1060,20 +1244,20 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   },
   "field_audit": {
     "titulo": "MATCH",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "orgao": "MATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1107,8 +1291,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 20. Exame Consultores e Auditores (`exame_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 4; processados: 4
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 4; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer
 - URLs de evidência: https://concursos.exameconsultores.com.br/index/1/, https://concursos.exameconsultores.com.br/informacoes/544/, https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf
 
@@ -1117,6 +1301,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "P.M. de Santana de Pirapama - Concurso Público",
     "modalidade": "Concurso Público",
+    "status": "em andamento",
+    "vagas": 59,
+    "edital_numero": "01/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf"
   },
   "actual": {
@@ -1150,14 +1337,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "status": "MATCH",
+    "vagas": "MISMATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1193,8 +1380,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 22. ABCP Concursos (`abcp_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 4; processados: 4
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 4; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer
 - URLs de evidência: https://abcp.selecao.net.br/index/abertos/, https://abcp.selecao.net.br/informacoes/2867/, https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf
 
@@ -1203,8 +1390,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
     "modalidade": "Processo Seletivo Simplificado",
+    "status": "em andamento",
     "cidade": "Ibiúna",
     "uf": "SP",
+    "taxa": 4545.58,
+    "edital_numero": "001/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
     "link_inscricao": "https://abcp.selecao.net.br/login/sair/?redir=%2Ftermo%2F2867%2F"
   },
@@ -1239,14 +1429,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
+    "taxa": "MISMATCH",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1272,8 +1462,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 24. OBJETIVA Concursos (`objetiva_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 12; processados: 12
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 12; relevant: UNKNOWN; active valid: UNKNOWN; processed: 12
 - Método: official_html_observer
 - URLs de evidência: https://concursos.objetivas.com.br, https://concursos.objetivas.com.br/informacoes/2617/, https://anexos-r2.selecao.net.br/uploads/361/concursos/2617/anexos/d9ea7903-1506-47f2-ae4b-9c077c93af0a.pdf
 
@@ -1282,8 +1472,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "GUAPORÉ/RS - Câmara Municipal - Concurso Público 001/2026",
     "modalidade": "Concurso Público",
-    "cidade": "Guaporé",
-    "uf": "RS",
+    "status": "em andamento",
+    "taxa": 60.0,
+    "edital_numero": "001/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/361/concursos/2617/anexos/d9ea7903-1506-47f2-ae4b-9c077c93af0a.pdf",
     "link_inscricao": "https://concursos.objetivas.com.br/login/sair/?redir=%2Ftermo%2F2617%2F"
   },
@@ -1316,16 +1507,16 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "MATCH",
-    "uf": "MATCH",
-    "status": "UNKNOWN",
+    "cidade": "UNKNOWN",
+    "uf": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
+    "taxa": "MATCH",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1351,8 +1542,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 26. COTEC / FADENOR Concursos (`cotec_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 2; processados: 2
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://www.cotec.fadenor.com.br/index/abertos/, https://www.cotec.fadenor.com.br/informacoes/28/, https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/564c58d4-58da-43ea-b120-23e38c000d71.pdf
 
@@ -1360,8 +1551,13 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "Prefeitura Municipal de Ponto Chique/MG",
+    "orgao": "Prefeitura Municipal de Ponto Chique/MG",
+    "modalidade": "Concurso Público",
+    "status": "em andamento",
     "cidade": "Ponto Chique",
     "uf": "MG",
+    "vagas": 2,
+    "edital_numero": "01/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/564c58d4-58da-43ea-b120-23e38c000d71.pdf",
     "link_inscricao": "https://www.cotec.fadenor.com.br/login/sair/?redir=%2Ftermo%2F28%2F"
   },
@@ -1390,20 +1586,20 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   },
   "field_audit": {
     "titulo": "MATCH",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "orgao": "MATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "status": "MISMATCH",
+    "vagas": "MISMATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1444,13 +1640,15 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 30. MS Concursos (`msconcursos_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 29; processados: 2
+- Observed: 29; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://www.msconcursos.com.br, https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "taxa": 32.52,
     "link_inscricao": "https://msconcursos.com.br/concurso/54/login-area-do-candidato/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
   },
   "actual": {
@@ -1471,7 +1669,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-19T00:00:00+00:00",
-    "inscricao_fim": "2026-09-13T00:00:00+00:00",
+    "inscricao_fim": "2026-09-13T23:59:00+00:00",
     "link_pagina": "https://www.msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
     "link_edital": "https://www.msconcursos.com.br/concurso/54/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
     "link_inscricao": "https://www.msconcursos.com.br/concurso/54/login-area-do-candidato/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp"
@@ -1479,7 +1677,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -1489,7 +1687,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
+    "taxa": "MISMATCH",
     "prova_data": "UNKNOWN",
     "edital_numero": "UNKNOWN",
     "edital_data": "UNKNOWN",
@@ -1513,15 +1711,21 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 33. Instituto ADM&TEC (`admtec_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 4; processados: 4
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 4; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer
 - URLs de evidência: https://admtec.org.br/, https://admtec.org.br/concursos/publicacoes/MTEz/MTIx
 
 ```json
 {
   "expected": {
-    "titulo": "PREFEITURA MUNICIPAL DE PIRANHAS-ALAGOAS"
+    "titulo": "PREFEITURA MUNICIPAL DE PIRANHAS-ALAGOAS",
+    "orgao": "PREFEITURA MUNICIPAL DE PIRANHAS-ALAGOAS",
+    "modalidade": "Concurso Público",
+    "status": "encerrado",
+    "cidade": "Piranhas",
+    "uf": "AL",
+    "edital_numero": "06"
   },
   "actual": {
     "titulo": "PREFEITURA MUNICIPAL DE PIRANHAS",
@@ -1548,20 +1752,20 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   },
   "field_audit": {
     "titulo": "MATCH",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "orgao": "MISMATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1590,7 +1794,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 35. CPCon / UEPB Concursos (`cpcon_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 10
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 10
 - Método: official_html_observer
 - URLs de evidência: https://cpcon.uepb.edu.br, https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/
 
@@ -1598,6 +1802,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "PREFEITURA MUNICIPAL DE GUARABIRA",
+    "orgao": "PREFEITURA MUNICIPAL DE GUARABIRA",
+    "modalidade": "Concurso Público",
     "link_pagina": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/",
     "link_inscricao": "https://sistemas.cpcon.uepb.edu.br/sigeps-app/login"
   },
@@ -1621,13 +1827,13 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "inscricao_inicio": "2026-08-13T00:00:00+00:00",
     "inscricao_fim": "2026-08-19T23:59:00+00:00",
     "link_pagina": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/",
-    "link_edital": "https://cpcon.uepb.edu.br/download/retificacao-edital-normativo-de-concurso-publico-no-001-2026-pmg-pb/?wpdmdl=10225&refresh=6a942dce9947b1788095950",
+    "link_edital": "https://cpcon.uepb.edu.br/download/retificacao-edital-normativo-de-concurso-publico-no-001-2026-pmg-pb/?wpdmdl=10225&refresh=6a945fcc6fe501788108748",
     "link_inscricao": "https://sistemas.cpcon.uepb.edu.br/sigeps-app/login"
   },
   "field_audit": {
     "titulo": "MATCH",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "orgao": "MATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -1673,8 +1879,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 36. FUNVAPI Concursos (`funvapi_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 6
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 6
 - Método: official_html_observer
 - URLs de evidência: https://www.funvapi.com.br, https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/, https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf
 
@@ -1682,6 +1888,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE",
+    "orgao": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE",
+    "modalidade": "Concurso Público",
     "link_pagina": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
     "link_edital": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf"
   },
@@ -1710,8 +1918,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   },
   "field_audit": {
     "titulo": "MATCH",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "orgao": "MISMATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -1750,7 +1958,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 39. Instituto Avalia (`avalia_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 99; processados: 1
+- Observed: 99; relevant: UNKNOWN; active valid: UNKNOWN; processed: 1
 - Método: official_html_observer
 - URLs de evidência: https://www2.avalia.org.br/concursos.jsp, https://www2.avalia.org.br/concurso.jsp?id=630
 
@@ -1776,8 +1984,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "prova_data": null,
     "edital_numero": null,
     "edital_data": null,
-    "inscricao_inicio": "2026-09-24T00:00:00+00:00",
-    "inscricao_fim": "2026-09-25T00:00:00+00:00",
+    "inscricao_inicio": "2026-09-01T00:00:00+00:00",
+    "inscricao_fim": "2026-09-25T23:59:00+00:00",
     "link_pagina": "https://www2.avalia.org.br/concurso.jsp?id=630",
     "link_edital": "https://arquivos-site.avalia.org.br/publicacoes/f68d5d73-0940-4165-8488-fb9c750cc23c.pdf",
     "link_inscricao": "https://link.avalia.org.br/open?chave=jG2b886%2B%2FY2BULGuSK4lXqHc2ugVtjcB4KIPk1Pwz6%2BOYWblVub87e3PH4jCE3gKscLHKNIZLfjmTCkRB2O8iUErLKCPXsLWe3j%2FE2OTaXxWeHS2QSetH5i1%2BFMMF3MlrVt3Zy%2BnJlYjQXs%2B5RBuh7RF7PHUyh0JWd3Fr%2FceOqDugXZRhZW4fpb1GGffS9KwFe5L%2FW2bKjmS3WF9%2Bt8hPGuYFZKyBzeyin60OIYXKGuzV6%2BH4I6RbtlXiAlG43vA3d6%2BOXwV9uULQtsClTR%2BS%2FDihFSdrvWaYA29ld5Gl9%2FetXF7hqNAwz1%2FY4v5RtL%2FYOaKIGjcUWLuZxeP0WC9AASLmGULlkfzOaX%2BOYFDALvDpMXLV8YdhOhAnUAxJlpURrYnhhcYSaCOFxq9eBIEIDRBCHWxACQ7ThCDm2bhNJwRu%2FyOeAjr0opIbX2fx%2B2R%2F2%2Btrmz63y4tHDavOsYLhhV%2FPmspraVCXBAfHzBLV76oglChwHor4RfcMMoUIns7kFrgLCXhcIbAJ1ZBgP5KIi%2FFQyg4VwsXXgadNUadhW3NdQ11NaQK%2F9fROfR3iGbyGKW1IM4z3yLBhsPBuVf6V1EJRZmYpGBCuIczdjkIYzhlvweJ4dyX8Pvcz9oTibN%2ByZW7vk7p93%2F%2BWoOAD1ny33NnGbtgHrgtcjpWvuc4XE6e2idp6DH0U1F7K5c4bDBzZARWiWh4t00i7ClJxRGQfLvi7wGHK6TUjn26ZBu3Etac7v%2F20iZwd1IVqZoCpAHH6Wk%2FAOA3LsA4vBh7rur%2FzMIfzFQh45zkKaoYWJDjhJoasAiH7MUaBR83czsf0SLnmMXcPeHqS1PjOhzNaKMJX2sWOw%2FhbXFupI2%2BPqqUbYgVWJEHmzgBSV%2Bv0D9dYD%2FSbXHonkbS6GbAW%2B7ZddP3gamhCQHZoUYLKZc4jzOABaiX7Fqzzn56URDHq%2BP9lDcqU5ri5tFRFkLxzSc01CIpCunlyO924fB4HhXITc1jNPoy%2B4FLmwLAZyd4AzFSghtszowD190aLDARrUULCEWJ96YZv3snxAo1tH0ywLUhNSsA1ednf3W4Ud74QeQbhuJe6MUITViH8HzwFu3QPUEnkr4hdSO%2BeM93H2Ai1yw43yeTnwxE8z33zzzuaCF0esBknMclWvKOvZi3eihN93ZVCMPqSVO8WTWE%2FtpEMxwUq8BBGNcw4Anb2fDarLaHcGg8WoUtE1JuAZMvU2nimL3gH4my7hwCHbuX%2FuukcqYimCQGVCluRYQsd5nmi%2FVZxfeRnvtfka9bu2w7FBclmjxAI6YWZl4SYpGcMY9yyf%2FaNSA%2FvgYFxwa%2BLBGuowF9HCBuANXnZ391uFHe%2BEHkG4biXujFCE1Yh%2FB88Bbt0D1BJ5K%2BIXUjvnjPdx9gItcsON8nk58MRPM998887mghdHrAZBkmIHRO4MiRQnyadsat9F%2B1gWuorX%2B6aWQkYFTZAY%2FPrazU2YocXwKfL7buZ4KmDqreEmJjd8z7yGPMzBBup%2BNam1mXEcF7Uhc%2FtcNUfiXvh7L0vGodXkq4OmkYH9n2qMaulUkHo8sgr3RA5%2BY9J5jXBVHHcy9CZi1pmXChYvn%2Fb9VEcli59IikHq5CJDxZhMoUnkupBVqK234Ajg00mzJIs%2F4TrcHgAYiH4jyDQTcSvtI%2BGR3lqad4PNikiv8iTnUGNB6XPKx9BLa14oowy%2BpQcemnpbNRQc1QVNCr%2BqYwBmAa10UPaYiraCPATjnFItAssTZdxtEwChZDpYEvL6aYJWRb7Uwb6ggV2IOjiYHB4l6OADjbIPwLA3loZawNMt1wmJfu6n%2FqYGKEGWIa93%2FU25r9n1jNBdB%2BJEgOxvCBl0%2B3VbToRrWJgnUDgXp4972LJa%2FfZn210lcS0jsHtd1f8kdcycK4erYH040ik6j4pJGHW2D2Ua1EUBheLxt8m1mpeczJ4ER9OFXFkQXDyk5pCJYonmHkNIZYEdv9qIO%2BHtyf1HNz3cPiTGo%2FtVa7axiWzRHB4vi5n2hxcn3P%2FC4edyk99tjpyL4n%2BQ%2BihAYHOSfpLPNNZV0IMcXhD2zNxaEr0TTfgpmxq21aORSwcVhTFz0RmkOZOFe959ydPFqSkFpT1553swruqLbvpr652MOliGhrWrLsWj3lIlKKKdQBJksV0PbT0llJP146hAi7cyXnt6x1RVxpPrgc0YpnKeyjyFI5F2%2Brup67Ycqj%2FHp3mpwkVDWww%2Bfrv22kQBtbUZHeGxZSspD8Sd5xYzBWRhiS0pvN3PQ6k1sWV0FykvF7mTpHvR7qujCwDevKr%2BmzKKfgb%2FVMMJJuIh4l1ZqOv6gsiE9GZ4kiwmBr6HeXUNzUIKbCdOv37Yz73Ca0XjcdCJzUXMvdPGvVMLPzkCeFwNceBceWOnY0SMomTwrwjdp3K27WsVcDNVEgQTxnIKM39fd%2BHs3olH7aGta3tHFJ14VWXhi0u6llv1PA6bbJXONzj3M7wm5KNItWqJanNVT7Gi7zqxTKJ3QAnuZOjWoF7f3IzEzk0FAmYKdgAUY3zdEUinNDltI2AyMGnXYJrLv5AAmZs4R41ZuABej92ArFyQQW%2FYdTlqA1UUozko9nsyeJDIle7qJ7KulbcnhC1nCM7IgSU%2BxsTAXIE6eUMOv0xNAx2x000kaACt8oW7Cgk6fEQdPQ4jAxj49Wd%2B9mv8Kc6qFeBc9CDTuD8xz%2FcQ2IIhQJpfzNctPGr%2B8dmxRPl4VX97Nhs3gsF1HX%2Ft0DHWDo3OhLDxzIy2%2BvdW%2BSWJlXLGe5pq2tS8TaBHxVCm1ftlnCvFSlm0gXJoliucmkuBaXZe6%2FrmxzOPAUoWzvDoW9bZUbwBfQ7djTK51Jy%2F2M5Ih1Fyu4fbtYkP3%2Fhw1CagCzCq4VCxkOSf2mFGCXfV64X8WA5rKMmHuzuJ87n%2BRoRD1UOXQUfCMh4bfAqnq6%2FHiH%2Fn5vaNd70JjJmjvA271Z35C7wpcqZ6VwCKdOS6yYmvB11PGZXa0I97l30xOklBsvGBaGrkifrxJTe7rjBXVhGv176roAIHNEL61z4%2FuAe6o%3D"
@@ -1820,13 +2028,15 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 40. UFU / DIRPS - Seleções e Concursos (`ufu_selection`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 11; processados: 11
+- Observed: 11; relevant: UNKNOWN; active valid: UNKNOWN; processed: 11
 - Método: official_html_observer
 - URLs de evidência: https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos, https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843, https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/0981a060af516a1cb54f2f9a1ed5473e
 
 ```json
 {
   "expected": {
+    "modalidade": "Processo Seletivo Simplificado",
+    "edital_numero": "144/2026",
     "link_pagina": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
     "link_edital": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/0981a060af516a1cb54f2f9a1ed5473e",
     "link_inscricao": "https://www.portalselecao.ufu.br/servicos/Edital/listar/colaboradores"
@@ -1839,7 +2049,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "educacao",
     "cidade": "Uberlândia",
     "uf": "MG",
-    "status": "Inscrições abertas",
+    "status": "Inscrições em breve",
     "vagas": null,
     "salario_min": null,
     "salario_max": null,
@@ -1848,8 +2058,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "prova_data": null,
     "edital_numero": "144/2026",
     "edital_data": null,
-    "inscricao_inicio": "2026-08-10T00:00:00+00:00",
-    "inscricao_fim": "2026-08-10T16:00:00+00:00",
+    "inscricao_inicio": "2026-09-28T00:00:00+00:00",
+    "inscricao_fim": "2026-10-14T23:59:00+00:00",
     "link_pagina": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
     "link_edital": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/0981a060af516a1cb54f2f9a1ed5473e",
     "link_inscricao": "https://www.portalselecao.ufu.br/servicos/Edital/listar/colaboradores"
@@ -1857,7 +2067,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -1869,7 +2079,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1901,14 +2111,20 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 42. Instituto Quadrix (`quadrix_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 2; processados: 2
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://quadrix.org.br/index/abertos/, https://quadrix.org.br/informacoes/3070/, https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf
 
 ```json
 {
   "expected": {
+    "titulo": "Conselho Regional de Educação Física da 20ª Região (CREF-SE)",
+    "orgao": "Conselho Regional de Educação Física da 20ª Região (CREF-SE)",
+    "modalidade": "Concurso Público",
+    "status": "em andamento",
+    "taxa": 60.0,
+    "edital_numero": "01/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3070/anexos/f196fabd-7d4e-49e6-bb8c-1fcc400cab06.pdf",
     "link_inscricao": "https://quadrix.org.br/login/sair/?redir=%2Ftermo%2F3070%2F"
   },
@@ -1936,21 +2152,21 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "link_inscricao": "https://quadrix.org.br/login/sair/?redir=%2Ftermo%2F3070%2F"
   },
   "field_audit": {
-    "titulo": "UNKNOWN",
-    "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "titulo": "MATCH",
+    "orgao": "MATCH",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
+    "taxa": "MATCH",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -1978,18 +2194,21 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 44. Instituto Verbena / UFG (`verbena_selection`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 4
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer
 - URLs de evidência: https://institutoverbena.ufg.br, https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/, https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/9-edital/178-edital-de-abertura-nº-01-2026-consolidado-pelo-edital-complementar-nº-02-2026.html
 
 ```json
 {
   "expected": {
-    "titulo": "IV - Concurso Público da Prefeitura Municipal de Minaçu - GO",
+    "titulo": "Concurso Público da Prefeitura Municipal de Minaçu - GO",
     "modalidade": "Concurso Público",
     "cidade": "Minaçu",
     "uf": "GO",
+    "vagas": 92,
+    "salario_min": 21783.92,
+    "salario_max": 21783.92,
     "link_edital": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/9-edital/178-edital-de-abertura-nº-01-2026-consolidado-pelo-edital-complementar-nº-02-2026.html",
     "link_inscricao": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/10-comunicados/170-realizar-inscrição.html"
   },
@@ -2011,13 +2230,13 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-26T00:00:00+00:00",
-    "inscricao_fim": "2026-09-16T00:00:00+00:00",
+    "inscricao_fim": "2026-09-16T23:59:00+00:00",
     "link_pagina": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/",
     "link_edital": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/9-edital/178-edital-de-abertura-nº-01-2026-consolidado-pelo-edital-complementar-nº-02-2026.html",
     "link_inscricao": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/10-comunicados/170-realizar-inscrição.html"
   },
   "field_audit": {
-    "titulo": "MATCH",
+    "titulo": "MISMATCH",
     "orgao": "UNKNOWN",
     "modalidade": "MATCH",
     "cargo": "UNKNOWN",
@@ -2025,9 +2244,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "cidade": "MATCH",
     "uf": "MATCH",
     "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
-    "salario_min": "UNKNOWN",
-    "salario_max": "UNKNOWN",
+    "vagas": "MISMATCH",
+    "salario_min": "MATCH",
+    "salario_max": "MATCH",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
@@ -2120,14 +2339,20 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 45. Instituto IDIB (`idib_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 6
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 6
 - Método: official_html_observer
 - URLs de evidência: https://idib.org.br, https://concurso.idib.org.br/Concurso.aspx?ID=355, https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "cidade": "Marco",
+    "uf": "CE",
+    "inscricao_inicio": "2026-07-15T00:00:00+00:00",
+    "inscricao_fim": "2026-08-24T23:59:00+00:00",
+    "edital_numero": "001/2026",
     "link_edital": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6RSM3SMNO8WAIPSXXGMALX7W1PSKSK48G0RN8QL8KQUW67XJ5409HR8ESO2G8RSCNRFT4QQIK3KLWOFB8749.pdf"
   },
   "actual": {
@@ -2156,11 +2381,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
     "status": "UNKNOWN",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
@@ -2168,10 +2393,10 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MISMATCH",
     "edital_data": "UNKNOWN",
-    "inscricao_inicio": "UNKNOWN",
-    "inscricao_fim": "UNKNOWN",
+    "inscricao_inicio": "MISMATCH",
+    "inscricao_fim": "MISMATCH",
     "link_pagina": "UNKNOWN",
     "link_edital": "MATCH",
     "link_inscricao": "UNKNOWN"
@@ -2208,14 +2433,17 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 47. Elo Assessoria e Serviços (`elo_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 7
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 7
 - Método: official_html_observer
 - URLs de evidência: https://eloassessoriaeservicos.com.br/concursos, https://novo.eloassessoriaeservicos.com.br//concurso/137, https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "taxa": 120.0,
+    "edital_numero": "21",
     "link_edital": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
     "link_inscricao": "https://elo.candidato.gestaoselecoes.com.br"
   },
@@ -2245,7 +2473,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -2255,9 +2483,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
+    "taxa": "MATCH",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MISMATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2284,13 +2512,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 49. Legalle Concursos (`legalle_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 4; processados: 4
+- Observed: 4; relevant: UNKNOWN; active valid: UNKNOWN; processed: 4
 - Método: official_html_observer
 - URLs de evidência: https://portal.editais.legalleconcursos.com.br/edital, https://portal.editais.legalleconcursos.com.br/edital/ver/2557, https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
     "link_edital": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
     "link_inscricao": "https://candidato.editais.legalleconcursos.com.br/inscricao/f7470ee07f5f3591f24e5f87a9e3695e"
   },
@@ -2320,7 +2549,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -2358,9 +2587,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 50. RBO Concursos e Assessoria (`rbo_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 2; processados: 2
-- Método: official_html_observer
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 2; relevant: 2; active valid: 2; processed: 2
+- Método: official_html_observer+targeted_live_listing_and_detail_review
 - URLs de evidência: https://rboconcursos.selecao.net.br/index/abertos/, https://rboconcursos.selecao.net.br/informacoes/203/, https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf
 
 ```json
@@ -2368,8 +2597,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público - 02/2026 - Prefeitura da Estância Turística de Jahu- SP",
     "modalidade": "Concurso Público",
+    "status": "em andamento",
     "cidade": "Jahu",
     "uf": "SP",
+    "vagas": 1,
+    "edital_numero": "02/2026",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf",
     "link_inscricao": "https://rboconcursos.selecao.net.br/login/sair/?redir=%2Ftermo%2F203%2F"
   },
@@ -2404,14 +2636,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "status": "MISMATCH",
+    "vagas": "MISMATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MISMATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2440,13 +2672,18 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 53. Instituto Nosso Rumo (`nossorumo_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 2
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://www.nossorumo.org.br, https://nossorumo.org.br/#emandamento
 
 ```json
 {
   "expected": {
+    "modalidade": "Concurso Público",
+    "status": "em andamento",
+    "cidade": "Mairiporã",
+    "uf": "SP",
+    "vagas": 258,
     "link_inscricao": "https://nossorumo.org.br/Inscricao/ValidarCpf"
   },
   "actual": {
@@ -2467,7 +2704,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-06T00:00:00+00:00",
-    "inscricao_fim": "2026-09-03T00:00:00+00:00",
+    "inscricao_fim": "2026-09-03T23:59:00+00:00",
     "link_pagina": "https://nossorumo.org.br/#emandamento",
     "link_edital": "https://nossorumo.org.br/Arquivos/Projetos/599-3731-639211150807491021.pdf",
     "link_inscricao": "https://nossorumo.org.br/Inscricao/ValidarCpf/NTk5"
@@ -2475,13 +2712,13 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
-    "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
+    "status": "MISMATCH",
+    "vagas": "MISMATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
@@ -2511,8 +2748,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 54. Avança SP Concursos (`avancasp_open`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 6; processados: 6
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 6; relevant: UNKNOWN; active valid: UNKNOWN; processed: 6
 - Método: official_html_observer
 - URLs de evidência: https://avancasp.selecao.net.br/index/abertos/, https://avancasp.selecao.net.br/informacoes/251/, https://anexos-r2.selecao.net.br/uploads/301/concursos/251/anexos/efe61c61-d019-4e6e-aa15-91530d3c07cc.pdf
 
@@ -2521,6 +2758,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público - 01/2026 - CONSELHO REGIONAL DE CORRETORES DE IMÓVEIS DO ESTADO DE SÃO PAULO - CRECI/SP",
     "modalidade": "Concurso Público",
+    "status": "em andamento",
+    "cidade": "Americana",
+    "uf": "SP",
+    "taxa": 4651.51,
+    "prova_data": "2026-11-29T00:00:00+00:00",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/301/concursos/251/anexos/efe61c61-d019-4e6e-aa15-91530d3c07cc.pdf",
     "link_inscricao": "https://avancasp.selecao.net.br/login/sair/?redir=%2Ftermo%2F251%2F"
   },
@@ -2553,15 +2795,15 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
-    "taxa": "UNKNOWN",
-    "prova_data": "UNKNOWN",
+    "taxa": "MISMATCH",
+    "prova_data": "MISMATCH",
     "edital_numero": "UNKNOWN",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
@@ -2593,7 +2835,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 55. Instituto Mais de Gestão e Concursos (`institutomais_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 17; processados: 17
+- Observed: 17; relevant: UNKNOWN; active valid: UNKNOWN; processed: 17
 - Método: official_html_observer
 - URLs de evidência: https://www.institutomais.org.br/Concursos/ConcursosAbertos, https://www.institutomais.org.br/Concursos/Detalhe/10645
 
@@ -2601,7 +2843,9 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "São Sebastião PREV - Concurso Público – Edital Nº 01/2026",
-    "modalidade": "Concurso Público"
+    "modalidade": "Concurso Público",
+    "status": "inscrições abertas",
+    "edital_numero": "01/2026"
   },
   "actual": {
     "titulo": "São Sebastião PREV - Concurso Público – Edital Nº 01/2026",
@@ -2634,14 +2878,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2664,7 +2908,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 62. Instituto Legatus (`legatus_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 11
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 9
 - Método: official_html_observer
 - URLs de evidência: https://www.legatus.org.br, https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/, https://www.legatus.org.br/concursos/3221/download/
 
@@ -2672,6 +2916,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 {
   "expected": {
     "titulo": "Concurso e Seleções",
+    "modalidade": "Concurso Público",
+    "cidade": "Tanque Do Piauí",
+    "uf": "PI",
+    "vagas": 50,
+    "edital_numero": "01/2026",
     "link_edital": "https://www.legatus.org.br/concursos/3221/download/",
     "link_inscricao": "https://www.legatus.org.br/candidatos/login/"
   },
@@ -2692,8 +2941,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "prova_data": null,
     "edital_numero": "01/2026",
     "edital_data": null,
-    "inscricao_inicio": "2026-08-03T00:00:00+00:00",
-    "inscricao_fim": "2026-08-03T00:00:00+00:00",
+    "inscricao_inicio": "2026-06-25T00:00:00+00:00",
+    "inscricao_fim": "2026-08-03T23:59:00+00:00",
     "link_pagina": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
     "link_edital": "https://www.legatus.org.br/concursos/3221/download/",
     "link_inscricao": "https://www.legatus.org.br/candidatos/login/"
@@ -2701,19 +2950,19 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "MATCH",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
-    "cidade": "UNKNOWN",
-    "uf": "UNKNOWN",
+    "cidade": "MATCH",
+    "uf": "MATCH",
     "status": "UNKNOWN",
-    "vagas": "UNKNOWN",
+    "vagas": "MATCH",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2754,13 +3003,15 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 63. Fundação FEPESE (`fepese_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 13
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 13
 - Método: official_html_observer
 - URLs de evidência: https://fepese.org.br/concursos/, https://2026pseducasj.fepese.org.br
 
 ```json
 {
   "expected": {
+    "modalidade": "Processo Seletivo",
+    "edital_numero": "24",
     "link_inscricao": "https://2026pseducasj.fepese.org.br/inscricao/#!/edital/39693d61db1f8c777c9c7e4b7cc49bbc"
   },
   "actual": {
@@ -2781,7 +3032,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": null,
     "edital_data": null,
     "inscricao_inicio": "2026-08-24T00:00:00+00:00",
-    "inscricao_fim": "2026-09-23T00:00:00+00:00",
+    "inscricao_fim": "2026-09-23T23:59:00+00:00",
     "link_pagina": "https://2026pseducasj.fepese.org.br",
     "link_edital": "https://2026pseducasj.fepese.org.br?go=download&arquivo=2026_005_PS_Sao_Jose_Educa.pdf&inline=1",
     "link_inscricao": null
@@ -2789,7 +3040,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
@@ -2801,7 +3052,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MISMATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2826,7 +3077,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 64. FUNCERN Concursos e Seleções (`funcern_selection`)
 - Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 2; processados: 2
+- Observed: 2; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://funcern.br/concursos/, https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/, https://funcern.br/documents/2722/Edital_LagoadePedrasRN_retifica%C3%A7%C3%A3o_1_e_2.pdf
 
@@ -2835,8 +3086,10 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público Lagoa de Pedras/RN",
     "modalidade": "Concurso Público",
+    "status": "inscrições abertas",
     "cidade": "Lagoa De Pedras",
     "uf": "RN",
+    "edital_numero": "01/2026",
     "link_edital": "https://funcern.br/documents/2722/Edital_LagoadePedrasRN_retifica%C3%A7%C3%A3o_1_e_2.pdf",
     "link_inscricao": "https://inscricoes.funcern.org/e/concurso-lagoa-de-pedras-2026/"
   },
@@ -2858,7 +3111,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": "01/2026",
     "edital_data": null,
     "inscricao_inicio": "2026-08-03T00:00:00+00:00",
-    "inscricao_fim": "2026-08-31T00:00:00+00:00",
+    "inscricao_fim": "2026-08-31T23:59:00+00:00",
     "link_pagina": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
     "link_edital": "https://funcern.br/documents/2722/Edital_LagoadePedrasRN_retifica%C3%A7%C3%A3o_1_e_2.pdf",
     "link_inscricao": "https://inscricoes.funcern.org/e/concurso-lagoa-de-pedras-2026/"
@@ -2871,14 +3124,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -2921,14 +3174,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 68. Fundação Uniselva - Processos Seletivos (`uniselva_selection`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 2
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 2
 - Método: official_html_observer
 - URLs de evidência: https://inscricao.fundacaouniselva.org.br/selecoes, https://inscricao.fundacaouniselva.org.br/selecoes/1363
 
 ```json
 {
   "expected": {
-    "link_inscricao": "https://inscricao.fundacaouniselva.org.br/cdn-cgi/content?id=Wa8UJGi01x_XeTEqj1dsFrpCBO9ZRR6ccfOAP0.GklM-1788096268.0631468-1.2.1.1-X0.np4crey8u5REhj3XVldb9HbNUUnJ4my_OxeOJU5mmj1LoQh.Wa7DX2uAai6D4"
+    "link_inscricao": "https://inscricao.fundacaouniselva.org.br/cdn-cgi/content?id=g3No6cbhIkygk5LS1yEIAZHlGMGiS.lwn46aopVS_BA-1788109090.1374354-1.2.1.1-LGQ4v47EYze173O5OOZsPQ.A4Cuem.40cQA2KdYWUSaCy7rmInTBwlL88XhPLbv_"
   },
   "actual": {
     "titulo": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
@@ -2993,8 +3246,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 69. Fundação de Apoio à FAFIPA (`fafipa_open`)
-- Crawler: `success`; verificação: `VERIFIED`
-- Visíveis independentemente: 9; processados: 9
+- Crawler: `success`; verificação: `BROKEN`
+- Observed: 9; relevant: UNKNOWN; active valid: UNKNOWN; processed: 9
 - Método: official_html_observer
 - URLs de evidência: https://concursos.fundacaofafipa.org.br/, https://concursos.fundacaofafipa.org.br/informacoes/4207/, https://anexos-r2.selecao.net.br/uploads/281/concursos/4207/anexos/bffabe06-9ef0-44cd-8986-95abfc804cf5.pdf
 
@@ -3003,8 +3256,11 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público do Município de Calmon - SC",
     "modalidade": "Concurso Público",
+    "status": "em andamento",
     "cidade": "Calmon",
     "uf": "SC",
+    "edital_numero": "02/2026",
+    "prova_data": "2026-10-11T00:00:00+00:00",
     "link_edital": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4207/anexos/bffabe06-9ef0-44cd-8986-95abfc804cf5.pdf",
     "link_inscricao": "https://concursos.fundacaofafipa.org.br/login/sair/?redir=%2Ftermo%2F4207%2F"
   },
@@ -3039,14 +3295,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "MATCH",
     "uf": "MATCH",
-    "status": "UNKNOWN",
+    "status": "MISMATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
-    "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "prova_data": "MISMATCH",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -3077,7 +3333,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 70. Instituto IESES (`ieses_open`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 3
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 3
 - Método: official_html_observer
 - URLs de evidência: https://ieses.org/projetos, https://scgas2026.ieses.org/, https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf
 
@@ -3086,6 +3342,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "Concurso Público - Edital 001/2026",
     "modalidade": "Concurso Público",
+    "status": "inscrições abertas",
+    "edital_numero": "001/2026",
     "link_edital": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf"
   },
   "actual": {
@@ -3119,14 +3377,14 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -3156,8 +3414,8 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 ```
 
 ### 71. FUNPEC - Processos Seletivos (`funpec_selection`)
-- Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: 10; processados: 10
+- Crawler: `success`; verificação: `VERIFIED`
+- Observed: 10; relevant: UNKNOWN; active valid: UNKNOWN; processed: 10
 - Método: official_html_observer
 - URLs de evidência: https://funpec.br/processos-seletivos/, https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/, https://funpec.br/wp-content/uploads/2026/08/2.-EDITAL-13.2026-VF-2.pdf
 
@@ -3166,6 +3424,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "expected": {
     "titulo": "PROCESSO SELETIVO 12/2026 – CUIDADOR EM SAÚDE – NEI (CADASTRO DE RESERVA)",
     "modalidade": "Processo Seletivo",
+    "edital_numero": "13/2026",
     "link_pagina": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
     "link_edital": "https://funpec.br/wp-content/uploads/2026/08/2.-EDITAL-13.2026-VF-2.pdf"
   },
@@ -3207,7 +3466,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",
@@ -3234,13 +3493,16 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
 
 ### 74. FATEC - Fundação de Apoio (`fatec_selection`)
 - Crawler: `success`; verificação: `NOT_AUDITED`
-- Visíveis independentemente: UNKNOWN; processados: 3
+- Observed: UNKNOWN; relevant: UNKNOWN; active valid: UNKNOWN; processed: 3
 - Método: official_html_observer
 - URLs de evidência: https://www.fatecsm.org.br/processos-seletivos/, https://www.fatecsm.org.br/processos-seletivos/#processo-2026-3010088-01
 
 ```json
 {
   "expected": {
+    "modalidade": "Processo Seletivo",
+    "status": "em andamento",
+    "edital_numero": "2020",
     "link_pagina": "https://www.fatecsm.org.br/processos-seletivos/"
   },
   "actual": {
@@ -3261,7 +3523,7 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
     "edital_numero": "2026/3010088-01",
     "edital_data": null,
     "inscricao_inicio": "2026-07-10T00:00:00+00:00",
-    "inscricao_fim": "2026-07-24T00:00:00+00:00",
+    "inscricao_fim": "2026-07-24T23:59:00+00:00",
     "link_pagina": "https://www.fatecsm.org.br/processos-seletivos/#processo-2026-3010088-01",
     "link_edital": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
     "link_inscricao": null
@@ -3269,19 +3531,19 @@ A auditoria compara `expected` observado no site/PDF oficial com `actual` retorn
   "field_audit": {
     "titulo": "UNKNOWN",
     "orgao": "UNKNOWN",
-    "modalidade": "UNKNOWN",
+    "modalidade": "MATCH",
     "cargo": "UNKNOWN",
     "area": "UNKNOWN",
     "cidade": "UNKNOWN",
     "uf": "UNKNOWN",
-    "status": "UNKNOWN",
+    "status": "MATCH",
     "vagas": "UNKNOWN",
     "salario_min": "UNKNOWN",
     "salario_max": "UNKNOWN",
     "escolaridade": "UNKNOWN",
     "taxa": "UNKNOWN",
     "prova_data": "UNKNOWN",
-    "edital_numero": "UNKNOWN",
+    "edital_numero": "MISMATCH",
     "edital_data": "UNKNOWN",
     "inscricao_inicio": "UNKNOWN",
     "inscricao_fim": "UNKNOWN",

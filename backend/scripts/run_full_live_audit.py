@@ -34,13 +34,13 @@ from app.audit_metrics import (  # noqa: E402
     coverage_explanation,
     enrich_source,
     has_explicit_empty_evidence,
+    has_explicit_zero_active_evidence,
     metric_coherence_issues,
     source_metrics,
 )
 from app.connectors.common import (  # noqa: E402
     HEADERS,
     clean,
-    extract_city_uf,
     first_date,
     parse_date_interval,
     parse_money,
@@ -97,9 +97,38 @@ def _official_text(soup: BeautifulSoup) -> str:
     # Remove global chrome before independent extraction. This is deliberately
     # separate from connector parsing so the audit does not reuse crawler data.
     clean_soup = BeautifulSoup(str(soup), 'lxml')
-    for tag in clean_soup(['script', 'style', 'noscript', 'svg', 'nav', 'footer', 'header', 'aside']):
+    for tag in clean_soup(['head', 'script', 'style', 'noscript', 'svg', 'nav', 'footer', 'header', 'aside']):
         tag.decompose()
-    return '\n'.join(line for line in (clean(x) for x in clean_soup.get_text('\n', strip=True)) if line)
+    text = clean_soup.get_text('\n', strip=True)
+    return '\n'.join(line for line in (clean(x) for x in text.splitlines()) if line)
+
+
+def _decode_official_response(response: httpx.Response) -> str:
+    """Decode legacy portals without feeding mojibake to the observer."""
+    raw = response.content
+    candidates: list[str] = []
+    for encoding in ('utf-8', response.encoding, 'cp1252', 'latin-1'):
+        if not encoding:
+            continue
+        try:
+            decoded = raw.decode(encoding)
+        except (LookupError, UnicodeDecodeError):
+            continue
+        if decoded not in candidates:
+            candidates.append(decoded)
+
+    if not candidates:
+        return response.text
+
+    def penalty(value: str) -> int:
+        return (
+            value.count('\ufffd') * 100
+            + value.count('Ã') * 8
+            + value.count('Â') * 5
+            + value.count('�') * 100
+        )
+
+    return min(candidates, key=penalty)
 
 
 def _official_publications(soup: BeautifulSoup, page_url: str) -> list[dict[str, Any]]:
@@ -149,6 +178,7 @@ def _first_heading(soup: BeautifulSoup) -> str | None:
     identity_terms = (
         'concurso', 'processo seletivo', 'edital', 'prefeitura', 'câmara', 'camara',
         'tribunal', 'universidade', 'secretaria', 'órgão', 'orgao', 'autarquia',
+        'polícia', 'policia', 'defensoria', 'ministério', 'ministerio', 'conselho',
     )
     for heading in soup.select('h1, h2'):
         value = clean(heading.get_text(' ', strip=True)) or ''
@@ -162,15 +192,75 @@ def _first_heading(soup: BeautifulSoup) -> str | None:
     # navigation titles are not independent contest values and must stay UNKNOWN.
     title = soup.select_one('title')
     value = clean(title.get_text(' ', strip=True)) or '' if title else ''
+    # Portal brands in the HTML title are chrome, not part of the contest
+    # identity stored by the connector (e.g. "FCC - Polícia Militar...").
+    value = re.sub(r'^[A-ZÀ-Ý]{2,12}\s*[-|]\s*', '', value)
     lowered = value.casefold()
     if value and len(value) >= 8 and any(term in lowered for term in (
         'concurso', 'processo seletivo', 'edital', 'prefeitura', 'câmara', 'camara',
-        'tribunal', 'universidade', 'secretaria',
+        'tribunal', 'universidade', 'secretaria', 'polícia', 'policia',
+        'defensoria', 'ministério', 'ministerio', 'conselho',
     )) and not any(term in lowered for term in (
         'aviso de privacidade', 'aviso de cookies', 'copyright', 'versão', 'versao', 'version',
         'login', *generic_headings,
     )):
         return value
+    return None
+
+
+def _extract_official_city_uf(text: str) -> tuple[str | None, str | None]:
+    """Extract a place only from an explicit official location construction.
+
+    The shared crawler helper intentionally supports broad title formats.  An
+    audit observer must be stricter: a random ``Word - UF`` fragment in prose
+    (for example ``Professor A - PA`` or ``CREF - SE``) is not independent
+    evidence that the contest is located there.
+    """
+    patterns = (
+        r'\bVagas?\s+para\s*:\s*([^,;\n]{2,80}?)\s*/\s*([A-Z]{2})\b',
+        r'\b(?:PREFEITURA|C[ÂA]MARA|MUNIC[IÍ]PIO)\s+'
+        r'(?:MUNICIPAL\s+)?(?:DE|DA|DO)?\s*'
+        r'([A-Za-zÀ-ÿ][A-Za-zÀ-ÿ .\-]{1,78}?)\s*[-/]\s*([A-Z]{2})\b',
+    )
+    for pattern in patterns:
+        match = re.search(pattern, text, flags=re.IGNORECASE)
+        if not match:
+            continue
+        uf = match.group(2).upper()
+        if uf not in {
+            'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT',
+            'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO',
+            'RR', 'SC', 'SP', 'SE', 'TO',
+        }:
+            continue
+        city = clean(match.group(1).title())
+        if city:
+            city = re.sub(r'^(?:municipal\s+)?(?:de|da|do)\s+', '', city, flags=re.I).strip()
+            return city, uf
+    return None, None
+
+
+def _extract_official_orgao(text: str, title: str | None) -> str | None:
+    """Extract organization identity from labels or a clearly structured title."""
+    label = re.search(
+        r'\b(?:órgão|orgao|instituição|instituicao|entidade|contratante)\s*'
+        r'[:\-]\s*([^\n.;]{3,140})',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if label:
+        return clean(label.group(1))
+
+    # A title that is itself an organization name is useful for police and
+    # public bodies, but only when it is the complete heading—not a sentence
+    # beginning with the organization and continuing into a press release.
+    if title and re.match(
+        r'^(?:PREFEITURA|C[ÂA]MARA|SECRETARIA|MINIST[ÉE]RIO|TRIBUNAL|CONSELHO|'
+        r'UNIVERSIDADE|AUTARQUIA|POL[ÍI]CIA|DEFENSORIA)\b',
+        title,
+        flags=re.IGNORECASE,
+    ):
+        return title
     return None
 
 
@@ -181,13 +271,9 @@ def _extract_official_expected(soup: BeautifulSoup, page_url: str) -> tuple[dict
     if title:
         expected['titulo'] = title
 
-    orgao_match = re.search(
-        r'\b((?:PREFEITURA|C[ÂA]MARA|SECRETARIA|MINIST[ÉE]RIO|TRIBUNAL|CONSELHO|UNIVERSIDADE|FUNDAÇÃO|FUNDACAO|AUTARQUIA|EMPRESA)[^\n.;]{3,140})',
-        text,
-        flags=re.IGNORECASE,
-    )
-    if orgao_match:
-        expected['orgao'] = clean(orgao_match.group(1))
+    orgao = _extract_official_orgao(text, title)
+    if orgao:
+        expected['orgao'] = orgao
 
     haystack = f'{title or ""}\n{text[:8000]}'.casefold()
     if 'concurso público' in haystack or 'concurso publico' in haystack:
@@ -201,7 +287,7 @@ def _extract_official_expected(soup: BeautifulSoup, page_url: str) -> tuple[dict
     if status_match:
         expected['status'] = clean(status_match.group(1))
 
-    cidade, uf = extract_city_uf(f'{title or ""}\n{text[:8000]}')
+    cidade, uf = _extract_official_city_uf(f'{title or ""}\n{text[:8000]}')
     if cidade:
         cidade = re.sub(
             r'^(?:concurso|processo\s+seletivo|sele[cç][aã]o)(?:\s+p[úu]blic[oa])?\s+',
@@ -230,7 +316,7 @@ def _extract_official_expected(soup: BeautifulSoup, page_url: str) -> tuple[dict
         expected['vagas'] = max(vacancy_values)
 
     money_by_context: dict[str, list[Decimal]] = {'salary': [], 'tax': []}
-    for match in re.finditer(r'R\$\s*[\d.]+(?:,\d{2})?', text, re.I):
+    for match in re.finditer(r'R\$\s*[\d.]+(?:,\s*\d{2})?', text, re.I):
         value = parse_money(match.group(0))
         if value is None:
             continue
@@ -246,7 +332,7 @@ def _extract_official_expected(soup: BeautifulSoup, page_url: str) -> tuple[dict
         expected['taxa'] = float(money_by_context['tax'][0])
 
     registration = re.search(
-        r'inscri(?:ç|c)[õo]es?[^\n]{0,180}?\b\d{1,2}/\d{1,2}/\d{2,4}\b[^\n]{0,80}?\b\d{1,2}/\d{1,2}/\d{2,4}\b',
+        r'inscri[cç](?:[aã]o|[õo]es?)[^\n]{0,180}?\b\d{1,2}/\d{1,2}/\d{2,4}\b[^\n]{0,80}?\b\d{1,2}/\d{1,2}/\d{2,4}\b',
         text,
         flags=re.IGNORECASE,
     )
@@ -378,7 +464,7 @@ def collect_independent_evidence(defn, item: dict[str, Any] | None) -> dict[str,
         with httpx.Client(timeout=30.0, follow_redirects=True, headers=HEADERS, verify=False) as client:
             list_response = client.get(list_url)
             list_response.raise_for_status()
-            list_soup = BeautifulSoup(list_response.text, 'lxml')
+            list_soup = BeautifulSoup(_decode_official_response(list_response), 'lxml')
             list_links: set[str] = set()
             list_anchors = list_soup.select('a[href]')
             if defn.source_type == 'ibade_open':
@@ -602,7 +688,7 @@ def collect_independent_evidence(defn, item: dict[str, Any] | None) -> dict[str,
             detail_response = client.get(detail_url)
             detail_response.raise_for_status()
             detail_page_url = str(detail_response.url)
-            detail_soup = BeautifulSoup(detail_response.text, 'lxml')
+            detail_soup = BeautifulSoup(_decode_official_response(detail_response), 'lxml')
             expected, pub_obs = _extract_official_expected(detail_soup, detail_page_url)
             evidence['expected'] = expected
             evidence['publication_observation'] = pub_obs
@@ -617,10 +703,17 @@ def collect_independent_evidence(defn, item: dict[str, Any] | None) -> dict[str,
 
 def _merge_evidence(static: dict[str, Any], dynamic: dict[str, Any]) -> dict[str, Any]:
     merged = dict(dynamic)
-    merged['expected'] = {**dynamic.get('expected', {}), **static.get('expected', {})}
+    # Stored observations are a fallback; a current observation of the same
+    # official page must win so changed registration windows do not become
+    # false mismatches against stale evidence.
+    merged['expected'] = {**static.get('expected', {}), **dynamic.get('expected', {})}
     merged['known_null_fields'] = sorted(set(dynamic.get('known_null_fields', [])) | set(static.get('known_null_fields', [])))
     merged['evidence_urls'] = list(dict.fromkeys([*dynamic.get('evidence_urls', []), *static.get('evidence_urls', [])]))
-    merged['publication_observation'] = static.get('publication_observation') or dynamic.get('publication_observation', {})
+    dynamic_publications = dynamic.get('publication_observation') or {}
+    static_publications = static.get('publication_observation') or {}
+    merged['publication_observation'] = (
+        dynamic_publications if dynamic_publications.get('observed') else static_publications
+    )
     if static.get('visible_valid_items') is not None:
         merged['visible_valid_items'] = static['visible_valid_items']
     for field in METRIC_FIELDS:
@@ -715,7 +808,9 @@ def _verification_status(entry: dict[str, Any], evidence: dict[str, Any], field_
         active = entry.get('visible_active_valid_items')
         if isinstance(active, int) and not isinstance(active, bool) and active > 0:
             return 'PARTIAL'
-        return 'EMPTY_VERIFIED' if has_explicit_empty_evidence(entry.get('empty_evidence')) else 'NOT_AUDITED'
+        if has_explicit_empty_evidence(entry.get('empty_evidence')):
+            return 'EMPTY_VERIFIED'
+        return 'EMPTY_VERIFIED' if has_explicit_zero_active_evidence(evidence.get('metric_evidence'), active) else 'NOT_AUDITED'
     if crawler_status != 'success':
         return 'NOT_AUDITED'
     if not evidence.get('independent') or not evidence.get('expected'):
@@ -890,9 +985,9 @@ def audit_single_source(index: int, defn, static_evidence: dict[str, dict[str, A
             res_entry, evidence, res_entry.get('field_audit'), res_entry.get('publication_audit'),
         )
         if res_entry['verification_status'] == 'NOT_AUDITED':
-            res_entry.setdefault('audit_notes', []).append(
-                _not_audited_reason(res_entry, evidence, res_entry.get('field_audit')),
-            )
+            reason = _not_audited_reason(res_entry, evidence, res_entry.get('field_audit'))
+            res_entry['verification_reason'] = reason.removeprefix('NOT_AUDITED_REASON: ').strip()
+            res_entry.setdefault('audit_notes', []).append(reason)
     except Exception as exc:
         res_entry['crawler_status'] = 'failed'
         res_entry['status'] = 'failed'

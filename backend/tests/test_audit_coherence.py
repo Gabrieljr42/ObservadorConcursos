@@ -40,6 +40,63 @@ def test_unconfirmed_empty_yields_degraded():
     assert res.run_data.diagnostics_payload.get('empty_evidence') is None
 
 
+def test_rejection_reason_codes_keep_quality_gate_candidate_trace():
+    class DummyRejectedConnector(BaseConnector):
+        banca = 'Dummy'
+
+        def _fetch_candidates(self) -> list[CandidateItem]:
+            return [CandidateItem(title_hint='Concurso de teste', detail_url='https://dummy.example.com/1')]
+
+        def _fetch_html(self, url: str, *, reason: str | None = None) -> str:
+            return '<html></html>'
+
+        def _parse_detail(self, candidate, html: str, *, client):
+            return None
+
+    result = DummyRejectedConnector('https://dummy.example.com').crawl_with_diagnostics()
+
+    assert result.run_data.candidates_rejected == 1
+    assert result.run_data.diagnostics_payload['rejection_counts']['quality_gate'] == 1
+    assert result.run_data.diagnostics_payload['rejections'][0]['reason'] == 'quality_gate'
+
+
+def test_blocked_discovery_is_not_relabelled_as_ambiguous_empty():
+    class DummyBlockedConnector(BaseConnector):
+        banca = 'Dummy'
+
+        def _fetch_candidates(self) -> list[CandidateItem]:
+            self.run_data.status = 'blocked'
+            self.run_data.error_type = 'CloudflareChallenge'
+            self.run_data.error_message = 'challenge'
+            return []
+
+    result = DummyBlockedConnector('https://dummy.example.com').crawl_with_diagnostics()
+
+    assert result.run_data.status == 'blocked'
+    assert result.run_data.error_type == 'CloudflareChallenge'
+    assert result.run_data.error_message == 'challenge'
+
+
+def test_explicitly_closed_detail_keeps_closed_rejection_reason():
+    class DummyClosedConnector(BaseConnector):
+        banca = 'Dummy'
+
+        def _fetch_candidates(self) -> list[CandidateItem]:
+            return [CandidateItem(title_hint='Concurso encerrado', detail_url='https://dummy.example.com/1')]
+
+        def _fetch_html(self, url: str, *, reason: str | None = None) -> str:
+            return '<html></html>'
+
+        def _parse_detail(self, candidate, html: str, *, client):
+            self.mark_empty_evidence('evaluated_closed', 'registration window ended', candidate.detail_url)
+            return None
+
+    result = DummyClosedConnector('https://dummy.example.com').crawl_with_diagnostics()
+
+    assert result.run_data.diagnostics_payload['rejection_counts']['evaluated_closed'] == 1
+    assert result.run_data.diagnostics_payload['rejections'][0]['reason'] == 'evaluated_closed'
+
+
 def test_explicit_text_yields_empty_valid():
     """A connector with explicit empty evidence MUST yield empty_valid."""
     class DummyEmptyConnector(BaseConnector):
@@ -171,6 +228,26 @@ def test_generic_official_heading_is_not_used_as_expected_title():
     assert 'titulo' not in expected
 
 
+def test_official_text_observer_preserves_words_and_line_boundaries():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _official_text
+
+    observed = _official_text(
+        BeautifulSoup('<main><p>Concurso Público</p><p>Inscrições: 03/08/2026 a 04/09/2026.</p></main>', 'lxml')
+    )
+
+    assert observed == 'Concurso Público\nInscrições: 03/08/2026 a 04/09/2026.'
+
+
+def test_official_observer_decodes_legacy_portal_text():
+    import httpx
+    from scripts.run_full_live_audit import _decode_official_response
+
+    response = httpx.Response(200, content='Polícia Militar'.encode('cp1252'))
+
+    assert _decode_official_response(response) == 'Polícia Militar'
+
+
 def test_singular_generic_official_heading_is_not_used_as_expected_title():
     from bs4 import BeautifulSoup
     from scripts.run_full_live_audit import _extract_official_expected
@@ -181,6 +258,78 @@ def test_singular_generic_official_heading_is_not_used_as_expected_title():
     )
 
     assert 'titulo' not in expected
+
+
+def test_official_title_fallback_recognizes_police_contest_after_portal_brand():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup(
+            '<html><head><title>FCC - Polícia Militar do Piauí - PM/PI</title></head>'
+            '<body><p>Concurso Público. Período de inscrição: 03/08/2026 a 04/09/2026.</p></body></html>',
+            'lxml',
+        ),
+        'https://example.org/concursos/pompi126/index.html',
+    )
+
+    assert expected['titulo'] == 'Polícia Militar do Piauí - PM/PI'
+    assert expected['inscricao_inicio'] is not None
+    assert expected['inscricao_fim'] is not None
+
+
+def test_official_observer_rejects_brand_only_heading_and_generic_city_fragment():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup(
+            '<html><head><title>FUMARC</title></head><body>'
+            '<h1>Fundação Mariana Resende Costa</h1>'
+            '<p>Professor A - PA</p>'
+            '</body></html>',
+            'lxml',
+        ),
+        'https://example.org/concursos/1',
+    )
+
+    assert 'titulo' not in expected
+    assert 'cidade' not in expected
+    assert 'uf' not in expected
+
+
+def test_official_observer_uses_explicit_municipality_location():
+    from bs4 import BeautifulSoup
+    from scripts.run_full_live_audit import _extract_official_expected
+
+    expected, _ = _extract_official_expected(
+        BeautifulSoup(
+            '<html><body><h1>Concurso Prefeitura de Carbonita - MG</h1>'
+            '<p>Vagas para: Carbonita / MG</p></body></html>',
+            'lxml',
+        ),
+        'https://example.org/concursos/1',
+    )
+
+    assert expected['cidade'] == 'Carbonita'
+    assert expected['uf'] == 'MG'
+
+
+def test_empty_valid_with_independent_zero_active_is_empty_verified():
+    from scripts.run_full_live_audit import _verification_status
+
+    entry = {
+        'crawler_status': 'empty_valid',
+        'visible_active_valid_items': 0,
+        'empty_evidence': None,
+    }
+    evidence = {
+        'metric_evidence': {
+            'active_basis': 'official registration tab explicitly empty',
+        },
+    }
+
+    assert _verification_status(entry, evidence, None, None) == 'EMPTY_VERIFIED'
 
 
 def test_empty_official_heading_does_not_crash_observer():

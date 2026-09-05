@@ -532,7 +532,23 @@ class GenericDedicatedBancaConnector(BaseConnector):
         return None, None
 
     def _extract_taxa(self, text: str):
-        m = re.search(r'(?:taxa|inscrição|inscricao).{0,60}(R\$\s*\d{1,3}(?:\.\d{3})*,\d{2})', text, flags=re.IGNORECASE | re.DOTALL)
+        # Fees are often displayed as one value per education level.  The
+        # model stores the minimum fee, matching the table-field extractor and
+        # avoiding the accidental promotion of the last/highest tier.
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        values: list[Decimal] = []
+        for index, line in enumerate(lines):
+            if not re.search(r'\btaxa\b|valor\s+da\s+inscri', line, re.IGNORECASE):
+                continue
+            window = ' '.join(lines[index:index + 4])
+            for match in re.finditer(r'R\$\s*[\d.]+(?:,\s*\d{2})?', window, re.IGNORECASE):
+                parsed = parse_money(match.group(0))
+                if parsed is not None:
+                    values.append(parsed)
+        if values:
+            return min(values)
+
+        m = re.search(r'(?:taxa|inscrição|inscricao).{0,80}(R\$\s*[\d.]+(?:,\s*\d{2})?)', text, flags=re.IGNORECASE | re.DOTALL)
         if m:
             return parse_money(m.group(1))
         return None
@@ -540,10 +556,28 @@ class GenericDedicatedBancaConnector(BaseConnector):
 
 class FCCConnector(GenericDedicatedBancaConnector):
     banca = 'FCC'
+    # The official current listing contains 37 relevant detail links. The
+    # generic national limit of 30 silently dropped the tail of that listing,
+    # including any active item that happened to appear after position 30.
+    max_candidates = 60
     detail_patterns = (r'/concursos/[^/]+/index\.html', r'/concursos/\w+', r'id=\d+')
 
     def __init__(self, base_url: str = 'https://www.concursosfcc.com.br', list_url: str | None = None):
         super().__init__(base_url=base_url, list_url=list_url or 'https://www.concursosfcc.com.br/concursoAndamento.html')
+
+    def _fetch_candidates(self) -> list[CandidateItem]:
+        candidates = super()._fetch_candidates()
+        in_scope: list[CandidateItem] = []
+        for candidate in candidates:
+            # FCC publishes the PLANEJAR CFP certification exams alongside
+            # public personnel contests. They are explicitly outside the
+            # product scope and must not consume detail-processing capacity.
+            if re.search(r'/concursos/plane\d+/index\.html$', candidate.detail_url, re.IGNORECASE):
+                self.run_data.candidates_rejected += 1
+                self._record_rejection(candidate.detail_url, 'non_personnel')
+                continue
+            in_scope.append(candidate)
+        return in_scope
 
     def _extract_title(self, lines: list[str], hint: str | None) -> str:
         if hint and len(hint) >= 6 and not any(bad in hint.lower() for bad in ['diversos cargos', 'ver edital', 'saiba mais']):

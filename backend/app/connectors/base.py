@@ -276,6 +276,22 @@ class BaseConnector:
             })
         return result['valid']
 
+    def _record_rejection(self, url: str, reason: str, **details: Any) -> None:
+        """Keep an auditable reason for every discovered candidate we discard."""
+        diagnostics = self.run_data.diagnostics_payload
+        counts = diagnostics.setdefault('rejection_counts', {})
+        counts[reason] = int(counts.get(reason, 0)) + 1
+        rejection = {'url': url, 'reason': reason}
+        if details:
+            rejection.update(details)
+        diagnostics.setdefault('rejections', []).append(rejection)
+
+    def _has_rejection_for(self, url: str) -> bool:
+        return any(
+            isinstance(rejection, dict) and rejection.get('url') == url
+            for rejection in self.run_data.diagnostics_payload.get('rejections', [])
+        )
+
     def _is_valid_certame(
         self,
         title: str | None,
@@ -334,15 +350,50 @@ class BaseConnector:
                             items.append(parsed)
                         else:
                             self.run_data.candidates_rejected += 1
+                            if not self._has_rejection_for(candidate.detail_url):
+                                sanity_rejections = self.run_data.diagnostics_payload.get('sanity_rejections') or []
+                                latest = sanity_rejections[-1] if sanity_rejections else {}
+                                errors = latest.get('errors') if isinstance(latest, dict) else None
+                                # A detail can be a real, evaluated contest
+                                # that is outside an ``open`` feed because its
+                                # registration window ended. Preserve that
+                                # explicit outcome instead of calling it a
+                                # generic quality-gate failure.
+                                empty_kind = (
+                                    self.empty_evidence.get('kind')
+                                    if isinstance(self.empty_evidence, dict)
+                                    else None
+                                )
+                                rejection_details = {'error_codes': errors or ['quality_gate']}
+                                if empty_kind:
+                                    rejection_details['empty_evidence'] = self.empty_evidence
+                                self._record_rejection(
+                                    candidate.detail_url,
+                                    empty_kind or (errors or ['quality_gate'])[0],
+                                    **rejection_details,
+                                )
                     except Exception as item_exc:
                         logger.warning('Failed to parse candidate %s: %s', candidate.detail_url, item_exc)
                         self.run_data.candidates_rejected += 1
+                        if not self._has_rejection_for(candidate.detail_url):
+                            blocked = self.run_data.status == 'blocked' or self.run_data.error_type == 'CloudflareChallenge'
+                            self._record_rejection(
+                                candidate.detail_url,
+                                'blocked_detail' if blocked else 'detail_fetch_or_parse_error',
+                                error_type=item_exc.__class__.__name__,
+                                error_message=str(item_exc)[:240],
+                            )
                         continue
 
             if not items:
                 if self.confirmed_empty and self.empty_evidence:
                     self.run_data.status = 'empty_valid'
                     self.run_data.diagnostics_payload['empty_evidence'] = self.empty_evidence
+                elif self.run_data.status in {'blocked', 'failed'}:
+                    # A list connector may catch the fetch exception so it can
+                    # return diagnostics. Preserve the external state instead
+                    # of relabelling it as an ambiguous empty portal.
+                    self.run_data.diagnostics_payload.setdefault('empty_evidence', None)
                 else:
                     # Zero candidates can mean a changed selector, a JS-only
                     # page, a redirect, or a genuinely empty portal.  Without

@@ -2,18 +2,22 @@
 
 Backend FastAPI do MVP do Observador de Concursos.
 
+Documentação completa: [../README.md](../README.md) (quick start), [../docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md), [../docs/API.md](../docs/API.md), [../docs/DATABASE.md](../docs/DATABASE.md).
+
 ## Serviços
 
-- FastAPI (`api`)
-- PostgreSQL (`postgres`)
-- Redis (`redis`)
+- FastAPI (`api`, :8000)
+- PostgreSQL 17 (`postgres`)
+- Redis 7 (`redis`)
 - Celery worker (`worker`)
-- Celery beat (`scheduler`)
+- Celery beat (`scheduler`: `heartbeat` a cada 15 min, `crawl_active_sources` toda hora cheia)
+- pgAdmin opcional (`pgadmin`, perfil `tools`, :5050)
 
 ## Rodar
 
 ```powershell
 cd backend
+copy .env.example .env   # ajuste SECRET_KEY
 docker compose up --build
 ```
 
@@ -30,6 +34,12 @@ Criar fonte preset:
 
 ```powershell
 Invoke-RestMethod -Method POST http://localhost:8000/sources/presets/ibfc-open
+```
+
+Ou semear as 99 fontes do catálogo de uma vez:
+
+```powershell
+Invoke-RestMethod -Method POST http://localhost:8000/sources/presets/seed-all
 ```
 
 Rodar coleta sincronamente:
@@ -83,12 +93,14 @@ A extração usa texto embutido no PDF. Se o edital for escaneado/imagem, o sist
 
 ## Auth / Usuário
 
-Rotas disponíveis:
+Rotas disponíveis (lista completa e exemplos em [../docs/API.md](../docs/API.md)):
 
 ```text
 POST /auth/register
 POST /auth/login
+POST /auth/refresh
 GET  /auth/me
+GET  /sync/checkpoint
 GET  /me/preferences
 PUT  /me/preferences
 GET  /me/favorites
@@ -99,6 +111,7 @@ POST /me/alerts
 PATCH /me/alerts/{alert_id}
 DELETE /me/alerts/{alert_id}
 GET  /me/notifications
+GET  /me/updates
 POST /me/notifications/{notification_id}/read
 POST /me/notifications/read-all
 POST /me/alerts/run/sync
@@ -106,4 +119,11 @@ POST /me/alerts/run/sync
 
 ## Desenvolvimento
 
-O projeto ainda usa `Base.metadata.create_all()` para velocidade de MVP. Como `create_all()` não altera tabelas existentes, existe uma camada leve em `app/schema_migrations.py` que adiciona colunas novas nullable em ambiente de desenvolvimento sem precisar apagar o volume do Postgres.
+O projeto ainda usa `Base.metadata.create_all()` para velocidade de MVP. Como `create_all()` não altera tabelas existentes, existe uma camada leve em `app/schema_migrations.py` que adiciona colunas novas nullable em ambiente de desenvolvimento sem precisar apagar o volume do Postgres. Não há diretório de migrações Alembic (o pacote consta no `requirements.txt`, mas sem scripts no repo).
+
+Testes (SQLite em memória; `live` = portais reais, opt-in):
+
+```powershell
+python -m pytest -q -m "not live"
+python -m pytest -q -m live
+```

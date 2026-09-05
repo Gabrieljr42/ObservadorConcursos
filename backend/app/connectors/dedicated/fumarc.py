@@ -26,6 +26,30 @@ logger = logging.getLogger(__name__)
 class FumarcConnector(BaseConnector):
     banca = 'FUMARC'
 
+    _VOLATILE_SHAREPOINT_KEYS = {
+        '__metadata',
+        'OData__UIVersionString',
+    }
+
+    @classmethod
+    def _stable_sharepoint_value(cls, value: Any) -> Any:
+        """Remove SharePoint transport/version metadata before hashing.
+
+        SharePoint can change ``etag``/``OData__UIVersionString`` between
+        reads even when the contest's user-visible fields are unchanged.  The
+        complete response remains in ``raw_data``; only the content identity
+        used for versioning is normalized.
+        """
+        if isinstance(value, dict):
+            return {
+                str(key): cls._stable_sharepoint_value(nested)
+                for key, nested in value.items()
+                if key not in cls._VOLATILE_SHAREPOINT_KEYS and not str(key).startswith('__')
+            }
+        if isinstance(value, list):
+            return [cls._stable_sharepoint_value(nested) for nested in value]
+        return value
+
     def __init__(self, base_url: str = 'https://www.fumarc.com.br', list_url: str | None = None):
         super().__init__(base_url=base_url)
         self.list_url = list_url or f'{self.base_url}/concursos'
@@ -154,6 +178,10 @@ class FumarcConnector(BaseConnector):
                         'publications': publications,
                         'source_list_url': self.list_url,
                     }
+                    content_payload = {
+                        **raw_payload,
+                        'sharepoint_item': self._stable_sharepoint_value(item),
+                    }
 
                     resumo = build_summary(title, modalidade, status, inicio, fim, area=area)
 
@@ -183,7 +211,7 @@ class FumarcConnector(BaseConnector):
                         'link_inscricao': None,
                         'resumo': resumo,
                         'raw_data': raw_payload,
-                        'content_hash': build_hash(raw_payload),
+                        'content_hash': build_hash(content_payload),
                         'fetched_at': datetime.now(UTC),
                     })
 

@@ -1,156 +1,128 @@
 # Observador de Concursos
 
-Projeto organizado em duas partes:
+Agregador de concursos públicos brasileiros: o **backend** coleta editais nos portais das bancas, versiona mudanças e gera notificações; o **mobile** (Expo/React Native) funciona **offline-first** e sincroniza com o servidor quando há rede.
 
-```text
-ObservadorDeCursos/
-  backend/  # FastAPI + PostgreSQL + Redis + Celery + crawlers
-  mobile/   # Expo + React Native + TypeScript
-```
+## Projeto at a glance
 
-## Backend
+| Parte | Stack | Entrada principal |
+|---|---|---|
+| `backend/` | FastAPI + PostgreSQL 17 + Redis + Celery (worker/beat) + crawlers (httpx/Playwright) | `backend/app/main.py` |
+| `mobile/` | Expo SDK 54 + React Native + TypeScript + expo-router + SQLite local | `mobile/app/_layout.tsx` |
 
-Entrar na pasta:
+- Catálogo de **99 fontes** (bancas e seleções institucionais) em `backend/app/connectors/registry.py`.
+- Autenticação própria: JWT HS256 + refresh tokens persistidos (`backend/app/auth.py`).
+- Mobile lê tudo do SQLite local (`observador.db`) e sincroniza via `GET /sync/checkpoint`.
+
+## Quick start — backend
+
+Pré-requisitos: Docker + Docker Compose.
 
 ```powershell
 cd backend
-```
-
-Subir API, Postgres, Redis, worker e scheduler:
-
-```powershell
+copy .env.example .env   # ajuste SECRET_KEY
 docker compose up --build
 ```
 
-Subir em segundo plano:
-
-```powershell
-docker compose up --build -d
-```
-
-Parar:
-
-```powershell
-docker compose down
-```
-
-Ver logs da API:
-
-```powershell
-docker compose logs -f api
-```
-
-Documentação Swagger:
-
-```text
-http://localhost:8000/docs
-```
-
-Healthcheck:
+Confirmar que subiu:
 
 ```powershell
 Invoke-RestMethod http://localhost:8000/health
+# status: ok
 ```
 
-Rotas esperadas:
+Swagger: `http://localhost:8000/docs`
 
-```text
-GET  /health
-GET  /sources
-POST /sources
-POST /sources/presets/ibfc-open
-GET  /concursos
-GET  /concursos/{id}
-POST /crawl/{source_id}/sync
-POST /auth/register
-POST /auth/login
-GET  /auth/me
-GET  /me/preferences
-PUT  /me/preferences
-GET  /me/favorites
-POST /me/favorites/{concurso_id}
-DELETE /me/favorites/{concurso_id}
-GET  /me/alerts
-POST /me/alerts
-PATCH /me/alerts/{alert_id}
-DELETE /me/alerts/{alert_id}
-GET  /me/notifications
-POST /me/notifications/{notification_id}/read
-POST /me/notifications/read-all
-POST /me/alerts/run/sync
-```
-
-### Teste rápido de usuário
+Popular o banco e rodar a primeira coleta (dentro do `backend/`):
 
 ```powershell
-$body = @{
-  name = "João Gabriel"
-  email = "joao@test.com"
-  password = "123456"
-} | ConvertTo-Json
+# Cadastra/atualiza as 99 fontes do catálogo
+Invoke-RestMethod -Method POST http://localhost:8000/sources/presets/seed-all
 
-$auth = Invoke-RestMethod `
-  -Method POST `
-  -Uri "http://localhost:8000/auth/register" `
-  -ContentType "application/json" `
-  -Body $body
+# Coleta síncrona de uma fonte (troque 1 pelo id desejado)
+Invoke-RestMethod -Method POST http://localhost:8000/crawl/1/sync
 
-$headers = @{ Authorization = "Bearer $($auth.access_token)" }
-
-Invoke-RestMethod `
-  -Method GET `
-  -Uri "http://localhost:8000/auth/me" `
-  -Headers $headers
+# Listar concursos
+Invoke-RestMethod http://localhost:8000/concursos
 ```
 
-## Mobile
+Criar usuário e autenticar:
 
-Entrar na pasta:
+```powershell
+$body = @{ name = "Seu Nome"; email = "voce@test.com"; password = "123456" } | ConvertTo-Json
+$auth = Invoke-RestMethod -Method POST -Uri "http://localhost:8000/auth/register" -ContentType "application/json" -Body $body
+$headers = @{ Authorization = "Bearer $($auth.access_token)" }
+Invoke-RestMethod -Method GET -Uri "http://localhost:8000/auth/me" -Headers $headers
+```
+
+## Quick start — mobile
+
+Pré-requisitos: Node.js LTS + app Expo Go no celular (ou emulador).
 
 ```powershell
 cd mobile
-```
-
-Instalar dependências:
-
-```powershell
 npm install
-```
-
-Garantir pacotes nativos do Expo:
-
-```powershell
-npx expo install @react-native-async-storage/async-storage react-native-safe-area-context
-```
-
-Rodar no celular via Expo Go:
-
-```powershell
 npx expo start --tunnel
 ```
 
-Para celular físico, a API não deve usar `localhost`. Use o IP da máquina na rede, por exemplo:
+O app precisa alcançar a API. Defina em `mobile/.env`:
 
 ```text
-http://192.168.0.105:8000
+EXPO_PUBLIC_API_BASE_URL=http://SEU_IP_LOCAL:8000
 ```
 
-Para emulador Android, use:
+- Celular físico na mesma rede: use o IP LAN da máquina (ex.: `http://192.168.0.105:8000`).
+- Emulador Android: `http://10.0.2.2:8000`.
+- `localhost` só funciona no navegador (`npx expo start --web`).
+
+> O `mobile/README.md` anterior era um template genérico e foi substituído. O fluxo oficial é o descrito aqui.
+
+## Estrutura do repositório
 
 ```text
-http://10.0.2.2:8000
+ObservadorDeCursos/
+  README.md            # este arquivo
+  docs/                # documentação por tema (arquitetura, API, banco, guias)
+    ARCHITECTURE.md
+    DATABASE.md
+    API.md
+    MOBILE.md
+    CONFIGURATION.md
+    DEVELOPMENT.md
+    DEPLOYMENT_TROUBLESHOOTING.md
+    ONBOARDING.md
+    LIVE_*.md / SOURCES_STATUS.md   # auditoria das fontes (material existente, preservado)
+  backend/             # API + workers + crawlers
+    app/               # main.py, models.py, services.py, auth.py, connectors/, pdf/
+    tests/             # pytest (SQLite em memória; testes live são opt-in)
+    scripts/           # auditoria live e empacotamento
+    docker-compose.yml # api, worker, scheduler, postgres, redis (+ pgadmin opcional)
+  mobile/              # app Expo offline-first
+    app/               # rotas expo-router (onboarding, login, (tabs)/, concurso/[id])
+    src/api|db|sync|storage|providers/  # acesso local + sincronização + sessão
+  scripts/             # utilitários na raiz (auditoria, empacotamento)
 ```
 
-## O que foi limpo
+## Documentação
 
-Foram removidos da estrutura organizada:
+| Documento | Conteúdo |
+|---|---|
+| [docs/ONBOARDING.md](docs/ONBOARDING.md) | **Comece aqui.** Checklist da primeira execução, ordem de leitura e primeira alteração guiada |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Serviços, fluxos de coleta/sync/alertas e mapa do repositório |
+| [docs/API.md](docs/API.md) | Rotas, auth, exemplos de request/response |
+| [docs/DATABASE.md](docs/DATABASE.md) | Tabelas, relacionamentos, migrações e reset local |
+| [docs/MOBILE.md](docs/MOBILE.md) | App offline-first: telas, SQLite, outbox e background sync |
+| [docs/CONFIGURATION.md](docs/CONFIGURATION.md) | Variáveis de ambiente e serviços externos |
+| [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Comandos, padrões de código, testes e como contribuir |
+| [docs/DEPLOYMENT_TROUBLESHOOTING.md](docs/DEPLOYMENT_TROUBLESHOOTING.md) | O que existe de deploy/operação + falhas comuns |
 
-```text
-observador-concursos-auth-module/ aninhado
-__pycache__/
-*.pyc
-celerybeat-schedule.db
-mobile/node_modules/
-mobile/.expo/
-mobile/.git/
-```
+Guias específicos já existentes e preservados: [backend/README.md](backend/README.md) (fluxo IBFC e extração de PDF), auditoria das fontes em [docs/SOURCES_STATUS.md](docs/SOURCES_STATUS.md) e `backend/docs/`.
+
+## Status de verificação
+
+Testado durante a escrita desta documentação:
+
+- `pytest -q -m "not live"` no `backend/`: **145 passed, 2 deselected**.
+- `docker compose config`: válido.
+- `npx tsc --noEmit` no `mobile/`: 1 erro pré-existente em `components/ExternalLink.tsx` (tipo de `href` com `typedRoutes`) — ver [troubleshooting](docs/DEPLOYMENT_TROUBLESHOOTING.md).
+
+Não testado (requer rede/containers ou decisão do mantenedor): `docker compose up`, `expo start`, scripts de auditoria live (`-m live`), URLs de produção (`https://api.observador.tech`).

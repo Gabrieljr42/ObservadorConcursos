@@ -102,6 +102,13 @@ def has_explicit_empty_evidence(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
 
+def has_explicit_zero_active_evidence(evidence: Any, active: Any) -> bool:
+    """Whether an independent observer explicitly established an empty tab."""
+    if active != 0 or not isinstance(evidence, dict):
+        return False
+    return bool(evidence.get('active_basis') or evidence.get('basis'))
+
+
 def coverage_explanation(source: dict[str, Any]) -> str | None:
     value = source.get('coverage_explanation')
     if not value and isinstance(source.get('metric_evidence'), dict):
@@ -150,16 +157,24 @@ def build_metric_summary(sources: list[dict[str, Any]]) -> dict[str, Any]:
         if _count(source.get('visible_active_valid_items')) is not None
         and source.get('verification_status') != NON_AUDITED
     ]
-    coverage_active = sum(_count(source.get('visible_active_valid_items')) or 0 for source in coverage_sources)
-    coverage_processed = sum(_count(source.get('processed')) or 0 for source in coverage_sources)
-    coverage_rate = coverage_processed / coverage_active if coverage_active else None
+    # ``processed`` is a crawler funnel count, not necessarily the number of
+    # currently active official entries.  Keep this ratio only for rows where
+    # the two counts are explicitly the same active set.
+    comparable_sources = [
+        source for source in coverage_sources
+        if source.get('verification_status') == 'VERIFIED'
+        and _count(source.get('processed')) == _count(source.get('visible_active_valid_items'))
+    ]
+    comparable_active = sum(_count(source.get('visible_active_valid_items')) or 0 for source in comparable_sources)
+    comparable_processed = sum(_count(source.get('processed')) or 0 for source in comparable_sources)
+    coverage_rate = comparable_processed / comparable_active if comparable_active else None
     return {
         'total_items_observed': _sum_known(sources, 'visible_items_observed'),
         'total_relevant_items_known': _sum_known(sources, 'visible_relevant_items'),
         'total_active_valid_items_known': total_active,
         'total_processed': sum(_count(source.get('processed')) or 0 for source in sources),
         'coverage_rate_known_sources': round(coverage_rate, 4) if coverage_rate is not None else None,
-        'coverage_sources_known': len(coverage_sources),
+        'coverage_sources_known': len(comparable_sources),
         'metric_inconsistencies': sum(len(metric_coherence_issues(source)) for source in sources),
     }
 

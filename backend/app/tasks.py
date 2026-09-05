@@ -7,6 +7,7 @@ from app.crawl_lock import (
     acquire_crawl_all_lock,
     release_crawl_all_lock,
 )
+from app.connectors import seed_master_sources
 from app.database import SessionLocal
 from app.models import Source
 from app.services import CrawlService
@@ -65,6 +66,23 @@ def crawl_active_sources(lock_token: str | None = None) -> dict:
 
     db = SessionLocal()
     try:
+        try:
+            # Scheduled runs can be the first crawl after deployment; do not
+            # depend on a separate manual seed request to discover all 99
+            # catalog sources.
+            seed_master_sources(db)
+        except Exception as exc:
+            db.rollback()
+            return {
+                'status': 'failed',
+                'error': f'{exc.__class__.__name__}: {str(exc)}',
+                'processed_sources': 0,
+                'results': [],
+                'success': [],
+                'failed': [],
+                'timestamp': datetime.now().isoformat(),
+            }
+
         source_snapshots = [
             (source.id, source.name, source.source_type)
             for source in db.execute(

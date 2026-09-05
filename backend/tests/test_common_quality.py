@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 
-from app.connectors.common import extract_city_uf, extract_pdf_link, parse_date_interval
+from decimal import Decimal
+
+from app.connectors.common import extract_city_uf, extract_pdf_link, parse_date_interval, parse_money
 from app.publications import parse_publications_from_dom
 
 
@@ -18,6 +20,10 @@ def test_pdf_link_prefers_opening_notice_and_rejects_noise():
       <a href="/cronograma.pdf">Cronograma</a>
       <a href="/edital-abertura.pdf">Edital de Abertura</a>''', 'html.parser')
     assert extract_pdf_link(soup, 'https://example.test/edital') == 'https://example.test/edital-abertura.pdf'
+
+
+def test_parse_money_accepts_portal_spacing_after_decimal_comma():
+    assert parse_money('R$ 15.034, 81') == Decimal('15034.81')
 
 
 def test_publications_dom_preserves_real_links_and_dates():
@@ -64,8 +70,33 @@ def test_date_interval_supports_shared_year_in_portal_range():
     assert end.isoformat().startswith('2026-10-08')
 
 
+def test_date_interval_supports_numeric_range_with_shared_year():
+    start, end = parse_date_interval('INSCRIÇÕES\n12/08 a 14/09/2026')
+
+    assert start is not None and end is not None
+    assert (start.year, start.month, start.day) == (2026, 8, 12)
+    assert (end.year, end.month, end.day, end.hour, end.minute) == (2026, 9, 14, 23, 59)
+
+
 def test_date_interval_discards_legacy_unknown_date_sentinel():
     start, end = parse_date_interval('Período de Inscrições: 03/02/2020 - 00:00:00 a 01/01/0001 - 23:59:59')
 
     assert start.isoformat().startswith('2020-02-03')
     assert end is None
+
+
+def test_date_interval_prefers_regular_registration_over_fcc_publication_dates():
+    text = '''
+    Edital nº 05/2026 - De Retificação de Cronograma, divulgado na página da FCC
+    dia 28/08/2026 com publicação no Diário Oficial, edição de 31/08/2026.
+    Período para Requerimento de isenção do pagamento do valor de inscrição
+    Das 10h do dia 27/04/2026 às 23h59min do dia 01/05/2026.
+    Período de inscrição para todos os candidatos
+    Das 10h do dia 27/04/2026 às 23h59min do dia 01/06/2026.
+    Comunicado publicado no site em 24/07/2026.
+    '''
+
+    start, end = parse_date_interval(text)
+
+    assert start.isoformat().startswith('2026-04-27')
+    assert end.isoformat().startswith('2026-06-01')

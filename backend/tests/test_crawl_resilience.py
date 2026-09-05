@@ -10,6 +10,7 @@ from app.crawl_lock import (
     release_crawl_all_lock,
 )
 from app.connectors.base import CrawlResult, CrawlRunData
+from app.connectors.dedicated.fumarc import FumarcConnector
 from app.database import Base
 from app.models import Concurso, ConcursoPublication, CrawlRun, Source
 from app.services import CrawlService
@@ -111,6 +112,27 @@ def test_publication_unique_constraint_is_preserved():
         for constraint in ConcursoPublication.__table__.constraints
     }
     assert 'uq_concurso_publication_hash' in constraint_names
+
+
+def test_fumarc_content_identity_ignores_sharepoint_transport_metadata():
+    first = {
+        'Id': 54,
+        'Title': 'Concurso Público CREA - MG',
+        'Modified': '2026-08-19T18:45:58Z',
+        'OData__UIVersionString': '12.0',
+        '__metadata': {'etag': '"12"', 'uri': 'https://example.test/items(54)'},
+        'Edital': {
+            'Url': 'https://example.test/edital.pdf',
+            '__metadata': {'type': 'SP.FieldUrlValue'},
+        },
+    }
+    second = {
+        **first,
+        'OData__UIVersionString': '16.0',
+        '__metadata': {'etag': '"16"', 'uri': 'https://example.test/items(54)'},
+    }
+
+    assert FumarcConnector._stable_sharepoint_value(first) == FumarcConnector._stable_sharepoint_value(second)
 
 
 def test_failed_source_rolls_back_and_next_source_can_run_without_pending_rollback():
@@ -216,6 +238,7 @@ def test_crawl_all_sync_reports_isolated_failure_and_continues(monkeypatch):
 
         monkeypatch.setattr('app.main.acquire_crawl_all_lock', lambda: 'sync-token')
         monkeypatch.setattr('app.main.release_crawl_all_lock', lambda token: None)
+        monkeypatch.setattr('app.main.seed_master_sources', lambda session: None)
         monkeypatch.setattr('app.services.CrawlService', FakeService)
 
         result = run_crawl_all_sync(db)
@@ -261,6 +284,7 @@ def test_celery_crawl_all_reports_isolated_failure_and_continues(monkeypatch):
         monkeypatch.setattr('app.tasks.SessionLocal', lambda: db)
         monkeypatch.setattr('app.tasks.acquire_crawl_all_lock', lambda token=None: 'celery-token')
         monkeypatch.setattr('app.tasks.release_crawl_all_lock', lambda token: None)
+        monkeypatch.setattr('app.tasks.seed_master_sources', lambda session: None)
         monkeypatch.setattr('app.tasks.CrawlService', FakeService)
 
         result = crawl_active_sources.run()
@@ -318,13 +342,17 @@ def test_enqueue_crawl_all_reserves_lock_and_transfers_token(monkeypatch):
     celery_task = MagicMock()
     celery_task.delay.return_value = task
     monkeypatch.setattr('app.main.acquire_crawl_all_lock', lambda: 'reservation-token')
+    seed = MagicMock()
+    monkeypatch.setattr('app.main.seed_master_sources', seed)
     monkeypatch.setattr('app.main.crawl_active_sources', celery_task)
 
-    result = enqueue_crawl_all(MagicMock())
+    db = MagicMock()
+    result = enqueue_crawl_all(db)
 
     assert result == {
         'status': 'queued',
         'message': 'Coleta de todas as fontes ativas enfileirada',
         'task_id': 'task-id',
     }
+    seed.assert_called_once_with(db)
     celery_task.delay.assert_called_once_with('reservation-token')

@@ -501,8 +501,14 @@ def enqueue_crawl_all(db: Session = Depends(get_db)):
         }
 
     try:
+        # The database is the runtime source list.  Keep it aligned with the
+        # 99-source catalog before snapshotting active sources so a fresh or
+        # partially initialized installation cannot silently crawl only a
+        # stale subset.
+        seed_master_sources(db)
         task = crawl_active_sources.delay(lock_token)
     except Exception:
+        db.rollback()
         try:
             release_crawl_all_lock(lock_token)
         except CrawlLockUnavailable:
@@ -535,6 +541,7 @@ def run_crawl_all_sync(db: Session = Depends(get_db)):
         }
 
     try:
+        seed_master_sources(db)
         source_snapshots = [
             (source.id, source.name, source.source_type)
             for source in db.execute(

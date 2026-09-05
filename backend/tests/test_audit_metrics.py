@@ -125,7 +125,9 @@ def test_summary_matches_source_metrics():
     assert summary['total_active_valid_items_known'] == 109
     assert summary['total_processed'] == 109
     assert summary['coverage_rate_known_sources'] == 1.0
-    assert summary['coverage_sources_known'] == 2
+    # Only VERIFIED rows whose processed set is explicitly identical to the
+    # independent active set are comparable for this ratio.
+    assert summary['coverage_sources_known'] == 1
     assert audit_summary_matches_sources(summary, sources)
 
 
