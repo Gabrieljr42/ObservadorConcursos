@@ -1,0 +1,14 @@
+{
+  "schema": "t012.source-provenance.v1",
+  "source": "publiconsult_open",
+  "source_number": 56,
+  "adapter": "PubliconsultAdapter",
+  "captured_scope": "one preserved listing/detail/document run; no network/API/Docker recovery",
+  "listing": {"url": "https://publiconsult.com.br/Concurso/Index", "fixture": "backend/tests/fixtures/tenderproof_batch30_institutional/publiconsult-listing.html", "status": 200, "observed_at": "2026-09-08T12:47:27.609150+00:00", "bytes": 20587, "sha256": "7a6b07adb2fb2a6d8fafd16be066ebff40d3afd4f4525a8596b540129ec3b779"},
+  "detail": {"url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H", "fixture": "backend/tests/fixtures/tenderproof_batch30_institutional/publiconsult-detail.html", "status": 200, "observed_at": "2026-09-08T12:47:28.208260+00:00", "bytes": 17989, "sha256": "8ffe5f542195e2be24e5e33fca5abdefabf28c37041e7ab4d4be30f54fa73901"},
+  "candidate": {"external_id": "681", "candidate_id": "publiconsult_open-681", "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026", "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H"},
+  "principal_document": {"title": "Edital de Abertura de Inscrições", "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf", "artifact_path": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf", "artifact_id": "art-74ea1bc8f9", "bytes": 720592, "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f"},
+  "preserved_run": {"root": "docs/tenderproof-batch30-institutional-live.json#cycles[0].attempts[0]", "run_id": "tpr-d2bc11468688", "observed_at": "2026-09-08T12:51:27.164530Z", "status": "completed/valid", "recovered_artifact": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf", "durable_hash_verified": true, "repeat_result": "not_claimed"},
+  "identity_checks": ["listing candidate external_id 681", "detail route /Concurso/Detail/681?origem=H", "detail heading corroborates listing title", "all document URLs remain under /publiconsult/Anexos/681/", "exactly one edital principal chosen by adapter"],
+  "baseline_nonduplication": {"baseline_file": "docs/execucao/evidencias/matriz-fontes-99-reconciliada-r5-20260913.csv", "source_row": "56;publiconsult_open;;BASELINE_ONLY", "interpretation": "publiconsult_open is outside the current 32-source catalogue baseline; this run is not claimed as already published"}
+}

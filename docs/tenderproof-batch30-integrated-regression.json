@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-09-08T12:58:18.259956+00:00",
+  "command": "python -m pytest -m 'not live' -q --disable-warnings --junitxml=.tenderproof/batch30-integrated-regression.xml",
+  "passed": 676,
+  "skipped": 14,
+  "deselected": 2,
+  "failures": 0,
+  "errors": 0,
+  "duration_s": 140.47,
+  "junit": "backend/.tenderproof/batch30-integrated-regression.xml",
+  "limitations": [
+    "PostgreSQL tests skipped without explicit disposable URL; earlier PostgreSQL evidence remains separate.",
+    "Live portal tests intentionally excluded; bounded live reports are separate.",
+    "No batch30 homologation or production activation."
+  ]
+}

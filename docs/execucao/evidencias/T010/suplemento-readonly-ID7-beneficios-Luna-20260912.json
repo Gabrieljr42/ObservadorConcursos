@@ -1,0 +1,44 @@
+{
+  "schema": "t010.id7.benefits-readonly-supplement.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "read_only": true,
+  "source_gets": [
+    "GET /concursos/7",
+    "GET /tenderproof/publications/proposals/tpp-8157df41c8907a5f39cea3aa357c05dc"
+  ],
+  "persisted": {
+    "path": "concurso 7 -> cargos[0]",
+    "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"],
+    "type": "array<string>",
+    "proposal_and_catalogue_equal": true
+  },
+  "cargo_json_keys_and_types": {
+    "nome": "string",
+    "vagas_imediatas": "integer",
+    "cadastro_reserva": "boolean",
+    "vagas_ampla_concorrencia": "integer",
+    "vagas_pcd": "integer",
+    "remuneracao": "string",
+    "moeda": "string",
+    "remuneracao_observacao": "string",
+    "jornada": "string",
+    "requisitos": "string",
+    "beneficios": "array<string>"
+  },
+  "provenance": [
+    {
+      "page": 1,
+      "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+      "evidence_id": "t010-id7-cargo-001",
+      "snippet": "001 TÉCNICO LEGISLATIVO 01 * 01 + CR Ensino médio completo. 35 horas\nR$ 3.378,77\n+\nBENEFÍCIOS\nObjetiva+\nDiscursiva"
+    },
+    {
+      "page": 1,
+      "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+      "evidence_id": "t010-id7-cargo-002",
+      "snippet": "2.3 Além do salário inicial, a Câmara Municipal de Garça disponibiliza o benefício de:\na) Auxílio alimentação no valor de R$ 680,00 (seiscentos e oitenta reais);\nb) Vale Transporte."
+    }
+  ],
+  "ui_observation": "A UI exibiu salário/jornada/requisito, mas não renderizou benefícios; isso não altera o persistido/API nem a proveniência acima."
+}

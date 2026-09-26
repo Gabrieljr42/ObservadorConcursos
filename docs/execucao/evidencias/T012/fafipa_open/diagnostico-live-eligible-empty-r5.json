@@ -1,0 +1,22 @@
+{
+  "schema":"tenderproof.live-eligible-diagnosis.v1",
+  "source":"fafipa_open","external_id":"4208",
+  "run_id":"tp-reviewed-97e7836300215e6847ff878a5ecdabdb",
+  "artifact":{"sha256":"26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f","byte_len":3630911,"pages":38},
+  "reproduction":"offline fresh extract_pages_isolated + fields.extract_fields on preserved PDF bytes; no API, Docker, DB mutation or proposal call",
+  "fresh_extractor_result":{
+    "titulo":{"state":"supported","value_equal":true,"evidence_equal":false,"reason":"reviewed snippet is not the exact fresh page-1 snippet"},
+    "orgao":{"state":"supported","value_equal":true,"evidence_equal":false,"reason":"reviewed snippet is not the exact fresh page-1 snippet"},
+    "edital_numero":{"state":"supported","value_equal":true,"evidence_equal":false,"reason":"reviewed snippet is not the exact fresh page-1 snippet"},
+    "inscricao_inicio":{"state":"unknown","value_equal":false,"reason":"generic deployed extractor does not recognize this cronograma inscription table"},
+    "inscricao_fim":{"state":"unknown","value_equal":false,"reason":"generic deployed extractor does not recognize this cronograma inscription table"},
+    "prova_data":{"state":"unknown","value_equal":false,"reason":"generic deployed extractor does not recognize this cronograma proof table"},
+    "cargos":{"state":"absent","value_equal":false,"reason":"generic deployed extractor emits no cargos field for FAFIPA 4208"}
+  },
+  "dispatch_observation":"fields.py source branch for fafipa_open/4208 currently invokes strong_preflight and replaces only orgao and edital_numero; it does not replace titulo, dates or cargos with the source-specific R4 values.",
+  "why_eligible_empty":"_revalidate requires both exact field value equality and exact fresh evidence equality. The three identity values fail evidence equality; the four remaining reviewed values have no supported fresh field, so all seven are blocked.",
+  "root_cause":"R3 envelope was authored from curated PDF snippets/values, while live revalidation uses generic deployed extraction. This is a local source-dispatch coverage/evidence reproduction gap, not artifact hash drift or duplicate identity.",
+  "safe_fix_scope":"Integrate a source-specific FAFIPA extractor that emits all reviewed fields with exact page/snippet evidence, or regenerate the envelope from the currently deployed generic output and omit unsupported fields. The former requires one serialized fields.py dispatch change, intentionally not made here.",
+  "status":"BLOCKED_PENDING_SERIALIZED_SOURCE_DISPATCH_INTEGRATION",
+  "mutations":{"proposal_created":false,"version_created":false,"outbox_created":false,"notification_created":false}
+}

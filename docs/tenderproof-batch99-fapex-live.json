@@ -1,0 +1,189 @@
+{
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99fapex",
+  "observed_at": "2026-09-08T15:34:26.609672+00:00",
+  "scope": "two bounded samples, not full source coverage or publication",
+  "tls_verified": true,
+  "browser_sessions": 0,
+  "limits": {
+    "listing_pages_per_cycle": 1,
+    "detail_attempts_per_cycle": 3,
+    "html_bytes": 2097152,
+    "driver_deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60
+  },
+  "cycles": [
+    {
+      "source": "fapex_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-7c2753d427d3",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "file": "fapex_selection-cycle1-listing-5e1b47152a4e.html",
+          "sha256": "5e1b47152a4ec462a26a16ce33c7aaef901fd88bcc6c37937a707ee722893993",
+          "bytes": 307478,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:34:27.372032+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c7d538908d3e",
+          "candidate": {
+            "candidate_id": "fapex_selection-nr2O",
+            "title_observed": "Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA",
+            "detail_url_observed": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+            "external_id": "nr2O",
+            "observed_at": "2026-09-08T15:34:27.678623Z",
+            "source": "fapex_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+              "file": "fapex_selection-cycle1-detail-b60c2b85a3d2.html",
+              "sha256": "b60c2b85a3d2d6c4db932d4a995bbd7e3cf9af1df69d5e6c7ce2c87f5c9d1573",
+              "bytes": 39685,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:34:28.272119+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapex_selection-7b4e35416bb618530d",
+            "title": "ABERTURA E INSCRIÇÕES",
+            "url_requested": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "url_final": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'ABERTURA E INSCRIÇÕES' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: INSCRIÇÕES HOMOLOGADAS; RESULTADO PRELIMINAR; RESULTADO FINAL).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-d481384059",
+            "sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+            "byte_len": 307112,
+            "url_requested": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "url_final": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:34:28.499678Z",
+            "storage_path": "art-d481384059-58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7.pdf"
+          },
+          "total_pages": 8,
+          "processed_pages": 8,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=8/8",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.953
+    },
+    {
+      "source": "fapex_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-7ccbda947ca6",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "file": "fapex_selection-cycle2-listing-5e1b47152a4e.html",
+          "sha256": "5e1b47152a4ec462a26a16ce33c7aaef901fd88bcc6c37937a707ee722893993",
+          "bytes": 307478,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:34:30.231497+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0184a5362f76",
+          "candidate": {
+            "candidate_id": "fapex_selection-nr2O",
+            "title_observed": "Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA",
+            "detail_url_observed": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+            "external_id": "nr2O",
+            "observed_at": "2026-09-08T15:34:30.530520Z",
+            "source": "fapex_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+              "file": "fapex_selection-cycle2-detail-b60c2b85a3d2.html",
+              "sha256": "b60c2b85a3d2d6c4db932d4a995bbd7e3cf9af1df69d5e6c7ce2c87f5c9d1573",
+              "bytes": 39685,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:34:31.116983+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapex_selection-7b4e35416bb618530d",
+            "title": "ABERTURA E INSCRIÇÕES",
+            "url_requested": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "url_final": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'ABERTURA E INSCRIÇÕES' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: INSCRIÇÕES HOMOLOGADAS; RESULTADO PRELIMINAR; RESULTADO FINAL).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-463bfb5ab7",
+            "sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+            "byte_len": 307112,
+            "url_requested": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "url_final": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:34:31.535366Z",
+            "storage_path": "art-463bfb5ab7-58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7.pdf"
+          },
+          "total_pages": 8,
+          "processed_pages": 8,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=8/8",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.985
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 4,
+    "all_clients_closed": true
+  }
+}

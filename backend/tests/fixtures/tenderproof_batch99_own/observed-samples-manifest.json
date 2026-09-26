@@ -1,0 +1,420 @@
+{
+  "observed_at": "2026-09-08T14:54:34.654211+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "klc_open",
+      "url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T14:54:33.474804+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 18599,
+      "sha256": "4c3c0602c73eec98734b3e388d665a30fef20c7d5b88d4dee523e46c09e65d45",
+      "file": "klc_open-detail0.html",
+      "encoding": "utf-8",
+      "title": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP - KLC Concursos",
+      "links": [
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Acesso ao Menu do Candidato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/visao/home.php",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=nos",
+          "title": "Nossa Empresa"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Inscrições"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=rec",
+          "title": "Recursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ctt",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+          "title": "Edital de Processo Seletivo"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+          "title": "Retificação 1 - Alteração da Data da Prova"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/c7bedf451c4cb436123ee210c7c40c68.pdf",
+          "title": "Edital de Homologação das Inscrições e Divulgação do Local de Prova"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/2cb174f9d07c3a6af075d52b7186028d.pdf",
+          "title": "Edital de Divulgação do Gabarito Preliminar"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/37c24a4ca617399a3b74a1eb5e4c75e0.pdf",
+          "title": "Edital de Divulgação do Gabarito Oficial"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/85df59eae1dda4fe0fa0abd6b043dd9b.pdf",
+          "title": "Edital de Resultado Preliminar"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/editais/d58675fa489f977d2d876fad60302190.pdf",
+          "title": "Edital de Resultado Final"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ncpf",
+          "title": "CONSULTE SUA INSCRIÇÃO | MENU DO CANDIDATO"
+        }
+      ],
+      "scripts": [
+        "https://www.klcconcursos.com.br/js/estado_cidade.js",
+        "https://www.klcconcursos.com.br/js/javascript.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://code.jquery.com/jquery-2.0.0.js",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "ieses_open",
+      "url": "https://ieses.org/projetos/api?offset=0&limit=12",
+      "kind": "api0",
+      "observed_at": "2026-09-08T14:54:33.475789+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 4690,
+      "sha256": "9ec84b34d57873ee9f2dd021c0529b4b6bd36ce57129815ac3d5c41bf7e556a5",
+      "file": "ieses_open-api0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "verbena_selection",
+      "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio",
+      "kind": "news0",
+      "observed_at": "2026-09-08T14:54:33.475789+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 91316,
+      "sha256": "54304c86f7472cd0afc66eed2a0539fded4fd88ae3cc0f3d21b1d702cb11c6fc",
+      "file": "verbena_selection-news0.html",
+      "encoding": "utf-8",
+      "title": "Instituto Verbena/UFG publica edital do Concurso Público da Câmara Municipal de Pires do Rio | Instituto Verbena",
+      "links": [
+        {
+          "url": "http://portais.ufg.br/login?back_url=https%3A%2F%2Finstitutoverbena.ufg.br%2Fn%2F204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio",
+          "title": ""
+        },
+        {
+          "url": "http://brasil.gov.br",
+          "title": "Portal do Governo Brasileiro"
+        },
+        {
+          "url": "http://epwg.governoeletronico.gov.br/barra/atualize.html",
+          "title": "Atualize sua Barra de Governo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio#component_47382",
+          "title": "Ir para o menu"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio#search",
+          "title": "Ir para busca"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio?atr=pt-BR&locale=pt-BR",
+          "title": "Português (Brasil)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43639-apresentacao",
+          "title": "Apresentação"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43635-estrutura-organizacional",
+          "title": "Diretoria"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43637-equipe",
+          "title": "Equipe"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42954-nossos-servicos",
+          "title": "Nossos serviços"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=clientes",
+          "title": "Instituições Atendidas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/52430-biblioteca-virtual-iv-ufg",
+          "title": "Acervo Documental IV/UFG"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/sistema/cadastro_colaborador/",
+          "title": "Seja colaborador(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo",
+          "title": "Novos Editais"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-inscricao",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-andamento",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/login",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/sistema/arquivos/editais/VESTIBULAR_UFG_2027_EDITAL_.pdf",
+          "title": "Edital de Abertura"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Resultados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/concursos/inscricoes-abertas",
+          "title": "Realizar Inscrição"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/recurso/create",
+          "title": "Protocolar Recurso"
+        },
+        {
+          "url": "https://sisu.ufg.br/",
+          "title": "Sisu"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/SiSU+/",
+          "title": "SiSU+ / UFG 2026"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=ProcessosSeletivos",
+          "title": "Processos Seletivos e Outros"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-ProcessosSeletivos-inscricoes",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/44300-conheca-nossos-cursos-de-formacao-e-qualificacao",
+          "title": "Conheça nossos cursos"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/iv/projeto-fatos-e-fotos/",
+          "title": "Fatos e Fotos"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://files.cercomp.ufg.br/weby/up/1344/o/Capa_not%C3%ADcia_Pires_do_Rio.png?1788434035",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news",
+          "title": "Listar Todas"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "PORTAL DO(A) CANDIDATO(A)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/",
+          "title": "CADASTRO DE COLABORADORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "CONCURSOS E SELEÇÕES ANTERIORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "VESTIBULAR UFG"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42685-duvidas-frequentes",
+          "title": "DÚVIDAS FREQUENTES"
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://goo.gl/maps/UTuBoPa4DsSQ1DjZ6",
+          "title": "Como chegar"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/intranet/login",
+          "title": ""
+        },
+        {
+          "url": "https://sic.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio#barra-brasil",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2",
+        "https://www.googletagmanager.com/gtag/js?id=G-ZM2RZ9ZXMJ",
+        "https://files.cercomp.ufg.br/weby/assets/base-7d1e002559959ecfa80acc89fff49e8acf6b79e7d3376ed8cc1f1e64be62d3d5.js",
+        "https://files.cercomp.ufg.br/weby/assets/level2-dd37a8e3f53914297921fc457ec7015c72c48c5bfb9972751d2f1f24b06c45bf.js",
+        "https://barra.brasil.gov.br/barra.js",
+        "https://files.cercomp.ufg.br/weby/assets/show-22e5db160cd54185f1184b68589f7e1591f7c7c6256041e08d936e13b375a460.js",
+        "https://files.cercomp.ufg.br/weby/assets/changeContrast-6eb2f5ffd73aa3aed2f2b026fd3cd2e8b6c6b4c72094d2fa54b976bcdc543020.js",
+        "https://files.cercomp.ufg.br/weby/assets/auto_translate-ea6ddb17d6b45ab26d74097be79d6f5cbea4197434fc7852bd84428ef18ff7d3.js",
+        "https://files.cercomp.ufg.br/weby/assets/search_action-f5db909a939074bf3312b935d3028ca99704739dc4c5aa967fcc268c83228f3a.js"
+      ]
+    },
+    {
+      "source": "fepese_open",
+      "url": "https://2026seletivocomcap.fepese.org.br",
+      "kind": "detail1",
+      "observed_at": "2026-09-08T14:54:33.475789+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 9457,
+      "sha256": "d61571671fc929d1362a5032c10417891cdffff6dbd2e22b166e95e78fe9639c",
+      "file": "fepese_open-detail1.html",
+      "encoding": "windows-1252",
+      "title": "2026 - SELETIVO COMCAP",
+      "links": [
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": "Principal"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": "Edital"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": "Perguntas"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": "Cronograma"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br/inscricao/#!/edital/61abd376e18e1cd4f2a5679626aff280",
+          "title": "Inscrição"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": "Contato"
+        },
+        {
+          "url": "https://ssl.fepese.org.br/2026/2026seletivocomcap/area-restrita/#!/acessar",
+          "title": "Acesso restrito ao Candidato"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=download&inline=1&arquivo=2026_Memorando_Resultado_Recursos_E1_Ed01.pdf",
+          "title": "Resultado dos Recursos Indeferimento dos Pedidos Isenção na Taxa Inscrição"
+        },
+        {
+          "url": "https://ssl.fepese.org.br/2026/2026seletivocomcap/?go=recurso&edital=1&etapa=1",
+          "title": "Interposição de Recurso Indeferimento dos Pedidos Isenção na Taxa Inscrição"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br?go=download&inline=1&arquivo=2026_PS_COMCAP_lst_isentos.pdf",
+          "title": "Resultado dos Requerimentos de Isenção do Pagamento da Taxa de Inscrição"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://2026seletivocomcap.fepese.org.br/class/funcoes.js"
+      ]
+    }
+  ]
+}

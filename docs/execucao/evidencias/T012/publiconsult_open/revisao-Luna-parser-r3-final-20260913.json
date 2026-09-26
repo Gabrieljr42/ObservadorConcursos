@@ -1,0 +1,20 @@
+{
+  "schema": "t012.publiconsult.luna-parser-r3-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "PUBLICONSULT_PARSER_R3_REJECT_FOR_INTEGRATION",
+  "scope": "read-only; no shared extractor/registry/import/proposal/pilot mutation",
+  "checks": {
+    "pins": "PASS: source publiconsult_open/external 681; PDF SHA 7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f; local artifact 720592 bytes",
+    "identity_values": "PASS in fixture: Votuporanga/SP and Processo Seletivo 1/2026; focused tests 2 passed; compileall passed",
+    "guards": "PARTIAL: source/external/SHA and text identity are guarded, but parse_pdf_bytes has no U+FFFD guard, no page/truncation/error contract, and no expected page count/byte-length check",
+    "contract": "FAIL: return is an ad-hoc dict with a non-JSON-serializable set identity_ids, no Evidence/artifact_id/source_url/page/snippet/content receipt, and strong_binding compares only fields/source/external. It is explicitly evidence-scoped and cannot feed real _revalidate/_reproduced_evidence.",
+    "preflight": "PASS only as offline diagnostic: prior strong-preflight correctly records shared binding blocked; no proposal or mutation"
+  },
+  "required_corrections": [
+    "Return formal ReviewedRun-compatible evidence (or an adapter contract that constructs it) with artifact/SHA/URL/page/snippet/validation and JSON-safe identity IDs.",
+    "Add fail-closed U+FFFD/page completeness guards and an isolated real-path _revalidate/importer test before integration."
+  ],
+  "evidence": ["docs/execucao/evidencias/T012/publiconsult_open/publiconsult_parser_r3.py","docs/execucao/evidencias/T012/publiconsult_open/strong-preflight-r3.json","docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py"],
+  "safety": "No integration or external mutation was performed."
+}

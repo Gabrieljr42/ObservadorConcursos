@@ -1,0 +1,59 @@
+{
+  "schema": "t012.official-candidate-group-b-review.v1",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only",
+  "snapshot": "docs/execucao/evidencias/T012/auth-catalog-snapshot-20260913.json",
+  "snapshot_limits": {
+    "status": "OFFLINE_PERSISTED_SNAPSHOT",
+    "contests": 33,
+    "distinct_sources_with_real_selections": 32,
+    "source_ids_unique": true,
+    "contest_ids_unique": true,
+    "live_checkpoint": false,
+    "implication": "The five requested source_ids are absent from this 32-source/33-selection snapshot; this is not a live absence proof and no selection is promoted."
+  },
+  "global_findings": {
+    "identity": "Each requested source has a distinct catalog source_id and no_catalogue_alias_detected in docs/tenderproof-sources-99.json.",
+    "duplicates": "No duplicate source_id or contest_id exists in the sanitized snapshot. Candidate-specific orgao/edital/external_id tuples are not present, so no candidate can be cleared for duplicate-free publication before its envelope is supplied.",
+    "proposal_minimum": "No current source-specific envelope with official artifact, exact selection identity, fields, and provenance was supplied for any of the five candidates."
+  },
+  "reviews": [
+    {
+      "number": 54,
+      "source_id": "avancasp_open",
+      "verdict": "REJECT",
+      "reason": "Historical observation has one contest candidate/document link, but document_evidence is links_observed_unvalidated and legacy state is BROKEN; product status is incomplete and explicitly not whole-source certification. No current exact identity or proposal evidence proves a publishable selection.",
+      "evidence": ["docs/tenderproof-sources-99.json#number=54", "docs/tenderproof-product-status.json#sources[avancasp_open]", "backend/docs/LIVE_AUDIT_DEEP_RESOLUTION.md#54"]
+    },
+    {
+      "number": 69,
+      "source_id": "fafipa_open",
+      "verdict": "REJECT",
+      "reason": "Historical observation has five candidate links, but all document content is unvalidated, legacy state is BROKEN, and product status is only a bounded partial sample. No current official artifact, exact external identity, or field provenance is sufficient for proposal.",
+      "evidence": ["docs/tenderproof-sources-99.json#number=69", "docs/tenderproof-product-status.json#sources[fafipa_open]", "backend/docs/LIVE_AUDIT_DEEP_RESOLUTION.md#69"]
+    },
+    {
+      "number": 1,
+      "source_id": "ibfc_open",
+      "verdict": "REJECT",
+      "reason": "The preserved source observation is EMPTY_VERIFIED with zero document links; product status is blocked/incomplete. No selection, personnel-publicability evidence, or candidate identity exists for an envelope.",
+      "evidence": ["docs/tenderproof-sources-99.json#number=1", "docs/tenderproof-product-status.json#sources[ibfc_open]", "backend/docs/LIVE_AUDIT_DEEP_RESOLUTION.md#1"]
+    },
+    {
+      "number": 21,
+      "source_id": "epl_open",
+      "verdict": "REJECT",
+      "reason": "The preserved source observation is EMPTY_VERIFIED with zero document links; product status is incomplete and only partial historical discovery is recorded. No current selection or proposal minimum evidence is present.",
+      "evidence": ["docs/tenderproof-sources-99.json#number=21", "docs/tenderproof-product-status.json#sources[epl_open]", "backend/docs/LIVE_AUDIT_DEEP_RESOLUTION.md#21"]
+    },
+    {
+      "number": 56,
+      "source_id": "publiconsult_open",
+      "verdict": "REJECT",
+      "reason": "Historical observation has five candidate links, but document content is unvalidated, legacy state is EMPTY_VERIFIED, and product status is only a bounded partial sample. No exact current selection identity, publicability, or field provenance supports a proposal.",
+      "evidence": ["docs/tenderproof-sources-99.json#number=56", "docs/tenderproof-product-status.json#sources[publiconsult_open]", "backend/docs/LIVE_AUDIT_DEEP_RESOLUTION.md#56"]
+    }
+  ],
+  "not_preapproved": true,
+  "next_gate": "Provide a source-specific envelope for a current official personnel selection with artifact/hash, source/external_id/orgao/edital identity, fields/evidence and duplicate check; then reassess as ELIGIBLE_PENDING_ENVELOPE only if those checks pass."
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "t012.artifact-receipt.v1",
+  "source": "aguia_open",
+  "external_id": "43",
+  "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+  "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+  "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+  "observed_at": "2026-09-13T07:46:45.8898683-03:00",
+  "http_status": 200,
+  "content_type": "application/pdf",
+  "artifact_path": "docs/execucao/evidencias/T012/aguia_open/artifacts/aguia-43.pdf",
+  "byte_len": 501543,
+  "sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+  "pages": 18,
+  "tls": "strict HTTPS; one GET; no crawling",
+  "network_scope": "single official PDF URL",
+  "parser": "backend/app/tenderproof/aguia_balsamo.py",
+  "strong_preflight": "docs/execucao/evidencias/T012/aguia_open/strong-preflight-r1.json"
+}

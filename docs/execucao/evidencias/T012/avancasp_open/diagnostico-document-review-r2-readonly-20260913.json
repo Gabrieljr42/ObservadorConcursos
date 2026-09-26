@@ -1,0 +1,12 @@
+{
+  "schema": "t012.avancasp.avancasp-r2-readonly-diagnosis.v1",
+  "timestamp": "2026-09-13T14:27:28Z",
+  "scope": "read-only GET/log/artifact listing; no prepare/retry/approve/proposal/apply",
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "case_id": "drc-preserved-1d4a34207027a52670a51a736a125257",
+  "get_state": {"pending": true, "pending_count": 2, "current_documents": 1, "current_sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "current_bytes": 750381, "current_pages": 48, "field_states": "all failed"},
+  "artifact_origin": {"source_file": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf", "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "byte_len": 750381, "store_files": ["avancasp-open-edital-272-bbc8f6fc-c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637.pdf", "art-c65cbd1e1e-c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637.pdf"]},
+  "finding": "O SHA c60fcc... existe no arquivo local e em dois basenames hash-addressed do store. A falha é de pin do parser: o contrato AvançaSP espera b0ba.../742298, enquanto este primeiro PDF R2 é c60fcc.../750381; o parser fail-closed marcou todos os campos failed.",
+  "api_log": {"prepare_http": 200, "current_get_http": 200, "worker_matching_entries": false},
+  "mutation_boundary": "Apenas o caso documental foi criado pela prepare autorizada; não houve approve/proposal/apply."
+}

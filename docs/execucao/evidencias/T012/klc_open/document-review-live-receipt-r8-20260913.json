@@ -1,0 +1,48 @@
+{
+  "schema": "t012.klc_open.document-review-live-receipt-r8.v1",
+  "recorded_at": "2026-09-13T17:10:15.2990494Z",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "owner_user_id": 1,
+  "source_id": 57,
+  "external_id": "632",
+  "review_basis": "revisao-Luna-document-review-r8-20260913.json",
+  "preflight": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": 200,
+    "pending": true,
+    "documents": 1,
+    "pending_document": {
+      "kind": "retificacao",
+      "title": "Retificação 1 - Alteração da Data da Prova",
+      "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf"
+    },
+    "counts_before": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "versions": 93, "outbox": 93, "notifications": 92, "favorites": 0, "alerts": 1}
+  },
+  "requested_operation": {
+    "endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "attempts": 1,
+    "document": {"title": "Retificação 1 - Alteração da Data da Prova", "kind": "retificacao", "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf"},
+    "artifact": {"artifact_id": "art-klc-ret1-1887b316", "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60", "byte_len": 423600, "expected_page_count": 1, "content_type": "application/pdf"},
+    "decision_scope": {"field": "prova_data", "old": "2026-05-10", "new": "2026-05-17", "other_fields_promoted": false}
+  },
+  "operation_result": {
+    "http": null,
+    "response_body": null,
+    "client_capture_error": "PowerShell HttpResponseMessage exception wrapper failed while reading the single response; no retry was made",
+    "case_id": null,
+    "revision_hash": null,
+    "approval": false,
+    "proposal": false,
+    "apply": false
+  },
+  "postflight": {
+    "current_case": null,
+    "pending": true,
+    "documents": 1,
+    "catalog_mutation": false,
+    "counts_after": "unchanged; 35 contests/34 sources/188 cargos/93 versions/93 outbox/92 notifications/fav0/alert1"
+  },
+  "result": "KLC_PREPARE_R8_BLOCKED_NO_CASE_CAPTURED",
+  "stop_rule": "One prepare-preserved call only; no retry, fallback, document approval, proposal or apply. A new attempt requires exact server response capture and fresh authorization."
+}

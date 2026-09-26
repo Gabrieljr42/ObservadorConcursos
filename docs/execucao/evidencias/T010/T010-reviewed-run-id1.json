@@ -1,0 +1,25 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "access_open",
+  "concurso_id": 1,
+  "external_id": "183",
+  "title": "Prefeitura Municipal de Birigui/SP",
+  "detail_url": "https://access.selecao.net.br/informacoes/183/",
+  "observed_at": "2026-09-12T19:52:00-03:00",
+  "reference_only": true,
+  "owner_user_id": 1,
+  "pending_fields": [],
+  "artifact": {
+    "artifact_id": "art-5c4c41a458",
+    "sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "byte_len": 496688,
+    "url_requested": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+    "url_final": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-12T19:52:00-03:00",
+    "content_path": "docs/execucao/evidencias/T010/id1.pdf"
+  },
+  "fields": [
+    {"field_name": "cargos", "value": [{"nome": "Professor Auxiliar", "vagas_imediatas": 10, "cadastro_reserva": null, "vagas_ampla_concorrencia": 9, "vagas_pcd": 1, "remuneracao": "30.53", "moeda": "BRL", "remuneracao_observacao": "por hora-aula", "jornada": "até 40 horas semanais", "requisitos": "Licenciatura Plena em Pedagogia ou Normal Superior, ambas com habilitação na Educação Infantil e nos anos iniciais do Ensino Fundamental", "taxa_inscricao": null}], "original_value": null, "units": {"remuneracao": "BRL/hora-aula", "jornada": "horas semanais"}, "evidence": [{"evidence_id": "ev-b277b06133", "artifact_id": "art-5c4c41a458", "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "source_url": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf", "page_number": 2, "snippet": "Professor Auxiliar", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21"}, {"evidence_id": "ev-6d159ad57a", "artifact_id": "art-5c4c41a458", "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "source_url": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf", "page_number": 2, "snippet": "Licenciatura Plena em\nPedagogia ou Normal\nSuperior, ambas com\nhabilitação na Educação\nInfantil e nos anos iniciais do\nEnsino Fundamental", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21"}, {"evidence_id": "ev-2004199231", "artifact_id": "art-5c4c41a458", "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "source_url": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf", "page_number": 2, "snippet": "Até 40 horas semanais", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21"}, {"evidence_id": "ev-bb6142d545", "artifact_id": "art-5c4c41a458", "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "source_url": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf", "page_number": 2, "snippet": "R$ 30,53 hora-\naula", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21"}, {"evidence_id": "ev-3e69ea1c83", "artifact_id": "art-5c4c41a458", "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "source_url": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf", "page_number": 2, "snippet": "09 01 10", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21"}]}
+  ]
+}

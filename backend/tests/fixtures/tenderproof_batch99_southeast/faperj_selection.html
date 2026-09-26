@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<base href="/"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="3600" http-equiv="expires">
+<meta content="2 days" name="revisit-after">
+<meta content="index,follow" name="robots">
+<meta content="global" name="distribution"/>
+<meta content="Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ" name="description"/>
+<meta content="pesquisa, ciência, tecnologia, Rio de Janeiro" name="keywords"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="//cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet"/>
+<title>FAPERJ</title>
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet"/>
+<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/rss.php" rel="alternate" title="FAPERJ - Notícias" type="application/rss+xml"/>
+<link href="/busca/busca.xml" rel="search" title="Busca da FAPERJ" type="application/opensearchdescription+xml"/>
+<meta content="website" property="og:type"/>
+<meta content="http://www.faperj.br/" property="og:url"/>
+<meta content="FAPERJ" property="og:site_name"/>
+<meta content="" property="og:title"/>
+<meta content="http://www.faperj.br/image_FAPERJ_2012/img_15.jpg" property="og:image:url"/>
+<meta content="" property="og:description"/>
+<!-- JQUERY -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="/css/style.css" rel="stylesheet"/>
+<link href="/css/menu.css" rel="stylesheet"/>
+<!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0JLB90FBV"></script>-->
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LBJS656QN2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBJS656QN2');
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J0JLB90FBV');
+</script>
+<script type="text/javascript">
+function fonte(e){
+	var elemento = $(".tamanho-fonte");
+	var fonte = elemento.css('font-size');
+	if (e == 'a') {
+		elemento.css("fontSize", parseInt(fonte) + 1);
+	} else if('d'){
+		elemento.css("fontSize", parseInt(fonte) - 1);
+	}
+} 
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-64617817-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+<script type="text/javascript">
+function partShow(el, n) {
+  const i = 7;
+  var editais = el.querySelectorAll('div.edital'),y=0,style;
+  for (var x=0;x<editais.length;x++) {
+    if (x < i) {
+      editais[x].style['display'] = 'block';
+      continue;
+    }
+    if (editais[x].style['display'] == 'block') continue;
+    if (y==n) break;
+    y++;
+    editais[x].style['display'] = 'block';
+    if (x == editais.length-1) el.querySelector('div#vejaMais').style['display'] = 'none';
+  }
+}
+window.addEventListener('load',function() {
+  partShow(document.querySelector('section.destaques1'), 0);
+  document.getElementById('vejaMais').addEventListener('click',function() {partShow(document.querySelector('section.destaques1'), 2)});
+});
+ </script>
+<meta content="0aea803d-cf8f-492d-849d-a0e4b777866d" name="adopt-website-id"/>
+<script class="adopt-injector" src="//tag.goadopt.io/injector.js?website_code=0aea803d-cf8f-492d-849d-a0e4b777866d"></script>
+</meta></meta></meta></head>
+<body>
+<!--topo-->
+<header class="container-topo" style="margin:0">
+<section class="row" style="margin:0">
+<section class="container-topo1">
+<section class="row">
+<section class="col-lg-12">
+<div class="acessibilidade">
+<button onclick="fonte('a');"><img alt="Aumentar fonte" src="imgs/+A.png"/></button>
+<button onclick="fonte('d');"><img alt="Diminuir fonte" src="imgs/-A.png"/></button>
+<a href="https://www.vlibras.gov.br/" style="padding-right:15px" target="_blank"><img alt="Linguagem Libras" src="imgs/icone_libras.png"/></a>
+<a href="https://www.facebook.com/faperj" target="_blank"><img alt="Facebook" src="imgs/icone_facebook.png"/></a>
+<a href="https://twitter.com/faperj" target="_blank"><img alt="X" src="imgs/icone_twitter.png"/></a>
+<a href="https://www.instagram.com/faperjoficial/" target="_blank"><img alt="Intagram" src="imgs/icone_instagram.png"/></a>
+<a href="https://www.youtube.com/c/FAPERJoficial" target="_blank"><img alt="YouTube" src="imgs/icone_youtube.png"/></a>
+<a href="https://www.linkedin.com/company/fundacao-carlos-chagas-filho-de-amparo-a-pesquisa-do-estado-do-rio-de-janeiro-faperj" style="padding-right:15px" target="_blank"><img alt="Linkedin" src="imgs/icone_linkedin.png"/></a>
+<a href="https://siteantigo.faperj.br/" target="_blank"><img alt="Site antigo" src="imgs/botao-site-antigo.png"/></a>
+</div>
+</section>
+</section>
+</section>
+<section class="container-topo2">
+<section class="container">
+<section class="row">
+<section class="col-lg-12">
+<section class="logo-faperj col-lg-6">
+<a href="/"><img alt="logomarca da FAPERJ" src="imgs/logo_faperj_branco.png"/></a>
+</section>
+<section class="busca col-lg-6">
+<form accept-charset="UTF-8" action="/busca/" class="navbar-form navbar-right" method="get" name="frm1">
+<div class="form-group">
+<input class="form-control" name="q" placeholder="" type="text"/>
+</div>
+<button class="btn btn-default" type="submit">Buscar</button>
+</form>
+</section>
+</section>
+</section>
+</section>
+</section>
+<!--menu-->
+<section class="header_area" id="header-area">
+<section class="header_bottom">
+<section class="container">
+<section class="row" style="margin:0">
+<section class="col-lg-12" style="padding:0">
+<nav class="navbar navbar-default mainmenu" role="navigation">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="nav navbar-nav dropdown" id="fresponsive"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Transparência<span class="caret"></span></a><ul class="dropdown-menu"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Institucional<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=56.5.7">Estrutura Organizacional</a></li><li><a href="/?id=57.5.4">Competências</a></li><li><a href="/?id=58.5.1">Base Jurídica</a></li><li><a href="/?id=59.5.9">Quem é Quem</a></li><li><a href="/?id=60.5.1">Localização e telefone</a></li></ul></li><li><a href="/?id=10.5.0">Ações e Programas</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Participação Social<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=61.5.9">Ouvidoria</a></li><li><a href="/?id=62.5.6">Conselhos e Órgãos Colegiados</a></li></ul></li><li><a href="/?id=12.5.5" target="_blank">Auditorias</a></li><li><a href="/?id=13.5.2">Convênios e Acordos</a></li><li><a href="/?id=14.5.0">Receitas e Despesas</a></li><li><a href="/?id=15.5.7">Licitações e Contratos</a></li><li><a href="/?id=16.5.4">Servidores</a></li><li><a href="/?id=17.5.1">Informações Classificadas</a></li><li><a href="/?id=18.5.9">Serviço de informação ao cidadão - SIC</a></li><li><a href="/?id=19.5.6">Perguntas Frequentes - FAQ</a></li><li><a href="/?id=20.5.9">Dados Abertos</a></li><li><a href="/?id=116.5.1">PEDTIC - FAPERJ</a></li><li><a href="/?id=117.5.8">Carta de Serviços ao Usuário da FAPERJ</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">A FAPERJ<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=22.5.3">Quem Somos</a></li><li><a href="/?id=23.5.0">Quem é Quem</a></li><li><a href="/?id=24.5.8">Conselhos e Órgãos Colegiados</a></li><li><a href="/?id=25.5.5">Base Jurídica</a></li><li><a href="/?id=26.5.2">Logo Faperj</a></li><li><a href="/?id=27.5.0">Localização e Telefone</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Linhas de Fomento<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=28.5.7">Lista de Editais</a></li><li><a href="/?id=112.5.6">Lista de Bolsas e Auxílios</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Bolsas<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=64.5.0">Iniciação Científica (IC)</a></li><li><a href="/?id=65.5.8">Iniciação Tecnológica (IT)</a></li><li><a href="/?id=85.5.4">Mestrado (MSC-10) e Doutorado (DSC-10) Nota 10</a></li><li><a href="/?id=86.5.1">Doutorado Sanduíche</a></li><li><a href="/?id=87.5.9">Doutorado Sanduíche Reverso</a></li><li><a href="/?id=67.5.2">Pós-Doutorado (PD)</a></li><li><a href="/?id=88.5.6">Bolsas de Bancada para Projetos (BBPs)</a></li><li><a href="/?id=89.5.3">Bolsa de Bancada para Apoio a Pesquisador Visitante (BAPV)</a></li><li><a href="/?id=68.5.0">Pesquisador Visitante (PV)</a></li><li><a href="/?id=90.5.6">Pesquisador Visitante Emérito (PVE)</a></li><li><a href="/?id=91.5.3">Inovação Tecnológica (INT)</a></li><li><a href="/?id=92.5.0">Treinamento e Capacitação Técnica (TCT)</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Auxílios<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=69.5.7">Auxílio à Pesquisa (APQ 1)</a></li><li><a href="/?id=70.5.0">Auxílio à Organização de Evento Científico (APQ 2)</a></li><li><a href="/?id=71.5.7">Auxílio à Editoração (APQ 3)</a></li><li><a href="/?id=72.5.4">Auxílio à Conservação e Infraestrutura de Acervo (APQ 4)</a></li><li><a href="/?id=93.5.8">Auxílio à Participação em Reunião Científica (APQ 5)</a></li><li><a href="/?id=94.5.5">Auxílio a Pesquisador Visitante (APV)</a></li><li><a href="/?id=95.5.2">Auxílio ao Pesquisador Recém-Contratado (ARC)</a></li><li><a href="/?id=73.5.1">Auxílio ao Desenvolvimento e à Inovação Tecnológica (ADT 1)</a></li><li><a href="/?id=96.5.0">Auxílio à Inserção de Novas Tecnologias no Mercado (ADT 2)</a></li><li><a href="/?id=97.5.7">Auxílio à criação, reforço e modernização de infraestrutura (ADT 3)</a></li><li><a href="/?id=98.5.4">Auxílio à Inovação Tecnológica no Setor Rural (ADT 4)</a></li></ul></li><li><a href="/?id=31.5.4">Programas</a></li><li><a href="/?id=33.5.9">Cooperação Internacional</a></li><li><a href="/?id=106.5.4">Relações Institucionais</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Comunicação<span class="caret"></span></a><ul class="dropdown-menu"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Boletim Online<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=74.5.9">Boletim semanal</a></li><li><a href="/?id=75.5.6">Arquivo de Boletins</a></li><li><a href="/?id=76.5.3">Inscrição</a></li></ul></li><li><a href="/?id=35.5.3">Arquivo de notícias</a></li><li><a href="/?id=36.5.0">Revista Rio Pesquisa</a></li><li><a href="/?id=37.5.8">Fale com a Assessoria de Comunicação</a></li><li><a href="/?id=38.5.5">Arquivo de publicações</a></li><li><a href="/?id=39.5.2">Logo Faperj</a></li><li><a href="/?id=40.5.5">Vídeo institucional</a></li><li><a href="/?id=118.5.4" target="_blank">Site da FAPERJ antigo</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Serviços<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=110.5.3" target="_blank">Sistema de Prestação de Contas</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Sistema Eletrônico de Informações - SEI-RJ<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=77.5.0" target="_blank">Usuário Externo</a></li><li><a href="/?id=78.5.8">Instruções para Cadastramento de Usuário Externo</a></li></ul></li><li><a href="/?id=42.5.0">Formulários</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Tutoriais<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=111.5.0" target="_blank">Tutorial de utilização do sistema de Prestação de Contas financeira</a></li><li><a href="/?id=79.5.5">Concessão de Auxílios e Bolsas</a></li><li><a href="/?id=80.5.8">Cadastramento de Usuário Externo no SEI</a></li><li><a href="/?id=81.5.5">Cancelamento de Auxílios e Bolsas</a></li><li><a href="/?id=82.5.2">Remanejamento de valores de Auxílios</a></li><li><a href="/?id=100.5.6">Instruções para envio de Relatórios de Atividades de Bolsas via SisFaperj</a></li><li><a href="/?id=103.5.5">Prorrogação do prazo de execução de projetos</a></li></ul></li><li><a href="/?id=44.5.4">Prestação de Contas</a></li><li><a href="/?id=45.5.1">Valores de Bolsas e Auxílios</a></li><li><a href="/?id=46.5.9">Calendário de Auxílios e Bolsas</a></li><li><a href="/?id=47.5.6">Índice Geral das Áreas</a></li><li><a href="/?id=48.5.3">Setores</a><ul class="dropdown-menu"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Webmail FAPERJ<span class="caret"></span></a></li></ul></li><li><a href="/?id=49.5.0">Links Úteis</a></li><li><a href="/?id=50.5.3" target="_blank">Valores de Diárias de Projetos</a></li><li><a href="/?id=51.5.0">Perguntas Frequentes - FAQ</a></li><li><a href="/?id=102.5.9" target="_blank">Webmail FAPERJ</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Fale Conosco<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/?id=52.5.8">Perguntas Frequentes - FAQ</a></li><li><a href="/?id=53.5.5">Central de Atendimento</a></li><li><a href="/?id=54.5.2">Ouvidoria</a></li><li><a href="/?id=55.5.0">Localização e telefones</a></li></ul></li><li><a href="/?id=8.5.2" target="_blank">SisFAPERJ</a></li><li><a href="/?id=115.5.5" target="_blank">FAQ</a></li></ul> </div>
+</nav>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</header>
+<!--BANNER-->
+<section class="container-slider">
+<section class="container">
+<section class="row">
+<section class="col-lg-12" style="padding:0">
+<div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Guilherme Madureira								</div><a href="/?id=1102.7.9">
+<img class="img-responsive" src="rp/imgs/auditorioProFix_GuilhermeMadureira_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1102.7.9"><h1>FAPERJ anuncia ProFix e entrega outorgas do edital para INCTs</h1></a>
+<p>Em cerimônia no Palácio Guanabara, Fundação anunciou o lançamento do Programa de Fixação de Doutores (ProFix), em parceria com CNPq e Capes. Durante o evento, houve a entrega de outorgas aos pesquisadores contemplados no edital de apoio aos INCTs, nas edições 2022 e 2024.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Reprodução MVIM								</div><a href="/?id=1099.7.7">
+<img class="img-responsive" src="rp/imgs/Pagina-MVIM-1_gr2.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1099.7.7"><h1>Museu Virtual de Instrumentos Musicais ganha projeção internacional</h1></a>
+<p>Projeto financiado pela FAPERJ desde sua concepção, o Museu Virtual de Instrumentos Musicais, idealizado e desenvolvido pelo Ibict em parceria com a UFRJ, ganha visibilidade no exterior. Será apresentado em 4 países, a fim de estabelecer parcerias com instituições europeias, trocar conhecimentos e enriquecer seu acervo. </p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Phillippe Lima/Governo do Estado								</div><a href="/?id=1098.7.1">
+<img class="img-responsive" src="rp/imgs/premiacao-Transforma-RJ-2_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1098.7.1"><h1>Servidores do Estado são protagonistas da 1ª edição do Prêmio Transforma RJ</h1></a>
+<p>Foram premiadas 9 iniciativas desenvolvidas por servidores estaduais para enfrentar desafios do dia a dia da administração pública, com foco na simplificação de serviços, na redução da burocracia e na melhoria da gestão. Cerimônia aconteceu nesta quarta (26/8), no Palácio Guanabara.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Débora Motta								</div><a href="/?id=1096.7.0">
+<img class="img-responsive" src="rp/imgs/Paulo-Hoff-Eliete_aula-magna_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1096.7.0"><h1>64º Congresso Científico do Hupe discute uso da Inteligência Artificial na Saúde</h1></a>
+<p>Com o tema “Saúde 5.0 – Conectando tecnologia e humanização”, congresso debate os desafios da Inteligência Artificial na Saúde. O oncologista Paulo Hoff ministrou aula magna e houve o anúncio da inauguração de duas novas alas no Hupe, na Oncologia e Nefrologia, que receberão equipamentos de ponta, adquiridos com apoio da FAPERJ.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Divulgação								</div><a href="/?id=1074.7.7">
+<img class="img-responsive" src="rp/imgs/planetario-Cecierj_Foto-Divulgacao-Museu-Ciencia-e-Vida_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1074.7.7"><h1>Como tornar acessível um espaço pensado para ser visto e escutado?</h1></a>
+<p>O Museu Ciência e Vida, espaço da Fundação Cecierj localizado em Duque de Caxias, investe para tornar o local mais acessível a pessoas cegas e surdas. Com modelos táteis e recursos sonoros, o Museu, que acaba de completar 16 anos dedicados à divulgação científica, quer atrair esse público para as suas atividades.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Divulgação								</div><a href="/?id=1092.7.9">
+<img class="img-responsive" src="rp/imgs/Equipe-Beach-Tennis-com-criancas_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1092.7.9"><h1>Bio Beach Open une ciência, esporte de alto rendimento e inclusão social</h1></a>
+<p>Evento vai reunir, na Praia do Flamengo, nos dias 22 e 23 de agosto, pessoas com diferentes experiências e faixas etárias em torno do <i>beach tennis</i>. Objetivo é ampliar o acesso à modalidade e criar oportunidades para a produção de conhecimento científico. Iniciativa é do Instituto Ingrid Tardit de Saúde Integrativa, com apoio da FAPERJ.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Magnific								</div><a href="/?id=1090.7.8">
+<img class="img-responsive" src="rp/imgs/futebol-Magnific_gr.jpg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1090.7.8"><h1>Pesquisador venezuelano reconhece apoio da FAPERJ a refugiados </h1></a>
+<p>Em visita à Fundação, Summar Alfredo Gómez Barrios pôde retribuir a bolsa recebida por meio do Programa de Apoio à Mobilidade e Instalação de Pesquisadores Originários de Regiões em Conflito ou Refugiados. Seu projeto é desenvolvido sob orientação do professor anfitrião Carlos Alberto Figueiredo da Silva, da Universo.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-lg-6; d-block w-100">
+<div class="credito-slide">
+									Foto: Camila Filardi								</div><a href="/?id=1088.7.5">
+<img class="img-responsive" src="rp/imgs/urna_kimonos-divulgacao_gr.jpeg"/></a>
+</div>
+<div class="tamanho-fonte">
+<div class="col-lg-5">
+<a href="/?id=1088.7.5"><h1>Projeto transforma kimonos de jiu-jítsu em moda sustentável</h1></a>
+<p>Contemplado no edital PISTA: Conectando Territórios Inovadores, o projeto Rocinha UP, que transforma resíduos têxteis, tatames e kimonos de jiu-jítsu em produtos de moda sustentável, será lançado neste sábado (15/8), na Rocinha. O evento marca o início da campanha de arrecadação de kimonos em academias da capital fluminense.</p><p>
+<a href="/?id=35.5.3">Arquivo de notícias +</a>
+</p></div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" data-slide="prev" href="#carousel-example-generic" role="button">
+<span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" data-slide="next" href="#carousel-example-generic" role="button">
+<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<!--CORPO 1-->
+<section class="container-corpo1" style="background:#f2f2f2">
+<section class="container">
+<section class="row">
+<section class="col-lg-12" style="padding-left:0px; padding-right:0px">
+<section class="containder-links">
+<section class="col-sm-2">
+<div class="central links">
+<a href="/?id=53.5.5"><i aria-hidden="true" class="fa fa-phone-square"></i><br/>
+<p>CENTRAL DE <br/>ATENDIMENTO</p>
+</a>
+</div>
+</section>
+<section class="col-sm-2">
+<div class="editais links">
+<a href="/?id=28.5.7"><i class="fas fa-file-signature"></i><br/>
+<p>EDITAIS ABERTOS<br/>E RESULTADOS</p>
+</a>
+</div>
+</section>
+<section class="col-sm-2">
+<div class="calendario links">
+<a href="/?id=46.5.9"><i class="fas fa-calendar-alt"></i><br/>
+<p>CALENDÁRIO DE <br/>AUXÍLIOS E BOLSAS</p>
+</a>
+</div>
+</section>
+<section class="col-sm-2">
+<div class="prestacao_contas links">
+<a href="/?id=44.5.4"><i class="fas fa-clipboard-list"></i><br/>
+<p>PRESTAÇÃO <br/>DE CONTAS</p>
+</a>
+</div>
+</section>
+<!--<section class="col-sm-2">
+									<div class="dab links">
+										<a href="/?id=79.5.5"><i class="fas fa-file-alt"></i><br>
+										<p>INSTRUÇÕES<BR>CONCESSÃO DE <BR>AUXÍLIOS e BOLSAS</p>
+										</a>
+									</div>
+								</section>
+								<section class="col-sm-2">
+									<div class="sisfaperj links">
+										<a href="https://sisfaperj.faperj.br/sisfaperj/"target="_blank"><i class="fas fa-desktop"></i><br>
+										<p>SISTEMA <br>SISFAPERJ</p>
+										</a>
+									</div>
+								</section>-->
+<section class="col-sm-2">
+<div class="sisfaperj links">
+<a href="https://sisfaperj.faperj.br/sisfaperj/" target="_blank"><i class="fas fa-desktop"></i><br/>
+<p>SISTEMA <br/>SISFAPERJ</p>
+</a>
+</div>
+</section>
+<section class="col-sm-2">
+<div class="sei links">
+<a href="https://sei.rj.gov.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;id_orgao_acesso_externo=6" target="_blank"><img src="imgs/icone_Sei.png"/><br/>
+<p>USUÁRIO<br/>EXTERNO</p>
+</a>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<!--CORPO 2-->
+<section class="container-corpo2" style="background:#fff">
+<section class="container">
+<section class="row">
+<section class="col-md-12" style="padding-left:0px; padding-right:0px">
+<section class="col-md-5" style="margin-left:0px">
+<section class="destaques1" style="background:#fff">
+<section class="titulo2">
+<section style="float:left;display:inline-block">EDITAIS</section>
+<a href="/?id=28.5.7">Lista de editais +</a>
+</section>
+<div class="edital" style="display:none;">
+<div class="credito-destaque1">
+							  Foto: Wikimedia						  </div>
+<a href="/?id=1105.7.5"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Academia_brasileira_de_letras_2_foto-Wolfhardt-Wikimedia_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1105.7.5"> <p>Resultado preliminar traz 11 propostas selecionadas no Programa de Apoio às Academias Nacionais Sediadas no Estado do RJ (Edital FAPERJ Nº 13/2026). Lista dos selecionados foi divulgada nesta quinta (3/9).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Pixabay						  </div>
+<a href="/?id=1100.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Arek-Socha_Pixabay_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1100.7.8"> <p>FAPERJ divulga lista preliminar das 200 empresas selecionadas para participar da Fase 2 do Programa Centelha 3 RJ (Edital FAPERJ Nº 12/2026), uma parceria com a Finep e o MCTI. Anúncio foi nesta terça (1º/9).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1094.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/PDR-foto-Drobotdean-Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1094.7.0"> <p>Fundação divulgou, nesta quinta (20/08), o resultado preliminar da 2ª janela do Programa Bolsa Nota 10 – Mestrado e Doutorado 2026 (Edital FAPERJ Nº 04/2026). Ao todo, foram selecionadas 118 propostas. </p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Sasin Tipchai/Pixabay						  </div>
+<a href="/?id=1089.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/PPSUS_foto-Sasin-Tipchai_Pixabay_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1089.7.0"> <p>FAPERJ divulga resultado preliminar da pré-seleção do Programa Pesquisa para o SUS (Edital FAPERJ Nº 11/2025), que teve 38 propostas selecionadas. Anúncio aconteceu nesta quinta (13/8). </p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Divulgação						  </div>
+<a href="/?id=1064.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Tatiana_tirada-do-video-do-JN_gr.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1064.7.0"> <p>As listas preliminares das propostas selecionadas no edital Apoio à Jovem Cientista Mulher – Dra Tatiana Sampaio (Edital FAPERJ Nº 08/2026) foram divulgadas nesta quinta (16/07). Foram selecionadas 98 propostas.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1067.7.7"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/PV-Magnific8_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1067.7.7"> <p>FAPERJ divulgou nesta quinta (16/7) o resultado preliminar dos programas Pesquisador Visitante (PV) e Visitante Emérito (PVE), editais Nº 05 e 06 de 2026. Foram concedidas 20 bolsas no âmbito do PV, e 11 bolsas para o PVE.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1069.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/editoracao_Magnific-peq5.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1069.7.8"> <p>Lista final do Programa de Apoio à Editoração (Edital Nº 03/2026) tem 138 aprovados. Chamada recebeu 391 propostas na fase inicial. Resultado foi divulgado nesta quinta (16/7).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Vecstock/Magnific						  </div>
+<a href="/?id=1065.7.6"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Amazonia_Vecstock-Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1065.7.6"> <p>A FAPERJ anunciou sua adesão à chamada do Programa 'Desafios da Amazônia' – parceria entre o Fundo Amazônia e o CONFAP. Objetivo é apoiar o desenvolvimento de soluções inovadoras na região.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Wirestock/Magnific						  </div>
+<a href="/?id=1066.7.1"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/parceria_wirestock-Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1066.7.1"> <p>A FAPERJ anunciou, nesta quinta (16/7), sua participação em 3 chamadas de cooperação internacional realizadas em parceria com o CONFAP e instituições internacionais.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: ArtPhoto Studio/Magnific						  </div>
+<a href="/?id=1054.7.4"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/transformacao-digial-industria_ArtPhoto-studio_Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1054.7.4"> <p>Com o Programa Prioridade Indústria RJ 4.0, Fundação, em parceria com a Firjan, mira a transformação digital na indústria fluminense. Anúncio do edital aconteceu nesta quinta (2/7).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Imagem gerada por IA 						  </div>
+<a href="/?id=1055.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/modificado-por-Gemini_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1055.7.0"> <p>A FAPERJ anunciou o lançamento do 'Programa Raízes: Estudos sobre a Diversidade Étnico-Racial e Religiosa no Estado do RJ' (Edital Nº 16/2026), em parceria com o MP/RJ. Anúncio aconteceu nesta quinta (2/7).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1057.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/HU-gerada-por-AI_Magnific2_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1057.7.0"> <p>A FAPERJ divulgou nesta quinta (2/7) o resultado preliminar do Programa de Apoio à Recuperação e Modernização da Infraestrutura de Hospitais Universitários (Edital Nº 01/2026): Seis propostas foram selecionadas.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1051.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/TCT-Magnific3_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1051.7.8"> <p>Fundação abre inscrições para uma nova edição do programa Treinamento e Capacitação Técnica – TCT (Edital FAPERJ Nº 14/2026). Inscrições vão até 31 de julho. Anúncio aconteceu nesta quinta (25/6).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Divulgação/ABL						  </div>
+<a href="/?id=1046.7.9"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/ABL-salaonobre-foto-Divulgacao_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1046.7.9"> <p>Fundação lançou nesta quinta (18/6) edital de 'Apoio às Academias Nacionais Sediadas no RJ'. Chamada apoiará a preservação, modernização e difusão de acervos científicos, técnicos, históricos e culturais.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1039.7.9"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Agro-futuro_rawpixel-com_Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1039.7.9"> <p>Programa 'Agro do Futuro' (Edital FAPERJ Nº 07/2026) teve 35 propostas aprovadas no resultado preliminar. O resultado contempla projetos distribuídos nas Faixas A, B e C. Anúncio aconteceu na sexta (12/6).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Arte: Divulgação/						  </div>
+<a href="/?id=1042.7.7"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/CENTELHA-2026_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1042.7.7"> <p>FAPERJ anunciou, nesta terça (16/06), o lançamento do Centelha 3 RJ (Edital N° 12/2026). Programa apoiará até 47 projetos para transformar ideias em empresas de base tecnológica.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: DC Studio/Magnific						  </div>
+<a href="/?id=1041.7.1"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Pesquisador-empresa-foto-DCStudio-Magnific_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1041.7.1"> <p>A FAPERJ anunciou nesta quinta (11/06) o resultado final do Programa Pesquisador na Empresa (Edital Nº 44/2025). Foram aprovados 118 projetos de inovação, contemplando a concessão de 139 bolsas.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Marcos Patricio						  </div>
+<a href="/?id=1027.7.1"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Sugestao-Capa_gr.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1027.7.1"> <p>A FAPERJ anunciou, nesta quarta (3/6), a lista dos projetos selecionados para a Fase 3 do programa HUB RJ Startup (Edital Nº 04/2025). Ao todo, 143 propostas foram classificadas para a última etapa do edital.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1037.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/InfraLab_Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1037.7.8"> <p>A FAPERJ divulgou nesta quarta (3/6) o resultado da 2ª Etapa de Avaliação de Mérito do Edital Nº 40/2025 – Apoio à Infraestrutura de Ambientes de Inovação e Laboratórios Compartilhados para Startups.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1024.7.5"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/PDR-10_Magnific4_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1024.7.5"> <p>Fundação divulgou nesta quinta (21/5) o resultado preliminar do programa Pós-Doutorado Nota 10. Ao todo, foram aprovadas 132 propostas, distribuídas entre 18 instituições de ensino e pesquisa fluminenses.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Magnific						  </div>
+<a href="/?id=1021.7.9"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/indicacao-geografica_foto-Magnific2_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1021.7.9"> <p>Um total de 16 projetos foi pré-aprovado após avaliação das propostas recebidas no Edital de Apoio às Indicações Geográficas no Estado do RJ (Edital Nº 45/2025). Resultado saiu nesta quinta (14/5).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Freepik						  </div>
+<a href="/?id=1016.7.0"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Tecnova-Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=1016.7.0"> <p>Com o anúncio nesta quinta (7/5) do resultado final do Programa Tecnova III (Edital FAPERJ Nº 32/2025), 43 empresas foram contempladas. Parceria com Finep, edital aborda temas prioritários para o RJ.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Freepik						  </div>
+<a href="/?id=975.7.5"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/LINE-Freepik1_gr.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=975.7.5"> <p>Resultado final do edital Líder de Inovação do Nosso Estado - LINE (Edital FAPERJ Nº 31/2025) aprovou 59 propostas em todo o estado do Rio de Janeiro. Listagem foi divulgada nesta quinta (26/2).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Reprodução 						  </div>
+<a href="/?id=965.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Prioridade-RJ_peq4.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=965.7.8"> <p>Programa Prioridade Rio (Edital Nº34/2025) tem 40 propostas aprovadas na fase final. Chamada é voltada à solução de desafios dos municípios fluminenses. Resultado saiu nesta quinta (12/2).</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto:Freepik						  </div>
+<a href="/?id=961.7.2"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/refugiados-Ira_Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=961.7.2"> <p>A FAPERJ divulgou, nesta quinta (5/2), o resultado da 3ª edição do Apoio à Mobilidade e Instalação de Pesquisadores Originários de Regiões em Conflito (Edital Nº 41/2025). Dez propostas foram aprovadas.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Freepik						  </div>
+<a href="/?id=941.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/Dr-empreendedor_Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=941.7.8"> <p>Após a conclusão de todas as etapas de avaliação previstas, a Fundação divulgou nesta terça (23/12) a lista final com as 36 propostas aprovadas no programa Doutor Empreendedor (Edital Nº 13/2025). </p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Freepik						  </div>
+<a href="/?id=884.7.8"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/DC-Studio3-Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=884.7.8"> <p>Divulgado nesta quinta (9/10) o resultado final do Programa Doutor Empreendedor – Fase 2 (Edital FAPERJ nº 10/2025). Os 20 projetos aprovados pela banca externa foram mantidos na lista final.</p></a>
+</div>
+</div>
+<div class="edital" style="display:none;">
+<hr style="width:100%;margin:0 0 15px 0;border-top:1px dotted #416378"/>
+<div class="credito-destaque1">
+							  Foto: Freepik						  </div>
+<a href="/?id=731.7.4"><img alt="Imagem responsiva" class="img-fluid" src="rp/imgs/cooperacao-internacional_Freepik_peq.jpg"/></a>
+<div class="tamanho-fonte">
+<a href="/?id=731.7.4"> <p>Estreitando a cooperação com a UE, América Latina e Caribe, a Fundação anunciou, nesta quinta (27/2), o apoio a 3 chamadas em parceria com o Confap: Mobility CONFAP Italy, EU-LAC e CDTI Espanha. </p></a>
+</div>
+</div>
+<div id="vejaMais" style="cursor: pointer;">
+<div style=" display: grid;grid-template-columns: auto 10px 10px auto;height: 10px;width: 100%;">
+<div style="border-top: 1px dotted #416378;"></div>
+<div style="background: linear-gradient(225deg, rgba(0,0,0,0) 6px,darkgray 7px,rgba(0,0,0,0) 8px, rgba(0,0,0,0));"></div>
+<div style="background: linear-gradient(136deg, rgba(0,0,0,0) 6px,darkgray 7px,rgba(0,0,0,0) 8px, rgba(0,0,0,0));"></div>
+<div style="border-top: 1px dotted #416378;"></div>
+</div>
+<div style="text-align: center;font-size: 1.2em;margin-bottom: 15px;color: dimgray;">Veja mais</div>
+</div>
+</section>
+</section>
+<section class="col-md-4">
+<section class="destaques1" style="background:#fff;margin-left:0px">
+<section class="titulo2">
+<section style="float:left;display:inline-block">COMUNICADOS</section>
+</section>
+<div class="tamanho-fonte">
+<div style="margin-top:20px;">
+<p><a href="/?id=1095.7.5"><b>EDITAL.</b> FAPERJ torna público o Edital de Eliminação de Documentos nº 01/2026, a documentação constante da listagem do edital poderá ser eliminada a partir do 45º dia subsequente à data de sua publicação.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=1025.7.0"><b>ATENÇÃO</b>: FAPERJ criará carteira de identificação para pesquisadores CNE e JCNE ativos, que devem responder a e-mail.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=802.7.7"><b>PRESTAÇÃO DE CONTAS / GRUPO III TEM PRAZO PRORROGADO</b>. A FAPERJ comunica que o prazo de entrega da Prestação de Contas (Relatório Técnico e Relatório Financeiro), de auxílios financeiros, incluindo as “Taxas de Bancada”, estabelecido para o Grupo III foi prorrogado até 31 de dezembro. Clique e confira o cronograma atualizado estabelecido para os Grupos I, II, III e IV.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=762.7.2"><b>COMUNICADO. </b>Confira informações sobre o Sistema de Prestação de Contas da Fundação e esclareça suas dúvidas.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=658.7.5"> <b>AVISO. </b>A FAPERJ informa que, após manutenção na rede, as linhas telefônicas foram reativadas e os serviços de comunicação com a Fundação restabelecidos.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=686.7.4"><b>IMPORTANTE</b>. Prazo para a execução física e financeira dos auxílios financeiros, anteriormente prorrogado, termina neste dia 30/11/2024. Aqueles que solicitaram prorrogação antes dessa data devem considerar como válido o prazo concedido na solicitação.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=660.7.1"><b>PRORROGADAS</b>. FAPERJ prorroga até 31/12/2025 bolsas de Cientista e Jovem Cientista do Nosso Estado (CNE e JCNE) contemplados na edição dos editais de 2021.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=312.7.3"></a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=278.7.7"><b>RELATÓRIO</b>. O encaminhamento de relatório de atividades para a FAPERJ tem nova alteração e passam a ser gerados digitalmente no ambiente SisFaperj.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=243.6.8"></a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=35.7.6"><b>DIRETRIZES</b>. Confira as diretrizes sobre a entrega de relatórios e renovação de bolsas com o término do atendimento presencial na sede.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=131.7.5"></a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=125.7.3"><b>SisFAPERJ.</b> Pedido de prorrogação do prazo de execução de projetos deve ser feito pelo SisFaperj.</a></p>
+</div>
+<div style="margin-top:20px;">
+<p><a href="/?id=84.7.0"><b>ALTERAÇÃO.</b> FAPERJ altera regras para bolsas de pós e atividades remuneradas.</a></p>
+</div>
+</div>
+</section>
+</section>
+<section class="col-md-3" style="padding-left:20px">
+<!--	<section class="sisfaperj" style="background:#fff; padding:0px">
+						<section class="titulo2-sisfaperj">
+							SISFAPERJ
+						</section>
+						<form class="form-sisfaperj">
+							<div class="login">
+								<h1>Login (CPF/CNPJ)</h1>
+								<input type="text" class="form-control" placeholder="Somente números" name="LOGIN">
+							</div>
+							<div class="senha">
+								<h1>Senha</h1>
+								<input type="password" name="password" class="form-control">
+							</div>
+								<h2><a href="">Esse é o meu primeiro acesso</a></h2>
+								<h2><a href="">Esqueci minha senha</a></h2>
+							<div class="div-btn-sisfaperj">
+								<button type="submit" class="btn-sisfaperj">Acessar</button>
+							</div>
+							
+							<h2>O sistema sisFAPERJ foi projetado para: Google Chrome e Mozzilla Firefox em ambiente Windows.</h2>
+						</form>
+					</section>-->
+<section class="avisos" style="background:#fff; padding:0px">
+<section class="titulo2" style="height:auto">
+							AVISOS IMPORTANTES
+						</section>
+<div class="tamanho-fonte">
+<div style="margin-top:10px;">
+<p><a href="/?id=206.6.8"><b>ATENDIMENTO PRESENCIAL NA FAPERJ PERMANECE SUSPENSO</b> – Contato com a Fundação deve ser feito pela Central de Atendimento ou de forma digital </a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=456.6.0"><b>OUTORGAS</b> - Devolução de outorgas de auxílio tem prazo máximo de 30 dias.</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=71.6.3"><b>RELATÓRIO PARCIAL</b> - Os bolsistas de Mestrado e Doutorado ficam <b>desobrigados</b> de apresentar, anualmente, o relatório parcial de atividades.</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=72.6.0"><b>ALTERAÇÃO DO CÓDIGO DA GRE</b> - Foi alterado o código da Guia de Recolhimento Estadual – GRE para a devolução de valores à FAPERJ</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=73.6.8"><b>CADASTRAMENTO USUÁRIO EXTERNO SEI-RJ</b> - Confira as instruções para cadastramento de "usuário externo" no ambiente SEI-RJ</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=313.6.4"><b>ACESSO À INFORMAÇÃO</b> - Todas as manifestações e pedidos de acesso à informação deverão ser feitos através do site da OUVERJ</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=70.6.6"><b>REGULAMENTO INTERNO DO EDIFÍCIO ESTÁCIO DE SÁ</b> - Não é permitido o acesso ao edifício que abriga a sede da FAPERJ trajando camisetas sem manga, shorts, bermudas e chinelos.</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=454.6.8"><b>ATUALIZAÇÃO CADASTRAL</b> - A FAPERJ solicita atualização dos dados cadastrais de seus pesquisadores para elaborar ações inclusivas.</a></p>
+</div>
+<div style="margin-top:10px;">
+<p><a href="/?id=455.6.4"><b>PAGAMENTOS VIA PIX</b> - A FAPERJ autoriza o pagamento a prestadores de serviços e/ou fornecedores por PIX</a></p>
+</div>
+</div></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<!--PUBLICAÇÕES-->
+<section class="container-publicacoes">
+<section class="container">
+<section class="row" style="padding:0">
+<section class="col-md-4" style="padding:0">
+<section class="boletim" style="background:#fff">
+<section class="titulo2">
+<section style="float:left;display:inline-block">BOLETIM ONLINE</section>
+<a href="/?id=75.5.6" style="color:#fff">Mais +</a>
+</section>
+<a href="/?id=219.8.5"><img src="rp/imgs/capa-boletim1059.jpg"/></a>
+<p>Semana de 3 a 9 de setembro de 2026. Ano XXIII. Nº 1059<br/></p>
+<h1><a href="/?id=219.8.5">Onze instituições têm propostas selecionadas no edital de Apoio às Academias</a></h1>
+<h2><a href="/?id=76.5.3">Assine grátis</a></h2><p></p>
+</section>
+</section>
+<section class="col-md-4" style="padding:0">
+<section class="acervo">
+<section class="titulo2">
+<section style="float:left;display:inline-block">ACERVO FAPERJ</section>
+<a href="/?id=101.6.8" style="color:#fff">Mais +</a>
+</section>
+<a href="/?id=525.6.0"><img src="rp/imgs/design-para-informacao100.jpg"/></a>
+<h1><a href="/?id=525.6.0"><b>Design para inovação</b><br/>Conceitos, proposições e casos no Brasil</a></h1>
+<p style="white-space: pre-line;">Organização: Vicente Cerqueira
+Colaboração: Rosane Fonseca de F. Martins
+Editora: Ciência Moderna
+Ano de lançamento: 2025
+
+
+</p>
+</section>
+</section>
+<section class="col-md-4" style="padding:0">
+<section class="revista">
+<section class="titulo2">
+<section style="float:left;display:inline-block">CANAL FAPERJ</section>
+<a href="https://www.youtube.com/c/FAPERJoficial" style="color:#fff" target="_blank">Mais +</a>
+</section>
+<div style="display: flex;width: 100%;height: calc(100% - 38px);align-items: center;justify-content: space-around;">
+<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/+lastest?list=UUtuy1fCHF3Nu-78nP9zBlMw" style="height: 85%;" width="85%"></iframe>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+<!--rodape-->
+<footer class="rodape-fim">
+<section class="container">
+<section class="row">
+<section class="col-lg-12">
+<section class="endereco">
+<div class="tamanho-fonte">
+<section style="font-size:1em;line-height:1.5em;margin-bottom:10px"><a href="/">Página Inicial</a> | <a href="/mapa.phtml">Mapa do site</a> | <a href="/?id=53.5.5">Central de Atendimento</a> | <a href="/?id=37.5.8">Créditos</a> | <a href="/?id=52.5.8" target="_self">Dúvidas frequentes</a></section>
+<section style="font-size:1.1em;line-height:1.6em;font-weight:700;margin-bottom:5px">FAPERJ - Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro</section>
+<section style="font-size:0.9em;color:#fff;line-height:1.3em">Av. Erasmo Braga 118 - 6º andar - Centro - Rio de Janeiro - RJ - Cep: 20.020-000 - <a href="tel:+552123332000">(21) 2333-2000</a></section>
+</div>
+</section>
+<section class="logos-rodape">
+<a href="http://www.rj.gov.br/" target="_blank"><img src="imgs/logo_RJ_SECTI_branco.png"/></a>
+<a href="https://www.rederio.br/" target="_blank"><img src="imgs/logo_Rede_Rio_peq.png"/></a>
+<a href="https://www.rj.gov.br/ouverj" target="_blank"><img src="imgs/logo-OUVERJ-branco.png"/></a>
+<a href="https://www.rj.gov.br/ouverj" target="_blank"><img src="imgs/logo_acesso_informacao_peq.png"/></a>
+<a href="https://sei.fazenda.rj.gov.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;id_orgao_acesso_externo=6" target="_blank"><img src="imgs/logo_Sei_RJ_peq.png"/></a>
+<img src="imgs/logo_disque_Rio_peq.png"/>
+</section>
+</section>
+</section>
+</section>
+</footer>
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper="">
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+	new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<script type="text/javascript">
+	(function($){
+	$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+	  if (!$(this).next().hasClass('show')) {
+		$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+	  }
+	  var $subMenu = $(this).next(".dropdown-menu");
+	  $subMenu.toggleClass('show');
+
+	  $(this).parents('li.dropdown.open').on('hidden.bs.dropdown', function(e) {
+		$('.dropdown-menu.show').removeClass("show");
+	  });
+
+	  return false;
+	});
+})(jQuery)
+</script>
+</body>
+</html>

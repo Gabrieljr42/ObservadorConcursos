@@ -1,0 +1,27 @@
+{
+  "review": "Luna UFU live envelope R7",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "basis": {
+    "snapshot": "live-envelope-final-ufu40-1843-snapshot.json",
+    "snapshot_sha256": "c0f7d2dbf286ddb0d7e95295c64a6486c6733aa414b44b1f7a8fe39a241c8303",
+    "canonical_payload_sha256": "d8ee8f25098087ed7a3a2d4b59bdd6a77e30b1a3b8ec5419b1b778e132ca64d3",
+    "importer_sha256": "c5e0de9db3c115d03d415c9799ac7d34a29a562255e0eba594db2c0c1e1346d8",
+    "source_id": 40,
+    "source": "ufu_selection",
+    "external_id": "1843",
+    "owner_user_id": 1,
+    "concurso_id": null,
+    "proposal_target": null,
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "cargo_count": 0,
+    "observed_run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+    "alternate_path_run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+    "path_independence": true,
+    "three_process_reopen": true,
+    "network": false
+  },
+  "stale_run_rejected": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+  "operational_instruction": "Import/propose only the exact run_id returned by the current importer: tp-reviewed-f3e9c58974f5f13419565aa22ded286d. Do not reuse b7eb; preserve target null and require the normal authenticated preflight before any live mutation.",
+  "scope": "Envelope/import proposal gate only; no live operation or mutation performed."
+}

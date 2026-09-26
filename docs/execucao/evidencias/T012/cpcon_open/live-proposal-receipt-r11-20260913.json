@@ -1,0 +1,49 @@
+{
+  "schema": "t012.live-proposal-receipt.v1",
+  "recorded_at": "2026-09-13T12:55:11.9508294-03:00",
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "owner_user_id": 1,
+  "source_id": 35,
+  "target_concurso_id": null,
+  "image": "observador-product:local@sha256:9dfcaadfe6ec3f929e591c8f8ede2a8c407fd4ee51ed645645f597f80aa05935",
+  "preflight": {
+    "health": 200,
+    "login": 200,
+    "catalogue_match": [],
+    "checkpoint_contests": 34,
+    "dry_run_status": "validated",
+    "dry_run_run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_byte_len": 498894
+  },
+  "import": {
+    "status_code": 0,
+    "status": "imported",
+    "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+    "owner_user_id": 1,
+    "validation_status": "valid",
+    "fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "document_review": {"pending": false, "documents": []}
+  },
+  "old_proposal": {
+    "proposal_id": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "before_state": "proposed",
+    "before_target_concurso_id": null,
+    "before_proposal_hash": "5292d0333ab6890bad82084f69c8f9d88927026332ccb84497da0ad6def1d772",
+    "reject_endpoint": "/tenderproof/publications/proposals/{proposal_id}/reject",
+    "reject_attempt_status": 404,
+    "reject_attempt_body": {"detail": "Not Found"},
+    "result": "BLOCKED_NO_FORMAL_REJECT_ROUTE"
+  },
+  "new_proposal": null,
+  "effects": {
+    "approve_called": false,
+    "apply_called": false,
+    "new_proposal_created": false,
+    "canonical_publication_mutation": false,
+    "stop_rule": "4xx encountered; no retry and no subsequent proposal creation"
+  },
+  "result": "CPCON_R11_BLOCKED_AT_AUDITED_REJECT",
+  "note": "OpenAPI exposes approve/apply/rollback only; rollback is invalid for a proposed create and no SQL/ad-hoc mutation was used."
+}

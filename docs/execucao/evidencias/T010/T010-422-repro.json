@@ -1,0 +1,15 @@
+{
+  "schema": "t010.dispatch-422-reproduction.v1",
+  "record_id": 15,
+  "batch_id": "t010-b04",
+  "run_id": "tp-tcj-321b30660a7e58fa918a4fb2839e6cd9-1",
+  "request": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "http_payload": {"run_id": "tp-tcj-321b30660a7e58fa918a4fb2839e6cd9-1", "concurso_id": null, "source_id": null, "authorization": null}
+  },
+  "package_binding": {"path": "docs/execucao/evidencias/T010/T010-pacotes-revisao.json", "record_id": 15, "evidence_sha256": "5dad1b02870a98e5e85217547f3d0cd57fa7d89b55ce3e5aaa444b5f13163dac"},
+  "contract_reproduction": {"model": "app.tenderproof.publication_router.ProposalIn", "result": "PASS", "extra_keys": [], "http_422_reproduced": false, "reason": "ProposalIn aceita o envelope; o recibo real não preservou o corpo do 422."},
+  "dispatch_observation": {"status": 422, "body": "não preservado; evidência apenas registra Unprocessable Entity", "proposal_created": false},
+  "backend_diagnosis": {"class": "semantic_revalidation_after_ProposalIn", "path": ["publication.create_proposal", "canonical.resolve", "publication._revalidate"], "guard": "strong_documental_binding_absent", "catalogue_target": {"id": 15, "edital_numero": "005/2025"}, "document_identity": {"edital_numero": "010/2025", "artifact_sha256": "5dad1b02870a98e5e85217547f3d0cd57fa7d89b55ce3e5aaa444b5f13163dac", "orgao": "unknown", "external_id": "99 não reconhecido"}, "manifest_error": false, "publishable_against_existing_target": false},
+  "safe_next_step": "Não retryar nem criar novo run: o PDF sustenta uma seleção distinta, mas não há entidade catalogada compatível nem campos orgao/edital reproduzidos pelo run. Requer fonte/artefato interno concreto que sustente o vínculo ou novo registro documental separado."
+}

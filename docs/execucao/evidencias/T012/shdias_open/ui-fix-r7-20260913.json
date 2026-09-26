@@ -1,0 +1,28 @@
+{
+  "schema": "t012.shdias.ui-fix.v1",
+  "state": "SHDIAS_UI_FIX_READY_FOR_REVIEW",
+  "scope": "mobile-only; generic cargo payload normalization; no backend/data/deploy",
+  "reproduction": {
+    "contest_id": 34,
+    "observed": ["codes 301/302 omitted", "vagas 12/28 omitted", "taxa 63.25 omitted", "Requisitos: undefined"],
+    "source_evidence": "ui-validation-r6-20260913.json + field-evidence.json"
+  },
+  "fix": {
+    "files": ["mobile/src/types/concurso.ts", "mobile/src/utils/cargos.ts", "mobile/src/db/repositories.ts", "mobile/tests/cargo-formatting.test.cjs"],
+    "behavior": [
+      "normalizes legacy vagas/vagas_imediatas and numeric strings",
+      "preserves cargo codigo in accessible human summary",
+      "propagates contest-level taxa_inscricao when cargo fee is absent",
+      "uses explicit Requisitos ainda não confirmados instead of undefined",
+      "keeps invalid/missing values fail-safe and source-agnostic"
+    ],
+    "hardcoded_source_values": false
+  },
+  "validation": {
+    "cargo_formatting_tests": "9 passed",
+    "typescript": "npx tsc --noEmit passed",
+    "build_or_deploy": false,
+    "offline_favorites_alerts_preserved": true
+  },
+  "next_gate": "independent UI review and real reload of /concurso/34; no deploy performed"
+}

@@ -1,0 +1,13 @@
+{
+  "gate": "T012-BATCH1-REPRO-R2",
+  "result": "PASS",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "scope": "preserved PDF + disposable SQLite; no live/pilot",
+  "dispatch": "fields.py calls pinned fafipa_t012_r4.extract_fields and replaces title, org, edital, dates and cargos",
+  "cargo_count": 14,
+  "cargo_evidence_count": 14,
+  "eligible_asserted": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+  "tests": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py",
+  "observed": "10 passed; compileall PASS; publication side effects zero"
+}

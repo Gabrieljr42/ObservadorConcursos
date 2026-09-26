@@ -1,0 +1,27 @@
+{
+  "schema": "t012.backend-deploy-owner-scoped-runid.v1",
+  "timestamp": "2026-09-13T14:07:19Z",
+  "status": "OWNER_SCOPED_RUNID_DEPLOYED_READY",
+  "scope": "backend only; api/worker/scheduler recreated; postgres/redis/web and volumes preserved",
+  "docker": {
+    "engine": "28.1.1",
+    "api_image_id": "sha256:f28566c89937fc5c574ff9948429cf84805ebb64772b081cc6277c569dbb5b87",
+    "api_container": "observador-pilot-api-1",
+    "worker_container": "observador-pilot-worker-1",
+    "scheduler_container": "observador-pilot-scheduler-1"
+  },
+  "pre_deploy": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": {"contests": 34, "sources": 33, "structured_jobs": 182, "publications": 34, "versions": 92, "notifications": 91, "favorites": 0, "alerts": 1}
+  },
+  "post_deploy": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": {"contests": 34, "sources": 33, "structured_jobs": 182, "publications": 34, "versions": 92, "notifications": 91, "favorites": 0, "alerts": 1},
+    "postgres_counts": {"contests": 34, "sources_configured": 99, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91, "push_devices": 0},
+    "web_routes": {"/inicio": 200, "/concurso/34": 200},
+    "legacy_run_read": {"run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "http": 200, "owner_user_id": 1, "source": "publiconsult_open"}
+  },
+  "mutations": {"imports": 0, "proposals": 0, "approvals": 0, "applications": 0}
+}

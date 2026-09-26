@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-09-08T13:32:01.981463+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r30change\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-7b150c97b6b5582daf436d4818280203-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: Novos documentos foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."
+    },
+    {
+      "run_id": "tp-tcj-02a13de33514501fafc230cba38d9c4c-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: Novos documentos foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."
+    },
+    {
+      "run_id": "tp-tcj-63fc090e9d275f90888a132c7616e29e-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: Novos documentos foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."
+    },
+    {
+      "run_id": "tp-tcj-3ec617a2444951b2b384e716a79e82c2-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: Novos documentos foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."
+    },
+    {
+      "run_id": "tp-tcj-c5ce30c6dbf251bb980c35c0dadbe443-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: Novos documentos foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 60,
+  "source_filter": [
+    "exame_open"
+  ],
+  "counts": {
+    "concursos": 0,
+    "versions": 0,
+    "outbox": 0,
+    "notifications": 0
+  },
+  "states": {
+    "blocked": 5
+  },
+  "sources_with_creation": [],
+  "temporary_database_removed": true
+}

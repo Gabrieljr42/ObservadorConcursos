@@ -1,0 +1,1694 @@
+{
+  "generated_at": "2026-09-08T14:38:56.091323+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60replay\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-7a5e03984abf5bde9c25530eef4e245b-1",
+      "source": "msconcursos_open",
+      "document_sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público | CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA - PREFEITURA DE SANTANA DE PARNAÍBA, SP - EDITAL N.º 05/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Santana De Parnaíba",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-44458e7417bd5014b3c17cf1ddcc2b21-1",
+      "source": "msconcursos_open",
+      "document_sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público | CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA - PREFEITURA DE SANTANA DE PARNAÍBA, SP - EDITAL N.º 05/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Santana De Parnaíba",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-8cc45e29041258bea722ae035b918ea2-1",
+      "source": "consep_open",
+      "document_sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+      "fields": {
+        "titulo": {
+          "value": "TESTE SELETIVO EDITAL N 002/2026 - BAIXA GRANDE DO RIBEIRO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-da1693f75c6b5436abf62ead8e68b2dd-1",
+      "source": "consep_open",
+      "document_sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+      "fields": {
+        "titulo": {
+          "value": "TESTE SELETIVO EDITAL N 002/2026 - BAIXA GRANDE DO RIBEIRO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-298ea8b6940556e19fcc23839d18193d-1",
+      "source": "funvapi_open",
+      "document_sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+      "fields": {
+        "titulo": {
+          "value": "CÂMARA MUNICIPAL DE VERA MENDES – PI",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Vera Mendes",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00"
+            ],
+            "escopo": "LARIDADE, CARGA HORÁRIA, VAGAS E VENCIMENTO LEGISLAÇÃO DOS CARGOS: RESOLUÇÃO N° 001/2026 CÂMARA MUNICIP",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 1,
+      "proposal_id": "tpp-f30ed94f5b75ad76872bce9baef5fa99",
+      "version_id": 1,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "CÂMARA MUNICIPAL DE VERA MENDES – PI"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Vera Mendes"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "001/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-73566eeab65b53c2875dd35ed7123340-1",
+      "source": "funvapi_open",
+      "document_sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+      "fields": {
+        "titulo": {
+          "value": "CÂMARA MUNICIPAL DE VERA MENDES – PI",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Vera Mendes",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00"
+            ],
+            "escopo": "LARIDADE, CARGA HORÁRIA, VAGAS E VENCIMENTO LEGISLAÇÃO DOS CARGOS: RESOLUÇÃO N° 001/2026 CÂMARA MUNICIP",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 1,
+      "proposal_id": "tpp-69e3376bba43117e7e2f9b20f1dfaaf8",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-0f6d2f76f0365e2eafb45cc8161bf821-1",
+      "source": "facet_open",
+      "document_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura de Floresta/PE  2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Floresta",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3036.00"
+            ],
+            "escopo": "e serão apresentadas de forma detalhada no quadro a seguir: CARGO REQUISITOS MÍNIMOS Remuneração Inicial (R$) e Jornada de Trabalho Total AC N/P",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 2,
+      "proposal_id": "tpp-536413fe5d40be6962189ad898c03873",
+      "version_id": 2,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Prefeitura de Floresta/PE  2026"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Floresta"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-fcc6be47923051ac9a377bf63714357d-1",
+      "source": "facet_open",
+      "document_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura de Floresta/PE  2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Floresta",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3036.00"
+            ],
+            "escopo": "e serão apresentadas de forma detalhada no quadro a seguir: CARGO REQUISITOS MÍNIMOS Remuneração Inicial (R$) e Jornada de Trabalho Total AC N/P",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 2,
+      "proposal_id": "tpp-f49cfdc2a3416a838c2298b524472b99",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-a08cee0647c055dd84b3bb616e53b393-1",
+      "source": "educapb_open",
+      "document_sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 01/2026 - Prefeitura Municipal de Conceição - PB",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Conceição",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-957e5fe5fb2c566aa118c0478ad78d5b-1",
+      "source": "educapb_open",
+      "document_sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 01/2026 - Prefeitura Municipal de Conceição - PB",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Conceição",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-007a7efa9cc05c8eb84493b2d6adbc53-1",
+      "source": "epl_open",
+      "document_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+      "fields": {
+        "titulo": {
+          "value": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3733.87"
+            ],
+            "escopo": "gas AC¹ Nº Vagas PCD² Escolaridade/Requisitos Carga Horaria Mensal Salário Mensal 1. Fonoaudiólogo CR* 0 Curso de graduação de nível superi",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-eb32b34b9ed95d6199f2e0ff9150bc65-1",
+      "source": "epl_open",
+      "document_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+      "fields": {
+        "titulo": {
+          "value": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3733.87"
+            ],
+            "escopo": "gas AC¹ Nº Vagas PCD² Escolaridade/Requisitos Carga Horaria Mensal Salário Mensal 1. Fonoaudiólogo CR* 0 Curso de graduação de nível superi",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-652453579f8c5fb8b6c92b1e540ce39e-1",
+      "source": "apta_open",
+      "document_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Aragarças",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Aragarças",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1650.00",
+              "2400.00"
+            ],
+            "escopo": "pessoas com deficiência constam dos quadros a seguir: Cód. Cargo Vagas Carga Horária Semanal Salário Base Escolaridade e Exigências 01 Auxiliar",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-4db73f1e3e62512ead450c1d23a89e9d-1",
+      "source": "apta_open",
+      "document_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Aragarças",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Aragarças",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1650.00",
+              "2400.00"
+            ],
+            "escopo": "pessoas com deficiência constam dos quadros a seguir: Cód. Cargo Vagas Carga Horária Semanal Salário Base Escolaridade e Exigências 01 Auxiliar",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-85d45b2a11b450558446c05691dd1c34-1",
+      "source": "shdias_open",
+      "document_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+      "fields": {
+        "titulo": {
+          "value": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Hortolândia",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3971.37",
+              "63.25"
+            ],
+            "escopo": "erá considerado o horário oficial de Brasília/DF. 02. DO(S) CARGO(S) ENSINO MÉDIO COMPLETO VALOR DA INSCRIÇÃO: R$ 63,25 Cód. Cargo Vagas Requisit",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-effd5f1d9ac15e93a551628c85f5c4e9-1",
+      "source": "shdias_open",
+      "document_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+      "fields": {
+        "titulo": {
+          "value": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Hortolândia",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3971.37",
+              "63.25"
+            ],
+            "escopo": "erá considerado o horário oficial de Brasília/DF. 02. DO(S) CARGO(S) ENSINO MÉDIO COMPLETO VALOR DA INSCRIÇÃO: R$ 63,25 Cód. Cargo Vagas Requisit",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-a3a6cc0bd02c59d19d169ebe75777b06-1",
+      "source": "ibam_open",
+      "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+      "fields": {
+        "titulo": {
+          "value": "Municipio de Balneario Picarras/SC - 01/2026 PS",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Balneário Piçarras",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 3,
+      "proposal_id": "tpp-5cee700eeb8a58f5d5c3ac7f4f469417",
+      "version_id": 3,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Municipio de Balneario Picarras/SC - 01/2026 PS"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Balneário Piçarras"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-4cca76ea802a506dae6386362b1a82f8-1",
+      "source": "ibam_open",
+      "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+      "fields": {
+        "titulo": {
+          "value": "Municipio de Balneario Picarras/SC - 01/2026 PS",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Balneário Piçarras",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 3,
+      "proposal_id": "tpp-007a742d913673d2c66842a2dafeb0da",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-d1304357f60a5ee2bd0b04a71ce6e9d8-1",
+      "source": "fcc_open",
+      "document_sha256": "820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693",
+      "fields": {
+        "titulo": {
+          "value": "ABGF - Agência Brasileira Gestora de Fundos Garantidores e Garantia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "145.00"
+            ],
+            "escopo": "em dias úteis, das 10h às 16h (horário de Brasília). 2. DOS CARGOS 2.1 Os cargos, a escolaridade e os pré -requisitos para admissão, o valor da i",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-dab7f8b2fc4954baabe3482efa4be510-1",
+      "source": "fcc_open",
+      "document_sha256": "820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693",
+      "fields": {
+        "titulo": {
+          "value": "ABGF - Agência Brasileira Gestora de Fundos Garantidores e Garantia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "145.00"
+            ],
+            "escopo": "em dias úteis, das 10h às 16h (horário de Brasília). 2. DOS CARGOS 2.1 Os cargos, a escolaridade e os pré -requisitos para admissão, o valor da i",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-45d87afe299b5dd8967b1b7196d76d9b-1",
+      "source": "cebraspe_open",
+      "document_sha256": "2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65",
+      "fields": {
+        "titulo": {
+          "value": "ADEAL 26",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "7320.42"
+            ],
+            "escopo": "s e projetos agropecuários da ADEAL, que exijam formação de nível superior específica. O(A) servidor(a) deverá ter disponibilidade para viagens,",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-218383a966775b42a11c1432bda34feb-1",
+      "source": "cebraspe_open",
+      "document_sha256": "2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65",
+      "fields": {
+        "titulo": {
+          "value": "ADEAL 26",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "7320.42"
+            ],
+            "escopo": "s e projetos agropecuários da ADEAL, que exijam formação de nível superior específica. O(A) servidor(a) deverá ter disponibilidade para viagens,",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-a855def744e95f28a58acca889979739-1",
+      "source": "avalia_open",
+      "document_sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+      "fields": {
+        "titulo": {
+          "value": "Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Caldas Novas",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-9910469019965b5481fd8b5fc5f1a7af-1",
+      "source": "avalia_open",
+      "document_sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+      "fields": {
+        "titulo": {
+          "value": "Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Caldas Novas",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-ed27f0aab6c552efa40c5dde3ff40a2c-1",
+      "source": "consulplan_open",
+      "document_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Unaí/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Unaí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "1/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2026-10-30",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-12-01",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 4,
+      "proposal_id": "tpp-f9b38ba84bfd3ac82d9bb96006c1472a",
+      "version_id": 4,
+      "approved_fields": [
+        "edital_numero",
+        "inscricao_fim",
+        "inscricao_inicio",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Câmara Municipal de Unaí/MG"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Unaí"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "1/2026"
+        },
+        "inscricao_inicio": {
+          "label": "início das inscrições",
+          "old": null,
+          "new": "2026-10-30T00:00:00"
+        },
+        "inscricao_fim": {
+          "label": "fim das inscrições",
+          "old": null,
+          "new": "2026-12-01T00:00:00"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-ff55a1e1a9255ac7ae1e77adf91fd62c-1",
+      "source": "consulplan_open",
+      "document_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Unaí/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Unaí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "1/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2026-10-30",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-12-01",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 4,
+      "proposal_id": "tpp-738d91f53143140e28540bca6722f49d",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "inscricao_fim",
+        "inscricao_inicio",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-96d5f19da8a250cdad0bdb53b042096f-1",
+      "source": "institutoconsulplan_open",
+      "document_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Unaí/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Unaí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "1/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2026-10-30",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-12-01",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: possível concurso já cadastrado; selecione o alvo e revise a associação"
+    },
+    {
+      "run_id": "tp-tcj-48b77352b2d556a180c491e5b20fcab3-1",
+      "source": "institutoconsulplan_open",
+      "document_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Unaí/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Unaí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "1/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2026-10-30",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-12-01",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 409,
+      "reason": "TenderProof: possível concurso já cadastrado; selecione o alvo e revise a associação"
+    },
+    {
+      "run_id": "tp-tcj-58724e03f5ff5a8f92a5394f4f4c8113-1",
+      "source": "zambini_open",
+      "document_sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+      "fields": {
+        "titulo": {
+          "value": "Concurso 01/2022 da Prefeitura Municipal de Cabreúva/SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Cabreúva",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2022",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 5,
+      "proposal_id": "tpp-765949db58c63f3db2a1ed83a4c6d8e0",
+      "version_id": 5,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Concurso 01/2022 da Prefeitura Municipal de Cabreúva/SP"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Cabreúva"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2022"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-97bfa4c79059532d82a8928ac1fd4ece-1",
+      "source": "zambini_open",
+      "document_sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+      "fields": {
+        "titulo": {
+          "value": "Concurso 01/2022 da Prefeitura Municipal de Cabreúva/SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Cabreúva",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2022",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 5,
+      "proposal_id": "tpp-cdc72b19ede60b6342b913c7c204906c",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-23675aca6b095b06acee32b629b6dd41-1",
+      "source": "cpcon_open",
+      "document_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-e032ce44865a52bd906fb11bb45b9ae4-1",
+      "source": "cpcon_open",
+      "document_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-732df0641a2254e6bea5dda1ce3eb140-1",
+      "source": "elo_open",
+      "document_sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+      "fields": {
+        "titulo": {
+          "value": "CIMAG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-c22399e2cece527282cba7e9c1e7e587-1",
+      "source": "elo_open",
+      "document_sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+      "fields": {
+        "titulo": {
+          "value": "CIMAG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-256cfc3183f45b3ca9e5046bafe2da32-1",
+      "source": "fundep_open",
+      "document_sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - FUMEP de Sete Lagoas/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-1a8d01cad10855d1934cdc1ea36c9f29-1",
+      "source": "fundep_open",
+      "document_sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - FUMEP de Sete Lagoas/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-5858e2573be252e88fd27b97878a375a-1",
+      "source": "cesgranrio_open",
+      "document_sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+      "fields": {
+        "titulo": {
+          "value": "Secretaria de Estado de Meio Ambiente",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "8269.16"
+            ],
+            "escopo": "nic o e demais atividades compatíveis com a escolaridade de nível superior, nos termos do art. 3º, § 1º, da Lei Estadual nº 7.554, de 10 de dezem",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-68996cfa078e58d39d704db96cbbcb82-1",
+      "source": "cesgranrio_open",
+      "document_sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+      "fields": {
+        "titulo": {
+          "value": "Secretaria de Estado de Meio Ambiente",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "8269.16"
+            ],
+            "escopo": "nic o e demais atividades compatíveis com a escolaridade de nível superior, nos termos do art. 3º, § 1º, da Lei Estadual nº 7.554, de 10 de dezem",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 160,
+  "source_filter": null,
+  "counts": {
+    "concursos": 5,
+    "versions": 5,
+    "outbox": 5,
+    "notifications": 0
+  },
+  "states": {
+    "blocked": 28,
+    "applied": 5,
+    "no_change": 5
+  },
+  "sources_with_creation": [
+    "consulplan_open",
+    "facet_open",
+    "funvapi_open",
+    "ibam_open",
+    "zambini_open"
+  ],
+  "temporary_database_removed": true
+}

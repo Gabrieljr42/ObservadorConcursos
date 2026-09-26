@@ -1,0 +1,71 @@
+{
+  "provenance": "live public HTTP capture; sanitized hidden values and public signed URL queries; no browsers or credential use;2MiB/page20s",
+  "pages": [
+    {
+      "name": "publiconsult-listing",
+      "url": "https://publiconsult.com.br/Concurso/Index",
+      "observed_at": "2026-09-08T00:06:00.387348+00:00",
+      "status": 200,
+      "bytes": 33508,
+      "original_sha256": "3bacf4a47ffefb3c17c481730d14149aec3ceb2c49c3c97f66819b81a2b32273",
+      "fixture_sha256": "4aa6f2ddb27841f350d86fd0af72be7406ccda80027705d71df5a66fbe45b5ad",
+      "redacted_signed_links": 0,
+      "file": "publiconsult-listing.html"
+    },
+    {
+      "name": "publiconsult-detail",
+      "url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+      "observed_at": "2026-09-08T00:06:01.680444+00:00",
+      "status": 200,
+      "bytes": 25854,
+      "original_sha256": "79cb161cc9966b28b29a67fba489078efd506e456fbbeeea5afc22fdadc7a3f9",
+      "fixture_sha256": "95a721d768873769b667fd27d3f7ac6808a31db9ae68334d879ff71c8ccd0655",
+      "redacted_signed_links": 15,
+      "file": "publiconsult-detail.html"
+    },
+    {
+      "name": "ufu-listing",
+      "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+      "observed_at": "2026-09-08T00:06:01.926480+00:00",
+      "status": 200,
+      "bytes": 1913035,
+      "original_sha256": "29534204d817a7638abaaacac8d0994fc49c0e8a4cb4acc509c3edc295e75a83",
+      "fixture_sha256": "5eabc930affd8dfc7e5105689e6f4fba49b695927734ec3bd3a3fbee057b1d81",
+      "redacted_signed_links": 0,
+      "file": "ufu-listing.html"
+    },
+    {
+      "name": "ufu-detail",
+      "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1828",
+      "observed_at": "2026-09-08T00:06:03.490823+00:00",
+      "status": 200,
+      "bytes": 44703,
+      "original_sha256": "215bec9a133f310d8eed91078ce3048dcb3ee0745bd0bc52965eba250782ce4e",
+      "fixture_sha256": "001e85d9dd9bf1235520578cc75504d9019b127d5e7adc342ed4884a418b8b3c",
+      "redacted_signed_links": 0,
+      "file": "ufu-detail.html"
+    },
+    {
+      "name": "uniselva-listing",
+      "url": "https://web.fundacaouniselva.org.br/frmSelecoes.aspx",
+      "observed_at": "2026-09-08T00:06:03.752662+00:00",
+      "status": 301,
+      "bytes": 479,
+      "original_sha256": "1363c9752a6ed4d39ee52d5044d96f0c5a72319dc492b8bae5248a594fef88c6",
+      "fixture_sha256": "8b1d25d6733c9d4289100964f08080cf4448eaefe063dac6d63c07da950ea411",
+      "redacted_signed_links": 0,
+      "file": "uniselva-listing.html"
+    },
+    {
+      "name": "uniselva-detail",
+      "url": "https://web.fundacaouniselva.org.br/frmSelecao.aspx?_id=1261",
+      "observed_at": "2026-09-08T00:06:04.920523+00:00",
+      "status": 301,
+      "bytes": 483,
+      "original_sha256": "43c5769e6f51f776a8bcf322d554feede2a104ec637caa80a83f299fdf7ae2d4",
+      "fixture_sha256": "2fecf7a62cf8f74763648d7b76453236876a593fe307f72ab9066770ab4522ef",
+      "redacted_signed_links": 0,
+      "file": "uniselva-detail.html"
+    }
+  ]
+}

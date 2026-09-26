@@ -1,0 +1,50 @@
+{
+  "reviewer": "Luna",
+  "review_type": "offline_revalidation_prevalidation",
+  "reviewed_at": "2026-09-12",
+  "decision": "BLOQUEADA",
+  "read_only": true,
+  "scope": "Reprodução local dos componentes extract_pages_isolated/extract_fields para o ID1; sem execução contra DB/piloto/serviço e sem quadro.",
+  "inputs": {
+    "artifact": "docs/execucao/evidencias/T010/id1.pdf",
+    "artifact_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "artifact_bytes": 496688,
+    "candidate_source": "docs/tenderproof-pilot-live.json",
+    "candidate": {
+      "candidate_id": "access_open-183",
+      "external_id": "183",
+      "detail_url_observed": "https://access.selecao.net.br/informacoes/183/",
+      "source": "access_open"
+    },
+    "processing_isolation": "TENDERPROOF_PROCESSING_DIR temporário; nenhum DB operacional/piloto foi usado."
+  },
+  "extract_pages_isolated": {
+    "total_pages": 21,
+    "processed_pages": 21,
+    "errors": [],
+    "result": "OK"
+  },
+  "structural_comparison": [
+    {"field":"titulo","manual_value":"Concurso Público 01/2026","fresh_value":"Prefeitura Municipal de Birigui/SP","value_equal":false,"page_equal":true,"source_url_equal":true,"snippet_exact":false},
+    {"field":"orgao","manual_value":"Prefeitura Municipal de Birigui/SP","fresh_value":"Prefeitura Municipal De Birigui-Sp","value_equal":false,"page_equal":true,"source_url_equal":true,"snippet_exact":false},
+    {"field":"edital_numero","manual_value":"179/2026","fresh_value":"179/2026","value_equal":true,"page_equal":true,"source_url_equal":true,"snippet_exact":false},
+    {"field":"cargos","manual_value":"Professor Auxiliar; 9 AC + 1 PcD = 10; R$30,53/hora-aula; até 40h","fresh_state":"absent","fresh_value":null,"value_equal":false,"evidence_exact":false},
+    {"field":"inscricao_fim","manual_value":"2026-10-09","fresh_value":"2026-10-08","value_equal":false,"page_equal":false,"source_url_equal":true,"snippet_exact":false}
+  ],
+  "reproduced_evidence": {
+    "manual_review_source_url_matches_artifact": true,
+    "manual_review_sha_matches_artifact": true,
+    "manual_review_snippets_pages_source_urls_all_exact": false,
+    "cargo_evidence_reproduced": false,
+    "reason": "_reproduced_evidence exige snippet, página, source_url e SHA exatamente iguais ao evidence gerado no rerun; os snippets manuais são diferentes e não há evidence fresh para cargos."
+  },
+  "exact_blocker": "Mesmo com o PDF íntegro e os valores documentais plausíveis, extract_fields para candidate source=access_open não produz campo cargos neste envelope; portanto cargos não se torna elegível. Além disso, titulo, orgao e inscricao_fim divergem do rerun e todos os snippets manuais falham a igualdade exata exigida.",
+  "next_gate": "Obter preflight/run canônico persistido com candidato/artefato de identidade e evidências geradas pelo próprio extrator, ou implementar/validar extrator estruturado de cargos para access_open; não promover manualmente o envelope nem aplicar a proposta metadata-only.",
+  "sources": [
+    "docs/execucao/evidencias/T010/T010-reviewed-run-id1.json",
+    "docs/execucao/evidencias/T010/T010-reviewed-runs-inputs.json",
+    "docs/execucao/evidencias/T010/T010-rastreio-campos-pos-dispatch.json",
+    "backend/app/tenderproof/fields.py",
+    "backend/app/tenderproof/publication.py"
+  ]
+}

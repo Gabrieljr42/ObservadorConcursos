@@ -1,0 +1,471 @@
+{
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99sections",
+  "observed_at": "2026-09-08T15:39:22.945202+00:00",
+  "scope": "two bounded samples, not full source coverage or publication",
+  "tls_verified": true,
+  "browser_sessions": 0,
+  "limits": {
+    "listing_pages_per_cycle": 1,
+    "detail_attempts_per_cycle": 3,
+    "html_bytes": 2097152,
+    "driver_deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60
+  },
+  "cycles": [
+    {
+      "source": "fatec_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-fb665cc44f9a",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fatecsm.org.br/processos-seletivos/",
+          "file": "fatec_selection-cycle1-listing-dbecfebcb89c.html",
+          "sha256": "dbecfebcb89c185127f9e86491e2169dfe815024a7c92e52f62d305b0ef7d6e8",
+          "bytes": 92430,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:39:29.081747+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d8b1c8f4ef61",
+          "candidate": {
+            "candidate_id": "fatec_selection-7e9b8f3324a08cf7",
+            "title_observed": "Processo Seletivo 2026/3010088-01 - CONTRATAÇÃO CLT: ANALISTA DE PROJETOS E AÇÕES EM GÊNERO, DIREITOS HUMANOS E ENFRENTAMENTO ÀS VIOLÊNCIAS – ÁREA: PSICOLOGIA e direito.",
+            "detail_url_observed": "https://www.fatecsm.org.br/processos-seletivos/",
+            "external_id": "2026/3010088-01",
+            "observed_at": "2026-09-08T15:39:29.247212Z",
+            "source": "fatec_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fatecsm.org.br/processos-seletivos/",
+              "file": "fatec_selection-cycle1-detail-02537d900519.html",
+              "sha256": "02537d900519658fa39b026d4dc07ba948fdafacab3d937a5dcce5eb5ea20977",
+              "bytes": 92431,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:33.528562+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fatec_selection-90110feb46613b7975",
+            "title": "EDITAL",
+            "url_requested": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "url_final": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL' por conter 'edital' no título/URL; 14 documento(s) ignorado(s) (ex.: RESULTADO; AVISO; ERRATA; RESULTADO PARCIAL; ANEXO).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-c312508e48",
+            "sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+            "byte_len": 463117,
+            "url_requested": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "url_final": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:33.741493Z",
+            "storage_path": "art-c312508e48-3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.703
+    },
+    {
+      "source": "fappr_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-cc5af94b69b4",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+          "file": "fappr_selection-cycle1-listing-fba507f90a23.html",
+          "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+          "bytes": 240063,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:39:36.991047+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-727f5e26ecaa",
+          "candidate": {
+            "candidate_id": "fappr_selection-c1f5ead10c498085",
+            "title_observed": "Fundação Araucária - PS 04/2026: Estágio no Setor dos NAPIs (Pós-Graduação)",
+            "detail_url_observed": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+            "external_id": "04/2026",
+            "observed_at": "2026-09-08T15:39:37.807322Z",
+            "source": "fappr_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "partial",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+              "file": "fappr_selection-cycle1-detail-fba507f90a23.html",
+              "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+              "bytes": 240063,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:39.146137+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fappr_selection-a918dd4a6ce7377655",
+            "title": "Edital PS 04/2026",
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital PS 04/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Ato DEFA 044/2026: Resultado).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-faf5cbb62b",
+            "sha256": "852e4c2cf24506e860b8d2e19530109a85e2393a2076cd316620a902bde3c80e",
+            "byte_len": 500023,
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:39.881195Z",
+            "storage_path": "art-faf5cbb62b-852e4c2cf24506e860b8d2e19530109a85e2393a2076cd316620a902bde3c80e.pdf"
+          },
+          "total_pages": 2,
+          "processed_pages": 2,
+          "validation": {
+            "status": "partial",
+            "errors": [],
+            "warnings": [
+              "título do candidato não localizado no texto do documento"
+            ],
+            "checks": [
+              "paginas_com_texto=2/2"
+            ]
+          },
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-ca9900ff1e16",
+          "candidate": {
+            "candidate_id": "fappr_selection-f174fdf5f91c6306",
+            "title_observed": "Fundação Araucária - PS 03/2026: Estágio no Setor de Ciência e Tecnologia",
+            "detail_url_observed": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+            "external_id": "03/2026",
+            "observed_at": "2026-09-08T15:39:37.807322Z",
+            "source": "fappr_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+              "file": "fappr_selection-cycle1-detail-fba507f90a23.html",
+              "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+              "bytes": 240063,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:41.229139+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fappr_selection-4455a24776a2edc703",
+            "title": "Edital PS 03/2026",
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital PS 03/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Ato DEFA 032/2026: Resultado).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-3fd0909144",
+            "sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+            "byte_len": 197636,
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:41.887567Z",
+            "storage_path": "art-3fd0909144-dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903.pdf"
+          },
+          "total_pages": 3,
+          "processed_pages": 3,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=3/3",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.922
+    },
+    {
+      "source": "fatec_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-56a1c3a0ab0a",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fatecsm.org.br/processos-seletivos/",
+          "file": "fatec_selection-cycle2-listing-f63bc43f2460.html",
+          "sha256": "f63bc43f24604b27ca3ce702daea7aa95d14cf30af4775f5e8785379e8b87482",
+          "bytes": 92431,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:39:46.411616+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-790b1d8f5880",
+          "candidate": {
+            "candidate_id": "fatec_selection-7e9b8f3324a08cf7",
+            "title_observed": "Processo Seletivo 2026/3010088-01 - CONTRATAÇÃO CLT: ANALISTA DE PROJETOS E AÇÕES EM GÊNERO, DIREITOS HUMANOS E ENFRENTAMENTO ÀS VIOLÊNCIAS – ÁREA: PSICOLOGIA e direito.",
+            "detail_url_observed": "https://www.fatecsm.org.br/processos-seletivos/",
+            "external_id": "2026/3010088-01",
+            "observed_at": "2026-09-08T15:39:46.496432Z",
+            "source": "fatec_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fatecsm.org.br/processos-seletivos/",
+              "file": "fatec_selection-cycle2-detail-d354f00fd59e.html",
+              "sha256": "d354f00fd59ee4d092ff957fcd9e9b327f90f549af6a8a04a1fd320623089e7a",
+              "bytes": 92431,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:50.197524+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fatec_selection-90110feb46613b7975",
+            "title": "EDITAL",
+            "url_requested": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "url_final": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL' por conter 'edital' no título/URL; 14 documento(s) ignorado(s) (ex.: RESULTADO; AVISO; ERRATA; RESULTADO PARCIAL; ANEXO).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-41776ee164",
+            "sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+            "byte_len": 463117,
+            "url_requested": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "url_final": "https://www.fatecsm.org.br/doc.licitacoes/edital_090726130859-fatec.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:50.318596Z",
+            "storage_path": "art-41776ee164-3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 9.125
+    },
+    {
+      "source": "fappr_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-72525110b40a",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+          "file": "fappr_selection-cycle2-listing-fba507f90a23.html",
+          "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+          "bytes": 240063,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:39:52.469024+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-779e03b0d9bd",
+          "candidate": {
+            "candidate_id": "fappr_selection-c1f5ead10c498085",
+            "title_observed": "Fundação Araucária - PS 04/2026: Estágio no Setor dos NAPIs (Pós-Graduação)",
+            "detail_url_observed": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+            "external_id": "04/2026",
+            "observed_at": "2026-09-08T15:39:53.179282Z",
+            "source": "fappr_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "partial",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+              "file": "fappr_selection-cycle2-detail-fba507f90a23.html",
+              "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+              "bytes": 240063,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:53.916011+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fappr_selection-a918dd4a6ce7377655",
+            "title": "Edital PS 04/2026",
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital PS 04/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Ato DEFA 044/2026: Resultado).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-5a6531f316",
+            "sha256": "852e4c2cf24506e860b8d2e19530109a85e2393a2076cd316620a902bde3c80e",
+            "byte_len": 500023,
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-03/ps_04-2026_-_estagio_pos_graduacao_-_senapi_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:54.599812Z",
+            "storage_path": "art-5a6531f316-852e4c2cf24506e860b8d2e19530109a85e2393a2076cd316620a902bde3c80e.pdf"
+          },
+          "total_pages": 2,
+          "processed_pages": 2,
+          "validation": {
+            "status": "partial",
+            "errors": [],
+            "warnings": [
+              "título do candidato não localizado no texto do documento"
+            ],
+            "checks": [
+              "paginas_com_texto=2/2"
+            ]
+          },
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-f904edead555",
+          "candidate": {
+            "candidate_id": "fappr_selection-f174fdf5f91c6306",
+            "title_observed": "Fundação Araucária - PS 03/2026: Estágio no Setor de Ciência e Tecnologia",
+            "detail_url_observed": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+            "external_id": "03/2026",
+            "observed_at": "2026-09-08T15:39:53.179282Z",
+            "source": "fappr_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+              "file": "fappr_selection-cycle2-detail-fba507f90a23.html",
+              "sha256": "fba507f90a239f64f178984c49c9f1403490edb0c36c923b68c560f52ef20448",
+              "bytes": 240063,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:39:56.329458+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fappr_selection-4455a24776a2edc703",
+            "title": "Edital PS 03/2026",
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital PS 03/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Ato DEFA 032/2026: Resultado).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-939371e738",
+            "sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+            "byte_len": 197636,
+            "url_requested": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "url_final": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-02/ps_032026_editalestagiario_setorsecet_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:39:56.875832Z",
+            "storage_path": "art-939371e738-dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903.pdf"
+          },
+          "total_pages": 3,
+          "processed_pages": 3,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=3/3",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.672
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 10,
+    "all_clients_closed": true
+  }
+}

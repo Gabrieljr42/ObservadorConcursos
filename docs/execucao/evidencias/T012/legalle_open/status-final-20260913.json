@@ -1,0 +1,69 @@
+{
+  "schema": "t012.legalle-open.status.v1",
+  "recorded_at": "2026-09-13",
+  "source": {
+    "source_id": 49,
+    "name": "legalle_open",
+    "organization": "Legalle Concursos",
+    "list_url": "https://portal.editais.legalleconcursos.com.br/edital",
+    "adapter": "backend/app/connectors/registry.py (ConfigurableHTML legalle_open)"
+  },
+  "decision": "BLOCKER_ESPECIFICO",
+  "candidate_reviewed": {
+    "external_id": "2557",
+    "municipality_observed": "Relvado/RS",
+    "detail_url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+    "application_url": "https://candidato.editais.legalleconcursos.com.br/inscricao/f7470ee07f5f3591f24e5f87a9e3695e",
+    "document_url": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+    "observed_at": "2026-08-30T00:09:49.501387-03:00",
+    "observed_status": "Inscrições abertas",
+    "inscricao_inicio": "2026-08-13T21:00:00-03:00",
+    "inscricao_fim": "2026-09-13T15:00:00-03:00",
+    "preserved_artifact_sha256": "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+    "preserved_artifact_local_path": null
+  },
+  "blockers": [
+    {
+      "code": "IDENTITY_NOT_REPRODUCED",
+      "exact_condition": "The preserved detail observation has titulo='Detalhes do edital', orgao='Instituto Legalle', edital_numero=null, while the candidate/document interpretation is municipal Relvado/RS. No local PDF bytes are available at the pinned SHA to reproduce orgao, edital_numero, title, cargo table, dates, salary or fee.",
+      "evidence": "backend/audit_live_99_pre_final_pass.json :: sources[index=49].sample.actual and sample.evidence_urls",
+      "resume_condition": "Preserve/acquire the exact PDF bytes for SHA 1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4, then extract exact municipal identity and run the normal Legalle parser with artifact receipt."
+    },
+    {
+      "code": "STRONG_REVALIDATE_NOT_SAFE",
+      "exact_condition": "Without the pinned PDF bytes and reproduced orgao+edital identity, _revalidate must fail closed; creating a ReviewedRun, cargos, remuneration, dates or taxa from the listing alone would be unsupported.",
+      "evidence": "docs/tenderproof-publication-live.json (Legalle/Relvado sample is blocked status_code=422: vínculo documental forte ausente)",
+      "resume_condition": "After the byte and identity gate passes, run source-specific extraction and isolated ephemeral SQLite _revalidate; no DB mutation or proposal before that gate."
+    }
+  ],
+  "non_duplication": {
+    "published_source_check": "PASS_NOT_IN_PUBLISHED_SOURCE_SET",
+    "evidence": "docs/tenderproof-publication-live.json",
+    "sources_with_creation": ["abcp_open", "access_open", "fenix_open"],
+    "note": "legalle_open is absent from the published source creation set; this candidate was observed as blocked, not published."
+  },
+  "field_status": {
+    "municipality": "observed_listing_only",
+    "edital_numero": "unknown",
+    "cargos": "not_extracted",
+    "inscricao_dates": "listing_observation_only",
+    "prova_data": "unknown",
+    "remuneracao": "unknown",
+    "taxa_inscricao": "unknown"
+  },
+  "gates": {
+    "identity": "BLOCKED",
+    "artifact_pin": "BLOCKED_LOCAL_BYTES_MISSING",
+    "source_specific_parser": "NOT_RUN",
+    "strong_preflight_revalidate_sqlite": "NOT_RUN",
+    "reviewed_run": false,
+    "proposal": false,
+    "import": false,
+    "publish": false,
+    "apply": false,
+    "network": false,
+    "docker": false,
+    "db_mutation": false
+  },
+  "safe_next_step": "Acquire or restore the exact pinned artifact and repeat identity/document binding. Do not use the legacy Garibaldi proposal or infer fields from listing metadata."
+}

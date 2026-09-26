@@ -1,0 +1,60 @@
+{
+  "schema": "t012.avancasp.document-review-operational-procedure.v5",
+  "status": "READY_FOR_OPERATIONAL_REVIEW",
+  "scope": "offline diagnosis only; no API/live/Docker/backend edits",
+  "source": "avancasp_open",
+  "external_id": "272",
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "old_case": {
+    "case_id": "drc-preserved-1d4a34207027a52670a51a736a125257",
+    "prepared_documents": 1,
+    "stored_sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+    "pages": 48,
+    "field_states": "all failed",
+    "disposition": "STALE_INCOMPLETE_DO_NOT_APPROVE",
+    "reason": "Case was prepared with the deployed parser pin aa3e/b0ba while the staged first pending PDF is bbc8/c60; it also contains only one of the two pending documents."
+  },
+  "root_cause": {
+    "production_pin": {
+      "file": "backend/app/tenderproof/avancasp_t012.py",
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+      "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+      "byte_len": 742298
+    },
+    "staged_pin": {
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48
+    },
+    "failure_path": "fields.review_fields catches source parser ValueError and marks titulo/orgao/edital_numero/inscricao_inicio/inscricao_fim/prova_data/cargos/remuneracao FAILED; it does not silently fall through to generic values."
+  },
+  "case_semantics": {
+    "prepare_preserved": "Reuses the existing case only when identity, one-document shape, document identity, SHA and registered blob all match; otherwise returns 409. It cannot append the second pending PDF or reparse the old case.",
+    "prepare": "Checks current case against the complete pending manifest multiset and every blob/hash. The old one-document case fails that check for two pending PDFs, then the normal prepare path extracts all wanted documents and inserts a new random drc-* case; it does not delete/invalidate the old row.",
+    "current": "Returns the newest unapproved case matching the current revision and extraction method. Operational review must inspect that the replacement case has exactly both expected SHA values before any decision.",
+    "approve": "Requires one decision per distinct document SHA; therefore the replacement case must contain both PDFs. Never approve the old one-document failed case."
+  },
+  "safe_reprocessing_procedure": [
+    "Deploy/integrate the corrected source-specific parser pin bbc8/c60 before any prepare retry; the current backend pin remains stale and will reproduce the blocker.",
+    "Do not call prepare-preserved for the old case; it is single-document recovery and cannot add the sibling PDF.",
+    "Run normal prepare once for the exact run after parser integration. Verify new case identity/run/revision and exactly two documents: c60fcc... (48 pages) and 49b213... (49 pages), with registered blobs and parser-supported fields.",
+    "Keep old case drc-preserved-1d4a... as immutable audit history; do not approve it, delete it, or treat its failed fields as current.",
+    "Only after independent review of both documents may an operator make two SHA-bound decisions; no proposal retry is part of this procedure."
+  ],
+  "blocking_gap": {
+    "status": "BLOCKED_UNTIL_PARSER_DEPLOYMENT",
+    "gap": "The corrected Avança parser is present only as source evidence; backend/app/tenderproof/avancasp_t012.py still pins aa3e/b0ba. Offline procedure is proven, but a safe operational retry cannot succeed before that integration/deploy."
+  },
+  "expected_documents": [
+    {"url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf","sha256":"c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637","pages":48},
+    {"url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf","sha256":"49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd","pages":49}
+  ],
+  "evidence": [
+    "document-review-live-r2-first-artifact-receipt-20260913.json",
+    "avancasp_parser_r3_pin.py",
+    "test_document_review_live_r2_r3.py",
+    "backend/app/tenderproof/review_cases.py",
+    "backend/app/tenderproof/fields.py"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema":"t012.cpcon_open.blocker.v1",
+  "status":"BLOCKER_EVIDENCE_VERBATIM",
+  "selection":"PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+  "source":"cpcon_open",
+  "artifact_sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+  "what_is_proven":"CPCONAdapter identity/document binding; 13/13 PDF pages; six cargo rows with AC vacancies, 40h and R$3.768,36; title/orgão/edital identity.",
+  "exact_blocker":"The preserved PDF text extractor emits encoding-mapped accent codepoints. The draft r1 envelope has normalized non-verbatim row snippets; r2 attempted shorter snippets but contains U+FFFD in JSON. Therefore no reviewed envelope is currently eligible for proposal: evidence must be regenerated from exact parser output with canonical encoding, then ReviewedRun/import dry-run rerun.",
+  "safe_condition_to_resume":"Use raw page text codepoints from extract_pages_isolated, assert every snippet is an exact substring and rejects U+FFFD, regenerate envelope/receipt/run; do not import or propose before that pass.",
+  "network":false,"db":false,"proposal":false,"apply":false
+}

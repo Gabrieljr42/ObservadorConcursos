@@ -1,0 +1,25 @@
+{
+  "schema": "t012.reviewed-run-path-independent-luna-review-r2.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only run identity/import review; no live or catalog mutation",
+  "checks": {
+    "semantic_seed": "PASS: owner, source, external/concurso target, artifact_id, requested/final URLs, SHA, byte length, content type, reviewed values, evidence URL/SHA/page/snippet/method/units and page-number set participate.",
+    "runtime_exclusions": "PASS: content_path/content_base64/storage_path, downloaded_at, evidence_id and run timestamps are excluded only as transport/runtime metadata.",
+    "material_drift": "PASS: URL, artifact_id, SHA/bytes, evidence page and reviewed values/units alter the derived ID; path-only variants do not.",
+    "legacy_lookup": "PASS: exactly one owner-bound legacy-ID lookup is attempted only after current-ID miss; full _semantic_run comparison is required; legacy row is returned read-only without takeover.",
+    "legacy_divergence": "PASS: independently reproduced URL drift against a forced legacy row raises strong conflict.",
+    "owner_isolation": "PASS: owner is in current and legacy identity; existing owner checks/replay guards remain intact.",
+    "create_and_updates": "PASS: nullable CREATE contract and positive update/publication paths remain covered.",
+    "concurrent_import": "PASS by existing commit/idempotence conflict checks; no allocator or DB schema mutation was introduced."
+  },
+  "tests": {
+    "identity_legacy": "7 passed, 10 deselected",
+    "publication_regression": "18 passed",
+    "manual_legacy_drift": "PASS: raises strong conflict",
+    "compileall": "PASS"
+  },
+  "residual_note": "Legacy replay test uses a controlled pre-r2 ID fixture; production legacy rows still require the same complete semantic comparison before idempotent_legacy.",
+  "mutations_performed": false
+}

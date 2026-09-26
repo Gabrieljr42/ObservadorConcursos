@@ -1,0 +1,22 @@
+{
+  "schema": "t012.apta.title-diagnosis-r13.v1",
+  "status": "NEEDS_READ_ONLY_MANIFEST",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "receipt": "docs/execucao/evidencias/T012/apta_open/live-document-review-receipt-r12-20260913.json",
+  "artifact_sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+  "expected_manifest_title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+  "sent_request_title": "1ª Retificação do Edital do Concurso Público nº 01/2026",
+  "comparison": {
+    "raw_bytes_equal": false,
+    "unicode_nfc_equal": false,
+    "unicode_nfd_equal": false,
+    "casefold_whitespace_equal": false,
+    "html_entity_unescaped_equal": false,
+    "conclusion": "409 is a true manifest-title mismatch, not Unicode/case/whitespace/entity drift"
+  },
+  "read_only_data_present": true,
+  "exact_integrator_action": "Resubmit the document-review request using the manifest title exactly: Edital de Retificação I ao Edital de Abertura de Inscrições; preserve the same URL, SHA, bytes and page count. No new acquisition is needed.",
+  "effects": {"retry": false, "approve": false, "apply": false, "proposal": false}
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12",
+  "owner": "T004-conteudo",
+  "state": "approved_pending_integrator_application",
+  "publication_performed": false,
+  "proposal": {
+    "id": "tpa-ff3ac1092183a78f6795b674c04bd942",
+    "proposal_hash": "ff3ac1092183a78f6795b674c04bd942f514025ecf0a029944d2a083e0da39b6",
+    "state": "proposed",
+    "concurso_id": null,
+    "receipt": "backend/.tenderproof/product-completion/delivery-legalle-composed-proposed-20260912T202622909866Z.json"
+  },
+  "source": "legalle_open",
+  "source_id": 49,
+  "candidate_key": "2486",
+  "run_id": "tp-tcj-b043232758f45dcaabd67471231c3608-1",
+  "identity": {
+    "external_id": "2486",
+    "title": "Município de Garibaldi",
+    "detail_url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2486",
+    "document_url": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2486/50921b562874797cb1e4ab5d043289c8.pdf",
+    "document_sha256": "344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129"
+  },
+  "field_audit": {
+    "titulo": {"state": "supported", "value": "Município de Garibaldi", "page": 1},
+    "orgao": {"state": "supported", "value": "Prefeitura Municipal De Garibaldi", "page": 1},
+    "edital_numero": {"state": "supported", "value": "04/2025", "page": 1},
+    "inscricao_inicio": {"state": "supported", "value": "2025-11-05", "page": 1},
+    "inscricao_fim": {"state": "supported", "value": "2025-11-24", "page": 1},
+    "prova_data": {"state": "unknown", "reason": "não identificada em cronograma compatível; requer conferência"},
+    "remuneracao": {"state": "unknown", "reason": "sem contexto suficiente para distinguir salário de taxa/benefício"},
+    "cargos": {"state": "unknown", "reason": "tabela por cargo não foi publicada no payload; não inferir"},
+    "cidade_uf": {"state": "supported", "value": "Garibaldi/RS", "basis": "cabeçalho do edital"}
+  },
+  "documents": [
+    {"kind": "edital", "title": "Edital nº 04/2025 - Abertura e Inscrições", "sha256": "344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129", "status": "fetched_and_extracted"},
+    {"kind": "retificacao", "title": "Retificação da Classificação Final", "sha256": "d7d2967a1612ccc5abcb3fad52022bf140017486ca0f555bfb535ea2a6aacab6", "status": "fetched_and_extracted", "effect": "classification_only"},
+    {"kind": "retificacao", "title": "Retificação do Cronograma", "sha256": "ab68844c2bbed8a92a1652228903ee6f0b581faac54d4d3ab5a7a147ad0d85ec", "status": "fetched_and_extracted", "effect": "schedule_publication_date_review"},
+    {"kind": "retificacao", "title": "Retificação", "sha256": "f98866f076889f4dd32a049603ea4098120d193dbfd76f4c81f367f60ec3b3cc", "status": "fetched_and_extracted", "effect": "cargo_workload_or_remuneration_review"}
+  ],
+  "gates": {
+    "identity": "passed",
+    "extraction": "partial",
+    "human_field_review": "required",
+    "proposal": "proposed",
+    "approval": "independent_review_approved",
+    "application": "blocked",
+    "sync_and_app": "pending_integrator"
+  },
+  "evidence": [
+    "backend/.tenderproof/product-completion/delivery-next-review-cases-20260909.json",
+    "backend/.tenderproof/product-completion/delivery-next-20260909.json",
+    "docs/entrega-fontes-atual.csv"
+  ],
+  "next_action": "Integrador revalidar o caso preservado, conferir os três efeitos documentais por campo e preparar proposta normal; só aprovar/aplicar campos conferidos."
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "t012.epl-document-review-luna-r1.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only decision review; no network/live/DB mutation",
+  "verdict": "ACCEPT_BLOCKED",
+  "identity": {
+    "source": "epl_open",
+    "source_number": 21,
+    "external_id": "52",
+    "organization": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)",
+    "notice": "Edital 01/2023",
+    "binding": "PASS: all three URLs are tenant/process-bound to EPL_CONCURSOS/00052 and validated against the preserved candidate detail."
+  },
+  "documents": [
+    {
+      "review_order": 1,
+      "retificacao_number": 10,
+      "publication_position": 14,
+      "doc_id": "epl_open-doc-0d554d19a4e5ad20",
+      "kind": "retificacao",
+      "title": "Errata do Edital n° 10",
+      "url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/ERRATA%20EDITAL%2010_1705951014.pdf",
+      "content": "BLOCKED_MISSING_BYTES; materiality and hash unproved"
+    },
+    {
+      "review_order": 2,
+      "retificacao_number": 9,
+      "publication_position": 16,
+      "doc_id": "epl_open-doc-159412f64c2199e6",
+      "kind": "retificacao",
+      "title": "09 - Retificação do Edital de Abertura",
+      "url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/09%20-%20RETIFICACAO%20EDITAL%2001_1701470949.pdf",
+      "content": "BLOCKED_MISSING_BYTES; materiality and hash unproved"
+    },
+    {
+      "review_order": 3,
+      "retificacao_number": 5,
+      "publication_position": 20,
+      "doc_id": "epl_open-doc-22e6fbf818ecdf28",
+      "kind": "retificacao",
+      "title": "05 - Retificação do Edital de Abertura",
+      "url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/05%20-%20EDITAL%20DE%20RETIFICACAO%20DO%20EDITAL%2001_1701470876.pdf",
+      "content": "BLOCKED_MISSING_BYTES; materiality and hash unproved"
+    }
+  ],
+  "acquisition": {
+    "attempted": true,
+    "attempts_per_exact_url": 1,
+    "driver": "BoundedHTTPDriver",
+    "tls": true,
+    "allowlist": ["cdn-arquivo.concursos.srv.br"],
+    "result": "BLOCKED_ENVIRONMENT_NETWORK",
+    "error": "WinError 10013: socket access prohibited by environment; no response bytes persisted",
+    "safe_resume": "Run one bounded TLS/allowlist acquisition per exact URL in an environment with egress; preserve each PDF and content receipt before any document approval."
+  },
+  "guards": {
+    "order": "PASS: [10, 9, 5] matches publication positions [14, 16, 20]; filename timestamps are not treated as publication dates.",
+    "dedupe": "PASS only at URL/doc_id level; content hashes unavailable, so content-level dedupe/materiality remains undecidable.",
+    "opening_edital": "PASS: only principal opening artifact is locally preserved (784614 bytes, SHA b040f8c3...); it is never substituted for retifications.",
+    "promotion": "PASS: no content, dates, field corrections or catalog effects promoted; proposal/approve/apply all false."
+  },
+  "test": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/epl_open/test_document_review_decisions_r1.py",
+    "result": "3 passed"
+  },
+  "required_next_gate": [
+    "Acquire and hash all three exact PDFs, recording byte length, pages, URL and artifact provenance.",
+    "Re-run document review in order [10,9,5]; decide material changes only from bytes/literal evidence.",
+    "Keep proposal/import/apply blocked until all three review decisions are resolved."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/epl_open/document-review-decisions-r1.json",
+    "docs/execucao/evidencias/T012/epl_open/test_document_review_decisions_r1.py",
+    "docs/execucao/evidencias/T012/epl_open/live-proposal-receipt-20260913.json"
+  ]
+}

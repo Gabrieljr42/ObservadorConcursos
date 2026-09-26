@@ -1,0 +1,11 @@
+{
+  "schema": "t012.dispatch-batch2.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "avancasp_open",
+  "external_id": "272",
+  "artifact": {"sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a", "byte_len": 742298, "pages": 48, "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf"},
+  "strict_branch": "fields.py exact source/external; parser SHA/bytes/identity fail-closed; validation resolver exact",
+  "tests": {"dispatch": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "dispatch_result": "11 passed", "parser_suite": "38 passed", "side_effects": "no proposal/version/outbox writes; offline only"},
+  "network": false,
+  "pilot_mutated": false
+}

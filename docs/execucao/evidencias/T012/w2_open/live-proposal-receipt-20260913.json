@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-13T07:58:28-03:00",
+  "source": "w2_open",
+  "source_id": 59,
+  "external_id": "105",
+  "artifact_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+  "artifact_bytes": 700244,
+  "artifact_pages_declared": 40,
+  "backup": {"status":"REUSED_PASS","bundle":"/backups/pilot-20260913T103843603Z-operational"},
+  "preflight": {"health":200,"duplicate_count_before":0,"canonical_source_count_before":99,"canonical_contest_count_before":33},
+  "allocation": {"source_number":59,"canonical_concurso_id":null,"rule":"not inferred; source_number never used as concurso_id"},
+  "import": {"status":"PASS","run_id":"tp-reviewed-w2-105-20260913","owner_user_id":1,"reference_only":true,"sha_revalidated":true},
+  "proposal": {"status":"BLOCKED_BEFORE_PROPOSAL","proposal_id":null,"approve":false,"apply":false,"http_status":422,"detail":"TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"},
+  "blocker": {"stage":"publication._revalidate","forced_identity_or_concurso_id":false,"unknown_fields_added":false},
+  "after": {"canonical_contest_count":33,"canonical_source_count":99,"proposals":95,"versions":91,"outbox":91,"notifications":90,"w2_external_match_count":0},
+  "other_sources_touched":false,
+  "next_gate":"reconcile the preserved PDF's formal identity evidence against the current W2 adapter/revalidation contract; do not force allocation or proposal"
+}

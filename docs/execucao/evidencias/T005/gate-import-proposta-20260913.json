@@ -1,0 +1,10 @@
+{
+  "schema": "observador.t005.import_proposal.v1",
+  "recorded_at": "2026-09-13T01:19:32.3012386-03:00",
+  "run_id": "tp-reviewed-511f58b869b35d449311e6184b2d3dea",
+  "import": {"dry_run": "validated", "apply": "imported", "fields": ["cargos"]},
+  "proposal": {"id": "tpp-661ba4a83c24df189bacd60e15ffe029", "hash": "6684fa331adfd23a565300785b44f32ba9f20c0c9e41f5cfaeb8af892fefacf0", "state": "proposed", "contest_id": 32, "eligible_fields": ["cargos"], "baseline_cargos": null, "proposed_cargos_count": 7},
+  "counts_after": {"proposals": 92, "versions": 87, "outbox": 87, "notifications": 86},
+  "approve_apply": false,
+  "gate": "PASS; aguardando revisão independente pós-import"
+}

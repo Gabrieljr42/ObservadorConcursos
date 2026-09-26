@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADM&amp;TEC</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<meta content="ADM&TEC" name="autor" />
+
+	<meta property="og:url" content="">
+	<meta property="og:title" content="ADM&TEC">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="ADM&TEC">
+	<meta property="og:type" content="website">
+        <meta property="fb:app_id" content="496033650515078">
+        <meta content="index, follow" name="robots">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style-metronic.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style-responsive.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/profile.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/red.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/styleMorki.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/material-scrolltop.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/sistema_mh.css"/>
+	<link rel="stylesheet" type="text/css" href="https://admtec.org.br/asset/css/feather.css"/>
+	<link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v6.4.2/css/all.css"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMEYPMQT2F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMEYPMQT2F');
+</script>
+	<link rel="shortcut icon" href="//cdn.admtec.org.br//img/icone.png" type="image/x-icon">
+<script src="https://www.google.com/recaptcha/api.js?render=6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn"></script>
+
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery-migrate-1.2.1.min.js">
+</script><script type="text/javascript" src="//cdn.admtec.org.br//js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/material-scrolltop.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.inputmask.bundle.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/myscriptfirst.min.js"></script>
+<script src="//cdn.admtec.org.br//js/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://admtec.org.br/js/cadastros.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--[if lt IE 9]>
+<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet">
+
+<script type="text/javascript">
+    var Site_atual='https://admtec.org.br/';
+function Inicio(pagina)
+{
+
+location.href=pagina ;
+}
+function nova_pagina(pagina){
+    window.open(""+pagina+"");	
+}
+function voltar(){
+window.history.go(-1);
+}
+ $(document).ready(function()
+    {
+        $("#login_sistema").validate({
+            rules: {
+               
+                reCaptcha: {
+                    reCaptchaMethod: true   
+                }
+            },
+            messages: {
+                cpf_candidato_login: "Informe o CPF",
+                senha_candidato_login: "Informe a senha"
+            },
+            submitHandler: function(form) 
+                {
+                    Swal_aguarde('Realizando Login');
+
+                var formData =  new FormData(jQuery('#login_sistema')[0]);
+                $.ajax({
+                    url: 'https://admtec.org.br/usuario/verifica_login',
+                    type: 'POST',
+                    data: formData,
+                    success: function(data) 
+                        {
+                            console.log(data);
+                            Swal.close();
+                            var data=JSON.parse(data);
+                            
+                             //$('#Modal').modal('hide');
+                            Swal.fire({
+                                title: data.mensagem,
+                                icon: data.status,
+                                confirmButtonText: "OK",  
+                                timer: 3000,
+                                showConfirmButton: true,
+                                }).then((result) => {
+                                    if(data.status=='error')
+                                        {
+                                            if(data.redireciona==true)
+                                                location.href='https://admtec.org.br/usuario/cadastrar//';
+                                            return false;
+                                        }
+                                    window.location.reload(true);
+
+
+                                    });
+                        },
+                error: function (request, status, error) {
+                alert(request.responseText);
+                console.log(request.responseText);
+                 Swal.close();
+            },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    xhr: function() 
+                        { // Custom XMLHttpRequest
+                            var myXhr = $.ajaxSettings.xhr();
+                            if (myXhr.upload)
+                                { // Avalia se tem suporte a propriedade upload
+                                    myXhr.upload.addEventListener('progress', function(evt) {
+                                    if (evt.lengthComputable) 
+                                        {
+                                            var percentComplete = evt.loaded / evt.total;
+                                            percentComplete = parseInt(percentComplete * 100);
+                                            $('#progress_bar_upload').attr('aria-valuenow', percentComplete).css('width', percentComplete+'%');                                
+                                        }
+
+                                    }, false);
+                                }
+                            return myXhr;
+                        }
+                    });
+                      
+     
+        }
+    });
+});
+
+</script>
+<style>
+     #icone_login:hover{
+            color:#990000 !important;
+        }
+    .modal-dialog-centered {
+     display: -webkit-box; 
+    display: -ms-flexbox;
+     display: flex; 
+     -webkit-box-align: center; 
+    -ms-flex-align: center;
+     align-items: center; 
+     min-height: calc(100% - (0.5rem * 2));
+    }
+</style>
+	</head>
+<body class="page-header-fixed">
+    <div id="div_cadastro"></div>
+<div class="modal fade c-content-login-form" id="login-div" role="dialog"> 
+            <div class="modal-dialog">
+                <div class="modal-content c-square">
+                                             <div class="modal-body">
+                    <div class="modal-header c-no-border">
+                        <h3 class="c-font-24 c-font-sbold">Seja bem-vindo!</h3>
+                        <p>Por favor, informe o seu CPF e a sua senha para acessar a área do candidato</p>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="
+    position: absolute;
+    right: 15px;
+    top: 15px;
+"><span aria-hidden="true" >&times;</span></button>
+                    </div>
+                        <form id="login_sistema" accept-charset="UTF-8" role="form" method="post">
+                            <div class="form-group">
+                                <input name="cpf_candidato" class="form-control" id="cpf_candidato_login_header" size="15"placeholder="CPF" type="text" required="required">
+                                <script type="text/javascript">$("#cpf_candidato_login_header").mask("999.999.999-99");</script>
+                            </div>
+                            <div class="form-group">
+                                <div id="aviso_caps_lock" style="visibility: hidden; color: #000;">CAPS LOCK ATIVADO</div>
+                                <input class="form-control" required placeholder="Senha" name="senha" type="password" value="" onkeypress="checar_caps_lock(event)">
+                            </div>
+                           
+                            <input class="btn btn-lg btn-primary btn-block" 
+        type="submit"   value="Login" name="Bnt_candidato_login_mvc" id="Bnt_candidato_login"  >
+                            <div class="form-group " style="text-align: right">
+                                <a href="https://admtec.org.br/login/esqueci_senha/" class="c-btn-forgot" id="forget-password-a" >Esqueceu sua senha?</a>
+                            </div>
+                        </form>                            
+                    </div>
+<!--                    <div class="modal-footer c-no-border">                
+                        <span class="c-text-account">Não tem uma conta ainda?</span>
+                        <a href="https://admtec.org.br/Dados_Pessoais" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-slim c-btn-border-1x c-btn-square c-btn-signup">Inscreva-se</a>
+                    </div>-->
+                                         </div>
+            </div>
+        </div>
+      
+<nav class="navbar navbar-default" id="main-nav">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-morki">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                            <a class="navbar-brand" href="https://admtec.org.br"><img style="    max-width: 220px;" src="//cdn.admtec.org.br//img/logo-nav.png"/></a>
+			</div>
+
+
+			<div class="collapse navbar-collapse navbar-morki">
+				<ul class="nav navbar-nav navbar-left" id="nav-menu">
+					<li><a href="//admtec.org.br/concursos/" data-scroll>Concursos</a></li>
+					<li><a href="//admtec.org.br/formacao/">Formação</a></li>
+					<li><a href="https://api.whatsapp.com/send?phone=5581997690218"><i class="fa fa-phone-alt" style="font-size: 19px;"></i><span>(81) 99769-0218</span></a></li>
+					<li class="mailme"><a href="/cdn-cgi/l/email-protection#7a191514190f080915093a1b1e170e1f195415081d541808"><i class="fa fa-envelope social-footer"></i> <span><span class="__cf_email__" data-cfemail="593a36373a2c2b2a362a19383d342d3c3a77362b3e773b2b">[email&#160;protected]</span></span></a></li>
+					
+										<li class="dropdown notifications-menu">
+					<a id="icone_login"  data-toggle="modal" data-target="#login-div" class="btn c-theme-btn c-btn-square c-btn-uppercase btn-danger" onClick="onClick();javascript:setFocusField('login-form-cpf')" style="color:#FFF">
+                                            Área do Candidato   <i class="fa fa-user-circle" style="font-size: 19px;"></i>
+						</a>
+					</li>
+                                        <!--<li class="dropdown notifications-menu ">-->
+<!--                                      <li class="dropdown notifications-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-bell-o" style="color:#990000 !important"></i>
+                                            <span class="label-notify label-warning">6</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="notification-header">Você tem 6 notificações</li>
+                                            <li>
+
+                                                <ul class="notification-itens">
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-campo-alegre-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Campo Alegre (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/fundo-municipal-de-saude-de-gloria-do-goita-pe">
+                                                                <i class="fa fa-pencil"></i> Fundo Municipal de Saúde de Glória do Goitá (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-sao-luiz-do-quitunde-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de São Luis do Quitunde (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-aracoiaba-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Araçoiaba (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-santa-maria-da-boa-vista-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Santa Maria da Boa Vista (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-palmeira-dos-indios-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Palmeira dos Índios (AL)                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                            </li>
+                                            <li class="notification-footer"><a href="/concursos">Ver todos</a></li>
+                                        </ul>
+                                    </li>
+							          -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</nav>
+    
+<br><br>
+<div class="container">
+    <div class="inner_section">
+        <div class="row">
+            <title>PREFEITURA MUNICIPAL DE PIRANHAS - </title>
+            <style>
+                .alert-secondary 
+                {
+                    color: #383d41;
+                    background-color: #e2e3e5;
+                    border-color: #d6d8db;
+                }
+            </style>
+            <section id="speakers" class="">
+                    <div class="section-header mb-3" style="text-align: center;">
+                        <h2>PREFEITURA MUNICIPAL DE PIRANHAS-ALAGOAS</h2>
+                        <p>
+                            <span class="px-2 mb-2" style="    font-size: 160%;
+                                color: #2742325c;">CONCURSO PÚBLICO - 01 
+                            </span>
+                            <br>
+                            <br>
+                                                                <div class="alert alert-info" role="alert" style="border-radius: 20px">
+                                    <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h6 style="text-align: center;"><span style="font-size: 14pt;"><strong>COMUNICADO</strong></span></h6>
+<h6 style="text-align: center;"><span style="font-size: 12pt;">Comunicamos aos candidatos inscritos no Concurso P&uacute;blico destinado ao provimento de cargos da Guarda Municipal do Munic&iacute;pio de Piranhas/AL, que o processo de devolu&ccedil;&atilde;o das taxas de inscri&ccedil;&atilde;o foi devidamente conclu&iacute;do.</span></h6>
+<h6 style="text-align: center;"><span style="font-size: 12pt;">No decorrer das restitui&ccedil;&otilde;es, verificou-se que alguns candidatos n&atilde;o manifestaram interesse em receber os valores a que fazem jus. Para esses casos, ser&aacute; aberto prazo excepcional para o envio dos dados necess&aacute;rios &agrave; efetiva&ccedil;&atilde;o da devolu&ccedil;&atilde;o, compreendido entre os dias <strong>07 e 24 de julho de 2026</strong>, per&iacute;odo ao t&eacute;rmino do qual ser&aacute; definitivamente encerrado todo o procedimento.</span></h6>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>                                    </div>
+                                                </div>
+            </section>
+            <section id="speakers" class=" section-with-bg pt-4">
+                    <div class="row">
+                        <div class="card col-sm-12 col-md-12 col-lg-3 mb-2">
+                            <div class="card-body" style="background: #ffff;border-radius: 15px;padding-top: 10px;padding-left: 5px;padding-right: 5px;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12 text-center">
+                                        <img class="img-thumbnail border-0" src="https://cdn.concursos.srv.br/logo/1762194717_brasao colorido.png">
+                                    </div>
+                                </div>
+                                <small class="py-2"> 
+                                    <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p style="text-align: center;">Concurso p&uacute;blico para o provimento de vagas em cargos efetivos na&nbsp;<strong>PREFEITURA MUNICIPAL DE PIRANHAS (AL).</strong></p>
+</body>
+</html>                                </small>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 card mx-2-md mb-2">
+                            <div class="card-body" style="background: #ffff;border-radius: 31px;padding: 11px 27px;">
+                                <div class="row">
+                                    <div class="col-12 col-md-8">
+                                        <h5 class="my-0">
+                                            <div class="py-3">
+                                                <small class="text-primary ">Período de Inscrições:</small>
+                                                <span class="d-block"> 
+                                                                                   10/04/2026 - 00:00:00 a 11/05/2026 - 23:59:59                                                </span>
+                                            </div>
+                                        </h5>
+                                    </div>
+                                                    </div>
+                                        <ul class="d-sm-flex nav nav-tabs card-title text-muted text-uppercase text-center mb-4" role="tablist">
+                                            <li class="nav-item active">
+                                                <a class="nav-link " href="#tab0" role="tab" data-toggle="tab">
+                                                  DOCUMENTOS
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#tab1" role="tab" data-toggle="tab">
+                                                  CARGOS DISPONÍVEIS
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                        <div class="tab-content row">
+                                              
+                                            <div role="tabpanel" class="col tab-pane fade in active" id="tab0"style="    padding-top: 11px;
+            " >
+
+             <div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+                                                    <h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Edital e alterações
+
+                                                </h2></div>                                                <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">22/04/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/Edital_de_Piranhas_retificado_22_04_2026_04_22_11_14_52.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Edital do Concurso (Retificado em 22/04/2026)                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/Edital_de_Piranhas_retificado_22_04_2026_04_22_11_14_52.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                    <div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+                                                    <h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Publicações oficiais
+
+                                                </h2></div>                                                <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">09/04/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/Diario_Oficial_Publicacao_do_Edital_2026_04_09_09_49_31.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Diário Oficial - Publicação do edital                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/Diario_Oficial_Publicacao_do_Edital_2026_04_09_09_49_31.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">06/04/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/20260408_ext_cont_Piranhas_2026_04_08_10_04_50.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Diário Oficial - Contratação da organizadora                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/20260408_ext_cont_Piranhas_2026_04_08_10_04_50.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">09/03/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/20260310_Portaria_comissao_Concurso_Guardae_Piranhas_2026_04_08_10_06_02.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Portaria - Definição da comissão organizadora                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/20260310_Portaria_comissao_Concurso_Guardae_Piranhas_2026_04_08_10_06_02.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                    <div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+                                                    <h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Publicações
+                                                </h2></div>                                                <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">14/05/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/atend_esp_PIR_2026_05_13_10_04_24.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista preliminar de análise de pedidos de atendimento especial para realização da prova objetiva                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/atend_esp_PIR_2026_05_13_10_04_24.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">06/05/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/rec_isen_Pira_2026_05_06_08_58_08.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Respostas aos recursos da solicitação de isenção da taxa de inscrição                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/rec_isen_Pira_2026_05_06_08_58_08.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">06/05/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/isencao_rF_PI_COMP_2026_05_06_08_57_01.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado final da solicitação de isenção da taxa de inscrição                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/isencao_rF_PI_COMP_2026_05_06_08_57_01.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">30/04/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/isencao_rp_PI_completo_2026_04_29_11_28_17.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado preliminar da solicitação de isenção da taxa de inscrição                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/isencao_rp_PI_completo_2026_04_29_11_28_17.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                                                                    <div class="row schedule-item">
+
+
+                                                    <div class="col-12 col-md-2 col-sm-2">
+                                                        <div class=""style="padding-top: 8px">
+                                                            <span class="d-block text-publicacao">22/04/2026</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+
+                                                        <a  target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/contra_edital_2026_04_22_11_16_13.pdf" class="btn-text p-0 d-block text-left">
+                                                            <h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado dos recursos de impugnação do edital                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2">
+                                                        <div class="btn btn-text p-0 d-block text-left">
+                                                                <a target="new" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00121/PUBLICACOES/contra_edital_2026_04_22_11_16_13.pdf" class="btn btn-theme btn-light py-1" style="width: 60px;"><i class="fa fa-download"></i></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="my-3">
+                                                    
+                                            </div>
+
+                                            <div role="tabpanel" class="col tab-pane fade in " id="tab1" style="    padding-top: 11px;
+            ">
+                                                   <div class="row schedule-item">
+                                            
+                                            <div class="col-12 col-md-9">
+                                                
+                                                <div class="p-0 d-block text-left">
+                                                    <small class="text-primary">Cargo - ENSINO MÉDIO </small>
+                                                    <h5 class="mb-0">GUARDA MUNICIPAL</h5>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <small class="text-primary">Valor da Inscrição</small>
+                                                <h5 class="mb-0">R$ 125,00</h5>                                                   
+                                            </div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+                                            
+                                        </div>
+                                        <hr class="my-3">
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                    </section>
+        </div>
+    </div>
+</div>
+        
+<script>
+    var descricao = "PREFEITURA MUNICIPAL DE PIRANHAS - CONCURSO PÚBLICO - 01 - Período de Inscrições: 10/04/2026 - 00:00:00 a 11/05/2026 - 23:59:59";
+
+// Seleciona a meta tag existente
+var $meta = $('meta[property="og:description"]');
+
+// Se existir, atualiza; se não, cria e adiciona ao <head>
+if ($meta.length) {
+  $meta.attr('content', descricao);
+} else {
+  $('<meta>', { property: 'og:description', content: descricao }).appendTo('head');
+}
+</script>
+ <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+<script src="//cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script> 
+<script src="https://admtec.org.br/asset/js/mascara_mh.js"></script>
+  <script src="//vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('//vlibras.gov.br/app');
+  </script>
+  <div class="rodape">
+        <div class="container">
+            <div class="row row-foot">
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                            <h2>Sobre</h2>
+                            <p>O Instituto de Administração e Tecnologia - ADM&amp;TEC, constituído em 1991, é uma sociedade civil sem fins lucrativos, fundada por professores da Faculdade de Administração e Direito de Pernambuco - FCAP, uma das unidades da Universidade de Pernambuco - UPE.</p>
+                            <a style="color: #990000;" href='/sobre'>Saiba mais...</a>
+                    </div>
+                </div>
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="extra-page">
+                            <ul class="links-uteis">
+                                        <li>
+                                            <h2>Links úteis</h2>
+                                        </li>
+                                        <li>
+                                            <a href="//admtec.org.br/formacao" data-scroll="">Formação</a>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <a href="//admtec.org.br/desenvolvimento" data-scroll="">Desenvolvimento institucional</a>
+                                        </li>
+                                        <br>
+                                        
+                                        <br>
+                                        <li>
+                                            <a href="https://www.facebook.com/Institutodeadministracaoetecnologia" target="_blank">ADM&amp;TEC no Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/institutoadmtec/" target="_blank">ADM&amp;TEC no Instagram</a>
+                                        </li>
+
+                                    </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                        <h2>Contato</h2>
+                        <a style="color: #990000;" href="/cdn-cgi/l/email-protection#066569686573747569754667626b72636528697461286474"><span class="__cf_email__" data-cfemail="c7a4a8a9a4b2b5b4a8b487a6a3aab3a2a4e9a8b5a0e9a5b5">[email&#160;protected]</span></a>
+                        <p><i class="fa fa-phone-alt" style="font-size: 19px;"></i>(81) 3445.4469</p>
+                        <p><a href="https://api.whatsapp.com/send?phone=5581997690218"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path opacity="1" fill="#990000" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                <span>(81) 99769-0218</span></a></p>
+                        <br>
+                        <p>Segunda a sexta. Das 9:00 às 17:00</p>
+                        <br>
+                        <p>R. Profa. Ângela Pinto, 88 – Sala 5 – Torre<br>Recife/PE – CEP: 50710-010<br>Fone: (81) 3445.4469<br>CNPJ: 35.328.913/0001-16</p>
+                    </div>
+                </div>
+            </div>
+			<br/><br/>
+			<div class="text-rodape">
+					<p class="copyright">
+					2026 &copy; Desenvolvido por MH Informática Ltda
+                    </p>
+				</div>
+			</div>
+</div>
+
+
+    
+
+
+    
+    
+
+	<!-- material-scrolltop button -->
+	<button class="material-scrolltop" type="button"><i class="fa fa-arrow-up" aria-hidden="true" style="color: #fff; font-size: 20px;"></i></button>
+
+	<!-- Initialize material-scrolltop with (minimal) -->
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		$('body').materialScrollTop();
+	</script>
+    
+    
+    
+    
+    
+    
+    
+    
+	<script type="text/javascript" src="//cdn.admtec.org.br//js/hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.themepunch.plugins.min.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/app.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/index.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/ui-extended-modals.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.sticky.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/owl.carousel.min.js"></script>	
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+			App.initBxSlider();
+			Index.initRevolutionSlider();
+			//Sticky JS
+		$(".navbar-default").sticky({topSpacing: 0});
+		$('.owl-carousel').owlCarousel();
+		});
+	</script>
+	<script>
+		    grecaptcha.ready(function() {
+          grecaptcha.execute('6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn', {action: 'submit'}).then(function(token) {
+               $('<input>', {
+                    type: 'hidden',
+                    name: 'g-recaptcha-response',
+                    value: token
+                }).appendTo('form');// Add your logic to submit to your backend server here.
+          });
+        });
+
+	</script>
+</body>

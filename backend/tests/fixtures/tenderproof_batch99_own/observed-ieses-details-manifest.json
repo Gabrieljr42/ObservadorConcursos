@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-09-08T15:01:23.520668+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "ieses_open",
+      "url": "https://www.scgas2026.ieses.org/",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T15:01:21.981670+00:00",
+      "status": 301,
+      "location": "https://scgas2026.ieses.org/",
+      "bytes": 63,
+      "sha256": "55706d6dde10bfbb6555637c823ee8d83ec7ab87392fadb53b362f88afacf8bb",
+      "file": "ieses_open-detail0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://scgas2026.ieses.org/",
+          "title": "Moved Permanently"
+        }
+      ],
+      "scripts": []
+    },
+    {
+      "source": "ieses_open",
+      "url": "https://www.crmvsc.ieses.org/",
+      "kind": "detail1",
+      "observed_at": "2026-09-08T15:01:21.982680+00:00",
+      "status": 301,
+      "location": "https://crmvsc.ieses.org/",
+      "bytes": 60,
+      "sha256": "78bbf9156c98f20e02c54bc03fe2a9be697d85cdb825e13bbb74c4d85267afc6",
+      "file": "ieses_open-detail1.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://crmvsc.ieses.org/",
+          "title": "Moved Permanently"
+        }
+      ],
+      "scripts": []
+    }
+  ]
+}

@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import MagicMock
 
 import pytest
+pytestmark = pytest.mark.usefixtures('legacy_crawler_enabled')
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 

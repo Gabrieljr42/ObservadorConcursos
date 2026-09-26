@@ -1,0 +1,45 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "run_id": "tp-reviewed-f3755a775f9b16a6a1ca2aeb5b0ea45c",
+  "source": "fapese_selection",
+  "concurso_id": 14,
+  "external_id": "007/2026",
+  "owner_user_id": 1,
+  "reference_only": true,
+  "artifact": {
+    "artifact_id": "art-2addf5fed2",
+    "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+    "byte_len": 345974,
+    "content_path": "docs/execucao/evidencias/T010/id14.pdf"
+  },
+  "fields_only": ["cargos"],
+  "cargos": [
+    {
+      "nome": "Articulador(a) político-pedagógico",
+      "vagas_imediatas": null,
+      "cadastro_reserva": null,
+      "cadastro_reserva_observacao": "cadastro reserva de prestadores PF; sem quantidade de oportunidades informada",
+      "remuneracao": "60.00",
+      "moeda": "BRL",
+      "remuneracao_observacao": "R$/hora de serviço efetivamente prestada; varia por etapa; não é mensal",
+      "evidencia": "p.3 itens 2.2.1/2.4.1; p.5 itens 3.2.1/3.3"
+    },
+    {
+      "nome": "Técnico de apoio",
+      "vagas_imediatas": null,
+      "cadastro_reserva": null,
+      "cadastro_reserva_observacao": "cadastro reserva de prestadores PF; sem quantidade de oportunidades informada",
+      "remuneracao": "7488.00",
+      "moeda": "BRL",
+      "remuneracao_observacao": "limite máximo por etapa/período de atividade; não é mensal",
+      "evidencia": "p.3 item 2.2.2; p.4 item 2.4.2; p.5 itens 3.2.2/3.3"
+    }
+  ],
+  "verification": {
+    "derivations": 2,
+    "reviewed_run_model_validation": "passed",
+    "isolated_store_revalidate": "eligible exactly cargos",
+    "isolated_create_proposal": "proposed with cargos only",
+    "pilot_deploy_import_apply": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "t012.apta.parser-r7-independent-review.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_BACKEND_INTEGRATION",
+  "scope": "read-only parser review; proposed module is not wired and no live/backend mutation was performed",
+  "pins": {
+    "source": "apta_open",
+    "source_id": 48,
+    "external_id": "708",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "bytes": 362093,
+    "pages": 20,
+    "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf"
+  },
+  "checks": {
+    "detail_url": "PASS: accepts exactly the Unicode and percent-encoded Câmara/Aragarças variants, with unquote equivalence; other variants fail",
+    "identity": "PASS: source/external, SHA/bytes, document URL and literal Concurso 01/2026, edital and Aragarças markers are bound",
+    "pages": "PASS: exactly 20 ordered non-empty pages; page error/truncated/U+FFFD fail closed",
+    "output": "PASS: exactly titulo, orgao and edital_numero, each supported with artifact/page/SHA evidence; no cargos/remuneration promotion",
+    "false_variants": "PASS: source, external, SHA, byte length, document URL, page count/order and replacement-character mutations reject",
+    "integration_boundary": "PASS as a proposed adapter only; no shared fields.py wiring or live effect is included"
+  },
+  "tests": [
+    {"command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/apta_open/test_apta_parser_r7_proposed.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_reviewed_run_import.py", "result": "17 passed"},
+    {"command": "backend/.venv/Scripts/python.exe -m compileall -q docs/execucao/evidencias/T012/apta_open/apta_aragarcas_parser_r7_proposed.py backend/app/tenderproof/fields.py", "result": "PASS"}
+  ],
+  "warning": "Backend integration must preserve the exact source/external dispatch and rerun shared _revalidate/publication regressions before deployment.",
+  "live_mutation": false
+}

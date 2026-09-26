@@ -1,0 +1,237 @@
+{
+  "observed_at": "2026-09-08T15:00:08.965856+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99klc",
+  "cycles": [
+    {
+      "source": "klc_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-48b4cf9e46a4",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.klcconcursos.com.br?pag=&sub=1",
+          "https://www.klcconcursos.com.br?pag=&sub=0",
+          "https://www.klcconcursos.com.br?pag=&sub=3"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "file": "klc_open-cycle1-listing-ad10a094e0.html",
+          "sha256": "eee4c55ff13a03f7b68792dbc54a159a29375880a743de534c41d2bf7921302d",
+          "bytes": 63798,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:00:09.615342+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-7da87504f10b",
+          "candidate": {
+            "candidate_id": "klc_open-632",
+            "title_observed": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP",
+            "detail_url_observed": "https://www.klcconcursos.com.br?pag=mco&id=632",
+            "external_id": "632",
+            "observed_at": "2026-09-08T15:00:09.764888Z",
+            "source": "klc_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+              "file": "klc_open-cycle1-detail-6c35d6c332.html",
+              "sha256": "62c229fd5bce6739a2a0bd2519e7c9e9c78d146d5fd4e6fdbefd41ab658545d7",
+              "bytes": 16374,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:00:10.721611+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "klc_open-doc-13eb607905855f1b",
+            "title": "Edital de Processo Seletivo",
+            "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Processo Seletivo' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: Retificação 1 - Alteração da Data da Prova; Edital de Homologação das Inscrições e Divulgação do Local de Prova; Edital de Divulgação do Gabarito Preliminar; Edital de Divulgação do Gabarito Oficial; Edital de Resultado Preliminar)."
+          },
+          "artifact": {
+            "artifact_id": "art-50fec5e75f",
+            "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+            "byte_len": 348300,
+            "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:00:11.309247Z",
+            "storage_path": "art-50fec5e75f-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf"
+          },
+          "total_pages": 10,
+          "processed_pages": 10,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=10/10",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.875
+    },
+    {
+      "source": "klc_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-d95dc0022c98",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.klcconcursos.com.br?pag=&sub=1",
+          "https://www.klcconcursos.com.br?pag=&sub=0",
+          "https://www.klcconcursos.com.br?pag=&sub=3"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "file": "klc_open-cycle2-listing-ad10a094e0.html",
+          "sha256": "eee4c55ff13a03f7b68792dbc54a159a29375880a743de534c41d2bf7921302d",
+          "bytes": 63798,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:00:13.367149+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-19010ba6e674",
+          "candidate": {
+            "candidate_id": "klc_open-632",
+            "title_observed": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP",
+            "detail_url_observed": "https://www.klcconcursos.com.br?pag=mco&id=632",
+            "external_id": "632",
+            "observed_at": "2026-09-08T15:00:13.498130Z",
+            "source": "klc_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+              "file": "klc_open-cycle2-detail-6c35d6c332.html",
+              "sha256": "62c229fd5bce6739a2a0bd2519e7c9e9c78d146d5fd4e6fdbefd41ab658545d7",
+              "bytes": 16374,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:00:14.067518+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "klc_open-doc-13eb607905855f1b",
+            "title": "Edital de Processo Seletivo",
+            "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Processo Seletivo' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: Retificação 1 - Alteração da Data da Prova; Edital de Homologação das Inscrições e Divulgação do Local de Prova; Edital de Divulgação do Gabarito Preliminar; Edital de Divulgação do Gabarito Oficial; Edital de Resultado Preliminar)."
+          },
+          "artifact": {
+            "artifact_id": "art-01b285b983",
+            "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+            "byte_len": 348300,
+            "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:00:14.151918Z",
+            "storage_path": "art-01b285b983-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf"
+          },
+          "total_pages": 10,
+          "processed_pages": 10,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=10/10",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.891
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fapeg_selection",
+      "url": "https://selecao.go.gov.br/assets/externo/js/app/edital/index.js",
+      "basis": "literal script src in official detail",
+      "observed_at": "2026-09-08T14:57:45.918599+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 53327,
+      "sha256": "34469bdc3cbf448ae6921dd8f8cb680b2c59ea2cea87397dea9bfc305d7d4931",
+      "file": "fapeg_selection-7d5fc3c7-34469bdc3c.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

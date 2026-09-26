@@ -1,0 +1,32 @@
+{
+  "schema": "tenderproof.t010.id16.document-review-preserved-bootstrap.r3.v2",
+  "scope": "offline authenticated bootstrap only; no pilot, deploy, network, catalog, proposal, version, outbox, or notification mutation",
+  "cause": "the deployed replay path can only reuse an existing document_effect_case; ID16 had current_case=null while its pending artifact was preserved locally",
+  "contract": {
+    "entrypoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "authorization": "operator + owner-scoped _review_run",
+    "source": "staged TenderProofStore blob only; no URL fetch",
+    "guards": [
+      "current owner/source/mode/candidate identity and pending revision",
+      "exact canonical pending document, exact requested/final URL and allowed host",
+      "artifact SHA-256/byte_len/content and complete extraction",
+      "content_type application/pdf is mandatory",
+      "principal artifact SHA-256/byte_len integrity is checked before revalidation",
+      "retificador textually corroborates candidate identity and retificação/prorrogação marker",
+      "same-host valid PDF from another certame is rejected by text/edital identity",
+      "principal edital blob extraction and identity revalidation",
+      "expected physical page count (23 for the ID16 artifact), no truncation/errors, method-bound payload",
+      "revision CAS and deterministic INSERT OR IGNORE case id including METHOD_VERSION and expected_page_count",
+      "existing deterministic row payload is compared canonically; collision is rejected",
+      "case digest includes METHOD_VERSION and expected_page_count"
+    ],
+    "effects": "only document_effect_cases is written; approved_at remains null"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_tenderproof_document_review_gate.py -k 'preserved_local or preserved_rejects'",
+    "result": "PASS: 2 targeted bootstrap tests; PASS: 38 review/selection/draft regression tests",
+    "covered": ["idempotent repeated bootstrap", "zero proposal/version/outbox/notification side effects", "cross-owner", "pending mismatch", "unregistered/hash drift", "different replay", "same-host valid PDF from another certame rejected", "principal edital extraction and identity revalidation"]
+  },
+  "compileall": "PASS: backend/.venv/Scripts/python.exe -m compileall -q app/tenderproof",
+  "gate": "READY_FOR_ARCH_REVIEW"
+}

@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-09-07T23:48:59.894471+00:00",
+  "scope": "offline recovery of official acquired document; no new HTTP or browser",
+  "original_run": "tpr-0fda8a7cdf55",
+  "original_page_limit": 60,
+  "revised_explicit_page_limit": 80,
+  "bytes_hash_verified": true,
+  "run_id": "tpr-831aba3f31cc",
+  "source": "funcern_selection",
+  "execution_status": "completed",
+  "validation_status": "valid",
+  "pages": 62,
+  "error": null,
+  "artifact": {
+    "artifact_id": "art-cd2ec959d8",
+    "sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+    "byte_len": 786327,
+    "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+    "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-07T23:48:55.447364Z",
+    "storage_path": "art-cd2ec959d8-8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca.pdf"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": [],
+    "warnings": [],
+    "checks": [
+      "paginas_com_texto=62/62",
+      "titulo_corroborado=4/4"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "validated_at": "2026-09-08T15:46:15.272804+00:00",
+  "scope": "real preserved legatus_open observation; synthetic canonical baseline only",
+  "command": "python scripts/tenderproof_batch60_material_update.py",
+  "source": "legatus_open",
+  "candidate": "160",
+  "run_id": "tp-tcj-98be1deceac5593aa92496366b3f5898-1",
+  "document_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+  "original_run_payload_sha256": "e31d8b7a020dcf4de6e1eb34ab88589d52550677a9e8e66d06f6b1f6cb6a2447",
+  "preserved_root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+  "network_requests": 0,
+  "production_writes": 0,
+  "observation_modified": false,
+  "baseline_synthetic": true,
+  "executions": [
+    {
+      "database": "sqlite",
+      "passed": true,
+      "proposal_id": "tpp-e9ea62afc37d623ebbec92038dd70a74",
+      "real_supported_update": {
+        "titulo": {
+          "label": "título",
+          "old": "Título anterior controlado para prova de atualização",
+          "new": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI"
+        }
+      },
+      "evidence": {
+        "value": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI",
+        "state": "supported",
+        "reason": null,
+        "document_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+        "items": [
+          {
+            "evidence_id": "ev-b80bf82598",
+            "artifact_id": "art-cb8c2142dc",
+            "document_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+            "source_url": "https://www.legatus.org.br/concursos/3181/download/",
+            "page_number": 1,
+            "snippet": "í -PI, bem como para formação de c adastro reserva, nos\ntermos da Constituição Federal, art. 37, II, da Lei Orgânica do Município de Tanque do Piauí, da Lei\nMunicipal nº 433 de 18 de novembro de 2025, da Lei Municipal nº 440 de 26 de março de 2026 e\nmediante as condições estabelecidas neste edital.\n1. DAS DISPOSIÇÕES P",
+            "json_path": null,
+            "method": "deterministic-regex",
+            "method_version": "tenderproof-fields/1.2",
+            "validation": {
+              "ok": true,
+              "code": null,
+              "message": null
+            }
+          }
+        ]
+      },
+      "unknown_field": {
+        "name": "inscricao_fim",
+        "state": "unknown",
+        "value": null,
+        "reason": "período direto de inscrição não identificado; datas de outras etapas não são inscrições"
+      },
+      "unknown_approval_rejected": true,
+      "preserved_controlled_values": {
+        "inscricao_inicio": "2026-04-01",
+        "inscricao_fim": "2026-04-19",
+        "salario_min": 3500,
+        "salario_max": 4000
+      },
+      "proposal_creation_request_idempotent": true,
+      "application_idempotent": true,
+      "after_apply": {
+        "contests": 1,
+        "versions": 1,
+        "outbox": 1,
+        "notifications": 0
+      },
+      "rollback_restores_baseline": true,
+      "rollback_idempotent": true,
+      "after_rollback": {
+        "contests": 1,
+        "versions": 2,
+        "outbox": 2,
+        "notifications": 0
+      }
+    }
+  ],
+  "limitations": [
+    "The prior canonical title, dates and salary are controlled test values, not historical source data.",
+    "Unknown dates are observed in the real PDF extraction; no conflicting field was fabricated.",
+    "This proves title update, not a real change between two editions of the source.",
+    "Outbox is recorded but no notifications are delivered."
+  ],
+  "temporary_volume_removed": true,
+  "passed": true,
+  "command_argv": [
+    ".venv/Scripts/python.exe",
+    "scripts/tenderproof_batch60_material_update.py",
+    "--source",
+    "legatus_open",
+    "--source-name",
+    "Legatus",
+    "--preserved-root",
+    ".tenderproof/r99replay13",
+    "--output",
+    "../docs/tenderproof-batch99-material-update.json"
+  ]
+}

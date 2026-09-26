@@ -1,0 +1,8 @@
+{
+  "schema": "observador.t010.id16.deploy_run_mismatch.v1",
+  "recorded_at": "2026-09-13T01:55:37.1808514-03:00",
+  "backup": "/backups/pilot-20260913T044658385Z",
+  "deploy": {"scope": "api only", "image": "sha256:1dd0e07a1f00ae6fc84fb2d9abb94738594455f3ce1288b0ddccf26ae23cc01f", "health": 200, "regression": {"id8_cargos": 1, "id8_prova_data": "2026-12-06", "id17_cargos": 27, "id32_cargos": 7}},
+  "import_gate": {"expected_run_id": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae", "parser_generated_run_id": "tp-reviewed-490ad729b6a00d3ecf988ddb355bab27", "dry_run": "validated", "fields": ["cargos", "prova_data"], "pilot_import": false, "proposal": false},
+  "decision": "STOP; exact accepted envelope for expected run_id is absent; do not substitute parser-generated run"
+}

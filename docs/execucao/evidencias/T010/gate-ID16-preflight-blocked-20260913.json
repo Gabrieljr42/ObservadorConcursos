@@ -1,0 +1,9 @@
+{
+  "schema": "observador.t010.id16.preflight_blocked.v1",
+  "recorded_at": "2026-09-13T01:50:15.7615686-03:00",
+  "backup": {"bundle": "/backups/pilot-20260913T044658385Z", "operational_files_verified": 14581, "isolated_restore_counts": {"concursos": 33, "versions": 89, "proposals": 92, "outbox": 89, "notifications": 88}, "isolated_database_removed": true},
+  "code_gate": {"status": "blocked", "reason": "shared unreviewed FAPESE parser changes present in backend/app/tenderproof/fields.py", "observed_routes": ["fapese_selection/007/2026"], "build": false, "deploy": false, "import": false, "proposal": false},
+  "expected_id16": {"run_id": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae", "scope": ["cargos", "prova_data"]},
+  "canonical_counts_unchanged": {"proposals": 92, "versions": 89, "outbox": 89, "notifications": 88},
+  "gate": "PAUSED pending independent review/coordination of fields.py"
+}

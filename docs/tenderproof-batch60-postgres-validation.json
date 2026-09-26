@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "junit": "backend/.tenderproof/batch60-postgres.xml",
+  "counts": {
+    "tests": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_files": [
+    "tests/test_tenderproof_canonical.py",
+    "tests/test_tenderproof_publication.py"
+  ],
+  "container": "tenderproof-batch60-material-pg-20260908",
+  "container_id": "a4c0e5f593a8fcc05b24ec25a341b3a5cf76530463a061953cd901a254a0d1e7",
+  "image": "postgres:16-alpine",
+  "container_removed": true,
+  "removal_confirmation": "docker ps --all --filter name=tenderproof-batch60-material-pg-20260908 --format {{.Names}} returned empty, exit0",
+  "material_report": "docs/tenderproof-batch60-material-update.json",
+  "network_scope": "disposable PostgreSQL loopback only; no portal requests",
+  "notifications": 0
+}

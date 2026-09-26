@@ -1,0 +1,2348 @@
+{
+  "observed_at": "2026-09-08T14:03:38.804541+00:00",
+  "scope": "Read-only observed URLs; TLS verified; redirects recorded, not followed; max2MiB25s; no PDFs or browser; not adapter certification.",
+  "pages": [
+    {
+      "source": "aocp_open",
+      "url": "https://www.institutoaocp.org.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:33.884753+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 5458,
+      "sha256": "28d34b38784b2a76002f806ec2011f7aa21f58bb60240529456e2187d1db96ba",
+      "file": "aocp_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "aocp_open",
+      "url": "https://www.institutoaocp.org.br/concursos.jsp",
+      "kind": "listing1",
+      "observed_at": "2026-09-08T14:03:33.885274+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 5539,
+      "sha256": "b99ab61dab4567d9946bb0b1f9f130d6763719df92619d6a86e1b217c1d288f5",
+      "file": "aocp_open-listing1.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "consulplan_open",
+      "url": "https://www.consulplan.net",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:33.885274+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 5452,
+      "sha256": "2e47ffb03c5e0c1fff514ab437b9f8c12b13a94a96d3de9f2178682d149dc263",
+      "file": "consulplan_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "consulplan_open",
+      "url": "https://institutoconsulplan.org.br",
+      "kind": "listing1",
+      "observed_at": "2026-09-08T14:03:33.885790+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 30058,
+      "sha256": "7ad03cccd62c21aefc47211209991945520ace44c60adb4f65ce8a81f9c9ee1c",
+      "file": "consulplan_open-listing1.html",
+      "encoding": "utf-8",
+      "title": "Instituto Consulplan",
+      "links": [
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": "Principal"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Institucional",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Projetos",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/FaleConosco",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/TrabalheConosco",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Certificados",
+          "title": "Certificados"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br",
+          "title": "Buscar"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://concurso4.institutoconsulplan.org.br/Candidato/Cadastro",
+          "title": "CADASTRAR"
+        },
+        {
+          "url": "https://www.institutoconsulplan.org.br/cidennf2026",
+          "title": ""
+        },
+        {
+          "url": "https://pases2026.institutoconsulplan.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://concurso4.institutoconsulplan.org.br/Candidato/Login/bi7dATz9rtg=/9jTwWPnlMFM=",
+          "title": ""
+        },
+        {
+          "url": "https://www.institutoconsulplan.org.br/uit2027",
+          "title": ""
+        },
+        {
+          "url": "https://www.institutoconsulplan.org.br/pref-belo2026",
+          "title": ""
+        },
+        {
+          "url": "https://www.institutoconsulplan.org.br/unai2026",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/consulplan.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/consulplan.oficial/",
+          "title": ""
+        },
+        {
+          "url": "https://institutoconsulplan.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "title": "Clique aqui e consulte os concursos em andamento"
+        },
+        {
+          "url": "https://pases2026.institutoconsulplan.org.br/",
+          "title": "Clique aqui para acessar o PASES UFV 2026 Acessar →"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/crose2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/cra2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/crmma2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/cremerj2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/cmc2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/cjf2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/lyWjiz0K9ULzhj3SZGne9w==",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/cmcaratinga2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/pref-alvinopolis2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/pref-portofirme",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/ipremb2026",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/BkRHCgxtCcEh0M9JB3Qc7Q==",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/uPi637WtRctNeA2mN71Vjg==",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/aE1rSkiBXMXvPISwp7Zkqg==",
+          "title": "Mais Informações"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": "Principal"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Institucional",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "title": "Projetos / Concursos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/FaleConosco",
+          "title": "Contato"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/TrabalheConosco",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/PoliticaPrivacidade",
+          "title": "Política de Privacidade"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/PoliticaCookies",
+          "title": "Política de Cookies"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-HM2YZXN9QX",
+        "https://institutoconsulplan.org.br/lib/jquery/dist/jquery.min.js",
+        "https://institutoconsulplan.org.br/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "https://unpkg.com/htmx.org@1.9.11",
+        "https://institutoconsulplan.org.br/lib/plugins/jquery.mask.min.js",
+        "https://institutoconsulplan.org.br/lib/plugins/select2.min.js",
+        "https://institutoconsulplan.org.br/js/site.min.js?v=xfUueBjRFbyxiLDc0ivGceM_bReTe2IuZABq4eomurU",
+        "https://institutoconsulplan.org.br/js/Global/cookie-consent.js?v=AajOozgmJiDubipIDJUptobC5OPIDS7FZFdKxGUZ6oI",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "seprod_open",
+      "url": "https://www.seprod.com.br/concursos/?utm_refererencia=em_andamento",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:34.617981+00:00",
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)"
+    },
+    {
+      "source": "fumarc_open",
+      "url": "https://www.fumarc.com.br/SitePages/Home.aspx",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:34.622977+00:00",
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+    },
+    {
+      "source": "epl_open",
+      "url": "https://www.eplconcursos.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:34.641506+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 1056,
+      "sha256": "292a19f1af19e81be79101d1c8b37c63da4ea9651c5014f2056e7f361a75d7e9",
+      "file": "epl_open-listing0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://www.mozilla.org/pt-BR/firefox/new/",
+          "title": "Mozilla Firefox"
+        },
+        {
+          "url": "https://www.google.com.br/chrome/",
+          "title": "Google Chrome"
+        },
+        {
+          "url": "https://www.opera.com/pt-br/",
+          "title": "Opera"
+        },
+        {
+          "url": "https://www.apple.com/br/safari/",
+          "title": "Safari"
+        }
+      ],
+      "scripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "unifil_open",
+      "url": "https://main.institutounifil.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:34.728539+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 5375,
+      "sha256": "b4c0a340c203409848262b305c8ec0f1e16343939f3fcfe48e63293db2a32847",
+      "file": "unifil_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "leandroferreira_open",
+      "url": "https://www.leandroferreira.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:35.257979+00:00",
+      "error_type": "gaierror",
+      "error": "[Errno 11001] getaddrinfo failed"
+    },
+    {
+      "source": "iuds_open",
+      "url": "https://www.iuds.org.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:35.349537+00:00",
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)"
+    },
+    {
+      "source": "msconcursos_open",
+      "url": "https://msconcursos.com.br/",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:35.361061+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 61582,
+      "sha256": "dd74884ac00a8d19abe39e09f9a3697fe0029b7c41a42579cfaec1687c973382",
+      "file": "msconcursos_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "MSCONCURSOS",
+      "links": [
+        {
+          "url": "https://www.gruposarmento.com",
+          "title": "GRUPO SARMENTO"
+        },
+        {
+          "url": "https://www.msconcursos.com.br/home",
+          "title": "MSCONCURSOS"
+        },
+        {
+          "url": "https://www.zizo2000.com.br/",
+          "title": "Zizo 2000 Sistemas"
+        },
+        {
+          "url": "https://msconcursos.com.br/home",
+          "title": "MSCONCURSOS"
+        },
+        {
+          "url": "https://msconcursos.com.br/esqueci-minha-senha",
+          "title": "Esqueci minha senha"
+        },
+        {
+          "url": "https://msconcursos.com.br/duvidas-frequentes",
+          "title": "DÚVIDAS FREQUENTES"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/login-area-do-candidato/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/55/concurso-publico-para-agente-de-transito-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/login-area-do-candidato/55/concurso-publico-para-agente-de-transito-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/56/concurso-publico-prefeitura-municipal-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/35/-concurso-publico-prefeitura-municipal-de-itaperucu-pr",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/36/concurso-publico-modalidade-emprego-publico-prefeitura-municipal-de-itaperucu-pr",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/44/concurso-publico-varios-cargos-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/53/concurso-publico-para-professor-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://www.msconcursos.com.br/antigo/concurso/1277070/concurso-publico-prefeitura-municipal-de-santana-de-parnaiba-sp-edital-n-03-2025-guarda-civil-municipal",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/19/processo-seletivo-para-o-programa-de-ensino-medio-do-sesi-rj-em-parceria-com-o-senai-rj",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/22/-sesi-ba-processo-seletivo-para-o-programa-de-ensino-medio-do-sesi-ba",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/23/processo-seletivo-prefeitura-municipal-de-santana-de-parnaiba-sp-edital-n-05-2025",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/24/processo-seletivo-interno-para-coordenador-pedagogico-prefeitura-municipal-de-santana-de-parnaiba-sp-edital-n-01-2025",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/25/processo-de-promocao-2023-das-classes-de-especialista-ambiental-secretaria-de-meio-ambiente-infraestrutura-e-logistica-semil",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/26/concurso-publico-consorcio-regional-intermunicipal-de-saude-cris-medico-psf",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/28/processo-seletivo-simplificado-para-medico-prefeitura-municipal-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/29/concurso-publico-consorcio-regional-intermunicipal-de-saude-cris-cuidador-e-tecnico-de-enfermagem",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/31/concurso-publico-para-varios-cargos-prefeitura-municipal-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/34/processo-seletivo-interno-para-coordenador-pedagogico-prefeitura-municipal-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/39/curso-de-formacao-de-sargentos-merito-intelectual",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/40/curso-de-formacao-de-sargentos-antiguidade",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/41/curso-de-formacao-de-sargentos-vagas-adicionais",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/42/curso-de-habilitacao-de-oficiais-especialistas-choe",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/43/processo-seletivo-publico-modalidade-emprego-publico-de-agente-comunitario-de-saude-prefeitura-de-ibiuna-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/45/processo-seletivo-varias-funcoes-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/47/concurso-publico-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/48/concurso-publico-consorcio-regional-intermunicipal-de-saude-cris-cuidador-e-medico-psf",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/49/processo-seletivo-simplificado-para-medico-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/50/processo-seletivo-para-professor-prefeitura-de-santana-de-parnaiba-sp",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://msconcursos.com.br/concurso/51/processo-seletivo-para-o-programa-de-ensino-medio-do-sesi-rj-em-parceria-com-o-senai-rj",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://www.msconcursos.com.br/antigo/",
+          "title": "CONCURSOS REALIZADOS ATÉ 2025"
+        },
+        {
+          "url": "https://msconcursos.com.br/duvidas-frequentes",
+          "title": "DÚVIDAS FREQUENTES"
+        },
+        {
+          "url": "https://msconcursos.com.br/peca-seu-certificado",
+          "title": "PEÇA SEU CERTIFICADO"
+        },
+        {
+          "url": "https://msconcursos.com.br/",
+          "title": "MSCONCURSOS"
+        },
+        {
+          "url": "https://www.tag3.com.br",
+          "title": "Tag3 - Desenvolvimento Digital"
+        }
+      ],
+      "scripts": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js",
+        "https://msconcursos.com.br/scripts/efeitos.js?v=1787571867",
+        "https://vlibras.gov.br/app/vlibras-plugin.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"
+      ]
+    },
+    {
+      "source": "contemax_open",
+      "url": "http://www.contemaxconsultoria.com.br/site/",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:35.585477+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 26763,
+      "sha256": "76d7549d013bc6e3bb611ead46a1b8da169886092d20cc9896fe4d660f8d2f1e",
+      "file": "contemax_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Contemax – Consultoria Técnica e Planejamento LTDA.",
+      "links": [
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site",
+          "title": "Contemax – Consultoria Técnica e Planejamento LTDA."
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/",
+          "title": "Início"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/a-empresa",
+          "title": "A Empresa"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/trabalhos",
+          "title": "Trabalhos"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/cursos",
+          "title": "Cursos"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/servicos",
+          "title": "Serviços"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/contato",
+          "title": "Contato"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/area-restrita",
+          "title": "Área restrita"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/webmail",
+          "title": "Webmail"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/noticias/i-curso-de-gestao-de-conflitos-empresarial-e-interpessoal-e-tecnicas-aplicadas-a-solucao-de-conflitos-na-paraiba",
+          "title": "I Curso de Gestão de Conflitos Empresarial e Interpessoal e Técnicas Aplicadas à Solução de Conflitos, na Paraíba A Contemax – Consultoria e Técnica e Planejamento LTDA promoveu nos dias..."
+        },
+        {
+          "url": "http://www.contemaxconsultoria.com.br/site/servicos",
+          "title": "saiba Mais"
+        }
+      ],
+      "scripts": [
+        "http://www.contemaxconsultoria.com.br/site/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "http://www.contemaxconsultoria.com.br/site/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/jquery-1.11.0.min.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/css3-mediaqueries.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/modernizr.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/jquery.maskedinput-1.1.4.pack.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/jquery.bxslider.min.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/js.index.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/themes/contemax/js/funcoes.js",
+        "http://www.contemaxconsultoria.com.br/site/wp-content/plugins/popups/public/assets/js/public.js?ver=1.9.3"
+      ]
+    },
+    {
+      "source": "cpcon_open",
+      "url": "https://cpcon.uepb.edu.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:35.819712+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 534995,
+      "sha256": "4c29a7edb3d6f99aaa789afa38b13b828d5b75398a8904e001f576235fb26550",
+      "file": "cpcon_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "CPCON: Home",
+      "links": [
+        {
+          "url": "https://cpcon.uepb.edu.br#maincontent-tipo1",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#cssmenu",
+          "title": "Ir para o menu"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#fixed-header-drawer-exp",
+          "title": "Ir para a busca"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#rodape",
+          "title": "Ir para o rodapé"
+        },
+        {
+          "url": "http://sic.pb.gov.br/",
+          "title": "Acesso à Informação"
+        },
+        {
+          "url": "http://transparencia.uepb.edu.br",
+          "title": "Transparência"
+        },
+        {
+          "url": "http://ouvidoria.uepb.edu.br",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "http://www.uepb.edu.br",
+          "title": "UEPB"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br",
+          "title": "CPCON"
+        },
+        {
+          "url": "http://uepb.edu.br",
+          "title": "search Buscar no Portal da UEPB"
+        },
+        {
+          "url": "http://transparencia.uepb.edu.br/agenda/",
+          "title": "contact_phone Telefones"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/sobre-a-cpcon/",
+          "title": "Sobre a CPCON"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/quem-somos/",
+          "title": "Quem somos"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/equipe/",
+          "title": "Equipe"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/setores/",
+          "title": "Setores"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/como-contratar/",
+          "title": "Como Contratar"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/contato/",
+          "title": "Contatos e Horário de Funcionamento"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/vestibular/",
+          "title": "Vestibular"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/calcular-nota/",
+          "title": "Calcular nota"
+        },
+        {
+          "url": "https://sistemas.cpcon.uepb.edu.br/sigeps-app/login",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/8090-2/",
+          "title": "Guia SIGEPS – Solução para Problemas de Boletos"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/consultarlocaldeprova/",
+          "title": "Consultar Local De Prova"
+        },
+        {
+          "url": "http://www.uepb.edu.br",
+          "title": "Portal da UEPB"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1553703369789-45febe44-1e62",
+          "title": "Concursos Abertos"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1553703369802-9bacd05a-bdd0",
+          "title": "Concursos Encerrados"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1553703661835-b4eee7d5-ba70",
+          "title": "Concursos Suspensos"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1690381549972-8a63bed9-0c8b",
+          "title": "Processos Seletivos PROEAD"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1553703369789-45febe44-1e62",
+          "title": "Concursos Abertos"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmareia2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmareia2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmcoxixola2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmcoxixola2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-guarabira/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-jacarau-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-jacarau-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpirpirituba2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpirpirituba2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-para-residencia-juridica-e-multidisciplinar/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-para-residencia-juridica-e-multidisciplinar/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmzabele2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmzabele2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmmaedagua2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmmaedagua2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmmaedagua2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmmaedagua2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmitabaiana2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmitabaiana2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-de-barra-de-santana/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-de-barra-de-santana/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-soledade/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-soledade/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br#1553703369802-9bacd05a-bdd0",
+          "title": "Concursos Encerrados"
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/uepb-001-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/uepb-001-2026/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/coremu/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/coremu/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnovafloresta2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnovafloresta2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmcuite2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmcuite2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpiloezinhos2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpiloezinhos2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-malta/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-malta/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-condado/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-condado/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmsolanea2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmsolanea2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cref12/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cref12/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-04-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-04-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-03-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-03-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-olivedos/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-olivedos/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-francisco-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-francisco-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmmataraca2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmmataraca2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmriachosantoantonio2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmriachosantoantonio2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-domingos-do-cariri/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-domingos-do-cariri/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-bentinho-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sao-bentinho-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cref10_2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cref10_2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-nova-palmeira/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-nova-palmeira/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpombal2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmpombal2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-002-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-002-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-001-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-001-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnazarezinho2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnazarezinho2025/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnazarezinho2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pmnazarezinho2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-de-sao-jose-de-piranhas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-de-sao-jose-de-piranhas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/camara-municipal-de-itaporanga/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/camara-municipal-de-itaporanga/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-001-2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-001-2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-pianco-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-pianco-pb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-araruna/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-araruna/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-lagoa-seca/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-lagoa-seca/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-duas-estradas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-duas-estradas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmm2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/cmm2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/gestor_escolar_2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/gestor_escolar_2024/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-matinhas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-matinhas/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-022-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-022-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/4594-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/4594-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-003-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-003-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-picui/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-picui/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-cabaceiras/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-cabaceiras/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-20-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-20-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/2023-pman-gm/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/2023-pman-gm/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/2023-pman/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/2023-pman/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-019-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-019-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/3870-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/3870-2/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-professor-formador-i-e-ii-parfor-uepb-no-017-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-professor-formador-i-e-ii-parfor-uepb-no-017-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-de-processo-seletivo-simplificado-no-016-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-de-processo-seletivo-simplificado-no-016-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-de-processo-seletivo-simplificado-no-015-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-de-processo-seletivo-simplificado-no-015-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/concurso-publico-da-universidade-estadual-da-paraiba/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/concurso-publico-da-universidade-estadual-da-paraiba/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sume/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-sume/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-dona-ines/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-dona-ines/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-no-014-2023-de-processo-seletivo-simplificado-para-coordenador-local-parfor-uepb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-no-014-2023-de-processo-seletivo-simplificado-para-coordenador-local-parfor-uepb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-no-013-2023-de-processo-seletivo-simplificado-para-professor-formador-i-e-iiparfor-uepb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/edital-normativo-no-013-2023-de-processo-seletivo-simplificado-para-professor-formador-i-e-iiparfor-uepb/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-coordenador-a-de-curso-parfor-uepb-no-012-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-coordenador-a-de-curso-parfor-uepb-no-012-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-professor-formador-i-e-ii-parfor-uepb-edital-no-011-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-para-professor-formador-i-e-ii-parfor-uepb-edital-no-011-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-010-2023-para-contratacao-de-professores-licenciatura-em-historia/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-010-2023-para-contratacao-de-professores-licenciatura-em-historia/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-009-2023-para-contratacao-de-professores-licenciatura-em-geografia-uab/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-009-2023-para-contratacao-de-professores-licenciatura-em-geografia-uab/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-008-2023-para-contratacao-de-professores-licenciatura-em-geografia-uab/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-008-2023-para-contratacao-de-professores-licenciatura-em-geografia-uab/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-007-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-007-2023-para-contratacao-de-professores-as/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-002-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/pss-uepb-002-2023/",
+          "title": ""
+        },
+        {
+          "url": "https://cpcon.uepb.edu.br/prefeitura-municipal-de-caturite/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-YQZN4XPJJY",
+        "https://cpcon.uepb.edu.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://cpcon.uepb.edu.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/download-manager/assets/modal/wpdm-modal.min.js?ver=3.3.68",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/download-manager/assets/js/wpdm.min.js?ver=6.9.7",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/download-manager/assets/js/front.min.js?ver=3.3.68",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/dist/js/custom/script-header-1.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/dist/js/vendors/material-modificado.js",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/dist/js/vendors/google_cse_v2.js?ver=1",
+        "https://cpcon.uepb.edu.br/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+        "https://cpcon.uepb.edu.br/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+        "https://cpcon.uepb.edu.br/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/inc/calendario/fullcalendar/packages/core/main.js?ver=6.9.7",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/inc/calendario/fullcalendar/packages/interaction/main.js?ver=6.9.7",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/inc/calendario/fullcalendar/packages/daygrid/main.js?ver=6.9.7",
+        "https://cpcon.uepb.edu.br/wp-content/themes/temauepb/inc/calendario/fullcalendar/packages/core/locales/pt-br.js?ver=6.9.7",
+        "https://cpcon.uepb.edu.br/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+        "https://stats.wp.com/e-202637.js",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=8.7.2",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/lib/vc/vc_accordion/vc-accordion.min.js?ver=8.7.2",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/lib/vc/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=8.7.2",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/lib/vc/vc_tabs/vc-tabs.min.js?ver=8.7.2",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/lib/vendor/owl-carousel2-dist/owl.carousel.min.js?ver=8.7.2",
+        "https://cpcon.uepb.edu.br/wp-content/plugins/js_composer/assets/lib/vendor/dist/imagesloaded/imagesloaded.pkgd.min.js?ver=8.7.2"
+      ]
+    },
+    {
+      "source": "funvapi_open",
+      "url": "https://www.funvapi.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.021536+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 81561,
+      "sha256": "0c9dd3fe5e35146e1af15ea750510238760bc8b0941d0f71fd59019e8cc6e6f2",
+      "file": "funvapi_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Fundação Vale do Piauí",
+      "links": [
+        {
+          "url": "https://www.funvapi.com.br#content",
+          "title": "Skip to main content"
+        },
+        {
+          "url": "https://funvapi.com.br/",
+          "title": ""
+        },
+        {
+          "url": "https://funvapi.com.br",
+          "title": "Início"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos-em-andamento/",
+          "title": "Concursos em Andamento"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos-realizados/",
+          "title": "Concursos Realizados"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/sobre-nos/",
+          "title": "Sobre a FUNVAPI"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/estrutura/",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/servicos-executados/",
+          "title": "Serviços executados"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-principais-clientes-2/",
+          "title": "Nossos principais clientes"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/conselho-deliberativo/",
+          "title": "Conselho Deliberativo"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/responsabilidade-social/",
+          "title": "Responsabilidade Social"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-servicos/",
+          "title": "Nossos serviços"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/perguntas-frequentes/",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+          "title": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE EDITAL DE CONCURSO PÚBLICO Nº 001/2026"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+          "title": "CÂMARA MUNICIPAL DE VERA MENDES – PI EDITAL DE CONCURSO PÚBLICO Nº 001/2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO EDITAL DE JULGAMENTO DE RECURSOS CONTRA O INDEFERIMENTO DOS PEDIDOS DE ISENÇÃO E"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/05/22/camara-municipal-de-princesa-isabel-pb/",
+          "title": "CÂMARA MUNICIPAL DE PRINCESA ISABEL-PB EDITAL DE CONCURSO PÚBLICO Nº.001/2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO DA TAXA EDITAL DO JULGAMENTO DE RECURSOS DE ISENÇÃO CANDIDATOS HOMOLOGADOS CAN"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/05/08/prefeitura-municipal-de-vera-mendes-pi/",
+          "title": "PREFEITURA MUNICIPAL DE VERA MENDES-PI EDITAL DE CONCURSO PÚBLICO Nº001/2026 EDITAL DE RETIFICAÇÃO Nº 01/2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO DA TAXA EDITAL DE JULGAMENTO DOS RECURSOS CONT"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/04/23/prefeitura-municipal-de-cajueiro-al/",
+          "title": "PREFEITURA MUNICIPAL DE CAJUEIRO – AL EDITAL DE CONCURSO PÚBLICO N°01/2026 EDITAL DE RETIFICAÇÃO Nº01/2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO DA TAXA EDITAL DE JULGAMENTO DOS RECURSOS CONTRA "
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/04/22/prefeitura-municipal-de-aroeiras-pb/",
+          "title": "PREFEITURA MUNICIPAL DE AROEIRAS – PB EDITAL DO CONCURSO PÚBLICO Nº 01/2026 EDITAL DE RETIFICAÇÃO Nº 01/2026 EDITAL DE RETIFICAÇÃO Nº 02/2026 ERRATA Nº 01/2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISEN"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2025/12/17/prefeitura-municipal-de-iati-pe/",
+          "title": "PREFEITURA MUNICIPAL DE IATI – PE EDITAL DE CONCURSO PÚBLICO (REPUBLICADO POR INCORREÇÕES) EDITAL DE RETIFICAÇÃO Nº.001-2026 EDITAL DE RETIFICAÇÃO Nº.002-2026 EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇ"
+        },
+        {
+          "url": "https://portal.sisclas.com.br/SisclasNet.dll/?i=s",
+          "title": "INSCRIÇÕES AQUI"
+        },
+        {
+          "url": "https://portal.sisclas.com.br/SisclasNet.dll",
+          "title": "PORTAL DO CANDIDATO"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-servicos/",
+          "title": "Nossos Serviços:"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-servicos/",
+          "title": "Clique aqui e saiba mais"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+          "title": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+          "title": "CÂMARA MUNICIPAL DE VERA MENDES – PI"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/05/22/camara-municipal-de-princesa-isabel-pb/",
+          "title": "CÂMARA MUNICIPAL DE PRINCESA ISABEL-PB"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/05/08/prefeitura-municipal-de-vera-mendes-pi/",
+          "title": "PREFEITURA MUNICIPAL DE VERA MENDES-PI"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/2026/04/23/prefeitura-municipal-de-cajueiro-al/",
+          "title": "PREFEITURA MUNICIPAL DE CAJUEIRO – AL"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/perguntas-frequentes/",
+          "title": "PERGUNTAS FREQUENTES"
+        },
+        {
+          "url": "https://wa.me/5586995693443",
+          "title": "(86) 995693443"
+        },
+        {
+          "url": "https://funvapi.com.br",
+          "title": "Início"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos-em-andamento/",
+          "title": "Concursos em Andamento"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/category/concursos-realizados/",
+          "title": "Concursos Realizados"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/sobre-nos/",
+          "title": "Sobre a FUNVAPI"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/estrutura/",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/servicos-executados/",
+          "title": "Serviços executados"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-principais-clientes-2/",
+          "title": "Nossos principais clientes"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/conselho-deliberativo/",
+          "title": "Conselho Deliberativo"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/responsabilidade-social/",
+          "title": "Responsabilidade Social"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/nossos-servicos/",
+          "title": "Nossos serviços"
+        },
+        {
+          "url": "https://funvapi.com.br/index.php/perguntas-frequentes/",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "http://colorlib.com/",
+          "title": "Colorlib"
+        },
+        {
+          "url": "http://wordpress.org/",
+          "title": "WordPress"
+        }
+      ],
+      "scripts": [
+        "https://funvapi.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://funvapi.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://funvapi.com.br/wp-content/plugins/fancybox-for-wordpress/assets/js/purify.min.js?ver=1.3.4",
+        "https://funvapi.com.br/wp-content/plugins/fancybox-for-wordpress/assets/js/jquery.fancybox.js?ver=1.3.4",
+        "https://funvapi.com.br/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=b3f8d811d213d26c3f981c50d879fa4d",
+        "https://funvapi.com.br/wp-content/themes/sparkling/assets/js/functions.js?ver=20180503",
+        "https://www.googletagmanager.com/gtag/js?id=GT-WB5H8K2",
+        "https://funvapi.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.27.6",
+        "https://funvapi.com.br/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18",
+        "https://funvapi.com.br/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6",
+        "https://funvapi.com.br/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.0.6",
+        "https://funvapi.com.br/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0.6",
+        "https://funvapi.com.br/wp-content/themes/sparkling/assets/js/vendor/flexslider.min.js?ver=20140222",
+        "https://funvapi.com.br/wp-content/themes/sparkling/assets/js/flexslider-custom.js?ver=20140716",
+        "https://funvapi.com.br/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222",
+        "https://funvapi.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.27.6",
+        "https://funvapi.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.27.6",
+        "https://funvapi.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+        "https://funvapi.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.27.6"
+      ]
+    },
+    {
+      "source": "consep_open",
+      "url": "https://www.consep-pi.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.039071+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 14911,
+      "sha256": "17ac1d99221fda66575fec97c620802c54cb5c72a0a58a3dd298d2d482296cff",
+      "file": "consep_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "CONSEP | Consultoria e Estudos PedagĂłgicos",
+      "links": [
+        {
+          "url": "https://www.consep-pi.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Inicial"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/info/Sobre-a-C0NSEP/1/",
+          "title": "Sobre a CONSEP"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/info/Credibilidade-e-Transpar-234-ncia-Consep/2/",
+          "title": "Credibilidade e Transparência: Consep"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/info/Relac-227-o-dos-Concursos-Realizados/3/",
+          "title": "RelaĂ§ão dos Concursos Realizados"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concursos",
+          "title": "Todos"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Aberto/1/",
+          "title": "Aberto"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Em-Andamento/2/",
+          "title": "Em Andamento"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Encerrado/3/",
+          "title": "Encerrado"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/editais-convocacao",
+          "title": "Editais"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Publicações"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/blog",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Comunicados e Informações"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Gabaritos"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Candidato"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/cadastro_login.php",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/contato",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/admin/upload/noticia/C0MUNICAD0-A0S-CANDIDAT0S-D0-C0NCURS0-DE-0UR0-VELH0-PB/924",
+          "title": "COMUNICADO AOS CANDIDATOS DO CONCURSO DE OURO VELHO â PB"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/admin/upload/noticia/INF0RMATIV0-S0BRE-SENHA-DE-ACESS0-A-PLATAF0RMA-DE-INSCRIC0ES/923",
+          "title": "INFORMATIVO SOBRE SENHA DE ACESSO Ă PLATAFORMA DE INSCRIĂĂES"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/noticia/N0TA-INF0RMATIVA-UTILIZACA0-DE-E-MAILS/925",
+          "title": "NOTA INFORMATIVA - UTILIZAĂĂO DE E-MAILS"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/noticia/C0MUNICAD0-A0S-CANDIDAT0S-D0-C0NCURS0-DE-0UR0-VELH0-PB/924",
+          "title": "COMUNICADO AOS CANDIDATOS DO CONCURSO DE OURO VELHO â PB"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/noticia/INF0RMATIV0-S0BRE-SENHA-DE-ACESS0-A-PLATAF0RMA-DE-INSCRIC0ES/923",
+          "title": "INFORMATIVO SOBRE SENHA DE ACESSO Ă PLATAFORMA DE INSCRIĂĂES"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/noticia/DEV0LUCA0-DA-TAXA-DE-INSCRICA0-D0-TESTE-SELETIV0-DE-BRASILEIRA/922",
+          "title": "DEVOLUĂĂO DA TAXA DE INSCRIĂĂO DO TESTE SELETIVO DE BRASILEIRA"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/noticia/C0MUNICAD0-CANCELAMENT0-D0-TESTE-SELETIV0-DE-BRASILEIRA-PI/919",
+          "title": "COMUNICADO - CANCELAMENTO DO TESTE SELETIVO DE BRASILEIRA - PI"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-EDITAL-N-002-2026-BAIXA-GRANDE-D0-RIBEIR0/203/",
+          "title": "TESTE SELETIVO EDITAL N 002/2026 - BAIXA GRANDE DO RIBEIRO"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/PR0CESS0-SELETIV0-SIMPLIFICAD0-2026-NAZARIA/202/",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO 2026 - NAZARIA"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-SIMPLIFICAD0-UNIA0-EDITAL-002-2026/201/",
+          "title": "TESTE SELETIVO SIMPLIFICADO - UNIAO - EDITAL 002-2026"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/PR0CESS0-SELETIV0-SIMPLIFICAD0-SEBASTIA0-LEAL-PI/200/",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO - SEBASTIĂO LEAL - PI"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-SIMPLIFICAD0-UNIA0-EDITAL-001-2026/199/",
+          "title": "TESTE SELETIVO SIMPLIFICADO - UNIAO - EDITAL 001-2026"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-BAIXA-GRANDE-D0-RIBEIR0-PI/197/",
+          "title": "TESTE SELETIVO - BAIXA GRANDE DO RIBEIRO - PI"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/C0NCUS0-PUBLIC0-P0RT0-ALEGRE-D0-PIAUI-2025/195/",
+          "title": "CONCUSO PUBLICO - PORTO ALEGRE DO PIAUI 2025"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-TASS0-FRAG0S0-EDITAL-001-2025/194/",
+          "title": "TESTE SELETIVO - TASSO FRAGOSO EDITAL 001-2025"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/ELESBA0-VEL0S0-PR0CESS0-SELETIV0-EDITAL-001-2025/193/",
+          "title": "ELESBĂO VELOSO - PROCESSO SELETIVO EDITAL 001-2025"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/C0NCURS0-PUBLIC0-CAMARA-MUNICIPAL-DE-CURRAL-N0V0-D0-PIAUI/192/",
+          "title": "CONCURSO PUBLICO - CAMARA MUNICIPAL DE CURRAL NOVO DO PIAUĂ"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-SIMPLIFICAD0-UNIA0-EDITAL-003-2025/191/",
+          "title": "TESTE SELETIVO SIMPLIFICADO - UNIAO EDITAL 003-2025"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Aberto/1/",
+          "title": "Aberto"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Em-Andamento/2/",
+          "title": "Em Andamento"
+        },
+        {
+          "url": "https://www.consep-pi.com.br/status-concurso/Encerrado/3/",
+          "title": "Encerrado"
+        },
+        {
+          "url": "https://www.consep-pi.com.br",
+          "title": "topo"
+        }
+      ],
+      "scripts": [
+        "https://www.consep-pi.com.br/js/cufon-yui.js",
+        "https://www.consep-pi.com.br/js/jquery-latest.js",
+        "https://www.consep-pi.com.br/js/menu.js",
+        "https://www.consep-pi.com.br/js/jquery.maskedinput.js",
+        "https://www.consep-pi.com.br/js/jquery.js"
+      ]
+    },
+    {
+      "source": "institutoconsulplan_open",
+      "url": "https://institutoconsulplan.azurewebsites.net/Concursos",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.861945+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 1148,
+      "sha256": "4f9203db638e585baf38b7be11618ec2b6fd9a4aeb522803bfb17e6f39165608",
+      "file": "institutoconsulplan_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Web App - Unavailable",
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2095007",
+          "title": "here"
+        },
+        {
+          "url": "https://portal.azure.com/",
+          "title": "Azure Portal"
+        }
+      ],
+      "scripts": []
+    },
+    {
+      "source": "idgran_open",
+      "url": "https://idgran.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.870943+00:00",
+      "error_type": "gaierror",
+      "error": "[Errno 11001] getaddrinfo failed"
+    },
+    {
+      "source": "gualimp_open",
+      "url": "https://www.gualimp.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.889949+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 35126,
+      "sha256": "1ca963ab8246bfef5c1bb6c41046697310ac1f8ec6b44fc6fc865bc2d55958e7",
+      "file": "gualimp_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Gualimp - Assessoria e Consultoria Ltda",
+      "links": [
+        {
+          "url": "https://www.gualimp.com.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.gualimp.com.br/",
+          "title": "HOME"
+        },
+        {
+          "url": "https://www.gualimp.com.br/institucional/",
+          "title": "INSTITUCIONAL"
+        },
+        {
+          "url": "https://www.gualimp.com.br#0",
+          "title": "Menu"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/concursos/",
+          "title": "Concursos Públicos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/assessoria-e-consultoria/",
+          "title": "Assessoria e Consultoria"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/inventario-patrimonial/",
+          "title": "Inventário Patrimonial"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/",
+          "title": "Treinamentos e Seminários"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/transporte-e-logistica/",
+          "title": "Transporte e Logística"
+        },
+        {
+          "url": "https://www.gualimp.com.br/clientes/",
+          "title": "CLIENTES"
+        },
+        {
+          "url": "https://www.gualimp.com.br/concursos/",
+          "title": "CONCURSOS"
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": "EVENTOS"
+        },
+        {
+          "url": "https://www.gualimp.com.br/noticias/",
+          "title": "NOTÍCIAS"
+        },
+        {
+          "url": "https://www.gualimp.com.br/contato/",
+          "title": "CONTATO"
+        },
+        {
+          "url": "https://www.gualimp.com.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/GStrategic",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/g_strategic/",
+          "title": ""
+        },
+        {
+          "url": "https://www.gualimp.com.br/",
+          "title": "Home"
+        },
+        {
+          "url": "https://www.gualimp.com.br/institucional/",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/concursos/",
+          "title": "Concursos Públicos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/assessoria-e-consultoria/",
+          "title": "Assessoria e Consultoria"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/inventario-patrimonial/",
+          "title": "Inventário Patrimonial"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/",
+          "title": "Treinamentos e Seminários"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/transporte-e-logistica/",
+          "title": "Transporte e Logística"
+        },
+        {
+          "url": "https://www.gualimp.com.br/clientes/",
+          "title": "Clientes"
+        },
+        {
+          "url": "https://www.gualimp.com.br/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": "Eventos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.gualimp.com.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "http://www.gualimp.com.br",
+          "title": ""
+        },
+        {
+          "url": "http://www.gualimp.com.br",
+          "title": ""
+        },
+        {
+          "url": "http://www.gualimp.com.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.gualimp.com.br/concursos/",
+          "title": "Todos os Concursos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/noticias/",
+          "title": "Todos as Notícias"
+        },
+        {
+          "url": "https://www.gualimp.com.br/noticias/",
+          "title": ""
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": "Veja mais sobre nossos eventos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": "Veja mais sobre nossos eventos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": ""
+        },
+        {
+          "url": "https://www.gualimp.com.br/eventos/",
+          "title": "+ Veja a lista de palestrantes"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/concursos/",
+          "title": "Concursos Públicos"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/assessoria-e-consultoria/",
+          "title": "Assessoria e Consultoria"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/inventario-patrimonial/",
+          "title": "Inventário Patrimonial"
+        },
+        {
+          "url": "https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/",
+          "title": "Treinamentos e Seminários"
+        },
+        {
+          "url": "http://www.craes.org.br/home/index.php",
+          "title": ""
+        },
+        {
+          "url": "http://crc-es.org.br/",
+          "title": ""
+        },
+        {
+          "url": "http://www.creaes.org.br/creaes/",
+          "title": ""
+        },
+        {
+          "url": "http://www.pgfn.fazenda.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "http://idg.receita.fazenda.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "http://www.mec.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "http://internet.sefaz.es.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "http://www.previdencia.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/GStrategic",
+          "title": "G-Strategic"
+        },
+        {
+          "url": "http://www.rdweb.com.br",
+          "title": "Desenvolvimento"
+        }
+      ],
+      "scripts": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js",
+        "https://www.gualimp.com.br/js/jquery.maskedinput.js",
+        "https://www.gualimp.com.br/js/sweetalert/dist/sweetalert-dev.js",
+        "https://www.gualimp.com.br/js/mega-dropdown/js/jquery.menu-aim.js",
+        "https://www.gualimp.com.br/js/mega-dropdown/js/main.js",
+        "https://www.gualimp.com.br/js/mega-dropdown/js/modernizr.js",
+        "https://www.google.com/recaptcha/api.js",
+        "https://www.gualimp.com.br/bootstrap/js/bootstrap.min.js",
+        "https://www.gualimp.com.br/js/slick/slick.min.js",
+        "https://www.gualimp.com.br/js/parallax/parallax.min.js",
+        "https://www.gualimp.com.br/js/jquery-1.8.2.min.js",
+        "https://www.gualimp.com.br/js/jquery.maskedinput-1.2.2.js",
+        "https://www.gualimp.com.br/js/scripts.js"
+      ]
+    },
+    {
+      "source": "elo_open",
+      "url": "https://novo.eloassessoriaeservicos.com.br//concursos",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:36.974111+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 14961,
+      "sha256": "a1d26961b576041343149fda39e7b158339e0882a99aa6c47aa9143d3f9296a8",
+      "file": "elo_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Concursos Públicos - ELO Assessoria",
+      "links": [
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/",
+          "title": ""
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/servicos",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/sobre",
+          "title": "Sobre"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/faq",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/contato",
+          "title": "Contato"
+        },
+        {
+          "url": "https://elo.candidato.gestaoselecoes.com.br",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/servicos",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/sobre",
+          "title": "Sobre"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/contato",
+          "title": "Contato"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/faq",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://elo.candidato.gestaoselecoes.com.br",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://www.instagram.com/elo_concursos/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/people/Elo-Assessoria-em-Serviços-Públicos-Ltda/100041754265590/",
+          "title": ""
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/concursos",
+          "title": "Concursos Abertos"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/servicos",
+          "title": "Nossos Serviços"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/sobre",
+          "title": "Sobre Nós"
+        },
+        {
+          "url": "https://novo.eloassessoriaeservicos.com.br/contato",
+          "title": "Contato"
+        }
+      ],
+      "scripts": []
+    },
+    {
+      "source": "apta_open",
+      "url": "https://www.aptaconcursos.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:37.081239+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 1056,
+      "sha256": "a4400b9ebad61b189a6946253d8311e4d2d3442159c5000c34e9f09401115b11",
+      "file": "apta_open-listing0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://www.mozilla.org/pt-BR/firefox/new/",
+          "title": "Mozilla Firefox"
+        },
+        {
+          "url": "https://www.google.com.br/chrome/",
+          "title": "Google Chrome"
+        },
+        {
+          "url": "https://www.opera.com/pt-br/",
+          "title": "Opera"
+        },
+        {
+          "url": "https://www.apple.com/br/safari/",
+          "title": "Safari"
+        }
+      ],
+      "scripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "shdias_open",
+      "url": "https://www.shdias.com.br/concursos/",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:37.738774+00:00",
+      "status": 403,
+      "location": null,
+      "bytes": 1994,
+      "sha256": "4558732d0983d14d80930c7f0ad2f1f36dd4e5f138cf12c0748af3291a6f1327",
+      "file": "shdias_open-listing0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://www.mozilla.org/pt-BR/firefox/new/",
+          "title": "Mozilla Firefox"
+        },
+        {
+          "url": "https://www.google.com.br/chrome/",
+          "title": "Google Chrome"
+        },
+        {
+          "url": "https://www.opera.com/pt-br/",
+          "title": "Opera"
+        },
+        {
+          "url": "https://www.apple.com/br/safari/",
+          "title": "Safari"
+        }
+      ],
+      "scripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "zambini_open",
+      "url": "https://www.zambini.org.br/portal/concursos",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:03:37.889758+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 13040,
+      "sha256": "1bdbeb3dfa01c79b1e0437dca24234ffd3372e63a6c67d580fc7150bac03f446",
+      "file": "zambini_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Zambini",
+      "links": [
+        {
+          "url": "https://www.zambini.org.br/portal/azambini",
+          "title": "Instituto Zambini"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/producaocultural",
+          "title": "Produção Cultural"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/cursosgcms",
+          "title": ">Cursos para GCMs"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/servicosgraficos",
+          "title": "Serviços Gráficos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/servicosconsultoria",
+          "title": "Serviço de Consultoria em Administração Pública"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/instituicoes",
+          "title": "Instituições atendidas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/",
+          "title": ""
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/encerrados",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Processos Seletivos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/processosseletivos",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/processosseletivos/encerrados",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Residências Médicas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/residencias",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/residencias/encerradas",
+          "title": "Encerradas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/encerrados",
+          "title": "Ver concursos encerrados"
+        },
+        {
+          "url": "https://www.zambini.org.br/cdn-cgi/l/email-protection",
+          "title": "[email protected]"
+        },
+        {
+          "url": "https://www.instagram.com/institutozambinioficial/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/institutozambini/",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCPjgekBfQuF9nQeYQCwOPGg",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://www.zambini.org.br/portal/assets/jquery/jquery-3.5.1.min.js",
+        "https://www.zambini.org.br/portal/assets/bootstrap/popper.min.js",
+        "https://www.zambini.org.br/portal/assets/bootstrap/bootstrap.min.js",
+        "https://www.zambini.org.br/portal/assets/jquery.mask/jquery.mask.js",
+        "https://www.zambini.org.br/portal/assets/js/script.js?v=1788876229",
+        "https://www.zambini.org.br/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    }
+  ]
+}

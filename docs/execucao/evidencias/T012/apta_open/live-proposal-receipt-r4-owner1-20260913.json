@@ -1,0 +1,28 @@
+{
+  "schema": "t012.apta.live-proposal-receipt.owner1-r4.v1",
+  "timestamp": "2026-09-13T14:14:39Z",
+  "status": "BLOCKED_REVIEWED_RUN_ENVELOPE_CONTRACT",
+  "source_id": 48,
+  "source": "apta_open",
+  "external_id": "708",
+  "owner_user_id": 1,
+  "expected_run_id": "tp-reviewed-apta-708-owner1-r4",
+  "health": "ok",
+  "login_http": 200,
+  "cas": {"catalog_match": false, "expected_run_get": 404, "owner901_run_reused": false},
+  "artifact": {"sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c", "byte_len": 362093, "pages": 20},
+  "checkpoint_before": {"contests": 34, "sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91},
+  "dry_run": {
+    "command": "backend/.venv/Scripts/python.exe scripts/import_reviewed_run.py live-envelope-ready-r4.json --artifact <canonical-pdf>",
+    "http": null,
+    "status": "error",
+    "validation_errors": 17,
+    "primary_errors": ["concurso_id: Input should be a valid integer (received null)", "title/detail_url/observed_at: required", "fields: expected ReviewedField objects, received names", "run_id/status/identity/handoff: extra inputs forbidden"],
+    "mutation": false
+  },
+  "proposal": false,
+  "approve": false,
+  "apply": false,
+  "checkpoint_after": {"contests": 34, "sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91},
+  "blocker": "R4 live-envelope-ready is a handoff manifest, not a valid tenderproof.reviewed-run.v1 import envelope; formal allocation/materialization must produce a schema-valid owner1 envelope before retry."
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "t012.backend-deploy-create-parsers-runid-r1.v1",
+  "timestamp": "2026-09-13T15:03:31.574160Z",
+  "scope": "build/redeploy only api worker scheduler; no import/proposal/approve/apply",
+  "daemon": {"server_version": "28.1.1", "project": "observador-pilot"},
+  "build": {
+    "services": ["api", "worker", "scheduler"],
+    "image": "observador-product:local",
+    "image_id": "sha256:897b2c537f5561b858110dd67e214a535f597698d924b9c0fb5a45ef3113f69f",
+    "created_at": "2026-09-13T15:00:52.814633108Z",
+    "recreated_only": ["api", "worker", "scheduler"],
+    "preserved": ["postgres", "redis", "web", "pilot_postgres", "pilot_redis", "pilot_tenderproof", "pilot_backups"]
+  },
+  "health_and_baseline": {
+    "health_http": 200,
+    "login_http": 200,
+    "checkpoint_http": 200,
+    "contests": 34,
+    "distinct_sources": 33,
+    "canonical_cargos": 182,
+    "publications": 34,
+    "versions": 92,
+    "outbox": 92,
+    "notifications": 91,
+    "favorites": 0,
+    "alerts": 1,
+    "push_devices": 0,
+    "legacy_publiconsult_run": {"run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "owner_user_id": 1, "get_http": 200},
+    "web": {"/inicio": 200, "/concurso/34": 200}
+  },
+  "smoke_dry_run": {
+    "pytest_command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_t012_batch2_dispatch.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_apta_open_selection.py backend/tests/test_cpcon_t012.py",
+    "passed": 31,
+    "failed": 1,
+    "failure": {
+      "test": "backend/tests/test_t012_apta_open_selection.py::test_apta_reviewed_selection_extracts_provenanced_public_fields",
+      "assertion": "fields['titulo'].state.value == 'supported'",
+      "actual": "failed",
+      "expected": "supported"
+    },
+    "reviewed_run_null_target_and_path_independent_smokes": "PASS",
+    "dispatch_smokes_klc_avancasp_publiconsult": "PASS in test_t012_batch2_dispatch.py",
+    "apta_strict_preflight": "PASS in test_t012_apta_strong_preflight.py; selection extraction remains failed as above",
+    "writes": false
+  },
+  "gate": "BLOCKED_APTA_SELECTION_SMOKE",
+  "next_step": "Correct/review the APTA title extraction regression, rerun the directed suite, then repeat only the smoke gate. No source import/proposal/approval/application was performed."
+}

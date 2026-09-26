@@ -1,0 +1,60 @@
+{
+  "schema": "preflight-id6-backup-restore.v1",
+  "recorded_at": "2026-09-12T21:34:39-03:00",
+  "scope": "pre-ID6 operational gate; no import/proposal/publication",
+  "services_before": {
+    "project": "observador-pilot",
+    "health_http": 200,
+    "health_body": {"status": "ok", "app": "Observador de Concursos", "env": "local-pilot"},
+    "writers": ["api", "worker", "scheduler"],
+    "postgres": "healthy",
+    "redis": "healthy"
+  },
+  "absence_checks": {
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "runs_recent_matches": 0,
+    "proposal_id6_probe_http": 404,
+    "read_only": true
+  },
+  "backup": {
+    "postgres_dump": "/backups/pilot-20260913T003039642Z-postgres.dump",
+    "postgres_dump_sha256": "f5ad8870d6ad765359eb9f8412fa2d4e0bf263f66ed3f44a6217fb8a4ccfcebb",
+    "operational_bundle": "/backups/pilot-20260913T003039642Z-operational",
+    "manifest_sha256": "f5f33563900e21d81b703a5b05291a929a7bdeccf9812940d3f3ed4e218aff95",
+    "manifest_created_at": "2026-09-13T00:32:17.241021+00:00",
+    "writers_stopped_attested": true,
+    "canonical_database_included": false,
+    "manifest_files": 12871,
+    "manifest_bytes": 9729281057,
+    "manifest_sqlite_files": 5,
+    "manifest_non_sqlite_files": 12866,
+    "pg_restore_list_entries": 187
+  },
+  "isolated_restore": {
+    "database": "t006_pre_id6_restore_20260912",
+    "command": "pg_restore --no-owner --exit-on-error",
+    "counts": {
+      "concursos": 33,
+      "versions": 82,
+      "notifications": 81,
+      "proposals": 84,
+      "outbox": 82
+    },
+    "canonical_counts": {
+      "concursos": 33,
+      "versions": 82,
+      "notifications": 81,
+      "proposals": 84,
+      "outbox": 82
+    },
+    "match": true,
+    "canonical_database_overwritten": false
+  },
+  "services_after": {
+    "health_http": 200,
+    "writers_restarted_by_official_backup": true,
+    "volumes_preserved": true
+  },
+  "next_gate": "aguardar autorização para backend deploy/import ID6; backend push compartilhado r5 ainda não revisado",
+  "mutations_not_done": ["build", "redeploy", "import", "proposal", "approve", "apply"]
+}

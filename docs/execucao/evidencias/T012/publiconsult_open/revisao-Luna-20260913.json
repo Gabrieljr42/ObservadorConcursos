@@ -1,0 +1,21 @@
+{
+  "schema": "t012.publiconsult.luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "PUBLICONSULT_ACCEPT_FOR_ARTIFACT_STAGE",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "identity": "PASS: source #56 publiconsult_open, external_id=681, Votuporanga/SP, Processo Seletivo 1/2026, temporary hiring under Regime Administrativo Especial; not bolsa/financing",
+    "artifact": "PASS: local PDF exists and hashes 7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f, 720592 bytes; all field evidence uses same SHA/artifact; envelope SHA 73a29d2f25f0fb8e66818836471cff47b4a26101967d63b75bda4bee3689d80b",
+    "content": "PASS: two functions, 20+CR each (40 immediate total), remunerations, 32/40h, requirements, fees 80/65, dates and title/orgao/edital supported by literal page evidence",
+    "tests": "PASS: six fail-closed adapter tests recorded, including identity/document/empty/ambiguity guards",
+    "duplicate": "PASS: source row 56 is BASELINE_ONLY/outside 32-source baseline; no Votuporanga/681 identity match in the preserved catalogue snapshot",
+    "reference_only": "PASS: true; no proposal/application/mutation"
+  },
+  "blocker": {
+    "type": "not_standard_importable_yet",
+    "evidence": "Direct ReviewedRun.model_validate fails: concurso_id=null (must be positive int), source_external_id is not external_id, each evidence is object not list, observacao is forbidden extra, and observed_at is absent.",
+    "required_correction": "Integrator must allocate canonical concurso_id, normalize envelope to the actual reviewed_run_import ReviewedRun schema, preserve all SHA/page/snippets, then rerun model validation/dry-run before proposal."
+  },
+  "conclusion": "Artifact and documentary evidence are accepted for staging/handoff only; import/proposal is blocked until schema normalization and canonical ID allocation."
+}

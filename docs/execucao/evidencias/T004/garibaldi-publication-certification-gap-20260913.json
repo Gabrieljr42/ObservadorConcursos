@@ -1,0 +1,51 @@
+{
+  "schema": "t004.garibaldi.publication-certification-gap.v1",
+  "created_at": "2026-09-13",
+  "status": "GARIBALDI_SPECIFIC_GAP",
+  "scope": "local-only, no network, no Docker, no mutation",
+  "identity_origin_history": {
+    "certified_locally": true,
+    "source": "legalle_open",
+    "source_id": 49,
+    "external_id": "2486",
+    "concurso_id": 33,
+    "document_sha256": "344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129",
+    "base_document": "Edital nº 04/2025 - Abertura e Inscrições",
+    "amendments": [
+      {"sha256":"d7d2967a1612ccc5abcb3fad52022bf140017486ca0f555bfb535ea2a6aacab6","effect":"classification_only"},
+      {"sha256":"ab68844c2bbed8a92a1652228903ee6f0b581faac54d4d3ab5a7a147ad0d85ec","effect":"schedule_publication_date_review"},
+      {"sha256":"f98866f076889f4dd32a049603ea4098120d193dbfd76f4c81f367f60ec3b3cc","effect":"cargo_workload_or_remuneration_review"}
+    ],
+    "evidence": "docs/T004-LOTE-GARIBALDI-20260912.json"
+  },
+  "contract_check": {
+    "publication_structured_row": {
+      "required_fields": ["concurso_id","title","publication_type","publication_date","link","content_hash","raw_data"],
+      "local_result": "not_certified",
+      "reason": "docs/execucao/evidencias-garibaldi-2026-09-12.md records publications=null and empty publication table; only raw_data.tenderproof.amendments is present"
+    },
+    "application_receipt": {
+      "expected": "local receipt proving a structured publication row was applied",
+      "local_result": "not_found",
+      "referenced_but_absent": "backend/.tenderproof/product-completion/delivery-legalle-applied-20260912T203143950720Z.json"
+    },
+    "source_contract": {
+      "parser_support": "backend/app/publications.py:206-348",
+      "sync_contract": "backend/app/services.py:480-570",
+      "schema_contract": "backend/app/schemas.py:87-100",
+      "database_contract": "backend/app/models.py:131-153",
+      "important_behavior": "services fallback from link_edital is reference_only and does not certify downloaded/parsed publication"
+    }
+  },
+  "objective_gap": {
+    "missing": [
+      "one deterministic publication payload for concurso 33 with title/date/link/content_hash and provenance",
+      "a local apply receipt or equivalent dry-run assertion showing that payload maps to ConcursoPublication",
+      "read-only validation showing GET /concursos/33/publications returns the row and content_hash is persisted"
+    ],
+    "resume_when": "provide the preserved document payload and deterministic hash, run the normal publication proposal/apply path under the authorized integrator, then capture the receipt and read-only detail/publication validation"
+  },
+  "conclusion": "Identity, source, base document and amendment history are locally proven. Structured publication certification is not proven; no bounded offline code correction is justified because the missing fact is application/DB evidence, not parser behavior.",
+  "mutations": false
+}
+

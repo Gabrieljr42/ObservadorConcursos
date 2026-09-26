@@ -1,0 +1,41 @@
+{
+  "schema": "t012.apta.document-review-package-r12.v1",
+  "status": "READY_FOR_REVIEW",
+  "scope": "document-only review; no API live, prepare, approve, proposal, apply or catalog mutation",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "identity": {
+    "orgao": "Câmara Municipal De Aragarças",
+    "edital_numero": "01/2026",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+    "document_title": "1ª Retificação do Edital do Concurso Público nº 01/2026",
+    "identity_snippet": "A Câmara Municipal de Aragarças, Estado de Goiás",
+    "selection_snippet": "1ª Retificação do Edital do Concurso Público"
+  },
+  "artifact": {
+    "artifact_id": "art-apta-ret2-708",
+    "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+    "byte_len": 76767,
+    "pages": 1,
+    "content_type": "application/pdf",
+    "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+    "receipt": "docs/execucao/evidencias/T012/apta_open/artifacts/receipt-retificacao2-708.json"
+  },
+  "literal_effects": {
+    "page": 1,
+    "snippets": [
+      "Retifica-se o item 9.9 do Edital de Abertura Completo",
+      "Estrutura da Prova Objetiva",
+      "Permanecem inalterados os demais itens do Edital de Abertura de Inscrições",
+      "15 questões – Raciocínio Lógico-Matemático",
+      "05 questões – Lei Orgânica do Município de Aragarças"
+    ],
+    "effect_class": "exam_question_distribution_only",
+    "catalog_fields_changed": [],
+    "currentness": "retificação datada de 28/07/2026; exact bytes newly preserved"
+  },
+  "non_effects": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa", "cargos", "remuneracao"],
+  "next_step": "Human review compare retification against principal artifact art-18bef50e17; do not promote any catalog field from this document alone."
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "t012.content-receipt.v1",
+  "state": "CONTENT_VERIFIED",
+  "source": "epl_open",
+  "source_number": 21,
+  "candidate_external_id": "52",
+  "artifact_id": "art-8c5dbef058",
+  "content_type": "application/pdf",
+  "content_path": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+  "byte_len": 784614,
+  "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+  "page_count": 43,
+  "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+  "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+  "verification": {
+    "method": "local_sha256_and_byte_count",
+    "network_used": false,
+    "db_used": false,
+    "verified_against": "docs/tenderproof-batch60-recovered-live.json#art-8c5dbef058"
+  },
+  "field_evidence": [
+    {"field": "titulo", "page": 1, "snippet": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM - Concurso Público N° 01/2023"},
+    {"field": "regime", "page": 1, "snippet": "regime celetista"},
+    {"field": "prova", "page": 1, "snippet": "prova escrita objetiva"},
+    {"field": "cargos", "page": 1, "snippet": "Auxiliar de Serviços Gerais 5 0 ... 200 R$ 1.621,05; Técnico de Enfermagem 9 1 ... 200 R$ 2.377,90"},
+    {"field": "cargos", "page": 2, "snippet": "Auxiliar de Copa e Cozinha 5 0 ... 200 R$ 1.621,05"},
+    {"field": "cargos", "page": 3, "snippet": "Farmacêutico Bioquímico 2 0 ... 180 R$ 4.982,20"},
+    {"field": "taxa_por_escolaridade", "page": 3, "snippet": "R$120 superior; R$70 médio/technical; R$50 fundamental"}
+  ],
+  "import_guard": {
+    "reference_only": true,
+    "apply": false,
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "reason": "bytes are import-ready, but canonical target allocation is intentionally not invented"
+  }
+}

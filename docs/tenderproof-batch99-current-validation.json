@@ -1,0 +1,1844 @@
+{
+  "generated_at": "2026-09-08T15:48:18.006373+00:00",
+  "batch_gate": "implementation_in_progress",
+  "scope": "Read-only evidence audit. Does not grant gate acceptance or replace live observation with offline replay.",
+  "registration": {
+    "total_registered_adapters": 70,
+    "batch_registered_adapters": 19,
+    "batch_missing_adapters": [
+      "oppus_open",
+      "fapemig_selection",
+      "fapes_selection",
+      "fapesq_selection",
+      "faped_selection",
+      "fapepi_selection",
+      "fapema_selection",
+      "fapece_selection",
+      "fapern_selection",
+      "fapeal_selection",
+      "facepe_selection",
+      "fundect_selection",
+      "fapemat_selection",
+      "fapdf_selection",
+      "fapt_selection",
+      "fapeam_selection",
+      "fapeap_selection",
+      "faperr_selection",
+      "fapero_selection",
+      "fapac_selection"
+    ]
+  },
+  "counts": {
+    "sources_with_verified_valid_pdf": 16,
+    "sources_with_two_verified_cycles": 16,
+    "distinct_durable_pdf_files_verified": 33,
+    "distinct_pdf_sha256_verified": 16,
+    "physical_verified_pdf_bytes": 34915320,
+    "deduplicated_verified_pdf_bytes": 15467606
+  },
+  "sources": [
+    {
+      "source": "nossorumo_open",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "klc_open",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "klc_open",
+          "report": "tenderproof-batch99-klc-live.json",
+          "cycle": 1,
+          "run_id": "tpr-7da87504f10b",
+          "external_id": "632",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99klc/artifacts/art-50fec5e75f-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf",
+          "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+          "artifact_bytes": 348300,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/klc_open-cycle1-detail-6c35d6c332.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/klc_open-cycle1-listing-ad10a094e0.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 10
+        },
+        {
+          "source": "klc_open",
+          "report": "tenderproof-batch99-klc-live.json",
+          "cycle": 2,
+          "run_id": "tpr-19010ba6e674",
+          "external_id": "632",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99klc/artifacts/art-01b285b983-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf",
+          "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+          "artifact_bytes": 348300,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/klc_open-cycle2-detail-6c35d6c332.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/klc_open-cycle2-listing-ad10a094e0.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 10
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "oppus_open",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "legatus_open",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "legatus_open",
+          "report": "tenderproof-batch99-own-live.json",
+          "cycle": 1,
+          "run_id": "tpr-60a5ed607732",
+          "external_id": "160",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99own/artifacts/art-93290e544d-0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4.pdf",
+          "artifact_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+          "artifact_bytes": 745821,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/legatus_open-cycle1-detail-10273a0d4a.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/legatus_open-cycle1-listing-d3a7c4944e.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 45
+        },
+        {
+          "source": "legatus_open",
+          "report": "tenderproof-batch99-own-live.json",
+          "cycle": 2,
+          "run_id": "tpr-12c1188e359f",
+          "external_id": "160",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99own/artifacts/art-1b962bc8a8-0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4.pdf",
+          "artifact_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+          "artifact_bytes": 745821,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/legatus_open-cycle2-detail-ecef7b27ec.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/legatus_open-cycle2-listing-b2d89c71cb.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 45
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fepese_open",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "ieses_open",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "ieses_open",
+          "report": "tenderproof-batch99-ieses-final-live.json",
+          "cycle": 1,
+          "run_id": "tpr-b2c3b4fafd3b",
+          "external_id": "scgas2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99iesesfinal/artifacts/art-7c514a2906-ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf.pdf",
+          "artifact_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+          "artifact_bytes": 307888,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/ieses_open-cycle1-detail-08f7d3839e.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/ieses_open-cycle1-listing-6a4c9c5d51.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 23
+        },
+        {
+          "source": "ieses_open",
+          "report": "tenderproof-batch99-ieses-final-live.json",
+          "cycle": 2,
+          "run_id": "tpr-44e676de8242",
+          "external_id": "scgas2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99iesesfinal/artifacts/art-8953c033ad-ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf.pdf",
+          "artifact_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+          "artifact_bytes": 307888,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/ieses_open-cycle2-detail-16b24d1ef3.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/ieses_open-cycle2-listing-6a4c9c5d51.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 23
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "verbena_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "verbena_selection",
+          "report": "tenderproof-batch99-verbena-live.json",
+          "cycle": 1,
+          "run_id": "tpr-d1acc97aabfe",
+          "external_id": "concurso-camara-pires-do-rio",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99verbena/artifacts/art-a17f2149f4-32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225.pdf",
+          "artifact_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+          "artifact_bytes": 1688048,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/verbena_selection-cycle1-detail-b2d728079b.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/verbena_selection-cycle1-listing-b7acc50223.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 46
+        },
+        {
+          "source": "verbena_selection",
+          "report": "tenderproof-batch99-verbena-live.json",
+          "cycle": 2,
+          "run_id": "tpr-4b502a9f0718",
+          "external_id": "concurso-camara-pires-do-rio",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99verbena/artifacts/art-4abeea0970-32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225.pdf",
+          "artifact_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+          "artifact_bytes": 1688048,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_own/verbena_selection-cycle2-detail-b2d728079b.html",
+            "backend/tests/fixtures/tenderproof_batch99_own/verbena_selection-cycle2-listing-c203386324.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 46
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapemig_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapes_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapesq_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "funpec_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "funpec_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "run_id": "tpr-562b7ee9520c",
+          "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-06a13d0281-ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835.pdf",
+          "artifact_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+          "artifact_bytes": 950097,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/funpec_selection-cycle1-detail-b862f2e7b4a3.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/funpec_selection-cycle1-listing-39fd47acac12.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 11
+        },
+        {
+          "source": "funpec_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "run_id": "tpr-9a38abd5ef7b",
+          "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-abd61a0cff-ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835.pdf",
+          "artifact_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+          "artifact_bytes": 950097,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/funpec_selection-cycle2-detail-b862f2e7b4a3.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/funpec_selection-cycle2-listing-39fd47acac12.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 11
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fade_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fade_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "run_id": "tpr-554475d8bd2a",
+          "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-50eb480d4e-0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8.pdf",
+          "artifact_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+          "artifact_bytes": 688914,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fade_selection-cycle1-detail-f6ba6c48d6ac.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fade_selection-cycle1-listing-3a4464fba4f5.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 7
+        },
+        {
+          "source": "fade_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "run_id": "tpr-b51a026901e9",
+          "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-bdb5d17cbc-0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8.pdf",
+          "artifact_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+          "artifact_bytes": 688914,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fade_selection-cycle2-detail-f6ba6c48d6ac.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fade_selection-cycle2-listing-3a4464fba4f5.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 7
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapex_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapex_selection",
+          "report": "tenderproof-batch99-fapex-live.json",
+          "cycle": 1,
+          "run_id": "tpr-c7d538908d3e",
+          "external_id": "nr2O",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapex/artifacts/art-d481384059-58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7.pdf",
+          "artifact_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+          "artifact_bytes": 307112,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapex_selection-cycle1-detail-b60c2b85a3d2.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapex_selection-cycle1-listing-5e1b47152a4e.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 8
+        },
+        {
+          "source": "fapex_selection",
+          "report": "tenderproof-batch99-fapex-live.json",
+          "cycle": 2,
+          "run_id": "tpr-0184a5362f76",
+          "external_id": "nr2O",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapex/artifacts/art-463bfb5ab7-58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7.pdf",
+          "artifact_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+          "artifact_bytes": 307112,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapex_selection-cycle2-detail-b60c2b85a3d2.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapex_selection-cycle2-listing-5e1b47152a4e.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 8
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fatec_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fatec_selection",
+          "report": "tenderproof-batch99-sections-live.json",
+          "cycle": 1,
+          "run_id": "tpr-d8b1c8f4ef61",
+          "external_id": "2026/3010088-01",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99sections/artifacts/art-c312508e48-3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc.pdf",
+          "artifact_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+          "artifact_bytes": 463117,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fatec_selection-cycle1-detail-02537d900519.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fatec_selection-cycle1-listing-dbecfebcb89c.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22
+        },
+        {
+          "source": "fatec_selection",
+          "report": "tenderproof-batch99-sections-live.json",
+          "cycle": 2,
+          "run_id": "tpr-790b1d8f5880",
+          "external_id": "2026/3010088-01",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99sections/artifacts/art-41776ee164-3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc.pdf",
+          "artifact_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+          "artifact_bytes": 463117,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fatec_selection-cycle2-detail-d354f00fd59e.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fatec_selection-cycle2-listing-f63bc43f2460.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "faped_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapese_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapese_selection",
+          "report": "tenderproof-batch99-fapese-live.json",
+          "cycle": 1,
+          "run_id": "tpr-cdf554911a02",
+          "external_id": "007/2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapese/artifacts/art-63d01bdc0b-c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b.pdf",
+          "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+          "artifact_bytes": 345974,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapese_selection-cycle1-detail-197909cd7ff1.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapese_selection-cycle1-listing-07d5ffd1cf7f.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 17
+        },
+        {
+          "source": "fapese_selection",
+          "report": "tenderproof-batch99-fapese-live.json",
+          "cycle": 2,
+          "run_id": "tpr-0c24bbb074ec",
+          "external_id": "007/2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapese/artifacts/art-f4abe77f3d-c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b.pdf",
+          "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+          "artifact_bytes": 345974,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapese_selection-cycle2-detail-b9764c8e1986.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapese_selection-cycle2-listing-ba82bdd033c2.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 17
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapepi_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapema_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapece_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapern_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapeal_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "facepe_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapesb_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapesb_selection",
+          "report": "tenderproof-batch99-southeast-fapesb-live.json",
+          "cycle": 1,
+          "run_id": "tpr-515211f9d348",
+          "external_id": "01-2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-d0aeae88ef-3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1.pdf",
+          "artifact_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+          "artifact_bytes": 3383021,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesb_selection-cycle1-detail-d180bc6fa8.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesb_selection-cycle1-listing-dc821f3a06.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 9
+        },
+        {
+          "source": "fapesb_selection",
+          "report": "tenderproof-batch99-southeast-fapesb-live.json",
+          "cycle": 2,
+          "run_id": "tpr-96c744a63fc7",
+          "external_id": "01-2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-6007199e76-3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1.pdf",
+          "artifact_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+          "artifact_bytes": 3383021,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesb_selection-cycle2-detail-d788381d92.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesb_selection-cycle2-listing-f50615b478.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 9
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "faperj_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "faperj_selection",
+          "report": "tenderproof-batch99-southeast-faperj-live.json",
+          "cycle": 1,
+          "run_id": "tpr-e49b199900ee",
+          "external_id": "812.7.4",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-c261b479f3-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf",
+          "artifact_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+          "artifact_bytes": 80400,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/faperj_selection-cycle1-detail-e70c5bb402.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/faperj_selection-cycle1-listing-80418a02d2.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 4
+        },
+        {
+          "source": "faperj_selection",
+          "report": "tenderproof-batch99-southeast-faperj-live.json",
+          "cycle": 2,
+          "run_id": "tpr-f8de62d189c7",
+          "external_id": "812.7.4",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-bef35943e1-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf",
+          "artifact_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+          "artifact_bytes": 80400,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/faperj_selection-cycle2-detail-e70c5bb402.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/faperj_selection-cycle2-listing-80418a02d2.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 4
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapesp_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapesp_selection",
+          "report": "tenderproof-batch99-southeast-live-initial.json",
+          "cycle": 1,
+          "run_id": "tpr-5e8de91b4296",
+          "external_id": "4470",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-c7dcec1108-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf",
+          "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+          "artifact_bytes": 3980108,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-detail-507902ae49.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-listing-d7c477ceae.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 58
+        },
+        {
+          "source": "fapesp_selection",
+          "report": "tenderproof-batch99-southeast-live-observed.json",
+          "cycle": 1,
+          "run_id": "tpr-e2c3436a4dfa",
+          "external_id": "4470",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-d8242ea634-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf",
+          "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+          "artifact_bytes": 3980108,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-detail-6f2743ea33.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-listing-c8962b42b1.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 58
+        },
+        {
+          "source": "fapesp_selection",
+          "report": "tenderproof-batch99-southeast-live-observed.json",
+          "cycle": 2,
+          "run_id": "tpr-81148fd02d65",
+          "external_id": "4470",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-60e6230750-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf",
+          "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+          "artifact_bytes": 3980108,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle2-detail-bd3ceee4cf.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle2-listing-ccc842637f.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 58
+        },
+        {
+          "source": "fapesp_selection",
+          "report": "tenderproof-batch99-southeast-live.json",
+          "cycle": 1,
+          "run_id": "tpr-e2c3436a4dfa",
+          "external_id": "4470",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-d8242ea634-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf",
+          "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+          "artifact_bytes": 3980108,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-detail-6f2743ea33.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle1-listing-c8962b42b1.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 58
+        },
+        {
+          "source": "fapesp_selection",
+          "report": "tenderproof-batch99-southeast-live.json",
+          "cycle": 2,
+          "run_id": "tpr-81148fd02d65",
+          "external_id": "4470",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99se/artifacts/art-60e6230750-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf",
+          "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+          "artifact_bytes": 3980108,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle2-detail-bd3ceee4cf.html",
+            "backend/tests/fixtures/tenderproof_batch99_southeast/fapesp_selection-cycle2-listing-ccc842637f.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 58
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fappr_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fappr_selection",
+          "report": "tenderproof-batch99-sections-live.json",
+          "cycle": 1,
+          "run_id": "tpr-ca9900ff1e16",
+          "external_id": "03/2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99sections/artifacts/art-3fd0909144-dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903.pdf",
+          "artifact_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+          "artifact_bytes": 197636,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fappr_selection-cycle1-detail-fba507f90a23.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fappr_selection-cycle1-listing-fba507f90a23.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 3
+        },
+        {
+          "source": "fappr_selection",
+          "report": "tenderproof-batch99-sections-live.json",
+          "cycle": 2,
+          "run_id": "tpr-f904edead555",
+          "external_id": "03/2026",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99sections/artifacts/art-939371e738-dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903.pdf",
+          "artifact_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+          "artifact_bytes": 197636,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fappr_selection-cycle2-detail-fba507f90a23.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fappr_selection-cycle2-listing-fba507f90a23.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 3
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapesc_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapergs_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapergs_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "run_id": "tpr-005a5ef2d90f",
+          "external_id": "selecao-2025",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-532eee66c8-2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444.pdf",
+          "artifact_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+          "artifact_bytes": 557707,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapergs_selection-cycle1-detail-6cf7b3dd7dec.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapergs_selection-cycle1-listing-485a087a7f28.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 21
+        },
+        {
+          "source": "fapergs_selection",
+          "report": "tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "run_id": "tpr-b20c4ae7df2e",
+          "external_id": "selecao-2025",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99found/artifacts/art-8556c06ecc-2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444.pdf",
+          "artifact_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+          "artifact_bytes": 557707,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapergs_selection-cycle2-detail-485a087a7f28.html",
+            "backend/tests/fixtures/tenderproof_batch99_foundations/fapergs_selection-cycle2-listing-3fdd4f88dadf.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 21
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fundect_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapemat_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapeg_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapeg_selection",
+          "report": "tenderproof-batch99-fapeg-live.json",
+          "cycle": 1,
+          "run_id": "tpr-a4a724d5a3f9",
+          "external_id": "009/2024",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapeg/artifacts/art-ecc3730d22-fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054.pdf",
+          "artifact_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+          "artifact_bytes": 489850,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapeg_selection-cycle1-detail-21b12d32be.html",
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapeg_selection-cycle1-listing-be08ea3a5d.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 29
+        },
+        {
+          "source": "fapeg_selection",
+          "report": "tenderproof-batch99-fapeg-live.json",
+          "cycle": 2,
+          "run_id": "tpr-1f50509542f5",
+          "external_id": "009/2024",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99fapeg/artifacts/art-96f817309c-fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054.pdf",
+          "artifact_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+          "artifact_bytes": 489850,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapeg_selection-cycle2-detail-21b12d32be.html",
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapeg_selection-cycle2-listing-be08ea3a5d.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 29
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapdf_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapt_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapeam_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapespa_selection",
+      "adapter_registered": true,
+      "two_cycles_same_candidate_verified": true,
+      "samples": [
+        {
+          "source": "fapespa_selection",
+          "report": "tenderproof-batch99-regions-live.json",
+          "cycle": 1,
+          "run_id": "tpr-d9f93461b1f6",
+          "external_id": "001/2025",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99regions/artifacts/art-df5e9d7fe1-b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21.pdf",
+          "artifact_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+          "artifact_bytes": 933613,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapespa_selection-cycle1-detail-3eaabca6f4.html",
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapespa_selection-cycle1-listing-391a6e53e5.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22
+        },
+        {
+          "source": "fapespa_selection",
+          "report": "tenderproof-batch99-regions-live.json",
+          "cycle": 2,
+          "run_id": "tpr-f701639cf98b",
+          "external_id": "001/2025",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "offline": false,
+          "artifact_path": "backend/.tenderproof/r99regions/artifacts/art-31dde927ad-b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21.pdf",
+          "artifact_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+          "artifact_bytes": 933613,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapespa_selection-cycle2-detail-0b1abfc76d.html",
+            "backend/tests/fixtures/tenderproof_batch99_regions/fapespa_selection-cycle2-listing-7e9b98734c.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22
+        }
+      ],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapeap_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "faperr_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapero_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    },
+    {
+      "source": "fapac_selection",
+      "adapter_registered": false,
+      "two_cycles_same_candidate_verified": false,
+      "samples": [],
+      "homologation_state": "pending_batch_gate",
+      "coverage": "bounded explicit adapter scope only; no whole-source certification"
+    }
+  ],
+  "attempts": [
+    {
+      "source": "fapeg_selection",
+      "report": "tenderproof-batch99-fapeg-live.json",
+      "cycle": 1,
+      "run_id": "tpr-a4a724d5a3f9",
+      "external_id": "009/2024",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapeg_selection",
+      "report": "tenderproof-batch99-fapeg-live.json",
+      "cycle": 2,
+      "run_id": "tpr-1f50509542f5",
+      "external_id": "009/2024",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapese_selection",
+      "report": "tenderproof-batch99-fapese-live.json",
+      "cycle": 1,
+      "run_id": "tpr-cdf554911a02",
+      "external_id": "007/2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapese_selection",
+      "report": "tenderproof-batch99-fapese-live.json",
+      "cycle": 2,
+      "run_id": "tpr-0c24bbb074ec",
+      "external_id": "007/2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapex_selection",
+      "report": "tenderproof-batch99-fapex-live.json",
+      "cycle": 1,
+      "run_id": "tpr-c7d538908d3e",
+      "external_id": "nr2O",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapex_selection",
+      "report": "tenderproof-batch99-fapex-live.json",
+      "cycle": 2,
+      "run_id": "tpr-0184a5362f76",
+      "external_id": "nr2O",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 1,
+      "run_id": "tpr-791d80be39a2",
+      "external_id": "2026pseducasj",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 1,
+      "run_id": "tpr-8c161282994a",
+      "external_id": "2026seletivocomcap",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 1,
+      "run_id": "tpr-a08167491058",
+      "external_id": "2026cpcelesc",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 2,
+      "run_id": "tpr-10b900359038",
+      "external_id": "2026pseducasj",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 2,
+      "run_id": "tpr-a15a0f7bbe50",
+      "external_id": "2026seletivocomcap",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "fepese_open",
+      "report": "tenderproof-batch99-fepese-live.json",
+      "cycle": 2,
+      "run_id": "tpr-5e68077e8ec0",
+      "external_id": "2026cpcelesc",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "funpec_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 1,
+      "run_id": "tpr-9a84d36d71cd",
+      "external_id": "processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: número/ano do edital FUNPEC diverge do processo observado",
+      "offline": false
+    },
+    {
+      "source": "funpec_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 1,
+      "run_id": "tpr-562b7ee9520c",
+      "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fade_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 1,
+      "run_id": "tpr-554475d8bd2a",
+      "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapergs_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 1,
+      "run_id": "tpr-005a5ef2d90f",
+      "external_id": "selecao-2025",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "funpec_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 2,
+      "run_id": "tpr-60617ea4bd93",
+      "external_id": "processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: número/ano do edital FUNPEC diverge do processo observado",
+      "offline": false
+    },
+    {
+      "source": "funpec_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 2,
+      "run_id": "tpr-9a38abd5ef7b",
+      "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fade_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 2,
+      "run_id": "tpr-b51a026901e9",
+      "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapergs_selection",
+      "report": "tenderproof-batch99-foundations-live.json",
+      "cycle": 2,
+      "run_id": "tpr-b20c4ae7df2e",
+      "external_id": "selecao-2025",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-final-live.json",
+      "cycle": 1,
+      "run_id": "tpr-b2c3b4fafd3b",
+      "external_id": "scgas2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-final-live.json",
+      "cycle": 2,
+      "run_id": "tpr-44e676de8242",
+      "external_id": "scgas2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-live.json",
+      "cycle": 1,
+      "run_id": "tpr-70ba5e9a5aaf",
+      "external_id": "scgas2026",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: redirect de detalhe altera identidade",
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-live.json",
+      "cycle": 1,
+      "run_id": "tpr-133d465c01af",
+      "external_id": "crmvsc",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: redirect de detalhe altera identidade",
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-live.json",
+      "cycle": 2,
+      "run_id": "tpr-f78fb016c0e6",
+      "external_id": "scgas2026",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: redirect de detalhe altera identidade",
+      "offline": false
+    },
+    {
+      "source": "ieses_open",
+      "report": "tenderproof-batch99-ieses-live.json",
+      "cycle": 2,
+      "run_id": "tpr-11c634920793",
+      "external_id": "crmvsc",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: redirect de detalhe altera identidade",
+      "offline": false
+    },
+    {
+      "source": "klc_open",
+      "report": "tenderproof-batch99-klc-live.json",
+      "cycle": 1,
+      "run_id": "tpr-7da87504f10b",
+      "external_id": "632",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "klc_open",
+      "report": "tenderproof-batch99-klc-live.json",
+      "cycle": 2,
+      "run_id": "tpr-19010ba6e674",
+      "external_id": "632",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 1,
+      "run_id": "tpr-c82c3c28ca34",
+      "external_id": "608",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/608-3788-639238739834481180.pdf'\nFor more information check: https://develop",
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 1,
+      "run_id": "tpr-76fe4d97f9f3",
+      "external_id": "607",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 1,
+      "run_id": "tpr-4e576b7aa948",
+      "external_id": "606",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/606-3778-639234474420153791.pdf'\nFor more information check: https://develop",
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 2,
+      "run_id": "tpr-117e713305c0",
+      "external_id": "608",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/608-3788-639238739834481180.pdf'\nFor more information check: https://develop",
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 2,
+      "run_id": "tpr-9fb775f16481",
+      "external_id": "607",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+      "offline": false
+    },
+    {
+      "source": "nossorumo_open",
+      "report": "tenderproof-batch99-nossorumo-live.json",
+      "cycle": 2,
+      "run_id": "tpr-f1ad5cbc9aad",
+      "external_id": "606",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/606-3778-639234474420153791.pdf'\nFor more information check: https://develop",
+      "offline": false
+    },
+    {
+      "source": "legatus_open",
+      "report": "tenderproof-batch99-own-live.json",
+      "cycle": 1,
+      "run_id": "tpr-60a5ed607732",
+      "external_id": "160",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "legatus_open",
+      "report": "tenderproof-batch99-own-live.json",
+      "cycle": 2,
+      "run_id": "tpr-12c1188e359f",
+      "external_id": "160",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesc_selection",
+      "report": "tenderproof-batch99-regions-live.json",
+      "cycle": 1,
+      "run_id": "tpr-48f1471acd9b",
+      "external_id": "1",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HtmlBlockError: resposta não é PDF",
+      "offline": false
+    },
+    {
+      "source": "fapespa_selection",
+      "report": "tenderproof-batch99-regions-live.json",
+      "cycle": 1,
+      "run_id": "tpr-d9f93461b1f6",
+      "external_id": "001/2025",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesc_selection",
+      "report": "tenderproof-batch99-regions-live.json",
+      "cycle": 2,
+      "run_id": "tpr-0c5a7411dfe3",
+      "external_id": "1",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HtmlBlockError: resposta não é PDF",
+      "offline": false
+    },
+    {
+      "source": "fapespa_selection",
+      "report": "tenderproof-batch99-regions-live.json",
+      "cycle": 2,
+      "run_id": "tpr-f701639cf98b",
+      "external_id": "001/2025",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesc_selection",
+      "report": "tenderproof-batch99-regions-pdf-replay.json",
+      "cycle": 1,
+      "run_id": "tpr-f8c6336ebb49",
+      "external_id": "1",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ProcessingError: invalid_document",
+      "offline": true
+    },
+    {
+      "source": "fapesc_selection",
+      "report": "tenderproof-batch99-regions-pdf-replay.json",
+      "cycle": 2,
+      "run_id": "tpr-89d17f42f374",
+      "external_id": "1",
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "ProcessingError: invalid_document",
+      "offline": true
+    },
+    {
+      "source": "fatec_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 1,
+      "run_id": "tpr-d8b1c8f4ef61",
+      "external_id": "2026/3010088-01",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fappr_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 1,
+      "run_id": "tpr-727f5e26ecaa",
+      "external_id": "04/2026",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fappr_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 1,
+      "run_id": "tpr-ca9900ff1e16",
+      "external_id": "03/2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fatec_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 2,
+      "run_id": "tpr-790b1d8f5880",
+      "external_id": "2026/3010088-01",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fappr_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 2,
+      "run_id": "tpr-779e03b0d9bd",
+      "external_id": "04/2026",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fappr_selection",
+      "report": "tenderproof-batch99-sections-live.json",
+      "cycle": 2,
+      "run_id": "tpr-f904edead555",
+      "external_id": "03/2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-faperj-live.json",
+      "cycle": 1,
+      "run_id": "tpr-e49b199900ee",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-faperj-live.json",
+      "cycle": 2,
+      "run_id": "tpr-f8de62d189c7",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesb_selection",
+      "report": "tenderproof-batch99-southeast-fapesb-live.json",
+      "cycle": 1,
+      "run_id": "tpr-515211f9d348",
+      "external_id": "01-2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesb_selection",
+      "report": "tenderproof-batch99-southeast-fapesb-live.json",
+      "cycle": 2,
+      "run_id": "tpr-96c744a63fc7",
+      "external_id": "01-2026",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesp_selection",
+      "report": "tenderproof-batch99-southeast-live-initial.json",
+      "cycle": 1,
+      "run_id": "tpr-5e8de91b4296",
+      "external_id": "4470",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesp_selection",
+      "report": "tenderproof-batch99-southeast-live-observed.json",
+      "cycle": 1,
+      "run_id": "tpr-e2c3436a4dfa",
+      "external_id": "4470",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-live-observed.json",
+      "cycle": 1,
+      "run_id": "tpr-0ca0871a7af1",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesp_selection",
+      "report": "tenderproof-batch99-southeast-live-observed.json",
+      "cycle": 2,
+      "run_id": "tpr-81148fd02d65",
+      "external_id": "4470",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-live-observed.json",
+      "cycle": 2,
+      "run_id": "tpr-1b13a010fa06",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesp_selection",
+      "report": "tenderproof-batch99-southeast-live.json",
+      "cycle": 1,
+      "run_id": "tpr-e2c3436a4dfa",
+      "external_id": "4470",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-live.json",
+      "cycle": 1,
+      "run_id": "tpr-0ca0871a7af1",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "fapesp_selection",
+      "report": "tenderproof-batch99-southeast-live.json",
+      "cycle": 2,
+      "run_id": "tpr-81148fd02d65",
+      "external_id": "4470",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "faperj_selection",
+      "report": "tenderproof-batch99-southeast-live.json",
+      "cycle": 2,
+      "run_id": "tpr-1b13a010fa06",
+      "external_id": "812.7.4",
+      "execution_status": "completed",
+      "validation_status": "partial",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "verbena_selection",
+      "report": "tenderproof-batch99-verbena-live.json",
+      "cycle": 1,
+      "run_id": "tpr-d1acc97aabfe",
+      "external_id": "concurso-camara-pires-do-rio",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    },
+    {
+      "source": "verbena_selection",
+      "report": "tenderproof-batch99-verbena-live.json",
+      "cycle": 2,
+      "run_id": "tpr-4b502a9f0718",
+      "external_id": "concurso-camara-pires-do-rio",
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "offline": false
+    }
+  ],
+  "input_reports": [
+    {
+      "file": "docs\\tenderproof-batch99-fapeg-live.json",
+      "sha256": "62199fba36f68ef3c36a2629d1e38772ef0be21ffea08e0d72a7bd5326f5d9da"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-fapese-live.json",
+      "sha256": "284c9482652c56a636b2d6783bcfdf779ab0ba485adb37bae1203f688df7c5e8"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-fapex-live.json",
+      "sha256": "3f3f0557c005be5a503342dfeec84ffa02a0c404e440474616081ffc2e142eeb"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-fepese-live.json",
+      "sha256": "9382850e8f23e8ccc8cc240739263c16719f70386e36f8bc4b59285a55b3cc70"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-foundations-live.json",
+      "sha256": "663ff1f97d7717f022a38ef24292578aa2621665f158f825412c37e361aab3c8"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-ieses-final-live.json",
+      "sha256": "75cf16f2a99f74109b44490e90e18a47e25318d62169e294c8e575b905555286"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-ieses-live.json",
+      "sha256": "5c6258e0efca7ceba1c9f7fda6e2680d5fe636eaef588f18513e4848970257c9"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-klc-live.json",
+      "sha256": "add54d21f92fc4f534c31e89ffbc8535a2508e60907e6c70064c7e028fc2c96c"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-nossorumo-live.json",
+      "sha256": "308726b64e223ec9ec24cc64dda96499a5bd5f11bc98e805d0171d05a345c8f6"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-own-live.json",
+      "sha256": "b6613938e4d0a833fd5aa9c577ebffb6192dd78ef2b04974138e2d571c5c39ba"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-regions-live.json",
+      "sha256": "91ef9999bba3933a663a0fceece58230737d7986ebe378b851a193ccf2316185"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-regions-pdf-replay.json",
+      "sha256": "029df7a45922bf82ce1243674f9b8a5a5a5fa5e1ea6155c81770cf888fdeca53"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-sections-live.json",
+      "sha256": "5047c3001abe39b3ebfbe8a8c70e169408eb64a5bf2170bbe717784fd6a3787d"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-southeast-faperj-live.json",
+      "sha256": "210b7647cdc258cb4644e46c87c23970679c56fbfdb025f44421ea41e791343a"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-southeast-fapesb-live.json",
+      "sha256": "0e43770cc0d063ea444d3996e64b52a36619c5af93200c94db2ddc9b8823c8de"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-southeast-live-initial.json",
+      "sha256": "b0c6f368850391675f5ee7093e9dd7c21ff13aa4aeb010ecdc8ea732e8c7e8ca"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-southeast-live-observed.json",
+      "sha256": "36dac1e5df486d2a61c58377a4334f0f9f3964555c0cb8bc420717e84d2c3ece"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-southeast-live.json",
+      "sha256": "36dac1e5df486d2a61c58377a4334f0f9f3964555c0cb8bc420717e84d2c3ece"
+    },
+    {
+      "file": "docs\\tenderproof-batch99-verbena-live.json",
+      "sha256": "08b0394e5ea111c090ae06c1208f7a00794e9277c16caff25183d1af8a0a2f64"
+    }
+  ],
+  "audit_errors": [],
+  "production_activation_performed": false
+}

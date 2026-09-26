@@ -1,0 +1,287 @@
+{
+  "observed_at": "2026-09-08T13:03:09.659164+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-ufu-live-20260908",
+  "cycles": [
+    {
+      "source": "ufu_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-7829fdf466a7",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.portalselecao.ufu.br/servicos/Edital/listar/concurso_ta"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "file": "ufu_selection-cycle1-listing-33863a84e4.html",
+          "sha256": "c614550440b6c342e508adeae6b37fce582a0724a10cfbd1007a789e53b1158a",
+          "bytes": 1777299,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T13:03:11.314781+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-581b2869e035",
+          "candidate": {
+            "candidate_id": "ufu_selection-1843",
+            "title_observed": "Processo Seletivo Simplificado Visitante INFIS - Edital Nº 144/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+            "external_id": "1843",
+            "observed_at": "2026-09-08T13:03:13.483287Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+              "file": "ufu_selection-cycle1-detail-9088337b8d.html",
+              "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+              "bytes": 26619,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:14.257222+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ff8e395894df",
+          "candidate": {
+            "candidate_id": "ufu_selection-1837",
+            "title_observed": "Processo seletivo simplificado IFILO - Edital Nº 143/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1837",
+            "external_id": "1837",
+            "observed_at": "2026-09-08T13:03:13.483287Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1837",
+              "file": "ufu_selection-cycle1-detail-cccac1dec9.html",
+              "sha256": "c90265b84888f79f3edf5d3d4d756439bd76b1a6d524068e55268ae43b59a2d6",
+              "bytes": 30547,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:14.954182+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-9de81b90d605",
+          "candidate": {
+            "candidate_id": "ufu_selection-1836",
+            "title_observed": "Processo seletivo simplificado IQUFU - Edital Nº 142/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1836",
+            "external_id": "1836",
+            "observed_at": "2026-09-08T13:03:13.483287Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1836",
+              "file": "ufu_selection-cycle1-detail-aa396bb185.html",
+              "sha256": "317c0281311945c458bc1a45aed42e9993e69bd9ab31950eea9c7cfe5fd5a81e",
+              "bytes": 30926,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:15.675667+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 6.094
+    },
+    {
+      "source": "ufu_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-c3497e650094",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.portalselecao.ufu.br/servicos/Edital/listar/concurso_ta"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "file": "ufu_selection-cycle2-listing-33863a84e4.html",
+          "sha256": "c614550440b6c342e508adeae6b37fce582a0724a10cfbd1007a789e53b1158a",
+          "bytes": 1777299,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T13:03:17.301062+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-94fa45d78f8d",
+          "candidate": {
+            "candidate_id": "ufu_selection-1843",
+            "title_observed": "Processo Seletivo Simplificado Visitante INFIS - Edital Nº 144/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+            "external_id": "1843",
+            "observed_at": "2026-09-08T13:03:19.520483Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+              "file": "ufu_selection-cycle2-detail-9088337b8d.html",
+              "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+              "bytes": 26619,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:20.320086+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-d9f9b67fc26b",
+          "candidate": {
+            "candidate_id": "ufu_selection-1837",
+            "title_observed": "Processo seletivo simplificado IFILO - Edital Nº 143/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1837",
+            "external_id": "1837",
+            "observed_at": "2026-09-08T13:03:19.520483Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1837",
+              "file": "ufu_selection-cycle2-detail-cccac1dec9.html",
+              "sha256": "c90265b84888f79f3edf5d3d4d756439bd76b1a6d524068e55268ae43b59a2d6",
+              "bytes": 30547,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:21.052280+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-b5983138938d",
+          "candidate": {
+            "candidate_id": "ufu_selection-1836",
+            "title_observed": "Processo seletivo simplificado IQUFU - Edital Nº 142/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1836",
+            "external_id": "1836",
+            "observed_at": "2026-09-08T13:03:19.520483Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1836",
+              "file": "ufu_selection-cycle2-detail-aa396bb185.html",
+              "sha256": "317c0281311945c458bc1a45aed42e9993e69bd9ab31950eea9c7cfe5fd5a81e",
+              "bytes": 30926,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:03:21.734900+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 6.078
+    }
+  ]
+}

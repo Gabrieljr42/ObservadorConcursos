@@ -1,0 +1,176 @@
+{
+  "validated_at": "2026-09-08T15:56:55.230802+00:00",
+  "passed": true,
+  "accepted": true,
+  "scope": "Bounded sampled acquisition, continuous tracking, deduplication and recovery. Canonical review exercised for every valid source; only one new source created a contest. Blocked sources excluded; no full-source coverage or production activation.",
+  "valid_sample_sources": [
+    "fade_selection",
+    "fapeg_selection",
+    "fapergs_selection",
+    "faperj_selection",
+    "fapesb_selection",
+    "fapese_selection",
+    "fapesp_selection",
+    "fapespa_selection",
+    "fapex_selection",
+    "fappr_selection",
+    "fatec_selection",
+    "funpec_selection",
+    "ieses_open",
+    "klc_open",
+    "legatus_open",
+    "verbena_selection"
+  ],
+  "blocked_sources": [
+    "facepe_selection",
+    "fapac_selection",
+    "fapdf_selection",
+    "fapeal_selection",
+    "fapeam_selection",
+    "fapeap_selection",
+    "fapece_selection",
+    "faped_selection",
+    "fapema_selection",
+    "fapemat_selection",
+    "fapemig_selection",
+    "fapepi_selection",
+    "fapern_selection",
+    "fapero_selection",
+    "faperr_selection",
+    "fapes_selection",
+    "fapesc_selection",
+    "fapesq_selection",
+    "fapt_selection",
+    "fepese_open",
+    "fundect_selection",
+    "nossorumo_open",
+    "oppus_open"
+  ],
+  "registration": {
+    "total_registered_adapters": 70,
+    "batch_registered_adapters": 19,
+    "batch_missing_adapters": [
+      "oppus_open",
+      "fapemig_selection",
+      "fapes_selection",
+      "fapesq_selection",
+      "faped_selection",
+      "fapepi_selection",
+      "fapema_selection",
+      "fapece_selection",
+      "fapern_selection",
+      "fapeal_selection",
+      "facepe_selection",
+      "fundect_selection",
+      "fapemat_selection",
+      "fapdf_selection",
+      "fapt_selection",
+      "fapeam_selection",
+      "fapeap_selection",
+      "faperr_selection",
+      "fapero_selection",
+      "fapac_selection"
+    ]
+  },
+  "regression": {
+    "tests": 1082,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 32,
+    "passed": 1050
+  },
+  "postgres_tests": {
+    "tests": 89,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 89
+  },
+  "canonical_creation_sources": [
+    "legatus_open"
+  ],
+  "canonical_blocked_sources": [
+    "fade_selection",
+    "fapeg_selection",
+    "fapergs_selection",
+    "faperj_selection",
+    "fapesb_selection",
+    "fapese_selection",
+    "fapesp_selection",
+    "fapespa_selection",
+    "fapex_selection",
+    "fappr_selection",
+    "fatec_selection",
+    "funpec_selection",
+    "ieses_open",
+    "klc_open",
+    "verbena_selection"
+  ],
+  "production_enabled": false,
+  "input_reports": [
+    {
+      "file": "tenderproof-batch99-current-validation.json",
+      "sha256": "e7b3356b9c6fc0d23b11d785450e4f97bf4de3fc4c70ce23e2488e70862c65ad"
+    },
+    {
+      "file": "tenderproof-batch99-publication-live.json",
+      "sha256": "0cce4f240112121da17b5cc781af90772d6ca63365cdb651de83ae4db3800b44"
+    },
+    {
+      "file": "tenderproof-batch99-material-update.json",
+      "sha256": "03bb8f3508695b3727ae07d635d16f6a069c697636eda83caa1c7a420717a487"
+    },
+    {
+      "file": "tenderproof-batch99-post-review.json",
+      "sha256": "858c51f89261c32539cbcc60d7ea557b1915f5ccaff526db410cc05e88bd7e4d"
+    },
+    {
+      "file": "tenderproof-batch99-identity-review.json",
+      "sha256": "4c3a09d699c124b72dee8a2fbe39068bc4bd051b859fd70d8c14e0639ecfe496"
+    },
+    {
+      "file": "tenderproof-batch99-operations-review.json",
+      "sha256": "6c1ff748417cda365861f6d2c3d11607906db67e6b82c92939a8c4ebf805c56f"
+    },
+    {
+      "file": "tenderproof-batch99-final-review.json",
+      "sha256": "e5e0f77a41c1bf87df5a5a63577ddf93a3f41e2928cc5a68e07bfe4f14c08778"
+    },
+    {
+      "file": "tenderproof-batch99-continuous-replay13.json",
+      "sha256": "bb807df3a9b466bdd1dd4b5200d832a44951c6f43ffbff6a04d2fee6a6935474"
+    },
+    {
+      "file": "tenderproof-batch99-continuous-replay-sections.json",
+      "sha256": "65f7b16379b7c3be7d79ada8ff80604fdeb10ccdf070f7bdb0e40549e71315af"
+    },
+    {
+      "file": "tenderproof-batch99-continuous-replay-fapese.json",
+      "sha256": "6547285e96b73a9b6e9caf59d50d7ef6ab135aa1025b8d6e38a54ce5ff94d517"
+    },
+    {
+      "file": "tenderproof-batch99-recovery-validation13.json",
+      "sha256": "27f6bd4e376fdc2293bd6c8fb7cc9ce18a36882dcea660c0a66e1598148ce05a"
+    },
+    {
+      "file": "tenderproof-batch99-sections-recovery-validation.json",
+      "sha256": "e7d00431ea25f98db387d8c3eda2dc0bdf0c69d8c972cb14dfdaff8d73c42c16"
+    },
+    {
+      "file": "tenderproof-batch99-fapese-recovery-validation.json",
+      "sha256": "c04c2fbfea3ee4c4c7036363042cf40b0323f4186998bf4a5a203723b3ac87f9"
+    },
+    {
+      "file": "tenderproof-batch99-mixed-validation.json",
+      "sha256": "8a1521fb66c54764e89bfc9a656a8d45c530b290f11d1c47f876bd2a2645dc4d"
+    },
+    {
+      "file": "tenderproof-batch99-mixed-sections-validation.json",
+      "sha256": "c2c1bf4f9234a6a47a7cb0b0fd8eedd7ee12a6bae573e77a287c6644deb2918a"
+    },
+    {
+      "file": "tenderproof-batch99-mixed-fapese-validation.json",
+      "sha256": "d7760830416f07cc06e75fb54602595271afb77805ee3d2b66798a522f02ab4a"
+    }
+  ]
+}

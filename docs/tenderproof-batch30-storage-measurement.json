@@ -1,0 +1,121 @@
+{
+  "measured_at": "2026-09-08T13:21:50.501424+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-continuous-replay-verified-20260908",
+  "scope": "offline preserved replay volume only; sequential workload, not production concurrency benchmark",
+  "pdf_files": 32,
+  "pdf_storage_bytes": 32892498,
+  "unique_pdf_sha256": 16,
+  "unique_pdf_bytes": 16446249,
+  "total_volume_files": 103,
+  "total_volume_bytes": 74481910,
+  "snapshot_metrics": {
+    "measured_at": 1788873093.5895512,
+    "jobs_by_status": {
+      "succeeded": 64
+    },
+    "retry_attempts": 0,
+    "oldest_ready_delay_seconds": 0,
+    "completed_cycles_by_source": [
+      {
+        "source": "aguia_open",
+        "cycles": 2,
+        "mean_seconds": 2.8149417638778687,
+        "max_seconds": 2.81923770904541
+      },
+      {
+        "source": "consulpam_open",
+        "cycles": 2,
+        "mean_seconds": 2.8478585481643677,
+        "max_seconds": 2.878692388534546
+      },
+      {
+        "source": "cotec_open",
+        "cycles": 2,
+        "mean_seconds": 2.1408116817474365,
+        "max_seconds": 2.150618553161621
+      },
+      {
+        "source": "exame_open",
+        "cycles": 2,
+        "mean_seconds": 4.076305150985718,
+        "max_seconds": 4.143939971923828
+      },
+      {
+        "source": "fafipa_open",
+        "cycles": 2,
+        "mean_seconds": 3.7740139961242676,
+        "max_seconds": 3.7803797721862793
+      },
+      {
+        "source": "idcap_open",
+        "cycles": 2,
+        "mean_seconds": 3.476038098335266,
+        "max_seconds": 3.6145272254943848
+      },
+      {
+        "source": "institutomais_open",
+        "cycles": 2,
+        "mean_seconds": 2.430929183959961,
+        "max_seconds": 2.5316760540008545
+      },
+      {
+        "source": "objetiva_open",
+        "cycles": 2,
+        "mean_seconds": 2.7348554134368896,
+        "max_seconds": 2.834744453430176
+      },
+      {
+        "source": "omni_open",
+        "cycles": 2,
+        "mean_seconds": 3.61728835105896,
+        "max_seconds": 3.6321356296539307
+      },
+      {
+        "source": "publiconsult_open",
+        "cycles": 2,
+        "mean_seconds": 2.419098734855652,
+        "max_seconds": 2.427034616470337
+      },
+      {
+        "source": "quadrix_open",
+        "cycles": 2,
+        "mean_seconds": 2.7355268001556396,
+        "max_seconds": 2.806764841079712
+      },
+      {
+        "source": "reisesreis_open",
+        "cycles": 2,
+        "mean_seconds": 1.7747039794921875,
+        "max_seconds": 1.7949483394622803
+      },
+      {
+        "source": "sigma_open",
+        "cycles": 2,
+        "mean_seconds": 1.525299310684204,
+        "max_seconds": 1.5564780235290527
+      },
+      {
+        "source": "ufu_selection",
+        "cycles": 2,
+        "mean_seconds": 3.105501651763916,
+        "max_seconds": 3.1256823539733887
+      },
+      {
+        "source": "uniselva_selection",
+        "cycles": 2,
+        "mean_seconds": 1.183687686920166,
+        "max_seconds": 1.286785364151001
+      },
+      {
+        "source": "w2_open",
+        "cycles": 2,
+        "mean_seconds": 2.6225674152374268,
+        "max_seconds": 2.7597386837005615
+      }
+    ],
+    "snapshot_pages": 64,
+    "snapshot_html_bytes": 3295072,
+    "unconfirmed_browser_attempts": 0,
+    "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+  }
+}

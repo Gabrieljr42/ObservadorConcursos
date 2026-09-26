@@ -1,0 +1,19 @@
+{
+  "schema":"t012.cpcon_open.reviewed-run-receipt.v1",
+  "source":"cpcon_open",
+  "source_number":35,
+  "selection":"PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+  "external_id":"processo-seletivo-simplificado-no-002-2026",
+  "concurso_id":34,
+  "catalog_nonduplication":{"snapshot":"docs/execucao/evidencias/T012/auth-catalog-snapshot-20260913.json","catalog_contests":33,"cpcon_present":false,"reserved_target":34},
+  "detail":{"path":"backend/tests/fixtures/tenderproof_batch60_extended/cpcon_open-cycle1-detail-3c4741f17e.html","sha256":"edee6780992619ec6a10acad656ae0d5e483beb65e76f555046ed8ba421a2633","byte_len":80762,"observed_at":"2026-09-08T14:28:22.194473Z"},
+  "artifact":{"artifact_id":"art-46d2f9fe5e","path":"docs/execucao/evidencias/T012/cpcon_open/processo-seletivo-002-2026.pdf","sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":"13/13"},
+  "envelope":"cpcon-002-reviewed-run.json",
+  "envelope_sha256":"7846bf833e61141057f4d3bf7e30174fc259bc5e317dd7d24b4113c704063091",
+  "run_id":"tp-reviewed-54c08336f287a1cdef3f0c86df3075f5",
+  "checked_fields":["titulo","orgao","edital_numero","cargos"],
+  "cargo_count":6,
+  "omitted_unknown":["taxa_inscricao","prova_data"],
+  "validation":{"reviewed_run_model":"pass","import_dry_run":"validated","source_adapter":"CPCONAdapter identity/document contract pass on preserved detail","network":false,"db":false,"proposal":false,"apply":false},
+  "gate":"BLOCKED_EVIDENCE_VERBATIM; drafts are preserved but integrator must not import/propose until exact parser snippets are regenerated and dry-run passes"
+}

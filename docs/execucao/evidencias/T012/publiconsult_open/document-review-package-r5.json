@@ -1,0 +1,36 @@
+{
+  "schema": "t012.publiconsult.document-review-package.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "document": {
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+    "kind": "outro",
+    "semantic_kind": "convocacao_taf",
+    "expected_page_count": 6
+  },
+  "artifact": {
+    "artifact_id": "publiconsult-open-taf-681-r2",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "content_type": "application/pdf",
+    "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf",
+    "preserved_source": "docs/execucao/evidencias/T012/publiconsult_open/document-taf-681.pdf"
+  },
+  "operation": "save_artifact_file/commit_run_artifact in an owner-1 ephemeral store; no shared/live write",
+  "prepare_payload": "document title, URL and kind above; artifact basename above; owner/run bound",
+  "expected": {
+    "GET_current_before": null,
+    "GET_current_after_prepare": "one unapproved case for owner 1/run bea209…",
+    "foreign_owner": 404,
+    "incompatible_existing_case": 409,
+    "blob_missing": 409,
+    "blob_registered": "passes artifact matcher and continues page/identity validation"
+  },
+  "guards": ["exact pending document identity", "exact URL/host", "SHA/bytes/pages", "kind=outro", "no overwrite of incompatible case"],
+  "pilot_or_live": false
+}

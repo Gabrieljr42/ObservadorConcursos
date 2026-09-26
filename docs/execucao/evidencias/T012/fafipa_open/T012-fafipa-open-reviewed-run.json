@@ -1,0 +1,31 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "fafipa_open",
+  "concurso_id": 4208,
+  "external_id": "4208",
+  "title": "Concurso Público do Município de Mirador - PR",
+  "detail_url": "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+  "artifact": {
+    "artifact_id": "fafipa_open-cycle1-detail-ee88ccd5ee",
+    "sha256": "a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c",
+    "byte_len": 33162,
+    "url_requested": "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+    "url_final": "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+    "content_type": "text/html; charset=UTF-8",
+    "downloaded_at": "2026-09-13T00:00:00Z",
+    "content_path": "backend/tests/fixtures/tenderproof_batch30_shared/fafipa_open-cycle1-detail-ee88ccd5ee.html"
+  },
+  "fields": [
+     {"field_name":"titulo","value":"Concurso Público do Município de Mirador - PR","evidence":[{"evidence_id":"ev-fafipa-4208-title","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Concurso Público do Município de Mirador - PR","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"orgao","value":"Município de Mirador - PR","evidence":[{"evidence_id":"ev-fafipa-4208-orgao","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Município de Mirador, Estado do Paraná","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"edital_numero","value":"001/2026","evidence":[{"evidence_id":"ev-fafipa-4208-edital","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Edital: 001/2026 de 27/08/2026","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"inscricao_inicio","value":"2026-09-02","evidence":[{"evidence_id":"ev-fafipa-4208-insc-start","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Inscrições de 02/09/2026 a 07/10/2026","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"inscricao_fim","value":"2026-10-07","evidence":[{"evidence_id":"ev-fafipa-4208-insc-end","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Inscrições de 02/09/2026 a 07/10/2026","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"prova_data","value":"2026-11-01","evidence":[{"evidence_id":"ev-fafipa-4208-prova","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Aplicação da prova objetiva | discursiva: 01/11/2026","method":"observed_html","method_version":"t012-v1"}]},
+     {"field_name":"cargos","value":[{"nome":"Auxiliar Administrativo","vagas":4},{"nome":"Auxiliar de Clínica Dentária","vagas":"cadastro_reserva"},{"nome":"Farmacêutico","vagas":1},{"nome":"Fisioterapeuta","vagas":1},{"nome":"Médico Clínico Geral","vagas":1},{"nome":"Motorista","vagas":7},{"nome":"Operador de Máquinas Rodoviárias","vagas":1},{"nome":"Professor (20h)","vagas":4},{"nome":"Professor (40h)","vagas":5},{"nome":"Professor de Educação Física","vagas":2},{"nome":"Técnico em Eletrotécnica","vagas":1},{"nome":"Técnico em Enfermagem","vagas":"cadastro_reserva"},{"nome":"Técnico em Higiene Dental","vagas":"cadastro_reserva"},{"nome":"Vigia","vagas":"cadastro_reserva"}],"evidence":[{"evidence_id":"ev-fafipa-4208-cargos","artifact_id":"fafipa_open-cycle1-detail-ee88ccd5ee","document_sha256":"a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c","source_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/","snippet":"Vagas Auxiliar Administrativo 4; Farmacêutico 1; Motorista 7; Professor (40h) 5; Vigia Cadastro de Reserva","method":"observed_html","method_version":"t012-v1"}]}
+  ],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-13T00:00:00Z"
+}

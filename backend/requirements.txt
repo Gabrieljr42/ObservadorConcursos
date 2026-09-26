@@ -10,5 +10,9 @@ httpx==0.28.1
 beautifulsoup4==4.13.3
 lxml==5.3.1
 playwright==1.58.0
+# TenderProof (fases 0–3): sessões remotas com recording. Traz patchright 1.62.x
+# como cliente do wire protocol (exigência do pool Solari para wsEndpoint).
+solari-browser==0.1.3
 
-pypdf>=5.0.0,<7.0.0
+# TenderProof zipapp determinístico: mesmo parser no worker local/remoto.
+pypdf==6.16.2

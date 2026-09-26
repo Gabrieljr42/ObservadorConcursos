@@ -1,0 +1,54 @@
+{
+  "schema": "t011.independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "DEVOLVIDO",
+  "read_only": true,
+  "mutations": [],
+  "evidence_files": [
+    "docs/execucao/evidencias/T011/ID17-parser-luna-20260912.json",
+    "docs/execucao/evidencias/T011/ID17-payload-local.json",
+    "docs/execucao/evidencias/T011/ID17-contemax.md",
+    "docs/execucao/evidencias/T011/ID17-sha.txt"
+  ],
+  "artifact": {
+    "source": "contemax_open",
+    "external_id": "17",
+    "identity_claimed": "PREFEITURA MUNICIPAL DE CUBATI-PB; edital 001/2024; Contemax",
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "sha256_claimed": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "runtime_path_only": "/var/lib/observador/tenderproof/artifacts/art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f.pdf",
+    "primary_bytes_available_locally": false,
+    "sha_and_identity_independently_recomputed": false,
+    "reference_only": true
+  },
+  "static_checks": {
+    "cargo_count": 27,
+    "vagas_sum_from_payload": 79,
+    "cargo_object_keys": ["codigo", "nome", "vagas", "carga_horaria", "escolaridade", "salario"],
+    "per_cargo_ac_pcd_cr_present": false,
+    "aggregate_claimed": {"ampla_concorrencia": 75, "pcd": 5},
+    "aggregate_arithmetic_sum": 80,
+    "aggregate_vs_total_discrepancy": 1,
+    "replacement_character_count_local_payload": 0
+  },
+  "semantic_review": {
+    "remuneration": "payload claims R$ 1.412,00 for most and R$ 2.640,00 for ACS/ACE; temporal unit not specified",
+    "workload": "40h claimed",
+    "requirements": "cargo-level schooling/CNH/registration claimed, but not independently re-read from primary bytes",
+    "fees_and_exam_dates": "claimed in preserved derived evidence; not promoted in reviewed envelope",
+    "quotas_and_reserve": "cannot audit AC/PcD/CR by cargo; no quota or cadastro-reserva keys and no literal per-row primary snippets",
+    "fail_closed_drift_ufffd": "guards are claimed by fixture tests, but primary artifact unavailable for independent rerun",
+    "reviewed_run_owner_receipt_preflight": "owner=1 and preflight claims are present in derived fixture; canonical persisted ReviewedRun/receipt cannot be independently validated from local primary artifact",
+    "dry_run_isolated_create_proposal": "claimed validated_offline/isolated_test_only with writes=false, network=false, pilot_touched=false; not sufficient to authorize import/proposal",
+    "baseline_diff_and_pilot_absence": "no independent read-only pilot/API proof supplied locally; do not infer absence or authorize proposal"
+  },
+  "blocking_corrections": [
+    "Preserve the actual PDF bytes locally (or provide a read-only accessible artifact) and record byte_len plus recomputed SHA-256/pages.",
+    "Re-run the pinned parser against those bytes and retain literal per-row page/snippet evidence for all 27 cargos.",
+    "Resolve the source contradiction 79 total versus AC 75 + PcD 5 = 80; do not infer overlap, quotas, or CR.",
+    "Add auditable per-cargo AC/PcD/CR fields or explicitly prove the source has no such breakdown before producing owner-1 ReviewedRun/receipt and proposal preflight."
+  ],
+  "authorization": "No import, proposal creation, approval, apply, or UI/quadro action authorized."
+}

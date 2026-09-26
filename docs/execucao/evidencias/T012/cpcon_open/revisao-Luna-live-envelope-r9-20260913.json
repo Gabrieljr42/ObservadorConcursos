@@ -1,0 +1,24 @@
+{
+  "schema": "t012.cpcon_open.luna-envelope-r9-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "scope": "offline schema/import/round-trip review; no live or mutation",
+  "checks": {
+    "owner_source_external": "PASS: owner 1, source_id 35/cpcon_open, external process 002/2026.",
+    "target": "PASS: concurso_id=null and no run_id field or synthetic target in the envelope.",
+    "artifact": "PASS: local content_path exists; SHA 6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05, 498894 bytes, 13 pages and official URL match.",
+    "fields": "PASS: exactly titulo, orgao, edital_numero and cargos; cargo list/evidence count 6.",
+    "schema_and_import": "PASS: ReviewedRun validation and isolated import/replay work; first import imported and second replay was idempotent.",
+    "negative_sha": "PASS: altered SHA rejected.",
+    "owner_replay": "PASS: owner 2 derives a distinct run ID and cannot take over owner 1.",
+    "run_id_binding": "FAIL: receipt/handoff claims tp-reviewed-07cdb2ac5f0e960d05dc6a5b300fd7db, but the current importer derives tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76 from the exact R9 envelope.",
+    "old_proposal": "R6 proposal remains blocked and must not be approved; reject/retire it only after a corrected R9 preflight and matching proposal/run handoff."
+  },
+  "tests": {
+    "offline_probe": "R9 schema/import/replay/owner/negative checks run; all behavioral checks passed except receipt run-id equality.",
+    "compile_or_live": "No live/API/Docker operation performed."
+  },
+  "required_fix": "Regenerate the R9 receipt/handoff and any proposal reference using the current importer-derived run ID, or restore the exact derivation inputs; then rerun preflight and verify proposal.run_id equality before live import/proposal.",
+  "mutations_performed": false
+}

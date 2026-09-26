@@ -1,0 +1,287 @@
+{
+  "observed_at": "2026-09-08T15:35:20.208746+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99fepese",
+  "cycles": [
+    {
+      "source": "fepese_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-027f5a4c3395",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fepese.org.br/concursos/",
+          "file": "fepese_open-cycle1-listing-c5522a260c.html",
+          "sha256": "2e4395c704f7c66b4af3483578deefed06281a578a1eecead84b9afbba6da54b",
+          "bytes": 51261,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:35:21.463278+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-791d80be39a2",
+          "candidate": {
+            "candidate_id": "fepese_open-2026pseducasj",
+            "title_observed": "2026 - Prefeitura Municipal de São José",
+            "detail_url_observed": "https://2026pseducasj.fepese.org.br",
+            "external_id": "2026pseducasj",
+            "observed_at": "2026-09-08T15:35:21.584765Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026pseducasj.fepese.org.br",
+              "file": "fepese_open-cycle1-detail-8a76db770d.html",
+              "sha256": "24b14db08632addce7d6a230584d5deaa0dd58ba7ed8047d2df7b0ddb9bbafc2",
+              "bytes": 16462,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:22.201094+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-8c161282994a",
+          "candidate": {
+            "candidate_id": "fepese_open-2026seletivocomcap",
+            "title_observed": "2026 - Prefeitura Municipal de Florianópolis - Autarquia de Melhoramentos da Capital (COMCAP)",
+            "detail_url_observed": "https://2026seletivocomcap.fepese.org.br",
+            "external_id": "2026seletivocomcap",
+            "observed_at": "2026-09-08T15:35:21.584765Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026seletivocomcap.fepese.org.br",
+              "file": "fepese_open-cycle1-detail-37aa880ae8.html",
+              "sha256": "74bbbb71d038b732cdc113192b4781828485daa3051ab461171dd03b75f0d4e5",
+              "bytes": 16883,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:22.734813+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-a08167491058",
+          "candidate": {
+            "candidate_id": "fepese_open-2026cpcelesc",
+            "title_observed": "2026 - Celesc Distribuição S.A",
+            "detail_url_observed": "https://2026cpcelesc.fepese.org.br",
+            "external_id": "2026cpcelesc",
+            "observed_at": "2026-09-08T15:35:21.584765Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026cpcelesc.fepese.org.br",
+              "file": "fepese_open-cycle1-detail-8b2728bdb0.html",
+              "sha256": "e20051f59c476bc5242bfc078635d194c9639723f71409bba75df3f160bbab7e",
+              "bytes": 17456,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:23.242895+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.078
+    },
+    {
+      "source": "fepese_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-61aa3b181758",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fepese.org.br/concursos/",
+          "file": "fepese_open-cycle2-listing-c5522a260c.html",
+          "sha256": "2e4395c704f7c66b4af3483578deefed06281a578a1eecead84b9afbba6da54b",
+          "bytes": 51261,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:35:24.409023+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-10b900359038",
+          "candidate": {
+            "candidate_id": "fepese_open-2026pseducasj",
+            "title_observed": "2026 - Prefeitura Municipal de São José",
+            "detail_url_observed": "https://2026pseducasj.fepese.org.br",
+            "external_id": "2026pseducasj",
+            "observed_at": "2026-09-08T15:35:24.500819Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026pseducasj.fepese.org.br",
+              "file": "fepese_open-cycle2-detail-8a76db770d.html",
+              "sha256": "24b14db08632addce7d6a230584d5deaa0dd58ba7ed8047d2df7b0ddb9bbafc2",
+              "bytes": 16462,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:25.033145+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-a15a0f7bbe50",
+          "candidate": {
+            "candidate_id": "fepese_open-2026seletivocomcap",
+            "title_observed": "2026 - Prefeitura Municipal de Florianópolis - Autarquia de Melhoramentos da Capital (COMCAP)",
+            "detail_url_observed": "https://2026seletivocomcap.fepese.org.br",
+            "external_id": "2026seletivocomcap",
+            "observed_at": "2026-09-08T15:35:24.500819Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026seletivocomcap.fepese.org.br",
+              "file": "fepese_open-cycle2-detail-37aa880ae8.html",
+              "sha256": "74bbbb71d038b732cdc113192b4781828485daa3051ab461171dd03b75f0d4e5",
+              "bytes": 16883,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:25.561930+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-5e68077e8ec0",
+          "candidate": {
+            "candidate_id": "fepese_open-2026cpcelesc",
+            "title_observed": "2026 - Celesc Distribuição S.A",
+            "detail_url_observed": "https://2026cpcelesc.fepese.org.br",
+            "external_id": "2026cpcelesc",
+            "observed_at": "2026-09-08T15:35:24.500819Z",
+            "source": "fepese_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://2026cpcelesc.fepese.org.br",
+              "file": "fepese_open-cycle2-detail-8b2728bdb0.html",
+              "sha256": "e20051f59c476bc5242bfc078635d194c9639723f71409bba75df3f160bbab7e",
+              "bytes": 17456,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:35:26.106617+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.859
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 8,
+    "all_clients_closed": true
+  }
+}

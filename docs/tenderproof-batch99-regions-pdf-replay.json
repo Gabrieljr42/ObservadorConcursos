@@ -1,0 +1,180 @@
+{
+  "observed_at": "2026-09-08T15:11:34.996161+00:00",
+  "scope": "Two OFFLINE cycles, exact preserved official bytes, no new HTTP, no byte repair",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99regions-pdf-replay",
+  "cycles": [
+    {
+      "source": "fapesc_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-e705fb566e01",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesc.fepese.org.br/",
+          "file": "fapesc_selection-cycle1-listing-d62ecbcf5c.html",
+          "sha256": "53efcfac6400ab9d7543cd1e74a452ead84e1b268d975fdaa2b8d02c6701cbeb",
+          "bytes": 15415,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:11:35.370289+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f8c6336ebb49",
+          "candidate": {
+            "candidate_id": "fapesc_selection-1",
+            "title_observed": "2022 - FAPESC",
+            "detail_url_observed": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+            "external_id": "1",
+            "observed_at": "2026-09-08T15:11:35.438984Z",
+            "source": "fapesc_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: invalid_document",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+              "file": "fapesc_selection-cycle1-detail-f69bd3ca40.html",
+              "sha256": "c487a549fc44148d0a2811b1f0580cd5da1778a7a0ea3f210a3651fe4648bdf5",
+              "bytes": 3571,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:11:35.746868+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesc_selection-doc-2826d9816562f628",
+            "title": "Edital 001/2022",
+            "url_requested": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "url_final": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2022' por conter 'edital' no título/URL; 2 documento(s) ignorado(s) (ex.: Termo Aditivo nº 2; Termo Aditivo nº 1)."
+          },
+          "artifact": {
+            "artifact_id": "art-40c0003a06",
+            "sha256": "92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae",
+            "byte_len": 715217,
+            "url_requested": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "url_final": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:11:35.759913Z",
+            "storage_path": "art-40c0003a06-92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 1.188
+    },
+    {
+      "source": "fapesc_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-1f0e96fbdddd",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesc.fepese.org.br/",
+          "file": "fapesc_selection-cycle2-listing-d62ecbcf5c.html",
+          "sha256": "53efcfac6400ab9d7543cd1e74a452ead84e1b268d975fdaa2b8d02c6701cbeb",
+          "bytes": 15415,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:11:36.458473+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-89d17f42f374",
+          "candidate": {
+            "candidate_id": "fapesc_selection-1",
+            "title_observed": "2022 - FAPESC",
+            "detail_url_observed": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+            "external_id": "1",
+            "observed_at": "2026-09-08T15:11:36.510568Z",
+            "source": "fapesc_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: invalid_document",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+              "file": "fapesc_selection-cycle2-detail-f69bd3ca40.html",
+              "sha256": "c487a549fc44148d0a2811b1f0580cd5da1778a7a0ea3f210a3651fe4648bdf5",
+              "bytes": 3571,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:11:36.812205+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesc_selection-doc-2826d9816562f628",
+            "title": "Edital 001/2022",
+            "url_requested": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "url_final": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2022' por conter 'edital' no título/URL; 2 documento(s) ignorado(s) (ex.: Termo Aditivo nº 2; Termo Aditivo nº 1)."
+          },
+          "artifact": {
+            "artifact_id": "art-b58a4e59db",
+            "sha256": "92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae",
+            "byte_len": 715217,
+            "url_requested": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "url_final": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:11:36.824205Z",
+            "storage_path": "art-b58a4e59db-92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 1.0
+    }
+  ],
+  "network_requests": 0,
+  "magic_header_policy": "At most16 ASCII space/tab/CR/LF bytes; downstream PDF parser required",
+  "driver_cleanup": {
+    "instances": 4,
+    "all_clients_closed": true
+  },
+  "passed": false
+}

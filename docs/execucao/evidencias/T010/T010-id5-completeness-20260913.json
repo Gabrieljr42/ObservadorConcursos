@@ -1,0 +1,8 @@
+{
+  "schema":"t010.id5.cargo-completeness.v1","record_id":5,"artifact_sha256":"9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32","pages_total":31,
+  "method":"extract_pages_isolated + pinned structural assertions + visual p1 confirmation",
+  "p1":{"cargo_row_marker":"Analista de Atividades da Secretaria -","match_count":3,"rows":["Analista de Atividades da Secretaria - Analista de Sistemas","Analista de Atividades da Secretaria - Consultor Jurídico","Analista de Atividades da Secretaria - Contador"],"table_terminator_snippets":["I - DAS VAGAS","NOTAS EXPLICATIVAS:","1.1.1 As ausências de vagas destinadas às ações afirmativas","1.1.2 Os ocupantes dos cargos farão jus aos seguintes benefícios"],"interpretation":"three and only three cargo rows precede the notes/1.1.1/1.1.2 terminator"},
+  "p2":{"opening_snippet":"1.2 O Regime Jurídico Funcional","cargo_row_marker_count":0,"interpretation":"page 2 starts the next numbered section; no table continuation or extra cargo row"},
+  "fail_closed":["reject unless p1 marker count is exactly 3","reject if p1 notes/1.1.1/1.1.2 terminator is absent","reject unless p2 starts 1.2 and contains no cargo row marker","reject if page 1 or 2 is missing/truncated"],
+  "status":"COMPLETENESS_PROVED"
+}

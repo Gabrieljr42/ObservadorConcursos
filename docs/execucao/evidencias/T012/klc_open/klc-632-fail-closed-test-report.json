@@ -1,0 +1,16 @@
+{
+  "status": "KLC_REVIEW_R2",
+  "checks": [
+    "KLCAdapter reconhece listing/detail e external_id 632",
+    "document_url oficial aceita pelo adapter",
+    "artefato local SHA-256 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4, 348300 bytes, 10 páginas",
+    "todos os snippets promovidos não contêm U+FFFD",
+    "ReviewedRun candidato rejeitado fail-closed porque concurso_id canônico é nulo",
+    "source_number=57 preservado somente como proveniência, nunca como concurso_id",
+    "evidência literal individual anexada para nome, remuneração, jornada, requisito, taxa e benefício",
+    "CR publicado apenas como cadastro_reserva=true; campo vagas_imediatas removido por não ser literal",
+    "prova_data não promovida por ausência de literalidade na camada isolada"
+  ],
+  "scope": "offline; sem rede, SQL, piloto, import persistente, proposta ou deploy",
+  "next_minimum_step": "alocar ID canônico de catálogo para source klc_open/external_id 632 pela rota normal; então repetir ReviewedRun dry-run"
+}

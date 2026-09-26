@@ -1,0 +1,41 @@
+{
+  "observed_date": "2026-09-08",
+  "scope": "official captured listing/detail contracts; not full coverage or availability homologation",
+  "tests_passed": 12,
+  "sources": [
+    {
+      "source_ids": [
+        "consulplan_open",
+        "institutoconsulplan_open"
+      ],
+      "listing_url": "https://institutoconsulplan.org.br/Concursos",
+      "sample_detail": "https://institutoconsulplan.org.br/unai2026",
+      "sample_document_directory": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/",
+      "identity": "Exact slug URL and canonical link; restricted contest heading; numeric header logo ID must equal every document directory ID; PDF bytes still require title corroboration.",
+      "aliases": "Both source IDs retained. Same official URL/slug has separate source candidate IDs; no textual-similarity fusion.",
+      "scope_filter": "Observed PASES/vestibular/serial student admissions excluded; medicine or ingresso words alone do not exclude personnel contests.",
+      "limitations": "Only visible captured listing and observed document namespace. No inferred historical pagination or exhaustive source coverage. Header logo absence/mismatch blocks until reviewed.",
+      "observed_blocker": "cidennf2026 header logo contains literal CodConcurso, not numericID; document directory1331 cannot be corroborated by configured header contract; explicitly blocked rather than guessed."
+    },
+    {
+      "source_ids": [
+        "zambini_open"
+      ],
+      "listing_url": "https://www.zambini.org.br/portal/concursos",
+      "archive_url": "https://www.zambini.org.br/portal/concursos/encerrados",
+      "sample_detail": "https://www.zambini.org.br/portal/concursos/ver/1966",
+      "default_empty": "No momento não temos nenhum concurso em andamento.",
+      "identity": "Observed numeric detail route and contest section heading; random document filename has no contest ID, so manifest origin plus PDF byte/title verification are necessary.",
+      "limitations": "Empty marker applies to current tab only. Archive is explicit observed scope, not evidence of currently open contests.161 visible archive candidates; acquisition remains bounded."
+    }
+  ],
+  "fixture_location": "backend/tests/fixtures/tenderproof_batch60_own",
+  "metadata": [
+    "observed-details.json",
+    "sample-details-manifest.json"
+  ],
+  "live_command": ".venv/Scripts/python.exe scripts/batch60_catalogue_live.py --archive-zambini",
+  "live_status": "two bounded cycles per source completed/valid for unai2026 under both retained aliases and archive1966 Zambini; no production writes",
+  "production_enabled": false,
+  "live_report": "tenderproof-batch60-catalogue-live.json"
+}

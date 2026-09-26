@@ -1,0 +1,19 @@
+{
+  "receipt_schema": "tenderproof.reviewed-receipt.v1",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "identity": {
+    "title": "Concurso Público do Município de Mirador - PR",
+    "detail_url": "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+    "artifact_id": "fafipa_open-cycle1-detail-ee88ccd5ee",
+    "sha256": "a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c",
+    "byte_len": 33162
+  },
+  "run_id": "tp-reviewed-80178cee43defc8dae09b4918c3ee547",
+  "envelope_sha256": "ab717e6c937b99d14c7dda72b1128d495f1cab999bb864de550d7556c37cb9bf",
+  "preflight": {"sha256": true, "byte_len": true, "utf8_no_replacement": true, "identity": true},
+  "duplicate_check": {"source_external_id_unique_in_preserved_candidate": true, "same_detail_url_replay_only": true},
+  "reference_only": true,
+  "not_applied": true,
+  "review": "independent review required before any catalogue proposal"
+}

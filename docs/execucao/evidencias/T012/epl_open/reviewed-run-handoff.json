@@ -1,0 +1,69 @@
+{
+  "schema": "t012.reviewed-run-handoff.v1",
+  "state": "REVIEWED_RUN_READY_FOR_ALLOCATION",
+  "source": {
+    "source_id": "epl_open",
+    "source_number": 21,
+    "adapter": "EPLAdapter",
+    "identity_confirmed": true
+  },
+  "reviewed_candidate": {
+    "external_id": "52",
+    "title": "Fundação Hospitalar Santa Terezinha de Erechim",
+    "selection_type": "Concurso Público nº 01/2023",
+    "detail_url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+    "opening_notice_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf"
+  },
+  "reviewed_run": {
+    "schema": "tenderproof.reviewed-run.v1",
+    "source": "epl_open",
+    "concurso_id": null,
+    "external_id": "52",
+    "title": "Fundação Hospitalar Santa Terezinha de Erechim",
+    "detail_url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+    "artifact": {
+      "artifact_id": "art-8c5dbef058",
+      "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+      "byte_len": 784614,
+      "content_path": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+      "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+      "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+      "content_type": "application/pdf",
+      "downloaded_at": "2026-09-08T14:13:22.563992Z"
+    },
+    "fields": [
+      {"field_name": "titulo", "value": "Fundação Hospitalar Santa Terezinha de Erechim", "evidence": [{"page_number": 1, "snippet": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM - Concurso Público N° 01/2023", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "orgao", "value": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)", "evidence": [{"page_number": 1, "snippet": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "edital_numero", "value": "01/2023", "evidence": [{"page_number": 1, "snippet": "Concurso Público N° 01/2023", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "regime", "value": "celetista", "evidence": [{"page_number": 1, "snippet": "regime celetista", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "prova", "value": "prova escrita objetiva", "evidence": [{"page_number": 1, "snippet": "prova escrita objetiva", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "cargos", "value": [{"nome": "Auxiliar de Serviços Gerais", "vagas": 5, "pcd": 0, "carga_horaria_mensal": 200, "remuneracao": "R$ 1.621,05"}, {"nome": "Técnico de Enfermagem", "vagas": 9, "pcd": 1, "carga_horaria_mensal": 200, "remuneracao": "R$ 2.377,90"}, {"nome": "Auxiliar de Copa e Cozinha", "vagas": 5, "pcd": 0, "carga_horaria_mensal": 200, "remuneracao": "R$ 1.621,05"}, {"nome": "Farmacêutico Bioquímico", "vagas": 2, "pcd": 0, "carga_horaria_mensal": 180, "remuneracao": "R$ 4.982,20"}], "evidence": [{"page_number": 1, "snippet": "Auxiliar de Serviços Gerais 5 0 ... 200 R$ 1.621,05; Técnico de Enfermagem 9 1 ... 200 R$ 2.377,90", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}, {"page_number": 2, "snippet": "Auxiliar de Copa e Cozinha 5 0 ... 200 R$ 1.621,05", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}, {"page_number": 3, "snippet": "Farmacêutico Bioquímico 2 0 ... 180 R$ 4.982,20", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]},
+      {"field_name": "taxa_por_escolaridade", "value": ["R$ 120,00 para ensino superior", "R$ 70,00 para ensino médio/técnico", "R$ 50,00 para ensino fundamental"], "evidence": [{"page_number": 3, "snippet": "R$120 superior; R$70 médio/técnico; R$50 fundamental", "artifact_id": "art-8c5dbef058", "source_url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf", "method": "deterministic-pdf-text", "method_version": "epl-reviewed-2026/1"}]}
+    ],
+    "pending_fields": [],
+    "reference_only": true,
+    "owner_user_id": 1,
+    "observed_at": "2026-09-08T14:13:22.563992Z"
+  },
+  "target_contract": {
+    "reviewed_envelope_schema": "tenderproof.reviewed-run.v1",
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "reference_only": true,
+    "apply": false,
+    "allocation_required_before_model_validation": true
+  },
+  "handoff": {
+    "next_step": "allocate canonical source and concurso IDs, then validate this exact reviewed-run body with ReviewedRun and import_reviewed_run(dry_run=true)",
+    "content_receipt": "content-receipt.json",
+    "required_before_import": ["allocate canonical target without using source_number as concurso_id", "revalidate fields and snippets", "run dry-run then normal proposal gate"],
+    "fail_closed_reasons": ["ReviewedRun schema requires concurso_id > 0", "reference_only=false is rejected by importer", "no authorization for catalogue mutation"]
+  },
+  "provenance": {
+    "preserved_runs": ["tpr-9e2c3d45a3e8", "tpr-1fc2120d6f06"],
+    "listing_fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-listing-dc7d20e042.html",
+    "detail_fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-detail-2e60516108.html",
+    "network_used": false,
+    "catalogue_mutated": false
+  }
+}

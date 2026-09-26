@@ -1,0 +1,38 @@
+{
+  "schema": "t010.id8.post-apply-prova-date-audit.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only",
+  "decision": "BLOQUEIA_CORRECAO_SEM_NOVA_PROPOSTA",
+  "proposal": {
+    "id": "tpp-9f545731df8ae21c456385bd3f1d9d4b",
+    "state": "applied",
+    "version_id": 87,
+    "approved_fields": ["cargos"],
+    "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e"
+  },
+  "diagnosis": {
+    "api_prova_data": null,
+    "documented_prova_data": "2026-12-06",
+    "source_evidence": "PDF preservado p.68; receipt canonical_extractor.proof_date",
+    "envelope_fields": ["cargos"],
+    "cargo_contains_prova_data": false,
+    "proposal_eligible_fields": ["cargos"],
+    "cause": "A data foi reproduzida pelo extrator canônico/receipt, mas nunca entrou como campo top-level do ReviewedRun; não foi um bloqueio de policy. Como o envelope/proposta só carregava cargos, o apply não tinha prova_data para alterar.",
+    "historical_422_irrelevant": true
+  },
+  "version87_integrity": {
+    "api_get": "cargo único íntegro; 9 imediatas (AC6/PcD1/PPP2), CR11, 40h, requisitos/CNH, remuneração variável sem base inventada, taxa 156.67",
+    "version_diff": "somente cargos",
+    "outbox_notification": "id87 delivered uma vez; notification id86 version_update_87",
+    "replay": "mesma versão 87, sem novos efeitos",
+    "health": 200,
+    "counts_after": {"proposals": 90, "versions": 87, "outbox": 87, "notifications": 86}
+  },
+  "acceptable_repair": {
+    "required": "Novo ReviewedRun/proposta imutável (ou novo campo elegível em envelope derivado, sem editar o antigo), com prova_data=2026-12-06, evidência verbatim p.68, SHA do mesmo PDF e diff exclusivamente prova_data.",
+    "forbidden": ["UPDATE manual no concurso", "alterar versão87", "reaplicar proposta antiga", "inferir data sem evidência"],
+    "gate": "GET/receipt/hash, proposta proposed, baseline prova_data null, diff somente prova_data; depois approve/apply único e revisão pós-apply"
+  },
+  "mutation": "none"
+}

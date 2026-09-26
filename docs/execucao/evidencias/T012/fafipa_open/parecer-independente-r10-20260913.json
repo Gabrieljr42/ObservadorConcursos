@@ -1,0 +1,22 @@
+{
+  "task": "T012",
+  "source": "fafipa_open",
+  "source_id": 69,
+  "external_id": "4208",
+  "envelope": "reviewed-envelope-ready-r9.json",
+  "receipt": "reviewed-envelope-ready-r10-receipt.json",
+  "decision": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "Revisão offline final; nenhuma operação live, importação, proposta, aprovação ou aplicação foi executada.",
+  "target": {"concurso_id": null, "owner_user_id": 1, "source_id": 69, "external_id": "4208"},
+  "independent_recalculation": {
+    "process_1": {"run_id": "tp-reviewed-fefe8924b68403d795a4d43b73e85e1c", "concurso_id": null, "owner_user_id": 1, "field_count": 7, "cargo_count": 14, "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f"},
+    "process_2": {"run_id": "tp-reviewed-fefe8924b68403d795a4d43b73e85e1c", "concurso_id": null, "owner_user_id": 1, "field_count": 7, "cargo_count": 14, "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f"},
+    "replay": "PASS_DETERMINISTIC",
+    "owner_zero": "REJECTED",
+    "byte_drift": "REJECTED"
+  },
+  "stale_run": {"run_id": "tp-reviewed-187a43fbfc355834ff54dbcb6adb4fc1", "status": "STALE_DO_NOT_REUSE"},
+  "contract_note": "O contrato atual ReviewedRun aceita concurso_id=null durante a validação; a alocação de concurso_id é uma pré-condição operacional do integrador antes da criação live, não motivo para rejeitar o envelope.",
+  "handoff": "Integrador pode alocar concurso_id pela rota normal e executar import/dry-run/proposta canônica. Não aprovar/aplicar neste pacote sem as gates live.",
+  "mutations": {"live": false, "import": false, "proposal": false, "approval": false, "apply": false, "sqlite": false}
+}

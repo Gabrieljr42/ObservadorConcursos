@@ -1,0 +1,189 @@
+{
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99fapese",
+  "observed_at": "2026-09-08T15:46:01.094914+00:00",
+  "scope": "two bounded samples, not full source coverage or publication",
+  "tls_verified": true,
+  "browser_sessions": 0,
+  "limits": {
+    "listing_pages_per_cycle": 1,
+    "detail_attempts_per_cycle": 3,
+    "html_bytes": 2097152,
+    "driver_deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60
+  },
+  "cycles": [
+    {
+      "source": "fapese_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-e1f98c894ac1",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapese.org.br/pronera/",
+          "file": "fapese_selection-cycle1-listing-07d5ffd1cf7f.html",
+          "sha256": "07d5ffd1cf7fb6b694c41a5ea537cd5c42ec538e73f857d8e4e525794d2b2129",
+          "bytes": 79325,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:46:02.736831+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-cdf554911a02",
+          "candidate": {
+            "candidate_id": "fapese_selection-9d05465375567c81",
+            "title_observed": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+            "detail_url_observed": "https://www.fapese.org.br/pronera/",
+            "external_id": "007/2026",
+            "observed_at": "2026-09-08T15:46:02.814086Z",
+            "source": "fapese_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapese.org.br/pronera/",
+              "file": "fapese_selection-cycle1-detail-197909cd7ff1.html",
+              "sha256": "197909cd7ff14196e0ec1315dc42c7932f041bc36d9217f2a6cd72e9235b7828",
+              "bytes": 79325,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:46:04.101094+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapese_selection-ba41bd81509626beda",
+            "title": "EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+            "url_requested": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "url_final": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA' por conter 'edital' no título/URL; 0 documento(s) ignorado(s).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-63d01bdc0b",
+            "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+            "byte_len": 345974,
+            "url_requested": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "url_final": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:46:04.299866Z",
+            "storage_path": "art-63d01bdc0b-c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b.pdf"
+          },
+          "total_pages": 17,
+          "processed_pages": 17,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=17/17",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.187
+    },
+    {
+      "source": "fapese_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-0de5d29ebb56",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapese.org.br/pronera/",
+          "file": "fapese_selection-cycle2-listing-ba82bdd033c2.html",
+          "sha256": "ba82bdd033c2a18862cef10d9023ead31450060f81bbd9677a9a52496d1a2b5a",
+          "bytes": 79325,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:46:06.619206+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0c24bbb074ec",
+          "candidate": {
+            "candidate_id": "fapese_selection-9d05465375567c81",
+            "title_observed": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+            "detail_url_observed": "https://www.fapese.org.br/pronera/",
+            "external_id": "007/2026",
+            "observed_at": "2026-09-08T15:46:06.672329Z",
+            "source": "fapese_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapese.org.br/pronera/",
+              "file": "fapese_selection-cycle2-detail-b9764c8e1986.html",
+              "sha256": "b9764c8e1986fd45c72cee793ee114565f689d45d31130f98515bebb9d2ecadb",
+              "bytes": 79325,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:46:07.974968+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapese_selection-ba41bd81509626beda",
+            "title": "EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+            "url_requested": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "url_final": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA' por conter 'edital' no título/URL; 0 documento(s) ignorado(s).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-f4abe77f3d",
+            "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+            "byte_len": 345974,
+            "url_requested": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "url_final": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:46:08.137525Z",
+            "storage_path": "art-f4abe77f3d-c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b.pdf"
+          },
+          "total_pages": 17,
+          "processed_pages": 17,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=17/17",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.719
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 4,
+    "all_clients_closed": true
+  }
+}

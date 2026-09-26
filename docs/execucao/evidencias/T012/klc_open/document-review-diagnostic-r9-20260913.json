@@ -1,0 +1,38 @@
+{
+  "schema": "t012.klc_open.document-review-diagnostic-r9.v1",
+  "recorded_at": "2026-09-13T17:12:58.3923401Z",
+  "scope": "read-only diagnosis; no POST/retry/approval/proposal/apply",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "operation": {
+    "endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "attempts_in_this_gate": 1,
+    "access_log_status": 409,
+    "access_log_result": "Conflict",
+    "response_body": null,
+    "body_availability": "API access log emits method/path/status only; no response detail or traceback was retained",
+    "post_state": {"pending": true, "documents": 1, "current_case": null},
+    "catalog_mutation": false
+  },
+  "log_evidence": {
+    "command": "docker logs --since 20m observador-pilot-api-1",
+    "api_lines": [
+      "POST /tenderproof/continuous/document-review/tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc/prepare-preserved HTTP/1.1 409 Conflict",
+      "GET /tenderproof/continuous/document-review/tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc/current HTTP/1.1 200 OK"
+    ],
+    "worker_correlated_detail": "none emitted"
+  },
+  "payload_validation": {
+    "source_file": "docs/execucao/evidencias/T012/klc_open/document-review-prepare-payload-r7.json",
+    "route_contract": "backend/app/tenderproof/continuous_router.py requires document, artifact and expected_page_count; authenticated operator route",
+    "document_identity": "Retificação 1 - Alteração da Data da Prova / exact official URL / kind retificacao",
+    "artifact": {"artifact_id": "art-klc-ret1-1887b316", "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60", "byte_len": 423600, "pages": 1, "content_type": "application/pdf"},
+    "decision": {"field": "prova_data", "old": "2026-05-10", "new": "2026-05-17"}
+  },
+  "wrapper_diagnosis": {
+    "fault": "PowerShell catch called GetResponseStream() on System.Net.Http.HttpResponseMessage, so status/body were discarded",
+    "safe_next_capture_pattern": "$response=$_.Exception.Response; $status=[int]$response.StatusCode; $body=$response.Content.ReadAsStringAsync().GetAwaiter().GetResult()",
+    "retry": false
+  },
+  "result": "KLC_R9_DIAGNOSTIC_HTTP409_BODY_UNAVAILABLE",
+  "next_gate": "Do not retry without fresh authorization; if authorized, use corrected response capture and preserve the exact payload."
+}

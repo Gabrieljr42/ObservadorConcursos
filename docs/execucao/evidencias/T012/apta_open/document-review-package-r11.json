@@ -1,0 +1,45 @@
+{
+  "schema": "t012.apta.document-review-package-r11.v1",
+  "status": "BLOCKED_MISSING_PRESERVED_BYTES",
+  "scope": "offline/read-only manifest preparation; no API, Docker, proposal, approval or apply",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "primary_artifact": {
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "role": "principal edital already accepted; not the pending document"
+  },
+  "pending_documents": [
+    {
+      "position": 1,
+      "kind": "retificacao",
+      "title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+      "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+      "sha256": null,
+      "byte_len": null,
+      "pages": null,
+      "artifact_id": null,
+      "relation": "observed by run document-review gate; same source 48/external 708, but bytes not preserved locally",
+      "decision": "NEEDS_HUMAN",
+      "reason": "Cannot classify retification effects or identity without exact preserved bytes/SHA/pages."
+    }
+  ],
+  "prepare_contract": {
+    "prepare": "not executed; API unavailable by scope",
+    "prepare_preserved": "not executed; no local preserved artifact",
+    "required_next_input": "Acquire exact URL bytes through normal authenticated document-review flow, store hash-addressed artifact, record SHA/byte_len/pages, then rerun independent review",
+    "do_not_retry_proposal": true
+  },
+  "identity": {
+    "title": "Câmara Municipal de Aragarças",
+    "orgao": "Câmara Municipal De Aragarças",
+    "edital_numero": "01/2026",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708"
+  },
+  "effects": {"catalog": false, "proposal": false, "version": false, "outbox": false, "notification": false}
+}

@@ -1,0 +1,10 @@
+{
+  "schema":"t012.derivation.v1",
+  "source":"cesgranrio_open",
+  "candidate_external_id":"27",
+  "derivation_a":{"fields":["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","taxa_inscricao","cargos"],"cargo_count":2,"profile_count":24},
+  "derivation_b":{"fields":["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","taxa_inscricao","cargos"],"cargo_count":2,"profile_count":24},
+  "replay_equal":true,
+  "rules":"only page-backed values; cadastro de reserva remains explicit; no prova_data or canonical id inferred",
+  "state":"CANONICAL_ALLOCATION_IMPORT_PROPOSAL"
+}

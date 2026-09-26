@@ -1,0 +1,44 @@
+{
+  "schema": "t012.fafipa.live-proposal-receipt-r11.v1",
+  "recorded_at": "2026-09-13T13:39:53.7529163-03:00",
+  "source_id": 69,
+  "external_id": "4208",
+  "source": "fafipa_open",
+  "owner_user_id": 1,
+  "catalog_preflight": {"health": 200, "contests": 35, "distinct_source_ids": 34, "source_external_present": false, "canonical_cargos": 188},
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/fafipa_open/reviewed-envelope-ready-r9.json",
+    "artifact_id": "fafipa-4208-edital",
+    "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "artifact_byte_len": 3630911,
+    "artifact_local_sha_match": true,
+    "fields_in_envelope": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "cargo_count_in_envelope": 14,
+    "reference_only": true,
+    "pending_fields": []
+  },
+  "dry_runs": [
+    {"path": "/tmp/fafipa-r11-a/fafipa.pdf", "status": "validated", "run_id": "tp-reviewed-74428350e1198b4564a90e480afe06cb"},
+    {"path": "/tmp/fafipa-r11-b/fafipa.pdf", "status": "validated", "run_id": "tp-reviewed-74428350e1198b4564a90e480afe06cb"}
+  ],
+  "import": {"status": "imported", "run_id": "tp-reviewed-74428350e1198b4564a90e480afe06cb", "owner": 1, "target": null},
+  "document_review": {"pending": false},
+  "proposal": {
+    "http": 201,
+    "id": "tpp-dca14c9c1fd86b46488e4934eeb876fb",
+    "state": "proposed",
+    "proposal_hash": "8f033404dc554c72fccdce203943ccf4476b7846265be59c14f3821aeb6b5c47",
+    "target": null,
+    "source_id": 69,
+    "external_id": "4208",
+    "eligible_fields_returned": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+    "proposed_cargo_count": 0
+  },
+  "counts": {
+    "before": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "proposals": 99, "versions": 93, "outbox": 93, "notifications": 92},
+    "after_expected_from_single_201": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "proposals": 100, "versions": 93, "outbox": 93, "notifications": 92}
+  },
+  "result": "FAFIPA_BLOCKED_ELIGIBLE_FIELDS_DRIFT",
+  "stop_rule": "Envelope has 7 fields/14 cargos but normal proposal returned 6 fields and zero cargos; no approve/apply/retry performed.",
+  "other_sources_touched": false
+}

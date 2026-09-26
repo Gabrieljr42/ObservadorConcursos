@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-09-12T22:12:04-03:00",
+  "operator": "Luna integrador",
+  "scope": "T008 OPFS/SQLite web bundle",
+  "action": "BuildWeb then docker compose up -d --no-deps --force-recreate web",
+  "constraints": [
+    "API, PostgreSQL, Redis, worker and scheduler were not restarted",
+    "volumes, OPFS, IndexedDB and application data were not cleared or changed"
+  ],
+  "build": {
+    "routes": 23,
+    "assets": [
+      {
+        "file": "_expo/static/js/web/entry-0e8eb5a3d9de407e60c4baff62f8ab78.js",
+        "sha256": "BA7C7308FDFD30A773B3586E57022425436274F815EE80A7F8FBD06322A6143B",
+        "bytes": 1994340
+      },
+      {
+        "file": "_expo/static/js/web/worker-7d5df0c0d1a18556afd6d35cf3040e51.js",
+        "sha256": "498D9A1F2ADBF6D6F97B304444FDF9AD1A09E1F84BC1845BAA971855BC15DE93",
+        "bytes": 138749
+      }
+    ]
+  },
+  "validation": {
+    "web_url": "http://127.0.0.1:13000/inicio",
+    "web_http": 200,
+    "api_health_http": 200,
+    "web_container": "observador-pilot-web-1",
+    "web_container_recreated": true,
+    "other_project_services": "running; not recreated"
+  },
+  "next_gate": "coordinator CUA validation on 127.0.0.1 and localhost, multiple tabs, and OPFS recovery"
+}

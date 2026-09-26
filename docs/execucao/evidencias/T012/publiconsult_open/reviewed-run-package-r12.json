@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult.reviewed-run-package-r12.v1",
+  "status": "READY_FOR_REVIEW",
+  "scope": "offline reviewed-run envelope/import dry-run only; no API, DB, Docker, proposal, approval or apply",
+  "reviewed_run": "reviewed-run-r12.json",
+  "identity": {"owner_user_id": 1, "source": "publiconsult_open", "source_id": 56, "external_id": "681", "concurso_id": null, "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H"},
+  "principal_document": {"role": "identity and three supported fields", "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25, "content_path": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"},
+  "document_manifest": {
+    "honesty": "The TAF is preserved documentary provenance and is not imported as a field or identity source.",
+    "documents": [
+      {"kind":"edital_principal","sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","byte_len":720592,"pages":25,"url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","role":"principal identity/evidence"},
+      {"kind":"convocacao_taf","sha256":"d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7","byte_len":341466,"pages":6,"url_requested":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf","url_final":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf","content_path":"docs/execucao/evidencias/T012/publiconsult_open/document-taf-681.pdf","role":"documentary provenance only; not a field source; any signed owner URL is not persisted"}
+    ]
+  },
+  "fields_policy": {"supported": ["titulo","orgao","edital_numero"], "omitted_unknown": ["cargos","remuneracao","taxa","prova_data","documentos"], "reference_only": true},
+  "required_new_run_decisions": ["independent review of this new run envelope", "principal edital document review/approval bound to the new derived run", "TAF document review decision bound to the new run if documentary attachment is needed", "canonical target allocation for concurso_id=null before normal proposal flow"],
+  "no_silent_inheritance": "Prior run tp-reviewed-bea209a94599014adb6a275693a9e107 and its document case are evidence references only; no approval, case_id or revision is inherited.",
+  "artifact_storage": "All paths are existing hash-addressed local artifacts; no bytes moved or rewritten."
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "t011.local-triage.v1",
+  "generated_at": "2026-09-13",
+  "scope": "offline fixtures and preserved evidence only",
+  "inputs": [
+    "docs/execucao/tarefas/T004.md",
+    "docs/execucao/tarefas/T011.md",
+    "docs/execucao/evidencias/T011/IDs18-25-conferencia.md",
+    "docs/execucao/evidencias/T011/reviewed-runs-inputs.json",
+    "docs/execucao/evidencias/T011/manifesto-propostas-offline.json"
+  ],
+  "constraints": {"network": false, "db_write": false, "proposal": false, "apply": false, "central_docs_edited": false},
+  "runner_envelope": {"prepared": false, "reason": "Nenhum dos seis registros possui payload cargo-a-cargo completo, associado e validável sem inferência."},
+  "records": [
+    {
+      "record_id": 18,
+      "source": "quadrix_open",
+      "artifact_sha256": "5f245894ba03dca5352a79fc991880b95e3fcf907fa38a1218ed2c4a373f0ab3",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1: Cristalina/GO, SME, Edital 1/2026, Quadrix"},
+      "fields": {
+        "comprovável": ["nomes/totais da tabela p.3–6", "valores de remuneração p.6–12"],
+        "ausente": ["taxa", "prova_data"],
+        "ambíguo": ["associação remuneração↔cargo, pois a transcrição cargo-a-cargo não está concluída"],
+        "extrator_adaptador": ["fechar transcrição da tabela e associação por cargo"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "reviewed_run mantém cargos=unknown; não publicar/inferir"
+    },
+    {
+      "record_id": 20,
+      "source": "legatus_open",
+      "artifact_sha256": "774a05bbd92b0505628a8c18f1d272b4297118b4dc1c63ecd4c8c334fe8ed7ce",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1–2: Domingos Mourão/PI, Edital 01/2026, Legatus"},
+      "fields": {
+        "comprovável": ["prova_data=08/03/2026, p.40", "exemplos de cargo/vaga/valor/jornada, p.3–6"],
+        "ausente": ["taxa", "quadro completo cargo-a-cargo"],
+        "ambíguo": ["unidade temporal da remuneração e cobertura do quadro a partir de exemplos"],
+        "extrator_adaptador": ["extrair tabelas I–III completas"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "exemplos não sustentam promoção do quadro completo"
+    },
+    {
+      "record_id": 22,
+      "source": "funcern_selection",
+      "artifact_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1: Lagoa de Pedras/RN, Edital 01/2026, retificações FUNCERN"},
+      "fields": {
+        "comprovável": ["identidade, município/UF, retificações e validade"],
+        "ausente": ["cargos", "vagas", "remuneração", "requisitos", "taxa", "prova_data", "cronograma"],
+        "ambíguo": [],
+        "extrator_adaptador": ["transcrever Anexo I e cronograma"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "Anexo I não foi transcrito nesta rodada"
+    },
+    {
+      "record_id": 23,
+      "source": "fgv_open",
+      "artifact_sha256": "6086daa5015ef0052e2cc3b35b81e5de7344d19312726f9594c9e44e4e98681a",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1: Prefeitura de Macaé/RJ, Edital 01/2026, FGV"},
+      "fields": {
+        "comprovável": ["191 vagas agregadas", "prova objetiva/títulos conforme p.1"],
+        "ausente": ["cargos individuais", "remuneração", "requisitos", "taxa", "prova_data", "cidade da prova"],
+        "ambíguo": ["distribuição das 191 vagas por cargo"],
+        "extrator_adaptador": ["quadro de cargos e cronograma"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "referência preservada exige reconciliação documental do caminho do artefato antes de qualquer runner"
+    },
+    {
+      "record_id": 24,
+      "source": "fcc_open",
+      "artifact_sha256": "c9e43c7a9e5ed7b13bde0310a4c5dfc935febc3ce992024029ef72db9aced5c3",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1–4: Câmara de Presidente Prudente/SP, Edital 01/2026, FCC"},
+      "fields": {
+        "comprovável": ["taxa média=R$100 e superior=R$150 sem associação", "duas linhas de cargo/remuneração", "carga mínima 40h"],
+        "ausente": ["demais cargos/vagas", "prova_data", "cronograma", "unidade temporal das remunerações"],
+        "ambíguo": ["associação de taxa superior e demais remunerações aos cargos"],
+        "extrator_adaptador": ["quadro completo e cronograma"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "não extrapolar taxa/associação além das linhas explicitamente conferidas"
+    },
+    {
+      "record_id": 25,
+      "source": "facet_open",
+      "artifact_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+      "identity": {"status": "comprovável", "evidence": "IDs18-25-conferencia.md p.1–2: Floresta/PE, Edital 01/2026, FACET"},
+      "fields": {
+        "comprovável": ["432 vagas agregadas", "exemplos nominais de cargos/vagas", "inscrições 24/08–01/10/2026"],
+        "ausente": ["taxa", "prova_data", "local_prova", "quadro completo"],
+        "ambíguo": ["distribuição agregada e unidade temporal da remuneração"],
+        "extrator_adaptador": ["quadro completo de cargos/requisitos/remuneração"]
+      },
+      "status": "SPECIFIC_BLOCKER",
+      "condition": "exemplos e total agregado não sustentam payload completo"
+    }
+  ],
+  "id21": {"status": "DO_NOT_RETRY", "condition": "fora desta triagem; quatro retificações pendentes e document-review obrigatório"},
+  "overall": "READY_FOR_REVIEW"
+}

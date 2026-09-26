@@ -1,0 +1,63 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "abcp_open",
+  "concurso_id": 7,
+  "external_id": "2868",
+  "title": "Câmara Municipal de Garça/SP",
+  "detail_url": "https://abcp.selecao.net.br/informacoes/2868/",
+  "artifact": {
+    "artifact_id": "art-b415916df7",
+    "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+    "byte_len": 791715,
+    "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+    "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-07T23:41:35.699706Z",
+    "content_path": "docs/execucao/evidencias/T010/id7.pdf"
+  },
+  "fields": [{
+    "field_name": "cargos",
+    "value": [{
+      "nome": "Técnico Legislativo",
+      "vagas_imediatas": 1,
+      "cadastro_reserva": true,
+      "vagas_ampla_concorrencia": 1,
+      "vagas_pcd": 0,
+      "remuneracao": "3378.77",
+      "moeda": "BRL",
+      "remuneracao_observacao": "por mês",
+      "jornada": "35 horas semanais",
+      "requisitos": "Ensino Médio completo",
+      "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"]
+    }],
+    "evidence": [
+      {
+        "evidence_id": "t010-id7-cargo-001",
+        "artifact_id": "art-b415916df7",
+        "document_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+        "source_url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+        "page_number": 1,
+        "snippet": "001 TÉCNICO LEGISLATIVO 01 * 01 + CR Ensino médio completo. 35 horas\nR$ 3.378,77\n+\nBENEFÍCIOS\nObjetiva+\nDiscursiva",
+        "method": "deterministic-regex",
+        "method_version": "tenderproof-fields/1.21",
+        "validation": {"ok": true, "code": null, "message": null}
+      },
+      {
+        "evidence_id": "t010-id7-cargo-002",
+        "artifact_id": "art-b415916df7",
+        "document_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+        "source_url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+        "page_number": 1,
+        "snippet": "2.3 Além do salário inicial, a Câmara Municipal de Garça disponibiliza o benefício de:\na) Auxílio alimentação no valor de R$ 680,00 (seiscentos e oitenta reais);\nb) Vale Transporte.",
+        "method": "deterministic-regex",
+        "method_version": "tenderproof-fields/1.21",
+        "validation": {"ok": true, "code": null, "message": null}
+      }
+    ],
+    "units": {"remuneracao": "BRL/mês", "jornada": "horas semanais"}
+  }],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-07T23:41:29.423319Z"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "t012.klc-backend-bundle-r24.v1",
+  "status": "READY_FOR_FINAL_REVIEW",
+  "scope": "offline backend only; no Docker/API/live/deploy",
+  "p1_fix": "fields.extract_fields now propagates document manifest to the KLC retification dispatcher; absent, wrong title, or wrong kind fails closed",
+  "wiring": {
+    "klc_retification_sha256": "42ead936eba65bde25b0862200d96a564a8088523a3aa423213c7e77d135d524",
+    "fields_sha256": "f1662ec98cda997eb080459966921a476bf52cff9332f70b30bf50f7a7af2629",
+    "review_cases_sha256": "90f6c14326e5f7f95be0e792e8d12ac4061572a5d650832838981962a1d95bb5",
+    "method_version": "tenderproof-fields/1.22"
+  },
+  "real_dispatch_contract": {
+    "positive": "document manifest exact => only prova_data=2026-05-17 supported",
+    "negative": ["manifest absent", "title drift", "kind drift"],
+    "recovery": "METHOD_VERSION bump invalidates old current case; prepare-preserved recomputes a new case and keeps v1 auditably persisted"
+  },
+  "preserved": {
+    "fafipa_parser_sha256": "a850115c7ff661a7758ee440d088d93da6b383f3c1b3c83a94539cfee8f62b23",
+    "publiconsult_parser_sha256": "a54389e5907b69d8b0c41d3f3adb470e0c96f0ef8d75c179bdef950d548f35c7",
+    "apta_r16": true,
+    "avancasp_pins": ["c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd"]
+  },
+  "tests": {
+    "KLC/FAFIPA/Publiconsult/APTA/Avanca/review_cases": "61 passed",
+    "compileall": "PASS"
+  },
+  "not_applied": true
+}

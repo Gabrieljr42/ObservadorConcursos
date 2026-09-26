@@ -1,0 +1,20 @@
+{
+  "schema": "t012.klc.luna-parser-r3-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "KLC_PARSER_R3_REJECT_FOR_INTEGRATION",
+  "scope": "read-only; no fields/registry/import/proposal/pilot mutation",
+  "checks": {
+    "pins": "PASS: source klc_open/external 632; PDF SHA 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4, 348300 bytes, 10 pages",
+    "identity_values": "PASS in fixture: Teodoro Sampaio, Processo Seletivo 002/2026 and one cargo; focused tests 2 passed; compileall passed",
+    "guards": "PARTIAL: source/external/SHA and literal snippets are guarded, but parse does not reject U+FFFD, PageText.truncated, page errors, or missing/incomplete page extraction before promotion",
+    "contract": "FAIL: return is an ad-hoc dict; evidence items contain only page/snippet/json_path, with no artifact_id, document SHA, source_url, validation or content receipt. It cannot satisfy ReviewedRun Evidence/_reproduced_evidence used by real _revalidate.",
+    "target": "PASS: source_number 57 remains provenance only and canonical target is unresolved; no live dispatch occurred"
+  },
+  "required_corrections": [
+    "Reject any page error/truncated/U+FFFD and assert complete page cardinality before parsing.",
+    "Return formal ExtractedField/Evidence-compatible data with artifact_id, document SHA, source_url, page, literal snippet, validation and receipt linkage; then test through importer/_revalidate, not only standalone parse."
+  ],
+  "evidence": ["docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py","docs/execucao/evidencias/T012/klc_open/strong-preflight-r3.json","docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py"],
+  "safety": "No integration or external mutation was performed."
+}

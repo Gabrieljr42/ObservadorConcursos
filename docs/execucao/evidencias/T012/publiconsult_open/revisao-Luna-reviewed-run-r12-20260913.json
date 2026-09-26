@@ -1,0 +1,50 @@
+{
+  "schema": "t012.luna.publiconsult.reviewed-run-review-r12.v1",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_THEN_DOCUMENT_REVIEW",
+  "scope": "read-only offline review; no live/API/DB/Docker/proposal/approval/apply",
+  "identity": {
+    "owner_user_id": 1,
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "concurso_id": null,
+    "run_id_extra": false,
+    "derived_run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a"
+  },
+  "principal_edital": {
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "role": "identity/evidence source",
+    "fields": ["titulo", "orgao", "edital_numero"],
+    "omitted": ["cargos", "remuneracao", "taxa", "prova_data", "documentos"],
+    "revalidation": "receipt and offline fields_for_run/build_run report exact SHA/bytes and VALID principal identity"
+  },
+  "taf": {
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "kind": "convocacao_taf",
+    "role": "documentary provenance only; not a field/identity source",
+    "url_pins": "requested/final exact in package",
+    "review_boundary": "requires a separate new document review bound to R12 if attached"
+  },
+  "isolation": {
+    "prior_run": "tp-reviewed-bea209a94599014adb6a275693a9e107 is reference-only",
+    "prior_approval_inherited": false,
+    "prior_case_or_revision_inherited": false,
+    "next_steps": [
+      "import this new run through the normal owner-scoped route",
+      "independently review/approve the principal edital on the new run",
+      "independently review the TAF on the new run if documentary attachment is needed",
+      "allocate canonical concurso_id before normal proposal gate"
+    ]
+  },
+  "tests": [
+    {"command":"pytest -q test_publiconsult_parser_r3.py test_publiconsult_proposal_r8.py test_publiconsult_r10_dispatch.py test_reviewed_run_import.py","result":"35 passed, 1 warning"},
+    {"command":"ReviewedRun.model_validate(reviewed-run-r12.json); import_reviewed_run(..., dry_run=True)","result":"model valid; dry-run validated"},
+    {"command":"compileall publiconsult_t012.py reviewed_run_import.py fields.py validation.py","result":"PASS"}
+  ],
+  "warning": "Only existing Pydantic warning for ReviewedRun.schema was emitted.",
+  "side_effects": {"network":false,"persistence":false,"proposal":false,"approval":false,"apply":false}
+}

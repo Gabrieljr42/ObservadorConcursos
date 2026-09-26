@@ -1,0 +1,20 @@
+{
+  "schema": "t011.dispatch-409-diagnosis.v1",
+  "diagnosed_at": "2026-09-12T19:27:49-03:00",
+  "record_id": 21,
+  "run_id": "tp-tcj-d0d2a0870efb5314aaaf97079b11ced0-1",
+  "artifact_sha256": "2a074dea76bf860a8500f5c8de564f746ac8c3555592c961b87fab1fcee8241a",
+  "reproduction": {"dispatch": "T011-04", "http_status": 409, "proposal_id": null, "retry": false, "source": "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md"},
+  "diagnosis": {
+    "classification": "semantic_conflict_pending_document_review",
+    "catalog_target": "docs/T004-AUDITORIA-CATALOGO-32-20260912-current.json",
+    "detail_http": 200,
+    "document_review_pending": true,
+    "pending_documents": ["EDITAL DE RETIFICAÇÃO Nº01/2026", "EDITAL DE RETIFICAÇÃO Nº02/2026", "EDITAL DE RETIFICAÇÃO Nº03/2026", "EDITAL DE RETIFICAÇÃO Nº04/2026"],
+    "reason": "Há documentos novos aguardando conferência. As datas abaixo são da última versão aprovada e podem ter mudado.",
+    "identity_binding": "catalog title PREFEITURA MUNICIPAL DE CAJUEIRO – AL and source funvapi_open match the T011 run/artifact binding",
+    "prior_proposal": "none proven by read-only evidence; no proposal_id returned"
+  },
+  "disposition": "DO_NOT_RETRY",
+  "next_gate": "conferir as quatro retificações e revalidar a identidade/revisão antes de preparar novo run/proposta; sem POST neste diagnóstico"
+}

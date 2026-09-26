@@ -1,0 +1,53 @@
+{
+  "source": "fapese_selection",
+  "state": "two_real_cycles_valid_sample",
+  "scope": "Public PRONERA personnel RPA calls only; does not claim complete foundation catalogue, PPE/PQD coverage or public competitive employment",
+  "observed_route_provenance": [
+    "Official homepage links /editais/",
+    "Official Editais links /pronera/",
+    "Preserved PRONERA card directly links principal edital007/2026 PDF"
+  ],
+  "live_report": "docs\\tenderproof-batch99-fapese-live.json",
+  "run_ids": [
+    "tpr-cdf554911a02",
+    "tpr-0c24bbb074ec"
+  ],
+  "sha256": [
+    "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+    "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b"
+  ],
+  "same_bytes_both_cycles": true,
+  "pages": [
+    17,
+    17
+  ],
+  "pdf_scope_review": {
+    "page1": "Edital007/2026, FAPESE, cadastro reserva serviço pessoa física; objetivo é selecionar profissional superior para atividades pedagógicas e administrativas do projeto",
+    "pages2_3": "Contratos civis de prestação de serviços; perfis educador/articulador pedagógico e técnico de apoio. Não se trata de ingresso de alunos ou bolsa acadêmica.",
+    "principal": "Observed card is opening notice, file and extracted number/year match; no retification promoted"
+  },
+  "tests": {
+    "fapese_only": 14,
+    "foundation_and_crawl_resilience": 53,
+    "failed": 0
+  },
+  "limits": {
+    "listing_pages_per_cycle": 1,
+    "detail_attempts_per_cycle": 3,
+    "html_bytes": 2097152,
+    "driver_deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60
+  },
+  "cleanup": {
+    "instances": 4,
+    "all_clients_closed": true
+  },
+  "coverage_complete": false,
+  "adapter_export": "BATCH99_FOUNDATION_FAPESE_ADAPTERS",
+  "files_sha256": {
+    "backend\\app\\tenderproof\\batch99_foundation_adapters.py": "ee907ea762ac95f9b2f8638ab49ecfe95d2c4a50bd1140ed3fa36aaeb8ecdcf0",
+    "backend\\tests\\test_tenderproof_batch99_foundations.py": "7e42d3fa0a2f28b3fc92b6fe7b891e06aaff3079b2f3978868ffb74fa3c4696b",
+    "backend\\scripts\\tenderproof_batch99_foundations_live.py": "b6416e2d97d896de3cb30c744d6be941a6e7c1975889eea0f43cd5863434be37"
+  }
+}

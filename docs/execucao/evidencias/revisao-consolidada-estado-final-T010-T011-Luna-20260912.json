@@ -1,0 +1,46 @@
+{
+  "reviewer": "Luna",
+  "review_type": "independent_consolidated_operational_final_state",
+  "date": "2026-09-12",
+  "scope": "T010/T011 final proposals, gates, checked-field state, and operational counts",
+  "method": "Reconciled preserved authenticated GET and PostgreSQL read-only checkpoints with final dispatch evidence; no write, approval, apply, retry, or quadro operation performed by this review.",
+  "global_check": {
+    "counts": {
+      "publications": 34,
+      "versions": 81,
+      "outbox": 81,
+      "notifications": 80
+    },
+    "counts_coherent": true,
+    "new_version_event_notification": false,
+    "checked_fields_match_current_state": true,
+    "basis": "Before/after checkpoints and final GETs report identical counts; all no_change diffs are empty and all applied/versioned activity is pre-existing or the single intended T010/16 idempotent entity."
+  },
+  "records": [
+    {"task":"T010","record":1,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":5,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":6,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":7,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":8,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":14,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; no new version/event/notification"},
+    {"task":"T010","record":15,"decision":"BLOQUEADO","status":"do_not_dispatch","condition":"artifact/entity is Edital 010/2025 while target is catalog 15/T004 Edital 005/2025; no safe identity-preserving dispatch"},
+    {"task":"T010","record":16,"decision":"ACEITO","status":"existing_applied","proposal_id":"tpp-9ea32737dd8f9112a06ced5bb707a36c","version_id":24,"condition":"409 matched existing same-run idempotent proposal; no duplicate retry or new mutation"},
+    {"task":"T011","record":17,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; version_id null; no new event/notification"},
+    {"task":"T011","record":18,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; version_id null; no new event/notification"},
+    {"task":"T011","record":20,"decision":"ACEITO","status":"no_change","condition":"checked fields already equal; diff empty; version_id null; no new event/notification"},
+    {"task":"T011","record":22,"decision":"ACEITO","status":"no_change","condition":"final GET no_change; diff empty; version_id null; checked fields coincide"},
+    {"task":"T011","record":23,"decision":"ACEITO","status":"no_change","condition":"final GET no_change; diff empty; version_id null; checked fields coincide"},
+    {"task":"T011","record":24,"decision":"ACEITO","status":"no_change","condition":"final GET no_change; diff empty; version_id null; checked fields coincide"},
+    {"task":"T011","record":25,"decision":"ACEITO","status":"no_change","condition":"final GET no_change; diff empty; version_id null; checked fields coincide"},
+    {"task":"T011","record":21,"decision":"BLOQUEADO","status":"do_not_retry","condition":"current-run proposal absent; review.pending awaits four Funvapi retifications; resume only after retification confirmation, identity/review revalidation, and new run/proposal"}
+  ],
+  "evidence": [
+    "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md",
+    "docs/execucao/evidencias/revisao-real-propostas-T010-Luna-20260912.json",
+    "docs/execucao/evidencias/revisao-real-T011-Luna-20260912.json",
+    "docs/execucao/evidencias/revisao-gate-final-T011-Luna-20260912.json",
+    "docs/execucao/evidencias/T011/diagnostico-id21-409-20260912.json"
+  ],
+  "overall": "ACEITO_COM_BLOQUEIOS_EXPLICITOS",
+  "limitations": "This report is a review record only; it authorizes no future mutation and does not alter executor, pilot, database, or quadro state."
+}

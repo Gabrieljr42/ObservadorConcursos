@@ -1,0 +1,38 @@
+{
+  "schema_version": "readonly-cargo-count-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACEITO_COM_CORRECAO_DE_METRICA",
+  "scope": "GET http://127.0.0.1:13000/api/concursos (proxy do backend), contrato endpoint/modelo/serializacao e snapshot vivo; sem mutacao",
+  "observed": {
+    "http": 200,
+    "contest_rows": 33,
+    "real_cargos_array_entries": 180,
+    "null_cargos_contests": 14,
+    "naive_null_as_one_total": 194,
+    "null_contest_ids": [31, 29, 28, 26, 25, 24, 23, 22, 21, 20, 18, 15, 5, 2]
+  },
+  "null_records": [
+    {"concurso_id":31,"source_id":37,"external_id":"200"},
+    {"concurso_id":29,"source_id":55,"external_id":"10630"},
+    {"concurso_id":28,"source_id":24,"external_id":"2590"},
+    {"concurso_id":26,"source_id":20,"external_id":"525"},
+    {"concurso_id":25,"source_id":31,"external_id":"44"},
+    {"concurso_id":24,"source_id":9,"external_id":"cmprp126"},
+    {"concurso_id":23,"source_id":10,"external_id":"prefeiturademacae26"},
+    {"concurso_id":22,"source_id":64,"external_id":"concurso-lagoa-de-pedras-2026"},
+    {"concurso_id":21,"source_id":36,"external_id":"/index.php/2026/04/23/prefeitura-municipal-de-cajueiro-al/"},
+    {"concurso_id":20,"source_id":62,"external_id":"153"},
+    {"concurso_id":18,"source_id":42,"external_id":"3057"},
+    {"concurso_id":15,"source_id":6,"external_id":"99"},
+    {"concurso_id":5,"source_id":38,"external_id":"unai2026"},
+    {"concurso_id":2,"source_id":22,"external_id":"2867"}
+  ],
+  "contract_evidence": {
+    "route": "backend/app/main.py:403-424 returns Concurso rows",
+    "schema": "backend/app/schemas.py:33-42 exposes cargo scalar and cargos nullable array",
+    "model": "backend/app/models.py:60-61 defines cargo nullable scalar and cargos nullable JSON",
+    "interpretation": "There is no duplicate serialization: one Concurso row is returned once. The 14 surplus entries are null placeholders produced by a counting routine that wraps null as a one-item collection. They are neither cargo records nor duplicate structured cargos."
+  },
+  "recommendation": "Use SUM(len(cargos)) with null=>0 (or filter cargos IS NOT NULL) for the cargo metric; retain 194 only as an explicitly labelled naive/null-inclusive diagnostic, never as catalogue cargo count. Keep the 14 records as contests without structured cargo data."
+}

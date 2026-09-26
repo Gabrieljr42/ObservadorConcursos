@@ -1,0 +1,19 @@
+{
+  "schema": "t012.document-artifact-receipt.v1",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "artifact_id": "art-apta-ret2-708",
+  "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+  "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+  "http_status": 200,
+  "content_type": "application/pdf",
+  "artifact_path": "docs/execucao/evidencias/T012/apta_open/artifacts/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+  "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+  "byte_len": 76767,
+  "pages": 1,
+  "truncated": false,
+  "processing_errors": [],
+  "replacement_count": 0,
+  "acquisition": "one exact official HTTPS GET; no crawling"
+}

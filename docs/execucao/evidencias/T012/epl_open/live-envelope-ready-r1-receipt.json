@@ -1,0 +1,29 @@
+{
+  "schema": "t012.live-envelope-receipt.v1",
+  "state": "EPL_LIVE_ENVELOPE_READY_FOR_IMPORT",
+  "envelope": "live-envelope-ready-r1.json",
+  "source": "epl_open",
+  "source_number": 21,
+  "external_id": "52",
+  "artifact": {"sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f", "byte_len": 784614, "pages": 43, "network": false},
+  "fresh_fields": {
+    "orgao": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)",
+    "edital_numero": "01/2023",
+    "eligible_expected": ["orgao", "edital_numero"],
+    "blocked_expected": ["cargos", "titulo", "inscricao_inicio", "inscricao_fim", "prova_data"]
+  },
+  "round_trip": {
+    "reviewed_run_model": "PASS",
+    "import_reviewed_run_dry_run": "PASS",
+    "publication_revalidate_with_EPL_dispatch": "PASS",
+    "stale_url_negative": "PASS",
+    "artifact_sha_negative": "PASS",
+    "old_run_reused": false,
+    "target": "positive ephemeral SQLite fixture only",
+    "catalogue_mutated": false,
+    "proposal_created": false,
+    "apply": false
+  },
+  "tests": "test_live_envelope_roundtrip.py: 3 passed; tests/test_tenderproof_batch60_recovered.py: 16 passed",
+  "handoff": "Allocate canonical concurso_id/source through standard flow, preserve exact fields/evidence, rerun dry-run and normal proposal gate; source_number=21 is never used as concurso_id."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "t012.avalia.document-review-content-receipts.v2",
+  "run_id": "tpr-8079a5856a43",
+  "source": "avalia_open",
+  "external_id": "631",
+  "identity": {
+    "organization": "Prefeitura Municipal de Caldas Novas",
+    "operator": "Instituto Avalia",
+    "contest": "Concurso Público nº 001/2026",
+    "detail_url": "https://www2.avalia.org.br/concurso.jsp?id=631"
+  },
+  "documents": [
+    {
+      "pending_id": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a",
+      "kind": "outro",
+      "title": "1º Termo de Retificação do Edital de Abertura nº 001/2026 - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "file": "artifacts/document-review/pending-url-d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "sha256": "e8853dce1e756741e850a21fe9004585b35243bc67d806d6bd91c8a3abd17f8f",
+      "byte_len": 102501,
+      "content_type": "application/pdf",
+      "pages": 1,
+      "snippets": [
+        {"page": 1, "text": "PREFEITURA MUNICIPAL DE CALDAS NOVAS"},
+        {"page": 1, "text": "TERMO DE RETIFICA"},
+        {"page": 1, "text": "TABELA 2.1"},
+        {"page": 1, "text": "R$ 3.100,00"},
+        {"page": 1, "text": "R$ 150,00"}
+      ],
+      "identity_check": "ACCEPT: header identifies Prefeitura Municipal de Caldas Novas, Concurso Público nº 001/2026; title matches pending receipt.",
+      "effect": "ACCEPT_DOCUMENT_EFFECT; table 2.1 is changed; catalog-field promotion remains a separate revalidation/proposal gate."
+    },
+    {
+      "pending_id": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38",
+      "kind": "edital",
+      "title": "Edital de Abertura - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "file": "artifacts/document-review/pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "sha256": "8de3f149e76c2978d04765dc330fc28bff976feabe1012b6a1a600d365b437a2",
+      "byte_len": 634236,
+      "content_type": "application/pdf",
+      "pages": 22,
+      "snippets": [
+        {"page": 1, "text": "PREFEITURA MUNICIPAL DE CALDAS NOVAS"},
+        {"page": 1, "text": "EDITAL DE ABERTURA"},
+        {"page": 1, "text": "Instituto Avalia"},
+        {"page": 10, "text": "A Prova Objetiva"}
+      ],
+      "identity_check": "ACCEPT: page 1 identifies Prefeitura Municipal de Caldas Novas, Concurso Público nº 001/2026 and Instituto Avalia; title matches pending receipt.",
+      "effect": "ACCEPT_DOCUMENT_EFFECT; opening edital is identity-consistent and retained as review evidence."
+    }
+  ],
+  "method": "BoundedHTTPDriver GET, TLS verification, adapter allowlist, max 2 requests, no redirect",
+  "network_requests": 2,
+  "db_write": false,
+  "proposal_dispatch": false
+}

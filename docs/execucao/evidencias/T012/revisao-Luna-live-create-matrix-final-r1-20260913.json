@@ -1,0 +1,12 @@
+{
+  "review": "Luna live-create-matrix-final-r1",
+  "date": "2026-09-13",
+  "verdict": "REJECT_WITH_PRECISE_REJECTIONS",
+  "evidence": "docs/execucao/evidencias/T012/live-create-matrix-final-r1-20260913.json",
+  "checks": "All five envelopes validated by the current ReviewedRun schema/importer; original and alternate artifact paths resolved; dry-run and disposable-store import completed; run IDs were equal across paths.",
+  "accepted_for_next_step": ["APTA", "CPCON", "FAFIPA", "KLC"],
+  "blocked": ["UFU"],
+  "reason": "The current UFU import returned tp-reviewed-f3e9c58974f5f13419565aa22ded286d, while the prior final-R6 handoff records tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c. The future import return must be the proposal authority; no stale run may be proposed.",
+  "operational_gate": "No envelope is approved for live proposal/apply here. Use owner 1, proposal target null, and the exact run_id returned by the same import; perform authenticated canonical-target allocation and preflight separately.",
+  "mutations": "none"
+}

@@ -1,0 +1,144 @@
+{
+  "reviewed_at": "2026-09-08T15:55:49.995044+00:00",
+  "outcome": "technical_integration_approved_for_bounded_partial_scope",
+  "passed": true,
+  "gate_executed_by_reviewer": false,
+  "gate_acceptance_granted_by_reviewer": false,
+  "scope": "Independent read-only integration review of current scripts, 39-source audit, live durable captures/PDFs, replay/recovery/mixed unions, publication, regression and migration remediation. Completed operations review and its three-volume backup/restore evidence were also inspected.",
+  "counts": {
+    "batch_sources": 39,
+    "valid_sample_sources": 16,
+    "blocked_sources": 23,
+    "registered_batch_adapters": 19,
+    "registered_total_adapters": 70,
+    "certified_99_sources": false,
+    "independently_revalidated_live_sample_records": 35,
+    "maximum_observed_pages": 58
+  },
+  "valid_sources": [
+    "fade_selection",
+    "fapeg_selection",
+    "fapergs_selection",
+    "faperj_selection",
+    "fapesb_selection",
+    "fapese_selection",
+    "fapesp_selection",
+    "fapespa_selection",
+    "fapex_selection",
+    "fappr_selection",
+    "fatec_selection",
+    "funpec_selection",
+    "ieses_open",
+    "klc_open",
+    "legatus_open",
+    "verbena_selection"
+  ],
+  "verified": {
+    "all_live_artifacts_and_capture_hashes_rechecked": true,
+    "all_audit_input_report_hashes_current": true,
+    "all_valid_sources_have_two_live_cycles_same_candidate": true,
+    "replay_union_equals_16_valid_sources": true,
+    "recovery_union_equals_16_valid_sources": true,
+    "mixed_union_equals_16_valid_sources": true,
+    "blocked_23_have_explicit_blocker_and_next_action": true,
+    "batch60_accepted_gate_preserved": true,
+    "only_legatus_canonical_creation": true,
+    "publication_notifications": 0,
+    "publication_temporary_database_removed": true,
+    "material_update_passed_and_temporary_volume_removed": true,
+    "production_enabled": false,
+    "gate_requires_operations_review_passed": true,
+    "document_encoding_correction_verified": true,
+    "operations_review_passed": true,
+    "backup_restore_roots": 3,
+    "backup_restore_distinct_sources": 16,
+    "operations_focal_tests_passed": 13
+  },
+  "regression": {
+    "passed": 1050,
+    "skipped": 32,
+    "failures": 0,
+    "errors": 0,
+    "postgres_passed": 89,
+    "postgres_skipped": 0
+  },
+  "limits": {
+    "recorded_in": "docs/tenderproof-rollout-plan.json batch cumulative_sources=99 operational_limits",
+    "request_timeout_s": 25,
+    "html_bytes": 2097152,
+    "pdf_bytes": 31457280,
+    "pdf_pages_default": 60,
+    "cycles": 2,
+    "listing_pages_per_sample": 1,
+    "detail_samples_per_cycle": 3,
+    "same_host_workers": 2,
+    "browser_enabled": false,
+    "paid_services": false,
+    "production_enabled": false
+  },
+  "core_review": {
+    "post": "Typed observed POST method/body/content-type, exact request identity in manifest and replay, no GET fallback, redirects refused, raw SHA unchanged and recovery without repost are documented and included in focal/integrated tests.",
+    "identity": "CAS promotion and explicit whitespace predicates address prior review findings; explicit upgrade required, shared-URL downgrade refuses conflicts, no production migration performed. Final PostgreSQL regression covers remediation.",
+    "pdf_header": "At most 16 ASCII whitespace prefix bytes, raw bytes preserved; strict parser remains authoritative. FAPESC remains blocked."
+  },
+  "findings": [
+    {
+      "id": "DOC-UTF8",
+      "severity": "low",
+      "file": "docs/tenderproof-batch99-identity-migration.md",
+      "finding": "Most original paragraphs contain confirmed mojibake; final remediation paragraphs are proper UTF-8. Correct the affected paragraphs before final delivery. Command examples remain intact.",
+      "blocking_technical_acceptance": false,
+      "state": "resolved_verified",
+      "resolution": "Corrected UTF-8 document reread; current bytes match encoding-validation SHA256. Historical finding preserved.",
+      "resolution_report": "docs/tenderproof-batch99-document-encoding-validation.json"
+    },
+    {
+      "id": "HISTORICAL-SHA",
+      "severity": "informational",
+      "file": "docs/tenderproof-batch99-identity-review.json",
+      "finding": "Historical remediation hash for backend/app/services.py differs from current file. Other four recorded hashes match. Treat that hash as the earlier review snapshot; final integrated and PostgreSQL regressions provide current validation, and do not claim all historical file hashes are current.",
+      "blocking_technical_acceptance": false
+    }
+  ],
+  "script_snapshots": [
+    {
+      "file": "backend/scripts/tenderproof_batch99_gate.py",
+      "sha256": "3eb8d4924f5e136ab0d07f57eaf5ae49da4fd38a7677e1890efe8c36e0d8b665"
+    },
+    {
+      "file": "backend/scripts/tenderproof_batch99_matrix.py",
+      "sha256": "07f4d519223e1fd9ca6a20a3c7f24a25d110284e92f12dcb32c2ddfcb6bc4df0"
+    },
+    {
+      "file": "backend/scripts/tenderproof_batch99_evidence.py",
+      "sha256": "47df702f8f92a53200f4162289a0124f93e64e620a2f4160b805f50d64b825a0"
+    }
+  ],
+  "changes_by_reviewer": [
+    "docs/tenderproof-batch99-final-review.json"
+  ],
+  "limitations": [
+    "Gate has not been executed by this reviewer. Approval is technical review only and does not authorize production activation; current operations evidence is bounded and distinguishes inherited broker/browser checks from current tests.",
+    "Registration is implementation availability, not complete source coverage; 16 valid samples and 23 blocked sources are additions within the final 39-source batch, not all 99.",
+    "Replay and mixed failures are explicitly controlled use of preserved evidence, not fresh public availability probes."
+  ],
+  "pending_documentation_or_operations_items": [],
+  "closure_evidence": [
+    {
+      "file": "docs/tenderproof-batch99-document-encoding-validation.json",
+      "sha256": "4ad93851c9e2b8c76df788e3426077621b914f43bb54c798d01e7ac07fd97948"
+    },
+    {
+      "file": "docs/tenderproof-batch99-identity-migration.md",
+      "sha256": "88d64fa3040c8731224706a539a467d4d88bb4b86e7fdc35d14bf8675d24ed1c"
+    },
+    {
+      "file": "docs/tenderproof-batch99-operations-review.json",
+      "sha256": "6c1ff748417cda365861f6d2c3d11607906db67e6b82c92939a8c4ebf805c56f"
+    },
+    {
+      "file": "docs/tenderproof-batch99-operations-storage-backup.json",
+      "sha256": "989b4fd6ed209d020e22e1a0b27f979eed627c2a41638564c82e55ac663d0947"
+    }
+  ]
+}

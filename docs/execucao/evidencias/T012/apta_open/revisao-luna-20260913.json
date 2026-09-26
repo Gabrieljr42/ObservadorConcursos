@@ -1,0 +1,48 @@
+{
+  "schema": "t012.apta708.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "APTA_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "revision": "R2",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "apta_open",
+    "external_id": "708",
+    "title": "Câmara Municipal de Aragarças",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+    "duplicate_check": "source absent from current catalogue snapshot; no duplicate observed in preserved candidate",
+    "public_scope": "public employment selection"
+  },
+  "artifact": {
+    "path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "content_type": "application/pdf",
+    "byte_len": 362093,
+    "pages": 20,
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "local_bytes_verified": true
+  },
+  "fields": {
+    "supported": ["titulo", "orgao", "remuneracao"],
+    "remuneracoes": ["1650.00", "2400.00"],
+    "literal_provenance": true,
+    "not_promoted": ["edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"]
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_t012_apta_open_selection.py tests/test_tenderproof_batch60_recovered.py",
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0,
+    "compileall": "PASS"
+  },
+  "schema_handoff": {
+    "declared_schema": "tenderproof.reviewed-run.v1",
+    "actual_importer_model": "ReviewedRun",
+    "model_validation": "Expected guard: null concurso_id is rejected; controlled temporary positive ID=1 validated the exact body and importer dry-run without persistence",
+    "canonical_write": false,
+    "required_before_import_proposal": [
+      "convert the envelope to the actual ReviewedRun schema without adding unknown fields",
+      "preserve artifact SHA/bytes/pages and field evidence",
+      "then allocate canonical source/concurso through the normal flow and rerun importer dry-run"
+    ]
+  },
+  "decision": "Accept as a conditional canonical-allocation import/proposal handoff. Allocate the canonical concurso ID through the standard flow, then validate the exact body and run import_reviewed_run(dry_run=true); never persist the temporary ID=1."
+}

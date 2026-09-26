@@ -1,0 +1,19 @@
+{
+  "schema": "tenderproof.t010.reviewed-run-receipt.v1",
+  "record_id": 7,
+  "envelope": "docs/execucao/evidencias/T010/T010-reviewed-run-id7.json",
+  "artifact": {"artifact_id": "art-b415916df7", "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a", "byte_len": 791715},
+  "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+  "checks": {
+    "extract_pages_isolated": "pass; 19/19 pages, local preserved PDF",
+    "extract_fields_targeted": "pass; cargos=1",
+    "drift_fail_closed": "pass; SHA mutation emits no supported cargos",
+    "reviewed_run_model": "pass",
+    "import_dry_run": "validated; no persistence",
+    "utf8_literal_evidence": "pass; zero U+FFFD; snippets equal current extract_fields output",
+    "units_match_evidence": "pass; units are UTF-8 and equal parser output",
+    "isolated_create_proposal": "not executed per no-proposal gate"
+  },
+  "dispatch": "not requested; no proposal/import/apply/pilot",
+  "pending": ["taxa de inscrição", "data exata da prova"]
+}

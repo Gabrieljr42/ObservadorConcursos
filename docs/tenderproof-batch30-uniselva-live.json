@@ -1,0 +1,232 @@
+{
+  "observed_at": "2026-09-08T13:05:12.297103+00:00",
+  "source": "uniselva_selection",
+  "scope": "two first-page discoveries; selection1363 observed on page1; partial coverage; no canonical publication",
+  "browser_sessions": 0,
+  "cycles": [
+    {
+      "source": "uniselva_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-879261ba2fbf",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 9,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://api.fundacaouniselva.org.br/SelecaoSimplificada?pageNumber=2&pageSize=9&isDescending=true&filter.isInscricaoAberta=false"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.fundacaouniselva.org.br/SelecaoSimplificada?pageNumber=1&pageSize=9&isDescending=true&filter.isInscricaoAberta=false",
+          "file": "uniselva_selection-cycle1-listing-1a98d4bac6.html",
+          "sha256": "276eff7d18c82fc24f65341c41e0cf6d8cc519511cdb3d5a0ad7cf6745a9ded0",
+          "bytes": 157698,
+          "format": "decoded public JSON normalized to UTF-8; fixture bytes preserved",
+          "observed_at": "2026-09-08T13:05:13.002278+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-879261ba2fbf",
+          "candidate": {
+            "candidate_id": "uniselva_selection-1363",
+            "title_observed": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
+            "detail_url_observed": "https://api.fundacaouniselva.org.br/SelecaoSimplificada/1363",
+            "external_id": "1363",
+            "observed_at": "2026-09-08T13:05:13.007333Z",
+            "source": "uniselva_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "artifact": {
+            "artifact_id": "art-6feb26081c",
+            "sha256": "eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750",
+            "byte_len": 365272,
+            "url_requested": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "url_final": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T13:05:13.796633Z",
+            "storage_path": "art-6feb26081c-eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750.pdf"
+          },
+          "document": {
+            "doc_id": "4e7fb00d3e4e263a13d4",
+            "title": "EDITAL 062.2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) DE GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL.pdf",
+            "url_requested": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "url_final": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 062.2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) DE GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL.pdf' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: EDITAL 062.2026 PORTARIA COMISSÃO DE SELEÇÃO.pdf)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=10/10",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://api.fundacaouniselva.org.br/SelecaoSimplificada/1363",
+              "file": "uniselva_selection-cycle1-detail-daac36d5b3.html",
+              "sha256": "8634080624dad143cf1839dd23c161342fe9b4c0b296ec01517d7d76ce852baa",
+              "bytes": 2519,
+              "format": "decoded public JSON normalized to UTF-8; fixture bytes preserved",
+              "observed_at": "2026-09-08T13:05:13.407295+00:00"
+            }
+          ],
+          "total_pages": 10,
+          "processed_pages": 10,
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "uniselva_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-e8a6a70d5328",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 9,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://api.fundacaouniselva.org.br/SelecaoSimplificada?pageNumber=2&pageSize=9&isDescending=true&filter.isInscricaoAberta=false"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.fundacaouniselva.org.br/SelecaoSimplificada?pageNumber=1&pageSize=9&isDescending=true&filter.isInscricaoAberta=false",
+          "file": "uniselva_selection-cycle2-listing-1a98d4bac6.html",
+          "sha256": "276eff7d18c82fc24f65341c41e0cf6d8cc519511cdb3d5a0ad7cf6745a9ded0",
+          "bytes": 157698,
+          "format": "decoded public JSON normalized to UTF-8; fixture bytes preserved",
+          "observed_at": "2026-09-08T13:05:15.564112+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e8a6a70d5328",
+          "candidate": {
+            "candidate_id": "uniselva_selection-1363",
+            "title_observed": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
+            "detail_url_observed": "https://api.fundacaouniselva.org.br/SelecaoSimplificada/1363",
+            "external_id": "1363",
+            "observed_at": "2026-09-08T13:05:15.568364Z",
+            "source": "uniselva_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "artifact": {
+            "artifact_id": "art-7ba4fceff4",
+            "sha256": "eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750",
+            "byte_len": 365272,
+            "url_requested": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "url_final": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T13:05:16.103732Z",
+            "storage_path": "art-7ba4fceff4-eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750.pdf"
+          },
+          "document": {
+            "doc_id": "4e7fb00d3e4e263a13d4",
+            "title": "EDITAL 062.2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) DE GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL.pdf",
+            "url_requested": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "url_final": "https://web.fundacaouniselva.org.br/Editais/1363/EDITAL%20062.2026%20CONTRATA%C3%87%C3%83O%20DE%20ESTAGI%C3%81RIO%28A%29%20DE%20GRADUA%C3%87%C3%83O%20EM%20SECRETARIADO%2C%20ADMINISTRA%C3%87%C3%83O%20OU%20COMUNICA%C3%87%C3%83O%20SOCIAL.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 062.2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) DE GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL.pdf' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: EDITAL 062.2026 PORTARIA COMISSÃO DE SELEÇÃO.pdf)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=10/10",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://api.fundacaouniselva.org.br/SelecaoSimplificada/1363",
+              "file": "uniselva_selection-cycle2-detail-daac36d5b3.html",
+              "sha256": "8634080624dad143cf1839dd23c161342fe9b4c0b296ec01517d7d76ce852baa",
+              "bytes": 2519,
+              "format": "decoded public JSON normalized to UTF-8; fixture bytes preserved",
+              "observed_at": "2026-09-08T13:05:15.980911+00:00"
+            }
+          ],
+          "total_pages": 10,
+          "processed_pages": 10,
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\uniselva-live-20260908",
+  "tls_verified": true
+}

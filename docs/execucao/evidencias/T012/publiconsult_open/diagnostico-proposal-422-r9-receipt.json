@@ -1,0 +1,30 @@
+{
+  "schema": "t012.publiconsult.proposal-422-diagnosis-r9-receipt.v1",
+  "status": "READY_FOR_REVIEW",
+  "scope": "offline source-specific parser/test only; no API, live, DB, Docker or backend mutation",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "supersedes": "diagnostico-proposal-422-r8-receipt.json",
+  "parser": "publiconsult_proposal_r8.py (R9 validation revision)",
+  "pins_preserved": {
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf"
+  },
+  "guards_added": [
+    "exact ordered 0-based page_index and 1-based page_number",
+    "page record count/nonempty text",
+    "U+FFFD rejection",
+    "error/truncated/processing_error flags",
+    "PdfReader processing exception fail-closed"
+  ],
+  "tests": {
+    "file": "test_publiconsult_proposal_r8.py",
+    "result": "15 passed",
+    "negative_dimensions": ["count", "order", "index", "nonempty", "U+FFFD", "error", "truncated", "processing_error", "source", "external_id", "URL", "SHA/bytes"]
+  },
+  "next_gate": "backend review of source-specific R9 parser; no proposal retry authorized"
+}

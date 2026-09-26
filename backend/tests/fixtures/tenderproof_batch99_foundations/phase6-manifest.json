@@ -1,0 +1,1221 @@
+{
+  "limits": "2MiB/25s, TLS verified, redirects recorded only, no PDF/browser",
+  "pages": [
+    {
+      "source": "fapex_selection",
+      "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+      "kind": "public-0",
+      "observed_at": "2026-09-08T15:24:33.349315+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 307478,
+      "sha256": "5e1b47152a4ec462a26a16ce33c7aaef901fd88bcc6c37937a707ee722893993",
+      "file": "fapex_selection-public-0.html",
+      "encoding": "utf-8",
+      "title": "Fapex - Fundação de apoio à pesquisa e à extensão",
+      "links": [
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/emendas.aspx",
+          "title": "EMENDAS PARLAMENTARES"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--",
+          "title": "ACESSIBILIDADE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index#altocontraste",
+          "title": "ALTO CONTRASTE"
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/",
+          "title": ""
+        },
+        {
+          "url": "https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "A FAPEX"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade",
+          "title": "Identidade"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN",
+          "title": "Documentos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index",
+          "title": "Coordenador"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--",
+          "title": "Credenciamento"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index",
+          "title": "Licitação"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2P",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2O",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2M",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2M",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2L",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2L",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2N",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2K",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2K",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2J",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2J",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2I",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2I",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6B",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6B",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6A",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6A",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6P",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6P",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6O",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6O",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6N",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6N",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6M",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6M",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6L",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6L",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6K",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6K",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6J",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6J",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr6I",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr6I",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_B",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_B",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_A",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_A",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_P",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_P",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_O",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_O",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_N",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_N",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_M",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_M",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_L",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_L",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_K",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_K",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_J",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_J",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr_I",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr_I",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaB",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaB",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaA",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaA",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaN",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaN",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaL",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaL",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaK",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaK",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaJ",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaJ",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbaI",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbaI",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeA",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeA",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeB",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeB",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeN",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeN",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeK",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeK",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeJ",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeJ",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbeI",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbeI",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiB",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiB",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiA",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiA",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiN",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiN",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiL",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiL",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiK",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiK",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiJ",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiJ",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbiI",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbiI",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmB",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmB",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmA",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmA",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmN",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmN",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmL",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmL",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmK",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmK",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmJ",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmJ",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbmI",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbmI",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqA",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqA",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqB",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqB",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqN",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqN",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqL",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqL",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbqK",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbqK",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbuP",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbuP",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbuO",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbuO",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbuM",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbuM",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbuL",
+          "title": "DETALHE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nbuL",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nbuK",
+          "title": "DETALHE"
+        }
+      ],
+      "scripts": [
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://dunsregistered.dnb.com",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "fapex_selection",
+      "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+      "kind": "public-1",
+      "observed_at": "2026-09-08T15:24:33.349315+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 37172,
+      "sha256": "7c5e0275df734f898d9990f950b53eebecba286aca91c098f0795217bd08a2ca",
+      "file": "fapex_selection-public-1.html",
+      "encoding": "utf-8",
+      "title": "Fapex - Fundação de apoio à pesquisa e à extensão",
+      "links": [
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/emendas.aspx",
+          "title": "EMENDAS PARLAMENTARES"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--",
+          "title": "ACESSIBILIDADE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P#altocontraste",
+          "title": "ALTO CONTRASTE"
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/",
+          "title": ""
+        },
+        {
+          "url": "https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "A FAPEX"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade",
+          "title": "Identidade"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN",
+          "title": "Documentos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index",
+          "title": "Coordenador"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--",
+          "title": "Credenciamento"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index",
+          "title": "Licitação"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a7b595f0966b_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "ABERTURA E INSCRIÇÕES "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "RETORNAR PARA EDITAIS"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2P",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P#footer",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+          "title": "http://www.fapex.org.br"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+          "title": "14.645.162/0001-91"
+        },
+        {
+          "url": "https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil",
+          "title": ""
+        },
+        {
+          "url": "http://www.computacaobrasil.com.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://dunsregistered.dnb.com",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "fapex_selection",
+      "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+      "kind": "public-2",
+      "observed_at": "2026-09-08T15:24:33.350314+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 39685,
+      "sha256": "b60c2b85a3d2d6c4db932d4a995bbd7e3cf9af1df69d5e6c7ce2c87f5c9d1573",
+      "file": "fapex_selection-public-2.html",
+      "encoding": "utf-8",
+      "title": "Fapex - Fundação de apoio à pesquisa e à extensão",
+      "links": [
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/emendas.aspx",
+          "title": "EMENDAS PARLAMENTARES"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--",
+          "title": "ACESSIBILIDADE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O#altocontraste",
+          "title": "ALTO CONTRASTE"
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/",
+          "title": ""
+        },
+        {
+          "url": "https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "A FAPEX"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade",
+          "title": "Identidade"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN",
+          "title": "Documentos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index",
+          "title": "Coordenador"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--",
+          "title": "Credenciamento"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index",
+          "title": "Licitação"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a454e4097f64_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "ABERTURA E INSCRIÇÕES "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a4d56f68f235_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "INSCRIÇÕES HOMOLOGADAS "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a4fdeb5df236_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "RESULTADO PRELIMINAR "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp6a55418d4b487_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "RESULTADO FINAL "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "RETORNAR PARA EDITAIS"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2O",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O#footer",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+          "title": "http://www.fapex.org.br"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+          "title": "14.645.162/0001-91"
+        },
+        {
+          "url": "https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil",
+          "title": ""
+        },
+        {
+          "url": "http://www.computacaobrasil.com.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://dunsregistered.dnb.com",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "fapex_selection",
+      "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+      "kind": "public-3",
+      "observed_at": "2026-09-08T15:24:33.350314+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 38116,
+      "sha256": "cb714474430e6a6ab8603cfa1368f633004682d1abc61548edced7f25f4d66ee",
+      "file": "fapex_selection-public-3.html",
+      "encoding": "utf-8",
+      "title": "Fapex - Fundação de apoio à pesquisa e à extensão",
+      "links": [
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/emendas.aspx",
+          "title": "EMENDAS PARLAMENTARES"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--",
+          "title": "ACESSIBILIDADE"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N#altocontraste",
+          "title": "ALTO CONTRASTE"
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/",
+          "title": ""
+        },
+        {
+          "url": "https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "A FAPEX"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade",
+          "title": "Identidade"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN",
+          "title": "Documentos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index",
+          "title": "Coordenador"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--",
+          "title": "Credenciamento"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index",
+          "title": "Licitação"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp69fb6a759c883_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "ABERTURA E INSCRIÇÕES "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp69fb6b2d31462_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf",
+          "title": "RETIFICAÇÃO 01 "
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "RETORNAR PARA EDITAIS"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2N",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N#footer",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+          "title": "http://www.fapex.org.br"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+          "title": "14.645.162/0001-91"
+        },
+        {
+          "url": "https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil",
+          "title": ""
+        },
+        {
+          "url": "http://www.computacaobrasil.com.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://dunsregistered.dnb.com",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    }
+  ]
+}

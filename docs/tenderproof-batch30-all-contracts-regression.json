@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-08T13:18:42.500369+00:00",
+  "passed": 702,
+  "skipped": 14,
+  "deselected": 2,
+  "failed": 0,
+  "duration_s": 147.44,
+  "junit": "backend/.tenderproof/batch30-all-contracts-regression.xml",
+  "command": "python -m pytest -m 'not live' -q --disable-warnings --junitxml=.tenderproof/batch30-all-contracts-regression.xml",
+  "limitations": [
+    "PostgreSQL skipped without explicit disposable URL; earlier PostgreSQL evidence remains separate.",
+    "Live tests excluded; bounded live acquisition reports are separate.",
+    "No batch30 gate acceptance or production activation."
+  ]
+}

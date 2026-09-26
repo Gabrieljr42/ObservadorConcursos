@@ -1,0 +1,21 @@
+{
+  "schema": "t012.klc.live-proposal-receipt-r4.v1",
+  "recorded_at": "2026-09-13T13:44:13.2256613-03:00",
+  "source_id": 57,
+  "external_id": "632",
+  "source": "klc_open",
+  "owner_user_id": 1,
+  "preflight": {"health": 200, "contests": 35, "distinct_source_ids": 34, "catalog_match": 0, "canonical_cargos": 188},
+  "envelope": {"path": "docs/execucao/evidencias/T012/klc_open/klc-632-reviewed-run-r3.json", "artifact_id": "art-96637dad76", "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos"], "cargo_count": 1},
+  "dry_runs": [
+    {"path": "/tmp/klc-r4-a/klc.pdf", "status": "validated", "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc"},
+    {"path": "/tmp/klc-r4-b/klc.pdf", "status": "validated", "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc"}
+  ],
+  "import": {"status": "imported", "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc", "owner": 1, "target": null},
+  "document_review": {"pending": true, "documents": 1, "reason": "Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."},
+  "proposal": {"http": 409, "created": false, "detail": "TenderProof: Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."},
+  "counts": {"before": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "proposals": 100, "versions": 93, "outbox": 93, "notifications": 92}, "after": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "proposals": 100, "versions": 93, "outbox": 93, "notifications": 92}},
+  "result": "KLC_BLOCKED_DOCUMENT_REVIEW_409",
+  "stop_rule": "Single proposal POST returned 409; no retry, approve or apply.",
+  "other_sources_touched": false
+}

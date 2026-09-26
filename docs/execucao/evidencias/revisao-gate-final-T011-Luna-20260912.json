@@ -1,0 +1,125 @@
+{
+  "reviewer": "Luna",
+  "review_type": "independent_final_gate_T011",
+  "reviewed_at": "2026-09-12",
+  "scope": "T011 records 17-25; read-only GET/API and preserved evidence only",
+  "mutation_policy": {
+    "reviewer_requests": [],
+    "approval_or_apply": false,
+    "db_or_quadro_write": false,
+    "network_research": false
+  },
+  "evidence": [
+    "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md",
+    "docs/execucao/evidencias/T011/diagnostico-id21-409-20260912.json",
+    "docs/execucao/ENTREGA.md",
+    "read-only GET /proposals/{proposal_id} for records 17, 18, 20, 22, 23, 24, 25",
+    "read-only GET /concursos/21 and /concursos/21/review-status"
+  ],
+  "checks": {
+    "payload_scope": "Each proposal payload exposes only fields checked in the accepted T011 package; no pending/unverified field was promoted.",
+    "provenance": "Proposal target/run and evidence SHA match the preserved T011 manifest/package records.",
+    "no_new_mutation": "No approval/apply was issued by this review; proposed records have no version/event, and no_change records have empty diff and version_id null."
+  },
+  "records": [
+    {
+      "record": 17,
+      "proposal_id": "tpp-02c29e4baa1b036eab1d02de59a65c74",
+      "decision": "ACEITO",
+      "state": "no_change",
+      "target": 17,
+      "run_id": "tp-tcj-8ab7bff262fa52d4a80aa00058905974-1",
+      "evidence_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+      "checked_fields": ["titulo", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+      "diff": {},
+      "version_id": null,
+      "finding": "Current state already equals checked payload; no new version/event/mutation."
+    },
+    {
+      "record": 18,
+      "proposal_id": "tpp-e592fd8efd3baebe12b3b76a696a04f3",
+      "decision": "ACEITO",
+      "state": "no_change",
+      "target": 18,
+      "run_id": "tp-tcj-0d43415604dd529fb88764b330b70894-2",
+      "evidence_sha256": "5f245894ba03dca5352a79fc991880b95e3fcf907fa38a1218ed2c4a373f0ab3",
+      "checked_fields": ["titulo", "orgao", "edital_numero"],
+      "diff": {},
+      "version_id": null,
+      "finding": "Current state already equals checked payload; no new version/event/mutation."
+    },
+    {
+      "record": 20,
+      "proposal_id": "tpp-49afc9246a42a37353b05df1bf11650a",
+      "decision": "ACEITO",
+      "state": "no_change",
+      "target": 20,
+      "run_id": "tp-tcj-fcb88161aca85300b7577a2c9bb3ca8d-1",
+      "evidence_sha256": "774a05bbd92b0505628a8c18f1d272b4297118b4dc1c63ecd4c8c334fe8ed7ce",
+      "checked_fields": ["titulo", "orgao", "edital_numero"],
+      "diff": {},
+      "version_id": null,
+      "finding": "Current state already equals checked payload; no new version/event/mutation."
+    },
+    {
+      "record": 21,
+      "decision": "ACEITO",
+      "gate_state": "DO_NOT_RETRY",
+      "finding": "No current-run proposal exists; identity/run/SHA match, but review.pending remains for four Funvapi retifications. Containment is correct; resume only after retifications are confirmed, identity/review revalidated, and a new run/proposal is prepared."
+    },
+    {
+      "record": 22,
+      "proposal_id": "tpp-89d123b46f995642fae59e48e0c2ea25",
+      "decision": "ACEITO",
+      "state": "proposed",
+      "target": 22,
+      "run_id": "tp-tcj-78d603004e005e7889bbab3e41ebb061-1",
+      "evidence_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+      "checked_fields": ["titulo", "orgao", "edital_numero"],
+      "result_diff": null,
+      "version_id": null,
+      "finding": "Proposal remains unapproved/unapplied; no version/event."
+    },
+    {
+      "record": 23,
+      "proposal_id": "tpp-23904639452716008c2fe67f1af38f63",
+      "decision": "ACEITO",
+      "state": "proposed",
+      "target": 23,
+      "run_id": "tp-tcj-9ba68e23375a5ff7a0fef6e8ea7bbbc5-1",
+      "evidence_sha256": "6086daa5015ef0052e2cc3b35b81e5de7344d19312726f9594c9e44e4e98681a",
+      "checked_fields": ["titulo", "orgao", "edital_numero"],
+      "result_diff": null,
+      "version_id": null,
+      "finding": "Proposal remains unapproved/unapplied; no version/event."
+    },
+    {
+      "record": 24,
+      "proposal_id": "tpp-4e99e2ad1f2d8d8bf41150a564e958ca",
+      "decision": "ACEITO",
+      "state": "proposed",
+      "target": 24,
+      "run_id": "tp-tcj-52dedb38da915f1899046496075c743c-2",
+      "evidence_sha256": "c9e43c7a9e5ed7b13bde0310a4c5dfc935febc3ce992024029ef72db9aced5c3",
+      "checked_fields": ["titulo", "orgao", "edital_numero"],
+      "result_diff": null,
+      "version_id": null,
+      "finding": "Proposal remains unapproved/unapplied; no version/event."
+    },
+    {
+      "record": 25,
+      "proposal_id": "tpp-988abe18c6d18f774bb4688c7656ea86",
+      "decision": "ACEITO",
+      "state": "proposed",
+      "target": 25,
+      "run_id": "tp-tcj-e34b795398cb56cc8260c5df21b3e3e4-1",
+      "evidence_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+      "checked_fields": ["orgao", "edital_numero"],
+      "result_diff": null,
+      "version_id": null,
+      "finding": "Proposal remains unapproved/unapplied; no version/event."
+    }
+  ],
+  "overall_decision": "ACEITO",
+  "limitations": "This review authorizes no action and does not change proposal, pilot, database, or quadro state."
+}

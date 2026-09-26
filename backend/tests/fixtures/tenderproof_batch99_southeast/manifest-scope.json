@@ -1,0 +1,54 @@
+[
+  {
+    "name": "fapece-alternative",
+    "url": "https://fapece.com.br/",
+    "observed_at": "2026-09-08T15:00:26.692033+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 159754,
+    "original_sha256": "c8d11a47c3c7958c52f216e1393fb6cb3ed72bc23fb5508568e8875ad61fa7ca",
+    "fixture_sha256": "3ec503d26ee56a9b01e9b947e2fc7163954fa5515ea00127beae9d517fd16899",
+    "file": "fapece-alternative.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesq-public-root",
+    "url": "https://fapesq.rpp.br/",
+    "observed_at": "2026-09-08T15:00:26.692033+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 99881,
+    "original_sha256": "efe96e5ee6e3abb44bef99c41d8bcc376faa01be98fd95b591ad1e4ff777ef78",
+    "fixture_sha256": "7956d03ae3525690d3810562192e02931655ff80fd1490c838557d430b223dd7",
+    "file": "fapesq-public-root.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapepi-technova",
+    "url": "https://www.fapepi.pi.gov.br/edital/selecao-publica-fapepi-finep-mcti-edital-n-01-2024-programa-tecnova3-piaui/",
+    "observed_at": "2026-09-08T15:00:26.693040+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 83972,
+    "original_sha256": "5e6f671fce6026db44358e948696f5bc338943e7a40a7db26d7ebe33a0644fcc",
+    "fixture_sha256": "7ec4086e0c23f9ac94b9d1b44cb5c20f59361b719bc0279f1253e76f4385683b",
+    "file": "fapepi-technova.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesb-msca",
+    "url": "https://www.fapesb.ba.gov.br/diretrizes-especificas-da-fapesb-chamada-para-submissao-de-propostas-do-programa-de-intercambio-de-pessoal-msca-se-em-coordenacao-com-o-horizonte-europa-2/",
+    "observed_at": "2026-09-08T15:00:26.693040+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 89712,
+    "original_sha256": "c0ff6befd1572920e94a7e30b89438fa90b090abd0e8e40c26b698ff9da3357c",
+    "fixture_sha256": "3ea0826f65645d2837e17a4eeab93d0a27825992ce32987adc8780744e317898",
+    "file": "fapesb-msca.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

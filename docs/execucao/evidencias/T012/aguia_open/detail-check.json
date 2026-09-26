@@ -1,0 +1,21 @@
+{
+  "schema": "t012.detail-check.v1",
+  "source": "aguia_open",
+  "candidate_external_id": "43",
+  "status": "DETAIL_EVIDENCE_CONFIRMED",
+  "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+  "fixture": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html",
+  "fixture_sha256": "0ABDB50782C6615CB7375C82BD7CB68CDCC66E6D13F8FE4E3F632269073A5832",
+  "adapter": "AguiaAdapter",
+  "checks": {
+    "detail_identity": true,
+    "opening_notice_selected": true,
+    "opening_notice_url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "selection_label": "Processo Seletivo 01/2025",
+    "inscription_window_observed": "05/12/2025 00:00 até 16/12/2025 23:59",
+    "cargo_and_remuneration_observed": true,
+    "network": false,
+    "catalogue_mutated": false
+  },
+  "pre_review_disposition": "Do not pivot to shdias_open; official detail evidence is present in the preserved run artifact."
+}

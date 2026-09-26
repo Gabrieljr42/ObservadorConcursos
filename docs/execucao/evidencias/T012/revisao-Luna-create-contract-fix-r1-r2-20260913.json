@@ -1,0 +1,37 @@
+{
+  "schema": "t012.create-contract-fix-independent-review.v2",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only functional review; no pilot, Docker, live API, or central-doc mutation",
+  "checks": {
+    "apta_null_target": "PASS: apta-reviewed-envelope-r5 validates with concurso_id=null",
+    "cpcon_null_target": "PASS: cpcon-002-reviewed-run-r2 validates with concurso_id=null",
+    "synthetic_ids": "PASS: 0 and negative concurso_id rejected by ReviewedRun and ProposalIn",
+    "proposal_boundary": "PASS: ProposalIn null target requires positive source_id; positive target remains valid",
+    "allocation": "PASS: apply-only allocator and existing update/create regressions; no allocation during proposal",
+    "replay_owners": "PASS: deterministic import replay, owner-scoped identity, cross-owner isolation",
+    "concurrency": "PASS: equivalent/racing create and distinct-source race leave one canonical contest/version/outbox",
+    "rollback": "PASS: injected version failure leaves no contest/identity/outbox; normal rollback preserves ledger",
+    "schema": "PASS: nullable proposal target and idempotent schema migration exercised"
+  },
+  "commands": [
+    {
+      "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_canonical.py backend/tests/test_tenderproof_publication_post.py",
+      "result": "24 passed"
+    },
+    {
+      "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py backend/tests/test_cpcon_t012.py",
+      "result": "9 passed, 1 unrelated existing APTA extraction failure (titulo failed on fixture/parser)"
+    },
+    {
+      "command": "isolated Pydantic checks for APTA/CPCON null envelopes, IDs 0/-1, and ProposalIn source boundary",
+      "result": "PASS"
+    }
+  ],
+  "notes": [
+    "PublicationProposal.concurso_id is nullable and migration is idempotent; apply_proposal remains the sole canonical allocator.",
+    "The APTA title extraction failure is unrelated to this contract patch and does not invalidate null-target validation."
+  ],
+  "pilot_mutation": false,
+  "live_mutation": false
+}

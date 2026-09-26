@@ -1,0 +1,1361 @@
+ <!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- FAVICON -->
+<link href="https://www.gualimp.com.br/imagens/favicon.gif" rel="SHORTCUT ICON"/>
+<link href="https://www.gualimp.com.br/imagens/favicon.png" rel="icon" type="image/png"/>
+<title>Concursos | Gualimp - Assessoria e Consultoria Ltda</title>
+<!-- Metas para o Google -->
+<meta content="" name="description"/>
+<meta content="" name="keywords">
+<!-- Metas para o Facebook -->
+<meta content="article" property="og:type">
+<meta content="Concursos | Gualimp - Assessoria e Consultoria Ltda" property="og:title">
+<meta content="https://www.gualimp.com.br/concursos/" property="og:url">
+<meta content="Gualimp - Assessoria e Consultoria Ltda" property="og:site_name"/>
+<meta content="" property="og:description"/>
+<meta content="https://www.gualimp.com.br/imagens/logo-facebook&lt;?=?&gt;.jpg" property="og:image"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="200" property="og:image:width"/>
+<meta content="200" property="og:image:height"/>
+<!-- ESTILO CSS -->
+<link href="https://www.gualimp.com.br/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://www.gualimp.com.br/js/slick/slick.css" rel="stylesheet"/>
+<link href="https://www.gualimp.com.br/css/estilo.css" rel="stylesheet"/>
+<link href="https://www.gualimp.com.br/js/sweetalert/dist/sweetalert.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://www.gualimp.com.br/js/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="https://www.gualimp.com.br/js/sweetalert/dist/sweetalert-dev.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href="https://www.gualimp.com.br/js/mega-dropdown/css/style.css" rel="stylesheet"/>
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/jquery.menu-aim.js"></script>
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/main.js"></script>
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/modernizr.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<!-- <script src='https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit'></script>
+<script>
+   // Recapcha do google
+   var recaptcha;
+
+   if ($('#recaptcha').size()) {
+     var myCallBack = function () {
+         //Render the recaptcha1 on the element with ID "recaptcha1"
+         recaptcha = grecaptcha.render('recaptcha', {
+             'sitekey': '6LdmXAsUAAAAAGdCAH_McXziUzHc7XM7PNMErMvQ', //Replace this with your Site key
+             'theme': 'blue'
+         });
+     };
+   }
+</script> -->
+<script>
+$(function(){
+    setTimeout(function(){
+
+        $('body').animate({
+            opacity:1,
+        },700,function(){
+                    });
+    },200);
+});
+</script>
+</meta></meta></meta></meta></head>
+<body>
+<div aria-labelledby="exampleModalLabel" class="modal fade" id="modal-login" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content" style="border-radius:0px !important;">
+<form action="https://www.gualimp.com.br/?acao=logar" method="post">
+<input name="url_atual" type="hidden"/>
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+<h4 class="modal-title" id="exampleModalLabel">Área do cliente</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="form-group">
+<label class="col-xs-2 control-label text-right" for="input-login">Login</label>
+<div class="col-xs-10">
+<input class="form-control" id="input-login" name="input_login" required="" type="text"/>
+</div>
+</div>
+<br clear="all"/>
+<br clear="all"/>
+<div class="form-group">
+<label class="col-xs-2 control-label text-right" for="input-login">Senha</label>
+<div class="col-xs-10">
+<input class="form-control" id="input-senha" name="input_senha" required="" type="password"/>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<a class="branco fonte14 btn btn-default link-lembrar-senha" data-target="#lembrarSenha" data-toggle="modal" href="javascript:;">
+                       Esqueci minha senha
+                    </a>
+<button class="btn btn-danger" data-dismiss="modal" type="button">Fechar</button>
+<button class="btn btn-primary" type="submit">Entrar</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div aria-labelledby="myModalLabel" class="modal fade modal-vcenter" id="lembrarSenha" role="dialog" style="z-index:9999 !important; display:none;" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content bgModal_buscaAvancada" style="border-radius:0;">
+<div class="modal-header bg-azul">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="fonte24 branco">×</span>
+</button>
+<h4 class="modal-title branco" id="myModalLabel">
+                    ESQUECI MINHA SENHA:
+                </h4>
+</div>
+<form action="" enctype="multipart/form-data" id="formulario_lembrar" method="post" name="formulario_lembrar" onsubmit="lembrarSenha(); return false;">
+<div class="modal-body">
+<div class="form-group">
+<span style="width:100%; display:block; font-weight:700; text-align:center; padding-bottom:5px; font-size:14px;">
+                            Caso tenha esquecido sua senha, informe o seu email no campo abaixo.<br>
+                            Sua nova senha será enviada para o email cadastrado.
+                        </br></span>
+<div id="ajax_mensagem_lembrar"></div>
+<br>
+<label class="control-label rosa" for="email_lembrar">Email</label>
+<input class="form-control" id="email_lembrar" name="email_lembrar" required="" type="text"/>
+</br></div>
+<div class="modal-footer" style="padding:15px 0;">
+<a class="branco fonte14 btn btn-default link-voltar-modal pull-left" data-dismiss="modal" href="javascript:;" style="border-radius:0px;">
+<span class="glyphicon glyphicon-circle-arrow-left"></span>
+                           Voltar para o login
+                        </a>
+<right>
+<button class="btn btn-primary bg-azul" style="border-radius:0;" type="submit">
+<span class="glyphicon glyphicon-send"></span>    Enviar
+                            </button>
+<right>
+</right></right></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<style type="text/css">
+  .close { opacity:.9; }
+  .close span { color: #FFF; }
+  .modal-header {
+    color:#FFF;
+    background: #0a408a;
+    background: -moz-linear-gradient(top, #0a408a 0%, #081a48 100%);
+    background: -webkit-linear-gradient(top, #0a408a 0%, #081a48 100%);
+    background: linear-gradient(to bottom, #0a408a 0%, #081a48 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a408a', endColorstr='#081a48',GradientType=0 );
+  }
+
+  button { border-radius:0px !important; }
+
+  .link-lembrar-senha { position:absolute; display:block; border-radius:0; left:15px; }
+
+</style>
+<script>
+    // $(function(){
+        // $('.link-lembrar-senha').click(function(){
+            // $('#modal-login').css("display","none");
+            // $("#lembrarSenha").show();
+        // });
+
+        // $('.link-voltar-modal').click(function(){
+          //$('#lembrarSenha, .fade, .in').css("display","none");
+          // $("#modal-login").show();
+        // });
+    // });
+</script>
+<!-- MODAL BUSCA FULL SCREEN -->
+<div aria-labelledby="myModalLabel" class="modal fade modal-vcenter" id="buscaFull" role="dialog" style="z-index: 9999 !important;" tabindex="-1">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+</button>
+<form action="https://www.gualimp.com.br/busca/" id="form-busca-rapida-full" method="post">
+<div class="col-xs-12">
+<h2> O que está procurando? </h2>
+</div>
+<div class="col-xs-12 col-md-8 col-lg-9">
+<input autocomplete="off" class="buscaFullPalavra" name="palavra-chave" type="text"/>
+</div>
+</form>
+</div>
+<!-- CONTEUDOS POPUP/EXTERNOS -->
+<div aria-labelledby="myModalLabel" class="modal fade modal-vcenter" id="ondeEstamos" role="dialog" style="z-index: 9999 !important;" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content bgModal_buscaAvancada">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+<h4 class="modal-title" id="myModalLabel">
+                    Localização:
+                </h4>
+</div>
+<div class="modal-body">
+<iframe allowfullscreen="" frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.348945590033!2d-41.67711232337329!3d-20.777166334210975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb93d6e0f84a77%3A0xfdfa0b5e9ae28e87!2sAv.+Manoel+Alves+de+Siqueira+-+Fiat%2C+Gua%C3%A7u%C3%AD+-+ES%2C+29560-000!5e0!3m2!1spt-BR!2sbr!4v1478555064372" style="border:0" width="100%"></iframe>
+<div class="modal-footer">
+<center>
+<b>[ Rua Manoel Alves de Siqueira, 41 Bela Vista, Guaçuí - ES, CEP: 29.560-000 ]</b>
+<b>Telefones: (28) 3553-0291 / 3553-4326 - (28) 98805-0291</b>
+<center>
+</center></center></div>
+</div>
+</div>
+</div>
+</div>
+<div class="transparencia"></div>
+<div id="envolve-site">
+<!--############################ TOPO ############################-->
+<!-- MENU MOBILE -->
+<div class="cd-dropdown-wrapper">
+<nav class="cd-dropdown">
+<h2> Menu Principal </h2>
+<figure class="visible-xs" style="position:absolute; width:152px; height:57px; top:0; overflow:hidden; z-index:9; padding:0px 0 0px 60px; text-align:center; width: 100%; border-top:3px solid #60ACDA; border-bottom:2px solid #FFF;">
+<a href="https://www.gualimp.com.br/">
+<img src="https://www.gualimp.com.br/imagens/logo-mobile.png"/>
+</a>
+</figure>
+<a class="cd-close" href="javascript:;"> Close </a>
+<ul class="cd-dropdown-content">
+<li style="list-style:none; display:block; height: 58px">
+<form action="https://www.gualimp.com.br/busca/" class="cd-search" enctype="multipart/form-data" id="busca" method="post" name="form_busca">
+<input class="form-control" id="campo-busca" name="busca-topo" placeholder="O que você procura?" required="required" type="search"/>
+<button class="btn-busca pull-right" style="position: absolute; top: 1px;  right: 5px;  padding: 13px 13px; background-color:#60ACDA;  border: none; color: #FFF; display: block; " type="submit">
+<span class="glyphicon glyphicon-send"> </span>  
+                    </button>
+</form>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/">
+<small><b>HOME</b></small>
+</a>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/institucional/">
+<small><b>INSTITUCIONAL</b></small>
+</a>
+</li>
+<li class="has-children">
+<a class="fonte16" href="javascript:;">
+<small><b>SERVIÇOS</b></small>
+</a>
+<ul class="cd-secondary-dropdown is-hidden" style="display:block;">
+<li class="go-back">
+<a href="#0">Menu</a>
+</li>
+<li>
+<a href="https://www.gualimp.com.br/servicos/concursos/">
+<small><b>Concursos Públicos</b></small>
+</a>
+</li>
+<li>
+<a href="https://www.gualimp.com.br/servicos/assessoria-e-consultoria/">
+<small><b>Assessoria e Consultoria</b></small>
+</a>
+</li>
+<li>
+<a href="https://www.gualimp.com.br/servicos/inventario-patrimonial/">
+<small><b>Inventário Patrimonial</b></small>
+</a>
+</li>
+<li>
+<a href="https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/">
+<small><b>Treinamentos e Seminários</b></small>
+</a>
+</li>
+<li>
+<a href="https://www.gualimp.com.br/servicos/transporte-e-logistica/">
+<small><b>Transporte e Logística</b></small>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/clientes/">
+<small><b>CLIENTES</b></small>
+</a>
+</li>
+<!-- 			<li>
+				<a href="https://www.gualimp.com.br/equipe/" class="fonte16">
+					<small><b>EQUIPE</b></small>
+				</a>
+			</li> -->
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/concursos/">
+<small><b>CONCURSOS</b></small>
+</a>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/eventos/">
+<small><b>EVENTOS</b></small>
+</a>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/noticias/">
+<small><b>NOTÍCIAS</b></small>
+</a>
+</li>
+<li>
+<a class="fonte16" href="https://www.gualimp.com.br/contato/">
+<small><b>CONTATO</b></small>
+</a>
+</li>
+<!-- <li>
+                <a href="javascript:;"  data-toggle="modal" data-target="#modal-login" class="fonte16">
+                    <small><b>ÁREA RESTRITA</b></small>
+                </a>
+            </li> -->
+</ul>
+</nav>
+</div>
+<!-- FIM MENU MOBILE -->
+<div id="back-header"></div>
+<header id="header">
+<div id="bg1-header">
+<div class="container">
+<div class="row">
+<div class="col-sm-1 col-xs-1 visible-sm visible-xs">
+<strong aria-expanded="false" class="formata-botoes-mobile collapsed cd-dropdown-trigger" data-target="menu_topo" data-toggle="collapse" id="area-restrita-mobile">
+<a href="javascript:;">
+<span class="glyphicon glyphicon-list"></span>
+</a>
+</strong>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+<h1 id="logo-header">
+<a href="https://www.gualimp.com.br/">
+<img alt="Gualimp Strategic | Gestão, Assessoria, Serviços e Logística" class="" src="https://www.gualimp.com.br/imagens/logo-header.png"/>
+<!-- <img src="https://www.gualimp.com.br/imagens/logo-mobile.png" class="img-responsive visible-xs" alt="Gualimp Strategic | Gestão, Assessoria, Serviços e Logística"> -->
+</a>
+</h1>
+</div>
+<div class="col-lg-2 col-md-3 col-md-4 hidden-sm hidden-xs">
+<ul id="redes-sociais-header">
+<li>
+<a href="https://www.facebook.com/GStrategic" target="_blank" title="Facebook">
+<img alt="Facebook" src="https://www.gualimp.com.br/imagens/icon-facebook.png"/>
+</a>
+</li>
+<li>
+<a href="https://www.instagram.com/g_strategic/" target="_blank" title="Instagram">
+<img alt="Instagram" src="https://www.gualimp.com.br/imagens/icon-instagram.png"/>
+</a>
+</li>
+<!-- 						<li>
+							<a href="javascript:;" target="_blank" title="LinkedIn">
+								<img src="https://www.gualimp.com.br/imagens/icon-linkedin.png" alt="LinkedIn">
+							</a>
+						</li> -->
+</ul>
+</div>
+<div class="col-md-6 col-sm-8 col-xs-6 pull-right">
+<!-- <div id="btn-busca-mobile">
+
+					</div> -->
+<div class="visible-xs" id="btn-area-cliente">
+<!-- LINK MOBILE BUSCA FULL -->
+<a class="visible-xs" data-target="#buscaFull" data-toggle="modal" href="javascript:;" style="/*margin-right:5px;*/">
+<img alt="Buscar" src="https://www.gualimp.com.br/imagens/icon-busca.png" width="21"/>
+</a>
+<!-- ÁREA DO CLIENTE MOBILE data-toggle="modal" data-target="#modal-login" -->
+<!-- <a href="javascript:;">
+							<img src="https://www.gualimp.com.br/imagens/icon-area-cliente.png" alt="">
+							<span class="hidden-sm hidden-xs">Área do Cliente</span>
+						</a> -->
+</div>
+<!-- BUSCA -->
+<div class="hidden-xs" id="box-busca-rapida">
+<form action="https://www.gualimp.com.br/busca/" id="form-busca-rapida" method="post">
+<input name="csrf" type="hidden"/>
+<input autocomplete="off" id="palavra-chave" name="palavra-chave" placeholder="O que você procura?" type="text"/>
+<button id="btn-busca-rapida" type="submit">
+<div>
+<img alt="Buscar" src="https://www.gualimp.com.br/imagens/icon-busca.png"/>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden-sm hidden-xs" id="bg2-header">
+<div class="container">
+<nav id="menu-principal">
+<ul>
+<li>
+<a href="https://www.gualimp.com.br/">Home</a>
+</li>
+<li>
+<a class="" href="https://www.gualimp.com.br/institucional/"> Institucional</a>
+</li>
+<li>
+<a class="" href="javascript:;"> Serviços </a>
+<ul>
+<li><a href="https://www.gualimp.com.br/servicos/concursos/">Concursos Públicos</a></li>
+<li><a href="https://www.gualimp.com.br/servicos/assessoria-e-consultoria/">Assessoria e Consultoria</a></li>
+<li><a href="https://www.gualimp.com.br/servicos/inventario-patrimonial/">Inventário Patrimonial</a></li>
+<li><a href="https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/">Treinamentos e Seminários</a></li>
+<li><a href="https://www.gualimp.com.br/servicos/transporte-e-logistica/">Transporte e Logística</a></li>
+</ul>
+</li>
+<li>
+<a class="" href="https://www.gualimp.com.br/clientes/">Clientes</a>
+</li>
+<!-- 					<li>
+						<a href="https://www.gualimp.com.br/equipe/" class="">Equipe</a>
+					</li>
+ -->
+<li>
+<a href="https://www.gualimp.com.br/concursos/">Concursos</a>
+</li>
+<li>
+<a class="" href="https://www.gualimp.com.br/eventos/">Eventos</a>
+</li>
+<li>
+<a class="" href="https://www.gualimp.com.br/noticias/">Notícias</a>
+</li>
+<li>
+<a class="" href="https://www.gualimp.com.br/contato/">Contato</a>
+</li>
+</ul>
+</nav>
+<div id="telefone-header">
+<img alt="Telefone" src="https://www.gualimp.com.br/imagens/icon-telefone.png"/>
+<span>(28) 3553-1939</span>
+</div>
+</div>
+</div>
+</header>
+<!--############################ TOPO ############################-->
+<!--############################ SITE ############################-->
+<div class="imagem-internas parallax-window" data-image-src="https://www.gualimp.com.br/imagens/img-internas.jpg" data-parallax="scroll"></div>
+<section class="section-internas">
+<div class="bg-titulo-internas">
+<div class="container">
+<h2>Concursos</h2>
+</div>
+</div>
+<div class="bg-conteudo-internas">
+<div class="container">
+<p>
+<p>Atuamos no mercado há anos, nossos profissionais possuem ampla experiência na realização de Concurso Público para os diversos cargos e níveis, contamos ainda com processo informatizado, inscrições on-line e ainda somos responsáveis pela execução dos seguintes serviços:</p>
+<p>- Análise e adequação de Quadro de Pessoal;<br/>
+- Análise dos cargos, suas atribuições e níveis exigidos;<br/>
+- Elaboração de Aviso do Concurso;<br/>
+- Elaboração de Edital, Anexos e Programas;<br/>
+- Fichas de Inscrições;<br/>
+- Encaminhamento de documentação ao Tribunal de Contas Estadual;<br/>
+- Realização das Inscrições via internet e in'loco;<br/>
+- Homologação das Inscrições<br/>
+- Elaboração de Provas através de professores altamente capacitados <br/>
+- Emissão do cartão via internet;<br/>
+- Divulgação dos locais de realização das provas;<br/>
+- Aplicação de Provas;<br/>
+- Correção das Provas;<br/>
+- Divulgação de gabaritos;<br/>
+- Divulgação do Resultado;<br/>
+- Análise de possíveis Recurso; <br/>
+- Divulgação de todas as fases do concurso através do site da empresa.</p>
+<p><br/>
+<strong>Escolha uma das opções abaixo:</strong></p>
+</p>
+<hr/>
+<!-- <a href="#" class="btn btn-primary btn-lg">Concursos em andamento</a>
+            <a href="#" class="btn btn-primary btn-lg">Concursos encerrados</a> -->
+<div class="container">
+<div class="row">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#home">Concursos em andamento</a></li>
+<li><a href="#menu1">Concursos encerrados</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade in active" id="home">
+<br clear="all"/><br clear="all"/>
+<p class="text-center"> <b>Nenhum concurso em andamento até o momento!</b> </p>
+<br clear="all"/><br clear="all"/>
+</div>
+<div class="tab-pane fade" id="menu1">
+<br clear="all"/> <small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE PORCIÚNCULA/RJ- <strong>CONCURSO PÚBLICO Nº 002/2019</strong><br/>CONVOCAÇÃO PARA REALIZAÇÃO DA PROVA PRÁTICA PARA O CARGO DE TRABALHADOR</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE ALFREDO CHAVES/ES - <strong>CONCURSO PÚBLICO Nº 001/2023<strong></strong></strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=134" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MUQUI/ES - <strong>PROCESSO SELETIVO Nº 001/2023<strong> <br/>PERíODO DE INSCRIçõES: 12 A 21/07/2023.<strong></strong></strong></strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=132" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE BOM JARDIM/RJ - <strong>CONCURSO PÚBLICO Nº 001/2022<strong> <br/>PERíODO DE INSCRIçõES: 11 A 28/11/2022.<strong></strong></strong></strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=131" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE DIVINO/MG - <strong>CONCURSO PÚBLICO Nº 001/2022<strong></strong></strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=130" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE SANTA LEOPOLDINA/ES - <strong>CONCURSO PÚBLICO Nº 001/2022<strong> <br/>CONCURSO PúBLICO ENCERRADO <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></strong></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=129" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE CARMO/RJ - <strong>CONCURSO PÚBLICO Nº 001/2022<strong> <br/>CONCURSO PúBLICO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></strong></strong></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=128" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE CARMO/RJ - <strong>PROCESSO SELETIVO PÚBLICO 001/2021<strong> <br/>PROCESSO SELETIVO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></strong></strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=127" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>GUARAPARI</strong>/ES - <strong>CONCURSO PÚBLICO</strong> 001/2020 <br/> CONCURSO PúBLICO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=125" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 - PREFEITURA MUNICIPAL DE BARRA DO PIRAÍ / RJ <br/> <strong>PROVA PRáTICA - 2ª CHAMADA (MOTORISTA “D” E MERENDEIRO) <strong><br/> PARA ACESSAR CLIQUE AQUI!</strong></strong></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=124" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CÂMARA MUNICIPAL DE <strong>DIVINO</strong>/MG - <strong>CONCURSO PÚBLICO 001/2020</strong> <br/> CLIQUE AQUI PARA ACESSAR!</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=122" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>COMENDADOR LEVY GASPARIAN</strong>/RJ - <strong>CONCURSO PÚBLICO 001/2020</strong> <br/> CONCURSO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=121" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>CONCEIÇÃO DE MACABU</strong>/RJ - <strong>CONCURSO PÚBLICO 001/2019</strong> <br/> CONCURSO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=120" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>QUISSAMÃ</strong>/RJ - <strong>CONCURSO PÚBLICO 001/2019</strong> <br/>CONCURSO ENCERRADO<strong> <br/>PARA ACESSAR CLIQUE AQUI!I!</strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=119" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>LAJE DO MURIAÉ</strong>/RJ - <strong>PROCESSO SELETIVO SIMPLIFICADO 001/2019</strong><br/>SECRETARIA MUNICIPAL DE SAúDE E SECRETARIA MUNICIPAL DE ASSISTêNCIA SOCIAL</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=118" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>AREAL</strong>/RJ - CONCURSO PÚBLICO <strong>002/2019</strong><br/> CARGOS DE ENS. FUNDAMENTAL COMPLETO E INCOMPLETO,  ENS. MéDIO, ENS. SUPERIOR E MAGISTéRIO<br/>PERíODO </h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=117" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>AREAL</strong>/RJ - CONCURSO PÚBLICO <strong>001/2019</strong> <br/> CARGOS DE ENS. FUND. INCOMPLETO (5º ANO), ENS. SUPERIOR E MAGISTéRIO.<br/> INSCRIçõES ENCERRADAS.<br/></h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=116" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>LAJE DO MURIAÉ</strong>/RJ - <strong>CONCURSO PÚBLICO 001/2019</strong></h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=115" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>PORCIÚNCULA</strong>/RJ - CONCURSO PÚBLICO <strong>002/2019</strong><br/> (MAGISTéRIO, PROCURADOR ADJUNTO, GUARDA CIVIL MUNICIPAL E DEMAIS CARGOS DE ENS. FUND. INCOMPLET</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=114" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE <strong>PORCIÚNCULA</strong>/RJ - CONCURSO PÚBLICO <strong>001/2019</strong> <br/> (ENS. FUND. COMPLETO, ENSINO MéDIO COMPLETO E ENSINO SUPERIOR COMPLETO )<br/>CLIQUE AQUI PARA A</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=113" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - CONCURSO PúBLICO 001/2011 - 3ª CHAMADA PARA PROVAS PRáTICAS</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=66" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - PROCESSO SELETIVO PúBLICO 001/2013</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=52" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - CONCURSO PúBLICO 001/2011 - 2ª CHAMADA PARA PROVAS PRáTICAS</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=39" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - CONCURSO PúBLICO 001/2011 - GUARDA MUNICIPAL</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=23" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - PROCESSO SELETIVO PúBLICO 001/2011</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=22" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE MARATAíZES/ES - CONCURSO PúBLICO 001/2011</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=19" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE BAIXO GUANDU/ES - CONCURSO PÚBLICO 001/2019 <br/> CONCURSO PúBLICO CONCLUíDO.</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=111" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA DE BARRA DO PIRAÍ/RJ - PROCESSO SELETIVO SIMPLIFICADO 001/2019 <br/> (PROCESSO SELETIVO CONCLUÍDO) </h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=110" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE CANTAGALO/RJ - CONCURSO PÚBLICO 001/2019 <br/> (RESULTADO FINAL DO CONCURSO PUBLICADO)</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=109" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE VILA VALÉRIO/ES - PROCESSO SELETIVO SIMPLIFICADO 001/2019 <br/>(RESULTADO FINAL PUBLICADO)</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=108" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CÂMARA MUNICIPAL DE CONCEIÇÃO DA BARRA/ES CONCURSO PÚBLICO 001/2018 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=107" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2009 - SAAESA-SERVIçO AUTôNOMO DE ÁGUA E ESGOTO DE AREAL / RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=6" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2009 - CâMARA MUNICIPAL DE AREAL / RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=7" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2009 - PREFEITURA MUNICIPAL DE AREAL / RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=8" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE CONCEIÇÃO DA BARRA/ES CONCURSO PÚBLICO 001/2018 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=105" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO 001/2013 - PREFEITURA MUNICIPAL DE VARRE-SAI/RJ</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=53" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2015 - PREFEITURA MUNICIPAL DE VARRE-SAI/RJ<br/>CONVOCAÇÃO PARA PROVA PRÁTICA PARA MOTORISTA II (2ª CHAMADA)</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=68" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2015 - CÂMARA MUNICIPAL DE VARRE-SAI/RJ</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=69" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2017 CâMARA MUNICIPAL DE APIACá/ES </h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=97" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE COLATINA/ES - CONCURSO PÚBLICO 003/2017 - MAGISTéRIO, PROCURADORIA E CONTROLE INTERNO (MPCI)</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=89" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">SANEAR - SERVIÇO COLATINENSE DE SANEAMENTO AMBIENTAL - COLATINA/ES CONCURSO PÚBLICO 001/2017 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=99" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CODESP - CONSóRCIO INTERMUNICIPAL PARA O DESENVOLVIMENTO DA SAúDE PúBLICA PORCIúNCULA/NATIVIDADE(RJ) CONCURSO PÚBLICO 001/2016  <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=87" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE BARRA DE SÃO FRANCISCO/ES - PROCESSO SELETIVO 001/2017 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=100" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE CARDOSO MOREIRA/RJ - CONCURSO PÚBLICO 001/2018 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=101" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE BARRA DE SÃO FRANCISCO/ES - PROCESSO SELETIVO 002/2018 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=103" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CÂMARA MUNICIPAL DE NOVA VENÉCIA/ES CONCURSO PÚBLICO 001/2018 <br/> (PROCESSO CONCLUÍDO)</h4></small>
+<p>
+<a href="https://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=104" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">ORDESC - MUNICIPIO DE COLATINA/ES - PROCESSO SELETIVO PÚBLICO 001/2017</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=98" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE COLATINA/ES - CONCURSO PÚBLICO 002/2017 - PROFISSIONAL MUNICIPAL OPERACIONAL, DE ADMINISTRAçãO, DE PRODUçãO E DE NíVEL SUPERIOR (PMO/PMA/PMP/PMNS)</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=90" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PREFEITURA MUNICIPAL DE COLATINA/ES - CONCURSO PÚBLICO 001/2017 - NíVEL FUNDAMENTAL, MéDIO E TéCNICO (ADM)</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=88" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO SIMPLIFICADO 001/2017 - PREFEITURA MUNICIPAL DE VARGEM ALTA/ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=96" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO 001/2017 - PREFEITURA MUNICIPAL DE VILA VALÉRIO/ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=95" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016  - PREFEITURA MUNICIPAL DE  JOãO NEIVA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=93" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 PREFEITURA MUNICIPAL DE CACHOEIRO DE ITAPEMIRIM/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=92" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 - CâMARA MUNICIPAL DE MONTANHA/ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=91" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 CâMARA MUNICIPAL DE SãO JOãO DA BARRA/RJ</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=86" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 - PREFEITURA MUNICIPAL DE MANTENóPOLIS/ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=85" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 - CâMARA MUNICIPAL DE QUEIMADOS/RJ</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=84" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO 001/2016 - PREFEITURA MUNICIPAL DE CONCEIçãO DO CASTELO/ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=83" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE AFONSO CLáUDIO/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=81" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - SAAE - JERONIMO MONTEIRO/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=80" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE JAGUARé/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=79" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO - PREFEITURA MUNICIPAL DE DOMINGOS MARTINS</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=78" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE SãO GABRIEL DA PALHA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=76" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO AGENTE COMUNITáRIO DE SAUDE - ORDESC</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=75" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2016-CURSO DE EDUCAçãO PROFISSIONAL TéCNICA DE NíVEL MéDIO: ESPECIALIZAçãO EM ENFERMAGEM ONCOLóGICA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=74" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2016-PROGRAMA DE RESIDêNCIA MéDICA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=72" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2016-PROGRAMAS DE RESIDêNCIA MULTIPROFISSIONAL EM ONCOLOGIA E RESIDêNCIA EM FíSICA MéDICA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=73" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2016-CURSO DE EDUCAçãO PROFISSIONAL TéCNICA DE NíVEL MéDIO: ESPECIALIZAçãO EM RADIOTERAPIA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=71" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2016-CURSO DE EDUCAçãO PROFISSIONAL TéCNICA DE NíVEL MéDIO: FORMAçãO EM CITOPATOLOGIA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=70" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE COLATINA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=67" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE SãO FIDéLIS/RJ</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=65" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2015 - PREFEITURA MUNICIPAL DE SãO JOSé DE UBá-RJ</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=64" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2015 IPACI - INSTITUTO DE PREVIDêNCIA DO MUNICíPIO DE CACHOEIRO DE ITAPEMIRIM-ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=63" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2015 - PREFEITURA MUNICIPAL DE BREJETUBA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=62" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2015 - CURSO TéCNICO DE NíVEL MéDIO: ESPECIALIZAçãO EM ENFERMAGEM ONCOLÓGICA.</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=57" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2015 - PROGRAMA DE RESIDêNCIA MéDICA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=58" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2015- RESIDêNCIA MULTIPROFISSIONAL EM ONCOLOGIA E RESIDêNCIA EM FíSICA MéDICA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=59" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO INCA/2015 - CURSO DE EDUCAçãO PROFISSIONAL TéCNICA DE NíVEL MéDIO: FORMAçãO EM CITOPATOLOGIA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=60" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO/2015 - CURSO DE EDUCAÇÃO PROFISSIONAL TÉCNICA DE NÍVEL MÉDIO: ESPECIALIZAÇÃO EM RADIOTERAPIA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=61" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SEL. 003/2013 - FEMASS - ADMINISTRAÇÃO, ENGENHARIA DE PRODUÇÃO E SISTEMAS DE INFORMAÇÃO</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/vest/default.php?id_concurso=56" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO 001/2013 - PREFEITURA MUNICIPAL DE MIMOSO DO SUL</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=55" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2013  - CâMARA MUNICIPAL DE IBATIBA</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=54" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2012 - PREFEITURA MUNICIPAL DE BOA ESPERANçA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=51" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO - CâMARA MUNICIPAL DE ANCHIETA-ES / PROCURADOR</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=50" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO - CâMARA MUNICIPAL DE ANCHIETA-ES / ADMINISTRATIVO</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=49" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2012 FUNDO MUNICIPAL DE SAúDE - PREFEITURA MUNICIPAL DE MONTANHA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=47" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO 001/2012 FUNDO MUNICIPAL DE SAúDE - PREFEITURA MUNICIPAL DE MONTANHA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=48" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2012 - CâMARA MUNICIPAL DE APERIBé/RJ</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=46" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREFEITURA MUN. DE BAIXO GUANDU/ES - NÍVEL SUPERIOR</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=45" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PREFEITURA MUN. DE BAIXO GUANDU/ES - NÍVEL FUNDAMENTAL/MÉDIO</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=43" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PROCURADOR AGERSA 001/2012</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=42" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA AGERSA - AGêNCIA MUN. DE REG. DOS SERVIçOS DE SANEAMENTO</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=41" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">2ª CHAMADA PROVAS PRáTICAS CP 001/2011 PREF. MUN. DE PIúMA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=40" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREF. MUN. DE GUARAPARI/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=38" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SEL. PúBLICO PREF. MUN. RIO NOVO DO SUL/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=37" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DO SAAE - ARACRUZ/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=36" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO CâMARA MUNICIPAL DE CAMBUCI/RJ</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=35" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREF. MUN. DE DORES DO RIO PRETO/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=34" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO CâMARA MUN. DE PRESIDENTE KENNEDY-ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=33" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREF. MUN. DE CASTELO - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=32" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA CâMARA MUN. DE VARGEM ALTA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=31" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SEL. INTERNO - ELEIçãO DE DIRETORES - SEMED - VIANA - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=30" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO DA PREFEITURA MUN. DE VARGEM ALTA/ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=29" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREFEITURA MUNICIPAL DE PIúMA - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=28" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO CâMARA MUNICIPAL DE COLATINA - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=27" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO CâMARA MUNICIPAL DE CASTELO - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=15" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PREFEITURA MUNICIPAL DE VIANA-PROCURADOR MUNICIPAL - ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=20" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PREFEITURA MUNICIPAL DE VIANA - ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=18" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PREFEITURA MUNICIPAL DE SANTA LEOPOLDINA - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=21" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2011 - PREFEITURA MUNICIPAL DE SÃO SEBASTIÃO DO ALTO / RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=24" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO PREFEITURA MUN. SãO JOSé DO CALçADO-ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=25" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO FUNDO MUN. SAúDE DA PMSJC - ES</h4></small>
+<p>
+<a href="http://www.gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=26" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA CâMARA MUNICíPAL DE CACHOEIRO DE ITAPEMIRIM - ES</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=60&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA CâMARA MUNICIPAL DE CASTELO - ES</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=61&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DE SANTA MARIA DE JETIBá - ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=14" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DO MUNICíPIO DE BOM JESUS DO NORTE - ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=17" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREFEITURA DE VIANA - ES - PROCURADOR MUNICIPAL</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/concurso/concurso.php?id_concurso=20" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREFEITURA MUNICíPAL DE VIANA - ES</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=18" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2010 - PREFEITURA MUNICIPAL DE SÃO SEBASTIÃO DO ALTO / RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=13" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA PREFEITURA MUNICIPAL DE BOM JESUS DE ITABAPOANA - RJ .</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=57&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA CâMARA MUNICIPAL DE FUNDãO - ES.</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=58&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;"> PROCESSO SELETIVO PúBLICO DE CARANGOLA</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=54&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO DA CâMARA MUNICIPAL DE ATíLIO VIVáCQUA - ES</h4></small>
+<p>
+<a href="http://www.gualimp.com.br/concursos_exibe2.php?id=55&amp;concurso=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO DE SOORETAMA - ES</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO Nº 001/2009 DA PREFEITURA MUNICIPAL DE VILA VALéRIO-ES</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=2" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO PúBLICO Nº 001/2009 DA PREFEITURA MUNICIPAL DE APIACá-ES</h4></small>
+<p>
+<a href="http://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=97" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;"> CONCURSO PúBLICO 001/2008 - PREFEITURA MUNICIPAL DE CARDOSO MOREIRA</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=101" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2007 - PREFEITURA MUNICIPAL DE ICONHA-ES</h4></small>
+<p>
+<a href="http://www.iconha.es.gov.br/" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO - PREFEITURA MUNICIPAL DE RIO NOVO DO SUL</h4></small>
+<p>
+<a href="http://www.rionovodosul.es.gov.br/portal1/intro.asp?iIdMun=100132061" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO SIMPLIFICADO Nº 001/2007 DA PREFEITURA MUNICIPAL DE APIACá-ES</h4></small>
+<p>
+<a href="http://www.apiaca.es.gov.br/" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;"> CONCURSO PúBLICO - PREFEITURA MUNICIPAL DE MUNIZ FREIRE</h4></small>
+<p>
+<a href="http://www.munizfreire.es.gov.br/" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">PROCESSO SELETIVO SIMPLIFICADO Nº 001/2008 DA PREFEITURA MUNICIPAL DE BOM JESUS DO ITABAPOANA</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=4" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - CâMARA MUNICIPAL DE SãO JOãO DA BARRA SãO JOãO DA BARRA/RJ.</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=86" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - CODESP - CONSóRCIO INTERMUNICIPAL PARA O DESENVOLVIMENTO DA SAúDE PúBLICA NATIVIDADE / PORCIúNCULA/RJ</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=87" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - “EDUCAçãO BáSICA” E “APOIO à EDUCAçãO BáSICA”</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=92" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - CâMARA MUNICIPAL DE MONTANHA MONTANHA/ES.</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=91" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 003/2016 - PROFISSIONAL MUNICIPAL OPERACIONAL E PROFISSIONAL MUNICIPAL DE NíVEL SUPERIOR</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=90" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 002/2016 - MAGISTéRIO, PROCURADORIA E CONTROLE INTERNO</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=89" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+<small><h4 style="text-transform:uppercase;">CONCURSO PúBLICO 001/2016 - ADMINISTRATIVO – NíVEL FUNDAMENTAL, MéDIO E TéCNICO.</h4></small>
+<p>
+<a href="https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=88" target="_blank">Clique aqui para acessar</a>
+</p>
+<hr/>
+</hr></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></div>
+<script>
+	$(document).ready(function(){
+	    $(".nav-tabs a").click(function(){
+	        $(this).tab('show');
+	    });
+	});
+</script>
+<style type="text/css">
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { border:none; font-weight:bold; background-color:#0293d2; color:#FFF; }
+	.nav-tabs>li>a { color:#000; }
+	.well { border-radius:0px !important; margin-top: 10px; }
+</style>
+<!--############################ SITE ############################-->
+<!--############################ RODAPE ############################-->
+<section id="section-empresas-main">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-12 hidden-xs hidden-sm">
+<div class="box-empresas" id="box-empresas1">
+<h3>Empresa Registrada:</h3>
+<div>
+<center>
+<a href="http://www.craes.org.br/home/index.php" target="_blank" title="CRA-ES">
+<img alt="CRA-ES" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/cra-es.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://crc-es.org.br/" target="_blank" title="CRC-ES">
+<img alt="CRC-ES" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/crc-es.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://www.creaes.org.br/creaes/" target="_blank" title="CREA-ES">
+<img alt="CREA-ES" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/crea-es.png"/>
+</a>
+</center>
+</div>
+</div>
+</div>
+<div class="col-md-8 col-sm-12 hidden-xs hidden-sm">
+<div class="box-empresas" id="box-empresas2">
+<div>
+<center>
+<a href="http://www.pgfn.fazenda.gov.br/" target="_blank" title="Procuradoria Geral da Fazenda Nacional">
+<img alt="Procuradoria Geral da Fazenda Nacional" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/procuradoria-geral.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://idg.receita.fazenda.gov.br/" target="_blank" title="Receita Federal">
+<img alt="Receita Federal" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/receita-federal.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://www.mec.gov.br/" target="_blank" title="Ministério da Educação | Governo Federal">
+<img alt="Ministério da Educação | Governo Federal" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/ministerio-educacao.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://internet.sefaz.es.gov.br/" target="_blank" title="SEFAZ | Secretaria  do Estado da Fazenda">
+<img alt="SEFAZ | Secretaria  do Estado da Fazenda" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/sefaz.png"/>
+</a>
+</center>
+</div>
+<div>
+<center>
+<a href="http://www.previdencia.gov.br/" target="_blank" title="Providência Social">
+<img alt="Providência Social" class="img-responsive" src="https://www.gualimp.com.br/imagens/logos/providencia-social.png"/>
+</a>
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer id="footer">
+<div id="bg1-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4 hidden-sm hidden-xs">
+<div id="mapa-footer">
+<a data-target="#ondeEstamos" data-toggle="modal" href="javascript:;">
+<img alt="" class="img-responsive" src="https://www.gualimp.com.br/imagens/mapa-footer.jpg"/>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div id="texto-footer">
+<p class="text-center">
+<b>(28) 3553-1939 / (28) 99983-4846<br>(28) 98805-0291</br></b>
+</p>
+<p class="text-center">
+							Rua Manoel Alves de Siqueira, 41<br>
+							Bela Vista, Guaçuí - ES<br>
+							CEP: 29.560-000
+						</br></br></p>
+</div>
+</div>
+<div class="col-md-4 hidden-sm hidden-xs">
+<div id="facebook-footer">
+<div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/GStrategic" data-show-facepile="true" data-small-header="true" data-tabs="like" style="width:100%; float:left;"><blockquote cite="https://www.facebook.com/GStrategic" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GStrategic">G-Strategic</a></blockquote></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bg2-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div id="copyright">Copyright @ 2016 GStrategic. Todos os direitos reservados.</div>
+</div>
+<div class="col-md-6">
+<div id="link-rd">
+<a href="http://www.rdweb.com.br" target="blank">
+<span>Desenvolvimento</span>
+<img alt="RDWEB" src="https://www.gualimp.com.br/imagens/logo-rd.png"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--############################ RODAPE ############################-->
+
+<script src="https://www.gualimp.com.br/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://www.gualimp.com.br/js/slick/slick.min.js"></script>
+<script src="https://www.gualimp.com.br/js/parallax/parallax.min.js" type="text/javascript"></script>
+<!-- ###### AUTOCOMPLETE ###### -->
+<script src="https://www.gualimp.com.br/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script> var Jquery = $.noConflict(); </script>
+<script src="https://www.gualimp.com.br/js/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+Jquery(function(){
+  Jquery(".telefone").mask("(99) 99999-999?9").focusout(function(){
+     var phone, element;
+        element = Jquery(this);
+     element.unmask();
+        phone = element.val().replace(/\D/g, '');
+     if(phone.length > 10){
+         element.mask('(99) 99999-999?9');
+
+       }else{
+         element.mask('(99) 9999-9999?9');
+     }
+  }).trigger('focusout');
+});
+</script>
+<script src="https://www.gualimp.com.br/js/scripts.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.7&appId=1443358502652079";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

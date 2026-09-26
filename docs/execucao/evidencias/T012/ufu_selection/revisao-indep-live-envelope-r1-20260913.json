@@ -1,0 +1,51 @@
+{
+  "schema": "t012.independent-live-envelope-review.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only independent review; no live/import/API/DB effects",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "envelope": "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r1.json",
+  "verdict": "BLOCKER",
+  "checks": {
+    "currentness": {
+      "result": "PASS",
+      "basis": "accepted strong-preflight review: registration ended 2026-09-03T14:59:00 and next schedule 2026-10-15T09:00:00 remains future as of 2026-09-13"
+    },
+    "official_html_and_pins": {
+      "result": "PASS",
+      "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+      "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+      "byte_len": 26619,
+      "pages": 1,
+      "basis": "ufu_selection/content-receipt.json and accepted integration/strong-preflight reviews"
+    },
+    "allowed_fields": {
+      "result": "BLOCKER",
+      "envelope_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "cronograma_proximo"],
+      "accepted_round_trip_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+      "accepted_integration_contract_names": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+      "condition": "Envelope has six fields and cronograma_proximo is not the five-field live import contract; do not silently rename it to prova_data or infer a sixth permitted field"
+    },
+    "explicit_omissions": {
+      "result": "PASS",
+      "fields": ["taxa", "cargos", "remuneracao", "documentos_pdf", "linked_documents"],
+      "reference_only": true
+    },
+    "round_trip_idempotency": {
+      "result": "PASS_FOR_ACCEPTED_FIVE_FIELD_PAYLOAD_ONLY",
+      "basis": "test_ufu_selection_preflight.py accepted import then idempotent result and zero publication records; exact live envelope remains blocked by field-contract mismatch"
+    },
+    "zero_effects": {
+      "result": "PASS",
+      "basis": "accepted integration review and preflight assert zero proposal/version/outbox effects; this review performed no writes outside this receipt"
+    }
+  },
+  "required_gate": "Revise live-envelope-ready-r1.json to the explicitly accepted five-field contract, or obtain a new accepted contract that names cronograma_proximo/prova_data; then rerun independent review.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/ufu_selection/integration-r1.json",
+    "docs/execucao/evidencias/T012/ufu_selection/revisao-Luna-integration-r1-20260913.json",
+    "docs/execucao/evidencias/T012/ufu_selection/revisao-Luna-strong-preflight-r1-20260913.json",
+    "backend/tests/test_ufu_selection_preflight.py"
+  ]
+}

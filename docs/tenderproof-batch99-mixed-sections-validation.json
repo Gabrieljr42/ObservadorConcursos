@@ -1,0 +1,1031 @@
+{
+  "validated_at": "2026-09-08T15:49:23.283755+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99mixsections",
+  "original": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+  "scope": "Two real same-host processes consume shared isolated SQLite using parameterized preserved valid samples and three explicit failure cases; no production throughput or distributed-storage claim.",
+  "valid_sources": [
+    "fappr_selection",
+    "fatec_selection"
+  ],
+  "controlled_blocked_sources": [
+    "fapesc_selection",
+    "fepese_open",
+    "nossorumo_open"
+  ],
+  "sources_without_contract_excluded_from_queue": [
+    "oppus_open",
+    "fapemig_selection",
+    "fapes_selection",
+    "fapesq_selection",
+    "faped_selection",
+    "fapepi_selection",
+    "fapema_selection",
+    "fapece_selection",
+    "fapern_selection",
+    "fapeal_selection",
+    "facepe_selection",
+    "fundect_selection",
+    "fapemat_selection",
+    "fapdf_selection",
+    "fapt_selection",
+    "fapeam_selection",
+    "fapeap_selection",
+    "faperr_selection",
+    "fapero_selection",
+    "fapac_selection"
+  ],
+  "registered_sources_not_in_this_proof": [
+    "klc_open",
+    "legatus_open",
+    "ieses_open",
+    "verbena_selection",
+    "funpec_selection",
+    "fade_selection",
+    "fapex_selection",
+    "fapese_selection",
+    "fapesb_selection",
+    "faperj_selection",
+    "fapesp_selection",
+    "fapergs_selection",
+    "fapeg_selection",
+    "fapespa_selection"
+  ],
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "retry_base_s": 1,
+  "max_attempts": 2,
+  "original_report": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\tenderproof-batch99-continuous-replay-sections.json",
+  "consumer_busy_sleep_s": 0.05,
+  "page_limits": {
+    "default": 60
+  },
+  "clock_fixture": "Between rounds, only selected known candidate next_check=0,last_checked=-1; real retry timestamps unchanged.",
+  "failure_fixture_evidence": [
+    "../docs/tenderproof-batch99-regions-pdf-replay.json",
+    "../docs/tenderproof-batch99-fepese-live.json",
+    "../docs/tenderproof-batch99-nossorumo-live.json"
+  ],
+  "limitations": [
+    "Controlled replay reproduces reported HTTP/connection failures; it does not assert current external availability.",
+    "Consumers use unmodified ContinuousEngine, not Celery/Redis.",
+    "Other validation tasks share the host; measured times do not isolate queue policy."
+  ],
+  "rounds": [
+    {
+      "iteration": 1,
+      "duration_s": 9.093,
+      "initial_backlog": 10,
+      "final_backlog": 0,
+      "core_sha256_before_workers": {
+        "continuous.py": "82a36786fa0cd97188127ea9a3fac078b28b5216bf345212554a12cbe015a046",
+        "continuous_store.py": "8f92e651f1f66bd19630089efd2ec4024ff371584a6b4057cbcb960c516d213f",
+        "service.py": "7fe7fa13635798286a6848312f44b0e801989394c7ceb3d44e9d919560e69684",
+        "store.py": "ce4144fe5932562fa1010f59e11c8a40ff99a64cd8264a5e3ff2d79e2a11c82c"
+      },
+      "workers": [
+        {
+          "pid": 30048,
+          "duration_s": 7.688,
+          "peak_pending_backlog": 10,
+          "events": [
+            {
+              "job_id": "tcj-114b18f3a3c555709e01870934335f4b",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.718
+            },
+            {
+              "job_id": "tcj-ae0cd479fa9257789024f445c0c7edf6",
+              "result": {
+                "status": "succeeded",
+                "observation_id": "tco-d27e936b93ac1287f8ab6f27adc86adf0a0dc8c228e412ff45f7da6d01bd9b3d"
+              },
+              "duration_s": 1.438
+            },
+            {
+              "job_id": "tcj-6874f00ba23057efb130548909371a72",
+              "result": {
+                "status": "succeeded",
+                "observation_id": "tco-5ff8863df3cb7cd34e5d4a5f0bac7804629b1ed78d7a99df8d9553eaa15e14e7"
+              },
+              "duration_s": 1.453
+            },
+            {
+              "job_id": "tcj-521767df30d954fa85de209603bae714",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.922
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.078
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.141
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.094
+            }
+          ],
+          "statuses": {
+            "succeeded": 4,
+            "retry_or_failed": 3,
+            "acquisition_busy": 1
+          },
+          "downloads": {
+            "fappr_selection": 1,
+            "fatec_selection": 1,
+            "nossorumo_open": 2
+          },
+          "drivers_created": 8,
+          "drivers_closed": 8
+        },
+        {
+          "pid": 41508,
+          "duration_s": 7.687,
+          "peak_pending_backlog": 10,
+          "events": [
+            {
+              "job_id": "tcj-2169d3547d785377a8990f153de22ffc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-6874f00ba23057efb130548909371a72",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-521767df30d954fa85de209603bae714",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-a74e656cb52d52cf83ee9fd14d065e16",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-2169d3547d785377a8990f153de22ffc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-6874f00ba23057efb130548909371a72",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.062
+            },
+            {
+              "job_id": "tcj-521767df30d954fa85de209603bae714",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-a74e656cb52d52cf83ee9fd14d065e16",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-2169d3547d785377a8990f153de22ffc",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.172
+            },
+            {
+              "job_id": "tcj-521767df30d954fa85de209603bae714",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.046
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-a74e656cb52d52cf83ee9fd14d065e16",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-521767df30d954fa85de209603bae714",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-83bfc4166af35080acc26260b6e37305",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.046
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.469
+            },
+            {
+              "job_id": "tcj-a74e656cb52d52cf83ee9fd14d065e16",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.11
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.046
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.062
+            },
+            {
+              "job_id": "tcj-5dbda1a1fd8a5235aff2cf609fe8e16e",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.188
+            },
+            {
+              "job_id": "tcj-d76f19e4d6a55200a997479465d0d8b8",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.125
+            },
+            {
+              "job_id": "tcj-452e6661551d58a3b20db2ca62401c0b",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.484
+            }
+          ],
+          "statuses": {
+            "acquisition_busy": 29,
+            "succeeded": 3,
+            "retry_or_failed": 3
+          },
+          "downloads": {
+            "fapesc_selection": 2
+          },
+          "drivers_created": 21,
+          "drivers_closed": 21
+        }
+      ],
+      "exitcodes": [
+        0,
+        0
+      ],
+      "worker_pids": [
+        31624,
+        46820
+      ],
+      "actual_worker_pids": [
+        30048,
+        41508
+      ],
+      "actual_workers_confirmed_terminal": true,
+      "workers_confirmed_terminal": true,
+      "sources": [
+        {
+          "source": "fappr_selection",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "source": "fatec_selection",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "source": "nossorumo_open",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        },
+        {
+          "source": "fepese_open",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        },
+        {
+          "source": "fapesc_selection",
+          "status": "partial",
+          "reasons": [
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        }
+      ],
+      "metrics": {
+        "measured_at": 1788882572.4372537,
+        "jobs_by_status": {
+          "failed": 3,
+          "succeeded": 7
+        },
+        "retry_attempts": 3,
+        "oldest_ready_delay_seconds": 0,
+        "completed_cycles_by_source": [
+          {
+            "source": "fapesc_selection",
+            "cycles": 1,
+            "mean_seconds": 8.021267652511597,
+            "max_seconds": 8.021267652511597
+          },
+          {
+            "source": "fappr_selection",
+            "cycles": 1,
+            "mean_seconds": 3.3016457557678223,
+            "max_seconds": 3.3016457557678223
+          },
+          {
+            "source": "fatec_selection",
+            "cycles": 1,
+            "mean_seconds": 4.884932041168213,
+            "max_seconds": 4.884932041168213
+          },
+          {
+            "source": "fepese_open",
+            "cycles": 1,
+            "mean_seconds": 8.241697549819946,
+            "max_seconds": 8.241697549819946
+          },
+          {
+            "source": "nossorumo_open",
+            "cycles": 1,
+            "mean_seconds": 8.7671058177948,
+            "max_seconds": 8.7671058177948
+          }
+        ],
+        "snapshot_pages": 10,
+        "snapshot_html_bytes": 1258772,
+        "unconfirmed_browser_attempts": 0,
+        "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+      }
+    },
+    {
+      "iteration": 2,
+      "duration_s": 9.297,
+      "initial_backlog": 10,
+      "final_backlog": 0,
+      "core_sha256_before_workers": {
+        "continuous.py": "82a36786fa0cd97188127ea9a3fac078b28b5216bf345212554a12cbe015a046",
+        "continuous_store.py": "8f92e651f1f66bd19630089efd2ec4024ff371584a6b4057cbcb960c516d213f",
+        "service.py": "7fe7fa13635798286a6848312f44b0e801989394c7ceb3d44e9d919560e69684",
+        "store.py": "ce4144fe5932562fa1010f59e11c8a40ff99a64cd8264a5e3ff2d79e2a11c82c"
+      },
+      "workers": [
+        {
+          "pid": 49696,
+          "duration_s": 7.953,
+          "peak_pending_backlog": 10,
+          "events": [
+            {
+              "job_id": "tcj-a1892277c9f958b4a6af4f4b78ac51fe",
+              "result": {
+                "status": "succeeded",
+                "observation_id": "tco-d27e936b93ac1287f8ab6f27adc86adf0a0dc8c228e412ff45f7da6d01bd9b3d"
+              },
+              "duration_s": 1.594
+            },
+            {
+              "job_id": "tcj-f276c0af2fd558e8bca71d7cb30a02dc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.547
+            },
+            {
+              "job_id": "tcj-9faa6e99adf15adfa2ad86ab8fd0bad6",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.14
+            },
+            {
+              "job_id": "tcj-a1a68da74054589e85c99f839502b2e3",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-f276c0af2fd558e8bca71d7cb30a02dc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-a59be39cba9a5fb8a622f762ffb422db",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-bf305a2778175f04b27af536f7dcee3c",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.046
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.109
+            },
+            {
+              "job_id": "tcj-ef8cd34fa6e856fdbfd5bcdd10a14e63",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.156
+            },
+            {
+              "job_id": "tcj-f276c0af2fd558e8bca71d7cb30a02dc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-bf305a2778175f04b27af536f7dcee3c",
+              "result": {
+                "status": "succeeded",
+                "observation_id": "tco-5ff8863df3cb7cd34e5d4a5f0bac7804629b1ed78d7a99df8d9553eaa15e14e7"
+              },
+              "duration_s": 1.61
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.078
+            }
+          ],
+          "statuses": {
+            "succeeded": 4,
+            "acquisition_busy": 7,
+            "retry_or_failed": 3
+          },
+          "downloads": {
+            "fappr_selection": 1,
+            "fapesc_selection": 1,
+            "nossorumo_open": 2,
+            "fatec_selection": 1
+          },
+          "drivers_created": 10,
+          "drivers_closed": 10
+        },
+        {
+          "pid": 51996,
+          "duration_s": 7.953,
+          "peak_pending_backlog": 10,
+          "events": [
+            {
+              "job_id": "tcj-bf305a2778175f04b27af536f7dcee3c",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-ef8cd34fa6e856fdbfd5bcdd10a14e63",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-552a0f7159da5021b0a64c2d083af08a",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-a1a68da74054589e85c99f839502b2e3",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-a59be39cba9a5fb8a622f762ffb422db",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-9faa6e99adf15adfa2ad86ab8fd0bad6",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-bf305a2778175f04b27af536f7dcee3c",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-ef8cd34fa6e856fdbfd5bcdd10a14e63",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-552a0f7159da5021b0a64c2d083af08a",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.047
+            },
+            {
+              "job_id": "tcj-a1a68da74054589e85c99f839502b2e3",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-a59be39cba9a5fb8a622f762ffb422db",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.14
+            },
+            {
+              "job_id": "tcj-bf305a2778175f04b27af536f7dcee3c",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.062
+            },
+            {
+              "job_id": "tcj-ef8cd34fa6e856fdbfd5bcdd10a14e63",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.015
+            },
+            {
+              "job_id": "tcj-552a0f7159da5021b0a64c2d083af08a",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.938
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.063
+            },
+            {
+              "job_id": "tcj-a1a68da74054589e85c99f839502b2e3",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.25
+            },
+            {
+              "job_id": "tcj-a59be39cba9a5fb8a622f762ffb422db",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.125
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.062
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.062
+            },
+            {
+              "job_id": "tcj-f276c0af2fd558e8bca71d7cb30a02dc",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.016
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.032
+            },
+            {
+              "job_id": "tcj-87e180382ca15ac1b39541af957d67bb",
+              "result": {
+                "status": "acquisition_busy"
+              },
+              "duration_s": 0.031
+            },
+            {
+              "job_id": "tcj-f276c0af2fd558e8bca71d7cb30a02dc",
+              "result": {
+                "status": "succeeded",
+                "kind": "listing",
+                "candidates": 1
+              },
+              "duration_s": 0.734
+            },
+            {
+              "job_id": "tcj-410705d0bc31565b87b427427e6981e2",
+              "result": {
+                "status": "retry_or_failed",
+                "error": "ValueError"
+              },
+              "duration_s": 0.516
+            }
+          ],
+          "statuses": {
+            "acquisition_busy": 21,
+            "retry_or_failed": 3,
+            "succeeded": 3
+          },
+          "downloads": {
+            "fapesc_selection": 1
+          },
+          "drivers_created": 18,
+          "drivers_closed": 18
+        }
+      ],
+      "exitcodes": [
+        0,
+        0
+      ],
+      "worker_pids": [
+        51948,
+        38916
+      ],
+      "actual_worker_pids": [
+        49696,
+        51996
+      ],
+      "actual_workers_confirmed_terminal": true,
+      "workers_confirmed_terminal": true,
+      "sources": [
+        {
+          "source": "fappr_selection",
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "source": "fatec_selection",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "source": "nossorumo_open",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        },
+        {
+          "source": "fepese_open",
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        },
+        {
+          "source": "fapesc_selection",
+          "status": "partial",
+          "reasons": [
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0
+        }
+      ],
+      "metrics": {
+        "measured_at": 1788882581.8007314,
+        "jobs_by_status": {
+          "failed": 6,
+          "succeeded": 14
+        },
+        "retry_attempts": 6,
+        "oldest_ready_delay_seconds": 0,
+        "completed_cycles_by_source": [
+          {
+            "source": "fapesc_selection",
+            "cycles": 2,
+            "mean_seconds": 8.07120656967163,
+            "max_seconds": 8.121145486831665
+          },
+          {
+            "source": "fappr_selection",
+            "cycles": 2,
+            "mean_seconds": 5.471028804779053,
+            "max_seconds": 7.640411853790283
+          },
+          {
+            "source": "fatec_selection",
+            "cycles": 2,
+            "mean_seconds": 5.894144773483276,
+            "max_seconds": 6.90335750579834
+          },
+          {
+            "source": "fepese_open",
+            "cycles": 2,
+            "mean_seconds": 6.629933953285217,
+            "max_seconds": 8.241697549819946
+          },
+          {
+            "source": "nossorumo_open",
+            "cycles": 2,
+            "mean_seconds": 8.866747736930847,
+            "max_seconds": 8.966389656066895
+          }
+        ],
+        "snapshot_pages": 20,
+        "snapshot_html_bytes": 2517544,
+        "unconfirmed_browser_attempts": 0,
+        "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+      }
+    }
+  ],
+  "passed": true
+}

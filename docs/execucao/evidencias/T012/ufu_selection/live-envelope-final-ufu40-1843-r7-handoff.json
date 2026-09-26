@@ -1,0 +1,13 @@
+{
+  "handoff": "ufu_selection-live-envelope-r7",
+  "snapshot": "live-envelope-final-ufu40-1843-snapshot.json",
+  "snapshot_sha256": "c0f7d2dbf286ddb0d7e95295c64a6486c6733aa414b44b1f7a8fe39a241c8303",
+  "canonical_payload_sha256": "d8ee8f25098087ed7a3a2d4b59bdd6a77e30b1a3b8ec5419b1b778e132ca64d3",
+  "run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+  "stale_run_id": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+  "proposal_target": null,
+  "owner_user_id": 1,
+  "source_id": 40,
+  "external_id": "1843",
+  "status": "READY_FOR_FINAL_REVIEW"
+}

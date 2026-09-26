@@ -1,0 +1,20 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "artifact": {
+    "sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "byte_len": 3630911,
+    "pages": 38
+  },
+  "binding": "organization+main_edital",
+  "dispatcher": "fields.py strict source/external branch; generic fallback is not used on pin failure",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py backend/tests/test_t012_fafipa_r4.py backend/tests/test_t012_fafipa_dispatch_r5.py",
+    "result": "13 passed",
+    "negative_coverage": ["source", "external_id", "sha256", "U+FFFD (parser suite)"],
+    "side_effects": "zero PublicationProposal, ConcursoVersion and PublicationOutbox rows"
+  },
+  "network": false,
+  "pilot_mutated": false
+}

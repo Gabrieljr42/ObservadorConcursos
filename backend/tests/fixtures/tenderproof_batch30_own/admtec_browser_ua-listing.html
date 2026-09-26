@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADM&amp;TEC</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<meta content="ADM&TEC" name="autor" />
+
+	<meta property="og:url" content="">
+	<meta property="og:title" content="ADM&TEC">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="ADM&TEC">
+	<meta property="og:type" content="website">
+        <meta property="fb:app_id" content="496033650515078">
+        <meta content="index, follow" name="robots">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style-metronic.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style-responsive.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/profile.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/red.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/styleMorki.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/material-scrolltop.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.admtec.org.br//css/sistema_mh.css"/>
+	<link rel="stylesheet" type="text/css" href="https://admtec.org.br/asset/css/feather.css"/>
+	<link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v6.4.2/css/all.css"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMEYPMQT2F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMEYPMQT2F');
+</script>
+	<link rel="shortcut icon" href="//cdn.admtec.org.br//img/icone.png" type="image/x-icon">
+<script src="https://www.google.com/recaptcha/api.js?render=6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn"></script>
+
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery-migrate-1.2.1.min.js">
+</script><script type="text/javascript" src="//cdn.admtec.org.br//js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/material-scrolltop.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.inputmask.bundle.min.js"></script>
+<script type="text/javascript" src="//cdn.admtec.org.br//js/myscriptfirst.min.js"></script>
+<script src="//cdn.admtec.org.br//js/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://admtec.org.br/js/cadastros.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--[if lt IE 9]>
+<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet">
+
+<script type="text/javascript">
+    var Site_atual='https://admtec.org.br/';
+function Inicio(pagina)
+{
+
+location.href=pagina ;
+}
+function nova_pagina(pagina){
+    window.open(""+pagina+"");	
+}
+function voltar(){
+window.history.go(-1);
+}
+ $(document).ready(function()
+    {
+        $("#login_sistema").validate({
+            rules: {
+               
+                reCaptcha: {
+                    reCaptchaMethod: true   
+                }
+            },
+            messages: {
+                cpf_candidato_login: "Informe o CPF",
+                senha_candidato_login: "Informe a senha"
+            },
+            submitHandler: function(form) 
+                {
+                    Swal_aguarde('Realizando Login');
+
+                var formData =  new FormData(jQuery('#login_sistema')[0]);
+                $.ajax({
+                    url: 'https://admtec.org.br/usuario/verifica_login',
+                    type: 'POST',
+                    data: formData,
+                    success: function(data) 
+                        {
+                            console.log(data);
+                            Swal.close();
+                            var data=JSON.parse(data);
+                            
+                             //$('#Modal').modal('hide');
+                            Swal.fire({
+                                title: data.mensagem,
+                                icon: data.status,
+                                confirmButtonText: "OK",  
+                                timer: 3000,
+                                showConfirmButton: true,
+                                }).then((result) => {
+                                    if(data.status=='error')
+                                        {
+                                            if(data.redireciona==true)
+                                                location.href='https://admtec.org.br/usuario/cadastrar//';
+                                            return false;
+                                        }
+                                    window.location.reload(true);
+
+
+                                    });
+                        },
+                error: function (request, status, error) {
+                alert(request.responseText);
+                console.log(request.responseText);
+                 Swal.close();
+            },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    xhr: function() 
+                        { // Custom XMLHttpRequest
+                            var myXhr = $.ajaxSettings.xhr();
+                            if (myXhr.upload)
+                                { // Avalia se tem suporte a propriedade upload
+                                    myXhr.upload.addEventListener('progress', function(evt) {
+                                    if (evt.lengthComputable) 
+                                        {
+                                            var percentComplete = evt.loaded / evt.total;
+                                            percentComplete = parseInt(percentComplete * 100);
+                                            $('#progress_bar_upload').attr('aria-valuenow', percentComplete).css('width', percentComplete+'%');                                
+                                        }
+
+                                    }, false);
+                                }
+                            return myXhr;
+                        }
+                    });
+                      
+     
+        }
+    });
+});
+
+</script>
+<style>
+     #icone_login:hover{
+            color:#990000 !important;
+        }
+    .modal-dialog-centered {
+     display: -webkit-box; 
+    display: -ms-flexbox;
+     display: flex; 
+     -webkit-box-align: center; 
+    -ms-flex-align: center;
+     align-items: center; 
+     min-height: calc(100% - (0.5rem * 2));
+    }
+</style>
+	</head>
+<body class="page-header-fixed">
+    <div id="div_cadastro"></div>
+<div class="modal fade c-content-login-form" id="login-div" role="dialog"> 
+            <div class="modal-dialog">
+                <div class="modal-content c-square">
+                                             <div class="modal-body">
+                    <div class="modal-header c-no-border">
+                        <h3 class="c-font-24 c-font-sbold">Seja bem-vindo!</h3>
+                        <p>Por favor, informe o seu CPF e a sua senha para acessar a área do candidato</p>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="
+    position: absolute;
+    right: 15px;
+    top: 15px;
+"><span aria-hidden="true" >&times;</span></button>
+                    </div>
+                        <form id="login_sistema" accept-charset="UTF-8" role="form" method="post">
+                            <div class="form-group">
+                                <input name="cpf_candidato" class="form-control" id="cpf_candidato_login_header" size="15"placeholder="CPF" type="text" required="required">
+                                <script type="text/javascript">$("#cpf_candidato_login_header").mask("999.999.999-99");</script>
+                            </div>
+                            <div class="form-group">
+                                <div id="aviso_caps_lock" style="visibility: hidden; color: #000;">CAPS LOCK ATIVADO</div>
+                                <input class="form-control" required placeholder="Senha" name="senha" type="password" value="" onkeypress="checar_caps_lock(event)">
+                            </div>
+                           
+                            <input class="btn btn-lg btn-primary btn-block" 
+        type="submit"   value="Login" name="Bnt_candidato_login_mvc" id="Bnt_candidato_login"  >
+                            <div class="form-group " style="text-align: right">
+                                <a href="https://admtec.org.br/login/esqueci_senha/" class="c-btn-forgot" id="forget-password-a" >Esqueceu sua senha?</a>
+                            </div>
+                        </form>                            
+                    </div>
+<!--                    <div class="modal-footer c-no-border">                
+                        <span class="c-text-account">Não tem uma conta ainda?</span>
+                        <a href="https://admtec.org.br/Dados_Pessoais" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-slim c-btn-border-1x c-btn-square c-btn-signup">Inscreva-se</a>
+                    </div>-->
+                                         </div>
+            </div>
+        </div>
+      
+<nav class="navbar navbar-default" id="main-nav">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-morki">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                            <a class="navbar-brand" href="https://admtec.org.br"><img style="    max-width: 220px;" src="//cdn.admtec.org.br//img/logo-nav.png"/></a>
+			</div>
+
+
+			<div class="collapse navbar-collapse navbar-morki">
+				<ul class="nav navbar-nav navbar-left" id="nav-menu">
+					<li><a href="//admtec.org.br/concursos/" data-scroll>Concursos</a></li>
+					<li><a href="//admtec.org.br/formacao/">Formação</a></li>
+					<li><a href="https://api.whatsapp.com/send?phone=5581997690218"><i class="fa fa-phone-alt" style="font-size: 19px;"></i><span>(81) 99769-0218</span></a></li>
+					<li class="mailme"><a href="/cdn-cgi/l/email-protection#f99a96979a8c8b8a968ab9989d948d9c9ad7968b9ed79b8b"><i class="fa fa-envelope social-footer"></i> <span><span class="__cf_email__" data-cfemail="96f5f9f8f5e3e4e5f9e5d6f7f2fbe2f3f5b8f9e4f1b8f4e4">[email&#160;protected]</span></span></a></li>
+					
+										<li class="dropdown notifications-menu">
+					<a id="icone_login"  data-toggle="modal" data-target="#login-div" class="btn c-theme-btn c-btn-square c-btn-uppercase btn-danger" onClick="onClick();javascript:setFocusField('login-form-cpf')" style="color:#FFF">
+                                            Área do Candidato   <i class="fa fa-user-circle" style="font-size: 19px;"></i>
+						</a>
+					</li>
+                                        <!--<li class="dropdown notifications-menu ">-->
+<!--                                      <li class="dropdown notifications-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-bell-o" style="color:#990000 !important"></i>
+                                            <span class="label-notify label-warning">6</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="notification-header">Você tem 6 notificações</li>
+                                            <li>
+
+                                                <ul class="notification-itens">
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-campo-alegre-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Campo Alegre (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/fundo-municipal-de-saude-de-gloria-do-goita-pe">
+                                                                <i class="fa fa-pencil"></i> Fundo Municipal de Saúde de Glória do Goitá (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-sao-luiz-do-quitunde-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de São Luis do Quitunde (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-aracoiaba-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Araçoiaba (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-santa-maria-da-boa-vista-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Santa Maria da Boa Vista (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-palmeira-dos-indios-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Palmeira dos Índios (AL)                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                            </li>
+                                            <li class="notification-footer"><a href="/concursos">Ver todos</a></li>
+                                        </ul>
+                                    </li>
+							          -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</nav>
+    
+
+<section class="text-centered  cover">
+
+<section class="top-header">
+    <div class="container">
+        <section class="homepage">
+                <h1 class="call1">Há 35 anos, contribuindo<br>para a melhoria da gestão<br>municipal, estadual e federal.</h1>
+                <p class="call1-bio">Desde 1991, oferecendo as melhores soluções em concursos públicos, eventos, capacitações e consultorias.</p>
+            <a href="/sobre" class="button1">Saiba mais</a>
+        </section>
+
+    </div>    
+</section>    
+
+
+</section>
+
+<section class="services" id="services">
+<div class="container">
+    <h2 class="title">Nossos serviços</h2>
+    <hr width="150px"/>
+    <p class="services-desc">Nossa equipe é composta por profissionais com ampla experiência na gestão de organizações públicas e privadas.
+</p>
+        
+        <div class="row row-up">
+            <div class="column">
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-box">
+                        
+                        <div class="icon">
+                            <img src="//cdn.admtec.org.br//img/concurso.png" height=30>
+                        </div>
+                        
+                            <h3>Concursos públicos</h3>
+                            <p class="pg-services">São mais de 150 mil candidatos avaliados em mais de 40 concursos, exames e seleções públicas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="col-md-4 col-sm-6">
+                        <div class="service-box">
+                            
+                            <div class="icon">
+                                <img src="//cdn.admtec.org.br//img/capacitacao.png" height=30>
+                            </div>
+                            
+                                <h3>Capacitação</h3>
+                                <p class="pg-services">Temos ampla experiência em projetos realizados para organizações públicas e privadas.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-down">
+            <div class="column">
+                <div class="col-md-4 col-sm-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="//cdn.admtec.org.br//img/eventos.png" height=30>
+                            </div>
+                                <h3>Eventos</h3>
+                                <p class="pg-services">Nossos eventos reúnem o que há de mais atual em temas relacionados à gestão e tecnologia.</p>
+                        </div>
+                </div>    
+            </div>
+
+            <div class="column">
+                <div class="col-md-4 col-sm-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="//cdn.admtec.org.br//img/consultoria.png" height=30>
+                            </div>
+                                <h3>Consultoria</h3>
+                                <p class="pg-services">Nossa equipe é reconhecida por auxiliar organizações a atingir resultados excepcionais.</p>
+                        </div>
+                </div>   
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="price-table" id="price-table">
+    <div class="container">
+        <h2 class="title-2">Concursos</h2>
+        <hr class="hr-conc" width="100px"/>
+        <p class="conc-desc">Temos mais de 40 concursos e seleções realizados no Brasil.</p>
+        <div class="row row-conc">
+                                <div class="col-md-3 col-sm-6">
+                        <div class="price-table-wrapper">
+                            <div class="price-header">
+                                <h3 class="title-concurso">PREFEITURA MUNICIPAL DE PIRANHAS(AL)</h3>
+                                <span><!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p style="text-align: center;">Concurso p&uacute;blico para o provimento de vagas em cargos efetivos na&nbsp;<strong>PREFEITURA MUNICIPAL DE PIRANHAS (AL).</strong></p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html></span>
+                                <span></span>
+                            </div>
+                            <a href="https://admtec.org.br/concursos/publicacoes/MTEz/MTIx" class="btn btn-main"><span>Saiba Mais</span></a>
+                        </div>
+                    </div><!-- Ends: .col-sm-3 -->	
+                                    <div class="col-md-3 col-sm-6">
+                        <div class="price-table-wrapper">
+                            <div class="price-header">
+                                <h3 class="title-concurso">PREFEITURA MUNICIPAL DE JOÃO ALFREDO(PE)</h3>
+                                <span><!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p style="text-align: center;">Concurso público para o provimento de vagas em cargos efetivos na <strong>Prefeitura Municipal de João Alfredo (PE).</strong></p>
+</body>
+</html></span>
+                                <span></span>
+                            </div>
+                            <a href="https://admtec.org.br/concursos/publicacoes/MTA4/MTE2" class="btn btn-main"><span>Saiba Mais</span></a>
+                        </div>
+                    </div><!-- Ends: .col-sm-3 -->	
+                                    <div class="col-md-3 col-sm-6">
+                        <div class="price-table-wrapper">
+                            <div class="price-header">
+                                <h3 class="title-concurso">PREFEITURA MUNICIPAL DE IGUARACY(PE)</h3>
+                                <span><!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p style="text-align: center;">Concurso público para provimento de vagas em cargos efetivos na <strong>Prefeitura Municipal de Iguaracy (PE).</strong></p>
+</body>
+</html></span>
+                                <span></span>
+                            </div>
+                            <a href="https://admtec.org.br/concursos/publicacoes/MTA1/MTEz" class="btn btn-main"><span>Saiba Mais</span></a>
+                        </div>
+                    </div><!-- Ends: .col-sm-3 -->	
+                                    <div class="col-md-3 col-sm-6">
+                        <div class="price-table-wrapper">
+                            <div class="price-header">
+                                <h3 class="title-concurso">PREFEITURA DE GRAVATÁ (PE)</h3>
+                                <span><!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>Concurso público para provimento de vagas em cargos efetivos na Prefeitura de Gravatá (PE).</p>
+</body>
+</html></span>
+                                <span></span>
+                            </div>
+                            <a href="https://admtec.org.br/concursos/publicacoes/Njc=/NzI=" class="btn btn-main"><span>Saiba Mais</span></a>
+                        </div>
+                    </div><!-- Ends: .col-sm-3 -->	
+                                    
+        </div>
+    </div>
+</section>
+    
+<!--<section class="clientes">
+    <div class="container">
+        <h2 class="title-3">Alguns clientes</h2>
+        <hr width="150px"/>
+            <div class="client-table">
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">
+                            <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/buique-grey.webp" alt="Prefeitura de Buique" class="img-responsive">
+                                </figure>
+                            </div> Ends: .team-single 
+                    </div>
+                </div>
+                
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">            
+                            <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/arcoverde-grey.webp" alt="Prefeitura de Arcoverde" class="img-responsive">
+                                </figure>
+                            </div> Ends: .team-single 
+                    </div>
+                </div>
+                
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">           
+                        <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/jaboatao-grey.webp" alt="Prefeitura de Jaboatão" class="img-responsive">
+                                </figure>
+                        </div> Ends: .team-single 
+                    </div>  
+                </div>
+                
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">    
+                        <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/brejo-grey.webp" alt="Prefeitura de Brejo" class="img-responsive">
+                                </figure>
+                        </div> Ends: .team-single 
+                    </div>
+                </div>       
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">        
+                        <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/upe-grey.webp" alt="Universidade de Pernambuco" class="img-responsive">
+                                </figure>
+                        </div> Ends: .team-single 
+                    </div>
+                </div>
+                            
+                <div class="client">
+                    <div class="col-md-4 col-sm-6">        
+                            <div class="team-single">
+                                <figure>
+                                    <img src="//cdn.admtec.org.br//img/gravata-grey.webp" alt="Prefeitura de Gravatá" class="img-responsive">
+                                </figure>
+                            </div> Ends: .team-single 
+                        </div> Ends: .team-carousel 
+                    </div> Ends: .col-sm-12 
+            </div>
+    </div>
+</section>-->
+
+<!-- BEGIN CONTAINER -->
+    
+    
+<div class="page-container" style="font-family: Roboto !important;">
+		    
+    
+
+	    	<div class="row-fluid">
+	    			    			
+                </div>
+    	
+    </div>
+
+ <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+<script src="//cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script> 
+<script src="https://admtec.org.br/asset/js/mascara_mh.js"></script>
+  <script src="//vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('//vlibras.gov.br/app');
+  </script>
+  <div class="rodape">
+        <div class="container">
+            <div class="row row-foot">
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                            <h2>Sobre</h2>
+                            <p>O Instituto de Administração e Tecnologia - ADM&amp;TEC, constituído em 1991, é uma sociedade civil sem fins lucrativos, fundada por professores da Faculdade de Administração e Direito de Pernambuco - FCAP, uma das unidades da Universidade de Pernambuco - UPE.</p>
+                            <a style="color: #990000;" href='/sobre'>Saiba mais...</a>
+                    </div>
+                </div>
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="extra-page">
+                            <ul class="links-uteis">
+                                        <li>
+                                            <h2>Links úteis</h2>
+                                        </li>
+                                        <li>
+                                            <a href="//admtec.org.br/formacao" data-scroll="">Formação</a>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <a href="//admtec.org.br/desenvolvimento" data-scroll="">Desenvolvimento institucional</a>
+                                        </li>
+                                        <br>
+                                        
+                                        <br>
+                                        <li>
+                                            <a href="https://www.facebook.com/Institutodeadministracaoetecnologia" target="_blank">ADM&amp;TEC no Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/institutoadmtec/" target="_blank">ADM&amp;TEC no Instagram</a>
+                                        </li>
+
+                                    </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="session-foot">
+                    <div class="col-md-4 col-sm-4">
+                        <h2>Contato</h2>
+                        <a style="color: #990000;" href="/cdn-cgi/l/email-protection#e6858988859394958995a687828b928385c8899481c88494"><span class="__cf_email__" data-cfemail="573438393422252438241736333a23323479382530793525">[email&#160;protected]</span></a>
+                        <p><i class="fa fa-phone-alt" style="font-size: 19px;"></i>(81) 3445.4469</p>
+                        <p><a href="https://api.whatsapp.com/send?phone=5581997690218"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path opacity="1" fill="#990000" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                <span>(81) 99769-0218</span></a></p>
+                        <br>
+                        <p>Segunda a sexta. Das 9:00 às 17:00</p>
+                        <br>
+                        <p>R. Profa. Ângela Pinto, 88 – Sala 5 – Torre<br>Recife/PE – CEP: 50710-010<br>Fone: (81) 3445.4469<br>CNPJ: 35.328.913/0001-16</p>
+                    </div>
+                </div>
+            </div>
+			<br/><br/>
+			<div class="text-rodape">
+					<p class="copyright">
+					2026 &copy; Desenvolvido por MH Informática Ltda
+                    </p>
+				</div>
+			</div>
+</div>
+
+
+    
+
+
+    
+    
+
+	<!-- material-scrolltop button -->
+	<button class="material-scrolltop" type="button"><i class="fa fa-arrow-up" aria-hidden="true" style="color: #fff; font-size: 20px;"></i></button>
+
+	<!-- Initialize material-scrolltop with (minimal) -->
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		$('body').materialScrollTop();
+	</script>
+    
+    
+    
+    
+    
+    
+    
+    
+	<script type="text/javascript" src="//cdn.admtec.org.br//js/hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.themepunch.plugins.min.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/app.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/index.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/ui-extended-modals.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/jquery.sticky.min.js"></script>
+        <script type="text/javascript" src="//cdn.admtec.org.br//js/owl.carousel.min.js"></script>	
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+			App.initBxSlider();
+			Index.initRevolutionSlider();
+			//Sticky JS
+		$(".navbar-default").sticky({topSpacing: 0});
+		$('.owl-carousel').owlCarousel();
+		});
+	</script>
+	<script>
+		    grecaptcha.ready(function() {
+          grecaptcha.execute('6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn', {action: 'submit'}).then(function(token) {
+               $('<input>', {
+                    type: 'hidden',
+                    name: 'g-recaptcha-response',
+                    value: token
+                }).appendTo('form');// Add your logic to submit to your backend server here.
+          });
+        });
+
+	</script>
+</body>

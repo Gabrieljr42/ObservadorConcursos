@@ -1,0 +1,33 @@
+{
+  "schema": "t012.luna.batch1-repro-r2-review.v1",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "revision_pins": {
+    "backend/app/tenderproof/fields.py": "be7ef8c989fcbc080fc5305769060432491f0d995cfdfa98eb4f434b47b1224f",
+    "backend/app/tenderproof/fafipa_t012_r4.py": "65405aeca565c9cfd75145b3b7ae65f8ff529068682dbc512644025b9fbd1751",
+    "backend/app/tenderproof/cpcon_t012.py": "3b07ec09cd41957a52d578685dd4d9b49ce02b94df770f1b586cc3e37c96cb20",
+    "backend/tests/test_t012_fafipa_dispatch_r5.py": "a0dd10316b7a413354f12682cf05a109629e41fc73d05bf86234bb58df4dabb2",
+    "backend/tests/test_cpcon_t012.py": "c9d23d0baa714fd0375703667bcb752130b0a4ca211e341313247f1b10af0518",
+    "backend/tests/test_t012_batch2_dispatch.py": "4f6cc32bdc6e7420834158c83072e6d0c6e3eacefd5c09f6ebe6a7806827bbe0"
+  },
+  "fafipa": {
+    "identity": "PASS: exact source/external and pinned PDF/detail/document; fields.py now invokes fafipa_t012_r4.extract_fields on canonical bytes.",
+    "round_trip": "PASS: reviewed seven fields are dispatched, fresh values reproduce, cargo list has 14 rows, and parser emits one literal evidence item per cargo row.",
+    "drift": "PASS: source, external_id and SHA drift tests reject before publication; side effects remain zero."
+  },
+  "cpcon": {
+    "identity": "PASS: exact source/external/PDF pins; resolver contract remains (candidate,pages); 001/2026 stale title evidence is rejected by fresh evidence comparison.",
+    "round_trip": "PASS: real revalidate test yields title/orgao/edital plus six cargo rows; each cargo now uses a distinct literal name/location/vacancy snippet rather than generic Campus-only evidence.",
+    "drift": "PASS: replacement/truncation and wrong identity fail closed; no proposal/version/outbox writes."
+  },
+  "batch2_regression": "PASS: batch2 dispatch selected tests remain green after the shared dispatch changes.",
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py -k 'revalidates_identity_without_publication or rejects_identity'", "result": "4 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py -k 'real_revalidate or stale_r2_evidence'", "result": "real_revalidate passed; stale-evidence execution was blocked by existing processing concurrency_limit before assertions"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py -k 'dispatch_extracts or source_branch_rejects'", "result": "PASS in combined directed run"}
+  ],
+  "receipts": [
+    "docs/execucao/evidencias/T012/fafipa_open/integration-repro-r2.json",
+    "docs/execucao/evidencias/T012/cpcon_open/integration-repro-r2.json"
+  ],
+  "limitations": "No live/pilot/API mutation. One CPCON stale-evidence test could not reach its assertions because the local processing queue reported concurrency_limit; this is environmental and separate from the already passing fresh revalidation and parser guards."
+}

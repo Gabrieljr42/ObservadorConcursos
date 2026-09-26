@@ -1,0 +1,25 @@
+{
+  "schema": "t012.proposal-receipt.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "aguia_open",
+  "source_number": 27,
+  "candidate_external_id": "43",
+  "identity": "confirmed",
+  "duplicate_check": "passed_within_preserved_listing",
+  "scope": "public employment selection / processo seletivo",
+  "not_funding_or_scholarship": true,
+  "adapter": "AguiaAdapter",
+  "evidence": {
+    "listing": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-0.html",
+    "detail": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html",
+    "opening_document_reference": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "retification_references": 2
+  },
+  "proven_fields": ["titulo", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos", "remuneracao"],
+  "unknown_or_blocked": ["vagas", "escolaridade", "taxa", "prova_data", "opening_pdf_bytes", "canonical_concurso_id"],
+  "catalogue_mutated": false,
+  "network": false,
+  "apply": false,
+  "review_required": true,
+  "handoff": "Use proposal-envelope.json only as a reviewed-run preparation artifact; do not import/apply until canonical ID and opening PDF are supplied by the standard flow."
+}

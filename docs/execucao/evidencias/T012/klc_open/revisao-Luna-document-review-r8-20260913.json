@@ -1,0 +1,67 @@
+{
+  "schema": "t012.klc_open.luna-document-review-r8.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "READY_FOR_PREPARE",
+  "scope": "offline-only; no API, Docker, live mutation, proposal or apply",
+  "package": "document-review-package-r7-retificacao.json",
+  "receipt": "document-review-receipt-r7-20260913.json",
+  "identity": {
+    "owner_user_id": 1,
+    "source_id": 57,
+    "source": "klc_open",
+    "external_id": "632",
+    "candidate_title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+    "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+    "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc"
+  },
+  "pending_document": {
+    "kind": "retificacao",
+    "title": "Retificação 1 - Alteração da Data da Prova",
+    "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+    "artifact_id": "art-klc-ret1-1887b316",
+    "content_path": "docs/execucao/evidencias/T012/klc_open/retificacao-1-1887b316.pdf",
+    "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+    "byte_len": 423600,
+    "pages": 1,
+    "content_type": "application/pdf",
+    "local_checks": {
+      "sha256_match": true,
+      "byte_len_match": true,
+      "page_count_match": true,
+      "literal_17_may_2026": true,
+      "literal_10_may_2026": false,
+      "replacement_character": false
+    }
+  },
+  "decision": {
+    "type": "field_changes",
+    "no_field_change": false,
+    "changes": [
+      {
+        "field_name": "prova_data",
+        "previous": "2026-05-10",
+        "new": "2026-05-17",
+        "provenance": {
+          "artifact_id": "art-klc-ret1-1887b316",
+          "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+          "page": 1,
+          "snippet": "8.1 A Prova Escrita Objetiva para o cargo de que trata este Edital esta prevista para ser aplicada no dia 17 de maio de 2026"
+        }
+      }
+    ],
+    "excluded_unapproved_fields": [
+      "cronograma.resultado_homologacao",
+      "cronograma.resultado_final"
+    ],
+    "operator_instruction": "Prepare using the exact run_id above and one field change only; do not use no_field_change and do not promote other documental changes. Approval/apply remain out of this review."
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py",
+    "result": "13 passed in 1.51s",
+    "network": false,
+    "docker": false
+  },
+  "blockers": [],
+  "next_step": "Integrator may execute the documented prepare-preserved operation with this exact owner/source/external/run/document binding, then independently gate any later decision."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "t012.cpcon.parser-r3-final-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "CPCON_PARSER_R3_ACCEPT_FOR_INTEGRATION_FINAL",
+  "scope": "read_only; parser, strong-preflight, tests and compileall only",
+  "pins": {
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "byte_len": 498894,
+    "pages": 13
+  },
+  "contract": {
+    "extract_identity": "extract_identity(artifact, pages, candidate) verifies source/external/SHA/bytes and returns pinned UEPB + edital 002/2026 evidence",
+    "strong_resolver": "document_identity_ids(candidate, pages)",
+    "adapter_validation": "CPCON adapter wrapper calls the resolver through validation.document_identity_ids(candidate, pages); no positional artifact is required",
+    "typeerror": "not reproduced"
+  },
+  "guards": [
+    "source and external identity drift fail closed",
+    "artifact SHA-256 and byte-length drift fail closed",
+    "page 1 missing/error/truncated fail closed",
+    "U+FFFD anywhere in pages fails closed",
+    "edital 002/2026 must occur exactly once",
+    "literal UEPB marker and verbatim evidence snippets are required",
+    "optional supplied artifact SHA/length metadata is checked and mismatches fail closed"
+  ],
+  "test_result": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py",
+    "result": "5 passed",
+    "compileall": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/cpcon_t012.py: passed"
+  },
+  "integration_boundary": {
+    "shared_revalidate": "The real _revalidate path reaches validation without TypeError and remains 422 fail-closed because cpcon_t012 is intentionally not registered in fields.py/shared extraction; this is the explicit next integration gate, not evidence of parser drift.",
+    "safe_next_step": "Wire this pinned resolver/field adapter into the shared revalidation path, then rerun the same 5-test suite plus isolated ReviewedRun/import dry-run before any proposal or catalog mutation.",
+    "import_or_apply": false,
+    "network": false,
+    "db_or_catalog_mutation": false
+  },
+  "evidence": [
+    "backend/app/tenderproof/cpcon_t012.py",
+    "backend/tests/test_cpcon_t012.py",
+    "docs/execucao/evidencias/T012/cpcon_open/strong-preflight-r3.json",
+    "docs/execucao/evidencias/T012/cpcon_open/cpcon-002-receipt-r2.json"
+  ]
+}

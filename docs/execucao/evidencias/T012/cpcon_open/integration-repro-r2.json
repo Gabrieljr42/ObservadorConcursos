@@ -1,0 +1,12 @@
+{
+  "gate": "T012-BATCH1-REPRO-R2",
+  "result": "PASS",
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "scope": "preserved PDF + disposable SQLite; no live/pilot",
+  "cargo_count": 6,
+  "evidence": "each cargo uses a distinct literal name/location/vacancy snippet; generic Campus-only evidence removed",
+  "negative": "old 001/2026 title snippet rejected by fresh reproduction",
+  "tests": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py",
+  "observed": "10 passed; compileall PASS; publication side effects zero"
+}

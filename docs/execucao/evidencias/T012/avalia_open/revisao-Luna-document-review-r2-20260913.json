@@ -1,0 +1,26 @@
+{
+  "schema": "t012.avalia.luna-document-review-r2.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "AVALIA_DOCUMENT_DECISIONS_R2_ACCEPT_FOR_DISPATCH",
+  "scope": "read-only; dispatch of review decisions only; no proposal retry/approve/apply",
+  "run_id": "tpr-8079a5856a43",
+  "external_id": "631",
+  "checks": {
+    "pending_id_and_url_match": "PASS: both IDs exactly match the prior receipt and R2 content receipts",
+    "retificacao": "PASS: ACCEPT; SHA e8853dce1e756741e850a21fe9004585b35243bc67d806d6bd91c8a3abd17f8f, 102501 bytes, PDF, 1 page; literal identity/table snippets present",
+    "edital": "PASS: ACCEPT; SHA 8de3f149e76c2978d04765dc330fc28bff976feabe1012b6a1a600d365b437a2, 634236 bytes, PDF, 22 pages; literal identity/operator snippets present",
+    "http_transport": "PASS: two bounded HTTP 200 responses, zero redirects",
+    "identity": "PASS: Caldas Novas, Concurso Público 001/2026, Instituto Avalia, external_id=631",
+    "promotion_safety": "PASS: promoted_fields=[] for both; effect is document-only pending later SHA-bound revalidation",
+    "tests": "PASS: test_document_review_r2.py, 2 passed",
+    "mutation": "PASS: receipts report db_write=false, proposal_dispatch=false; manifest approve/apply/retry all false"
+  },
+  "condition": "Release only the two ACCEPT decisions through the normal document-review flow. Do not retry proposal until acceptance/revalidation creates a new SHA-bound reviewed-run and proposal; do not promote retification values from this manifest alone.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/avalia_open/decision-manifest-r2.json",
+    "docs/execucao/evidencias/T012/avalia_open/content-receipts-r2.json",
+    "docs/execucao/evidencias/T012/avalia_open/gate-document-review-r2.json",
+    "docs/execucao/evidencias/T012/avalia_open/test_document_review_r2.py"
+  ]
+}

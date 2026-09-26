@@ -1,0 +1,43 @@
+{
+  "schema": "observador-deploy-receipt/v1",
+  "timestamp_utc": "2026-09-13T17:54:48.3932197Z",
+  "status": "BLOCKED_DOCKER_AFTER_BACKUP_STOP",
+  "scope": "R26 backend bundle deploy; no source import/prepare/proposal/approve/apply",
+  "preflight": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": {
+      "contests": 35,
+      "catalog_sources": 34,
+      "canonical_cargos": 188,
+      "publications": 34,
+      "versions": 93,
+      "outbox": 93,
+      "notifications": 92,
+      "favorites": 0,
+      "alerts": 1
+    },
+    "observed_utc": "2026-09-13T17:42:04.361951Z"
+  },
+  "backup": {
+    "procedure": "scripts/observador-pilot.ps1 -Action Backup",
+    "status": "incomplete_or_hung_after_stop_phase",
+    "pty_session": 81083,
+    "services_stopped_by_procedure": ["api", "worker", "scheduler"],
+    "postgres_dump_path": null,
+    "operational_backup_path": null,
+    "verification": "not returned"
+  },
+  "docker_probe": {
+    "commands": ["docker version --format '{{.Server.Version}}'", "docker compose ... ps"],
+    "result": "no output/timeout in bounded probes; daemon state not verifiable",
+    "restart_or_reset": false,
+    "volume_changes": false
+  },
+  "deploy": {
+    "status": "not_started",
+    "services_rebuilt": [],
+    "source_operations": []
+  },
+  "next_gate": "Recover daemon under existing authorization, verify completed backup and restore metadata, then rerun R26 deploy serially. Do not operate sources until deploy review."
+}

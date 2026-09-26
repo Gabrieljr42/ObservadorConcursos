@@ -1,0 +1,17 @@
+{
+  "schema":"t012.fafipa-reviewed-envelope-r9-receipt.v1",
+  "envelope":"reviewed-envelope-ready-r9.json",
+  "status":"READY_FOR_REVIEW",
+  "source":"fafipa_open",
+  "source_id":69,
+  "external_id":"4208",
+  "concurso_id":null,
+  "owner_user_id":1,
+  "artifact":{"sha256":"26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f","byte_len":3630911,"pages":38,"store_path":"docs/execucao/evidencias/T012/fafipa_open/artifacts/fafipa-4208-edital.pdf"},
+  "schema_import": {"null_id":"blocked as expected; allocate through normal route", "positive_id_injection":"ReviewedRun.model_validate passed", "run_id_derived_only_here":"tp-reviewed-187a43fbfc355834ff54dbcb6adb4fc1", "run_id_in_envelope":false},
+  "round_trip": {"artifact_hash_and_length":"passed", "replay_deterministic":"passed", "owner_zero_negative":"rejected", "cargo_count":14, "cargo_evidence_count":14, "remuneracao_present":false, "taxa_present":false},
+  "dry_run_target": {"concurso_id":null,"proposal_created":false,"version_created":false,"outbox_created":false,"notification_created":false},
+  "negative_guards": ["null concurso_id requires allocation", "owner_user_id=0 rejected", "cargo evidence/cardinality checked at 14", "SHA/length drift remains fail-closed"],
+  "next_owner":"integrador/revisor",
+  "next_action":"allocate local concurso_id and run normal import dry-run; do not approve/apply this package"
+}

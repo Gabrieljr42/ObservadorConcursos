@@ -1,0 +1,13 @@
+{
+  "schema":"tenderproof.strong-binding-preflight.v1",
+  "source":"fafipa_open","external_id":"4208",
+  "artifact_id":"fafipa-4208-edital","sha256":"26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f","byte_len":3630911,"pages":38,
+  "fresh_extraction":true,"document_identity_ids":[],
+  "identity_binding":"organization+main_edital",
+  "orgao":"Município de Mirador - PR","edital_numero":"001/2026",
+  "parser_module":"backend/app/tenderproof/fafipa_t012_r4.py",
+  "parser_sha256":"50619d6c67165e71d46ae47cccafb3a071ce756772ac85545a3ee986345929d3",
+  "identity_result":"strong_fallback_pass",
+  "rationale":"Fresh extraction passed without U+FFFD; R4 rejects any replacement marker before identity or field recognition. Exact source candidate plus organization and main edital number bind the PDF; no other source identity is accepted.",
+  "not_applied":true
+}

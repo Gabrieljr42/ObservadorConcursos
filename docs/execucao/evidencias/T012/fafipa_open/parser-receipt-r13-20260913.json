@@ -1,0 +1,15 @@
+{
+  "schema": "t012.fafipa.parser-receipt-r13.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "source": "fafipa_open",
+  "source_id": 69,
+  "external_id": "4208",
+  "module_sha256": "6DC9BBBDC9166ADC00D602CD9A5EF60F80B4FB2755FFB9A2D5E255B202B87208",
+  "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+  "expected_envelope": {"fields": 7, "cargos": 14, "cargo_evidence": 14},
+  "prior_live_drift": {"proposal": "tpp-dca14c9c1fd86b46488e4934eeb876fb", "eligible_fields": 6, "cargos": 0, "verdict": "REJECT_LIVE_PROPOSAL"},
+  "revalidation_handoff": "After backend review, run fresh source-specific extraction and the real _revalidate in an isolated dry-run. Accept only if seven fields and fourteen cargo evidence records are eligible; otherwise fail closed.",
+  "new_run_id_required": false,
+  "new_run_id_note": "Semantic cargo values and run identity remain unchanged; evidence_id is ignored by _run_id. A new run/receipt may be generated operationally to record the corrected parser version, but the old live run/proposal must not be approved.",
+  "effects": {"live": false, "import": false, "proposal": false, "approve": false, "apply": false, "sqlite": false}
+}

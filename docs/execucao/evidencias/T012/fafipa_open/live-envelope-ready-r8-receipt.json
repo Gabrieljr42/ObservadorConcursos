@@ -1,0 +1,15 @@
+{
+  "schema": "t012.fafipa-live-envelope-r8-receipt.v1",
+  "envelope": "live-envelope-ready-r8.json",
+  "result": "READY_FOR_REVIEW",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "concurso_id": null,
+  "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+  "fresh_evidence": {"count": 20, "missing_literals": 0, "cargo_rows": 14, "cargo_rows_include_name_and_vagas_or_cr": true},
+  "round_trip": {"path": "fresh extract_pages_isolated -> fields.extract_fields -> ephemeral SQLite -> publication._revalidate", "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"], "blocked": {"remuneracao": "escopo observado não equivale à faixa salarial canônica; merge não suportado", "taxa": "campo não extraído; preservar baseline"}, "proposal_created": false, "version_created": false, "outbox_created": false, "notification_created": false},
+  "r7_failure": {"unsupported_remuneration_present": true, "cargo_evidence_shape": "one generic QUADRO snippet in fresh parser versus 14 row snippets in R7", "failure_reason": "R7 cannot reproduce current cargo evidence/value contract"},
+  "removed": ["remuneracao", "taxa"],
+  "next_owner": "integrador/revisor",
+  "next_action": "alocar concurso_id pela rota normal e executar dry-run; não aprovar/aplicar neste pacote"
+}

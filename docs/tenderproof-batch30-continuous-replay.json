@@ -1,0 +1,660 @@
+{
+  "validated_at": "2026-09-08T13:08:07.033831+00:00",
+  "scope": "offline official capture replay",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "clock_fixture": "Between cycles only: advance selected candidate priority/due timestamp in isolated queue; preserve all other known candidates.",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-continuous-replay-20260908",
+  "sources": [
+    {
+      "source": "exame_open",
+      "candidate": "544",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-81ab3c067c28d05af38eb38cfc57f08170fa439f68364174e7226406fb022355"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-81ab3c067c28d05af38eb38cfc57f08170fa439f68364174e7226406fb022355"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "objetiva_open",
+      "candidate": "2617",
+      "document_sha256": "7c42b44a0226d52297842252924f97a5ae07d4c92706a5f576e960769e8be463",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-ed3f49416f4ff445722ddfa97939943a0e4abb8980d9bc58d718d63dfd8b4bb0"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-ed3f49416f4ff445722ddfa97939943a0e4abb8980d9bc58d718d63dfd8b4bb0"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "sigma_open",
+      "candidate": "264",
+      "document_sha256": "b2c123149dd32405293d380f3e9848bc6e31632ca741c7af37b623ba723a962b",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-9c1de7b9d31d464dbe4695a9dd0d3b489e788da394d15db33870bb84f7355c9d"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-9c1de7b9d31d464dbe4695a9dd0d3b489e788da394d15db33870bb84f7355c9d"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "fafipa_open",
+      "candidate": "4208",
+      "document_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-d0575f85d5cfb553341cf4baa15f4859d1353367ec03fd7305faf0b529c6a2b5"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-d0575f85d5cfb553341cf4baa15f4859d1353367ec03fd7305faf0b529c6a2b5"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "omni_open",
+      "candidate": "239",
+      "document_sha256": "8a0b4dfc5371f779f15175201a0fdb871faee4aaf710e840ecc6c6e0d9ce1f28",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-2519eee26ca67bc04a20e73e8cd4d07292405839a242b67e1fb94d22ade48537"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-2519eee26ca67bc04a20e73e8cd4d07292405839a242b67e1fb94d22ade48537"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "w2_open",
+      "candidate": "105",
+      "document_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-b0261199d656e4945971cdb47efccd7a5591499a6b26d9b663733860303905dd"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-b0261199d656e4945971cdb47efccd7a5591499a6b26d9b663733860303905dd"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "consulpam_open",
+      "candidate": "879",
+      "document_sha256": "649269876c1a1cd6aa94a80f721fb9553859f771503de159949f07f7677e0d3a",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-603e658abf8525ba5e715838948bb99dce08cee863f120de7cfeb196e11cf77d"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-603e658abf8525ba5e715838948bb99dce08cee863f120de7cfeb196e11cf77d"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "idcap_open",
+      "candidate": "252",
+      "document_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-98644c8bb30e640c18b83ee6014b894c09504a6d54353a72c4562a889ab35b73"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-98644c8bb30e640c18b83ee6014b894c09504a6d54353a72c4562a889ab35b73"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "quadrix_open",
+      "candidate": "3073",
+      "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-alternate-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-0997db13ab3ce3702757f82c2b98f46d4a1085b045fa90db6c4b0ac78f26e409"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-0997db13ab3ce3702757f82c2b98f46d4a1085b045fa90db6c4b0ac78f26e409"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "cotec_open",
+      "candidate": "32",
+      "document_sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+      "origin_report": "..\\docs\\tenderproof-batch30-shared-alternate-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-3ed0dd07c6b8a286e60a9bcfd6d402bbfaeaf4b60b9c237c294431ac9489305e"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-3ed0dd07c6b8a286e60a9bcfd6d402bbfaeaf4b60b9c237c294431ac9489305e"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "aguia_open",
+      "candidate": "43",
+      "document_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+      "origin_report": "..\\docs\\tenderproof-batch30-edital-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-4bae3548885e4d4466c168800cb480661fc99959fedcc51fe54217e3d64fdc96"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-4bae3548885e4d4466c168800cb480661fc99959fedcc51fe54217e3d64fdc96"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "institutomais_open",
+      "candidate": "10645",
+      "document_sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+      "origin_report": "..\\docs\\tenderproof-batch30-own-live.json",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-0139edc29b6712c425897a3394321be1af985abf68716634b2f6c2fd1ec812bd"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-0139edc29b6712c425897a3394321be1af985abf68716634b2f6c2fd1ec812bd"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

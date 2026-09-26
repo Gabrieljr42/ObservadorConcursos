@@ -1,0 +1,57 @@
+{
+  "schema": "t010.id8.operational-final-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only_plus_disposable_isolated_validation",
+  "decision": "ACEITO_IMPORT_E_PROPOSTA_ONLY",
+  "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e",
+  "envelope": {
+    "path": "docs/execucao/evidencias/T010/T010-reviewed-run-id8.json",
+    "sha256": "81c37dc42f00d4189607bab6029e7476ce86dac363f58dfd0abeb59d850a469c",
+    "immutable_match_preflight": true,
+    "owner_user_id": 1,
+    "reference_only": true,
+    "fields": ["cargos"],
+    "cargo_count": 1
+  },
+  "artifact": {
+    "artifact_id": "art-cdeead8742",
+    "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "byte_len": 1048994,
+    "page_count": 75,
+    "u_fffd": 0,
+    "identity": "idib_open/external362/concurso8; Reriutaba/CE"
+  },
+  "independent_pinned_extraction": {
+    "explicit_page_limit": 75,
+    "pages_extracted": 75,
+    "is_pinned_id8": true,
+    "selected_pages_present": [3, 68, 72],
+    "two_derivations": "equal; same SHA/bytes and deterministic content",
+    "tests": "3 passed test_idib_reriutaba_jobs.py"
+  },
+  "content": {
+    "cargo": "Guarda Civil Municipal",
+    "vacancies": {"immediate": 9, "ac": 6, "pcd": 1, "ppp": 2, "cr": 11, "indigenas": 0, "quilombolas": 0},
+    "remuneration": "salário-mínimo + 30% periculosidade + adicional noturno; base não quantificada",
+    "unit": "BRL/mês + adicionais",
+    "jornada": "40h semanais",
+    "requirements": "Ensino Médio Completo; CNH/Permissão categoria AB ou superior",
+    "fee": "R$156,67",
+    "dates": "inscrições 02/09/2026–05/10/2026; prova 06/12/2026",
+    "evidence_pages": {"cargo": [3, 72], "registration": [5], "exam": [68]}
+  },
+  "isolated_revalidate": {
+    "status": "PASS",
+    "eligible_fields": ["cargos"],
+    "proposal_state": "proposed",
+    "catalogue_cargos_after": null,
+    "database": "disposable SQLite only",
+    "historical_422": "superseded page_limit before exact ID8 pin"
+  },
+  "release": {
+    "allowed": "Após deploy já em andamento e smoke-check: um único import do run e uma única proposta canônica; revalidar hash/estado imediatamente.",
+    "blocked": ["approve", "apply", "version", "outbox", "notification", "quadro"],
+    "mutation_by_review": "none"
+  }
+}

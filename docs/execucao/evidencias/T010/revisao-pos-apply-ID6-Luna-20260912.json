@@ -1,0 +1,77 @@
+{
+  "schema": "t010.id6.post-apply-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "ui_validation_release": true,
+  "proposal": {
+    "id": "tpp-b47411064f1b447b5a6f519c5b925f42",
+    "proposal_hash": "8655bd498afcfa7d51e2c3f0e930f3178420d8446edbf7e919eddcfd593114a9",
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "state": "applied",
+    "approved_fields": ["cargos"],
+    "approved_by": 1,
+    "version_id": 83,
+    "result_present": true,
+    "eligible_scope": ["cargos"],
+    "baseline_cargos": null,
+    "proposed_rows": 11,
+    "blocked_fields_include_prova_data": true
+  },
+  "run_and_payload": {
+    "owner_user_id": 1,
+    "source": "imeso_open",
+    "external_id": "139",
+    "concurso_id": 6,
+    "source_id": 17,
+    "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "artifact_byte_len": 597314,
+    "run_rows": 11,
+    "concurso_rows_after": 11,
+    "first_name": "Agente Comunitário de Saúde - Micro Área 1 UBS Beriza",
+    "last_name": "Agente Comunitário de Saúde - Micro Área 11 UBS Barreiros",
+    "semantic_values": "cada microárea 1 imediata + CR, AC 1, PcD 0, R$3242.00/mês, 40h, requisito literal e taxa R$120.00",
+    "run_equals_proposed": true,
+    "proof_date_or_unknown_added": false
+  },
+  "version_83": {
+    "get": "GET /concursos/6/versions",
+    "version_id": 83,
+    "concurso_id": 6,
+    "changed_fields_only": ["cargos"],
+    "old_cargos": null,
+    "new_rows": 11,
+    "proposal_id": "tpp-b47411064f1b447b5a6f519c5b925f42",
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "document_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "duplicate_version": false
+  },
+  "delivery_and_counts": {
+    "outbox_id": 83,
+    "outbox_version_id": 83,
+    "outbox_state": "delivered",
+    "outbox_attempts": 1,
+    "notification_id": 82,
+    "notification_type": "version_update_83",
+    "notification_concurso_id": 6,
+    "counts": {"versions": 83, "outbox": 83, "notifications": 82, "proposals": 85},
+    "checkpoint": {"concursos": 33, "alerts": 1, "favorites": 0, "health": 200}
+  },
+  "idempotency": {
+    "same_proposal_apply": "preserved read-only evidence: HTTP 200, version 83, no new version/outbox/notification",
+    "same_run_import": "preserved read-only evidence: status idempotent, same run_id, no new proposal/version/outbox",
+    "other_records_touched": false
+  },
+  "evidence_sources": [
+    "GET /tenderproof/publications/proposals/tpp-b47411064f1b447b5a6f519c5b925f42",
+    "GET /tenderproof/runs/tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "GET /concursos/6",
+    "GET /concursos/6/versions",
+    "GET /me/notifications",
+    "GET /sync/checkpoint",
+    "docs/execucao/evidencias/T010/gate-pos-apply-ID6-20260912.json"
+  ],
+  "gate_conclusion": "ACEITA: aplicação única correta e entregue; liberar validação UI. Não repetir approve/apply fora do replay idempotente já comprovado."
+}

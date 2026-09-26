@@ -1,0 +1,38 @@
+{
+  "schema": "t010.normal-proposal-manifest-receipt.v1",
+  "manifest": "docs/execucao/evidencias/T010/T010-manifesto-propostas-offline.json",
+  "accepted_package": "docs/execucao/evidencias/T010/T010-pacotes-revisao.json",
+  "generated_at": "2026-09-12T18:34:26-03:00",
+  "mode": "offline_dry_run",
+  "records": 8,
+  "batches": 4,
+  "order": [1, 5, 6, 7, 8, 14, 15, 16],
+  "endpoint": "POST /tenderproof/publications/proposals",
+  "action": "create_normal_proposal",
+  "validation": {
+    "manifest_json": "PASS",
+    "accepted_package_reference": "PASS (8/8 record_id + evidence_sha256)",
+    "http_payload_strict_ProposalIn": "PASS (8/8; only run_id, concurso_id, source_id, authorization)",
+    "checked_fields_not_promoted_to_http_envelope": "PASS (8/8)",
+    "order_and_idempotency_keys": "PASS (8/8)",
+    "ProposalIn_transport_model_validate": "PASS (8/8)",
+    "network_call": false,
+    "database_write": false,
+    "proposal_created": false,
+    "proposal_approved": false,
+    "proposal_applied": false
+  },
+  "dispatch_observation": {
+    "evidence": "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md",
+    "completed": [1, 5, 6, 7, 8, 14],
+    "failed": {"record_id": 15, "batch_id": "t010-b04", "http_status": 422, "body_preserved": false, "diagnosis": "strong_documental_binding_absent: PDF 010/2025 versus catálogo 15 005/2025; orgao/edital unknown no run"},
+    "not_sent": [16],
+    "reproduction": "docs/execucao/evidencias/T010/T010-422-repro.json"
+  },
+  "status": "record_15_not_publishable_against_existing_target",
+  "record_15_binding": {"catalogue_target": 15, "catalogue_edital": "005/2025", "pdf_edital": "010/2025", "publishable": false, "new_run_created": false, "external_source_required": true},
+  "manifest_unchanged": true,
+  "pending_for_all": ["T007_acceptance", "T008_acceptance"],
+  "records_not_advanceable_now": [15],
+  "note": "O transporte usa run_id já preservado na distribuição; o payload de dados contém somente campos checked. Pending documental permanece fora do payload e não foi promovido."
+}

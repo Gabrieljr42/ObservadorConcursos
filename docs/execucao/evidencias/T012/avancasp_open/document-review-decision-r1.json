@@ -1,0 +1,81 @@
+{
+  "schema": "t012.avancasp.document-review-decision.v1",
+  "reviewed_at": "2026-09-13",
+  "state": "AVANCASP_DOCUMENT_DECISIONS_READY_FOR_REVIEW",
+  "source_id": 54,
+  "source": "avancasp_open",
+  "external_id": "272",
+  "selection_identity": {
+    "title": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+    "orgao": "Prefeitura Municipal de Cabreúva",
+    "edital_numero": "01/2026",
+    "evidence": "Both page-1 extractions state PREFEITURA MUNICIPAL DE CABREÚVA, CONCURSO PÚBLICO 01/2026 and EDITAL DE ABERTURA DE INSCRIÇÕES PARA CONCURSO PÚBLICO."
+  },
+  "pending_documents": [
+    {
+      "kind": "edital",
+      "title": "EDITAL COMPLETO 04/09/2026",
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "document_decision": "ACCEPT_PRINCIPAL_EDICTAL",
+      "role": "principal_opening_edital",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48,
+      "artifact_path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "pages_path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce-pages.json",
+      "content_evidence": [
+        "Page 1: EDITAL DE ABERTURA DE INSCRIÇÕES PARA CONCURSO PÚBLICO",
+        "Page 1: PREFEITURA MUNICIPAL DE CABREÚVA/SP - CONCURSO PÚBLICO 01/2026",
+        "Final page: ANEXO V - CRONOGRAMA"
+      ],
+      "revision_observation": "48-page principal edital with Anexo V chronology; retained as a distinct provenance artifact.",
+      "duplicate_of_other_pending": false,
+      "same_selection_as_other": true
+    },
+    {
+      "kind": "edital",
+      "title": "EDITAL COMPLETO 04/09/2026",
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf",
+      "document_decision": "ACCEPT_PRINCIPAL_EDICTAL",
+      "role": "principal_opening_edital",
+      "sha256": "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd",
+      "byte_len": 749582,
+      "pages": 49,
+      "artifact_path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-6d52089a-0ad3-4a18-bef5-306c27315785.pdf",
+      "pages_path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-6d52089a-0ad3-4a18-bef5-306c27315785-pages.json",
+      "content_evidence": [
+        "Page 1: EDITAL DE ABERTURA DE INSCRIÇÕES PARA CONCURSO PÚBLICO",
+        "Page 1: PREFEITURA MUNICIPAL DE CABREÚVA/SP - CONCURSO PÚBLICO 01/2026",
+        "Final page: ANEXO VI - CRONOGRAMA"
+      ],
+      "revision_observation": "49-page principal edital with Anexo VI chronology and corrected internal references; material revision, not proven to have temporal precedence.",
+      "duplicate_of_other_pending": false,
+      "same_selection_as_other": true,
+      "preferred_revision_for_followup_review": true
+    }
+  ],
+  "dedupe_test": {
+    "result": "PASS_DISTINCT_REVISIONS_SAME_SELECTION",
+    "sha_equal": false,
+    "byte_len_equal": false,
+    "page_count_equal": false,
+    "identity_equal": true,
+    "material_difference": "The second artifact has 49 pages, changes internal Anexo V references to Anexo VI, and includes a separate final Anexo VI chronology page; the first has 48 pages and Anexo V chronology.",
+    "decision": "Do not collapse either artifact. Preserve both URL/SHA/page provenance; use the 6d520... artifact as the follow-up review preference only, without asserting publication-date precedence."
+  },
+  "guardrails": {
+    "fields_promoted": false,
+    "prepare_called": false,
+    "approve_called": false,
+    "apply_called": false,
+    "pilot_called": false,
+    "catalogue_mutated": false,
+    "acquisitions": "Only the two exact receipt URLs were fetched once each through the bounded TLS/allowlist driver; no redirects were followed."
+  },
+  "test": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/test_document_review_r1.py",
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_document_review_r1.py",
+    "result": "3 passed"
+  }
+}

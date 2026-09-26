@@ -1,0 +1,17 @@
+{
+  "schema":"t012.apta-live-proposal-receipt.v1",
+  "timestamp":"2026-09-13T14:02:00Z",
+  "status":"BLOCKED_OWNER_MISMATCH",
+  "source_id":48,
+  "source":"apta_open",
+  "external_id":"708",
+  "health":"200",
+  "artifact":{"path":"backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf","sha256":"db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c","byte_len":362093,"pages":20},
+  "run":{"run_id":"tp-reviewed-29cef0e686375ff7492478042aa6162f","dry_run":"validated","import":"imported","fields":["titulo","orgao","edital_numero"],"owner_user_id":901},
+  "operator_user_id":1,
+  "allocation":{"materialized_review_envelope_id":35,"catalog_created":false,"temporary_999_not_used":true},
+  "duplicate_cas":{"source_id":48,"external_id":"708","catalog_match":false,"proposal_match":false},
+  "proposal_attempt":{"endpoint":"POST /tenderproof/publications/proposals","http":404,"retry":false,"approve":false,"apply":false,"reason":"run ownership mismatch: imported run owner_user_id=901, authenticated operator=1"},
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"fresh owner=1 envelope/review by source agent; do not retry this run"
+}

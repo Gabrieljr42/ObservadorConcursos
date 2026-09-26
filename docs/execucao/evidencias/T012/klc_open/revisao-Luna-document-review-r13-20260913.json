@@ -1,0 +1,46 @@
+{
+  "schema": "t012.klc_open.luna-document-review-r13.v1",
+  "recorded_at": "2026-09-13",
+  "reviewer": "Luna",
+  "verdict": "RECOVERABLE",
+  "scope": "offline-only; no live/API/Docker mutation, delete or SQL ad hoc",
+  "case": {
+    "case_id": "drc-preserved-3285cc14300264cf42df74b4fc2551f",
+    "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+    "revision_hash": "2359dc6002318ba6e69bb3b975b1efcbd4520f5069fd88637b6365d2681886a9",
+    "state": "pending/unapproved",
+    "fields_state": "all failed by KLC metadata/URL drift",
+    "safe_disposition": "never approve this case while its fields remain failed"
+  },
+  "implementation_findings": [
+    "review_cases.current returns a pending case only when identity, complete manifest/blob binding, and extraction_method_version equal the current METHOD_VERSION.",
+    "prepare_preserved returns the matching current case without recomputing it; changing parser code alone is insufficient if METHOD_VERSION remains unchanged.",
+    "With a new METHOD_VERSION, current returns no stale case and prepare_preserved recomputes the preserved document, inserting a new case ID derived from the new method/version operation. The old failed case remains auditable and unapproved.",
+    "No supported endpoint invalidates/deletes/reprocesses an existing failed case in place. document_selection is for edital/consolidado and is not a retificação recovery path.",
+    "A new owner-scoped ReviewedRun is not necessary: the principal run identity, pending manifest, artifact and owner remain valid; replacing it would split provenance."
+  ],
+  "disposable_simulation": {
+    "setup": "temporary SQLite/continuous store and temporary TenderProof artifact directory; equivalent pending retificação and registered PDF",
+    "v1": {"case_id": "drc-preserved-df90589ca7b7cd6da6f78160de1ac33b", "field_state": "failed"},
+    "v2": {"method_version": "tenderproof-fields/v2-simulated", "case_id": "drc-preserved-6eeb6bfb2df6fc7215dc39295d03db1f", "field_state": "supported"},
+    "new_case_created": true,
+    "current_resolves_v2": true,
+    "old_case_deleted": false,
+    "network": false,
+    "docker": false
+  },
+  "single_safe_sequence": [
+    "Deploy the corrected KLC retificação parser and bump the shared extraction METHOD_VERSION (or an equivalent explicit parser-version contract).",
+    "Keep case drc-preserved-3285cc14300264cf42df74b4fc2551f unapproved; do not delete, overwrite, or approve its failed fields.",
+    "Confirm owner 1/run/pending/artifact identity and current blob hash, then call the existing owner-bound prepare-preserved route once with the corrected separated document/artifact payload.",
+    "Require a new case/revision whose fields are independently supported; review only prova_data 2026-05-10→2026-05-17 and do not inherit old failed results.",
+    "If the new case is not produced or any field remains failed, stop with captured response; no retry, approval, proposal or apply."
+  ],
+  "contract_guard": "If the parser is corrected without changing METHOD_VERSION, recovery is blocked by the current-case short-circuit and requires a backend version-bump/reprocess contract fix.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/klc_open/document-review-live-receipt-r12-20260913.json",
+    "backend/app/tenderproof/review_cases.py (current/prepare_preserved/approve)",
+    "backend/app/tenderproof/document_selection.py (not applicable to retificacao)",
+    "disposable simulation output recorded above"
+  ]
+}

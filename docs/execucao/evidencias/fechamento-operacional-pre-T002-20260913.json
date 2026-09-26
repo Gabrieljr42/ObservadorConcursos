@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-09-13T04:39:50.3952101-03:00",
+  "scope": "fechamento operacional pre-T002",
+  "snapshot_before_backup": {
+    "concursos": 33,
+    "sources_catalog": 32,
+    "sources_configured": 99,
+    "cargo_rows_canonical": 180,
+    "cargo_null": 0,
+    "publications": 34,
+    "versions": 91,
+    "outbox": 91,
+    "notifications": 90,
+    "proposals": 95,
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_delivery_attempts": 0,
+    "favorite_id8": 0,
+    "alert_id6": 0,
+    "alert_original_id1_active": true
+  },
+  "health_and_api_before_backup": {
+    "health": 200,
+    "detail_ids": {"8": 1, "14": 2, "16": 18, "17": 27, "32": 7},
+    "web_inicio": 200,
+    "web_tenderproof": 200,
+    "prepare_preserved_route": "/tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "prepare_preserved_unauthenticated": 401,
+    "push_dispatch_enabled": false
+  },
+  "backup": {
+    "bundle_prefix": "/backups/pilot-20260913T073116707Z",
+    "postgres_dump_pg_restore_list": "PASS",
+    "operational_verify_files": 15541,
+    "operational_canonical_database_included": false,
+    "writers_paused_by_official_script": true,
+    "services_restarted_by_official_script": true
+  },
+  "isolated_restore": {
+    "operational_destination": "/backups/final-restore-20260913T073116707Z-operational",
+    "operational_copy_created": true,
+    "operational_restore_source_manifest_verified_before_copy": true,
+    "postgres_restore": "BLOCKED_AFTER_ESCALATED_PROBE",
+    "postgres_restore_alias": "BLOCKED_DOCKER_502",
+    "blocker": "Escalated read-only probes at 2026-09-13T04:44-03:00 timed out: docker version/info/ps each TIMEOUT_7S; no daemon output or container enumeration. No global restart, prune, reset, volume or canonical-data mutation was attempted.",
+    "temporary_verifiers": "exact run containers from this closure could not be enumerated/stopped because the daemon remained unavailable",
+    "escalated_probe": {"docker_version": "TIMEOUT_7S", "docker_info": "TIMEOUT_7S", "docker_ps": "TIMEOUT_7S"}
+  },
+  "web_asset": {
+    "served_asset": "_expo/static/js/web/entry-ed357d6cd1c2750f556e9ffd48d77343.js",
+    "sha256": "A6E23E542061001A138168B69CD1DA5CE314CCAD3550388FAB2519795643E5AB",
+    "routes_checked": ["/inicio", "/tenderproof"],
+    "status": 200,
+    "redeploy_needed": false
+  },
+  "data_mutations": false,
+  "next_gate": "T002 final independent review after Docker engine recovery and isolated PostgreSQL restore; do not claim final operational closure before that restore."
+}

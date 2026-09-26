@@ -1,0 +1,759 @@
+{
+  "observed_at": "2026-09-08T14:50:50.543672+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "oppus_open",
+      "url": "https://oppusconcursos.com.br/",
+      "kind": "redirect0",
+      "observed_at": "2026-09-08T14:50:47.865138+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 57929,
+      "sha256": "43e48dea74cf25479285d9def944c3ac26c040c32dfe7cc430245166d1c9e211",
+      "file": "oppus_open-redirect0.html",
+      "encoding": "utf-8",
+      "title": "Oppus Concursos - O Portal para sua Aprovação em Concursos Públicos",
+      "links": [
+        {
+          "url": "https://oppusconcursos.com.br/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://oppusconcursos.com.br",
+          "title": ""
+        },
+        {
+          "url": "https://oppusconcursos.com.br/ggbet-pl-2/",
+          "title": ""
+        },
+        {
+          "url": "https://oppusconcursos.com.br/ggbet-pl-2/",
+          "title": "Przegląd platformy ggbet dla polskich graczy"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/vulkan-vegas-pl-2/",
+          "title": "8 de setembro de 2026 Dlaczego Vulkan Vegas przyciąga graczy w Polsce?"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/total-casino-pl-4/",
+          "title": "8 de setembro de 2026 Przewodnik po platformie Total Casino"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/nv-casino-pl-2/",
+          "title": "8 de setembro de 2026 Wszystko co musisz wiedzieć o nv casino"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/nv-casino-pl-2/",
+          "title": ""
+        },
+        {
+          "url": "https://oppusconcursos.com.br/nv-casino-pl-2/",
+          "title": "Wszystko co musisz wiedzieć o nv casino"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/yukon-gold-ca-2/",
+          "title": ""
+        },
+        {
+          "url": "https://oppusconcursos.com.br/yukon-gold-ca-2/",
+          "title": "The Golden Appeal of Yukon Gold Casino"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/leovegas-gb-2/",
+          "title": ""
+        },
+        {
+          "url": "https://oppusconcursos.com.br/leovegas-gb-2/",
+          "title": "A Complete Guide to Navigating the LeoVegas Platform"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/politica-de-privacidade/",
+          "title": "Política de Privacidade"
+        },
+        {
+          "url": "https://oppusconcursos.com.br/politica-de-privacidade/",
+          "title": "Política de Privacidade"
+        }
+      ],
+      "scripts": []
+    },
+    {
+      "source": "klc_open",
+      "url": "https://www.klcconcursos.com.br?pag=&sub=1",
+      "kind": "tab0",
+      "observed_at": "2026-09-08T14:50:47.865138+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 18329,
+      "sha256": "0d9e617e64ec248df9c29ba8277202ddd4f8c776fd37759acceca69294133ab6",
+      "file": "klc_open-tab0.html",
+      "encoding": "utf-8",
+      "title": "KLC Concursos e Consultoria em Gestão Pública",
+      "links": [
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Acesso ao Menu do Candidato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/visao/home.php",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=nos",
+          "title": "Nossa Empresa"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Inscrições"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=rec",
+          "title": "Recursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ctt",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=ES",
+          "title": "ES"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=GO",
+          "title": "GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MG",
+          "title": "MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MS",
+          "title": "MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MT",
+          "title": "MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=PR",
+          "title": "PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RJ",
+          "title": "RJ"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RS",
+          "title": "RS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SC",
+          "title": "SC"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SP",
+          "title": "SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Consulte sua Inscrição"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=1",
+          "title": "CONCURSOS ABERTOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "title": "CONCURSOS EM ANDAMENTO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=0",
+          "title": "CONCURSOS FUTUROS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=3",
+          "title": "CONCURSOS ENCERRADOS"
+        }
+      ],
+      "scripts": [
+        "https://www.klcconcursos.com.br/js/estado_cidade.js",
+        "https://www.klcconcursos.com.br/js/javascript.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://code.jquery.com/jquery-2.0.0.js",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "legatus_open",
+      "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T14:50:47.866141+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 29309,
+      "sha256": "41b1fef549a11859fde7ae1c7fbc9982d4c4738c1d57d6b2e2253858aafbecde",
+      "file": "legatus_open-detail0.html",
+      "encoding": "utf-8",
+      "title": "Instituto Legatus",
+      "links": [
+        {
+          "url": "https://www.legatus.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/",
+          "title": "PÁGINA INICIAL (current)"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "title": "INSTITUCIONAL"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/sobre-o-instituto-legatus/",
+          "title": "Sobre\n            Nós"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "title": "O que fazemos"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/concursos-e-processos-seletivos/",
+          "title": "Concursos\n                e Processos seletivos"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/capacitacao/",
+          "title": "Capacitação"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/pesquisas/",
+          "title": "Pesquisas"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/compliance/",
+          "title": "Compliance"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/diretiva-de-privacidade/",
+          "title": "Diretiva de\n            Privacidade"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/trabalhe-conosco/",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "title": "CONCURSO"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/abertos/",
+          "title": "Inscrições Abertas"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/proximos-concursos/",
+          "title": "Próximos"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/andamento/",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/homologados/",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/",
+          "title": "NOTÍCIAS"
+        },
+        {
+          "url": "https://www.legatus.org.br/perguntas-frequentes/",
+          "title": "PERGUNTAS FREQUENTES"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "ATENDIMENTO"
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://www.legatus.org.br/",
+          "title": "Página Inicial"
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": "ÁREA DO CANDIDATO"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3236/download/",
+          "title": "EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3231/download/",
+          "title": "RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3230/download/",
+          "title": "RELAÇÃO PRELIMINAR DE CANDIDATOS COM PEDIDO DE ATENDIMENTO ESPECIAL"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3221/download/",
+          "title": "EDITAL N° 02/2026 - PRORROGAÇÃO DAS INSCRIÇÕES"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3218/download/",
+          "title": "RESULTADO DA ANÁLISE DE RECURSOS INTERPOSTOS CONTRA O RESULTADO DOS PEDIDOS DE ISENÇÃO"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3197/download/",
+          "title": "RESULTADO DA ANÁLISE DOS PEDIDOS DE ISENÇÃO DE PAGAMENTO DA TAXA DE INSCRIÇÃO"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3196/download/",
+          "title": "RETIFICAÇÃO Nº 01 AO EDITAL Nº 01/2026"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/3181/download/",
+          "title": "EDITAL Nº 01/2026 - ABERTURA DO CONCURSO"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/sobre-o-instituto-legatus/",
+          "title": "Sobre Nós"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/concursos-e-processos-seletivos/",
+          "title": "Concursos e Seleções"
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Atendimento"
+        },
+        {
+          "url": "https://www.legatus.org.br/perguntas-frequentes/",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/trabalhe-conosco/",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/",
+          "title": "Notícias"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-65QGBHL283",
+        "https://static.zdassets.com/ekr/snippet.js?key=32f2a096-c08b-433c-a045-3bd7cfb403ed",
+        "https://www.legatus.org.br/front/assets/js/vendor.js?id=58d9a3c8980722cb20e60fd0371ac09b",
+        "https://www.legatus.org.br/front/assets/js/front.js?id=fd79e2ca1fe4401c361f376f3816af49",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "fepese_open",
+      "url": "https://2026pseducasj.fepese.org.br",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T14:50:47.866141+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 8987,
+      "sha256": "6c97fe9c3a065c3f8f6cae58afd8057e6c48543981ae7bd7f4de4fc66ff31dfc",
+      "file": "fepese_open-detail0.html",
+      "encoding": "windows-1252",
+      "title": "2026 - Município de São José",
+      "links": [
+        {
+          "url": "https://2026pseducasj.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": "Principal"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": "Edital"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": "Perguntas"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": "Cronograma"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br/inscricao/#!/edital/39693d61db1f8c777c9c7e4b7cc49bbc",
+          "title": "Inscrição"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": "Contato"
+        },
+        {
+          "url": "https://ssl.fepese.org.br/2026/2026pseducasj/area-restrita/#!/acessar",
+          "title": "Acesso restrito ao Candidato"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://2026pseducasj.fepese.org.br/class/funcoes.js"
+      ]
+    },
+    {
+      "source": "verbena_selection",
+      "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo",
+      "kind": "tab0",
+      "observed_at": "2026-09-08T14:50:48.574410+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 87050,
+      "sha256": "67b37ad73bb9cb4875056854359ce7ef1f5a0bf9272efc7ffc5e53596e85d4e5",
+      "file": "verbena_selection-tab0.html",
+      "encoding": "utf-8",
+      "title": "Instituto Verbena",
+      "links": [
+        {
+          "url": "http://portais.ufg.br/login?back_url=https%3A%2F%2Finstitutoverbena.ufg.br%2Fnews%3Fdirection%3Ddesc%26sort%3Djournal_news.updated_at%26tags%3Dcard-concurso-novo",
+          "title": ""
+        },
+        {
+          "url": "http://brasil.gov.br",
+          "title": "Portal do Governo Brasileiro"
+        },
+        {
+          "url": "http://epwg.governoeletronico.gov.br/barra/atualize.html",
+          "title": "Atualize sua Barra de Governo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo#component_47382",
+          "title": "Ir para o menu"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo#search",
+          "title": "Ir para busca"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?atr=pt-BR&locale=pt-BR",
+          "title": "Português (Brasil)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43639-apresentacao",
+          "title": "Apresentação"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43635-estrutura-organizacional",
+          "title": "Diretoria"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43637-equipe",
+          "title": "Equipe"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42954-nossos-servicos",
+          "title": "Nossos serviços"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=clientes",
+          "title": "Instituições Atendidas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/52430-biblioteca-virtual-iv-ufg",
+          "title": "Acervo Documental IV/UFG"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/sistema/cadastro_colaborador/",
+          "title": "Seja colaborador(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo",
+          "title": "Novos Editais"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-inscricao",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-andamento",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/login",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/sistema/arquivos/editais/VESTIBULAR_UFG_2027_EDITAL_.pdf",
+          "title": "Edital de Abertura"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Resultados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/concursos/inscricoes-abertas",
+          "title": "Realizar Inscrição"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/recurso/create",
+          "title": "Protocolar Recurso"
+        },
+        {
+          "url": "https://sisu.ufg.br/",
+          "title": "Sisu"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/SiSU+/",
+          "title": "SiSU+ / UFG 2026"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=ProcessosSeletivos",
+          "title": "Processos Seletivos e Outros"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-ProcessosSeletivos-inscricoes",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/44300-conheca-nossos-cursos-de-formacao-e-qualificacao",
+          "title": "Conheça nossos cursos"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/iv/projeto-fatos-e-fotos/",
+          "title": "Fatos e Fotos"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo",
+          "title": "Opções Avançadas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?tags=",
+          "title": "X"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "PORTAL DO(A) CANDIDATO(A)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/",
+          "title": "CADASTRO DE COLABORADORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "CONCURSOS E SELEÇÕES ANTERIORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "VESTIBULAR UFG"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42685-duvidas-frequentes",
+          "title": "DÚVIDAS FREQUENTES"
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://goo.gl/maps/UTuBoPa4DsSQ1DjZ6",
+          "title": "Como chegar"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/intranet/login",
+          "title": ""
+        },
+        {
+          "url": "https://sic.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo#barra-brasil",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2",
+        "https://www.googletagmanager.com/gtag/js?id=G-ZM2RZ9ZXMJ",
+        "https://files.cercomp.ufg.br/weby/assets/base-7d1e002559959ecfa80acc89fff49e8acf6b79e7d3376ed8cc1f1e64be62d3d5.js",
+        "https://files.cercomp.ufg.br/weby/assets/level2-dd37a8e3f53914297921fc457ec7015c72c48c5bfb9972751d2f1f24b06c45bf.js",
+        "https://files.cercomp.ufg.br/weby/assets/journal/news.index-4d9a59adfa65dc64f82b3ae6e44ac0212bb1920c18e51eeb5f797b46167b2d86.js",
+        "https://barra.brasil.gov.br/barra.js",
+        "https://files.cercomp.ufg.br/weby/assets/show-22e5db160cd54185f1184b68589f7e1591f7c7c6256041e08d936e13b375a460.js",
+        "https://files.cercomp.ufg.br/weby/assets/changeContrast-6eb2f5ffd73aa3aed2f2b026fd3cd2e8b6c6b4c72094d2fa54b976bcdc543020.js",
+        "https://files.cercomp.ufg.br/weby/assets/auto_translate-ea6ddb17d6b45ab26d74097be79d6f5cbea4197434fc7852bd84428ef18ff7d3.js",
+        "https://files.cercomp.ufg.br/weby/assets/search_action-f5db909a939074bf3312b935d3028ca99704739dc4c5aa967fcc268c83228f3a.js"
+      ]
+    },
+    {
+      "source": "verbena_selection",
+      "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T14:50:48.715377+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 13840,
+      "sha256": "7a46200361219323bddce7793109574465ccf2d2c2cbdb98c88256bda99d1e6c",
+      "file": "verbena_selection-detail0.html",
+      "encoding": "utf-8",
+      "title": "IV - Concurso Público da Câmara Municipal de Pires do Rio - GO",
+      "links": [
+        {
+          "url": "http://brasil.gov.br",
+          "title": "Portal do Governo Brasileiro"
+        },
+        {
+          "url": "http://epwg.governoeletronico.gov.br/barra/atualize.html",
+          "title": "Atualize sua Barra de Governo"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+          "title": "Início"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/login",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/9-edital/166-edital-de-abertura-nº-01-2026.html",
+          "title": "Edital de Abertura Nº 01/2026"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+          "title": "Edital de Abertura Nº 01/2026"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://goo.gl/maps/MBvkYzzZA4VXBRXf8",
+          "title": "Como chegar"
+        }
+      ],
+      "scripts": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/media/jui/js/jquery.min.js?99cc32771367cbcb24357db2af8ee937",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/media/jui/js/jquery-noconflict.js?99cc32771367cbcb24357db2af8ee937",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/media/jui/js/jquery-migrate.min.js?99cc32771367cbcb24357db2af8ee937",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/media/system/js/caption.js?99cc32771367cbcb24357db2af8ee937",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/media/jui/js/bootstrap.min.js?99cc32771367cbcb24357db2af8ee937",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/templates/cs-base-bootstrap/js/template.js?101",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/templates/cs-base-bootstrap/js/paginacao.js?100",
+        "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/templates/cs-base-bootstrap/js/paginacao-1.js?100",
+        "https://www.googletagmanager.com/gtag/js?id=G-YP6WB1JFQ0",
+        "https://barra.brasil.gov.br/barra.js"
+      ]
+    },
+    {
+      "source": "ieses_open",
+      "url": "https://ieses.org/projetos-static/projetos.js",
+      "kind": "component0",
+      "observed_at": "2026-09-08T14:50:49.044259+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 14744,
+      "sha256": "025a503ff568e2ae18c4d01db714f1f689c09e257a1b00e58ba45b657b053a47",
+      "file": "ieses_open-component0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

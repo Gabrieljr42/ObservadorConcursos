@@ -1,0 +1,31 @@
+{
+  "container": "tenderproof-batch99-identity-pg-20260908",
+  "host": "127.0.0.1",
+  "port": 55471,
+  "database": "tenderproof_acceptance",
+  "image": "postgres:16-alpine",
+  "data_mount": "private container tmpfs, no host data volume",
+  "scope": "disposable schema/collector/canonical/publication regression; no production database",
+  "command": [
+    "python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_concurso_identity_migration.py",
+    "tests/test_tenderproof_canonical.py",
+    "tests/test_crawl_resilience.py",
+    "tests/test_tenderproof_batch99_foundations.py",
+    "--disable-warnings",
+    "--tb=short"
+  ],
+  "exit_code": 0,
+  "duration_s": 42.719,
+  "output_summary": "........................................................................ [ 86%]\n...........                                                              [100%]\n83 passed, 680 warnings in 41.44s\n\n",
+  "test_process_finished": true,
+  "log": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\tenderproof-batch99-identity-cas-postgres.log",
+  "cleanup": {
+    "removal_exit_code": 0,
+    "container_absent": true,
+    "named_volumes_created": 0
+  }
+}

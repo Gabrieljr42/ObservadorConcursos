@@ -1,0 +1,61 @@
+{
+  "schema": "t012.apta.live-proposal-receipt-r10.v1",
+  "recorded_at": "2026-09-13T15:27:51.4039109Z",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "owner_user_id": 1,
+  "artifact": {
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "content_type": "application/pdf"
+  },
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/apta_open/apta-reviewed-envelope-r6.json",
+    "schema": "tenderproof.reviewed-run.v1",
+    "concurso_id": null,
+    "fields": ["titulo", "orgao", "edital_numero"],
+    "field_values": {
+      "titulo": "Câmara Municipal de Aragarças",
+      "orgao": "Câmara Municipal De Aragarças",
+      "edital_numero": "01/2026"
+    }
+  },
+  "runtime": {
+    "image_digest": "sha256:897b2c537f5561b858110dd67e214a535f597698d924b9c0fb5a45ef3113f69f",
+    "importer_sha256": "49a8a1e4dece27596910bede5feddf26e582116fb5b0c2041d380784bca66d71",
+    "health": {"status": 200, "app": "Observador de Concursos", "env": "local-pilot"}
+  },
+  "dry_runs": [
+    {"path": "/tmp/apta-r10-a", "status": "validated", "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa", "fields": ["titulo", "orgao", "edital_numero"]},
+    {"path": "/tmp/apta-r10-b", "status": "validated", "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa", "fields": ["titulo", "orgao", "edital_numero"]}
+  ],
+  "import": {
+    "status": "imported",
+    "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+    "owner_user_id": 1,
+    "source": "apta_open",
+    "external_id": "708",
+    "concurso_id": null,
+    "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "stored_fields": ["titulo", "orgao", "edital_numero"]
+  },
+  "proposal_attempt": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "payload": {"run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa", "source_id": 48, "concurso_id": null, "authorization": null},
+    "http_status": 409,
+    "state": "not_created",
+    "detail": "TenderProof: Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados.",
+    "document_review_after": {"pending": true, "documents": [{"kind": "retificacao", "title": "Edital de Retificação I ao Edital de Abertura de Inscrições", "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf"}], "reason": "Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."}
+  },
+  "counts_before_after": {
+    "before": {"concursos": 34, "sources": 99, "source48_concursos": 0, "cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91, "push_devices": 0, "push_deliveries": 0, "push_attempts": 0},
+    "after": {"concursos": 34, "sources": 99, "source48_concursos": 0, "cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91, "push_devices": 0, "push_deliveries": 0, "push_attempts": 0}
+  },
+  "result": "APTA_IMPORT_OK_PROPOSAL_BLOCKED_DOCUMENT_REVIEW",
+  "next_gate": "document-review for the observed retificação; no retry until independent acceptance",
+  "approve_apply": "not_executed",
+  "other_sources": "not_processed"
+}

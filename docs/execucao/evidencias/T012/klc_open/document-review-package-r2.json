@@ -1,0 +1,41 @@
+{
+  "schema": "t012.klc-document-review-package.v2",
+  "status": "READY_FOR_REVIEW",
+  "operation": "CREATE",
+  "source": "klc_open",
+  "source_number": 57,
+  "external_id": "632",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "run_id": null,
+  "proposal_target": null,
+  "envelope": "docs/execucao/evidencias/T012/klc_open/create-envelope-r2.json",
+  "artifact_match": {
+    "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "byte_len": 348300,
+    "pages": 10,
+    "store_path": "backend/.tenderproof/r99kill13/klc_open/artifacts/art-96637dad76-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf"
+  },
+  "accepted_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos"],
+  "identity": {
+    "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+    "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+    "kind": "edital"
+  },
+  "owner_isolation": {
+    "accepted_owner": 1,
+    "foreign_owner": "reject; no fallback or reassignment",
+    "synthetic_ids": "none"
+  },
+  "negative_cases": [
+    "wrong source klc_other -> reject",
+    "external_id 631 -> reject",
+    "wrong PDF URL or SHA/byte length -> reject",
+    "marker U+FFFD/truncated/error/page count drift -> reject",
+    "owner other than 1 -> reject",
+    "non-null synthetic concurso_id or run_id -> reject package contract"
+  ],
+  "side_effects": {"api": false, "database": false, "proposal": false, "pilot": false}
+}

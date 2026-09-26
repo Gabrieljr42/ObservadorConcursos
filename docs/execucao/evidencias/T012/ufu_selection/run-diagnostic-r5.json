@@ -1,0 +1,18 @@
+{
+  "status": "BLOCKED",
+  "scope": "offline run-id diagnosis only",
+  "envelope": "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r3.json",
+  "envelope_sha256": "1618779ed465a3afaa420712e8add4bc79a3ffd76f638c487e2ab9dd1b471e9b",
+  "canonical_payload_sha256": "9d2cfe61c4e6194aba57694bbf56a0a4b375589ef55d6a6f56688426967cb3b4",
+  "three_process_result": [
+    "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+    "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+    "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c"
+  ],
+  "current_local_run_id": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+  "review_expected_run_id": "tp-reviewed-1c587b6b8bc29f5d8aef531527e45a09",
+  "r4_claimed_run_id": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+  "diagnosis": "Current checked-out importer and exact R3 bytes deterministically produce b7eb... in three fresh processes; therefore 1c587... cannot be truthfully bound without an external change to the envelope/importer. No R5 proposal handoff generated.",
+  "proposal_target": null,
+  "network": false
+}

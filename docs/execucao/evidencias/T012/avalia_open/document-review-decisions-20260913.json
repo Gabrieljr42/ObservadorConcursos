@@ -1,0 +1,50 @@
+{
+  "schema": "t012.avalia.document-review-decisions.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only; no decision applied; no API/DB write",
+  "run_id": "tpr-8079a5856a43",
+  "source": "avalia_open",
+  "source_id": 39,
+  "external_id": "631",
+  "candidate_id": "avalia_open-631",
+  "identity": {
+    "organization": "Prefeitura Municipal De Caldas Novas",
+    "title": "Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO",
+    "detail_url": "https://www2.avalia.org.br/concurso.jsp?id=631"
+  },
+  "dispatchable": false,
+  "decisions": [
+    {
+      "document_id": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a",
+      "id_source": "receipt URL UUID; no persisted review-case document id was present",
+      "status": "NEEDS_HUMAN",
+      "kind": "outro",
+      "title": "1º Termo de Retificação do Edital de Abertura nº 001/2026 - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "artifact": {"sha256": null, "byte_len": null, "content_type": "application/pdf", "local_preserved": false},
+      "identity_link": "Title and official Avalia host/contest numbering are consistent with external_id=631, but bytes were not preserved locally.",
+      "promoted_fields_effect": "undetermined",
+      "reason": "The live receipt lists this retification as pending, but no local review-store artifact, SHA, byte length, pages, or literal snippet exists. ACCEPT/REJECT cannot be reproduced or represented as the required API decision without the bytes."
+    },
+    {
+      "document_id": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38",
+      "id_source": "receipt URL UUID; no persisted review-case document id was present",
+      "status": "NEEDS_HUMAN",
+      "kind": "edital",
+      "title": "Edital de Abertura - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "artifact": {"sha256": null, "byte_len": null, "content_type": "application/pdf", "local_preserved": false},
+      "identity_link": "Title and official Avalia host/contest numbering are consistent with external_id=631, but bytes were not preserved locally.",
+      "promoted_fields_effect": "undetermined",
+      "reason": "The live receipt lists this opening edital as pending, but no local review-store artifact, SHA, byte length, pages, or literal snippet exists. ACCEPT/REJECT cannot be reproduced or represented as the required API decision without the bytes."
+    }
+  ],
+  "api_approval_payload": null,
+  "next_gate": "Preserve both exact PDFs through normal review preparation (or prepare-preserved), then compute SHA/bytes/pages and submit one DocumentEffectDecision per artifact; do not retry proposal before that review.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/avalia_open/live-proposal-receipt-20260913.json",
+    "backend/.tenderproof/batch60-major-live-20260908/operational.sqlite3 (preserved run contains only the prior principal PDF, URL 2248395b; no pending URLs/artifacts)",
+    "backend/.tenderproof/r60kill/avalia_open/recovered.json (recovery metadata only; no pending-document bytes)"
+  ]
+}

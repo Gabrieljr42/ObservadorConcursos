@@ -1,0 +1,13 @@
+{
+  "schema":"t012.revalidation.v1",
+  "source":"cesgranrio_open",
+  "candidate_external_id":"27",
+  "run_id":"tpr-143c2fdac179",
+  "original_run_status":"failed_page_limit",
+  "revalidation":"PASS_OFFLINE",
+  "pdf":{"sha256":"e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f","byte_len":1166736,"pages":81,"hash_match":true},
+  "identity":{"event_id":27,"detail_url":"https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27","document_title":"EDITAL Nº 01/2026","selected_document_id":"cesgranrio_open-ef63456bb29b61f912","cronograma_not_substituted":true},
+  "document_checks":{"title":true,"organization":true,"registration_interval":true,"fee":true,"cargo_roles":true,"remuneration":true,"reserve_only":true},
+  "fail_closed":{"canonical_concurso_id":null,"apply":false,"publish":false},
+  "method":"pypdf local extraction; no network, Docker, API, DB or shared registry"
+}

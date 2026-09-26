@@ -1,0 +1,33 @@
+{
+  "schema": "t012.dispatch-batch-r5-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "T012_DISPATCH_BATCH_R5_ACCEPT_FOR_DEPLOY",
+  "scope": "bounded read_only review; no network, API, DB or catalogue mutation",
+  "branches": {
+    "fafipa": "fields.py strict source=fafipa_open/external=4208 branch invokes byte/page/U+FFFD-pinned strong_preflight and replaces orgao/edital; fallback is organization+main edital only",
+    "cpcon": "fields.py strict source=cpcon_open/external=processo-seletivo-simplificado-no-002-2026 invokes extract_identity(artifact,pages,candidate); validation.py delegates document_identity_ids(candidate,pages) to the pinned resolver",
+    "shdias": "fields.py strict source=shdias_open/external=MTEw/MzA4 reparses canonical stored bytes and exposes typed taxa=63.25; publication PUBLISHABLE includes scalar taxa"
+  },
+  "pins_and_guards": {
+    "fafipa": "SHA 26c059...1276f, 3,630,911 bytes, 38 pages, Mirador + 001/2026, U+FFFD fail-closed",
+    "cpcon": "SHA 6a6136...ef05, 498,894 bytes, exact source/external, UEPB + 002/2026, duplicate/missing marker and U+FFFD/truncation fail-closed",
+    "shdias": "SHA F7DEAA...A750C7, 697,485 bytes, 44 pages, MTEw/MzA4/00308, parser identity and replacement-character guards",
+    "publishable_taxa": "PUBLISHABLE=(titulo, orgao, edital_numero, inscricao_inicio, inscricao_fim, prova_data, taxa, cargos); revalidation requires supported string, evidence and exact fresh reproduction"
+  },
+  "tests": {
+    "command": "$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py backend/tests/test_t012_fafipa_r4.py backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_t012_shdias_dispatch_r5.py backend/tests/test_shdias_hortolandia_r4.py",
+    "result": "26 passed in 128.97s",
+    "coverage": ["source/external/SHA drift", "CPCON candidate/pages resolver contract", "FAFIPA organization+edital fallback", "SHDias real _revalidate and scalar taxa=63.25", "U+FFFD and truncation", "zero proposal/version/outbox side effects"],
+    "warnings": "158 deprecation warnings only; no failures",
+    "compileall": "backend/app/tenderproof/fields.py, validation.py, publication.py and three source modules: passed"
+  },
+  "side_effects": {
+    "publication_proposals": 0,
+    "concurso_versions": 0,
+    "publication_outbox": 0,
+    "pilot_mutated": false,
+    "network": false
+  },
+  "deployment_boundary": "Dispatch code is accepted for deploy; no proposal/apply or live operational validation is authorized by this review. Preserve reference_only and existing source-specific fail-closed branches."
+}

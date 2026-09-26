@@ -1,0 +1,36 @@
+{
+  "schema": "t012.reviewed-envelope.v1",
+  "status": "PROPOSTA_PRONTA",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "selection": {
+    "title": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes",
+    "orgao": "Universidade Federal de Uberlândia",
+    "edital_numero": "144/2026",
+    "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "current_year": 2026,
+    "reference_only": true,
+    "omitted_unproven_fields": ["taxa", "cargos", "remuneracao", "documentos_pdf"]
+  },
+  "artifact": {
+    "artifact_id": "ufu-selection-1843-detail-2026",
+    "fixture": "backend/tests/fixtures/tenderproof_batch30_institutional/ufu_selection-cycle1-detail-9088337b8d.html",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "pages": 1
+  },
+  "provenance": {
+    "method": "preserved official UFU detail HTML, offline parser",
+    "network": false,
+    "parser": "backend/app/tenderproof/ufu_selection_parser.py",
+    "test": "backend/tests/test_ufu_selection_preflight.py"
+  },
+  "evidence": {
+    "titulo": {"page": 1, "snippet": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "json_path": "identity.title"},
+    "orgao": {"page": 1, "snippet": "Universidade Federal de Uberlândia", "json_path": "identity.orgao"},
+    "edital_numero": {"page": 1, "snippet": "144/2026", "json_path": "identity.edital_numero"},
+    "inscricao": {"page": 1, "snippet": "19/08/2026 15:00 03/09/2026 14:59 Inscrições", "json_path": "inscricao"}
+  },
+  "omitted_unproven_fields": ["prova_data", "taxa", "cargos", "remuneracao", "documentos_pdf"]
+}

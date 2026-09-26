@@ -1,0 +1,32 @@
+{
+  "schema": "independent-review.real-proposals.t010.v1",
+  "reviewer": "Luna-independent",
+  "reviewed_at": "2026-09-12",
+  "sources": ["docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md", "T010-manifesto-propostas-offline.json", "T010-pacotes-revisao.json", "read-only GET /tenderproof/publications/proposals/{id}"],
+  "checks": {
+    "get_read_only": "HTTP 200 for all six proposal IDs",
+    "state": "all six proposed",
+    "target_binding": "concurso_id/run_id matched dispatch and manifest",
+    "provenance": "evidence SHA matched accepted T010 package for 6/6",
+    "payload_diff": "proposed/eligible fields were identity and checked registration fields only; no pending fields promoted",
+    "idempotency": "proposal IDs unique; dispatch was one attempt per record",
+    "no_apply": "version_id, approved_by, result and applied_at null for 6/6; dispatch receipt reports no approval/apply/version/event/notification"
+  },
+  "proposals": [
+    {"record_id": 1, "proposal_id": "tpp-5867ec21d73ac4fe89418eb466fa0464", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; manter gate de aprovação/aplicação."},
+    {"record_id": 5, "proposal_id": "tpp-d5cbe751714efdcd6782b45548d59fca", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; campos de inscrição são os checked e evidenciados."},
+    {"record_id": 6, "proposal_id": "tpp-69cc831d24aafc69f0aed3b8ba1dc750", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; manter gate de aprovação/aplicação."},
+    {"record_id": 7, "proposal_id": "tpp-ed6ee1dcd07ee846ba1f24abd4d9201d", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; taxa/prova permanecem fora do payload."},
+    {"record_id": 8, "proposal_id": "tpp-057a831228de8b054c3726529e7038e4", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; remuneração variável não foi promovida."},
+    {"record_id": 14, "proposal_id": "tpp-8bbd941a2970275e237e8fbe522783ec", "state": "proposed", "decision": "ACEITO", "correction": "Nenhuma; natureza de prestação/cadastro reserva permanece preservada."}
+  ],
+  "failed_attempt": {"record_id": 15, "decision": "DEVOLVIDO", "proposal_id": null, "http_status": 422, "observation": "Nenhum proposal_id; gate parou sem retry. Diagnóstico independente necessário antes de qualquer retomada."},
+  "cardinality_reconciliation": {
+    "manifest_records_attempted_before_stop": [1, 5, 6, 7, 8, 14, 15],
+    "created_proposal_ids": 6,
+    "created_records": [1, 5, 6, 7, 8, 14],
+    "failed_record": 15,
+    "finding": "A afirmação de sete propostas criadas conflita com a evidência de seis POST 201 + um POST 422 e com GET 200 dos seis IDs. Não há sétimo proposal_id identificável; sete é a contagem de tentativas/linhas até o erro, não de propostas criadas."
+  },
+  "authorization": "Esta revisão não autoriza aprovação, aplicação, retry ou alteração de quadro/piloto."
+}

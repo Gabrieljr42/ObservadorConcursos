@@ -1,0 +1,72 @@
+{
+  "schema": "t010.id7.post-import-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "release": "Liberado somente approve de cargos + apply único, seguido de revisão pós-apply; não aprovar outros campos.",
+  "run": {
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "owner_user_id": 1,
+    "source": "abcp_open",
+    "external_id": "2868",
+    "concurso_id": 7,
+    "source_id": 22,
+    "artifact_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+    "artifact_byte_len": 791715,
+    "fields": ["cargos"],
+    "cargo_rows": 1,
+    "utf8_u_fffd": false
+  },
+  "proposal": {
+    "id": "tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "proposal_hash": "7e211ef682090674ab855a02c3c472093422015988130af96668a248695d3875",
+    "state": "proposed",
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "concurso_id": 7,
+    "identity_source_id": 22,
+    "identity_external_id": "2868",
+    "eligible_fields": ["cargos"],
+    "baseline_cargos": null,
+    "proposed_rows": 1,
+    "run_proposed_equal": true,
+    "diff_only": ["cargos"],
+    "approved_fields": [],
+    "version_id": null,
+    "result": null
+  },
+  "cargo_and_evidence": {
+    "nome": "Técnico Legislativo",
+    "vagas_imediatas": 1,
+    "cadastro_reserva": true,
+    "vagas_ampla_concorrencia": 1,
+    "vagas_pcd": 0,
+    "remuneracao": "3378.77 BRL/mês",
+    "jornada": "35 horas semanais",
+    "requisitos": "Ensino Médio completo",
+    "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"],
+    "taxa": "ausente",
+    "prova_data": "ausente",
+    "evidence_items": 2,
+    "evidence_page": 1,
+    "evidence_sha_url_and_literal_utf8": true
+  },
+  "side_effects_and_counts": {
+    "health": 200,
+    "before": {"proposals": 85, "versions": 83, "outbox": 83, "notifications": 82},
+    "after_import_proposal": {"proposals": 86, "versions": 83, "outbox": 83, "notifications": 82},
+    "new_version": false,
+    "new_outbox": false,
+    "new_notification": false,
+    "application": false
+  },
+  "sources": [
+    "GET /tenderproof/runs/tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "GET /tenderproof/publications/proposals/tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "GET /sync/checkpoint",
+    "GET /health",
+    "docs/execucao/evidencias/T010/gate-pre-proposta-ID7-20260912.json"
+  ],
+  "gate_conclusion": "ACEITA: liberar approve somente de cargos e apply único desta proposta; manter taxa/prova_data bloqueados e realizar revisão read-only pós-apply."
+}

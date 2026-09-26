@@ -1,0 +1,72 @@
+{
+  "schema": "t010.id1.second-proposal-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "action_authorization": "ACEITA somente a execução posterior de approve/apply idempotente, aguardando no_change; nenhuma mutação foi feita nesta revisão.",
+  "read_only_queries": [
+    "GET http://localhost:18000/health",
+    "GET /tenderproof/publications/proposals/tpp-273377777279a608bb4ce91107fae9bc",
+    "GET /tenderproof/publications/proposals/tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "GET /sync/checkpoint"
+  ],
+  "second_proposal": {
+    "proposal_id": "tpp-273377777279a608bb4ce91107fae9bc",
+    "proposal_hash": "544ce52650a49fb2da29cffecdaca13c76f393d73a36f7e57dab912b8340739",
+    "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "concurso_id": 1,
+    "source_id": 19,
+    "state": "proposed",
+    "baseline_cargos": [
+      {
+        "nome": "Professor Auxiliar",
+        "vagas_imediatas": 10,
+        "vagas_ampla_concorrencia": 9,
+        "vagas_pcd": 1,
+        "remuneracao": "30.53",
+        "moeda": "BRL",
+        "remuneracao_observacao": "por hora-aula",
+        "jornada": "até 40 horas semanais",
+        "requisitos": "Licenciatura Plena em Pedagogia ou Normal Superior, ambas com habilitação na Educação Infantil e nos anos iniciais do Ensino Fundamental"
+      }
+    ],
+    "proposed_cargos_semantic_equal_baseline": true,
+    "material_diff": false,
+    "eligible_fields": ["cargos"],
+    "approved_fields": [],
+    "version_id": null,
+    "result": null,
+    "finding": "The baseline and proposed cargo contain the same values; only JSON key ordering differs. No material diff is present."
+  },
+  "prior_application": {
+    "proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "state": "applied",
+    "version_id": 82,
+    "approved_fields": ["cargos"],
+    "matching_catalogue_version_count": 1,
+    "matching_version": {
+      "id": 82,
+      "concurso_id": 1,
+      "change_type": "updated",
+      "changed_fields": ["cargos"]
+    },
+    "finding": "Exactly one current history entry for ID1 changes cargos: version 82."
+  },
+  "health_and_checkpoint": {
+    "health": {"status": "ok", "env": "local-pilot"},
+    "publications": 34,
+    "versions": 82,
+    "outbox": 82,
+    "notifications": 81,
+    "alerts": 1,
+    "favorites": 0,
+    "concursos": 33,
+    "intact": true,
+    "basis": "GET checkpoint plus read-only operational database checkpoint preserved in evidencia-gate-id1-reviewed-run-proposta-20260912.json."
+  },
+  "sources": [
+    "docs/execucao/evidencias/T010/evidencia-gate-id1-reviewed-run-proposta-20260912.json",
+    "docs/execucao/evidencias/evidencia-piloto-T010-ID1-gate-2026-09-12.json",
+    "docs/execucao/evidencias/T010/id1.pdf"
+  ]
+}

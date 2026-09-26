@@ -1,0 +1,7 @@
+# Revisão independente T007 — dry run normalized-link
+
+Entrada: `backend/.tenderproof/product-completion/normalized-link-dry-run-20260912T203000Z.json`; proposta `tpr-4391918df249356b748f6b97691e0756`, hash completo iniciado por `4391918d`. Os 32 IDs solicitados são únicos, todos os 32 aparecem como targets e não há rejeitados. `source_id`, `external_id`, `link_pagina`, `link_edital`, `edital_numero` e `titulo` conferem com o snapshot `delivery-current-20260912T195125613173Z.json`; não inclui Garibaldi. Os `latest_version_id` foram retornados pelo endpoint e são usados pelo apply como revisão concorrente; o snapshot de catálogo não materializa esse campo para revalidação offline.
+
+O contrato da rota confirma `kind=normalized_link_reference`: aplicação futura apenas sincroniza `concurso.link_edital`, grava `reference_only=true` no snapshot de versão e não lê PDF nem altera seleções/cargos. O payload é, portanto, referência somente; os 30 editais e 2 itens classificados como “outro” permanecem referências, sem promoção documental.
+
+**Devolver ajuste concreto antes da aplicação:** `dry_run_normalized_link_32.ps1` lê E-mail/Senha do `ACESSO-LOCAL.md` e faz login, mas grava `credentials_used=false` no recibo. Isso é metadado enganoso; mudar para `true` ou renomear explicitamente para `paid_credentials_used=false`. A autorização enviada é rastreável e honesta (`delegated_automation`, `human_read=false`, referência T007, SHA atual do QUADRO), sem necessidade de confirmação adicional.

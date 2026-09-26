@@ -1,0 +1,937 @@
+{
+  "schema_version": "coverage-matrix-reconciliation.r4",
+  "generated_at": "2026-09-13",
+  "authoritative": false,
+  "snapshot": {
+    "concursos": 33,
+    "fontes_catalogo": 32,
+    "fontes_linhas_configuradas": 99,
+    "cargos": 180,
+    "publications": 34,
+    "versions": 91,
+    "outbox": 91,
+    "notifications": 90,
+    "proposals": 95,
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_attempts": 0
+  },
+  "live_validation": {
+    "health_http": 200,
+    "catalogue_http": 200,
+    "catalogue_concursos": 33,
+    "cargo_metric": 180,
+    "null_as_zero_rule": "SUM(len(cargos)) with cargos=null treated as zero",
+    "nullable_contests": [
+      31,
+      29,
+      28,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20,
+      18,
+      15,
+      5,
+      2
+    ],
+    "naive_null_inclusive_diagnostic": 194,
+    "diagnostic_not_state": true,
+    "evidence": [
+      "docs/execucao/evidencias/T010/reconciliacao-cargos-180-vs-194-20260913.json",
+      "docs/execucao/evidencias/revisao-desvio-cargos-api-194-vs-db180-Luna-20260913.json"
+    ]
+  },
+  "validation": {
+    "rows": 99,
+    "unique_numero": 99,
+    "unique_fonte": 99,
+    "evidence_pointer_on_every_row": true,
+    "same_columns_as_r3": true
+  },
+  "accepted_overlays": [
+    {
+      "source_number": 19,
+      "fonte": "access_open",
+      "concurso_id": 1,
+      "state": "T010_APPLIED_UI",
+      "version_id": 82,
+      "evidence_pointer": "docs/execucao/evidencias/evidencia-piloto-T010-ID1-gate-2026-09-12.json;docs/execucao/evidencias/evidencia-piloto-T010-ID1-gate-2026-09-12.md"
+    },
+    {
+      "source_number": 17,
+      "fonte": "imeso_open",
+      "concurso_id": 6,
+      "state": "T010_APPLIED_UI",
+      "version_id": 83,
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-operacional-ID6-T009-20260912.json;docs/execucao/evidencias/evidencia-piloto-T010-ID6-gate-2026-09-13.json"
+    },
+    {
+      "source_number": 22,
+      "fonte": "abcp_open",
+      "concurso_id": 7,
+      "state": "T010_APPLIED_UI",
+      "version_id": 84,
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-pos-apply-ID7-20260912.json;docs/execucao/evidencias/evidencia-piloto-T010-ID7-ui-coordinator-2026-09-13.json"
+    },
+    {
+      "source_number": 34,
+      "fonte": "contemax_open",
+      "concurso_id": 17,
+      "state": "T011_APPLIED_UI",
+      "version_id": 86,
+      "evidence_pointer": "docs/execucao/evidencias/T011/gate-ID17-r8-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T011-ID17-ui-coordinator-v86-2026-09-13.json"
+    },
+    {
+      "source_number": 45,
+      "fonte": "idib_open",
+      "concurso_id": 8,
+      "state": "T010_APPLIED_UI",
+      "version_id": 88,
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID8-pos-apply-20260913.json;docs/execucao/evidencias/T010/gate-ID8-prova-data-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID8-ui-coordinator-v88-2026-09-13.json",
+      "cargo_version_id": 87,
+      "prova_version_id": 88
+    },
+    {
+      "source_number": 47,
+      "fonte": "elo_open",
+      "concurso_id": 32,
+      "state": "T005_APPLIED_UI",
+      "version_id": 89,
+      "evidence_pointer": "docs/execucao/evidencias/T005/T005-concurso32-receipt.json;docs/execucao/evidencias/evidencia-piloto-T005-ID32-ui-coordinator-v89-2026-09-13.json"
+    },
+    {
+      "source_number": 76,
+      "fonte": "fapese_selection",
+      "concurso_id": 14,
+      "state": "T010_APPLIED_UI",
+      "version_id": 90,
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID14-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID14-ui-coordinator-v90-2026-09-13.json"
+    },
+    {
+      "source_number": 18,
+      "fonte": "omni_open",
+      "concurso_id": 16,
+      "state": "T010_APPLIED_UI",
+      "version_id": 91,
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID16-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID16-ui-coordinator-v91-2026-09-13.json;docs/execucao/evidencias/T010/verificacao-fluxo-cancelamento-proposta-ID16-Luna-20260913.json"
+    }
+  ],
+  "preservations": {
+    "insufficient_contests": [
+      5,
+      18,
+      20,
+      22,
+      23,
+      24,
+      25
+    ],
+    "identity_mismatch": "concurso15/source6",
+    "do_not_retry": [
+      21
+    ]
+  },
+  "proposal_policy": {
+    "bdb86": "NEVER_APPROVE_NEVER_APPLY"
+  },
+  "rows": [
+    {
+      "numero": "1",
+      "fonte": "ibfc_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=1"
+    },
+    {
+      "numero": "2",
+      "fonte": "idecan_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=2"
+    },
+    {
+      "numero": "3",
+      "fonte": "aocp_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=3"
+    },
+    {
+      "numero": "4",
+      "fonte": "consulpam_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=4"
+    },
+    {
+      "numero": "5",
+      "fonte": "ibam_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=5"
+    },
+    {
+      "numero": "6",
+      "fonte": "ibade_open",
+      "overlay_target_concurso": "15",
+      "reconciled_state": "T010_MISMATCH",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=6"
+    },
+    {
+      "numero": "7",
+      "fonte": "consulplan_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=7"
+    },
+    {
+      "numero": "8",
+      "fonte": "seprod_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=8"
+    },
+    {
+      "numero": "9",
+      "fonte": "fcc_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=9"
+    },
+    {
+      "numero": "10",
+      "fonte": "fgv_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=10"
+    },
+    {
+      "numero": "11",
+      "fonte": "cebraspe_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=11"
+    },
+    {
+      "numero": "12",
+      "fonte": "cesgranrio_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=12"
+    },
+    {
+      "numero": "13",
+      "fonte": "idcap_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=13"
+    },
+    {
+      "numero": "14",
+      "fonte": "ibgp_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=14"
+    },
+    {
+      "numero": "15",
+      "fonte": "fundep_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=15"
+    },
+    {
+      "numero": "16",
+      "fonte": "fumarc_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=16"
+    },
+    {
+      "numero": "17",
+      "fonte": "imeso_open",
+      "overlay_target_concurso": "6",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "83",
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-operacional-ID6-T009-20260912.json;docs/execucao/evidencias/evidencia-piloto-T010-ID6-gate-2026-09-13.json"
+    },
+    {
+      "numero": "18",
+      "fonte": "omni_open",
+      "overlay_target_concurso": "16",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "91",
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID16-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID16-ui-coordinator-v91-2026-09-13.json;docs/execucao/evidencias/T010/verificacao-fluxo-cancelamento-proposta-ID16-Luna-20260913.json"
+    },
+    {
+      "numero": "19",
+      "fonte": "access_open",
+      "overlay_target_concurso": "1",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "82",
+      "evidence_pointer": "docs/execucao/evidencias/evidencia-piloto-T010-ID1-gate-2026-09-12.json;docs/execucao/evidencias/evidencia-piloto-T010-ID1-gate-2026-09-12.md"
+    },
+    {
+      "numero": "20",
+      "fonte": "exame_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=20"
+    },
+    {
+      "numero": "21",
+      "fonte": "epl_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=21"
+    },
+    {
+      "numero": "22",
+      "fonte": "abcp_open",
+      "overlay_target_concurso": "7",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "84",
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-pos-apply-ID7-20260912.json;docs/execucao/evidencias/evidencia-piloto-T010-ID7-ui-coordinator-2026-09-13.json"
+    },
+    {
+      "numero": "23",
+      "fonte": "unifil_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=23"
+    },
+    {
+      "numero": "24",
+      "fonte": "objetiva_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=24"
+    },
+    {
+      "numero": "25",
+      "fonte": "leandroferreira_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=25"
+    },
+    {
+      "numero": "26",
+      "fonte": "cotec_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=26"
+    },
+    {
+      "numero": "27",
+      "fonte": "aguia_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=27"
+    },
+    {
+      "numero": "28",
+      "fonte": "iuds_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=28"
+    },
+    {
+      "numero": "29",
+      "fonte": "reisesreis_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=29"
+    },
+    {
+      "numero": "30",
+      "fonte": "msconcursos_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=30"
+    },
+    {
+      "numero": "31",
+      "fonte": "facet_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=31"
+    },
+    {
+      "numero": "32",
+      "fonte": "educapb_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=32"
+    },
+    {
+      "numero": "33",
+      "fonte": "admtec_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=33"
+    },
+    {
+      "numero": "34",
+      "fonte": "contemax_open",
+      "overlay_target_concurso": "17",
+      "reconciled_state": "T011_APPLIED_UI",
+      "version_id": "86",
+      "evidence_pointer": "docs/execucao/evidencias/T011/gate-ID17-r8-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T011-ID17-ui-coordinator-v86-2026-09-13.json"
+    },
+    {
+      "numero": "35",
+      "fonte": "cpcon_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=35"
+    },
+    {
+      "numero": "36",
+      "fonte": "funvapi_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=36"
+    },
+    {
+      "numero": "37",
+      "fonte": "consep_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=37"
+    },
+    {
+      "numero": "38",
+      "fonte": "institutoconsulplan_open",
+      "overlay_target_concurso": "5",
+      "reconciled_state": "T010_INSUFFICIENT",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=38"
+    },
+    {
+      "numero": "39",
+      "fonte": "avalia_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=39"
+    },
+    {
+      "numero": "40",
+      "fonte": "ufu_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=40"
+    },
+    {
+      "numero": "41",
+      "fonte": "idgran_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=41"
+    },
+    {
+      "numero": "42",
+      "fonte": "quadrix_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=42"
+    },
+    {
+      "numero": "43",
+      "fonte": "gualimp_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=43"
+    },
+    {
+      "numero": "44",
+      "fonte": "verbena_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=44"
+    },
+    {
+      "numero": "45",
+      "fonte": "idib_open",
+      "overlay_target_concurso": "8",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "88",
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID8-pos-apply-20260913.json;docs/execucao/evidencias/T010/gate-ID8-prova-data-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID8-ui-coordinator-v88-2026-09-13.json"
+    },
+    {
+      "numero": "46",
+      "fonte": "jcm_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=46"
+    },
+    {
+      "numero": "47",
+      "fonte": "elo_open",
+      "overlay_target_concurso": "32",
+      "reconciled_state": "T005_APPLIED_UI",
+      "version_id": "89",
+      "evidence_pointer": "docs/execucao/evidencias/T005/T005-concurso32-receipt.json;docs/execucao/evidencias/evidencia-piloto-T005-ID32-ui-coordinator-v89-2026-09-13.json"
+    },
+    {
+      "numero": "48",
+      "fonte": "apta_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=48"
+    },
+    {
+      "numero": "49",
+      "fonte": "legalle_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=49"
+    },
+    {
+      "numero": "50",
+      "fonte": "rbo_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=50"
+    },
+    {
+      "numero": "51",
+      "fonte": "shdias_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=51"
+    },
+    {
+      "numero": "52",
+      "fonte": "zambini_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=52"
+    },
+    {
+      "numero": "53",
+      "fonte": "nossorumo_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=53"
+    },
+    {
+      "numero": "54",
+      "fonte": "avancasp_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=54"
+    },
+    {
+      "numero": "55",
+      "fonte": "institutomais_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=55"
+    },
+    {
+      "numero": "56",
+      "fonte": "publiconsult_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=56"
+    },
+    {
+      "numero": "57",
+      "fonte": "klc_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=57"
+    },
+    {
+      "numero": "58",
+      "fonte": "sigma_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=58"
+    },
+    {
+      "numero": "59",
+      "fonte": "w2_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=59"
+    },
+    {
+      "numero": "60",
+      "fonte": "fenix_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=60"
+    },
+    {
+      "numero": "61",
+      "fonte": "oppus_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=61"
+    },
+    {
+      "numero": "62",
+      "fonte": "legatus_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=62"
+    },
+    {
+      "numero": "63",
+      "fonte": "fepese_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=63"
+    },
+    {
+      "numero": "64",
+      "fonte": "funcern_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=64"
+    },
+    {
+      "numero": "65",
+      "fonte": "fapemig_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=65"
+    },
+    {
+      "numero": "66",
+      "fonte": "fapes_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=66"
+    },
+    {
+      "numero": "67",
+      "fonte": "fapesq_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=67"
+    },
+    {
+      "numero": "68",
+      "fonte": "uniselva_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=68"
+    },
+    {
+      "numero": "69",
+      "fonte": "fafipa_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=69"
+    },
+    {
+      "numero": "70",
+      "fonte": "ieses_open",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=70"
+    },
+    {
+      "numero": "71",
+      "fonte": "funpec_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=71"
+    },
+    {
+      "numero": "72",
+      "fonte": "fade_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=72"
+    },
+    {
+      "numero": "73",
+      "fonte": "fapex_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=73"
+    },
+    {
+      "numero": "74",
+      "fonte": "fatec_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=74"
+    },
+    {
+      "numero": "75",
+      "fonte": "faped_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=75"
+    },
+    {
+      "numero": "76",
+      "fonte": "fapese_selection",
+      "overlay_target_concurso": "14",
+      "reconciled_state": "T010_APPLIED_UI",
+      "version_id": "90",
+      "evidence_pointer": "docs/execucao/evidencias/T010/gate-ID14-pos-apply-20260913.json;docs/execucao/evidencias/evidencia-piloto-T010-ID14-ui-coordinator-v90-2026-09-13.json"
+    },
+    {
+      "numero": "77",
+      "fonte": "fapepi_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=77"
+    },
+    {
+      "numero": "78",
+      "fonte": "fapema_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=78"
+    },
+    {
+      "numero": "79",
+      "fonte": "fapece_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=79"
+    },
+    {
+      "numero": "80",
+      "fonte": "fapern_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=80"
+    },
+    {
+      "numero": "81",
+      "fonte": "fapeal_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=81"
+    },
+    {
+      "numero": "82",
+      "fonte": "facepe_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=82"
+    },
+    {
+      "numero": "83",
+      "fonte": "fapesb_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=83"
+    },
+    {
+      "numero": "84",
+      "fonte": "faperj_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=84"
+    },
+    {
+      "numero": "85",
+      "fonte": "fapesp_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=85"
+    },
+    {
+      "numero": "86",
+      "fonte": "fappr_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=86"
+    },
+    {
+      "numero": "87",
+      "fonte": "fapesc_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=87"
+    },
+    {
+      "numero": "88",
+      "fonte": "fapergs_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=88"
+    },
+    {
+      "numero": "89",
+      "fonte": "fundect_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=89"
+    },
+    {
+      "numero": "90",
+      "fonte": "fapemat_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=90"
+    },
+    {
+      "numero": "91",
+      "fonte": "fapeg_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=91"
+    },
+    {
+      "numero": "92",
+      "fonte": "fapdf_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=92"
+    },
+    {
+      "numero": "93",
+      "fonte": "fapt_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=93"
+    },
+    {
+      "numero": "94",
+      "fonte": "fapeam_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=94"
+    },
+    {
+      "numero": "95",
+      "fonte": "fapespa_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=95"
+    },
+    {
+      "numero": "96",
+      "fonte": "fapeap_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=96"
+    },
+    {
+      "numero": "97",
+      "fonte": "faperr_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=97"
+    },
+    {
+      "numero": "98",
+      "fonte": "fapero_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=98"
+    },
+    {
+      "numero": "99",
+      "fonte": "fapac_selection",
+      "overlay_target_concurso": "",
+      "reconciled_state": "BASELINE_ONLY",
+      "version_id": "",
+      "evidence_pointer": "docs/entrega-fontes-atual.csv#numero=99"
+    }
+  ],
+  "next_review_status": "READY_FOR_MATRIX_REVIEW_R2"
+}
+

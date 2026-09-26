@@ -1,0 +1,13 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "concurso_id": null,
+  "owner_user_id": 1,
+  "field_names": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+  "omitted": ["prova_data", "cronograma_proximo", "taxa", "cargos", "remuneracao", "docs"],
+  "target": "proposal target null; derived run_id exists only in import receipt, never envelope",
+  "replay": "same envelope is idempotent; altered hash/path is rejected before commit",
+  "network": false
+}

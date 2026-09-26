@@ -1,0 +1,59 @@
+{
+  "schema": "t012.fafipa.live-blocker-r4-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_BLOCKED",
+  "scope": "read_only receipt/evidence reconciliation; no API, DB, pilot or catalogue mutation",
+  "identity_and_bytes": {
+    "source_id": 69,
+    "source": "fafipa_open",
+    "external_id": "4208",
+    "title": "Concurso Público do Município de Mirador - PR",
+    "run_id": "tp-reviewed-97e7836300215e6847ff878a5ecdabdb",
+    "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "byte_len": 3630911,
+    "pages": 38,
+    "reference_only": true,
+    "dry_run_import": "validated/imported"
+  },
+  "blocker": {
+    "http": 422,
+    "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+    "eligible_fields": [],
+    "blocked_fields": {
+      "titulo": "trecho, página, origem ou vínculo documental inválido",
+      "orgao": "trecho, página, origem ou vínculo documental inválido",
+      "edital_numero": "trecho, página, origem ou vínculo documental inválido",
+      "inscricao_inicio": "valor não reproduzido pelo extrator sobre os bytes preservados",
+      "inscricao_fim": "valor não reproduzido pelo extrator sobre os bytes preservados",
+      "prova_data": "valor não reproduzido pelo extrator sobre os bytes preservados",
+      "cargos": "valor não reproduzido pelo extrator sobre os bytes preservados",
+      "taxa": "campo não extraído"
+    },
+    "root_cause": "O ReviewedRun R3 contém snippets/valores que não reproduzem a extração fresca do parser R4/R6; a revalidação normal bloqueia antes de criar proposta."
+  },
+  "side_effects": {
+    "proposal_created": false,
+    "version_created": false,
+    "outbox_created": false,
+    "notification_created": false,
+    "approve": false,
+    "apply": false,
+    "checkpoint_before_equals_after": true,
+    "counts": {"concursos": 34, "distinct_sources": 33, "cargos": 196, "versions": 92, "outbox": 92, "notifications": 91, "proposals": 97}
+  },
+  "cargo_count_interpretation": {
+    "observed_prior": "The immediately preceding SHDias apply receipt recorded 182 cargo arrays after version 92/outbox 92/notification 91.",
+    "fafipa_run_material": "The blocked FAFIPA ReviewedRun carries 14 cargo entries; 182 + 14 = 196.",
+    "conclusion": "The 196 checkpoint is already present before the FAFIPA proposal attempt and remains unchanged after it. It is consistent with materialized/reference-only run cargo data or counter scope, not an effect of proposal/version/outbox/notification creation. This receipt alone does not prove a catalog cargo-row mutation.",
+    "caveat": "No receipt in this bounded set records a live catalog query isolating canonical rows from imported run material; do not claim FAFIPA was applied or that 196 is a new canonical version."
+  },
+  "next_gate": "Regenerate/accept an R5+ SHA-bound FAFIPA envelope whose snippets and values reproduce the current parser, then rerun only normal revalidate→proposal; do not retry this run or approve/apply.",
+  "evidence": [
+    "live-proposal-receipt-20260913-r4-blocker.json",
+    "T012-fafipa-open-reviewed-run-r3.json",
+    "T012-fafipa-open-pdf-r3-receipt.json",
+    "docs/execucao/evidencias/T012/shdias_open/apply-live-r6-20260913.json"
+  ],
+  "mutations_performed": false
+}

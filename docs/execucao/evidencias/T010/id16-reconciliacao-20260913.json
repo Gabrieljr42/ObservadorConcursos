@@ -1,0 +1,56 @@
+{
+  "task": "T010-ID16",
+  "generated_at": "2026-09-13",
+  "status": "blocked_precise",
+  "scope": "OMNI Concursos Públicos; concurso 16; Osvaldo Cruz/SP; edital 002/2024; histórico",
+  "source": "omni_open",
+  "external_id": "246",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id16.pdf",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "bytes": 396219,
+    "pages": 23
+  },
+  "runtime_reconciliation": {
+    "contest_id": 16,
+    "title": "Concurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP",
+    "preserved_runs": [
+      "tp-tcj-59347827080f515f92f18723759a231d-1",
+      "tp-tcj-81a22da6ab7b5c55b3a5c83baab96932-1"
+    ],
+    "candidate_key": "246",
+    "source_match": true,
+    "artifact_match": true
+  },
+  "reconciled_supported_table": {
+    "evidence_pages": [1, 2],
+    "cargo_count": 18,
+    "rows": [
+      {"nome":"Bibliotecário","vagas":1,"jornada":"40h","remuneracao":"2327.96","requisito":"Curso de Nível Superior na Área e registro no órgão da classe","taxa":"15.00"},
+      {"nome":"Chefe de Controle Interno","vagas":"CR","jornada":"40h","remuneracao":"3682.45","requisito":"Ensino Superior","taxa":"15.00"},
+      {"nome":"Cirurgião Dentista","vagas":"CR","jornada":"20h","remuneracao":"3682.45","requisito":"Curso de Nível Superior na Área e registro no órgão da classe","taxa":"15.00"},
+      {"nome":"Contador","vagas":1,"jornada":"40h","remuneracao":"8572.64","requisito":"Curso de Nível Superior em Contabilidade e registro no CRC","taxa":"15.00"},
+      {"nome":"Coveiro","vagas":"CR","jornada":"40h","remuneracao":"1556.49","requisito":"Ser alfabetizado","taxa":"10.00"},
+      {"nome":"Cozinheiro","vagas":1,"jornada":"40h","remuneracao":"1556.49","requisito":"Alfabetizado e ter experiência no preparo e distribuição de refeições.","taxa":"10.00"},
+      {"nome":"Dentista","vagas":1,"jornada":"20h","remuneracao":"3682.45","requisito":"Curso de Nível Superior na Área e registro no órgão da classe","taxa":"15.00"},
+      {"nome":"Encanador","vagas":"CR","jornada":"40h","remuneracao":"1872.33","requisito":"Ensino Fundamental Completo","taxa":"12.00"},
+      {"nome":"Engenheiro de Segurança do Trabalho","vagas":"CR","jornada":"40h","remuneracao":"3682.45","requisito":"Curso de Nível Superior, Registro no CREA ou CAU e pós-graduação em Engenharia de Segurança do Trabalho.","taxa":"15.00"},
+      {"nome":"Farmacêutico Bioquímico","vagas":"CR","jornada":"20h","remuneracao":"2327.96","requisito":"Curso de Nível Superior em Farmácia Bioquímica.","taxa":"15.00"},
+      {"nome":"Fonoaudiólogo","vagas":1,"jornada":"20h","remuneracao":"2327.96","requisito":"Curso de Nível Superior Completo e registro no CRFA.","taxa":"15.00"},
+      {"nome":"Médico Clínico Geral","vagas":1,"jornada":"10h","remuneracao":"3682.45","requisito":"Curso de Nível Superior em Medicina e registro no CRM.","taxa":"15.00"},
+      {"nome":"Médico Geriatra","vagas":1,"jornada":"10h","remuneracao":"3682.45","requisito":"Curso de Nível Superior em medicina, especialização na área de Medicina Geriátrica e registro no CRM","taxa":"15.00"},
+      {"nome":"Médico Ginecologista","vagas":1,"jornada":"10h","remuneracao":"3682.45","requisito":"Curso de Nível Superior em medicina, especialização na área e registro no CRM","taxa":"15.00"},
+      {"nome":"Médico do Trabalho","vagas":"CR","jornada":"10h","remuneracao":"3682.45","requisito":"Curso de Nível Superior em medicina, especialização na área e registro no CRM","taxa":"15.00"},
+      {"nome":"Médico Pediatra","vagas":1,"jornada":"10h","remuneracao":"3682.45","requisito":"Curso de Nível Superior em medicina, especialização na área e registro no CRM","taxa":"15.00"},
+      {"nome":"Padeiro","vagas":"CR","jornada":"40h","remuneracao":"1872.33","requisito":"Ensino Fundamental Completo","taxa":"13.00"},
+      {"nome":"Tratorista","vagas":1,"jornada":"40h","remuneracao":"1688.20","requisito":"Ensino Fundamental Completo e CNH \"D\" ou superior","taxa":"13.00"}
+    ]
+  },
+  "blockers": [
+    "pypdf extraction of the pinned PDF contains U+FFFD replacement characters (including identity and accented cargo/requisite text), so a verbatim Evidence snippet cannot be guaranteed against the material used by normal _revalidate.",
+    "physical page 2 begins with the split/malformed label 'Médio Ginecologista' instead of a complete 'Médico Ginecologista' row; the preserved id16.txt sidecar repairs it but is not the byte-preserved page text consumed by the publication extractor.",
+    "the existing omni_open reviewed run has no supported cargos field; creating a proposal before a source-specific parser is routed into fields.py would either omit the table or fail revalidation. No pilot/import/apply was attempted."
+  ],
+  "minimum_next_step": "Use the preserved OCR sidecar only as a parser test oracle, but obtain/record a deterministic OCR page extraction (pages 1-2) with artifact-bound evidence or add a fail-closed omni/246 parser that reproduces exact PDF page snippets after an approved extraction method. Then run reviewed-run dry import and disposable-store _revalidate/create_proposal. Keep contest 16 historical and do not infer present validity or retifications.",
+  "mutations": {"parser_added": false,"envelope_created": false,"dry_run": false,"proposal_created": false,"pilot_import": false,"apply": false}
+}

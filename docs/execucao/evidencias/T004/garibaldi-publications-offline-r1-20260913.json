@@ -1,0 +1,25 @@
+{
+  "schema": "t004.garibaldi.publications.offline-certification.v1",
+  "scope": "offline only; no Docker/network/pilot/canonical mutation",
+  "identity": {"concurso_id": 33, "source_id": 49, "external_id": "2486", "edital_numero": "04/2025", "title": "Município de Garibaldi"},
+  "documents": {
+    "count": 4,
+    "manifest": "docs/execucao/evidencias/T004/garibaldi-publications-offline-manifest-20260913.json",
+    "sha256s": [
+      "344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129",
+      "d7d2967a1612ccc5abcb3fad52022bf140017486ca0f555bfb535ea2a6aacab6",
+      "ab68844c2bbed8a92a1652228903ee6f0b581faac54d4d3ab5a7a147ad0d85ec",
+      "f98866f076889f4dd32a049603ea4098120d193dbfd76f4c81f367f60ec3b3cc"
+    ],
+    "bytes_available_locally": false,
+    "gap": "No preserved PDFs/receipt/content binding exists locally; normal TenderProof create_proposal/_revalidate cannot certify these documents. No bytes or hashes were invented."
+  },
+  "isolated_reference_ledger_test": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_garibaldi_publication_offline.py",
+    "result": "PASS: 2 passed",
+    "proves": ["four exact metadata documents insert initially and replay idempotently", "four exact metadata documents produce four rows through normalized publication proposal path", "one preexisting row is reconciled without duplicate", "replay produces no additional row/version/outbox", "version changed_fields contains only publications_added; no cargos/result date false change"],
+    "limitation": "This is a disposable SQLite reference-ledger test, not document certification or live proposal acceptance."
+  },
+  "normal_live_proposal": {"ready": false, "blocker": "preserved bytes/content receipt and authorized normal TenderProof run are missing"},
+  "status": "SPECIFIC_BLOCKER"
+}

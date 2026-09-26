@@ -1,0 +1,47 @@
+{
+  "schema": "t010.id16.final-live-proposal-gate.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_APPROVE_APPLY_ID16",
+  "scope": "somente proposta corrigida; bdb86 permanece inerte",
+  "proposal": {
+    "id": "tpp-1a0fc40cc8df713e6958de0f43efc032",
+    "proposal_hash": "ecfc21e9b02707be162761e86ab7f149dd1a011e7d038e37d8f4c8572d2aaee1",
+    "hash_length": 64,
+    "state": "proposed",
+    "run_id": "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+    "concurso_id": 16,
+    "source_id": 18,
+    "source": "omni_open",
+    "external_id": "246",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "eligible_fields": ["cargos", "prova_data"],
+    "baseline": {"cargos": null, "prova_data": null},
+    "proposed": {"cargos": 18, "immediate": 10, "cadastro_reserva": 8, "prova_data": "2025-01-12"},
+    "evidence_count": 19,
+    "literal_preserved": "Médio Ginecologista",
+    "identity_and_inscriptions_preserved": true,
+    "document_review_pending": false,
+    "document_review_effect": "approved no-op"
+  },
+  "provenance": {
+    "artifact_sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "artifact_bytes": 396219,
+    "artifact_pages": 23,
+    "envelope_sha256": "110e1b6df31f20c4b631b3ff11d33f8c3fb6b5ca8e0c7ec28261101f53475cb2",
+    "evidence_reproduction": "18/18 cargo snippets exact under isolated extraction; 1/1 prova exact; page/SHA/URL/artifact bound; no U+FFFD"
+  },
+  "counts": {
+    "before": {"versions": 90, "proposals": 94, "outbox": 90, "notifications": 89},
+    "after_proposal": {"versions": 90, "proposals": 95, "outbox": 90, "notifications": 89},
+    "expected_single_apply": {"versions": 91, "proposals": 95, "outbox": 91, "notifications": 90}
+  },
+  "replay_gate": {
+    "clone_apply_executed": false,
+    "reason": "no live API/clone endpoint available to this read-only reviewer; no pilot mutation attempted",
+    "release_condition": "one approve + one apply only; replay must be CAS-idempotent with exactly one version/outbox/notification and +18 cargo rows"
+  },
+  "previous_proposal": {"id": "tpp-bdb86b21341b923ed50b5346fcc3ddb6", "policy": "NEVER_APPROVE_NEVER_APPLY"},
+  "mutations": {"pilot": false, "approve": false, "apply": false, "api": false}
+}

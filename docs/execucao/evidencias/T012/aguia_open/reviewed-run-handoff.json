@@ -1,0 +1,50 @@
+{
+  "schema": "t012.reviewed-run-handoff.v1",
+  "state": "READY_FOR_REVIEW_R2",
+  "source": {
+    "source_id": "aguia_open",
+    "source_number": 27,
+    "adapter": "AguiaAdapter",
+    "identity_confirmed": true
+  },
+  "reviewed_candidate": {
+    "external_id": "43",
+    "title": "Prefeitura Municipal de Bálsamo",
+    "selection_type": "Processo Seletivo 01/2025",
+    "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+    "opening_notice_url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf"
+  },
+  "target_contract": {
+    "reviewed_envelope_schema": "tenderproof.reviewed-run.v1",
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "allocation_required": true,
+    "reference_only": true,
+    "apply": false
+  },
+  "handoff": {
+    "owner_user_id": 1,
+    "next_step": "standard_reviewed_run_import",
+    "required_before_import": [
+      "allocate canonical source and concurso IDs through the standard flow",
+      "preserve and attach the opening-notice PDF bytes (now SHA-bound in artifacts/receipt.json)",
+      "perform the normal human review before any catalog mutation"
+    ],
+    "fail_closed_reasons": [
+      "canonical IDs are intentionally not invented",
+      "canonical concurso_id remains unallocated; source_number=27 must not be used as target ID",
+      "this proposal does not authorize publication or catalog mutation"
+    ]
+  },
+  "provenance": {
+    "listing_fixture": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-0.html",
+    "detail_fixture": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html",
+    "detail_sha256": "0ABDB50782C6615CB7375C82BD7CB68CDCC66E6D13F8FE4E3F632269073A5832",
+    "network_used": true,
+    "network_scope": "one official HTTPS GET for opening PDF; no crawling",
+    "artifact_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+    "artifact_byte_len": 501543,
+    "artifact_pages": 18,
+    "catalogue_mutated": false
+  }
+}

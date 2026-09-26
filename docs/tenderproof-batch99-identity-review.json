@@ -1,0 +1,92 @@
+{
+  "scope": "Independent review, disposable SQLite only; no production or core mutation",
+  "findings": [
+    {
+      "id": "blank_identity_predicate_mismatch",
+      "priority": "P2",
+      "file": "backend/app/concurso_identity_migration.py",
+      "line": 14,
+      "description": "SQL trim removes spaces only, while CrawlService uses Python strip. A tab-only externalID enters known index but application treats it as legacy; NULL sameURL inserts too and URL-only lookup becomes ambiguous. Models repeat the same predicates.",
+      "proof": {
+        "rows_inserted": 2,
+        "lookup_error_type": "AmbiguousContestIdentity",
+        "lookup_error": "identidade de concurso ambÃ­gua; URL compartilhada exige identificador explÃ­cito",
+        "python_strip_treats_tab_as_legacy": true
+      },
+      "recommendation": "Use identical blank definition at ingestion and schema/preflight, with explicit reconciliation of existing whitespace IDs; add tabs/CR/LF cases."
+    },
+    {
+      "id": "concurrent_legacy_identity_promotion",
+      "priority": "P1",
+      "file": "backend/app/services.py",
+      "line": 72,
+      "description": "Two sessions select the same NULL-externalID row for different sectionIDs. Sequential commits both succeed and second overwrites first ID. Partial unique indexes cannot arbitrate competing updates of one row; current concurrent tests cover duplicate inserts only.",
+      "proof": {
+        "both_selected_legacy_id": 3,
+        "after_first_commit": "section-one",
+        "after_second_commit": "section-two",
+        "row_count": 1,
+        "unique_indexes_did_not_reject_stale_update": true
+      },
+      "recommendation": "Serialize identity resolution/promotion per source or use conditional compare-and-swap update under transaction, rejecting/retrying when legacy identity changed; test distinct concurrent promotions."
+    }
+  ],
+  "positive_checks": [
+    "Upgrade preflight rejects duplicate knownIDs before DDL",
+    "Downgrade preflight rejects sharedURLs before schema mutation",
+    "SQLite BEGIN IMMEDIATE and PostgreSQL ACCESS EXCLUSIVE lock serialize migration writers",
+    "SQLite rebuild preserves tested childFK,indexes,triggers,autoincrement",
+    "Idempotent upgrade/downgrade tests passed on SQLite"
+  ],
+  "validation": {
+    "command": "pytest tests/test_tenderproof_post_replay.py tests/test_concurso_identity_migration.py -q",
+    "passed": 18,
+    "skipped": 8,
+    "postgresql": "not configured in this review; PostgreSQL tests skipped, no claim of execution"
+  },
+  "replay_post": {
+    "file": "backend/scripts/tenderproof_pilot_continuous_replay.py",
+    "tests": "backend/tests/test_tenderproof_post_replay.py",
+    "passed": 9,
+    "contract": "Exact candidate+docID+requestedURL+method/body/type and rawSHA must match preserved run. No GET fallback or POST redirect. Fixture selection rejects changed request before queue setup."
+  },
+  "disposable_evidence_root": ".tenderproof\\r99identity-review",
+  "remediation": {
+    "state": "implemented_verified",
+    "fixes": {
+      "concurrent_legacy_identity_promotion": "Compare-and-swap external_id before dependent writes; stale winner cannot be overwritten, caller retries full resolution. Promotion records old/new in version.",
+      "blank_identity_predicate_mismatch": "Shared explicit Python whitespace codepoints in model indexes, migration preflight and ingestion; nonblank IDs stay opaque; conflicting historical blank rows abort upgrade without mutation."
+    },
+    "validation": [
+      {
+        "report": "tenderproof-batch99-identity-cas-postgres.json",
+        "passed": 83,
+        "scope": "SQLite/PostgreSQL migration and concurrent identity, canonical, foundation and crawl tests; before explicit identity audit addition"
+      },
+      {
+        "report": "tenderproof-batch99-identity-cas-final-postgres.json",
+        "passed": 33,
+        "failed": 2,
+        "scope": "Retained failed audit assertion exposed missing external_id in general diff; subsequently fixed in CrawlService only"
+      },
+      {
+        "report": "tenderproof-batch99-identity-cas-audit-postgres.json",
+        "passed": 45,
+        "failed": 0,
+        "scope": "Final SQLite/PostgreSQL migration, concurrent promotions, whitespace, CAS timestamp, rollback, audit and crawl resilience"
+      }
+    ],
+    "cleanup": "All three disposable containers removed; no named volumes, no production database migrated",
+    "files_sha256": {
+      "backend\\app\\concurso_identity.py": "2453ef1dca31ccf01e899dc9d9471ed2ccf5a396fad32f7ea48e3c039114b6cd",
+      "backend\\app\\models.py": "bf36bebc12055c6fb0b76c907de670df05e9d55dbb8aae4d6252d1dd0f2c3963",
+      "backend\\app\\concurso_identity_migration.py": "05b0078be2081d12f7df035c00cf4ea1812bd8a332ae9c8d709fed02369927a6",
+      "backend\\app\\services.py": "d19e64fafb43069a41c98db96681d3b9963df2eff6c401cbcb0082e4207cab1a",
+      "backend\\tests\\test_concurso_identity_migration.py": "5eb2e07c36a703f90cc27bde205e162e01c15d63a70e6f723f1ef197898ad4f4"
+    },
+    "limits": [
+      "Two-writer barrier proof; not production load benchmark",
+      "No silent reconciliation: existing whitespace identity collisions require explicit review before migration"
+    ]
+  }
+}

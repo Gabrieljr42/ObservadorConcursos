@@ -1,0 +1,26 @@
+{
+  "schema": "t012.fafipa-live-envelope-luna-review-r7.v1",
+  "verdict": "BLOCKER",
+  "scope": "revisao read-only; sem live/import/proposal/pilot mutation",
+  "checks": {
+    "allocation": "PASS: concurso_id permanece null; external_id 4208 nao foi promovido a ID canonico.",
+    "run": "PASS: run_id explicito e novo (tp-reviewed-r7-fafipa-open-4208-26c059dcd502f08d); material R6 rejeitado nao foi reutilizado.",
+    "artifact_pins": "PASS: source fafipa_open, external_id 4208, URL, SHA256 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes e 38 paginas coerentes.",
+    "shape": "PASS parcial: sete fields, 14 cargos, pending_fields vazio, reference_only true e allocation_status READY_FOR_REVIEW.",
+    "fresh_evidence": "FAIL: snippets R7 sao fragmentos abreviados e nao a evidencia literal exata produzida pelo parser atual (por exemplo, datas/prova omitem a linha completa). Os 14 snippets de cargo contem apenas o nome; nao individualizam a linha literal com vagas/CR e remuneracao exigida.",
+    "parser_value_contract": "FAIL: fafipa_t012_r4.extract_fields atualmente retorna cada cargo com apenas nome e vagas; remuneracao foi adicionada no envelope sem correspondente no parser/revalidacao, logo o round-trip fresco nao e comprovado.",
+    "currentness": "LIMITED PASS: PDF/replay observado em 2026-09-13; nao ha alegacao de mutacao/catalogo live.",
+    "r6": "PASS: R6 permanece historico rejeitado e nao e base de importacao."
+  },
+  "required_before_live_import": [
+    "Regenerar R7 a partir da saida exata do parser vigente, com evidencia completa e identica para os sete fields e 14 cargos.",
+    "Remover remuneracao do envelope ou implementar/parser-testar esse campo com evidencia literal por cargo; nao publicar valor sem revalidacao.",
+    "Executar dry-run normal import -> revalidate -> proposal, incluindo determinismo/receipt e zero versoes, outbox e notificacoes, antes de qualquer live mutation."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/fafipa_open/live-envelope-ready-r7.json",
+    "backend/app/tenderproof/fafipa_t012_r4.py",
+    "docs/execucao/evidencias/T012/fafipa_open/integration-repro-r2.json",
+    "docs/execucao/evidencias/T012/fafipa_open/revisao-Luna-live-envelope-r6-20260913.json"
+  ]
+}

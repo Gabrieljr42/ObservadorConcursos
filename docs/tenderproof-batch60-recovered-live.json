@@ -1,0 +1,669 @@
+{
+  "observed_at": "2026-09-08T14:13:19.495234+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60rec",
+  "cycles": [
+    {
+      "source": "epl_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-736fcdf2ba04",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.eplconcursos.com.br/concursos/andamento",
+          "file": "epl_open-cycle1-listing-dc7d20e042.html",
+          "sha256": "1496d880362ce6bb70ce6c9f02a2e313fabe6db97e703a3a1c3a9b345fd0d1ac",
+          "bytes": 25176,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:20.300429+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-9e2c3d45a3e8",
+          "candidate": {
+            "candidate_id": "epl_open-52",
+            "title_observed": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM",
+            "detail_url_observed": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+            "external_id": "52",
+            "observed_at": "2026-09-08T14:13:20.389848Z",
+            "source": "epl_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+              "file": "epl_open-cycle1-detail-2e60516108.html",
+              "sha256": "98e1c6d9ffa6317796411764067b599189977d5c17fbc832a1f31bae60742922",
+              "bytes": 23738,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:21.123740+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "epl_open-doc-b366dd03b1b1c7a5",
+            "title": "01 - Edital de Abertura",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido '01 - Edital de Abertura' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: 23 - Homologação; 22 - Resultado Final; 21 - Resultado de Recursos; 20 - Resultado preliminar da prova objetiva; 19 - Gabarito Definitivo)."
+          },
+          "artifact": {
+            "artifact_id": "art-8c5dbef058",
+            "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+            "byte_len": 784614,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:22.563992Z",
+            "storage_path": "art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf"
+          },
+          "total_pages": 43,
+          "processed_pages": 43,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=43/43",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 7.406
+    },
+    {
+      "source": "apta_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-42fcecdee8a9",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.aptaconcursos.com.br",
+          "file": "apta_open-cycle1-listing-279172bb39.html",
+          "sha256": "23a0d1eb58b998c63ed7374d34e83e37e15533a3ee3b08f2370e45ffd916cea1",
+          "bytes": 189578,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:28.003579+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d5d2acb482b9",
+          "candidate": {
+            "candidate_id": "apta_open-708",
+            "title_observed": "Câmara Municipal de Aragarças",
+            "detail_url_observed": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+            "external_id": "708",
+            "observed_at": "2026-09-08T14:13:28.861827Z",
+            "source": "apta_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+              "file": "apta_open-cycle1-detail-1d6799692c.html",
+              "sha256": "3170168bd2047f71b15bbc0817c8f8a1f76580493a2f9e67e90d06e062926659",
+              "bytes": 18476,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:29.640420+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "apta_open-doc-84249009acfafaab",
+            "title": "Edital de Abertura de Inscrições",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura de Inscrições' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: EDITAL DE ISENÇÃO DEFINITIVA; Divulgação do Resultado da Solicitação de Isenção; Edital de Retificação I ao Edital de Abertura de Inscrições)."
+          },
+          "artifact": {
+            "artifact_id": "art-18bef50e17",
+            "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+            "byte_len": 362093,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:29.857615Z",
+            "storage_path": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+          },
+          "total_pages": 20,
+          "processed_pages": 20,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=20/20",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.5
+    },
+    {
+      "source": "shdias_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-803f871232e2",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.shdias.com.br/concursos/index/?status=andamento&busca=",
+          "file": "shdias_open-cycle1-listing-d24cf41921.html",
+          "sha256": "c7de29e4bbe049afcae09f9abdb3173ec93a1a088c2ee76761667ea95702ddf2",
+          "bytes": 57544,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:32.125477+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-05530274f114",
+          "candidate": {
+            "candidate_id": "shdias_open-MTEw/MzA4",
+            "title_observed": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+            "detail_url_observed": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+            "external_id": "MTEw/MzA4",
+            "observed_at": "2026-09-08T14:13:32.376430Z",
+            "source": "shdias_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+              "file": "shdias_open-cycle1-detail-e633962f88.html",
+              "sha256": "cc9e151c7cae26d0c92bde911c9d89f5b06706f3df7eb4fb565fb2f892320d99",
+              "bytes": 31265,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:33.007772+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "shdias_open-doc-dc14da6d3f4007b4",
+            "title": "Edital Completo com Programa de Prova",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Completo com Programa de Prova' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Listagem Definitiva de Pedidos de Isenção; Edital de Parecer dos Recursos e Alterações (Isenções); Listagem Preliminar de Pedidos de Isenção (Sujeito a alteração em face de Recurso); Edital de Parecer das Impugnações (Edital))."
+          },
+          "artifact": {
+            "artifact_id": "art-38726c69e6",
+            "sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+            "byte_len": 697485,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:33.264057Z",
+            "storage_path": "art-38726c69e6-f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7.pdf"
+          },
+          "total_pages": 44,
+          "processed_pages": 44,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=44/44",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.844
+    },
+    {
+      "source": "epl_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-5235ebfce202",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.eplconcursos.com.br/concursos/andamento",
+          "file": "epl_open-cycle2-listing-dc7d20e042.html",
+          "sha256": "1496d880362ce6bb70ce6c9f02a2e313fabe6db97e703a3a1c3a9b345fd0d1ac",
+          "bytes": 25176,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:36.950430+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f042c455d38d",
+          "candidate": {
+            "candidate_id": "epl_open-52",
+            "title_observed": "FUNDAÇÃO HOSPITALAR SANTA TEREZINHA DE ERECHIM",
+            "detail_url_observed": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+            "external_id": "52",
+            "observed_at": "2026-09-08T14:13:37.032694Z",
+            "source": "epl_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+              "file": "epl_open-cycle2-detail-2e60516108.html",
+              "sha256": "98e1c6d9ffa6317796411764067b599189977d5c17fbc832a1f31bae60742922",
+              "bytes": 23738,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:37.795749+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "epl_open-doc-b366dd03b1b1c7a5",
+            "title": "01 - Edital de Abertura",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido '01 - Edital de Abertura' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: 23 - Homologação; 22 - Resultado Final; 21 - Resultado de Recursos; 20 - Resultado preliminar da prova objetiva; 19 - Gabarito Definitivo)."
+          },
+          "artifact": {
+            "artifact_id": "art-508d44c1f6",
+            "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+            "byte_len": 784614,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:38.070831Z",
+            "storage_path": "art-508d44c1f6-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf"
+          },
+          "total_pages": 43,
+          "processed_pages": 43,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=43/43",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.375
+    },
+    {
+      "source": "apta_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-50cb32436edb",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.aptaconcursos.com.br",
+          "file": "apta_open-cycle2-listing-2c4414ab50.html",
+          "sha256": "b764a38c207e2365d0efe99f5b6efff0ed5a03eea4fe8b76c13cdaf5be172af4",
+          "bytes": 189578,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:43.538701+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-3e3c92c05409",
+          "candidate": {
+            "candidate_id": "apta_open-708",
+            "title_observed": "Câmara Municipal de Aragarças",
+            "detail_url_observed": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+            "external_id": "708",
+            "observed_at": "2026-09-08T14:13:44.398136Z",
+            "source": "apta_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+              "file": "apta_open-cycle2-detail-323b5d5e2f.html",
+              "sha256": "86240db01a667ed4047c3956a7b6fad1dae0d0f1230892728dec29aa82ea9bb9",
+              "bytes": 18476,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:45.084382+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "apta_open-doc-84249009acfafaab",
+            "title": "Edital de Abertura de Inscrições",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura de Inscrições' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: EDITAL DE ISENÇÃO DEFINITIVA; Divulgação do Resultado da Solicitação de Isenção; Edital de Retificação I ao Edital de Abertura de Inscrições)."
+          },
+          "artifact": {
+            "artifact_id": "art-0e4c13c003",
+            "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+            "byte_len": 362093,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:45.285323Z",
+            "storage_path": "art-0e4c13c003-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+          },
+          "total_pages": 20,
+          "processed_pages": 20,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=20/20",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.172
+    },
+    {
+      "source": "shdias_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-a907beac975b",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.shdias.com.br/concursos/index/?status=andamento&busca=",
+          "file": "shdias_open-cycle2-listing-189a0651d7.html",
+          "sha256": "fca9616474a890b2bc41b615b27a1b18842b51568904166be39dc7f8c8c15342",
+          "bytes": 57544,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:13:47.515272+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b9d822a7662a",
+          "candidate": {
+            "candidate_id": "shdias_open-MTEw/MzA4",
+            "title_observed": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+            "detail_url_observed": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+            "external_id": "MTEw/MzA4",
+            "observed_at": "2026-09-08T14:13:47.710939Z",
+            "source": "shdias_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+              "file": "shdias_open-cycle2-detail-f45553feca.html",
+              "sha256": "6c874e36ba323c1b1b035e878a5303d758c5deb8e2307c07cae066b06996b73e",
+              "bytes": 31265,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:13:48.595658+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "shdias_open-doc-dc14da6d3f4007b4",
+            "title": "Edital Completo com Programa de Prova",
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Completo com Programa de Prova' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Listagem Definitiva de Pedidos de Isenção; Edital de Parecer dos Recursos e Alterações (Isenções); Listagem Preliminar de Pedidos de Isenção (Sujeito a alteração em face de Recurso); Edital de Parecer das Impugnações (Edital))."
+          },
+          "artifact": {
+            "artifact_id": "art-e519060b3e",
+            "sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+            "byte_len": 697485,
+            "url_requested": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "url_final": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:48.868123Z",
+            "storage_path": "art-e519060b3e-f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7.pdf"
+          },
+          "total_pages": 44,
+          "processed_pages": 44,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=44/44",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.109
+    }
+  ]
+}

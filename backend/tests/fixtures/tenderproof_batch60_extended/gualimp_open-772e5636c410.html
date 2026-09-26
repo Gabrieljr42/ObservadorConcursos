@@ -1,0 +1,413 @@
+function numeros(event)
+{
+	var tecla = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+	if ((tecla > 47 && tecla < 58) || (tecla == 8) || (tecla == 9) || (tecla > 36 && tecla < 41)) // numeros de 0 a 9 ou Backspace
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+function FormataCep(campo, teclapres)
+{
+	var tecla = teclapres.keyCode;
+	var vr = new String(campo.value);
+	vr = vr.replace(".", "");
+	vr = vr.replace("/", "");
+	vr = vr.replace("-", "");
+	tam = vr.length + 1;
+	if (tecla != 14)
+	{
+	if (tam == 3)
+		campo.value = vr.substr(0, 2) + '.';
+	if (tam == 6)
+		campo.value = vr.substr(0, 2) + '.' + vr.substr(2, 5) + '-';
+	}
+}
+function FormataCpf(campo, teclapres) {
+	var tecla = teclapres.keyCode;
+	var vr = new String(campo.value);
+	vr = vr.replace(".", "");
+	vr = vr.replace("/", "");
+	vr = vr.replace("-", "");
+	tam = vr.length + 1;
+	if (tecla != 14) {
+		if (tam == 4)
+			campo.value = vr.substr(0, 3) + '.';
+		if (tam == 7)
+			campo.value = vr.substr(0, 3) + '.' + vr.substr(3, 6) + '.';
+		if (tam == 11)
+			campo.value = vr.substr(0, 3) + '.' + vr.substr(3, 3) + '.' + vr.substr(7, 3) + '-' + vr.substr(11, 2);
+	}
+}
+function formataData(obj)
+{
+	if (document.all) // Internet Explorer
+	var tecla = event.keyCode;
+	else if(document.layers) // Nestcape
+	var tecla = e.which; 
+	if (tecla != 8)
+	{
+		x = obj.value.length;
+		if ((x+1 == 3) || (x+1==6))
+		{
+			y = obj.value;
+			y = y + '/';
+			obj.value = y;
+		}
+	}
+}
+function zeros_esquerda(str,length)
+{
+	var adicionar = length - str.value.length;
+	for (var i = 0; i < adicionar; i++)
+	str.value = '0' + str.value;
+}
+/*
+	*  jquery-maskmoney - v3.0.2
+	*  jQuery plugin to mask data entry in the input text in the form of money (currency)
+	*  https://github.com/plentz/jquery-maskmoney
+	*
+	*  Made by Diego Plentz
+	*  Under MIT License (https://raw.github.com/plentz/jquery-maskmoney/master/LICENSE)
+	Options:
+The options that you can set are:
+
+	*   prefix: the prefix to be displayed before(aha!) the value entered by the user(example: "US$ 1234.23"). default: ''
+	*   suffix: the prefix to be displayed after the value entered by the user(example: "1234.23 €"). default: ''
+	*   affixesStay: set if the prefix and suffix will stay in the field's value after the user exits the field. default: true
+	thousands: the thousands separator. default: ','
+	*   decimal: the decimal separator. default: '.'
+	*   precision: how many decimal places are allowed. default: 2
+	*   allowZero: use this setting to prevent users from inputing zero. default: false
+	*   allowNegative: use this setting to prevent users from inputing negative values. default: false
+	*/
+!function($){"use strict";$.browser||($.browser={},$.browser.mozilla=/mozilla/.test(navigator.userAgent.toLowerCase())&&!/webkit/.test(navigator.userAgent.toLowerCase()),$.browser.webkit=/webkit/.test(navigator.userAgent.toLowerCase()),$.browser.opera=/opera/.test(navigator.userAgent.toLowerCase()),$.browser.msie=/msie/.test(navigator.userAgent.toLowerCase()));var a={destroy:function(){return $(this).unbind(".maskMoney"),$.browser.msie&&(this.onpaste=null),this},mask:function(a){return this.each(function(){var b,c=$(this);return"number"==typeof a&&(c.trigger("mask"),b=$(c.val().split(/\D/)).last()[0].length,a=a.toFixed(b),c.val(a)),c.trigger("mask")})},unmasked:function(){return this.map(function(){var a,b=$(this).val()||"0",c=-1!==b.indexOf("-");return $(b.split(/\D/).reverse()).each(function(_b,c){return c?(a=c,!1):void 0}),b=b.replace(/\D/g,""),b=b.replace(new RegExp(a+"$"),"."+a),c&&(b="-"+b),parseFloat(b)})},init:function(a){return a=$.extend({prefix:"",suffix:"",affixesStay:!0,thousands:",",decimal:".",precision:2,allowZero:!1,allowNegative:!1},a),this.each(function(){function b(){var a,b,c,d,e,f=s.get(0),g=0,h=0;return"number"==typeof f.selectionStart&&"number"==typeof f.selectionEnd?(g=f.selectionStart,h=f.selectionEnd):(b=document.selection.createRange(),b&&b.parentElement()===f&&(d=f.value.length,a=f.value.replace(/\r\n/g,"\n"),c=f.createTextRange(),c.moveToBookmark(b.getBookmark()),e=f.createTextRange(),e.collapse(!1),c.compareEndPoints("StartToEnd",e)>-1?g=h=d:(g=-c.moveStart("character",-d),g+=a.slice(0,g).split("\n").length-1,c.compareEndPoints("EndToEnd",e)>-1?h=d:(h=-c.moveEnd("character",-d),h+=a.slice(0,h).split("\n").length-1)))),{start:g,end:h}}function c(){var a=!(s.val().length>=s.attr("maxlength")&&s.attr("maxlength")>=0),c=b(),d=c.start,e=c.end,f=c.start!==c.end&&s.val().substring(d,e).match(/\d/)?!0:!1,g="0"===s.val().substring(0,1);return a||f||g}function d(a){s.each(function(b,c){if(c.setSelectionRange)c.focus(),c.setSelectionRange(a,a);else if(c.createTextRange){var d=c.createTextRange();d.collapse(!0),d.moveEnd("character",a),d.moveStart("character",a),d.select()}})}function e(b){var c="";return b.indexOf("-")>-1&&(b=b.replace("-",""),c="-"),c+a.prefix+b+a.suffix}function f(b){var c,d,f,g=b.indexOf("-")>-1&&a.allowNegative?"-":"",h=b.replace(/[^0-9]/g,""),i=h.slice(0,h.length-a.precision);return i=i.replace(/^0*/g,""),i=i.replace(/\B(?=(\d{3})+(?!\d))/g,a.thousands),""===i&&(i="0"),c=g+i,a.precision>0&&(d=h.slice(h.length-a.precision),f=new Array(a.precision+1-d.length).join(0),c+=a.decimal+f+d),e(c)}function g(a){var b,c=s.val().length;s.val(f(s.val())),b=s.val().length,a-=c-b,d(a)}function h(){var a=s.val();s.val(f(a))}function i(){var b=s.val();return a.allowNegative?""!==b&&"-"===b.charAt(0)?b.replace("-",""):"-"+b:b}function j(a){a.preventDefault?a.preventDefault():a.returnValue=!1}function k(a){a=a||window.event;var d,e,f,h,k,l=a.which||a.charCode||a.keyCode;return void 0===l?!1:48>l||l>57?45===l?(s.val(i()),!1):43===l?(s.val(s.val().replace("-","")),!1):13===l||9===l?!0:!$.browser.mozilla||37!==l&&39!==l||0!==a.charCode?(j(a),!0):!0:c()?(j(a),d=String.fromCharCode(l),e=b(),f=e.start,h=e.end,k=s.val(),s.val(k.substring(0,f)+d+k.substring(h,k.length)),g(f+1),!1):!1}function l(c){c=c||window.event;var d,e,f,h,i,k=c.which||c.charCode||c.keyCode;return void 0===k?!1:(d=b(),e=d.start,f=d.end,8===k||46===k||63272===k?(j(c),h=s.val(),e===f&&(8===k?""===a.suffix?e-=1:(i=h.split("").reverse().join("").search(/\d/),e=h.length-i-1,f=e+1):f+=1),s.val(h.substring(0,e)+h.substring(f,h.length)),g(e),!1):9===k?!0:!0)}function m(){r=s.val(),h();var a,b=s.get(0);b.createTextRange&&(a=b.createTextRange(),a.collapse(!1),a.select())}function n(){setTimeout(function(){h()},0)}function o(){var b=parseFloat("0")/Math.pow(10,a.precision);return b.toFixed(a.precision).replace(new RegExp("\\.","g"),a.decimal)}function p(b){if($.browser.msie&&k(b),""===s.val()||s.val()===e(o()))a.allowZero?a.affixesStay?s.val(e(o())):s.val(o()):s.val("");else if(!a.affixesStay){var c=s.val().replace(a.prefix,"").replace(a.suffix,"");s.val(c)}s.val()!==r&&s.change()}function q(){var a,b=s.get(0);b.setSelectionRange?(a=s.val().length,b.setSelectionRange(a,a)):s.val(s.val())}var r,s=$(this);a=$.extend(a,s.data()),s.unbind(".maskMoney"),s.bind("keypress.maskMoney",k),s.bind("keydown.maskMoney",l),s.bind("blur.maskMoney",p),s.bind("focus.maskMoney",m),s.bind("click.maskMoney",q),s.bind("cut.maskMoney",n),s.bind("paste.maskMoney",n),s.bind("mask.maskMoney",h)})}};$.fn.maskMoney=function(b){return a[b]?a[b].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof b&&b?($.error("Method "+b+" does not exist on jQuery.maskMoney"),void 0):a.init.apply(this,arguments)}}(window.jQuery||window.Zepto);
+
+function imprimir(url)
+{
+	window.open(url);
+}
+function FormataReais(fld, milSep, decSep, e)
+{
+	var sep = 0;
+	var key = '';
+	var i = j = 0;
+	var len = len2 = 0;
+	var strCheck = '0123456789';
+	var aux = aux2 = '';
+	var whichCode = (window.Event) ? e.which : e.keyCode;
+	if ((whichCode == 13) || (whichCode == 0) || (whichCode == 8))
+	return true;
+	key = String.fromCharCode(whichCode); // Valor para o código da Chave
+	if (strCheck.indexOf(key) == -1) return false; // Chave inválida
+	len = fld.value.length;
+	for(i = 0; i < len; i++)
+	if ((fld.value.charAt(i) != '0') && (fld.value.charAt(i) != decSep)) break;
+	aux = '';
+	for(; i < len; i++)
+	if (strCheck.indexOf(fld.value.charAt(i))!=-1) aux += fld.value.charAt(i);
+	aux += key;
+	len = aux.length;
+	if (len == 0) fld.value = '';
+	if (len == 1) fld.value = '0'+ decSep + '0' + aux;
+	if (len == 2) fld.value = '0'+ decSep + aux;
+	if (len > 2)
+	{
+		aux2 = '';
+		for (j = 0, i = len - 3; i >= 0; i--)
+		{
+			if (j == 3)
+			{
+				aux2 += milSep;
+				j = 0;
+			}
+			aux2 += aux.charAt(i);
+			j++;
+		}
+		fld.value = '';
+		len2 = aux2.length;
+		for (i = len2 - 1; i >= 0; i--)
+			fld.value += aux2.charAt(i);
+		fld.value += decSep + aux.substr(len - 2, len);
+	}
+	return false;
+}
+function noCtrlCV(event)
+{
+	var tecla = String.fromCharCode(event.keyCode).toLowerCase();
+	if (event.ctrlKey && (tecla == "c" || tecla == "v"))
+	{
+		window.event ? event.returnValue = false : event.preventDefault();
+		return false 
+	}
+}
+function verificaCEP(campo)
+{
+	var CEP = campo.value; // Recebe o valor digitado no campo
+	CEP = CEP.replace(".", "");
+	CEP = CEP.replace("/", "");
+	CEP = CEP.replace("-", "");
+
+	// Verifica se o campo é nulo
+	if (CEP.length > 0 && CEP.length != 8)
+	{
+		alert('O CEP deve ter 8 digitos.');
+		campo.value = '';
+		campo.focus();
+		return false;
+	}
+}
+function verificaCPF(campo)
+{
+	var CPF = campo.value; // Recebe o valor digitado no campo
+	CPF = CPF.replace(".", "");
+	CPF = CPF.replace(".", "");
+	CPF = CPF.replace("/", "");
+	CPF = CPF.replace("-", "");
+	// Verifica se o campo é nulo
+	if (CPF.length > 0 && CPF.length != 11)
+	{
+		alert("O CPF deve ter 11 digitos.");
+		campo.value = '';
+		campo.focus();
+		return false;
+	}
+	// Verifica valores falsos
+	if (CPF == '11111111111' || CPF == '22222222222' || CPF == '33333333333' || CPF == '44444444444' || CPF == '55555555555' || CPF == '66666666666' || CPF == '77777777777' || CPF == '88888888888' || CPF == '99999999999')
+	{
+		alert('CPF inválido!');
+		campo.value = '';
+		campo.focus();
+		return false;
+	}
+	// Aqui começa a checagem do CPF
+	var POSICAO, I, SOMA, DV, DV_INFORMADO;
+	var DIGITO = new Array(10);
+	DV_INFORMADO = CPF.substr(9, 2); // Retira os dois últimos digitos do número informado
+	// Desemembra o número do CPF na array DIGITO
+	for (I=0; I<=8; I++)
+	{
+		DIGITO[I] = CPF.substr( I, 1);
+	}
+	// Calcula o valor do 10º digito da verificação
+	POSICAO = 10;
+	SOMA = 0;
+	for (I=0; I<=8; I++)
+	{
+		SOMA = SOMA + DIGITO[I] * POSICAO;
+		POSICAO = POSICAO - 1;
+	}
+	DIGITO[9] = SOMA % 11;
+	if (DIGITO[9] < 2)
+	{
+		DIGITO[9] = 0;
+	}
+	else
+	{
+			DIGITO[9] = 11 - DIGITO[9];
+	}
+	// Calcula o valor do 11º digito da verificação
+	POSICAO = 11;
+	SOMA = 0;
+	for (I=0; I<=9; I++)
+	{
+		SOMA = SOMA + DIGITO[I] * POSICAO;
+		POSICAO = POSICAO - 1;
+	}
+	DIGITO[10] = SOMA % 11;
+	if (DIGITO[10] < 2)
+	{
+		DIGITO[10] = 0;
+	}
+	else
+	{
+		DIGITO[10] = 11 - DIGITO[10];
+	}
+	// Verifica se os valores dos digitos verificadores conferem
+	DV = DIGITO[9] * 10 + DIGITO[10];
+	if (DV != DV_INFORMADO)
+	{
+		alert('CPF inválido!');
+		campo.value = '';
+		campo.focus();
+		return false;
+	}
+	return true;
+}
+function dataConfere(_data) {
+	if(_data.value.length > 0) {
+		var date_regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g
+		_value = date_regex.test(_data.value);
+		if (_value) {
+			return true;
+		}
+		else {
+			alert('Data inválida, digite no formato \'dd/mm/aaaa\'!');
+			_data.value = ''; _data.focus(); return false;
+		}
+	}
+}
+function formataCNPJ(obj)
+{
+	var tecla = event.keyCode;
+	if ((tecla > 47 && tecla < 58) || (tecla > 95 && tecla < 106))
+	{
+		x = obj.value.length;
+		if ((x+1 == 3) || (x+1 == 7))
+		{
+			y = obj.value;
+			y = y + '.';
+			obj.value = y;
+		}
+		if (x+1 == 11)
+		{
+			y = obj.value;
+			y = y + '/';
+			obj.value = y;
+		}
+		if (x+1 == 16)
+		{
+			y = obj.value;
+			y = y + '-';
+			obj.value = y;
+		}
+	}
+}
+function formataTelefone(obj)
+{
+	var tecla = event.keyCode;
+	if ((tecla > 47 && tecla < 58) || (tecla > 95 && tecla < 106))
+	{
+		x = obj.value.length;
+		if (x == 1)
+		{
+			y = obj.value;
+			y = '(' + y;
+			obj.value = y;
+		}
+		if (x == 3)
+		{
+			y = obj.value;
+			y = y + ')';
+			obj.value = y;
+		}
+		if (x == 8)
+		{
+			y = obj.value;
+			y = y + '-';
+			obj.value = y;
+		}
+	}
+}
+function letras(event)
+{
+	var tecla = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+	if ((tecla > 64 && tecla < 91) || (tecla > 96 && tecla < 126) || (tecla > 191) || (tecla == 8) || (tecla == 9) || (tecla == 32) || (tecla > 36 && tecla < 41)) // numeros de 0 a 9 ou Backspace
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+function clearselect(component_name)
+{
+	$('select[name='+component_name+']').empty(); //Limpando o componente
+}
+function data_hora(evento, objeto)
+{
+	var keypress=(window.event)?event.keyCode:evento.which;
+	campo = eval (objeto);
+	if (campo.value == '00:00:00')
+	{
+		campo.value=""
+	}
+	caracteres = '0123456789';
+	separacao1 = ':';
+	conjunto1 = 2;
+	conjunto2 = 5;
+	if ((caracteres.search(String.fromCharCode (keypress))!=-1) && campo.value.length < (19))
+	{
+		if (campo.value.length == conjunto1 )
+		campo.value = campo.value + separacao1;
+		else if (campo.value.length == conjunto2)
+		campo.value = campo.value + separacao1;
+	}
+	else
+		event.returnValue = false;
+}
+function confirma_excluir()
+{
+	return confirm("Deseja realmente excluir este registro?");
+}
+function correios()
+{
+	window.open("http://www.buscacep.correios.com.br/servicos/dnec/index.do")
+}
+function get_pais_estado_cidade(id_campo, component_name, component_type, opcao, valor)
+{
+	//alert('id_campo:'+id_campo+' component_name: '+component_name+' component_type: '+component_type+' opcao: '+opcao+' valor: '+valor);
+	$(component_type + '[name=' + component_name + ']').empty(); //Limpando o componente
+	if(valor) {
+		$.ajax({
+			type: 'post',
+			dataType: 'json',
+			_url: _document_root("url") + '/include/php/consulta_pais_estado_cidade.php?opcao='+opcao+'&valor='+valor,
+			get url() {
+				return this._url;
+			},
+			set url(value) {
+				this._url = value;
+			},
+			success: function (dados)
+			{
+				$(component_type + '[name=' + component_name + ']').append('<option value="">Selecione...</option>');
+				if(opcao == 'pais')
+				{
+					//alert('1 - pais');
+					for (var i = 0; dados.length > i; i++) {
+						//Adicionando registros retornados
+						if (dados[i].codigo == id_campo) {
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].codigo + ' selected>' + dados[i].descricao + '</option>');
+							$(component_type + '[name=' + component_name + ']').change();
+						}
+						else
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].codigo + '>' + dados[i].descricao + '</option>');
+					}
+				}
+				if(opcao == 'estado')
+				{
+					//alert('2 - estado');
+					for (var i = 0; dados.length > i; i++) {
+						//Adicionando registros retornados
+						if (dados[i].id_estado == id_campo) {
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].id_estado + ' selected>' + dados[i].nome + '</option>');
+							$(component_type + '[name=' + component_name + ']').change();
+						}
+						else
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].id_estado + '>' + dados[i].nome + '</option>');
+					}
+				}
+				if(opcao == 'cidade')
+				{
+					//alert('3 - cidade');
+					for (var i = 0; dados.length > i; i++) {
+						//Adicionando registros retornados
+						if (dados[i].id_cidade == id_campo) {
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].id_cidade + ' selected>' + dados[i].nome + '</option>');
+							$(component_type + '[name=' + component_name + ']').change();
+						}
+						else
+							$(component_type + '[name=' + component_name + ']').append('<option value=' + dados[i].id_cidade + '>' + dados[i].nome + '</option>');
+					}
+				}
+			}
+		});
+	}
+}
+function page_text_loader(objeto,mensagem) { document.getElementById(objeto).innerHTML = mensagem; }
+function _document_root (url) { if (url == "url") { var _url = window.location.protocol; return _url; } }

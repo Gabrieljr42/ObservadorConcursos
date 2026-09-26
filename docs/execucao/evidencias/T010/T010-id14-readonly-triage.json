@@ -1,0 +1,30 @@
+{
+  "schema": "tenderproof.t010.id14-triage.v1",
+  "record_id": 14,
+  "classification": "INSUFFICIENT_IDENTITY_PROVENANCE",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id14.pdf",
+    "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+    "byte_len": 345974,
+    "pages": 17,
+    "preserved_only": true
+  },
+  "documentary_fields_reproduced_readonly": {
+    "page_1": "FAPESE; Chamada Pública para formação de cadastro reserva para prestadores de serviço/pessoa física; Edital nº 007/2026",
+    "page_3": "cadastro reserva; Técnico de apoio graduado e com experiência em administração escolar/universitária; exercício na Universidade Federal de Sergipe e locais curriculares",
+    "page_5": "Articulador(a) Político-Pedagógico: R$ 60,00 por hora efetivamente prestada; Técnico de Apoio: limite de R$ 7.488,00 por etapa; valores não constituem remuneração mensal fixa",
+    "page_7": "conclusão de curso superior há 2 anos; residência na Região Metropolitana de Aracaju/SE"
+  },
+  "identity_chain": {
+    "concurso_id": 14,
+    "source": "fapese_selection",
+    "catalog_title": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+    "runtime_run_id": "tpr-e46272ce7476",
+    "runtime_artifact_id": "art-2addf5fed2",
+    "missing": ["candidate.detail_url_observed", "artifact.url_requested", "artifact.url_final", "observed_at"]
+  },
+  "semantic_caveat": "accepted package labels one role Articulador(a) político-pedagógico; item 2.2.1 qualification text says Educadora ou educador, while item 2.4.1 describes Articulador(a) activities; preserve both wording layers and do not normalize to employment cargo",
+  "decision": "stop; parser/reviewed_run not created because exact URL/observed_at provenance is absent and role wording requires targeted review",
+  "required_concrete_source": "preserved catalog/detail capture for fapese_selection concurso 14, including exact detail/PDF URLs and observed_at, plus authority decision on item 2.2.1 versus 2.4.1 role label",
+  "network_or_download": "not used"
+}

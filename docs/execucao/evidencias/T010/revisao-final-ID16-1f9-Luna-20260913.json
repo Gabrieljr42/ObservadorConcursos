@@ -1,0 +1,41 @@
+{
+  "schema": "t010.id16.final-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "LIBERA_IMPORT_PROPOSTA_ONLY",
+  "scope": "read-only; sem importação real, approve/apply, deploy ou alteração do piloto",
+  "canonical_run": {
+    "run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+    "generated_twice_identically": true,
+    "source": "omni_open",
+    "concurso_id": 16,
+    "external_id": "246",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "artifact_sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "artifact_bytes": 396219,
+    "artifact_pages": 23
+  },
+  "reconciliation": {
+    "prior_run": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae",
+    "material_values_equal": true,
+    "only_changes": ["native pypdf whitespace/line wrapping", "field-level evidence de-duplication"],
+    "identity_fields_eligible": false,
+    "legacy_run_id_not_substituted": true
+  },
+  "payload": {
+    "eligible_fields": ["cargos", "prova_data"],
+    "cargo_count": 18,
+    "immediate_count": 10,
+    "cr_count": 8,
+    "prova_data": "2025-01-12",
+    "evidence_count": 19,
+    "evidence_sufficiency": "18 cargo rows + 1 exam-date record; all artifact/SHA-bound",
+    "identity_baseline_preserved": true
+  },
+  "tests": {
+    "command": "pytest tests/test_omni_osvaldo_cruz_integration.py -q (cwd backend)",
+    "result": "3 passed"
+  },
+  "release_scope": "Liberar somente importação única + criação de proposta canônica; manter approve/apply bloqueados até revisão pós-persistência."
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "t012.luna.batch1-repro-r1-review.v1",
+  "verdict": "CHANGES_REQUIRED",
+  "scope": ["fafipa_open/4208", "cpcon_open/processo-seletivo-simplificado-no-002-2026"],
+  "findings": {
+    "fafipa": {
+      "status": "BLOCKED",
+      "reason": "The current fields.py FAFIPA branch replaces only orgao and edital_numero (lines 489-541); it does not invoke fafipa_t012_r4.extract_fields for titulo, inscrição dates, prova_data or cargos. Therefore a reviewed run carrying the claimed seven eligible fields cannot reproduce all values/evidence through _revalidate.",
+      "scope": "The 14 cargo values in T012-fafipa-open-reviewed-run-r3.json are not fresh-dispatch eligible; its cargos field carries only one generic page-3 snippet, not one evidence per cargo.",
+      "live_isolation": "Historical live blocked runs were not used and no proposal/version/outbox was created."
+    },
+    "cpcon": {
+      "status": "PARTIAL",
+      "identity": "PASS: exact source/external/PDF pins and old 001/2026 drift rejection.",
+      "cargo_count": "PASS: parser emits six cargo rows with fresh values.",
+      "evidence_risk": "The current six cargo evidence entries all use the generic snippet 'Campus'; this is reproducible but does not uniquely bind each cargo name/value. Strengthen snippets/tests to include each row's literal cargo text before treating cargo publication as semantically proven."
+    }
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py -k 'revalidates or identity_parser or fails_closed or real_revalidate'", "result": "3 passed, 1 failed: transient processing concurrency_limit in CPCON extraction"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py -k revalidates_identity_without_publication", "result": "1 passed, but test filters run.fields to identity only and does not prove all seven eligible fields"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py -k 'real_revalidate or adapter_and_validation'", "result": "previous directed run 2 passed"}
+  ],
+  "required_fix": [
+    "Route FAFIPA/4208 through its pinned extract_fields on canonical bytes and add a full reviewed-run _revalidate test covering all seven fields and 14 cargo rows with fresh evidence.",
+    "Replace CPCON generic Campus evidence with row-specific literal snippets and add a stale-snippet negative test.",
+    "Rerun batch1 repro and relevant parser suites without live runs."
+  ],
+  "network_or_pilot": "not used"
+}

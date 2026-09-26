@@ -1,0 +1,24 @@
+{
+  "schema": "t012.luna.dispatch-batch-r5-review.v1",
+  "verdict": "T012_DISPATCH_BATCH_R5_ACCEPT_FOR_DEPLOY",
+  "scope": ["fafipa_open/4208", "cpcon_open/processo-seletivo-simplificado-no-002-2026", "shdias_open/MTEw/MzA4"],
+  "review": {
+    "fafipa": "PASS: fields.py branch is exact source+external, reruns pinned strong_preflight on canonical bytes, binds orgao/edital evidence, and fails closed. Real _revalidate test passed with zero proposal/version/outbox side effects.",
+    "cpcon": "PASS: fields.py invokes extract_identity(artifact,pages,candidate); validation.py has the exact (candidate,pages) resolver adapter for cpcon_open. Real _revalidate and resolver-contract tests passed without TypeError or publication side effects.",
+    "shdias": "PASS: fields.py exact source+external branch reruns pinned parser and emits scalar taxa=63.25 with Evidence. publication.PUBLISHABLE and VERSIONED_FIELDS include taxa; _revalidate real-PDF test asserts eligible taxa and zero side effects. create_proposal consumes this eligible map, so a newly built proposal includes taxa (the prior live proposal is historical and was not approved).",
+    "isolation": "PASS: branches are exact and no generic source path was changed except the already canonical PUBLISHABLE taxa slot; evidence/value reproduction remains required before eligibility.",
+    "cas_versioning": "PASS: focused publication tests covering apply-twice, replay, stale baseline, divergent replay, rollback, artifact revalidation and unchanged crawl passed (8 passed)."
+  },
+  "commands": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py -k revalidates_identity_without_publication", "result": "1 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py -k 'real_revalidate or adapter_and_validation'", "result": "2 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_shdias_dispatch_r5.py -k real_pdf_without_publication", "result": "1 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_r4.py backend/tests/test_shdias_hortolandia_r4.py backend/tests/test_cpcon_t012.py -k 'not real_revalidate and not dispatch'", "result": "16 passed, 1 deselected"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_publication.py -k 'apply_twice or reprocessed_same_values or failure_rolls_back or approval_bound or semantic_replay or divergent or stale or unchanged_traditional'", "result": "8 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/fields.py backend/app/tenderproof/validation.py backend/app/tenderproof/publication.py backend/app/tenderproof/fafipa_t012_r4.py backend/app/tenderproof/cpcon_t012.py backend/app/tenderproof/shdias_hortolandia.py", "result": "PASS"}
+  ],
+  "limitations": [
+    "Full publication suite had 29 passed and one pre-existing cwd-relative fixture FileNotFoundError (id1.pdf) when launched from repository root; focused publication suite is green.",
+    "No pilot/API/DB/deploy mutation was performed. Approval/apply remains a separate operational gate."
+  ]
+}

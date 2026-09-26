@@ -1,0 +1,102 @@
+{
+  "report_date": "2026-09-07",
+  "product": "TenderProof",
+  "overall_state": "complete_in_requested_scope_with_disclosed_provider_unknowns",
+  "acceptance_decision": "User explicitly removed dashboard reconciliation as a completion blocker and directed continuation based on working APIs. Later dashboard refresh remains a hypothesis, not an established explanation. Replay and confirmed billing stay unknown.",
+  "scope": "Fases 4–7; publicação somente em bancos descartáveis; fixtures rotuladas; live autorizado separadamente",
+  "verification": {
+    "backend": {
+      "command": ".venv/Scripts/python.exe -m pytest tests -q -m 'not live' --disable-warnings",
+      "cwd": "backend",
+      "passed": 341,
+      "skipped_postgres": 14,
+      "deselected_live": 2,
+      "warnings": 736,
+      "duration_seconds": 72.39
+    },
+    "postgres": {"version": 17, "passed": 14, "disposable_container_removed": true, "receipt": "backend/.tenderproof/publication-postgres-validation.json"},
+    "expo_web_export": "passed; build is not functional validation",
+    "typescript": "preexisting route type error mobile/components/ExternalLink.tsx:13; no TenderProof error identified",
+    "ui": {
+      "authentication": "normal JWT login against disposable SQLite review server",
+      "ibgp_run": "tpr-716ffe1fb518",
+      "publication": "explicit field selection, approval, apply, version 1, only end-registration date changed",
+      "imeso_run": "tpr-5ffc481f1a63",
+      "data_kind": "synthetic fixture; not live browser"
+    }
+  },
+  "phases": {
+    "4": {"state": "complete_in_isolated_scope", "checks": ["evidence revalidation", "normal authentication", "owner and publisher authorization", "persistent idempotency", "CAS", "transaction rollback", "post-commit internal outbox deduplication", "audited rollback", "existing CrawlService regression"]},
+    "5": {"state": "complete_in_bounded_scope", "checks": ["persistent jobs", "bounded PDF worker", "timeout and cancellation", "budget reservation", "lifecycle reconciliation", "real Sandbox extraction and closure"], "limitation": "local subprocess does not enforce Windows network/memory isolation"},
+    "6": {"state": "complete_in_controlled_scope", "checks": ["versioned declarative allowlist", "independent validator", "10 adversarial scenarios", "observation without publication", "human review lifecycle", "rollback", "acquisition fallback"], "limitation": "controlled fixtures do not prove a real portal layout change; IMESO strategy promotion disabled without its independent suite"},
+    "7": {"state": "complete_in_limited_sample_and_demo_scope", "checks": ["shared contracts", "official IMESO portal", "two real PDFs", "demo and UI", "preserved PDF hashes and page snippets independently revalidated"], "external_unknowns_not_acceptance_blockers": ["provider organization attribution to user's dashboard", "official replay availability", "confirmed billing"]}
+  },
+  "demo_metrics": {
+    "label": "small controlled demonstration, not statistical generalization",
+    "correct_fields_over_evaluated": [5, 5],
+    "valid_evidence_over_presented": [5, 5],
+    "false_changes_over_unchanged_comparisons": [0, 1],
+    "correct_diagnoses_over_scenarios": [10, 10],
+    "navigation_recoveries_over_break_scenarios": [2, 3],
+    "incorrect_strategies_accepted_over_evaluated": [0, 1],
+    "imeso_mock_filled_over_expected_fields": [5, 6],
+    "human_intervention": "explicit contest selection, field approval and strategy review/activation; CLI demo simulates these decisions visibly",
+    "timings": "per-stage timing retained in individual run and demo reports",
+    "estimated_window_cost_per_valid_result_usd": {
+      "browser": {"total_including_failed_attempts": 0.04375, "valid_results": 2, "per_result": 0.021875},
+      "sandbox": {"total_including_failed_attempts": 0.00501667, "valid_results": 1, "per_result": 0.00501667},
+      "note": "conservative authorized-window estimates, not observed invoices; different result types are not pooled"
+    }
+  },
+  "real_evidence": {
+    "final_artifact_revalidation": {"receipt": "backend/.tenderproof/final-artifact-revalidation.json", "ibgp_valid_evidence_over_presented": [4,4], "imeso_valid_evidence_over_presented": [5,5], "new_remote_resources": 0},
+    "historical_snapshot_unchanged": true,
+    "historical_provider_sessions": {"recognized_and_released": 2, "replay_http_404_unknown": 2},
+    "ibgp": {
+      "contest": "704",
+      "run": "tpr-browser-two-source-20260907-v4-704",
+      "bytes": 806581,
+      "pages": 46,
+      "sha256": "ac7a4bbb6ddd42e9e9889f36687c0e1406703bc945e6196d0170fb9a8704078f",
+      "matches_historical_pdf": true,
+      "supported_over_expected_fields": [4, 6],
+      "baseline": "new traditional connector observation from 3 official GET responses; disposable database; not historical canonical baseline",
+      "comparison_supported_fields": {"agree": 3, "diverge_title": 1}
+    },
+    "imeso": {
+      "contest": "139",
+      "original_run": "tpr-browser-two-source-20260907-v3-139",
+      "corrected_offline_run": "tpr-browser-two-source-20260907-v3-139-corrected-offline",
+      "bytes": 597314,
+      "pages": 29,
+      "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+      "supported_over_expected_fields": [5, 6],
+      "correction": "original fee-as-salary false positive preserved; corrected salary unknown; zero new resources for correction",
+      "correction_receipt": "backend/.tenderproof/browser-live-corrections-20260907/correction.json"
+    },
+    "sandbox": {"attempts": 3, "valid_results": 1, "failures": ["missing pypdf", "incorrect two-page fixture rejected by page cap"], "corrected_fixture_bytes": 720, "corrected_fixture_pages": 1, "input_sha256": "b09020b187cb638c9f809603ac2e95893ceca88c2462c1c52b48cdb74e76e92f", "receipt_directory": "backend/.tenderproof/sandbox-live-authorized-20260907-zipapp-v3-one-page"}
+  },
+  "provider": {
+    "base": "official production endpoint verified without logging credentials",
+    "negative_authentication_control_http_status": 401,
+    "organization_sha256": "6dd476887ba5811c72705336df53d15f7d0118cbe3ec14c7ef2a428550ae67b9",
+    "new_browser_resources": 5,
+    "new_sandbox_resources": 3,
+    "browser_provider_confirmed_released": 5,
+    "sandbox_delete_confirmed": 3,
+    "browser_closure_evidence": "GET 200 state released; SDK release_and_wait alone only sends DELETE and is no longer treated as confirmation",
+    "sandbox_closure_evidence": "DELETE 200 ok true during each execution; later GET 404 is not closure proof",
+    "replay_state": "unknown; HTTP 404 does not establish absence, closure or a cause",
+    "dashboard_reconciled": false,
+    "dashboard_observed": "authenticated personal workspace Starter: Sessions All empty, usage last 30 days zero; active key prefix matches configured key, revoked prefix does not; UI did not expose organization ID",
+    "dashboard_next_action": "provider support reconciliation using private execution IDs and times; draft prepared in audit document but not sent",
+    "support_contacted": false,
+    "cost_confirmed_usd": null,
+    "estimated_authorized_windows_usd": {"browser": 0.04375, "sandbox": 0.00501667, "total": 0.04876667},
+    "cost_note": "estimate includes failed attempts using prior conservative public Free rates; console Starter displays Browser 0.10 USD/hour instead of reserved 0.15; not an invoice, measured charge or guaranteed cap; historical sessions excluded"
+  },
+  "migration": {"kind": "additive SQLAlchemy migration", "tables": ["tenderproof_publication_proposals", "tenderproof_publication_outbox"], "real_database_applied": false, "operational_stores": "separate SQLite job/recovery ledgers, not a parallel catalog"},
+  "not_performed": ["real catalog publication", "external notifications", "deploy", "push", "merge", "credit purchase", "plan change", "credential edit"],
+  "reproduce": ["backend: .venv/Scripts/python.exe scripts/tenderproof_demo.py", "backend: .venv/Scripts/python.exe scripts/tenderproof_review_server.py --port 8014", "mobile: EXPO_PUBLIC_API_BASE_URL=http://127.0.0.1:8014; Expo web port 3000 offline"],
+  "documents": ["docs/TENDERPROOF.md", "docs/TENDERPROOF-PUBLICATION.md", "docs/TENDERPROOF-PROCESSING.md", "docs/TENDERPROOF-RECOVERY.md", "docs/TENDERPROOF-SOLARI-AUDIT.md", "docs/TENDERPROOF-DEMO.md"]
+}

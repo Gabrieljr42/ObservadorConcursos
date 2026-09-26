@@ -1,0 +1,13 @@
+{
+  "schema": "t012.klc.document-review-live-receipt-r6.v1",
+  "recorded_at": "2026-09-13T13:58:28.1878863-03:00",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "owner_user_id": 1,
+  "requested_manifest": {"title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP", "kind": "edital", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf", "artifact_id": "art-96637dad76", "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "expected_page_count": 10},
+  "preflight_get": {"health": 200, "pending": true, "documents": 1, "pending_document_actual": {"kind": "retificacao", "title": "Retificação 1 - Alteração da Data da Prova", "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf"}},
+  "operation": {"endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved", "attempts": 1, "http": 409, "response_body": "client did not retain body; exact mismatch proven by requested manifest versus GET pending identity", "case_id": null, "approval": false, "proposal": false, "apply": false},
+  "post_state": {"pending": true, "documents": 1, "case_id": null, "revision_hash": null, "reason": "Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."},
+  "counts_unchanged": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "versions": 93, "outbox": 93, "notifications": 92, "favorites": 0, "alerts": 1},
+  "result": "KLC_PREPARE_PRESERVED_BLOCKED_PENDING_IDENTITY_MISMATCH",
+  "stop_rule": "Single prepare-preserved returned 409; no retry or fallback."
+}

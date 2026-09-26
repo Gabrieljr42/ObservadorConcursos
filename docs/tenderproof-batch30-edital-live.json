@@ -1,0 +1,507 @@
+{
+  "observed_at": "2026-09-08T00:08:57.968985+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-edital-live-20260908",
+  "cycles": [
+    {
+      "source": "aguia_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-6555924129c0",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.institutoaguia.org.br/edital",
+          "file": "aguia_open-cycle1-listing-e7ee194a17.html",
+          "sha256": "ebc11faa86a25ac560b461bc5149c8b829d1db12a9e81ee6a301febaf2d4a30c",
+          "bytes": 47434,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:08:58.660876+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0a44ec02e09f",
+          "candidate": {
+            "candidate_id": "aguia_open-43",
+            "title_observed": "Prefeitura Municipal de Bálsamo",
+            "detail_url_observed": "https://portal.institutoaguia.org.br/edital/ver/43",
+            "external_id": "43",
+            "observed_at": "2026-09-08T00:08:58.780715Z",
+            "source": "aguia_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.institutoaguia.org.br/edital/ver/43",
+              "file": "aguia_open-cycle1-detail-a49b5d9ccc.html",
+              "sha256": "0abdb50782c6615cb7375c82bd7cb68cdcc66e6d13f8fe4e3f632269073a5832",
+              "bytes": 62352,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:08:59.572405+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "aguia_open-doc-b34ed1dd80c584f3",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 21 documento(s) ignorado(s) (ex.: EDITAL DE HOMOLOGAÇÃO DO PROCESSO SELETIVO 01/2025; EDITAL DO RESULTADO FINAL; EDITAL DAS RESPOSTAS AOS RECURSOS CONTRA A CLASSIFICAÇÃO PROVISÓRIA; RETIFICAÇÃO DO EDITAL DE ABERTURA; EDITAL DA CLASSIFICAÇÃO PROVISÓRIA)."
+          },
+          "artifact": {
+            "artifact_id": "art-9000f15244",
+            "sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+            "byte_len": 501543,
+            "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:09:01.332270Z",
+            "storage_path": "art-9000f15244-f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7.pdf"
+          },
+          "total_pages": 18,
+          "processed_pages": 18,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=18/18",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.687
+    },
+    {
+      "source": "idecan_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-94df1192e065",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://portal.concursos.idecan.org.br/edital"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos",
+          "file": "idecan_open-cycle1-listing-094d37ec1d.html",
+          "sha256": "be76a1a680a14205bca7a0af3736579d3acd30ef4d6a75740a8e42db7761d8a1",
+          "bytes": 20920,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:04.140477+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c4902847081a",
+          "candidate": {
+            "candidate_id": "idecan_open-24",
+            "title_observed": "CORPO DE BOMBEIROS MILITAR DE MINAS GERAIS - CBMMG",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/24",
+            "external_id": "24",
+            "observed_at": "2026-09-08T00:09:04.183224Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/24",
+              "file": "idecan_open-cycle1-detail-4ac994e5a4.html",
+              "sha256": "cc6cf4c4d594f07079bea15889f4637cb2206f95a1d12a95cb8e45bcca84a8bb",
+              "bytes": 19020,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:04.664849+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-27ceb9196126",
+          "candidate": {
+            "candidate_id": "idecan_open-8",
+            "title_observed": "AUTARQUIA DE PROTEÇÃO E DEFESA DO CONSUMIDOR DO ESTADO DO RIO DE JANEIRO",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/8",
+            "external_id": "8",
+            "observed_at": "2026-09-08T00:09:04.183224Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/8",
+              "file": "idecan_open-cycle1-detail-9baf6bda12.html",
+              "sha256": "822032cda5fb8d2beea0e703ff1d850da93e268a97d42cb5d294f7578c71fac4",
+              "bytes": 25838,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:05.158496+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c3b9ec3f0c24",
+          "candidate": {
+            "candidate_id": "idecan_open-6",
+            "title_observed": "CORPO DE BOMBEIROS MILITAR DO ESTADO DO ESPÍRITO SANTO",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/6",
+            "external_id": "6",
+            "observed_at": "2026-09-08T00:09:04.184224Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/6",
+              "file": "idecan_open-cycle1-detail-fa9c076cd2.html",
+              "sha256": "f8d1b07c93642f63c02c2475a9b9e93f7c3dd4f52350546ce961c6e8e52fe867",
+              "bytes": 17767,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:05.691473+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.062
+    },
+    {
+      "source": "aguia_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-aace01d8b5d4",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.institutoaguia.org.br/edital",
+          "file": "aguia_open-cycle2-listing-0882018da8.html",
+          "sha256": "d867e715f71161f3ffed228d308581e0a7efe205bb5244e32d7cd6ba457cdad8",
+          "bytes": 47434,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:06.946461+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-6aa940489564",
+          "candidate": {
+            "candidate_id": "aguia_open-43",
+            "title_observed": "Prefeitura Municipal de Bálsamo",
+            "detail_url_observed": "https://portal.institutoaguia.org.br/edital/ver/43",
+            "external_id": "43",
+            "observed_at": "2026-09-08T00:09:07.047870Z",
+            "source": "aguia_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.institutoaguia.org.br/edital/ver/43",
+              "file": "aguia_open-cycle2-detail-ff809dc906.html",
+              "sha256": "176cbef37db46f23d2e2baaf1faa137a1a9879a51b6fd84324c935b6b6807ca5",
+              "bytes": 62352,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:07.784651+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "aguia_open-doc-b34ed1dd80c584f3",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 21 documento(s) ignorado(s) (ex.: EDITAL DE HOMOLOGAÇÃO DO PROCESSO SELETIVO 01/2025; EDITAL DO RESULTADO FINAL; EDITAL DAS RESPOSTAS AOS RECURSOS CONTRA A CLASSIFICAÇÃO PROVISÓRIA; RETIFICAÇÃO DO EDITAL DE ABERTURA; EDITAL DA CLASSIFICAÇÃO PROVISÓRIA)."
+          },
+          "artifact": {
+            "artifact_id": "art-ff1d33030e",
+            "sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+            "byte_len": 501543,
+            "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:09:08.136196Z",
+            "storage_path": "art-ff1d33030e-f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7.pdf"
+          },
+          "total_pages": 18,
+          "processed_pages": 18,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=18/18",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.047
+    },
+    {
+      "source": "idecan_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-c0c1f59b35b4",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://portal.concursos.idecan.org.br/edital"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos",
+          "file": "idecan_open-cycle2-listing-094d37ec1d.html",
+          "sha256": "be76a1a680a14205bca7a0af3736579d3acd30ef4d6a75740a8e42db7761d8a1",
+          "bytes": 20920,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:11.235421+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-86acfa508693",
+          "candidate": {
+            "candidate_id": "idecan_open-24",
+            "title_observed": "CORPO DE BOMBEIROS MILITAR DE MINAS GERAIS - CBMMG",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/24",
+            "external_id": "24",
+            "observed_at": "2026-09-08T00:09:11.276080Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/24",
+              "file": "idecan_open-cycle2-detail-4ac994e5a4.html",
+              "sha256": "cc6cf4c4d594f07079bea15889f4637cb2206f95a1d12a95cb8e45bcca84a8bb",
+              "bytes": 19020,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:11.751734+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-92f0061a8842",
+          "candidate": {
+            "candidate_id": "idecan_open-8",
+            "title_observed": "AUTARQUIA DE PROTEÇÃO E DEFESA DO CONSUMIDOR DO ESTADO DO RIO DE JANEIRO",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/8",
+            "external_id": "8",
+            "observed_at": "2026-09-08T00:09:11.276080Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/8",
+              "file": "idecan_open-cycle2-detail-9baf6bda12.html",
+              "sha256": "822032cda5fb8d2beea0e703ff1d850da93e268a97d42cb5d294f7578c71fac4",
+              "bytes": 25838,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:12.234167+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-1a6b42cc2bc0",
+          "candidate": {
+            "candidate_id": "idecan_open-6",
+            "title_observed": "CORPO DE BOMBEIROS MILITAR DO ESTADO DO ESPÍRITO SANTO",
+            "detail_url_observed": "https://portal.concursos.idecan.org.br/edital/ver/6",
+            "external_id": "6",
+            "observed_at": "2026-09-08T00:09:11.276080Z",
+            "source": "idecan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum documento candidato observado no detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.concursos.idecan.org.br/edital/ver/6",
+              "file": "idecan_open-cycle2-detail-fa9c076cd2.html",
+              "sha256": "f8d1b07c93642f63c02c2475a9b9e93f7c3dd4f52350546ce961c6e8e52fe867",
+              "bytes": 17767,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:12.724568+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 1.969
+    }
+  ]
+}

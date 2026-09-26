@@ -1,0 +1,50 @@
+[
+  {
+    "name": "cebraspe-api",
+    "url": "https://apis.cebraspe.org.br/cebraspe/eventos/tipo/concursos/",
+    "observed_at": "2026-09-08T14:05:48.252796+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 244100,
+    "original_sha256": "a6795a75f1d4ec375179e2d099c7fa768e0838a1421a337d24d37c57dc67201f",
+    "fixture_sha256": "386838da512b4ee2ace6cbad5452d0987d28d99f80ccbecb55ab84bffd2ada91",
+    "file": "cebraspe-api.json",
+    "format": "public JSON; signed URL queries removed"
+  },
+  {
+    "name": "cesgranrio-portal27",
+    "url": "https://concursos.cesgranrio.org.br/portal/avaliacoes/27",
+    "observed_at": "2026-09-08T14:05:48.252796+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 4349,
+    "original_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+    "fixture_sha256": "00e76c5f93a9faa1720a8c83bd859a8a7af579ba7da972393b1f5a0a4524052e",
+    "file": "cesgranrio-portal27.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "avalia621",
+    "url": "https://www2.avalia.org.br/concurso.jsp?id=621",
+    "observed_at": "2026-09-08T14:05:48.253804+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 12159,
+    "original_sha256": "accdc4f63df5b5bd538369d724f49f8e0a9e6ae1386e8a683833888efeef6486",
+    "fixture_sha256": "8164862a94989a902b976ad2ce19ae3fcac7fbff73d9399ace6b9c1883ac6939",
+    "file": "avalia621.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "avalia631",
+    "url": "https://www2.avalia.org.br/concurso.jsp?id=631",
+    "observed_at": "2026-09-08T14:05:48.254203+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 13482,
+    "original_sha256": "04bccf39078cb4ad9e549eca80b464dc7a012b97d203a531536384ab587e9972",
+    "fixture_sha256": "61068875d1ecf3e70c6f63b88b6cc829b58bee64182e6644b0134434f0857954",
+    "file": "avalia631.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

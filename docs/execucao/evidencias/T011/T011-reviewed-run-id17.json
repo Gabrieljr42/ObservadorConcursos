@@ -1,0 +1,916 @@
+{
+  "artifact": {
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "content_path": "docs\\execucao\\evidencias\\T011\\artifacts\\T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T16:11:28.760592Z",
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "url_final": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+    "url_requested": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf"
+  },
+  "concurso_id": 17,
+  "detail_url": "https://www.contemaxconsultoria.com.br/site/concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+  "external_id": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+  "fields": [
+    {
+      "evidence": [
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-478865f716",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 1,
+          "snippet": "Concurso Público n.º 001/2024",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        }
+      ],
+      "field_name": "titulo",
+      "value": "Concurso Público n.º 001/2024 — Prefeitura Municipal de Cubati/PB"
+    },
+    {
+      "evidence": [
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-260b6d6a35",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 2,
+          "snippet": "PREFEITURA MUNICIPAL DE CUBATI E ADOTA OUTRAS",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        }
+      ],
+      "field_name": "orgao",
+      "value": "PREFEITURA MUNICIPAL DE CUBATI-PB"
+    },
+    {
+      "evidence": [
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-b4fcbabffd",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 1,
+          "snippet": "Concurso Público n.º 001/2024",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        }
+      ],
+      "field_name": "edital_numero",
+      "value": "001/2024"
+    },
+    {
+      "evidence": [
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-5ab00cbe9b",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "01 Agente de Limpeza 40hrs 03 00 03 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-d5b19bf696",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "02 Auxiliar de Serviços Gerais 40hrs 13 02 15 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-e40d8e8cf8",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "03 Coveiro 40hrs 02 00 02 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-cde734e08f",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "04 Eletricista 40hrs 02 00 02 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-47fde11fc2",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "05 Motorista B 40hrs 03 00 03 Ensino Fundamental completo + CNH Cat. B $ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-bfe573cdb6",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "06 Operador de Máquinas Pesadas 40hrs 03 00 03 Ensino Fundamental completo + CNH Cat. C R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-873b4d44fc",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "07 Pedreiro 40hrs 02 00 02 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-ff4a320540",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "08 Servente de Pedreiro 40hrs 02 00 02 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-c9f9ba962f",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "09 Vigilante 40hrs 02 01 03 Ensino Fundamental completo R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-779d92f299",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "10 ACS 01-MA20\nUBS 1¹ 40hrs 01 00 01\nResidir na área da comunidade em que atuar, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação inicial, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-a77aad0fc4",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "11 ACS 02-MA10\nUBS 2¹ 40hrs 01 00 01\nResidir na área da comunidade em que atuar, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação inicial, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-046a787f92",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "12 ACS 03-MA15\nUBS 3¹ 40hrs 01 00 01\nResidir na área da comunidade em que atuar, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação inicia l, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-3aa253488c",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "13 ACS 03-MA18\nUBS 3¹ 40hrs 01 00 01\nResidir na área da comunidade em que atua r, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação inicial, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-dbf2d69b48",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "14 ACS 04-MA 03\nUBS 4¹ 40hrs 01 00 01\nResidir na área da comunidade em que atuar, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação ini cial, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-d8ed348d84",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "15 ACS 04-MA 04\nUBS 4¹ 40hrs 01 00 01\nResidir na área da comunidade em que atuar, desde a data da\npublicação do edital do processo seletivo público; T er concluído, com\naproveitamento, curso de formação inicial, com carga horária mínima de\nquarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter\nconcluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-7c047be4b6",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "16 Agente de Combate às\nEndemias 40hrs 02 00 02\nTer concluído, com aproveitamento, curso de qualificação básica para a\nformação de Agente de Combate às Endemias; ter concluído o ensino\nmédio.\nR$ 2.640,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-fa9c22f360",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "17 Auxiliar Administrativo 40hrs 13 02 15 Ensino médio completo. R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-a01614f161",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "18 Auxiliar de\nConsultório Dentário 40hrs 03 00 03 Ensino médio completo e curso de Auxiliar em Saúde Bucal + CRO. R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-8e716aa45c",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "19 Fiscal de Obras e\nPosturas 40hrs 01 00 01 Ensino médio completo e curso técnico em edificações + CREA R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-63a12c41ec",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "20 Motorista (Condutor\nSocorrista) 40hrs 04 00 04 Ensino médio completo + CNH Categoria D + Curso de Socorrista R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-ff759234e4",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 19,
+          "snippet": "21 Motorista D 40hrs 04 00 04\nEnsino médio completo + CNH Categoria D + Ter concluído com\naproveitamento os cursos especializados exigidos para o exercício do\ncargo conforme arts. 145 e145-A do Código de Trânsito Brasileiro\nR$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-7823ba452a",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "22 Técnico em\nEnfermagem – ESF 40hrs 02 00 02 Curso Técnico em Enfermagem e + COREN R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-927191c3ee",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "23 Técnico em\nEnfermagem 40hrs 02 00 02 Curso Técnico em Enfermagem e registro + COREN e curso de\nVacinador R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-112e61b4b1",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "24 Técnico em\nEnfermagem – SMS 40hrs 02 00 02 Curso Técnico em Enfermagem + COREN. R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-9d3e8ece4a",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "25\nTécnico em\nInformática –\nManutenção\n40hrs 01 00 01 Ensino médio e Curso técnico em Informática R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-baf6c963bc",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "26 Técnico em\nLaboratório 40hrs 01 00 01 Curso Técnico em Patologia. R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        },
+        {
+          "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "document_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+          "evidence_id": "ev-c915e2cfee",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "page_number": 20,
+          "snippet": "27 Técnico Agrícola 40hrs 01 00 01 Ensino médio completo + Curso técnico em Agropecuária. R$ 1.412,00",
+          "source_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+          "validation": {
+            "code": null,
+            "message": null,
+            "ok": true
+          }
+        }
+      ],
+      "field_name": "cargos",
+      "units": {
+        "jornada": "horas semanais",
+        "remuneracao": "BRL; unidade temporal não especificada",
+        "vagas": {
+          "ampla_concorrencia": 74,
+          "pcd": 5,
+          "total": 79
+        }
+      },
+      "value": [
+        {
+          "cadastro_reserva": null,
+          "codigo": "01",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Agente de Limpeza",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 3,
+          "vagas_imediatas": 3,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "02",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Auxiliar de Serviços Gerais",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 13,
+          "vagas_imediatas": 15,
+          "vagas_pcd": 2
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "03",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Coveiro",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "04",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Eletricista",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "05",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Motorista B",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo + CNH Cat. B",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 3,
+          "vagas_imediatas": 3,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "06",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Operador de Máquinas Pesadas",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo + CNH Cat. C",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 3,
+          "vagas_imediatas": 3,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "07",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Pedreiro",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "08",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Servente de Pedreiro",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "09",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Vigilante",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino Fundamental completo",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 3,
+          "vagas_pcd": 1
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "10",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 01-MA20 UBS 1",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "11",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 02-MA10 UBS 2",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "12",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 03-MA15 UBS 3",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "13",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 03-MA18 UBS 3",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "14",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 04-MA 03 UBS 4",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "15",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "ACS 04-MA 04 UBS 4",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Residir na área da comunidade em que atuar, desde a data da publicação do edital do processo seletivo público; Ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas; (Redação dada pela Lei nº 13.595, de 2018) e ter concluído o ensino médio. (Redação dada pela Lei nº 13.595, de 2018)",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "16",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Agente de Combate às Endemias",
+          "remuneracao": "2640.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ter concluído, com aproveitamento, curso de qualificação básica para a formação de Agente de Combate às Endemias; ter concluído o ensino médio.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "17",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Auxiliar Administrativo",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 13,
+          "vagas_imediatas": 15,
+          "vagas_pcd": 2
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "18",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Auxiliar de Consultório Dentário",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo e curso de Auxiliar em Saúde Bucal + CRO.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 3,
+          "vagas_imediatas": 3,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "19",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Fiscal de Obras e Posturas",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo e curso técnico em edificações + CREA",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "20",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Motorista (Condutor Socorrista)",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo + CNH Categoria D + Curso de Socorrista",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 4,
+          "vagas_imediatas": 4,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "21",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Motorista D",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo + CNH Categoria D + Ter concluído com aproveitamento os cursos especializados exigidos para o exercício do cargo conforme arts. 145 e145-A do Código de Trânsito Brasileiro",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 4,
+          "vagas_imediatas": 4,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "22",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico em Enfermagem – ESF",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Curso Técnico em Enfermagem e + COREN",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "23",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico em Enfermagem",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Curso Técnico em Enfermagem e registro + COREN e curso de Vacinador",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "24",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico em Enfermagem – SMS",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Curso Técnico em Enfermagem + COREN.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 2,
+          "vagas_imediatas": 2,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "25",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico em Informática – Manutenção",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio e Curso técnico em Informática",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "26",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico em Laboratório",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Curso Técnico em Patologia.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        },
+        {
+          "cadastro_reserva": null,
+          "codigo": "27",
+          "jornada": "40h",
+          "moeda": "BRL",
+          "nome": "Técnico Agrícola",
+          "remuneracao": "1412.00",
+          "remuneracao_observacao": "unidade temporal não especificada",
+          "requisitos": "Ensino médio completo + Curso técnico em Agropecuária.",
+          "taxa_inscricao": null,
+          "vagas_ampla_concorrencia": 1,
+          "vagas_imediatas": 1,
+          "vagas_pcd": 0
+        }
+      ]
+    }
+  ],
+  "observed_at": "2026-09-12T00:00:00Z",
+  "owner_user_id": 1,
+  "pending_fields": [],
+  "reference_only": true,
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "contemax_open",
+  "title": "Concurso Público n.º 001/2024 — Prefeitura Municipal de Cubati/PB"
+}

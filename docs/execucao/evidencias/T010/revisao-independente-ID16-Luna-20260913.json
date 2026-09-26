@@ -1,0 +1,48 @@
+{
+  "schema": "t010.id16.independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "offline_read_only",
+  "decision": "ACEITO_INTEGRACAO_FIELDS_PRELIGHT",
+  "scope": "histórico: OMNI/Osvaldo Cruz/SP; edital 002/2024; sem inferência de validade atual",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id16.pdf",
+    "artifact_id": "art-0a483f2ba1",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "byte_len": 396219,
+    "pages": 23,
+    "source": "omni_open",
+    "external_id": "246",
+    "concurso_id": 16
+  },
+  "parser_run": {
+    "module": "backend/app/tenderproof/omni_osvaldo_cruz_jobs.py",
+    "run_id": "tp-reviewed-f185c0921aaba9ffc4180f54f4de7d5a",
+    "receipt_status": "parser_and_dry_run_ready_revalidation_route_pending",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "cargo_count": 18,
+    "evidence_count": 18,
+    "replacement_characters": 0,
+    "repeat_parse_equal": true,
+    "semantic_sha256": "04892df41948bf2cfcaf16e94ea0c7d993ce15d955bf3112dcc97680e07872e7",
+    "dry_run": "validated, fields=[cargos], disposable, persisted=false"
+  },
+  "content_audit": {
+    "rows": "18 cargos; 10 vagas imediatas e 8 CR; CR representado por cadastro_reserva=true e ampla=0",
+    "jornadas": ["10h", "20h", "40h"],
+    "remuneracao": "salário base mensal; valores por linha conferidos",
+    "taxas": ["10.00", "12.00", "13.00", "15.00"],
+    "prova_data": "2025-01-12",
+    "evidence_pages": [1, 2],
+    "literal_render_check": "p.2 mostra exatamente 'Médio Ginecologista'; manter literalmente, sem corrigir para 'Médico'.",
+    "other_fields": "requisitos e taxas por linha preservados pelo parser; nenhum valor presente deve ser inferido como atual"
+  },
+  "route_gate": {
+    "fields_py_route": "não encontrado para omni_open/external_id 246",
+    "required_next": "integrar branch SHA-pinned em fields.py, preservando literalmente 'Médio Ginecologista', e executar preflight + duas derivações + dry-run + disposable _revalidate/create_proposal",
+    "blocked_until": ["deploy", "import", "proposal canônica", "approve", "apply", "piloto"],
+    "historical_blockers": "reconciliação/extraction-gate antigos são superados apenas quanto à execução atual do parser; não autorizam promoção sem rota"
+  },
+  "mutation": "none"
+}

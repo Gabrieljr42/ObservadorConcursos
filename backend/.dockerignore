@@ -2,6 +2,9 @@ __pycache__/
 *.py[cod]
 *.db
 .env
+.env.*
+.venv/
+.tenderproof/
 .git/
 .pytest_cache/
 .mypy_cache/

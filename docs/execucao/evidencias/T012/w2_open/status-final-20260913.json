@@ -1,0 +1,32 @@
+{
+  "schema": "t012.source-status.v1",
+  "source": "w2_open",
+  "source_number": 59,
+  "external_id": "105",
+  "state": "NOT_CURRENT_DO_NOT_PUBLISH",
+  "decision": "NOT_CURRENT_DO_NOT_PUBLISH",
+  "reason": "O edital selecionado é o Concurso Público nº 001/2016 da Prefeitura Municipal de Espírito Santo do Dourado/MG; trata-se de seleção histórica, não de oportunidade vigente para publicação atual.",
+  "temporal_evidence": {
+    "artifact_id": "art-8947229bb9",
+    "sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+    "byte_len": 700244,
+    "page_number": 1,
+    "snippet": "EDITAL DE CONCURSO PÚBLICO Nº 001/2016",
+    "detail_url": "https://www.w2consultores.com.br/informacoes/105/",
+    "document_url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/105/anexos/0d32376b9337f9a0604cfa5df04d59ee.pdf"
+  },
+  "preservation": {
+    "prior_artifacts_preserved": true,
+    "prior_r2_not_promoted": true,
+    "parser_implementation_cancelled": true
+  },
+  "mutations": {
+    "db": false,
+    "services": false,
+    "api": false,
+    "catalogue": false,
+    "publish": false,
+    "apply": false
+  },
+  "next_step": "Do not retry live publication; retain evidence only as historical/non-current source material."
+}

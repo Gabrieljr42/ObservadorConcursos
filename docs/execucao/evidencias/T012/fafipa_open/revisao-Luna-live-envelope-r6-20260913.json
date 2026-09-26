@@ -1,0 +1,24 @@
+{
+  "schema": "t012.fafipa-live-envelope-luna-review-r6.v1",
+  "verdict": "BLOCKER",
+  "scope": "read-only envelope review; no live/import/proposal/data mutation",
+  "checks": {
+    "artifact": "PASS: source fafipa_open/external_id 4208, PDF SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes, requested/final URLs exact and 38-page parser pin.",
+    "fields": "PASS in values only: seven eligible field names and 14 cargo objects are present, with pending_fields empty and reference_only true.",
+    "fresh_evidence": "FAIL: envelope cargos has one generic QUADRO DE VAGAS snippet, not the 14 per-cargo literal evidence items emitted by the current fafipa_t012_r4 parser. Several date/title snippets are also shortened generic fragments; envelope does not prove the current parser's full evidence round-trip.",
+    "allocation": "BLOCKER: envelope sets concurso_id=4208, which is the source external_id and is not proven to be a locally allocated canonical concurso ID. The prior blocked run must not be reused; allocate/record a fresh canonical ID through the normal flow (or explicitly null it) before import/proposal.",
+    "old_run": "PASS: old R3/live blocked material is not accepted as the new run; prior proposal remains blocked and no approve/apply effects are claimed.",
+    "currentness": "PASS only as preserved observation (2026-09-13 artifact/parser replay); no catalog mutation or current live status is claimed."
+  },
+  "required_before_live_import": [
+    "Regenerate the envelope from the current parser output, carrying all 14 cargo evidence entries and exact field snippets, and record its fresh run_id/determinism receipt.",
+    "Resolve concurso_id through the normal canonical allocation route; never infer it from external_id=4208.",
+    "Repeat normal import dry-run then revalidate→proposal with zero side effects before any approval/apply."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/fafipa_open/live-envelope-ready-r6.json",
+    "docs/execucao/evidencias/T012/fafipa_open/integration-repro-r2.json",
+    "docs/execucao/evidencias/T012/fafipa_open/parser-r4/T012-fafipa-open-strong-binding-preflight.json",
+    "docs/execucao/evidencias/T012/fafipa_open/live-proposal-receipt-20260913-r4-blocker.json"
+  ]
+}

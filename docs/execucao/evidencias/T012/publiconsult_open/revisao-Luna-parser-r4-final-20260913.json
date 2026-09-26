@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult.luna-parser-r4-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "PUBLICONSULT_PARSER_R4_REJECT_FOR_INTEGRATION",
+  "checks": {
+    "pins": "PASS: source publiconsult_open/external 681; PDF SHA 7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f; 720592 bytes; 25 pages",
+    "formal_output": "PASS: ExtractedField/Evidence/Artifact/ValidationResult types and JSON-safe identity_ids; U+FFFD/page-completeness/SHA guards pass; 3 focused tests passed",
+    "prepare_helper": "PARTIAL: prepare_for_revalidate returns a formal run copy, but selects candidates[0] rather than selected_candidate_id and does not verify run.artifact SHA/URL against content before attaching evidence",
+    "dispatch": "FAIL: no application/adapter registration calls this parser. publication._revalidate still invokes shared extract_fields, which the preflight records as orgao/edital unknown; prepared fields alone cannot make the real dispatch path pass strong binding",
+    "compile": "PASS: compileall"
+  },
+  "required_corrections": [
+    "Integrate the parser into the normal source adapter/fields or publication revalidation hook and prove a real-path _revalidate/import dry-run; do not rely on the standalone prepared run.",
+    "Bind to selected_candidate_id and verify artifact_id/SHA/URL/byte length before returning evidence."
+  ],
+  "evidence": ["docs/execucao/evidencias/T012/publiconsult_open/publiconsult_parser_r3.py","docs/execucao/evidencias/T012/publiconsult_open/strong-preflight-r4.json","docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py"],
+  "safety": "No shared registration, dispatch, import, proposal or mutation performed."
+}

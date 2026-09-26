@@ -1,0 +1,21 @@
+{
+  "schema": "t012.ufu_selection.luna-envelope-r4-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "scope": "R4 receipt/handoff delta only; no live operation",
+  "checks": {
+    "receipt_handoff_claim": "PASS structurally: owner 1, source 40, external 1843, target null and five exact fields are declared.",
+    "determinism_two_processes": "PASS: two fresh Python processes independently returned the same current ID tp-reviewed-1c587b6b8bc29f5d8aef531527e45a09.",
+    "run_binding": "FAIL: R4 receipt/handoff claims tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c, but current importer derives tp-reviewed-1c587b6b8bc29f5d8aef531527e45a09 from the reviewed R3 envelope.",
+    "negative_run_id": "PASS: declared tp-reviewed-00000000000000000000000000000000 is divergent and must be rejected.",
+    "proposal_target": "UNPROVEN until receipt/handoff is regenerated with the current derived run; do not dispatch live."
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r3.json",
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r4-receipt.json",
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r4-handoff.json"
+  ],
+  "required_fix": "Regenerate R4 receipt/handoff and any proposal reference using the current importer-derived run ID, then repeat the two-process equality check before live import/proposal.",
+  "mutations_performed": false
+}

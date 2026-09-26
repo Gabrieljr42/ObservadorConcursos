@@ -1,0 +1,50 @@
+{
+  "schema": "t012.shdias.review.r2.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "SHDIAS_REJECT",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "shdias_open",
+    "source_number": 51,
+    "external_id": "MTEw/MzA4",
+    "process_id": "00308",
+    "title": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+    "selection_type": "Concurso Público 001/2026 - Guarda",
+    "status": "identity and process binding confirmed"
+  },
+  "artifact": {
+    "path": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "bytes": 697485,
+    "pages": 44,
+    "sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "bounded_http_tls_allowlist_receipt": true,
+    "local_bytes_verified": true
+  },
+  "scope_and_duplicate": {
+    "public_employment": true,
+    "not_funding_or_scholarship": true,
+    "duplicate_key": "shdias_open:MTEw/MzA4",
+    "duplicate_check": "passed within preserved catalogue/fixtures"
+  },
+  "fields": {
+    "cargo_count": 2,
+    "vacancy_count": 40,
+    "remuneration": "até R$ 3.971,37 for both cargo entries",
+    "field_provenance": "FAIL: proposal envelope has aggregate fixture references and test assertions, but no field-level evidence records (page/snippet/json_path/artifact binding) for title, fee, exam date, each cargo, vacancies or remuneration"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/shdias_open/test_proposal_fail_closed.py",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "handoff": {
+    "reference_only": true,
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "apply": false,
+    "guard": "correct before allocation",
+    "required_fix": "Add field-level evidence bound to the PDF/detail artifact (page, literal snippet, artifact SHA and field path) for both cargo rows, 40 vacancies and remuneration, then rerun the normal reviewed-run/proposal gate."
+  },
+  "reason": "The acquisition receipt is sound, but the requested evidence-by-field criterion is not met; do not import or create a canonical proposal from this envelope yet."
+}

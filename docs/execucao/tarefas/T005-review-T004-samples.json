@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-12T20:24:05Z",
+  "api_snapshot": "backend/.tenderproof/product-completion/delivery-api-current-20260912T195115192916Z.json",
+  "canonical_fields": ["cidade", "uf", "cargos"],
+  "api_totals": {"records": 32, "locality_present": 0, "locality_absent": 32, "with_cargos": 10, "without_cargos": 22},
+  "samples": [
+    {"id": 30, "title": "Município de Caruaru/PE - 01/2026", "cargos_count": 6, "cidade": null, "uf": null, "detail_http": 200, "document_status": "not_proven_in_this_sample", "inference_from_title": false},
+    {"id": 4, "title": "Carmo da Cachoeira-MG - Processo Seletivo Público 001/2026 - Prefeitura Municipal", "cargos_count": 5, "cidade": null, "uf": null, "detail_http": 200, "document_status": "document_evidence_present", "evidence": "docs/ENTREGA-LOTE-01-CONFERENCIA.md; preserved edital SHA 81a021...", "inference_from_title": false},
+    {"id": 3, "title": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA", "cargos_count": 1, "cidade": null, "uf": null, "detail_http": 200, "document_status": "document_evidence_present", "evidence": "API snapshot amendment provenance, page 1, SHA abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd; snippet names Pedrinhas Paulista and Estado de São Paulo", "inference_from_title": false}
+  ],
+  "classification": {"ambiguous": 0, "extraction_failure": 0, "absent_in_api": 32}
+}

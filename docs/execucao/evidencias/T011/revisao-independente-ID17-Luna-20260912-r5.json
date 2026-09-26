@@ -1,0 +1,61 @@
+{
+  "schema": "t011.independent-review.v5",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "DEVOLVIDO",
+  "read_only": true,
+  "mutations": [],
+  "envelope": {
+    "path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json",
+    "sha256": "e2cfbd7a0170b7ed4fbb82a584538d4d3a18f21b0570d347325fea0d9610d6d9",
+    "byte_len": 43449,
+    "mtime": "2026-09-12T23:44:56.0513515-03:00",
+    "schema_valid": true,
+    "owner_user_id": 1,
+    "reference_only": true,
+    "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "artifact_byte_len": 1094969,
+    "receipt_sha256": "b6129512724315219d3b0c810f4085ea5ec8987b08ac37a689f04ac86b36e706",
+    "receipt_binds_envelope_sha": true,
+    "preflight_sha256": "c00aaa939d8e44f82f10328d1d9f3d64a7f19a69d73783643fa38901efae157c"
+  },
+  "determinism": {
+    "process_1_run_id": "tp-reviewed-ad09d8a09e518c3e94515dc6c972ef5e",
+    "process_2_run_id": "tp-reviewed-ad09d8a09e518c3e94515dc6c972ef5e",
+    "expected_run_id": "tp-reviewed-ad09d8a09e518c3e94515dc6c972ef5e",
+    "same": true,
+    "dry_run_receipt": "two validated isolated dry-runs; network=false; pilot_touched=false; canonical_import=false"
+  },
+  "material": {
+    "pdf_sha_bytes_match": true,
+    "cargos": 27,
+    "vagas_total": 79,
+    "ac": 74,
+    "pcd": 5,
+    "cadastro_reserva": null,
+    "identity": "contemax_open / concurso 17 / Cubati-PB / edital 001/2024",
+    "evidence_count_cargos": 27,
+    "evidence_pages": [19, 20],
+    "replacement_characters": 0
+  },
+  "blocking_defect": {
+    "field": "cargos[*].requisitos",
+    "affected_rows": 26,
+    "finding": "26 requirement values end with a stray ' R' copied from the following salary marker; e.g. row 01 is 'Ensino Fundamental completo R'. This is not the literal requirement and makes the envelope content semantically dirty.",
+    "consequence": "Correcting those values changes the semantic fields hash and therefore changes run_id; ad09d8a09e518c3e94515dc6c972ef5e cannot be authorized for import/proposal as-is.",
+    "secondary_note": "row 05 source itself prints '$ 1.412,00' rather than 'R$'; preserve source evidence but do not normalize silently."
+  },
+  "gate": {
+    "baseline_cargos": null,
+    "canonical_run_or_proposal": "none for corrected run; legacy run/proposal are distinct and not reused",
+    "isolated_import_to_proposal": "not authorized and not evidenced in current preflight",
+    "approve_apply": "blocked"
+  },
+  "required_corrections": [
+    "Regenerate requirements without the trailing salary-marker ' R', preserving verbatim evidence snippets separately.",
+    "Recompute envelope SHA, receipt and deterministic run_id; rerun two-process dry-run and isolated import/proposal.",
+    "Only then consider one import and one proposal; approve/apply remain blocked."
+  ],
+  "authorization": "No import, proposal creation, approval, apply, notification, or UI/quadro action authorized."
+}

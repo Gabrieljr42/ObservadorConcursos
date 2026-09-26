@@ -1,0 +1,40 @@
+{
+  "schema": "t005.offline-source-selection.v1",
+  "generated_at": "2026-09-13",
+  "decision": "SELECT_ONE_OFFLINE_CANDIDATE",
+  "scope": "selection_only_no_network_no_import_no_proposal",
+  "candidate": {
+    "concurso_id": 32,
+    "source": "elo_open",
+    "source_matrix_number": 47,
+    "external_id": "129",
+    "title": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+    "orgao": "Prefeitura Municipal De Barra Longa",
+    "edital_numero": "01/2026",
+    "detail_url": "https://novo.eloassessoriaeservicos.com.br/concurso/129",
+    "document_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf",
+    "inscricao_inicio": "2026-08-18T18:00:00Z",
+    "inscricao_fim": "2026-09-18T18:00:00Z",
+    "baseline_cargos": null
+  },
+  "preserved_provenance": {
+    "run_id": "tp-tcj-62e6f3f6a5b759a29715b823fcd297af-1",
+    "artifact_id": "art-07b137af65",
+    "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+    "artifact_storage_path": "art-07b137af65-a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2.pdf",
+    "artifact_dir_recorded": "/var/lib/observador/tenderproof/artifacts"
+  },
+  "selection_basis": [
+    "current catalogue entry has no cargos and inscription closes 2026-09-18",
+    "matrix source 47 is implemented and this candidate is outside T010/T011 treated IDs",
+    "T004 runtime index preserves exact identity, run, artifact and SHA"
+  ],
+  "gate": "NEEDS_LOCAL_ARTIFACT_FOR_TARGETED_PARSER",
+  "missing_single_evidence": "A portable local copy of the preserved PDF at the recorded SHA (or an equivalent read-only artifact path) is required to run page-isolated extraction and emit literal field evidence. No cargo, remuneration, vacancy, workload or fee value is promoted from catalogue null.",
+  "not_done": ["parser", "ReviewedRun", "dry_run_import", "proposal", "network", "database", "pilot"],
+  "references": {
+    "matrix": "docs/execucao/tarefas/T005-matriz-candidata-20260912.json#sources[numero=47]",
+    "catalogue": "backend/.tenderproof/product-completion/delivery-current-20260912T195125613173Z.json#catalogue[id=32]",
+    "runtime_index": "backend/.tenderproof/product-completion/T004-INDICE-DOCUMENTOS-32-runtime.json#records[concurso_id=32]"
+  }
+}

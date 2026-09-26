@@ -1,0 +1,56 @@
+{
+  "schema": "t012.shdias_open.deploy-live-r6.v1",
+  "timestamp": "2026-09-13T09:08:18-03:00",
+  "scope": "somente SHDias source_id=51 external_id=MTEw/MzA4 process_id=00308",
+  "deployment": {
+    "image": "sha256:cfc0f1e71c3d96f2b22acd7f8502c0299ae299e9030402ccc770fe60fd222e9e",
+    "services_rebuilt_or_recreated": ["api", "worker", "scheduler"],
+    "services_preserved": ["postgres", "redis", "web"],
+    "volumes_preserved": true,
+    "health_http": 200
+  },
+  "artifact": {
+    "artifact_id": "shdias-open-00308-edital-2026",
+    "sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+    "bytes": 697485,
+    "pages": 44
+  },
+  "old_proposal": {
+    "id": "tpp-68684a6f8673f3f039323fd14b3daa80",
+    "state": "rejected",
+    "preserved": true,
+    "approve": false,
+    "apply": false
+  },
+  "import": {
+    "status": "imported",
+    "run_id": "tp-reviewed-b24ac57072486fcb3a459e3703145263",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "fields": ["titulo", "orgao", "edital_numero", "prova_data", "taxa", "cargos"],
+    "taxa": "63.25"
+  },
+  "proposal": {
+    "status": "PENDING_REVIEW",
+    "id": "tpp-6b29997ad6f0ef865bcfdf307044c4e3",
+    "state": "proposed",
+    "hash": "1d4a296974a3dbc6b0210e9be1eb5668a2a1587567b0e47e0beecb326b3f786a",
+    "concurso_id": null,
+    "action": "create",
+    "eligible_fields": ["cargos", "edital_numero", "orgao", "prova_data", "taxa", "titulo"],
+    "proposed_taxa": "63.25",
+    "baseline_all_null": true,
+    "approve": false,
+    "apply": false
+  },
+  "counts": {
+    "before": {"concursos": 33, "fontes_distintas": 32, "cargos": 180, "versions": 91, "outbox": 91, "notifications": 90, "proposals": 96, "push_devices": 0},
+    "after": {"concursos": 33, "fontes_distintas": 32, "cargos": 180, "versions": 91, "outbox": 91, "notifications": 90, "proposals": 97, "push_devices": 0}
+  },
+  "result": "SHDIAS_LIVE_PROPOSAL_R6_PENDING_REVIEW",
+  "notes": [
+    "Nenhuma fonte nova foi publicada/visível; nenhuma tabela canônica foi alterada.",
+    "O primeiro comando de persistência com path sem .pdf falhou antes da mutação; o comando corrigido importou uma vez e criou somente a nova proposta.",
+    "Não aprovar/aplicar sem revisão independente; não processar outras fontes nesta rodada."
+  ]
+}

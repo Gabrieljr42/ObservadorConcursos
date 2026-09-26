@@ -1,0 +1,39 @@
+{
+  "schema": "t012.klc-create-envelope-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "REJECT",
+  "reason": "The custom CREATE package is coherent, but it is not itself a valid tenderproof.reviewed-run.v1 import envelope; run_id/proposal_target and source_number must not be carried into the formal envelope.",
+  "confirmed": {
+    "source_number": 57,
+    "source": "klc_open",
+    "external_id": "632",
+    "owner_user_id": 1,
+    "concurso_id": null,
+    "proposal_target": null,
+    "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "artifact_byte_len": 348300,
+    "artifact_pages": 10,
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos"],
+    "cargo_count": 1,
+    "synthetic_target": false
+  },
+  "schema_check": {
+    "input": "klc-632-reviewed-run.json",
+    "result": "REJECTED",
+    "first_error": "source_number: Extra inputs are not permitted",
+    "run_id_null": "would be an extra field if included in ReviewedRun.v1",
+    "controlled_fix_probe": "removing source_number allowed null-target ReviewedRun validation and dry-run; derived run_id was tp-reviewed-b8412d22080d3edc3c78ca1abbda4e63"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py ../docs/execucao/evidencias/T012/klc_open/test_create_envelope_r2.py",
+    "result": "20 passed",
+    "interpretation": "parser/pins and custom CREATE package tests pass; they do not make the formal envelope importable while forbidden keys remain"
+  },
+  "required_correction": [
+    "Keep source_number, operation/status, run_id:null and proposal_target:null only in the handoff/package/receipt metadata.",
+    "Emit a separate formal tenderproof.reviewed-run.v1 payload without source_number, run_id, proposal_target or other extras; retain concurso_id:null, owner 1 and the six fields.",
+    "Derive run_id from the formal payload at import; do not serialize null run_id."
+  ],
+  "side_effects": {"api": false, "database": false, "proposal": false, "pilot": false}
+}

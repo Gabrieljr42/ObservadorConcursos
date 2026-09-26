@@ -1,0 +1,8 @@
+{
+  "schema":"t010.id5.reviewed-run-r4.receipt.v1","record_id":5,"status":"ID5_COMPLETENESS_PROVED_R4",
+  "supersedes":["T010-reviewed-run-id5.json","T010-reviewed-run-id5-r2.json","T010-reviewed-run-id5-r3.json"],
+  "superseded_runs":["tp-reviewed-a2c424da86d00219b4709266d52a25fe","tp-reviewed-1e82ffa7d41472d79cc8b2d4ff265766","tp-reviewed-28dbf6ab7b67daf8a5f3f4b09b62ee7c"],
+  "envelope":"T010-reviewed-run-id5-r4.json","envelope_sha256":"b9ad59ba3889654f561b65cec56fcfcb72d09160c8c1f3ee28c4d3f488ae920e","run_id":"tp-reviewed-374bfb111a85ef1c478668da5e8c948c",
+  "completeness_evidence":"T010-id5-completeness-20260913.json","validation":{"reviewed_run_model":"pass","import_dry_run":"validated","tests":"3 passed","network":false,"proposal":false,"apply":false},
+  "gate":"independent review r4; proof supplement remains separate"
+}

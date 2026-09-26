@@ -1,0 +1,28 @@
+{
+  "schema": "t012.ibfc_open.receipt.v1",
+  "source": "ibfc_open",
+  "candidate": "ibfc_open-496",
+  "identity": {
+    "external_id": "496",
+    "title": "Instituto Brasileiro de Geografia e Estatística - IBGE",
+    "detail_url": "https://concursos.ibfc.org.br/informacoes/496/"
+  },
+  "runs": ["tpr-b87fc8933e6c", "tpr-c419c4ed8574"],
+  "result": "BLOCKED_SAFE",
+  "checks": {
+    "source_outside_current_catalogue": true,
+    "identity": "pass",
+    "duplicate": "no current catalogue match observed",
+    "adapter_fail_closed_without_primary_pdf": "pass",
+    "artifact_sha256": "missing",
+    "artifact_byte_len": "missing",
+    "proposal": "not attempted"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_t012_ibfc_open_selection.py tests/test_tenderproof_batch30_own_adapters.py",
+    "result": "31 passed",
+    "compileall": "PASS"
+  },
+  "exact_blocker": "Não há bytes locais do PDF IBFC nem receipt de aquisição; os runs terminam pending_review e o adapter classifica o edital retificado como outro, portanto não existe conteúdo publicável comprovado.",
+  "network_or_pilot": "not used"
+}

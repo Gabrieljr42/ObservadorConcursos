@@ -1,0 +1,29 @@
+{
+  "schema": "tenderproof.backend.regression.final.v1",
+  "recorded_at": "2026-09-13",
+  "environment": {
+    "runtime": "backend/.venv/Scripts/python.exe",
+    "command_root": "backend",
+    "network": false,
+    "pilot_or_shared_services": "untouched",
+    "postgres": "not configured; no external PostgreSQL attempted"
+  },
+  "pytest_command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_tenderproof_document_review_gate.py tests/test_tenderproof_review_cases.py tests/test_tenderproof_document_selection.py tests/test_tenderproof_review_drafts.py tests/test_tenderproof_publication.py tests/test_tenderproof_publication_post.py tests/test_tenderproof_publication_postgres.py tests/test_reviewed_run_import.py tests/test_omni_osvaldo_cruz_integration.py tests/test_barra_longa_parser.py tests/test_tenderproof_document_identity.py tests/test_tenderproof_canonical.py tests/test_concurso_identity_migration.py tests/test_tenderproof_dispatch.py tests/test_tenderproof_operational_backup.py tests/test_t009_push.py",
+  "pytest_result": {"passed": 192, "failed": 0, "skipped": 34, "warnings": 2216, "duration_seconds": 197.40},
+  "skip_reasons": [
+    "PostgreSQL parametrizations: explicit disposable PostgreSQL URL not configured",
+    "test_tenderproof_publication_postgres.py: TENDERPROOF_TEST_POSTGRES_URL not configured",
+    "test_t009_push.py PostgreSQL migration: TEST_POSTGRES_URL not configured"
+  ],
+  "compileall": {
+    "command": "backend/.venv/Scripts/python.exe -m compileall -q app",
+    "result": "PASS"
+  },
+  "coverage_groups": [
+    "document-review/prepare-preserved and replay guards",
+    "publication/reviewed-run/ID16 and T005 parsers",
+    "identity/canonical/dispatch/operational-backup",
+    "T009 push backend and idempotency"
+  ],
+  "gate": "FINAL_BACKEND_REGRESSION_PASS"
+}

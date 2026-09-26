@@ -1,0 +1,30 @@
+{
+  "schema": "tenderproof.t010.id16-triage.v1",
+  "record_id": 16,
+  "classification": "INSUFFICIENT_IDENTITY_PROVENANCE",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id16.pdf",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "byte_len": 396219,
+    "pages": 23,
+    "preserved_only": true
+  },
+  "documentary_fields_reproduced_readonly": {
+    "page_1": "Prefeitura Municipal de Osvaldo Cruz/SP; Edital de Concurso Público nº 002/2024; organização OMNI",
+    "page_1_table": "Bibliotecário 1/40h/R$2.327,96; Contador 1/40h/R$8.572,64; Dentista 1/20h/R$3.682,45; Fonoaudiólogo 1/20h/R$2.327,96; Médico Clínico Geral 1/10h/R$3.682,45; Médico Geriatra 1/10h/R$3.682,45; taxas R$15,00 nas linhas conferidas",
+    "page_22": "prova objetiva prevista para 12/01/2025",
+    "u_fffd_check": "preserved extraction text contains no U+FFFD; console rendering only is not evidence"
+  },
+  "identity_chain": {
+    "concurso_id": 16,
+    "source": "omni_open",
+    "title": "Concurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP",
+    "catalog_artifact_id": "not preserved in T004/T010 URL chain",
+    "missing": ["candidate.external_id", "candidate.detail_url_observed", "artifact.url_requested", "artifact.url_final", "observed_at"]
+  },
+  "temporal_caveat": "document is 2024/2025 while the current batch is 2026; preserve period and do not infer current validity",
+  "semantic_caveat": "accepted package summarizes selected roles only; remaining CR rows and per-role requirements are pending; do not promote a partial table as complete",
+  "decision": "stop; parser/reviewed_run not created because exact URL/observed_at provenance and complete role scope are absent",
+  "required_concrete_source": "preserved catalog/detail capture for omni_open concurso 16, with exact detail/PDF URLs and observed_at, plus review of all rows before any targeted parser",
+  "network_or_download": "not used"
+}

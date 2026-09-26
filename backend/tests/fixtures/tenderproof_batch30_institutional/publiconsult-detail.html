@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PUBLICONSULT</title>
+<link href="/Content/Site.css" rel="stylesheet"/>
+<link href="/Content/Bootstrap/bootstrap.css" rel="stylesheet"/>
+<link href="/Template/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/Content/camera.css" rel="stylesheet"/>
+<link href="/Content/style.css" rel="stylesheet"/>
+<script src="/Scripts/Bootstrap/jquery.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+
+
+
+    </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/Content/Gsist/Gsist.less" rel="stylesheet"/>
+<link href="/Content/ProgressStep.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header" id="Gheader">
+<div class="container gConteiner">
+<nav class="navbar navbar-inverse gnavbar-inverse">
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="logo">
+<a class="GLogoSite" href="/">
+<img alt="Logo Publiconsult" src="/Content/images/img_logo.png"/></a>
+<a class="gMenuAtalho" href="/Boleto/SegundaVia">&amp;nbsp<i class="fa fa-barcode fa-2x"></i>&amp;nbsp 2ª via de boleto</a>
+<a class="gMenuAtalho" href="/">&amp;nbsp<i class="fa fa-home fa-2x"></i>&amp;nbsp Home</a>
+</div>
+</div>
+<div aria-expanded="false" class="navbar-collapse collapse" id="navbar" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/Sobre">Quem Somos</a></li>
+<li><a href="/Concurso">Concursos</a></li>
+<li><a href="/Noticias?pArea=T">Treinamentos</a></li>
+<li><a href="/Noticias">Notícias</a></li>
+<li><a href="/Noticias?pArea=L">Legislação</a></li>
+<li><a href="/Noticias?pArea=A">Artigos e Boletins</a></li>
+<li class="dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Fale Conosco<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/Candidato">Suporte ao Candidato</a></li>
+<li><a href="/Atendimento">Atendimento</a></li>
+</ul>
+</li>
+<li><a href="/Candidato">Painel do candidato</a></li>
+</ul>
+</div>
+<!--/.nav-collapse -->
+</nav>
+</div>
+<div class="clearfix"></div>
+</div>
+<link href="/Content/select2.css" rel="stylesheet"/>
+<link href="/Content/Bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+<hr style="    margin-top: 2px;    margin-bottom: 2px;"/>
+<div class="content">
+<div class="container">
+<div class="row">
+<div class="grid_12" style="padding-top: 10px;">
+<div class="panel panel-default" style="margin-left: 0px;margin-top: 0px;">
+<div class="panel-heading">
+<i></i>
+        Detalhes do Concurso
+    </div>
+<div class="panel-body">
+<script src="/Scripts/jquery-ui.js"></script>
+<link href="/Content/jquery-ui.css" rel="stylesheet"/>
+<div class="row-fluid">
+<div class="GimagemNone Gmd_lf col-md-2">
+<div class="imgBrasao">
+<img class="Cliente_117" id="Concurso_681" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/117_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-md-10">
+<fieldset>
+<div class="editor-label">
+</div>
+<div class="editor-field">
+<div class="wizard"><a class="current"><span class="badge badge-inverse">1</span>Andamento</a><a><span class="badge">2</span>Homologado</a><a><span class="badge">3</span>Suspenso</a><a><span class="badge">4</span>Cancelado</a></div>
+<span class="field-validation-valid" data-valmsg-for="CON_ST_STATUS" data-valmsg-replace="true"></span>
+<p></p>
+</div>
+<h4>
+                Prefeitura Municipal de Votuporanga
+                <br/>
+                Processo Seletivo - Nº 1/2026
+            </h4>
+<div class="alert alert-warning" role="alert">
+<b style="font-size:16px">Antes de efetuar sua inscrição, leia atentamente o Edital de Abertura de Inscrições.</b>
+</div>
+<div class="editor-field">
+<input data-val="true" data-val-number="The field Código must be a number." data-val-required="The Código field is required." id="CON_IN_CODIGO" name="CON_IN_CODIGO" type="hidden"/>
+<span class="field-validation-valid" data-valmsg-for="CON_IN_CODIGO" data-valmsg-replace="true"></span>
+<input data-val="true" data-val-length="Máximo de 20 caracteres" data-val-length-max="20" data-val-required="Campo obrigatório" id="CON_ST_EDITAL" name="CON_ST_EDITAL" type="hidden"/>
+<input data-val="true" data-val-required="Campo obrigatório" id="CON_ST_NOME" name="CON_ST_NOME" type="hidden"/>
+<input data-val="true" data-val-required="Campo obrigatório" id="gcon_cliente_CLI_ST_NOME" name="gcon_cliente.CLI_ST_NOME" type="hidden"/>
+</div>
+<!--<div class="editor-label">
+                <label for="Cliente">Cliente</label>
+            </div>
+            <div class="editor-field">
+
+                <input class="span5" disabled="disabled" id="gcon_cliente_CLI_ST_NOME" name="gcon_cliente.CLI_ST_NOME" type="text" value="Prefeitura Municipal de Votuporanga" />
+                <span class="field-validation-valid" data-valmsg-for="gcon_cliente.CLI_ST_NOME" data-valmsg-replace="true"></span>
+                <p></p>
+            </div>
+
+            <div class="editor-label">
+                <label for="CON_ST_NOME">Nome*</label>
+            </div>
+            <div class="editor-field">
+                <input class="span5" disabled="disabled" id="CON_ST_NOME" name="CON_ST_NOME" type="text" value="Processo Seletivo" />
+                <span class="field-validation-valid" data-valmsg-for="CON_ST_NOME" data-valmsg-replace="true"></span>
+            </div>
+
+            <div class="editor-label">
+                <label for="CON_ST_EDITAL">Edital*</label>
+            </div>
+            <div class="editor-field">
+                <input class="span5" disabled="disabled" id="CON_ST_EDITAL" name="CON_ST_EDITAL" type="text" value="Nº 1/2026" />
+                <span class="field-validation-valid" data-valmsg-for="CON_ST_EDITAL" data-valmsg-replace="true"></span>
+            </div>
+
+                -->
+<div class="editor-label">
+<label for="CON_DT_INICIOINSCRICOES">Início das inscrições*</label>
+</div>
+<div class="editor-field">
+07/08/2026 09:00:00<input data-val="true" data-val-date="The field Início das inscrições* must be a date." data-val-required="Campo obrigatório" id="CON_DT_INICIOINSCRICOES" name="CON_DT_INICIOINSCRICOES" type="hidden"/>
+</div>
+<div class="editor-label">
+<label for="CON_DT_FIMINSCRICOES">Fim das inscrições*</label>
+</div>
+<div class="editor-field">
+17/08/2026 21:00:00<input data-val="true" data-val-date="The field Fim das inscrições* must be a date." data-val-required="Campo obrigatório" id="CON_DT_FIMINSCRICOES" name="CON_DT_FIMINSCRICOES" type="hidden"/>
+<p></p>
+</div>
+<br/>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+                        Editais e Publicações
+                    </div>
+<div class="panel-body">
+<table class="table">
+<tr>
+<th>Título
+        </th>
+<th>Link
+        </th>
+<th>Abrir PDF
+        </th>
+</tr>
+<tr>
+<td>
+                    Edital de Classificação Provisória
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20EDITAL%20DE%20CLASSIFICA%C3%87%C3%83O%20PROVIS%C3%93RIA.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo I - Classificação Provisória - Geral
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20I%20-%20CLASSIFICA%C3%87%C3%83O%20PROVIS%C3%93RIA%20-%20GERAL.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo II - Classificação Provisória - Candidatos com Deficiência
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20II%20-%20CLASSIFICA%C3%87%C3%83O%20PROVIS%C3%93RIA%20-%20CANDIDATOS%20COM%20DEFICI%C3%8ANCIA.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo III - Candidatos Não Classificados
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20III%20-%20CANDIDATOS%20N%C3%83O%20CLASSIFICADOS.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Resultado da Análise dos Títulos
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20An%C3%A1lise%20de%20T%C3%ADtulos.xls.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Edital de Resultado dos Recursos à Prova Objetiva
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20EDITAL%20RESULTADO%20DOS%20RECURSOS%20PROVA%20OBJETIVA.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Gabarito
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20GABARITO.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Edital de Convocação para a prova Objetiva
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20PS%201-2026%20-%20EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20PARA%20AS%20PROVAS.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Edital de Deferimento de Inscrições
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20EDITAL%20DE%20DEFERIMENTO%20DE%20INSCRI%C3%87%C3%95ES.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo I - Inscrições Deferidas - Geral
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20I%20-%20INSCRI%C3%87%C3%95ES%20DEFERIDAS%20-%20GERAL.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo II - Inscrições Deferidas - Candidatos com Deficiência
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20II%20-%20INSCRI%C3%87%C3%95ES%20DEFERIDAS%20-%20CANDIDATOS%20COM%20DEFICI%C3%8ANCIA.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo III - Inscrições Indeferidas - Candidatos com Deficiência
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20III%20-%20INSCRI%C3%87%C3%95ES%20INDEFERIDAS%20-%20CANDIDATOS%20COM%20DEFICI%C3%8ANCIA.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Anexo IV - Inscrições Indeferidas - Geral
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20ANEXO%20IV%20-%20INSCRI%C3%87%C3%95ES%20INDEFERIDAS%20-%20GERAL.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Edital de Resultado Isenção/Redução
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20RESULTADO%20ISEN%C3%87%C3%83O.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+<tr>
+<td>
+                    Edital de Abertura de Inscrições
+                </td>
+<td style="max-width: 100px"></td>
+<td style="max-width: 100px">
+<a href="https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf" target="_blank"><img src="/Content/images/PDF_icon.png"/></a>
+</td>
+</tr>
+</table>
+</div>
+<div class="panel-footer">
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+                        Cargos
+                    </div>
+<div class="panel-body">
+<table class="table">
+<tr>
+<th>
+            Código do cargo*
+        </th>
+<th>
+            Cargo
+        </th>
+<th>
+            Valor de inscrição*
+        </th>
+<th></th>
+</tr>
+<tr>
+<td>
+                    01
+                </td>
+<td>
+                    Professor de Educação Básica I
+                </td>
+<td>
+80,00                </td>
+</tr>
+<tr>
+<td>
+                    02
+                </td>
+<td>
+                    Técnico em Educação X – Desenvolvimento Infantil II
+                </td>
+<td>
+65,00                </td>
+</tr>
+</table>
+</div>
+<div class="panel-footer">
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+<div class="panel-footer">
+<p>
+<button class="btn btn-default" data-dismiss="modal" onclick="location.href='/Concurso'" type="button">Voltar</button>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<script src="/Scripts/Mascaras/jquery.mask.min.js"></script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="/Scripts/modernizr-2.6.2.js"></script>
+<script src="/Scripts/knockout-2.2.0.js"></script>
+<script src="/Scripts/select2.js"></script>
+<script src="/Scripts/Mascaras/jquery.mask.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap-datetimepicker.pt-BR.js"></script>
+<div class="GFooter footer_bottom" id="GFooter">
+<div class="divPanel">
+<div class="container">
+<div class="row text-center">
+<div class="col-md-4 Gfeature_gridFooter">
+<p>
+<img alt="Logo Publiconsult" src="/Content/images/img_logo_rodape.png"/>
+</p>
+</div>
+<div class="col-md-4 Gfeature_gridFooter">
+<p><span>Rua Milton Monzoni Wagner, n.º 193, Térreo: DF 23, Parque Campolim</span></p>
+<p><span>Sorocaba / SP - CEP 18047-634</span></p>
+</div>
+<div class="col-md-4 Gfeature_gridFooter">
+<div class="span12">
+<p class="copyright">
+                                2026  © Publiconsult - Todos os direitos reservados.
+                            </p>
+</div>
+<div>
+<a class="a_linkGsist" href="http://www.gsist.com.br" style="font-size: smaller" target="_blank">Gsist - Gestão de Sistemas Cloud</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function () {
+                    return $('#popover-content').html();
+                }
+            });
+        });
+    </script>
+<span class="hidden" id="top-link-block">
+<a class="well well-sm GTopo" href="#Gheader" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+<i class="fa fa-chevron-up fa_cor"></i>
+</a>
+</span>
+<script type="text/javascript">
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function () {
+                    return $('#popover-content').html();
+                }
+            });
+        });
+    </script>
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+<script type="text/javascript">
+        if (($(window).height() + 100) < $(document).height()) {
+            $('#top-link-block').removeClass('hidden').affix({
+                // how far to scroll down before link "slides" into view
+                offset: { top: 100 }
+            });
+        }
+    </script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</body>
+</html>

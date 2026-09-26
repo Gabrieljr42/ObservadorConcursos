@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-13T09:32:22.7517573-03:00",
+  "result": "CPCON_LIVE_PROPOSAL_BLOCKED_REVALIDATION_EVIDENCE_DRIFT",
+  "scope": {"source_id": 35, "source": "cpcon_open", "external_id": "processo-seletivo-simplificado-no-002-2026", "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05", "bytes": 498894, "pages": 13},
+  "checkpoint_before_after": {"concursos": 34, "distinct_sources": 33, "cargos": 196, "versions": 92, "outbox": 92, "notifications": 91, "proposals": 97},
+  "duplicate_cas": "PASS: source_id=35/external_id not present",
+  "dry_run": {"status": "validated", "run_id": "tp-reviewed-d5a97b3c28480927445e02c413470637", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+  "import": "imported reference_only owner_user_id=1",
+  "proposal_attempt": {"http": 422, "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida", "proposal_id": null},
+  "revalidate": {"eligible": [], "blocked": {"titulo": "trecho, página, origem ou vínculo documental inválido", "orgao": "trecho, página, origem ou vínculo documental inválido", "edital_numero": "trecho, página, origem ou vínculo documental inválido", "cargos": "valor não reproduzido pelo extrator sobre os bytes preservados", "inscricao_inicio": "campo não extraído; preservar baseline", "inscricao_fim": "campo não extraído; preservar baseline", "prova_data": "campo não extraído; preservar baseline", "taxa": "campo não extraído; preservar baseline"}},
+  "mutations": {"proposal_created": false, "version_created": false, "outbox_created": false, "notification_created": false, "catalogue_created": false, "approve": false, "apply": false},
+  "next_gate": "corrigir/aceitar envelope de evidência reproduzível; não retry até nova revisão"
+}

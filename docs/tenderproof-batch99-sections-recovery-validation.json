@@ -1,0 +1,147 @@
+{
+  "validated_at": "2026-09-08T15:49:03.855336+00:00",
+  "scope": "offline process crash/recovery; original captures and PDFs; no source availability claim",
+  "original_read_only": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killsectionsfix",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "controlled_fixture": "Only new isolated crashed job lease_until set to0; real os._exit73 after run commit; max_attempts1 final-attempt recovery.",
+  "sources": [
+    {
+      "source": "fatec_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killsectionsfix\\fatec_selection",
+          "--source",
+          "fatec_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killsectionsfix\\fatec_selection",
+          "--source",
+          "fatec_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 51424,
+        "run_id": "tp-tcj-6e104a086f6855a195cf833ca023e7f5-1",
+        "job_id": "tcj-6e104a086f6855a195cf833ca023e7f5",
+        "cycle": "tcc-8cf69c09bdc349cf9f4d3a4d9036ff45",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 36696,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-5ff8863df3cb7cd34e5d4a5f0bac7804629b1ed78d7a99df8d9553eaa15e14e7",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fappr_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killsectionsfix\\fappr_selection",
+          "--source",
+          "fappr_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killsectionsfix\\fappr_selection",
+          "--source",
+          "fappr_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 43288,
+        "run_id": "tp-tcj-77fea728e35657c4966af3c5acf461d9-1",
+        "job_id": "tcj-77fea728e35657c4966af3c5acf461d9",
+        "cycle": "tcc-ebdf1df4a1f64e5985febaae48807fbc",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 50800,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-d27e936b93ac1287f8ab6f27adc86adf0a0dc8c228e412ff45f7da6d01bd9b3d",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    }
+  ],
+  "passed": true
+}

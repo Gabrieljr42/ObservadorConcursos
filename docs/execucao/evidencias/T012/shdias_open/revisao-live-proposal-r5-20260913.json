@@ -1,0 +1,36 @@
+{
+  "schema": "t012.shdias_open.luna-live-proposal-r5-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "requested_gate": "SHDIAS_LIVE_PROPOSAL_ACCEPT_FOR_APPROVE_APPLY",
+  "proposal": {
+    "id": "tpp-68684a6f8673f3f039323fd14b3daa80",
+    "state": "proposed",
+    "status": "PENDING_REVIEW",
+    "hash": "8b6a6b664c0ae8238c0af03132efb011a10be9b5a81490f26871d4af6262dd49",
+    "baseline_all_null": true,
+    "concurso_id": null,
+    "approve": false,
+    "apply": false
+  },
+  "checks": {
+    "identity": "PASS: source shdias_open, external_id MTEw/MzA4, process 00308, owner 1, duplicate count before 0.",
+    "artifact": "PASS: PDF SHA f7deaacf..., 697485 bytes, 44 pages, official CDN and fresh orgao/edital identity.",
+    "payload": "PASS for title/orgao/edital/prova and two cargos (12 + 28) with remuneration 3971.37; proposal eligible_fields are explicit and baseline is null.",
+    "evidence": "PASS for parser-generated PDF-bound evidence and proposal hash receipt; no mutation occurred.",
+    "counts": "PASS: proposals increased 95→96 only; concursos, versions, outbox and notifications were unchanged."
+  },
+  "blocking_findings": [
+    {
+      "severity": "P1",
+      "finding": "The live proposal eligible_fields are [cargos, edital_numero, orgao, prova_data, titulo] and the imported run lists the same five fields; taxa_inscricao (R$63.25) is not in the proposal payload, despite being proven and required by this gate. The older field-evidence manifest records the fee but it was not promoted into the proposal.",
+      "required_fix": "Rebuild/review the proposal with taxa_inscricao explicitly included and hash it again, or document an exact contract exception before approval."
+    },
+    {
+      "severity": "P2",
+      "finding": "The receipt predicts create→one new selection/version/outbox/notification, but no apply was run and the evidence does not independently prove the final CAS mutation cardinality.",
+      "required_fix": "After P1 correction, perform approve/apply only under the normal guarded contract and verify exact post-apply counts; do not approve this proposal as-is."
+    }
+  ],
+  "gate": "BLOCK approve/apply for proposal tpp-68684... until fee promotion and a fresh proposal hash are reviewed."
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "t004.luna.matrix-r5-r2-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "MATRIX_R5_ACCEPT_FINAL",
+  "scope": "read-only; no matrix, pilot, board or live mutation",
+  "hashes": {
+    "json": "1fd4946d9191eb76138db5cf6ddaed770311eb64719446006fe532e7810d2e86",
+    "csv": "ae313153cec371adc62452fc2ce0da5cad2d6f7f14a52a3e3e1f56668c5008d4"
+  },
+  "checks": {
+    "cardinality": "PASS: CSV/JSON 99 rows; numero/fonte unique 99/99; compared fields equivalent",
+    "row_5": "PASS: ibam_open restored BASELINE_ONLY",
+    "row_38": "PASS: institutoconsulplan_open, target concurso 5, LOCAL_REVIEWED_READY_FOR_IMPORT_PROPOSAL, applied=false",
+    "pointers": "PASS: every concrete evidence pointer resolves; no glob/T004 pointer remains",
+    "id5": "PASS: run tp-reviewed-40120e7a2b6662b131075dc416d2cb18, r5 envelope/receipts and proof supplement point to T010; no application",
+    "overlays": "PASS: accepted overlays v82,v83,v84,v86,v88,v89,v90,v91 unchanged from r4",
+    "gates": "PASS: authoritative=false, pre-outage snapshot label, runtime_factory_absent=0, no source-wide claim/live mutation; blockers 18/20/22-25, mismatch 15, DO_NOT_RETRY 21, Garibaldi accepted_with_blocker"
+  },
+  "conclusion": "The r5 namespace correction reconciles matrix source_number with concurso_id and T010 provenance. Accept final."
+}

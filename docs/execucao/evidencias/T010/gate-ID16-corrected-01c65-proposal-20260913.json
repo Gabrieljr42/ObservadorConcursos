@@ -1,0 +1,34 @@
+{
+  "schema": "tenderproof.t010.id16.corrected-proposal-gate.v1",
+  "recorded_at": "2026-09-13T03:21:00-03:00",
+  "baseline": {"cargos": 162, "versions": 90, "proposals": 94, "outbox": 90, "notifications": 89},
+  "backup": {"bundle_prefix": "pilot-20260913T064949991Z", "restore_isolated": true, "counts": {"versions": 90, "proposals": 94, "outbox": 90, "notifications": 89}},
+  "import": {
+    "envelope": "docs/execucao/evidencias/T010/id16-regenerated-envelope-01c65-20260913.json",
+    "run_id": "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+    "status": "imported_then_idempotent",
+    "owner_user_id": 1,
+    "source": "omni_open",
+    "external_id": "246",
+    "concurso_id": 16,
+    "reference_only": true,
+    "fields": ["cargos", "prova_data"]
+  },
+  "proposal": {
+    "id": "tpp-1a0fc40cc8df713e6958de0f43efc032",
+    "proposal_hash": "ecfc21e9b02707be162761e86ab7f149dd1a011e7d038e37d8f4c8572d2aaee1",
+    "state": "proposed",
+    "eligible_fields": ["cargos", "prova_data"],
+    "baseline": {"cargos": null, "prova_data": null},
+    "proposed": {"cargos": 18, "immediate": 10, "cadastro_reserva": 8, "prova_data": "2025-01-12"},
+    "evidence_count": 19,
+    "literal_verified": "Médio Ginecologista",
+    "identity_and_inscriptions_preserved": true,
+    "replay_same_proposal": true,
+    "approve": false,
+    "apply": false
+  },
+  "previous_proposal": {"id": "tpp-bdb86b21341b923ed50b5346fcc3ddb6", "rule": "NEVER_APPROVE_NEVER_APPLY"},
+  "counts_after": {"versions": 90, "proposals": 95, "outbox": 90, "notifications": 89},
+  "next_gate": "Independent review/final apply gate for corrected proposal only; do not touch bdb86."
+}

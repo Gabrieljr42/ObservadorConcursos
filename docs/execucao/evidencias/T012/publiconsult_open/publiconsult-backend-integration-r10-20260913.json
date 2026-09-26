@@ -1,0 +1,21 @@
+{
+  "schema": "t012.publiconsult.backend-integration-r10.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "shared backend dispatch only; offline principal edital",
+  "identity": {"source": "publiconsult_open", "source_id": 56, "external_id": "681"},
+  "artifact": {"sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25, "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf"},
+  "implementation": {
+    "module": "backend/app/tenderproof/publiconsult_t012.py",
+    "dispatch": "fields.py passes page_records from extracted PageText and consumes the strict parser",
+    "validation": "validation.py routes publiconsult_open identity through strict source/external/page marker checks",
+    "output": ["titulo", "orgao", "edital_numero"],
+    "excluded": ["cargos", "remuneracao", "taxa", "prova_data", "TAF/documentos"],
+    "guards": ["source/external", "requested/final URL", "SHA/bytes", "25 ordered page_records", "error/truncated/processing_error", "non-empty text/U+FFFD", "Votuporanga + Processo Seletivo 1/2026 + edital marker"]
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_publiconsult_r10_dispatch.py docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_proposal_r8.py docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py backend/tests/test_t012_batch2_dispatch.py -k 'publiconsult or dispatch'",
+    "result": "38 passed",
+    "compileall": "PASS"
+  },
+  "side_effects": {"docker": false, "network": false, "live_or_pilot": false, "proposal_or_apply": false}
+}

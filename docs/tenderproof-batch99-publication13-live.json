@@ -1,0 +1,1048 @@
+{
+  "generated_at": "2026-09-08T15:42:18.014085+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-475f238b7c6f51f898d9eee2cec4e111-1",
+      "source": "klc_open",
+      "document_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "715.00"
+            ],
+            "escopo": "cursos.com.br. FUNÇÃO CARGA HORÁRIA VAGAS VENCIMENTOS (R$) VALOR DA INSCRIÇÃO Nível de Escolaridade e",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-9f6ac5080414505584f54a16afa65856-1",
+      "source": "klc_open",
+      "document_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "715.00"
+            ],
+            "escopo": "cursos.com.br. FUNÇÃO CARGA HORÁRIA VAGAS VENCIMENTOS (R$) VALOR DA INSCRIÇÃO Nível de Escolaridade e",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-98be1deceac5593aa92496366b3f5898-1",
+      "source": "legatus_open",
+      "document_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+      "fields": {
+        "titulo": {
+          "value": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Tanque Do Piauí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00",
+              "2327.97",
+              "2400.00",
+              "3036.00"
+            ],
+            "escopo": "TABELA I – CARGOS DE NÍVEL SUPERIOR CÓDIGO CARGO REQUISITOS DE ESCOLARIDADE VAGAS CARGA HORÁRIA",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 1,
+      "proposal_id": "tpp-e8f0a2a5af7470c168e7ee38740019f8",
+      "version_id": 1,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Tanque Do Piauí"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-aafc67102d595530a814fe635be1be80-1",
+      "source": "legatus_open",
+      "document_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+      "fields": {
+        "titulo": {
+          "value": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Tanque Do Piauí",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00",
+              "2327.97",
+              "2400.00",
+              "3036.00"
+            ],
+            "escopo": "TABELA I – CARGOS DE NÍVEL SUPERIOR CÓDIGO CARGO REQUISITOS DE ESCOLARIDADE VAGAS CARGA HORÁRIA",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 1,
+      "proposal_id": "tpp-c5b33ec785a8e1f8bcfba7bdbd8c3dfc",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-9f47a41be11d5c82b4977725bb3d95c9-1",
+      "source": "ieses_open",
+      "document_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+      "fields": {
+        "titulo": {
+          "value": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-d1fe8c8e579f5dba8b1b72be6b380bdc-1",
+      "source": "ieses_open",
+      "document_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+      "fields": {
+        "titulo": {
+          "value": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-4b9b128f76d65f908641ef4cae1a75ec-1",
+      "source": "verbena_selection",
+      "document_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+      "fields": {
+        "titulo": {
+          "value": "IV - Concurso Público da Câmara Municipal de Pires do Rio - GO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Pires Do Rio-Go",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "6523.44"
+            ],
+            "escopo": "N PCD Total CR Carga Horária Requisitos Vencimento Analista de Comunicação Social 1 0 0 1 3 40 Graduação Com",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-2bc9ea291ac35bd0bab478fc10d70d41-1",
+      "source": "verbena_selection",
+      "document_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+      "fields": {
+        "titulo": {
+          "value": "IV - Concurso Público da Câmara Municipal de Pires do Rio - GO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Pires Do Rio-Go",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "6523.44"
+            ],
+            "escopo": "N PCD Total CR Carga Horária Requisitos Vencimento Analista de Comunicação Social 1 0 0 1 3 40 Graduação Com",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-299ad53742235c9ea4a6c5c72b960a2c-1",
+      "source": "funpec_selection",
+      "document_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+      "fields": {
+        "titulo": {
+          "value": null,
+          "state": "unknown"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-ea1e102cde91504db3429c4ab3627286-1",
+      "source": "funpec_selection",
+      "document_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+      "fields": {
+        "titulo": {
+          "value": null,
+          "state": "unknown"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-c798a292372d55a1af2ee6a6386620e5-1",
+      "source": "fade_selection",
+      "document_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+      "fields": {
+        "titulo": {
+          "value": "Estágio em Saúde – Fisioterapia | Cadastro Reserva | Edital 092/2026 | Fade-UFPE",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-7869b23cb4cc506980c98d823d597b0d-1",
+      "source": "fade_selection",
+      "document_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+      "fields": {
+        "titulo": {
+          "value": "Estágio em Saúde – Fisioterapia | Cadastro Reserva | Edital 092/2026 | Fade-UFPE",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-e6990faf17e25accaded24558596ae8e-1",
+      "source": "fapergs_selection",
+      "document_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+      "fields": {
+        "titulo": {
+          "value": "FAPERGS - Processo Seletivo 2025",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2025",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2025-07-29",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2025-08-18",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-1909dea266935609accb0dea3683c7f0-1",
+      "source": "fapergs_selection",
+      "document_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+      "fields": {
+        "titulo": {
+          "value": "FAPERGS - Processo Seletivo 2025",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "01/2025",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": "2025-07-29",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2025-08-18",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-fe73ce4bd4bc5f688acc4ec19665e945-1",
+      "source": "fapex_selection",
+      "document_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+      "fields": {
+        "titulo": {
+          "value": "Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-59a4628a8fb15904afced9ed7e36c514-1",
+      "source": "fapex_selection",
+      "document_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+      "fields": {
+        "titulo": {
+          "value": "Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-73d07c7e01245d01bd6a5389a5184aa8-1",
+      "source": "fapesb_selection",
+      "document_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO – EDITAL Nº 01/2026 – FAPESB",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-1597fa450aec5e79b1ba709687cbacaf-1",
+      "source": "fapesb_selection",
+      "document_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO – EDITAL Nº 01/2026 – FAPESB",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-49c08b919dd5577a9e806e73708cd50e-1",
+      "source": "faperj_selection",
+      "document_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+      "fields": {
+        "titulo": {
+          "value": "Diretor de Tecnologia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2025-07-15",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2025-07-24",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-534266fba6205602b9ef0b6c88b5c208-1",
+      "source": "faperj_selection",
+      "document_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+      "fields": {
+        "titulo": {
+          "value": "Diretor de Tecnologia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2025-07-15",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2025-07-24",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-9637bd5bc72b594eb61ed097767e6ea4-1",
+      "source": "fapesp_selection",
+      "document_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+      "fields": {
+        "titulo": {
+          "value": "FAPESP - Concurso Público n o 01/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "10235.95",
+              "6613.69"
+            ],
+            "escopo": "ência (PCD) e os vencimentos são os estabelecidos a seguir: CARGOS TOTAL DE VAGAS VAGAS PARA AMPLA CONCORRÊNCIA VAGAS PCD5% VENCIMENTOS Analista",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-0525464cec3951f08ff395831f146868-1",
+      "source": "fapesp_selection",
+      "document_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+      "fields": {
+        "titulo": {
+          "value": "FAPESP - Concurso Público n o 01/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "10235.95",
+              "6613.69"
+            ],
+            "escopo": "ência (PCD) e os vencimentos são os estabelecidos a seguir: CARGOS TOTAL DE VAGAS VAGAS PARA AMPLA CONCORRÊNCIA VAGAS PCD5% VENCIMENTOS Analista",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-82e9679875195021b96d3e4c76452ee8-1",
+      "source": "fapeg_selection",
+      "document_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Simplificado - Edital nº 009/2024 fapeg",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "009/2024",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "8300.00"
+            ],
+            "escopo": "Estado de Goiás. 3.3 O vencimento individual mensal para a função objeto do presente processo seletivo é o definido no quadro a seguir: QUADRO II",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-ecc38e1c2c3b5e318bf55c72d611eed5-1",
+      "source": "fapeg_selection",
+      "document_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Simplificado - Edital nº 009/2024 fapeg",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "009/2024",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "8300.00"
+            ],
+            "escopo": "Estado de Goiás. 3.3 O vencimento individual mensal para a função objeto do presente processo seletivo é o definido no quadro a seguir: QUADRO II",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-a062a59b4bda5acfa6b9dd4c260cb8ef-1",
+      "source": "fapespa_selection",
+      "document_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+      "fields": {
+        "titulo": {
+          "value": "EDITAL Nº. 001/2025 PSS/FAPESPA – PROCESSO SELETIVO SIMPLIFICADO PARA CONTRATAÇÃO TEMPORÁRIA – NÍVEL SUPERIOR",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-fc9132d486df53efa7873ab8f313be4f-1",
+      "source": "fapespa_selection",
+      "document_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+      "fields": {
+        "titulo": {
+          "value": "EDITAL Nº. 001/2025 PSS/FAPESPA – PROCESSO SELETIVO SIMPLIFICADO PARA CONTRATAÇÃO TEMPORÁRIA – NÍVEL SUPERIOR",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 60,
+  "source_filter": null,
+  "counts": {
+    "concursos": 1,
+    "versions": 1,
+    "outbox": 1,
+    "notifications": 0
+  },
+  "states": {
+    "blocked": 24,
+    "applied": 1,
+    "no_change": 1
+  },
+  "sources_with_creation": [
+    "legatus_open"
+  ],
+  "temporary_database_removed": true
+}

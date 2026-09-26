@@ -1,0 +1,10 @@
+{
+  "schema": "t012.publiconsult.document-review-package-r7-receipt.v1",
+  "package": "docs/execucao/evidencias/T012/publiconsult_open/document-review-package-r7.json",
+  "status": "BLOCKED_REDACTED_SIGNED_URL_NOT_DISPATCHABLE",
+  "cause": "R6 literal artifact URL lacked AWSAccessKeyId/Expires/Signature retained by pending manifest",
+  "artifact_pin": {"sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "byte_len": 341466, "pages": 6},
+  "tests": "test_document_review_r7_url_match.py: 1 passed",
+  "live": false,
+  "secrets": "not persisted"
+}

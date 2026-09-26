@@ -1,0 +1,18 @@
+{
+  "schema": "t010.reviewed-run.receipt.v1",
+  "record_id": 8,
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "reference_only": true,
+  "source": "idib_open",
+  "external_id": "362",
+  "concurso_id": 8,
+  "artifact": {"artifact_id": "art-cdeead8742", "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a", "byte_len": 1048994, "pages_total": 75, "pages_processed": 75, "truncated": false, "replacement_characters": 0},
+  "derivations": {
+    "targeted_parser": {"module": "backend/app/tenderproof/idib_reriutaba_jobs.py", "version": "idib-reriutaba-362/1", "field": "cargos", "state": "supported", "cargo_count": 1, "evidence_pages": [3, 72], "values": {"immediate": 9, "ac": 6, "pcd": 1, "ppp": 2, "cr": 11, "jornada": "40h", "taxa": "156.67", "remuneracao_unit": "mensal_variavel"}},
+    "canonical_extractor": {"supported": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"], "proof_date": "2026-12-06", "registration": ["2026-09-02", "2026-10-05"], "remuneracao_field": "unknown_by_generic_extractor; cargo evidence preserves variable basis"}
+  },
+  "validation": {"reviewed_run_model": "pass", "import_reviewed_run_dry_run": {"status": "validated", "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e", "dry_run": true}, "targeted_tests": "3 passed", "u_fffd_fail_closed": "pass", "isolated_revalidate_create_proposal": "PASS; eligible_fields=[cargos], proposal state=proposed in disposable SQLite, catalog cargos remained null", "historical_422": {"status": "superseded", "cause": "page_limit before reviewed ID8 exception", "recorded_at": "2026-09-13"}},
+  "baseline": {"catalogue_id": 8, "cargos": null},
+  "expected_material_diff": "add one Guarda Civil Municipal cargo with checked vacancies, variable monthly remuneration basis, 40h workload, requirements and fee; no salary-base amount invented",
+  "next_gate": "operational final review requested before any import/proposal dispatch; isolated proposal was disposable only"
+}

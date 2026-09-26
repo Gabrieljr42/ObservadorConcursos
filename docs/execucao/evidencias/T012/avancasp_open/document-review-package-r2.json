@@ -1,0 +1,58 @@
+{
+  "schema": "t012.avancasp.document-review-package.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "avancasp_open",
+  "source_id": 54,
+  "external_id": "272",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "manifest_binding": {
+    "title": "EDITAL COMPLETO 04/09/2026",
+    "kind": "edital",
+    "selection_identity": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "manifest_source": "avancasp_open/live-proposal-receipt-20260913.json",
+    "manifest_owner_and_run": "owner_user_id=1; run_id=tp-reviewed-d3f322671865f3ceea32af3be85ede50"
+  },
+  "documents": [
+    {
+      "title": "EDITAL COMPLETO 04/09/2026",
+      "kind": "edital",
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "artifact_id": "avancasp-open-edital-272-bbc8f6fc",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48,
+      "basename": "avancasp-open-edital-272-bbc8f6fc-c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637.pdf",
+      "preserved_source": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "revision": "Anexo V - Cronograma",
+      "duplicate_of_sibling": false
+    },
+    {
+      "title": "EDITAL COMPLETO 04/09/2026",
+      "kind": "edital",
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf",
+      "artifact_id": "avancasp-open-edital-272-6d52089a",
+      "sha256": "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd",
+      "byte_len": 749582,
+      "pages": 49,
+      "basename": "avancasp-open-edital-272-6d52089a-49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd.pdf",
+      "preserved_source": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-6d52089a-0ad3-4a18-bef5-306c27315785.pdf",
+      "revision": "Anexo VI - Cronograma; materially distinct revision",
+      "duplicate_of_sibling": false
+    }
+  ],
+  "operation": "save_artifact_file and commit_run_artifact in an owner-1 ephemeral store; no shared/live write",
+  "revision_policy": "Keep both URL/SHA/page provenances. They are distinct revisions of the same selection; no publication-date order is asserted.",
+  "guards": [
+    "exact manifest title/kind/URL matcher",
+    "owner_user_id=1 and exact reviewed run binding",
+    "SHA/byte length/page preservation",
+    "hash-addressed artifact basename",
+    "no prepare/approve/apply/pilot/live mutation"
+  ],
+  "test": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/test_document_review_package_r2.py",
+    "command": "from backend: .venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/avancasp_open/test_document_review_package_r2.py",
+    "result": "3 passed"
+  }
+}

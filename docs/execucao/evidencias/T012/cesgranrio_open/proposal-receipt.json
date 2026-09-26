@@ -1,0 +1,19 @@
+{
+  "schema":"t012.proposal-receipt.v1",
+  "state":"CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "source":"cesgranrio_open",
+  "source_number":12,
+  "adapter":"CesgranrioAdapter",
+  "candidate_external_id":"27",
+  "identity":"confirmed",
+  "duplicate_check":"passed_preserved_event_27_not_in_current_32_source_catalogue_and_no_id_1_33_identity_match",
+  "artifact":{"path":"backend/.tenderproof/batch60-major-cesgranrio-live-20260908/artifacts/art-262c2f6ba7-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf","sha256":"e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f","byte_len":1166736,"pages":81},
+  "evidence":{"listing":"backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle1-listing-ee65058a05.html","detail":"backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle1-detail-5cee87db38.html","live_report":"docs/tenderproof-batch60-major-cesgranrio-live.json"},
+  "proven_fields":["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","taxa_inscricao","cargos"],
+  "omitted_or_blocked":["prova_data","canonical_concurso_id"],
+  "catalogue_mutated":false,
+  "network":false,
+  "apply":false,
+  "review_required":true,
+  "handoff":"Integrador deve alocar canonical_concurso_id e executar o importer ReviewedRun em dry-run; somente após validação criar proposal pelo fluxo normal. O run histórico falhou por page_limit, mas os bytes e extração local foram revalidados sem rede."
+}

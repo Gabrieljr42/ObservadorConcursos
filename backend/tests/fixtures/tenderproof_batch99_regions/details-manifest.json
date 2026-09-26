@@ -1,0 +1,908 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fapeam_selection",
+      "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+      "basis": "Literal redirect Location in categories manifest",
+      "observed_at": "2026-09-08T14:53:40.010141+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 118942,
+      "sha256": "5ba63d4ed7c5cfed4bf03ba69c2eceddd9400bcaf58d77d1f7b37a2ead18c45f",
+      "file": "fapeam_selection-78682234-5ba63d4ed7.html",
+      "encoding": "utf-8",
+      "title": "Editais - FAPEAM",
+      "links": [
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos#content",
+          "title": "Ir para Conteúdo 1"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos#navigation",
+          "title": "Ir para Navegação 2"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos#search",
+          "title": "Ir para Busca 3"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos#footer",
+          "title": "Ir para Rodapé 4"
+        },
+        {
+          "url": "https://www.amazonas.am.gov.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.amazonas.am.gov.br/acessibilidade",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/mapa-do-site",
+          "title": ""
+        },
+        {
+          "url": "https://www.transparencia.am.gov.br/",
+          "title": "Portal da Transparência"
+        },
+        {
+          "url": "https://diario.imprensaoficial.am.gov.br/",
+          "title": "Diário Oficial"
+        },
+        {
+          "url": "https://falabr.cgu.gov.br/web/AM/",
+          "title": "Ouvidoria Acesso à Informação"
+        },
+        {
+          "url": "https://radardatransparencia.atricon.org.br/",
+          "title": "Radar da Transparência"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br",
+          "title": "FAPEAM Fundação de Amparo à Pesquisa do Estado do Amazonas"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/institucional/",
+          "title": "Histórico"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/organograma/",
+          "title": "Organograma"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/a-fapeam/legislacao/",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/estrutura",
+          "title": "Quem é quem"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/conselhos/",
+          "title": "Conselhos, Câmaras e Comitês"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/servicos/atas/",
+          "title": "Atas"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/servicos/atas/conselho-superior-2/",
+          "title": "Conselho Diretor"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/servicos/atas/conselho-superior-1/",
+          "title": "Conselho Superior"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/programas-fapeam-3/",
+          "title": "Programas"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Editais"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais?aba=vigentes",
+          "title": "Vigentes"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=fluxo-continuo",
+          "title": "Fluxo Contínuo"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=encerrados",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=resultados",
+          "title": "Resultados"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/bolsasfapeam/",
+          "title": "Bolsas"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/servicos/auxilios/",
+          "title": "Auxílios"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Gestão"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Decisões do Conselho"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/decisoes/?aba=conselho-diretor",
+          "title": "Conselho Diretor"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/decisoes/?aba=conselho-fiscal",
+          "title": "Conselho Fiscal"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Resoluções do Conselho"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/resolucoes?aba=conselho-diretor-tipos-reconselho",
+          "title": "Conselho Diretor"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/resolucoes?aba=conselho-superior",
+          "title": "Conselho Superior"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/fiscais-de-contratos/",
+          "title": "Fiscais de Contratos"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/portarias-diversas/",
+          "title": "Portarias Diversas"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/downloads-fapeam-2/",
+          "title": "Downloads"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/controle-interno/",
+          "title": "Controle Interno"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/controle-interno/sobre/",
+          "title": "Sobre"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/controle-interno/publicacoes/",
+          "title": "Publicações"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/controle-interno/legislacoes/",
+          "title": "Legislações"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/acesso-a-informacao",
+          "title": "Acesso à Informação"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/fale-conosco",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://servicos.portaldoservidor.am.gov.br/",
+          "title": "Portal do Servidor"
+        },
+        {
+          "url": "https://www.transparencia.am.gov.br/",
+          "title": "Portal da Transparência"
+        },
+        {
+          "url": "https://diario.imprensaoficial.am.gov.br/",
+          "title": "Diário Oficial"
+        },
+        {
+          "url": "https://falabr.cgu.gov.br/web/AM/",
+          "title": "Ouvidoria Acesso à Informação"
+        },
+        {
+          "url": "https://radardatransparencia.atricon.org.br/",
+          "title": "Radar da Transparência"
+        },
+        {
+          "url": "https://www.amazonas.am.gov.br/acessibilidade",
+          "title": "Acessibilidade"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/mapa-do-site",
+          "title": "Mapa do site"
+        },
+        {
+          "url": "https://x.com/fapeam?lang=pt",
+          "title": "X"
+        },
+        {
+          "url": "https://www.instagram.com/fapeam/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.facebook.com/fapeamazonas/?locale=pt_BR",
+          "title": "Facebook"
+        },
+        {
+          "url": "https://www.youtube.com/FAPEAM",
+          "title": "Canal no Youtube"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br",
+          "title": "Início"
+        },
+        {
+          "url": "https://app-sa.readspeaker.com/cgi-bin/rsent?customerid=19&lang=pt_br&readid=post-&url=",
+          "title": "Ouvir"
+        },
+        {
+          "url": "https://twitter.com/share?ref_src=twsrc%5Etfw",
+          "title": "Tweet"
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/programa-dados-abertos-fapeam-2023-2025/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/portfolios-de-investimentos-e-resultados-de-pesquisas-vol-01-e-vol-02/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/especial-cop-30/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/wp-content/uploads/2025/08/PoS-GRADUAcaO-2025-FINAL-07.08.pdf",
+          "title": ""
+        },
+        {
+          "url": "https://protocolovirtual.amazonas.am.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/transparencia/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/links-portal-da-transparencia-do-governo-do-amazonas-e-diario-oficial-do-amazonas/",
+          "title": ""
+        },
+        {
+          "url": "https://forms.gle/88XWWeR8LJTuu2eg7",
+          "title": ""
+        },
+        {
+          "url": "tel:(92) 3878-4000",
+          "title": "(92) 3878-4000"
+        },
+        {
+          "url": "mailto:ouvidoria@fapeam.am.gov.br",
+          "title": "ouvidoria@fapeam.am.gov.br"
+        },
+        {
+          "url": "https://www.amazonas.am.gov.br/acessibilidade",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapeam.am.gov.br/mapa-do-site",
+          "title": ""
+        },
+        {
+          "url": "https://www.google.com/maps/search/Av.+Prof.+Nilton+Lins%2C+n%C2%BA+3259+-+%28Universidade+Nilton+Lins%29+Bloco+K+-+Flores+CEP%3A+69058-030+-+Manaus-AM+-+Brasil+Hor%C3%A1rio+de+atendimento%3A+8h00+%C3%A0s+17h00+%28de+segunda+a+sexta%29",
+          "title": "Ver no mapa"
+        },
+        {
+          "url": "https://www.prodam.am.gov.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.amazonas.am.gov.br",
+          "title": ""
+        },
+        {
+          "url": "https://wordpress.org/plugins/gdpr-cookie-compliance/",
+          "title": "Proporcionado por GDPR Cookie Compliance"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-7PS3PG97G4",
+        "https://www.fapeam.am.gov.br/wp-includes/js/jquery/jquery.min.js",
+        "https://www.fapeam.am.gov.br/wp-includes/js/jquery/jquery-migrate.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/contrast.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/vendor/jquery.fancybox.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/acessibilidade.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/access-keys.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/adjust-image.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/contraste.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/menu.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/popper.min.js",
+        "https://cdn-sa.readspeaker.com/script/19/webReader/webReader.js?pids=wr",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/vendor/bootstrap.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/link-list-dropdown.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/vendor/splide.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/vendor/owl.carousel.min.js",
+        "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v22.0",
+        "https://platform.twitter.com/widgets.js",
+        "https://unpkg.com/vue@3/dist/vue.global.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js",
+        "https://www.fapeam.am.gov.br/wp-content/plugins/popup-anything-on-click/assets/js/popupaoc-public.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/searchbox-custom.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/bbspoiler.custom.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg/static/dist/js/splide.custom.min.js",
+        "https://www.fapeam.am.gov.br/wp-content/themes/iceberg-child/static/scripts/advanced-search.js",
+        "https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.2/src/lite-yt-embed.js",
+        "https://www.fapeam.am.gov.br/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js"
+      ]
+    },
+    {
+      "source": "fapt_selection",
+      "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+      "basis": "Literal redirect Location in categories manifest",
+      "observed_at": "2026-09-08T14:53:40.011142+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 10766,
+      "sha256": "8052b22669b0c8ec71f8822c94d8423ed448ba1e38cf3cd78458b54b9af04a99",
+      "file": "fapt_selection-cef67142-8052b22669.html",
+      "encoding": "utf-8",
+      "title": "EDITAIS - FAPT-TO",
+      "links": [
+        {
+          "url": "https://www.to.gov.br/fapt",
+          "title": "Fundação de Amparo à Pesquisa"
+        },
+        {
+          "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": "search busca"
+        },
+        {
+          "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": "menu menu"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/institucional/6yue18q9kbir",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": "keyboard_arrow_down"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/manual-de-prestacao-de-contas-fapt/2cj2urptj6fo",
+          "title": "Manual de prestação de contas Fapt"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/carta-de-servicos-ao-cidadao/yj8upmragxv",
+          "title": "Carta de Serviços ao Cidadão"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": "EDITAIS"
+        },
+        {
+          "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": "keyboard_arrow_down"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal-edital-62026/13u3wobgurjb",
+          "title": "Rede de Pesquisa e Desenvolvimento da Amazônia Legal (Edital 6/2026)"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/03-editais-finalizados/5iv88yy5aru4",
+          "title": "03- Editais finalizados"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/02-editais-em-andamento/jsiwbfyh088",
+          "title": "02- Editais em Andamento"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/01-editais-abertos/5sy36y0lf49g",
+          "title": "01- Editais Abertos"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/ouvidoria-fapt/4c34gurrfmhh",
+          "title": "Ouvidoria Fapt"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/sigfap/1lume4t5v08b",
+          "title": "SIGFAP"
+        },
+        {
+          "url": "https://www.facebook.com/sharer/sharer.php?u=http://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": ""
+        },
+        {
+          "url": "https://twitter.com/intent/tweet?text=%23faptto EDITAIS http://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": ""
+        },
+        {
+          "url": "https://api.whatsapp.com/send?text=EDITAIS http://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "title": ""
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/01-editais-abertos/5sy36y0lf49g",
+          "title": "link 01- Editais Abertos"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/02-editais-em-andamento/jsiwbfyh088",
+          "title": "link 02- Editais em Andamento"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/03-editais-finalizados/5iv88yy5aru4",
+          "title": "link 03- Editais finalizados"
+        },
+        {
+          "url": "http://www.to.gov.br/fapt/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal-edital-62026/13u3wobgurjb",
+          "title": "link Rede de Pesquisa e Desenvolvimento da Amazônia Legal (Edital 6/2026)"
+        },
+        {
+          "url": "javascript:",
+          "title": "keyboard_arrow_up"
+        }
+      ],
+      "scripts": [
+        "https://ati.to.gov.br/assets/js/vendors.min.js?1614117963",
+        "https://ati.to.gov.br/assets/js/jquery.scroll4ever.js?1614117963",
+        "https://ati.to.gov.br/assets/js/materialize.js?1614117963",
+        "https://ati.to.gov.br/assets/js/acessibilidade.js?1754606211",
+        "https://barra.to.gov.br/topo.js?k=fapt",
+        "https://barra.to.gov.br/base.js?k=fapt",
+        "https://vlibras.gov.br/app/vlibras-plugin.js",
+        "https://ati.to.gov.br/assets/js/jquery.meio.mask.min.js?1621377121",
+        "https://ati.to.gov.br/assets/js/institucional.js?1788369959",
+        "https://ati.to.gov.br/assets/js/splide.min.js?1614117963"
+      ]
+    },
+    {
+      "source": "fapeap_selection",
+      "url": "https://fapeap.portal.ap.gov.br/publicacoes",
+      "basis": "Literal publication link in new official portal",
+      "observed_at": "2026-09-08T14:53:40.011142+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 140247,
+      "sha256": "8c4b6b522a1724c8d8c2bbc4f41eac60d9996c16a024cf16bf38caf5e4a472b9",
+      "file": "fapeap_selection-8722e6ce-8c4b6b522a.html",
+      "encoding": "utf-8",
+      "title": "FAPEAP - Fundação de Amparo à Pesquisa do Amapá",
+      "links": [
+        {
+          "url": "https://amapa.gov.br",
+          "title": ""
+        },
+        {
+          "url": "http://www.transparencia.ap.gov.br/",
+          "title": "Portal\n        da Transparência"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes#conteudo",
+          "title": "Ir Para o Conteúdo"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes#mapa",
+          "title": "Mapa do Site"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/conteudo/acessibilidade",
+          "title": "Acessibilidade"
+        },
+        {
+          "url": "http://www.transparencia.ap.gov.br/",
+          "title": "Portal da Transparência"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes#mapa",
+          "title": "Ir Para o Rodapé"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/conteudo/acessibilidade",
+          "title": "Acessibilidade"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/canais-de-atendimento",
+          "title": "CONTATOS Canais de atendimento"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br",
+          "title": ""
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo",
+          "title": "Objetivo"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/normas",
+          "title": "Normas"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/missao",
+          "title": "Missão"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/historia",
+          "title": "História"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional",
+          "title": "Estrutura Funcional"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior",
+          "title": "Conselho Superior"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes",
+          "title": "Programas"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3",
+          "title": "Centelha 3"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias",
+          "title": "Rede Ciências"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/ppsus",
+          "title": "PPSUS"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia",
+          "title": "NexBio Amazônia"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii",
+          "title": "Tecnova III"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/profix",
+          "title": "PROFIX"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal",
+          "title": "Rede de Pesquisa e Desenvolvimento da Amazonia Legal"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade",
+          "title": "Bolsa Produtividade"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026",
+          "title": "Desafio Startup Amapá 2026"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br",
+          "title": "FAPEAP Fundação de Amparo à Pesquisa do Amapá"
+        },
+        {
+          "url": "https://amapa.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br",
+          "title": "Início"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo",
+          "title": "Objetivo"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/normas",
+          "title": "Normas"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/missao",
+          "title": "Missão"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/historia",
+          "title": "História"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional",
+          "title": "Estrutura Funcional"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior",
+          "title": "Conselho Superior"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3",
+          "title": "Centelha 3"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias",
+          "title": "Rede Ciências"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/ppsus",
+          "title": "PPSUS"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia",
+          "title": "NexBio Amazônia"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii",
+          "title": "Tecnova III"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/profix",
+          "title": "PROFIX"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal",
+          "title": "Rede de Pesquisa e Desenvolvimento da Amazonia Legal"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade",
+          "title": "Bolsa Produtividade"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026",
+          "title": "Desafio Startup Amapá 2026"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br",
+          "title": ""
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/122320-Portaria nº 0642026 – 1ª Retificação do Cronograma da Chamada Pública nº 0022026 – PROFIXAmapá.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/050013-PORTARIA_063_2026_CENTELHA_3_SUPLENTES_E_CONVOCACAO_54.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/024402-_Portaria Nº62- Resultado da Análise Técnica (PDPG 2026) ASS.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/095101-_Portaria 059 de resultado final Desafio Startup 2026. ASS.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/071052-Portaria_0061_2026_FAPEAP_2_Retificacao_PDPG V.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/044410-_Portaria  de retificação Desafio Startup 2026.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/044619-Portaria Enquadramento final Desafio Startup 2026.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/040222-Portaria Enquadramento preliminar Desafio Startup 2026.PDF",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/034744-1ª retificação PDPG.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/095633-MINUTA FINAL - PROGRAMA PREMIO DESAFIO STARTUP AMAPA 2026.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/122320-Portaria nº 0642026 – 1ª Retificação do Cronograma da Chamada Pública nº 0022026 – PROFIXAmapá.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/050013-PORTARIA_063_2026_CENTELHA_3_SUPLENTES_E_CONVOCACAO_54.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/024402-_Portaria Nº62- Resultado da Análise Técnica (PDPG 2026) ASS.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/095101-_Portaria 059 de resultado final Desafio Startup 2026. ASS.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/071052-Portaria_0061_2026_FAPEAP_2_Retificacao_PDPG V.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/044410-_Portaria  de retificação Desafio Startup 2026.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/044619-Portaria Enquadramento final Desafio Startup 2026.pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/040222-Portaria Enquadramento preliminar Desafio Startup 2026.PDF",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/034744-1ª retificação PDPG.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://matrix.amapa.gov.br//storage/publications/66/095633-MINUTA FINAL - PROGRAMA PREMIO DESAFIO STARTUP AMAPA 2026.docx (1).pdf",
+          "title": "Baixar"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/noticia/05-08-2026-iniciativa-amazonia10-lanca-chamada-de-r-107-milhoes-para-fortalecer-sociobioeconomia-da-amazonia",
+          "title": "Programa 1 julho 2026 Iniciativa Amazônia+10 lança chamada de R$ 107 milhões para fortalecer sociobioeconomia da Amazônia"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/noticia/24-06-2026-fapeap-lanca-edital-no-0032026-para-integrar-rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal",
+          "title": "Programa 24 junho 2026 FAPEAP lança Edital nº 003/2026 para integrar Rede de Pesquisa e Desenvolvimento da Amazônia Legal"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/noticias",
+          "title": "Ler\n        todas"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br",
+          "title": "Página inicial"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo",
+          "title": "Objetivo"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/normas",
+          "title": "Normas"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/missao",
+          "title": "Missão"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/historia",
+          "title": "História"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional",
+          "title": "Estrutura Funcional"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior",
+          "title": "Conselho Superior"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3",
+          "title": "Centelha 3"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias",
+          "title": "Rede Ciências"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/ppsus",
+          "title": "PPSUS"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia",
+          "title": "NexBio Amazônia"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii",
+          "title": "Tecnova III"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/profix",
+          "title": "PROFIX"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal",
+          "title": "Rede de Pesquisa e Desenvolvimento da Amazonia Legal"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade",
+          "title": "Bolsa Produtividade"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026",
+          "title": "Desafio Startup Amapá 2026"
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/pagina/contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://www.instagram.com/fapeap_?igsh=cHJ2YmF4NjY4NnRw",
+          "title": ""
+        },
+        {
+          "url": "https://youtube.com/@fapeap?si=oAa5LtCOiU4brfP-",
+          "title": ""
+        },
+        {
+          "url": "https://www.linkedin.com/company/funda%C3%A7%C3%A3o-de-amparo-%C3%A0-pesquisa-do-amap%C3%A1-fapeap/posts/?feedView=all",
+          "title": ""
+        },
+        {
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes#topo",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapeap.portal.ap.gov.br/build/assets/app-daAFPWej.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
+        "https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js",
+        "https://fapeap.portal.ap.gov.br/components/owlcarousel/owl.carousel.min.js",
+        "https://fapeap.portal.ap.gov.br/components/lightbox2/dist/js/lightbox.js",
+        "https://www.googletagmanager.com/gtag/js?id=G-0LB7Q8CYVG",
+        "https://fapeap.portal.ap.gov.br/livewire/livewire.min.js?id=a60c5ee6"
+      ]
+    }
+  ]
+}

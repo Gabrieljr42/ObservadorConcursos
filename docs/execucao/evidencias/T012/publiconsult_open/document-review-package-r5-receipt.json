@@ -1,0 +1,9 @@
+{
+  "gate": "T012-PUBLICONSULT-DOCUMENT-PACKAGE-R5",
+  "result": "READY_FOR_REVIEW",
+  "package": "document-review-package-r5.json",
+  "store": "ephemeral only; canonical hash-addressed basename; owner 1/run bea209…",
+  "tests": "test_document_review_409_r4.py and test_document_review_r3_exact.py: 2 passed",
+  "network": false,
+  "shared_mutation": false
+}

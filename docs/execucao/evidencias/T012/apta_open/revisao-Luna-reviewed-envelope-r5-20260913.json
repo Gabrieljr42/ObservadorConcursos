@@ -1,0 +1,29 @@
+{
+  "schema": "t012.apta.reviewed-envelope-luna-r5.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only envelope/import review; no live import/proposal/apply",
+  "verdict": "REJECT",
+  "reason": "R5 is schema-valid only in disposable SQLite. Its payload still carries concurso_id=1 and an r60rec storage path that cannot be consumed by the configured live artifact directory; do not send this envelope to live import.",
+  "checks": {
+    "schema": "PASS: tenderproof.reviewed-run.v1 validates in isolated receipt; exactly three ReviewedField objects are present: titulo, orgao, edital_numero.",
+    "identity": "PASS: owner_user_id=1, source apta_open/source 48, external_id 708, exact detail/document URLs and identity fallback Câmara Municipal de Aragarças + edital 01/2026.",
+    "artifact": "PASS: PDF application/pdf, SHA db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c, 362093 bytes, 20 pages; evidence is SHA/URL/page bound.",
+    "field_scope": "PASS: only titulo/orgao/edital_numero promoted; no cargos, dates, salary, taxa or other new fields.",
+    "canonical_target": "FAIL/BLOCKER: envelope has concurso_id=1. Receipt says this is disposable isolated SQLite only, but the required live handoff must contain no invented/canonical target; ID 1 must never be sent to live allocation/import.",
+    "storage": "FAIL/BLOCKER: artifact.content_path points to backend/.tenderproof/r60rec/artifacts/...; fields.py/store resolve only the configured artifact_dir basename, so this path is not live-consumable unless the exact bytes are staged via save_artifact_file/commit_run_artifact into the deployment-local store.",
+    "owner_run": "PASS isolated: run_id tp-reviewed-8360804341f8c6db9b7640cd0b84a1a1; same-owner replay idempotent and different-owner derivation distinct. No canonical live replay was performed.",
+    "tests": "PASS: 7 directed tests (reviewed_run_import, JWT owner isolation, storage-path) with 23 warnings; warnings are unrelated deprecations/schema-shadow."
+  },
+  "required_before_acceptance": [
+    "Allocate the real canonical concurso_id through the normal duplicate-safe flow; do not reuse disposable ID 1, source number 48 or any temporary ID.",
+    "Stage the pinned PDF in the configured deployment-local artifact store and record canonical basename art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf; rerun hash/bytes/load checks.",
+    "Derive a fresh owner-1 run from the exact canonical target and re-run importer dry-run, revalidation and proposal gate; confirm no old owner-901 run or R4 handoff is reused."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/apta_open/apta-reviewed-envelope-r5.json",
+    "docs/execucao/evidencias/T012/apta_open/apta-reviewed-envelope-r5-receipt.json",
+    "docs/execucao/evidencias/T012/apta_open/diagnostico-owner1-r5-20260913.json",
+    "docs/execucao/evidencias/T012/apta_open/diagnostico-storage-path-r3.json",
+    "docs/execucao/evidencias/T012/apta_open/test_storage_path_r3.py"
+  ]
+}

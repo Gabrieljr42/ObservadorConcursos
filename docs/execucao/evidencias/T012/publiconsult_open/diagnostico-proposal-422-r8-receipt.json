@@ -1,0 +1,10 @@
+{
+  "schema": "t012.publiconsult.proposal-422-diagnosis-r8-receipt.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "diagnosis": "docs/execucao/evidencias/T012/publiconsult_open/diagnostico-proposal-422-r8.json",
+  "package": "docs/execucao/evidencias/T012/publiconsult_open/proposal-package-r8.json",
+  "tests": "test_publiconsult_proposal_r8.py: 5 passed",
+  "live": false,
+  "mutation": false,
+  "next_gate": "backend review"
+}

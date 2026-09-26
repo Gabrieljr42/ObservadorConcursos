@@ -1,0 +1,74 @@
+{
+  "schema": "t010.id7.post-apply-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "ui_validation_release": true,
+  "proposal": {
+    "id": "tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "proposal_hash": "7e211ef682090674ab855a02c3c472093422015988130af96668a248695d3875",
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "state": "applied",
+    "approved_fields": ["cargos"],
+    "approved_by": 1,
+    "version_id": 84,
+    "stale": false,
+    "diff_scope": "somente cargos",
+    "baseline_cargos": null
+  },
+  "final_cargo": {
+    "nome": "Técnico Legislativo",
+    "vagas_imediatas": 1,
+    "cadastro_reserva": true,
+    "vagas_ampla_concorrencia": 1,
+    "vagas_pcd": 0,
+    "remuneracao": "3378.77 BRL/mês",
+    "jornada": "35 horas semanais",
+    "requisitos": "Ensino Médio completo",
+    "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"],
+    "taxa": "ausente",
+    "prova_data": "ausente",
+    "utf8_replacement_character": false
+  },
+  "version_and_delivery": {
+    "version_id": 84,
+    "version_rows_for_target": 1,
+    "changed_fields": ["cargos"],
+    "old_cargos": null,
+    "outbox_id": 84,
+    "outbox_version_id": 84,
+    "outbox_state": "delivered",
+    "outbox_attempts": 1,
+    "notification_id": 83,
+    "notification_type": "version_update_84",
+    "notification_concurso_id": 7,
+    "one_version_one_outbox_one_notification": true
+  },
+  "counts": {
+    "versions": 84,
+    "outbox": 84,
+    "notifications": 83,
+    "proposals": 86,
+    "health": 200,
+    "contests": 33
+  },
+  "idempotency": {
+    "same_proposal_apply": "preserved evidence: applied/version 84, new_version=false",
+    "same_run_import": "preserved evidence: idempotent, same run_id",
+    "counts_after_replays": {"versions": 84, "outbox": 84, "notifications": 83},
+    "duplicates": false,
+    "collateral_records": false
+  },
+  "sources": [
+    "GET /tenderproof/publications/proposals/tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "GET /tenderproof/runs/tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "GET /concursos/7",
+    "GET /concursos/7/versions",
+    "GET /me/notifications",
+    "GET /sync/checkpoint",
+    "docs/execucao/evidencias/T010/gate-pos-apply-ID7-20260912.json"
+  ],
+  "gate_conclusion": "ACEITA: aplicação única correta, entrega única e replays idempotentes; liberar validação UI."
+}

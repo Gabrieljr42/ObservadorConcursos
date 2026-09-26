@@ -1,0 +1,894 @@
+
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+                    <meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>COTEC - FADENOR </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="Processos seletivos, concursos pï¿½blicos, vestibular" />
+    <meta name="author" content="Impacta Soluï¿½ï¿½es Web | Software ProSeleta" /> 
+        <link rel="shortcut icon" href="/uploads/846/configs/e283a76683d460bcb5be9e97c98f6095.png" type="image/x-icon">
+    <link rel="icon" href="/uploads/846/configs/e283a76683d460bcb5be9e97c98f6095.png" type="image/x-icon">
+        
+
+    <script src="//static-cdn.selecao.net.br/static/js/jquery-2.1.3.min.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/php.default.min.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/jquery.maskedinput.min.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/jquery.price_format.2.0.min.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/jquery.validate.min.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/jquery.validate.extra.js"></script>
+    <script src="//static-cdn.selecao.net.br/static/js/util.js?ver=202005101713"></script>
+
+    
+    
+    <!-- jQuery UI -->
+    <link rel="stylesheet" media="screen" href="//static-cdn.selecao.net.br/static/js/jquery-ui-1.11.2.custom/jquery-ui.min.css" /> 
+
+    <link href='//fonts.googleapis.com/css?family=Exo+2:700,500italic,400,500,200italic,800,200,700italic,300italic,600italic,600,300,800italic,400italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" media="screen" rel="stylesheet" href="//static-cdn.selecao.net.br/static/candidatos/site.css?ver=202607031200" />     <link type="text/css" media="all" rel="stylesheet" href="//static-cdn.selecao.net.br/static/texto.css" />
+    <link type="text/css" media="print" rel="stylesheet" href="//static-cdn.selecao.net.br/static/candidatos/imprimir.css" />
+    <link type="text/css" media="screen" rel="stylesheet" href="//static-cdn.selecao.net.br/static/candidatos/responsivo.css?ver=202609011400" />
+
+            <link type="text/css" media="all" rel="stylesheet" href="//static-cdn.selecao.net.br/static/clientes/cotec-fadenor.selecao.net.br/site.css?v=1?ver=202606241618" />
+    
+    
+          <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-13PDJ2FXPF"></script>
+      <script>
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'G-13PDJ2FXPF');
+      </script>
+      
+        
+        
+    
+    
+    <link type="text/css" media="screen" rel="stylesheet" href="//static-cdn.selecao.net.br/static/candidatos/govbr.css?ver=202307251410" /> 
+    <!-- Rybena -->
+    </head>
+<body class="concurso28">
+    
+    
+<header id="TopoMobile">
+
+    <div class="logo-wrapper">
+        <a href="/">
+            <img src="//static-cdn.selecao.net.br/uploads/846/configs/5340b53315f057aa14f6e13e9fc761e8.png"
+                alt="COTEC - FADENOR " class="logo" style="max-height: 115px"/>
+        </a>
+    </div>
+
+    <div class="menu-fix-clear" id="menuMobileWrapper">
+        <ul class="menu-wrapper">
+            
+                     <form action="/login/logar/" method="post" autocomplete="off" class="form-top">
+        <input name="foilautofill"
+               autocomplete="new-password"
+               style="display: none;" type="password" />             <h3 class="menu-title">Acessar Área do Candidato:</h3>
+            <input type="text" name="login" id="tl-login" value="" class="texto mascara cpf item" placeholder="CPF"/>
+
+            <input autocomplete="new-password"  type="password" name="senha" id="tl-senha" value="" class="texto item" placeholder="Senha"/>
+
+            <button type="submit" class="login-top-btn item">Entrar</button>
+
+                    <a href="/login/esqueci/" class="esqueci-mobile">Esqueci a minha senha</a>
+            </form>                
+
+                <h3 class="menu-title">Menu:</h3>
+                <li class="menu-item">
+                    <a href="/">Início</a>
+                </li>
+                                    <li class="menu-item">
+                                                     <a href="https://fadenor.com.br/" target="_blank">Fadenor</a>
+                                            </li>
+                                    <li class="menu-item">
+                                                     <a href="https://anteriores.cotec.fadenor.com.br/" target="_blank">Concursos Anteriores</a>
+                                            </li>
+                
+                
+                                    <li class="menu-item">
+                        <a href="/faleconosco/">                            Fale Conosco </a>
+                    </li>
+                            
+                        <div id="menuMobileCategorias">
+
+            </div>
+
+            
+            <form action="/index/todos/" name="formBuscaConcurso" method="get" class="barra-pesquisa-wrapper">
+                <h3 class="menu-title">Busca:</h3>
+                <input type="text" name="busca" placeholder="Busca..." class="texto search">
+                <button type="submit" class="button">Buscar</button>
+            </form>
+
+
+        </ul>
+    </div>
+
+    <div class="menu-btn-container" id="menu-mobile">
+        <h3 class="menu-indicador">Menu</h3>
+        <button class="btn-wrapper">
+            <i></i>
+            <i></i>
+            <i></i>
+        </button>
+    </div>
+</header>
+<div id="Topo" class="naoimprimir">
+
+    <div class="Conteudo">
+
+        <div id="Logo">
+            <h1>
+                <a href="/">
+                    <img src="//static-cdn.selecao.net.br/uploads/846/configs/5340b53315f057aa14f6e13e9fc761e8.png"
+                        alt="COTEC - FADENOR " style="max-height: 110px"/>
+                </a>
+            </h1>
+        </div>
+
+        <div id="DadosEmpresa">
+            <p><b>COTEC - FADENOR </b></p>
+            <p class="contatos"></p>
+        </div>
+
+        <div id="TopLogin" class="">
+            <div class="item botoes">
+                <a href="/painel/">
+                    <span class="btn-areacandidato">
+                        <svg style="width: 24px; padding: 0 5px 0 0;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Área do Candidato                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="TopMenu" class="naoimprimir">
+    <div class="Conteudo">
+        <ul>
+            <li><a href="/">Página Inicial</a></li>
+
+                            <li>
+                                             <a href="https://fadenor.com.br/" target="_blank" rel="noopener noreferrer">Fadenor</a>
+                                    </li>
+                            <li>
+                                             <a href="https://anteriores.cotec.fadenor.com.br/" target="_blank" rel="noopener noreferrer">Concursos Anteriores</a>
+                                    </li>
+            
+                            <li><a href="/faleconosco/">Fale Conosco</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<script>
+    $('#menu-mobile').click(function() {
+        this.classList.toggle('abrir')
+        $('#menuMobileWrapper').toggleClass('abrir');
+    })
+</script>
+
+
+  <div class="bgConcurso"></div>
+
+<div class="Miolo">
+    
+    <h2 class="tituloPagina"><span>Concursos</span></h2>
+
+    <div id="pgInformacoes">
+
+        <div id="TopoInformacoes">
+
+            <div class="imagem">
+                <span class="helper"></span>
+                
+                                    <img class="logomarca-cliente" src="//static-cdn.selecao.net.br/uploads/846/clientes/754996e2-cfd3-46e6-ab8e-5de8ad285e33.png" style="max-height:77px; max-width: 92px;"/>
+                
+            </div>
+            <div class="dados">
+                <p class="tipo">Concurso Público</p>
+                                    <h2 style="font-weight: normal !important;"><h3><span style="color: #333333;"><strong>Prefeitura Municipal de Ponto Chique/MG</strong></span></h3></h2>
+                                                                        <p class="periodoInscricoes">Inscrições de 
+                        <b>23/07/2026</b> a 
+                        <b>18/09/2026</b>
+                    </p>
+                                                        
+            </div>
+            <!-- -4021625 -->
+            <!-- 935575 -->
+
+
+            
+            <div class="botoes" align="center">
+                                                                                        <a href="/login/sair/?redir=%2Ftermo%2F28%2F" class="botao maior verde" ><span>Inscrição Online</span></a>
+                                               
+                                    
+                                                                </div>
+            
+            
+        </div>
+
+        <div class="blocoPadrao" id="blocoInformacoesGerais">
+            <h3><span>Informações Gerais</span></h3>
+            <div class="dados">
+                                                                                <p><b>Edital:</b> 01/2026 de <span>14/05/2026<span></p>
+                                                    
+                                                            <p class="insc">
+                            <b>Inscrições:</b>
+                                                            23/07/2026 08:00 a 18/09/2026 17:00
+                                                                                </p>
+                                                                                    <p class="pedidos-isencao"><b>Pedidos de Isenção:</b>
+                                                    20/07/2026 08:00 a 22/07/2026 17:00</p>
+                                                                                    <p class="situacaoConcurso"><b>Situação:</b> Em andamento</p>
+                                
+                
+                                
+                                
+            </div>
+        </div>
+
+        
+            <div class="blocoPadrao" id="blocoPublicacoes">
+        <h3><span>Publicações</span></h3>
+        <div class="dados total3">
+
+                                    
+            
+                <ul>
+                    
+                                                    <br>
+                            <div style="border-bottom:1px solid #e5e5e5;padding:15px;">
+                                <h4 style="color:#666;font-size:16px;text-transform:uppercase;">EDITAL</h4>
+                                <p></p>
+                            </div>
+                        
+                                                                                    
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="Edital (Conforme 3ª Retificação)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/f89ef808-c374-4059-9b46-fa5e50f29bbf.pdf"
+                                        target="_blank"
+                                            >
+                                        Edital (Conforme 3ª Retificação)
+                                        <span>
+                                                                                            04/09/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="1ª_Retificação"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/8f627f72-da48-4f08-91c0-78ddae2c3514.pdf"
+                                        target="_blank"
+                                            >
+                                        1ª_Retificação
+                                        <span>
+                                                                                            16/07/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="2ª_Retificação"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/eb23eb53-01a1-492f-a15c-e172af1c6124.pdf"
+                                        target="_blank"
+                                            >
+                                        2ª_Retificação
+                                        <span>
+                                                                                            26/08/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="3ª Retificação"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/1acd3aa1-a5da-45f8-986a-3fd6ec8356a3.pdf"
+                                        target="_blank"
+                                            >
+                                        3ª Retificação
+                                        <span>
+                                                                                            04/09/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                    
+                    
+                                                    <br>
+                            <div style="border-bottom:1px solid #e5e5e5;padding:15px;">
+                                <h4 style="color:#666;font-size:16px;text-transform:uppercase;">ANEXOS</h4>
+                                <p></p>
+                            </div>
+                        
+                                                                                    
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="ANEXO I - ESPECIFICAÇÃO DOS CARGOS (Conforme a 1ª Retificação)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/266220dd-2ce5-468a-a1f9-f8b36cf73f72.pdf"
+                                        target="_blank"
+                                            >
+                                        ANEXO I - ESPECIFICAÇÃO DOS CARGOS (Conforme a 1ª Retificação)
+                                        <span>
+                                                                                            16/07/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="ANEXO II - ESPECIFICAÇÃO DAS PROVAS DE MÚLTIPLA ESCOLHA (Conforme a 1ª Retificação)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/9ff56280-b275-4a89-a334-e434769f5760.pdf"
+                                        target="_blank"
+                                            >
+                                        ANEXO II - ESPECIFICAÇÃO DAS PROVAS DE MÚLTIPLA ESCOLHA (Conforme a 1ª Retificação)
+                                        <span>
+                                                                                            16/07/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="Anexo III - ATRIBUIÇÕES DOS CARGOS (Conforme 3ª Retificação)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/17460fcc-dcf5-432f-95f8-864376258764.pdf"
+                                        target="_blank"
+                                            >
+                                        Anexo III - ATRIBUIÇÕES DOS CARGOS (Conforme 3ª Retificação)
+                                        <span>
+                                                                                            04/09/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                                                                                
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="ANEXO IV - PROGRAMA DAS PROVAS DE MÚLTIPLA ESCOLHA (Conforme a 1ª Retificação)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/14fceb47-97db-433b-a4f7-56d831ff47bc.pdf"
+                                        target="_blank"
+                                            >
+                                        ANEXO IV - PROGRAMA DAS PROVAS DE MÚLTIPLA ESCOLHA (Conforme a 1ª Retificação)
+                                        <span>
+                                                                                            16/07/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                    
+                    
+                                                    <br>
+                            <div style="border-bottom:1px solid #e5e5e5;padding:15px;">
+                                <h4 style="color:#666;font-size:16px;text-transform:uppercase;">RESULTADOS</h4>
+                                <p></p>
+                            </div>
+                        
+                                                                                    
+                                                                                                
+                                <li class="pdf"
+                                    style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+
+                                    <a style="flex:1;min-width:0;display:block;word-break:break-word;" data-astv="RESULTADO DO PEDIDO DE ISENÇÃO (APÓS RECURSOS)"
+                                                                                    href="https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/4cf57544-e11f-4742-8bb0-791cea7053ab.pdf"
+                                        target="_blank"
+                                            >
+                                        RESULTADO DO PEDIDO DE ISENÇÃO (APÓS RECURSOS)
+                                        <span>
+                                                                                            14/08/2026
+                                                                                    </span>
+                                    </a>
+
+                                    <span style="white-space:nowrap;display:flex;gap:10px;align-items:center;flex:0 0 auto;margin-left:auto;">
+                                                                            </span>
+                                </li>
+                                                    
+                                    </ul>
+
+            
+        </div>
+    </div>
+
+
+<script>
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab");
+
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" aba-active ", "");
+        }
+
+        evt.currentTarget.className += " aba-active ";
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+                
+                                            <div class="blocoPadrao" id="blocoListaVagas">
+    <h3><span>Vagas</span></h3>
+
+                        
+            <div class="dados total30">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="cargo">Vaga</th>
+                            <th class="qtde">Qtde.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                            <tr class="impar">
+                            <td class="cargo">
+                                Assistente Administrativo
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Assistente de Saúde
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Assistente Social
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Auxiliar de Serviços da Educação Básica
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                     Cadastro de Reserva
+                                                                                            </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Auxiliar Administrativo
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Auxiliar de Serviços Gerais
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Auxiliar de Serviços Públicos
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    10
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Auxiliar Administrativo em Políticas Sociais
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Coveiro
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Educador Físico
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Enfermeiro
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    4
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Farmacêutico
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Fiscal de Serviços Urbanos
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Fiscal Sanitário
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Fisioterapeuta
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                            </tbody>
+                </table>
+                <table style="float:right">                 
+                    <thead>
+                        <tr>
+                            <th class="cargo">Vaga</th>
+                            <th class="qtde">Qtde.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Fonoaudiólogo
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Gari
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    3
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Médico - ESF
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Motorista (CNH B)
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    4
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Motorista (CNH D)
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    9
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Nutricionista Escolar
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Odontólogo
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Operador de Máquinas II (Operador de Máquinas Pesadas)
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Orientador Social
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    7
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Professor de Ed. Básica
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                     Cadastro de Reserva
+                                                                                            </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Professor de Ed. Física
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                     Cadastro de Reserva
+                                                                                            </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Psicólogo
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Técnico em Enfermagem
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    2
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="impar">
+                            <td class="cargo">
+                                Advogado
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                    1
+                                                                                                                                </td>
+                        </tr>
+                                                                    <tr class="par">
+                            <td class="cargo">
+                                Vigilante
+                                                                    - PONTO CHIQUE
+                                                            </td>
+                            <td class="qtde">
+                                                                     Cadastro de Reserva
+                                                                                            </td>
+                        </tr>
+                                                                </tbody>
+                </table>
+            </div>
+            
+            
+        
+        <div class="texto" style="padding:0 40px">
+            
+        </div>
+        
+</div>
+<style>
+#blocoListaVagas .tipo1 table { width:100% }    
+</style>
+                        
+        
+                                
+        
+
+
+        <div align="right">
+            <a href="/" class="botao">Voltar</a>
+        </div>
+                
+    </div>
+</div>
+
+
+
+<div id="Rodape" class="naoimprimir">
+<div class="preferencias-cookies naoimprimir" style="text-align:center;padding:10px 0;"><button type="button" data-cc="show-preferencesModal" style="background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit">Prefer&ecirc;ncias de cookies</button></div>
+                
+        
+        <div class="ProSeleta">
+            <div class="Conteudo">
+                
+                <div class="info">
+                    <a href="/">Início</a>
+                                                                         <a href="https://fadenor.com.br/" target="_blank">Fadenor</a>
+                         /
+                                                                         <a href="https://anteriores.cotec.fadenor.com.br/" target="_blank">Concursos Anteriores</a>
+                         /
+                                                                                  /  <a href="/faleconosco/"> Fale Conosco </a>
+                                    </div>
+
+                
+                <div class="siteSeguro">
+                    <p>Site 100% Seguro</p>
+                </div>
+                
+            </div>
+        </div>
+
+        
+                    <div class="final">
+                <div class="Conteudo" >
+                    <div class="links">
+                        &copy; COTEC - FADENOR 
+                                                                    </div>
+                                            <div class="DesenvolvimentoProSeleta">
+                            Desenvolvido por <a href="http://www.proseleta.com.br/" target="_blank">ProSeleta - Gestão de Processos Seletivos Online</a>
+                        </div>
+                                    </div>
+            </div>
+                    
+        </div>
+        
+    </div>
+    
+
+
+
+
+
+        <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <style>
+        /* Ancorado em rem (escala no zoom e na fonte) e acima do WhatsApp; z-index alto
+           pra nao sumir atras do topo. */
+        div[vw].enabled { transform: none !important; }
+        div[vw].enabled div[vw-access-button] {
+            position: fixed !important;
+            right: 1rem !important;
+            bottom: 6rem !important;
+            top: auto !important;
+            left: auto !important;
+            z-index: 1000000 !important;
+        }
+        @media (max-width: 768px) {
+            div[vw].enabled div[vw-access-button] {
+                right: .75rem !important;
+                bottom: 5rem !important;
+            }
+        }
+    </style>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js" charset="UTF-8"></script>
+    <script>
+        try {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        } finally {
+        }
+    </script>
+
+
+
+</body>
+</html>
+
+
+<script>
+    
+    document.onkeyup=function(e){
+
+        if(e.which == 27){
+              $('#bannerConcurso').hide();
+        }
+
+    }   
+    
+    $( "#FechaBanner" ).click(function() {
+        $('#bannerConcurso').hide();
+    });
+    
+    var W = $("#ImgBanner").width();    
+    $("#BlocoBanner").css("width", W);
+    
+    $( document ).ready(function() {
+        $('#bannerConcurso').show();
+        var W = $("#ImgBanner").width();    
+        $("#BlocoBanner").css("width", W);
+    });   
+</script>

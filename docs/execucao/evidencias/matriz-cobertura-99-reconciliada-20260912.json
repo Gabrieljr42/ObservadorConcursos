@@ -1,0 +1,57 @@
+{
+  "schema_version": "coverage-matrix-reconciliation.v1",
+  "generated_at": "2026-09-12",
+  "authoritative": false,
+  "scope": "99 fontes; consolidação offline de docs/entrega-fontes-atual.csv, docs/tenderproof-product-status.json, T005 e evidências T007/T010/T011",
+  "validation": {
+    "csv_path": "docs/entrega-fontes-atual.csv",
+    "candidate_matrix": "docs/execucao/tarefas/T005-matriz-candidata-20260912.json",
+    "row_count": 99,
+    "unique_numero_count": 99,
+    "unique_source_count": 99,
+    "enum_status_objetivo": ["parcial", "bloqueada_externamente", "dependencia_humana"],
+    "enum_implementation_state": ["implemented", "partial", "pending"],
+    "enum_cycle_status": ["active", "completed", "partial", "unspecified"],
+    "status_counts": {"parcial": 90, "bloqueada_externamente": 8, "dependencia_humana": 1},
+    "implementation_counts": {"implemented": 71, "partial": 20, "pending": 8},
+    "enabled_snapshot_counts": {"true": 89, "unspecified": 10},
+    "cycle_counts": {"active": 58, "partial": 29, "completed": 2, "unspecified": 10}
+  },
+  "coverage_dimensions": {
+    "inventory_or_config_enabled": "CSV enabled_snapshot and product-status configured sources; 89 enabled snapshots, 99 inventory rows. Enabled is not integration.",
+    "adapter": "product-status implementation_state/current_adapter; 71 implemented, 20 partial, 8 pending; 8 current_adapter null.",
+    "historical_detail_success": "Only the row's historical/sample evidence counts; product-status historical acceptance is 61 partial and 38 blocked. This is not current live coverage.",
+    "publication_reference_only": "T007/T010/T011 evidence records only explicit reviewed proposals/publications; reference_only or proposal state is never promoted to source integration.",
+    "targeted_parser": "Only parser-specific evidence is counted: T010 ID1/ID6 and T011 ID17. Targeted parser readiness does not certify the source.",
+    "reviewed_run_applied": "Only explicit applied/existing_applied evidence counts. T010/16 is existing_applied; T011 17,18,20 are no_change, 22–25 proposed, and 21 is DO_NOT_RETRY. No other source is inferred applied.",
+    "app_validation": "Only explicit API/UI receipts count. Product-status visual_app_verification is partial for 12 sources; absence of a receipt remains unverified. UI/API presence does not prove source completeness."
+  },
+  "current_requirement_state_counts_from_product_status": {
+    "official_addresses_and_content_scope": {"partial": 30, "unverified": 69},
+    "details_and_all_document_types": {"partial": 20, "unverified": 79},
+    "contest_identity_and_document_evidence": {"partial": 11, "unverified": 88},
+    "complete_fields_with_provenance": {"partial": 12, "unverified": 87},
+    "amendments_and_history": {"partial": 13, "unverified": 86},
+    "catalogue_publication_and_sync": {"partial": 9, "unverified": 90},
+    "visual_app_verification": {"partial": 12, "unverified": 87},
+    "repeated_current_live_collection": {"partial": 15, "unverified": 84},
+    "recurring_operation_and_recovery": {"partial": 82, "unverified": 17}
+  },
+  "reconciled_overlays": {
+    "T007": "Publication/reference-only and normalized-link findings remain scoped evidence; no source-wide success inferred.",
+    "T010": {"targeted_parser": [1, 6], "reviewed_run_applied": [16], "blocked_or_not_dispatchable": [15]},
+    "T011": {"targeted_parser_ready": [17], "insufficient_evidence": [18, 20, 22, 23, 24, 25], "do_not_retry": [21]},
+    "evidence_paths": [
+      "docs/execucao/evidencias/revisao-consolidada-estado-final-T010-T011-Luna-20260912.json",
+      "docs/execucao/evidencias/T011/reviewed-runs-inputs.json",
+      "docs/execucao/evidencias/T011/diagnostico-campos-cargo-20260912.json",
+      "docs/execucao/tarefas/T005-matriz-candidata-20260912-resumo.json"
+    ]
+  },
+  "limitations": [
+    "This is a reconciled offline snapshot, not a live or authoritative source-integration certification.",
+    "Legacy CSV/status timestamps and counts are preserved as evidence; no current count is invented or silently overwritten.",
+    "No network, pilot, service, proposal, approval, apply, or database mutation was performed."
+  ],
+  "next_step": "Request independent review; then update only the relevant source row after a bounded parser/reviewed-run receipt or explicit app/API receipt."
+}

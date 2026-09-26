@@ -1,0 +1,38 @@
+{
+  "schema": "t012.apta.parser-r7-diagnosis.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "root_cause": {
+    "failure": "dispatcher receives only edital_numero from apta_aragarcas_parser.extract_identity; generic titulo/orgao remain failed",
+    "immediate_cause": "candidate detail_url_observed is percent-encoded (C%C3%A2mara/C3...), while parser compares only the Unicode literal DETAIL_URL and returns URL drift",
+    "secondary_cause": "parser returns no titulo/orgao replacements, so dispatcher replaces generic failed fields only for edital_numero",
+    "verified": true
+  },
+  "accepted_pins": {
+    "source": "apta_open",
+    "external_id": "708",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "detail_url_variants": [
+      "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+      "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708"
+    ]
+  },
+  "proposed_patch": "apta_aragarcas_parser_r7_proposed.py",
+  "proposed_contract": "validate source/external, SHA/bytes, exact document URL, explicit accepted detail URL variants, 20 ordered intact pages/no error/truncation/U+FFFD, literal identity markers; return only titulo/orgao/edital_numero",
+  "evidence": {
+    "titulo_page": 1,
+    "orgao_page": 14,
+    "edital_page": 1,
+    "fields": ["titulo", "orgao", "edital_numero"]
+  },
+  "hashes": {
+    "apta_aragarcas_parser_r7_proposed.py": "a586c66ea6be225fddeea5ee658b2e2e9d41598dd4e4a8ebd36d17b3139e7e40",
+    "test_apta_parser_r7_proposed.py": "713eDE40287f45be02541f01c3e9accbd7a86c613f394083e9fbd0880c50d9ae"
+  },
+  "prohibitions": ["backend shared module not edited", "no API", "no Docker", "no live mutation"]
+}

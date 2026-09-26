@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-09-07T21:05:25.601510+00:00",
+  "run_id": "tpr-c84fdce378eb",
+  "authentication": "normal login API",
+  "result_status": 200,
+  "execution_status": "completed",
+  "validation_status": "valid",
+  "artifact_status": 200,
+  "artifact_sha256": "ac7a4bbb6ddd42e9e9889f36687c0e1406703bc945e6196d0170fb9a8704078f",
+  "artifact_bytes": 806581,
+  "hash_matches": true,
+  "pages": 46,
+  "fields": {
+    "titulo": "supported",
+    "orgao": "unknown",
+    "edital_numero": "supported",
+    "inscricao_inicio": "conflict",
+    "inscricao_fim": "conflict",
+    "remuneracao": "unknown"
+  },
+  "replay_refresh_status": 200,
+  "sessions": [
+    {
+      "phase": "discovery",
+      "closed_confirmed": true,
+      "replay_status": "pending"
+    },
+    {
+      "phase": "detail",
+      "closed_confirmed": true,
+      "replay_status": "pending"
+    }
+  ],
+  "new_browser_sessions": 0,
+  "visual_pdf_rendering": "not verified; separate UI limitation"
+}

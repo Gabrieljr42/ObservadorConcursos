@@ -1,0 +1,11 @@
+{
+  "schema": "t012.publiconsult.evidence-reproduction-r15-receipt.v1",
+  "status": "REPRODUCED_ROOT_CAUSE",
+  "diagnostic": "docs/execucao/evidencias/T012/publiconsult_open/diagnostico-evidence-reproduction-r15.json",
+  "test": "test_publiconsult_r15_evidence_reproduction.py: 1 passed",
+  "regression": "backend/tests/test_publiconsult_r10_dispatch.py: 7 passed",
+  "finding": "All three values and immutable artifact pins match; all three stored snippets differ from active fields_for_run output. _reproduced_evidence therefore rejects each field on exact snippet equality.",
+  "backend_bundle": "R17 must include canonical evidence selector/round-trip correction; no API retry is authorized.",
+  "mutation": false,
+  "network": false
+}

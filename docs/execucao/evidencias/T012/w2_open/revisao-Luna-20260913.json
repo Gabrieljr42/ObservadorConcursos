@@ -1,0 +1,22 @@
+{
+  "schema": "t012.w2.luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "W2_ACCEPT_FOR_IMPORT_PROPOSAL",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "source_identity": "PASS: source #59 w2_open, external_id=105, detail /informacoes/105/, title Espírito Santo do Dourado/MG; source 59 absent from sanitized 32-source snapshot",
+    "artifact": "PASS: local PDF independently hashes to d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd, 700244 bytes; declared 40 pages",
+    "fields": "PASS: six supported fields; 14 cargos; title/orgao/edital/inscrição and cargo table evidence; unknown prova_data/retificações/canonical id remain excluded",
+    "publicability": "PASS: Edital de Concurso Público 001/2016 with municipal personnel-selection scope; reference_only=true",
+    "duplicate_snapshot": "PASS: source 59 absent and no Espírito Santo do Dourado/001-2016 match in the persisted 33-selection catalogue snapshot; receipt duplicate guard agrees",
+    "determinism": "PASS: derivation A/B both preserve external_id, artifact SHA, identity and six-field output; dry-run revalidate PASS",
+    "tests": "PASS: tests/test_tenderproof_batch30_shared.py -k w2: 6 passed, 51 deselected"
+  },
+  "import_contract": "The wrapper is not itself a canonical ReviewedRun because concurso_id is intentionally null; this is safe handoff. Integrator must allocate canonical concurso_id, construct schema=tenderproof.reviewed-run.v1, revalidate bytes/fields and perform duplicate/CAS check before create proposal.",
+  "conditions": [
+    "Do not invent concurso_id or proof/retification fields.",
+    "No dispatch/apply is authorized by this review; standard importer and proposal review remain required."
+  ],
+  "conclusion": "Evidence is sufficient for the guarded import-to-proposal handoff, with null concurso_id preserved until integrator allocation."
+}

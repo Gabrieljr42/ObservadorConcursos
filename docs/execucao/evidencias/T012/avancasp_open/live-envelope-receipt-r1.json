@@ -1,0 +1,38 @@
+{
+  "schema": "t012.avancasp-live-envelope-receipt.v1",
+  "state": "AVANCASP_LIVE_ENVELOPE_READY_FOR_IMPORT",
+  "source_number": 54,
+  "source": "avancasp_open",
+  "external_id": "272",
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/live-envelope-ready-r1.json",
+    "run_id": "tp-reviewed-99b7976845305f188d176677963fc079",
+    "schema": "tenderproof.reviewed-run.v1",
+    "reference_only": true,
+    "pending_fields": [],
+    "fields": ["titulo", "orgao", "inscricao_inicio", "inscricao_fim", "prova_data", "edital_numero", "cargos"]
+  },
+  "artifact": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf",
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "bytes": 742298,
+    "only_source_of_bytes": true,
+    "html_artifact_sha256_used": false
+  },
+  "fresh_expected_eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+  "round_trip": {
+    "reviewed_run_model_validate": true,
+    "import_dry_run": "validated",
+    "revalidate_sqlite_ephemeral": "PASS",
+    "negative_html_artifact": "rejected",
+    "negative_stale_external_id": "rejected",
+    "negative_drift_sha": "rejected"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py",
+    "result": "10 passed, 29 warnings",
+    "pilot_called": false,
+    "catalogue_mutated": false,
+    "api_or_docker_used": false
+  }
+}

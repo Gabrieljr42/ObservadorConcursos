@@ -1,0 +1,15 @@
+{
+  "schema": "independent-review.t010-record15-reconciliation.v1",
+  "reviewer": "Luna-independent",
+  "scope": ["docs/execucao/evidencias/T010/T010-422-repro.json", "docs/execucao/evidencias/T010/T010-manifesto-propostas-offline.json", "docs/execucao/evidencias/T010/T010-manifesto-propostas-offline-receipt.json", "docs/T004-DISTRIBUICAO-32-20260912.json"],
+  "checks": {
+    "pdf_sha256": "5dad1b02870a98e5e85217547f3d0cd57fa7d89b55ce3e5aaa444b5f13163dac; matches manifest/package/T004 artifact",
+    "identity_mismatch": "PDF Edital 010/2025; catalog target 15 is Edital 005/2025",
+    "run": "tp-tcj-321b30660a7e58fa918a4fb2839e6cd9-1 has no reproducible orgao/edital identity and external_id 99 is unrecognized",
+    "inference": "no replacement entity, field, or new run inferred/created",
+    "safety_flags": "dispatchable=false and do_not_dispatch=true; no retry/pilot/quadro/network action"
+  },
+  "decision": "ACEITO",
+  "dependency_for_resumption": "Concrete preserved internal artifact identifying Edital 010/2025 and its catalog entity, or explicit separate-record decision with a new reviewed run; neither is currently present. Do not bind to catalog 15 or invent orgao/edital fields.",
+  "correction": "Nenhuma no diagnóstico; keep record non-dispatchable until dependency is met."
+}

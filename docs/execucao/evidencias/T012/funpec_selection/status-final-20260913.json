@@ -1,0 +1,18 @@
+{
+  "schema":"t012.source-status.v1",
+  "source":"funpec_selection",
+  "source_id":71,
+  "agency":"FUNPEC - Fundação Norte-rio-grandense de Pesquisa e Cultura",
+  "state":"NOT_CURRENT",
+  "decision":"NOT_CURRENT_DO_NOT_PUBLISH",
+  "as_of":"2026-09-13",
+  "scope":"preserved FUNPEC runs/artifacts only; no network/API/DB access",
+  "selected_preserved_process":{"external_id":"processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva","title":"PROCESSO SELETIVO 10/2026 – ANALISTA EM SEGURANÇA DA INFORMAÇÃO (CADASTRO DE RESERVA) 10/2026","detail_url":"https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/","run_ids":["tpr-562b7ee9520c","tpr-9a38abd5ef7b"],"document_title":"EDITAL 10/2026","artifact_id":"art-06a13d0281","sha256":"ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835","byte_len":950097,"pages":11,"document_url":"https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf"},
+  "temporal_evidence":{"page_number":3,"snippet":"As inscrições estarão abertas no período das 12h00min do dia 10 de agosto de 2026 até as 23h59min do dia 14 de agosto de 2026","status":"registration_window_closed_before_2026-09-13"},
+  "scope_evidence":{"page_number":1,"snippet":"contratação de pessoal pelo regime celetista ... demanda atual e/ou futura de projeto acadêmico apoiado e/ou sede da FUNPEC","note":"selection is employment/CLT rather than a public contest; this does not override the closed registration window"},
+  "other_preserved_candidate":{"external_id":"processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva","run_ids":["tpr-9a84d36d71cd","tpr-60617ea4bd93"],"status":"BLOCKED_NO_ARTIFACT","reason":"número/ano do edital FUNPEC diverge do processo observado"},
+  "reason":"Não há processo FUNPEC preservado realmente vigente em 13/09/2026. O único run com PDF íntegro e validação válida teve inscrições encerradas em 14/08/2026; o outro candidato não possui vínculo documental nem artefato elegível.",
+  "evidence":{"live_report":"docs/tenderproof-batch99-foundations-live.json","live_report_sha256":"663ff1f97d7717f022a38ef24292578aa2621665f158f825412c37e361aab3c8","artifact_storage":"backend/.tenderproof/r99kill13/funpec_selection/artifacts/art-9454d8a77a-ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835.pdf"},
+  "actions":{"parser":false,"strong_preflight":false,"revalidate":false,"reviewed_run":false,"proposal":false,"publish":false,"apply":false,"db":false},
+  "next_condition":"Reabrir somente com novo snapshot oficial contendo inscrições abertas ou processo operacionalmente atual; não retryar o processo 10/2026 encerrado nem promover o processo 12/2026 sem corrigir identidade e obter PDF."
+}

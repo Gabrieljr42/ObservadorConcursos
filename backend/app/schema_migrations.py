@@ -5,6 +5,7 @@ from sqlalchemy.engine import Engine
 
 
 CONCURSO_COLUMNS_SQL = [
+    "ALTER TABLE concursos ADD COLUMN IF NOT EXISTS cargos JSONB",
     "ALTER TABLE concursos ADD COLUMN IF NOT EXISTS vagas INTEGER",
     "ALTER TABLE concursos ADD COLUMN IF NOT EXISTS salario_min NUMERIC(12, 2)",
     "ALTER TABLE concursos ADD COLUMN IF NOT EXISTS salario_max NUMERIC(12, 2)",
@@ -51,6 +52,33 @@ REFRESH_SESSIONS_SQL = [
     "CREATE INDEX IF NOT EXISTS ix_refresh_sessions_expires_at ON refresh_sessions (expires_at)",
 ]
 
+PUSH_SQL = [
+    "CREATE TABLE IF NOT EXISTS push_devices (id BIGSERIAL PRIMARY KEY, user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE, device_id VARCHAR(128) NOT NULL, platform VARCHAR(16) NOT NULL, token VARCHAR(512), token_fingerprint VARCHAR(64) UNIQUE, active BOOLEAN NOT NULL DEFAULT TRUE, revoked_at TIMESTAMP, revoke_reason VARCHAR(100), created_at TIMESTAMP DEFAULT now() NOT NULL, updated_at TIMESTAMP DEFAULT now() NOT NULL, last_seen_at TIMESTAMP DEFAULT now() NOT NULL)",
+    "CREATE UNIQUE INDEX IF NOT EXISTS uq_push_device_user_device ON push_devices (user_id, device_id)",
+    "CREATE INDEX IF NOT EXISTS ix_push_devices_user_id ON push_devices (user_id)",
+    "CREATE INDEX IF NOT EXISTS ix_push_devices_active ON push_devices (active)",
+    "CREATE TABLE IF NOT EXISTS push_deliveries (id BIGSERIAL PRIMARY KEY, notification_id BIGINT NOT NULL REFERENCES notifications(id) ON DELETE CASCADE, device_id BIGINT NOT NULL REFERENCES push_devices(id) ON DELETE CASCADE, status VARCHAR(32) NOT NULL DEFAULT 'pending', attempts INTEGER NOT NULL DEFAULT 0, next_attempt_at TIMESTAMP DEFAULT now() NOT NULL, provider_message_id VARCHAR(255), last_error TEXT, created_at TIMESTAMP DEFAULT now() NOT NULL, updated_at TIMESTAMP DEFAULT now() NOT NULL, CONSTRAINT uq_push_delivery_notification_device UNIQUE (notification_id, device_id))",
+    "CREATE INDEX IF NOT EXISTS ix_push_deliveries_status ON push_deliveries (status)",
+    "CREATE INDEX IF NOT EXISTS ix_push_deliveries_next_attempt_at ON push_deliveries (next_attempt_at)",
+    "CREATE TABLE IF NOT EXISTS push_delivery_attempts (id BIGSERIAL PRIMARY KEY, delivery_id BIGINT NOT NULL REFERENCES push_deliveries(id) ON DELETE CASCADE, attempt_number INTEGER NOT NULL, status VARCHAR(32) NOT NULL, provider_message_id VARCHAR(255), error_code VARCHAR(100), error_message TEXT, response_metadata JSON, created_at TIMESTAMP DEFAULT now() NOT NULL, CONSTRAINT uq_push_attempt_delivery_number UNIQUE (delivery_id, attempt_number))",
+    "CREATE INDEX IF NOT EXISTS ix_push_delivery_attempts_delivery_id ON push_delivery_attempts (delivery_id)",
+]
+
+PUSH_UPGRADE_SQL = [
+    "ALTER TABLE push_devices ALTER COLUMN token DROP NOT NULL",
+    "ALTER TABLE push_devices ADD COLUMN IF NOT EXISTS token_fingerprint VARCHAR(64)",
+    # Soft revoke clears both token values; make legacy NOT NULL fingerprints
+    # nullable before the unique index is (re)created.  DROP NOT NULL is
+    # idempotent on PostgreSQL and therefore safe for repeated boot upgrades.
+    "ALTER TABLE push_devices ALTER COLUMN token_fingerprint DROP NOT NULL",
+    "ALTER TABLE push_devices ADD COLUMN IF NOT EXISTS revoked_at TIMESTAMP",
+    "ALTER TABLE push_devices ADD COLUMN IF NOT EXISTS revoke_reason VARCHAR(100)",
+    "CREATE UNIQUE INDEX IF NOT EXISTS uq_push_devices_token_fingerprint ON push_devices (token_fingerprint)",
+    "ALTER TABLE push_deliveries ADD COLUMN IF NOT EXISTS lease_owner VARCHAR(64)",
+    "ALTER TABLE push_deliveries ADD COLUMN IF NOT EXISTS lease_expires_at TIMESTAMP",
+    "CREATE UNIQUE INDEX IF NOT EXISTS uq_push_attempt_delivery_number ON push_delivery_attempts (delivery_id, attempt_number)",
+]
+
 
 def ensure_runtime_schema(engine: Engine) -> None:
     """Small development migration layer.
@@ -59,6 +87,11 @@ def ensure_runtime_schema(engine: Engine) -> None:
     not alter existing tables, so new nullable columns need lightweight ALTERs to
     keep old local volumes working without asking the developer to wipe Postgres.
     """
+    # SQLite test/development databases receive the complete schema through
+    # Base.metadata.create_all; the PostgreSQL ALTER/JSONB statements below
+    # are intentionally not sent to SQLite.
+    if engine.dialect.name != 'postgresql':
+        return
     with engine.begin() as connection:
         for statement in CONCURSO_COLUMNS_SQL:
             connection.execute(text(statement))
@@ -69,4 +102,11 @@ def ensure_runtime_schema(engine: Engine) -> None:
         for statement in CRAWL_RUNS_SQL:
             connection.execute(text(statement))
         for statement in REFRESH_SESSIONS_SQL:
+            connection.execute(text(statement))
+        for statement in PUSH_SQL:
+            connection.execute(text(statement))
+        # Existing pilot volumes may already have the first push schema.  Keep
+        # this upgrade idempotent; pgcrypto is avoided by hashing in Python in
+        # new writes, so legacy rows are backfilled only when digest exists.
+        for statement in PUSH_UPGRADE_SQL:
             connection.execute(text(statement))

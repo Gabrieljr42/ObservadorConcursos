@@ -1,0 +1,59 @@
+{
+  "schema": "t011.independent-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "DEVOLVIDO",
+  "read_only": true,
+  "mutations": [],
+  "artifact_check": {
+    "local_pdf": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "source": "contemax_open",
+    "external_id": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+    "identity": "Prefeitura Municipal de Cubati/PB; Concurso/Edital 001/2024; Contemax",
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "pages": 50,
+    "sha_and_byte_len_recomputed": true,
+    "reference_only": true
+  },
+  "primary_pdf_table_audit": {
+    "pages": [19, 20],
+    "rows": 27,
+    "vagas_total_by_row": 79,
+    "quota_columns": "The PDF header explicitly has AC, PCD and Total; row totals equal AC+PCD, so PCD is an exclusive column here, not an inferred subset/CR/rodizio.",
+    "row_quota_sums": {"ac": 74, "pcd": 5, "cadastro_reserva": 0, "total": 79},
+    "printed_subtotal_issue": "page 19 first subtotal prints 33 AC + 03 PCD = 35; line-by-line rows are 32 AC + 3 PCD = 35. The parser/fixture aggregate 75 AC + 5 PCD = 80 is therefore wrong.",
+    "representability": "Schema can represent per-row vagas_ampla_concorrencia/vagas_pcd; preserve those line values with literal evidence, correct aggregate to AC=74/PCD=5, and keep cadastro_reserva null/0 only as an explicit absence. Do not use 75/5.",
+    "representative_snippets": [
+      "p19: 02 Auxiliar de Serviços Gerais ... 13 02 15 ... R$ 1.412,00",
+      "p19: 09 Vigilante ... 02 01 03 ... R$ 1.412,00",
+      "p19: 17 Auxiliar Administrativo ... 13 02 15 ... R$ 1.412,00",
+      "p20: 22–27 ... totals 02,02,02,01,01,01"
+    ]
+  },
+  "semantic_checks": {
+    "workload": "40hrs on table rows (p19–20)",
+    "remuneration": "R$ 1.412,00 for listed auxiliary/administrative/technical rows; R$ 2.640,00 for ACS/ACE; no temporal unit stated",
+    "requirements": "literal row requirements present on p19–20, including schooling, CNH, CRO/CREA/COREN and ACS/ACE residence/training",
+    "fees": "preserved evidence claims fundamental R$40, medium/technical R$50, superior R$65 (p9); not part of cargos field",
+    "exam_dates": "preserved evidence claims 20/10/2024 fundamental and 27/10/2024 medium/technical/superior (p16); no unsupported date added",
+    "absence_handling": "cadastro reserva is not printed in this table; no CR inferred; temporal salary unit remains unspecified",
+    "utf8_fail_closed": "primary parser test suite passes 5 tests, including source/SHA/byte-length, drift, U+FFFD and truncation guards"
+  },
+  "run_and_pilot_gate": {
+    "owner_user_id": 1,
+    "reviewed_run_receipt_preflight": "local fixture claims tenderproof.reviewed-run.v1, fields titulo/orgao/edital_numero/cargos and pending_fields=[]; must be regenerated after quota correction",
+    "dry_run": "local test reports validated/imported only to isolated temporary store; no network/pilot mutation",
+    "isolated_proposal": "local test reports proposed with eligible cargos only; no pilot authorization",
+    "baseline": "artifact verification records concurso 17 baseline cargos=null (HTTP 200 read-only)",
+    "pilot_persistence": "no import/proposal/apply to pilot authorized or evidenced here"
+  },
+  "required_corrections": [
+    "Change aggregate distribution from AC=75/PCD=5 to line-audited AC=74/PCD=5; retain total=79.",
+    "Document the page-19 subtotal typo (33/03/35 versus row sum 32/03/35) and bind each of 27 quota triples to verbatim page-19/20 evidence.",
+    "Regenerate ReviewedRun receipt/preflight and rerun isolated proposal only after the corrected envelope; do not import or apply before a fresh review."
+  ],
+  "authorization": "No pilot import, proposal, approval, apply, notification, or quadro action authorized."
+}

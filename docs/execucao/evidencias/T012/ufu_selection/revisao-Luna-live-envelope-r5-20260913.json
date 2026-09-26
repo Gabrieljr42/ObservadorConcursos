@@ -1,0 +1,24 @@
+{
+  "schema": "t012.ufu_selection.luna-envelope-r5-reconciliation.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "BLOCKED",
+  "scope": "read-only run-id divergence diagnosis; no envelope/code/live mutation",
+  "diagnostic_claim": {
+    "source": "docs/execucao/evidencias/T012/ufu_selection/run-diagnostic-r5.json",
+    "envelope_sha256": "1618779ed465a3afaa420712e8add4bc79a3ffd76f638c487e2ab9dd1b471e9b",
+    "canonical_payload_sha256": "9d2cfe61c4e6194aba57694bbf56a0a4b375589ef55d6a6f56688426967cb3b4",
+    "three_process_run": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c"
+  },
+  "independent_current_view": {
+    "envelope_path": "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r3.json",
+    "raw_envelope_sha256": "8c298947ce9d8a1ae613979528ef30856cca30230868464a658ab2122731a88b",
+    "canonical_payload_sha256": "3ae817c2162b417d8d5576e858a3ffcbf442379d9e21d06987f7254a78c0207b",
+    "imported_module": "backend/app/tenderproof/reviewed_run_import.py",
+    "imported_module_sha256": "f93541eaff2b22cb2d6fa26beb52b5dfb0de0ad4b4cde27f29e230651a1bc1e1",
+    "run_repeated_in_one_process": "tp-reviewed-1c587b6b8bc29f5d8aef531527e45a09"
+  },
+  "explanation": "The R5 diagnostic is internally coherent for its recorded envelope/payload snapshot, but its envelope/code hashes are not the hashes visible in this review workspace. The prior 1c587 observation is reproducible here, while b7eb cannot be reproduced from this exact current byte view. This is an external workspace/snapshot divergence, not a safe basis for acceptance.",
+  "required_fix": "Provide one immutable workspace snapshot whose envelope SHA, canonical payload SHA and imported module SHA are recorded together; rerun the three-process derivation and bind the proposal only to that exact run ID.",
+  "mutations_performed": false
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "t001.final-postgres-isolated-restore.v1",
+  "timestamp": "2026-09-13T07:09:23.2022328-03:00",
+  "result": "DOCKER_RECONCILED_RESTORE_PASS",
+  "daemon": {
+    "docker_desktop": "4.41.2",
+    "engine": "28.1.1",
+    "context": "desktop-linux",
+    "project": "observador-pilot",
+    "canonical_services": ["api", "postgres", "redis", "scheduler", "web", "worker"],
+    "canonical_volumes_preserved": [
+      "observador-pilot_pilot_backups",
+      "observador-pilot_pilot_postgres",
+      "observador-pilot_pilot_redis",
+      "observador-pilot_pilot_tenderproof"
+    ],
+    "canonical_network_preserved": "observador-pilot_default"
+  },
+  "dump": {
+    "path": "/backups/pilot-20260913T073116707Z-postgres.dump",
+    "bytes": 496170,
+    "pg_restore_list": "PASS",
+    "backup_source_volume": "observador-pilot_pilot_backups",
+    "backup_mount_mode": "read-only"
+  },
+  "isolated_restore": {
+    "container": "observador-final-restore-pg-20260913T051500Z",
+    "image": "postgres:17-alpine",
+    "network": "none",
+    "temporary_volume": "observador-final-restore-pg-20260913T051500Z",
+    "database": "restore_final_20260913",
+    "restore_command": "pg_restore --no-owner --exit-on-error -U postgres -d restore_final_20260913 /backups/pilot-20260913T073116707Z-postgres.dump",
+    "restore_exit": 0
+  },
+  "counts": {
+    "concursos": 33,
+    "sources": 99,
+    "cargo_rows_canonical": 180,
+    "concurso_publications": 34,
+    "concurso_versions": 91,
+    "tenderproof_publication_proposals": 95,
+    "tenderproof_publication_outbox": 91,
+    "notifications": 90,
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_delivery_attempts": 0,
+    "document_review_postgresql_tables": 0
+  },
+  "comparison": {
+    "expected_snapshot": "33 concursos, 99 fontes configuradas, 180 cargos, 34 publicações, 91 versões, 95 propostas, 91 outbox, 90 notificações, push zero",
+    "match": true,
+    "document_review_note": "document-review pertence ao SQLite operacional; ausência de tabela PostgreSQL é compatível com o contrato"
+  },
+  "mutations": {
+    "canonical_database": false,
+    "canonical_volumes": false,
+    "id5_import_or_proposal": false,
+    "garibaldi_publication": false,
+    "temporary_resources_created": true
+  },
+  "cleanup": "temporary container/volume deliberately preserved for evidence; no preexisting resource removed"
+}

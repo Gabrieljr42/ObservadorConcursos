@@ -1,0 +1,56 @@
+{
+  "schema": "t012.source-proposal.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "aguia_open",
+  "source_number": 27,
+  "adapter": "AguiaAdapter",
+  "official_listing_url": "https://portal.institutoaguia.org.br/edital",
+  "candidate": {
+    "external_id": "43",
+    "title": "Prefeitura Municipal de Bálsamo",
+    "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+    "selection_type": "Processo Seletivo 01/2025",
+    "inscricao_inicio": "2025-12-05T00:00:00",
+    "inscricao_fim": "2025-12-16T23:59:00",
+    "cargos": [
+      {"codigo": "300", "nome": "Educação Infantil - PEB I", "remuneracao": "3445.71"},
+      {"codigo": "301", "nome": "Ensino Fundamental - Anos Iniciais - PEB I", "remuneracao": "3445.71"},
+      {"codigo": "302", "nome": "Artes - Anos Iniciais - PEB II", "remuneracao": "3445.71"},
+      {"codigo": "303", "nome": "Educação Física - Anos Iniciais - PEB II", "remuneracao": "3445.71"}
+    ]
+  },
+  "artifact": {
+    "artifact_id": "aguia_open-detail-43",
+    "path": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html",
+    "sha256": "0ABDB50782C6615CB7375C82BD7CB68CDCC66E6D13F8FE4E3F632269073A5832",
+    "byte_len": 62352,
+    "content_type": "text/html",
+    "url": "https://portal.institutoaguia.org.br/edital/ver/43"
+  },
+  "documents": {
+    "opening_notice": {
+      "title": "EDITAL DE ABERTURA",
+      "url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+      "kind": "edital",
+      "status": "referenced_in_preserved_detail_not_downloaded"
+    },
+    "retificacoes_observed": 2,
+    "results_observed": true
+  },
+  "provenance": {
+    "listing_fixture": {"path": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-0.html", "sha256": "F0B4E47E5B7FA24DB8579E44AD77C76353596BBFCA7E765A77C813AECB21228A", "byte_len": 47434},
+    "detail_fixture": {"path": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html", "sha256": "0ABDB50782C6615CB7375C82BD7CB68CDCC66E6D13F8FE4E3F632269073A5832", "byte_len": 62352},
+    "observed_at": "2026-09-08T00:01:34.079252Z",
+    "identity_rule": "AguiaAdapter candidate external_id=43 and detail URL /edital/ver/43; no substitution across entity or detail id",
+    "duplicate_check": "listing candidate 43 maps to one detail; no catalogue import performed"
+  },
+  "import_handoff": {
+    "mode": "standard_reviewed_run_import",
+    "owner_user_id": 1,
+    "concurso_id": null,
+    "reference_only": true,
+    "apply": false,
+    "next_step": "allocate canonical source/concurso through the standard reviewed-run flow, attach the preserved opening PDF bytes, then validate envelope; no SQL or direct catalogue write",
+    "fail_closed_reasons": ["opening PDF bytes are referenced but not preserved", "canonical concurso_id is intentionally not invented", "no publication/apply authorization"]
+  }
+}

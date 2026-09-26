@@ -1,0 +1,321 @@
+{
+  "observed_at": "2026-09-08T14:19:26.293278+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch60-major-cesgranrio-live-20260908",
+  "cycles": [
+    {
+      "source": "cesgranrio_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-a93a4a15236c",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=2&pageSize=10"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=1&pageSize=10",
+          "file": "cesgranrio_open-cycle1-listing-ee65058a05.html",
+          "sha256": "0705142f79aa40d296b70f6b42505d1e2909244410a1345aad415c3c1a3f9426",
+          "bytes": 10283,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T14:19:26.829198+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-143c2fdac179",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-27",
+            "title_observed": "Secretaria de Estado de Meio Ambiente",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+            "external_id": "27",
+            "observed_at": "2026-09-08T14:19:26.829198Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+              "file": "cesgranrio_open-cycle1-detail-5cee87db38.html",
+              "sha256": "9fe6fba1484b545ef6688176e4eae4d4858f3e703affb21b51a34574314cd320",
+              "bytes": 974,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:27.237246+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cesgranrio_open-ef63456bb29b61f912",
+            "title": "EDITAL Nº 01/2026",
+            "url_requested": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "url_final": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 01/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Cronograma)."
+          },
+          "artifact": {
+            "artifact_id": "art-262c2f6ba7",
+            "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+            "byte_len": 1166736,
+            "url_requested": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "url_final": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:19:29.055463Z",
+            "storage_path": "art-262c2f6ba7-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-9f15a3d6b6b1",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-22",
+            "title_observed": "TRANSPETRO 2026",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/22",
+            "external_id": "22",
+            "observed_at": "2026-09-08T14:19:26.829198Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/22",
+              "file": "cesgranrio_open-cycle1-detail-5b7d713a1f.html",
+              "sha256": "1b95f79c6ef6a774fc912776137fc7e8df76697c05ceb2309189bc1b38a0bc9b",
+              "bytes": 24180,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:29.930774+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-9dd4dbf60a0c",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-20",
+            "title_observed": "FUNDAÇÃO OSORIO",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/20",
+            "external_id": "20",
+            "observed_at": "2026-09-08T14:19:26.829198Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/20",
+              "file": "cesgranrio_open-cycle1-detail-fa03511ef5.html",
+              "sha256": "ddd7277520403cacc22b14988756e73613d5ae3f513478da4391c0227d2876b4",
+              "bytes": 12299,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:30.468838+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 4.25
+    },
+    {
+      "source": "cesgranrio_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-07f81b702b88",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=2&pageSize=10"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=1&pageSize=10",
+          "file": "cesgranrio_open-cycle2-listing-ee65058a05.html",
+          "sha256": "0705142f79aa40d296b70f6b42505d1e2909244410a1345aad415c3c1a3f9426",
+          "bytes": 10283,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T14:19:30.956938+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-6c7af6336a9e",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-27",
+            "title_observed": "Secretaria de Estado de Meio Ambiente",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+            "external_id": "27",
+            "observed_at": "2026-09-08T14:19:30.956938Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+              "file": "cesgranrio_open-cycle2-detail-5cee87db38.html",
+              "sha256": "9fe6fba1484b545ef6688176e4eae4d4858f3e703affb21b51a34574314cd320",
+              "bytes": 974,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:31.358955+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cesgranrio_open-3956daa8e4cf75d02e",
+            "title": "EDITAL Nº 01/2026",
+            "url_requested": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "url_final": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 01/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Cronograma)."
+          },
+          "artifact": {
+            "artifact_id": "art-267cc4c0a2",
+            "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+            "byte_len": 1166736,
+            "url_requested": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "url_final": "https://concursos.cesgranrio.org.br/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:19:31.489636Z",
+            "storage_path": "art-267cc4c0a2-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-9c9e64b68826",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-22",
+            "title_observed": "TRANSPETRO 2026",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/22",
+            "external_id": "22",
+            "observed_at": "2026-09-08T14:19:30.956938Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/22",
+              "file": "cesgranrio_open-cycle2-detail-3a3d0262a1.html",
+              "sha256": "6c0504254b5a118d97a0565a3fddf1868c127d3a7098ed7ea431df095426f5ed",
+              "bytes": 24188,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:32.318662+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-9f230907c4c8",
+          "candidate": {
+            "candidate_id": "cesgranrio_open-20",
+            "title_observed": "FUNDAÇÃO OSORIO",
+            "detail_url_observed": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/20",
+            "external_id": "20",
+            "observed_at": "2026-09-08T14:19:30.956938Z",
+            "source": "cesgranrio_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/20",
+              "file": "cesgranrio_open-cycle2-detail-fa03511ef5.html",
+              "sha256": "ddd7277520403cacc22b14988756e73613d5ae3f513478da4391c0227d2876b4",
+              "bytes": 12299,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T14:19:32.777278+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.281
+    }
+  ]
+}

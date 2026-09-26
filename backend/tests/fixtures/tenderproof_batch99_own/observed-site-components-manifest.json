@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-09-08T15:10:38.598900+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "nossorumo_open",
+      "url": "https://nossorumo.org.br/js/site.min.js?v=PIHz2RsX16gXi1ZVskxhTdZF7oXBZHfj9LrQFlc7Gzo",
+      "kind": "site0",
+      "observed_at": "2026-09-08T15:10:38.084715+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 113641,
+      "sha256": "3c81f3d91b17d7a8178b5655b24c614dd645ee85c16477e3f4bad016573b1b3a",
+      "file": "nossorumo_open-site0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [
+        {
+          "url": "https://nossorumo.org.br/js/${withProtocol}",
+          "title": "\\n    ${matched}\\n"
+        }
+      ],
+      "scripts": []
+    },
+    {
+      "source": "nossorumo_open",
+      "url": "https://nossorumo.org.br/Views/Shared/_Layout.cshtml.min.js?v=L5r6UjJK2vMIA1P9N7nsKwNWLodfxEUUV_auC5IotYE",
+      "kind": "site1",
+      "observed_at": "2026-09-08T15:10:38.085812+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 2975,
+      "sha256": "2f9afa52324adaf3080353fd37b9ec2b03562e875fc4451457f6ae0b9228b581",
+      "file": "nossorumo_open-site1.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

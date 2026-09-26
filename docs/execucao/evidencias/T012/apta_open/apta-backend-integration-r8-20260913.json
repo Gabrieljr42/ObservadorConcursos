@@ -1,0 +1,30 @@
+{
+  "schema": "t012.apta.backend-integration-r8.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "shared backend dispatch only; offline preserved artifact",
+  "identity": {"source": "apta_open", "source_id": 48, "external_id": "708"},
+  "artifact": {
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "detail_urls": [
+      "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+      "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708"
+    ]
+  },
+  "implementation": {
+    "module": "backend/app/tenderproof/apta_aragarcas_parser.py",
+    "dispatch": "fields.py exact apta_open/708 branch now returns only titulo, orgao, edital_numero",
+    "validation": "validation.py routes apta_open identity to strict document_identity_ids",
+    "guards": ["source/external", "SHA/bytes", "document/detail URL", "20 ordered non-empty pages", "error/truncated/U+FFFD", "literal Concurso 01/2026/Edital/Aragarças markers"],
+    "currentness": "extract_identity preserves proven 2026-08-17..2026-09-20 window; outside window is FAILED"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/apta_open/test_apta_parser_r7_proposed.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_batch2_dispatch.py -k 'apta or dispatch'",
+    "result": "22 passed",
+    "compileall": "PASS"
+  },
+  "regressions_preserved": ["create-contract nullable CREATE", "KLC strict dispatch", "AvançaSP two-artifact R4 pin"],
+  "side_effects": {"docker": false, "network": false, "live_or_pilot": false, "proposal_or_apply": false}
+}

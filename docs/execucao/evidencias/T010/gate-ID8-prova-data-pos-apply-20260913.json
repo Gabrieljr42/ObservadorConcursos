@@ -1,0 +1,11 @@
+{
+  "schema": "observador.t010.id8.prova_data.pos_apply.v1",
+  "recorded_at": "2026-09-13T01:21:28.3111052-03:00",
+  "scope": "ID8 supplement only; T005 and ID16 untouched",
+  "proposal": {"id": "tpp-ffd987976e8d77b201715ea32de19073", "hash": "7fe791958baf85c5b4c39309aba07f78b1155728464a481820266dbdf4ffe26e", "baseline_version": 87, "approved_fields": ["prova_data"], "final_state": "applied", "version_id": 88},
+  "apply": {"first_http": 200, "replay_http": 200, "replay_same_version": true, "replay_new_version": false, "replay_new_outbox": false, "replay_new_notification": false},
+  "counts": {"before": {"proposals": 92, "versions": 87, "outbox": 87, "notifications": 86}, "after": {"proposals": 92, "versions": 88, "outbox": 88, "notifications": 87}},
+  "receipts": {"outbox": {"id": 88, "version_id": 88, "state": "delivered", "attempts": 1}, "notification": {"id": 87, "concurso_id": 8, "notification_type": "version_update_88"}},
+  "contest8_api": {"prova_data": "2026-12-06T00:00:00Z", "cargo_count": 1, "vagas_imediatas": 9, "vagas_ampla_concorrencia": 6, "vagas_pcd": 1, "ppp": 2, "cadastro_reserva": 11, "jornada": "40h semanais"},
+  "gate": "PASS; aguardando UI/revisão final"
+}

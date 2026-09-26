@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-12T22:47:48-03:00",
+  "operator": "Luna integrador",
+  "scope": "T008 web/mobile benefits revision",
+  "command": "BuildWeb; docker compose up -d --no-deps --force-recreate web",
+  "routes": 23,
+  "assets": [
+    {
+      "file": "_expo/static/js/web/entry-d8a42abe581ad6993b2898289ab20fd3.js",
+      "sha256": "11FB506B2CBA72FF50F748608BFCA2798B5A6458745A6FC8BEA9623D8E3918EE",
+      "bytes": 1995142
+    },
+    {
+      "file": "_expo/static/js/web/worker-7d5df0c0d1a18556afd6d35cf3040e51.js",
+      "sha256": "498D9A1F2ADBF6D6F97B304444FDF9AD1A09E1F84BC1845BAA971855BC15DE93",
+      "bytes": 138749
+    }
+  ],
+  "validation": {
+    "web_http": 200,
+    "api_health_http": 200,
+    "web_container_recreated": true,
+    "api_postgres_redis_restarted": false,
+    "opfs_indexeddb_data_cleared": false
+  },
+  "next_gate": "CUA visual validation"
+}

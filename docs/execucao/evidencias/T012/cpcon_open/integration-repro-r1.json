@@ -1,0 +1,12 @@
+{
+  "gate": "T012-BATCH1-REPRO-R1",
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+  "scope": "offline preserved PDF; disposable SQLite; no live run/pilot",
+  "result": "PASS",
+  "eligible": ["titulo", "orgao", "edital_numero", "cargos"],
+  "assertions": ["six cargo rows reproduce from pinned pages", "old title snippet 001/2026 is rejected", "proposal/version/outbox remain zero"],
+  "tests": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py",
+  "observed": "10 combined tests passed (FAFIPA+CPCON); compileall passed"
+}

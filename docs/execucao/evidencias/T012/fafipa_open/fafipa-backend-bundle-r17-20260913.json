@@ -1,0 +1,43 @@
+{
+  "schema": "t012.fafipa-backend-bundle-r17.v1",
+  "status": "READY_FOR_INDEPENDENT_BUNDLE_REVIEW",
+  "scope": "offline backend bundle only; no Docker/API/live/deploy",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "parser": {
+    "path": "backend/app/tenderproof/fafipa_t012_r4.py",
+    "sha256": "a850115c7ff661a7758ee440d088d93da6b383f3c1b3c83a94539cfee8f62b23",
+    "active_extract_fields_definitions": 1,
+    "method_version": "fafipa-4208-r13",
+    "cargo_evidence_count": 14,
+    "field_count": 7,
+    "guards": ["source/external", "artifact sha256/byte_len", "detail/document URL", "page/error/truncated", "literal snippet", "U+FFFD"]
+  },
+  "pins": {
+    "pdf_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "pdf_byte_len": 3630911,
+    "pdf_pages": 38,
+    "apta_r16_parser_sha256": "c48d314eb47aa0947b533541ece12a05e9a406224725762d22de1c561c69d4ea",
+    "avancasp_dispatch_sha256": "63966b8b7f42d71eeb1ae3b0daf80f965e02231051052c4648a09aa1841833a3",
+    "avancasp_r2_sha256_pins": [
+      "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd"
+    ]
+  },
+  "run_id_provenance_plan": {
+    "semantic_changes_require_new_id": ["evidence snippet", "page_number", "method_version", "field value", "artifact SHA/URL/bytes"],
+    "transport_only_replay": ["evidence_id", "content_path/content_base64", "downloaded_at"],
+    "verification": "backend/tests/test_reviewed_run_import.py asserts snippet/page/units/method_version drift changes _run_id and evidence_id-only replay is idempotent"
+  },
+  "tests": {
+    "fafipa_import_runid": "19 passed",
+    "document_identity_canonical_apta_avancasp": "83 passed",
+    "compileall": "PASS"
+  },
+  "commands": [
+    "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_t012_fafipa_r4.py backend/tests/test_reviewed_run_import.py",
+    "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_document_review_gate.py backend/tests/test_tenderproof_document_identity.py backend/tests/test_tenderproof_canonical.py backend/tests/test_apta_retification_review.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_apta_open_selection.py backend/tests/test_avancasp_r4_dispatch.py",
+    "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof backend/tests"
+  ],
+  "not_applied": true
+}

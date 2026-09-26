@@ -1,0 +1,43 @@
+{
+  "schema": "t012.ufu_selection.live-proposal-receipt-r9.v1",
+  "timestamp": "2026-09-13T15:42:06.1922146Z",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "deploy_image": "sha256:9dfcaadfe6ec3f929e591c8f8ede2a8c407fd4ee51ed645645f597f80aa05935",
+  "preflight": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": 200,
+    "catalog_match": false,
+    "checkpoint_counts": {"contests": 34, "sources": 33, "canonical_cargos": 182, "favorites": 0, "alerts": 1},
+    "document_review": {"pending": false, "documents": []}
+  },
+  "run_get_read_only": {
+    "run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+    "owner_user_id": 1,
+    "source": "ufu_selection",
+    "external_id": "1843",
+    "target": null,
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "validation_status": "valid"
+  },
+  "source_specific_revalidate": {"attempted_by_normal_create_flow": true, "required_fields": ["titulo", "orgao", "edital_numero"], "result": "422_evidence_reproduction"},
+  "proposal_attempt": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "body": {"run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d", "source_id": 40, "concurso_id": null, "authorization": null},
+    "http_status": 422,
+    "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+    "proposal_id": null,
+    "persisted": false,
+    "retry": false,
+    "approve": false,
+    "apply": false
+  },
+  "counts_after": {"contests": 34, "sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1, "push_devices": 0, "push_deliveries": 0, "push_attempts": 0},
+  "result": "BLOCKED_UFU_CREATE_PROPOSAL_422_R9",
+  "next_step": "Diagnose evidence reproduction; no retry until independent review. No catalog mutation."
+}

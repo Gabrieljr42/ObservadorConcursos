@@ -1,0 +1,12 @@
+{
+  "schema":"t012.w2.dry-run-r2.v1",
+  "state":"PASS_READY_FOR_REVIEW",
+  "mode":"offline_real_bytes_revalidate_contract",
+  "source":"w2_open",
+  "external_id":"105",
+  "checks":{"content_path_read":true,"sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","byte_len":700244,"pages":40,"mime":"application/pdf","candidate_source":true,"candidate_external_id":true,"detail_url":true,"document_url_equals_artifact":true,"document_kind_edital":true,"orgao_evidence":true,"edital_evidence":true,"cargo_evidence":true,"json_path_and_receipt":true,"source_number_not_used_as_concurso_id":true},
+  "strong_binding":{"rule":"fresh supported orgao + fresh supported edital_numero equal canonical contest","prepared_fields":["orgao","edital_numero"],"status":"READY_FOR_CANONICAL_CONTEST_ALLOCATION"},
+  "result":"validated_without_persisting_or_creating_proposal",
+  "next":"allocate canonical concurso_id and run standard importer/_revalidate/create_proposal",
+  "apply":false
+}

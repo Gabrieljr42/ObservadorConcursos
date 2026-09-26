@@ -1,0 +1,155 @@
+{
+  "validated_at": "2026-09-08T14:42:27.619018+00:00",
+  "scope": "real preserved IBAM observation; synthetic canonical baseline only",
+  "command": "python scripts/tenderproof_batch60_material_update.py --postgres",
+  "source": "ibam_open",
+  "candidate": "375",
+  "run_id": "tp-tcj-a3a6cc0bd02c59d19d169ebe75777b06-1",
+  "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+  "original_run_payload_sha256": "4fd40cc5bb1d70005056f7a95647b17c187e36dd3e68cb4d3a6e3f44d208201b",
+  "preserved_root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60replay",
+  "network_requests": 0,
+  "production_writes": 0,
+  "observation_modified": false,
+  "baseline_synthetic": true,
+  "executions": [
+    {
+      "database": "sqlite",
+      "passed": true,
+      "proposal_id": "tpp-59938b5985e65908e8715644176a0367",
+      "real_supported_update": {
+        "titulo": {
+          "label": "título",
+          "old": "Título anterior controlado para prova de atualização",
+          "new": "Municipio de Balneario Picarras/SC - 01/2026 PS"
+        }
+      },
+      "evidence": {
+        "value": "Municipio de Balneario Picarras/SC - 01/2026 PS",
+        "state": "supported",
+        "reason": null,
+        "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+        "items": [
+          {
+            "evidence_id": "ev-fac15a9f30",
+            "artifact_id": "art-3699547644",
+            "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+            "source_url": "https://www.ibam-concursos.org.br/documento/edit.psbp1_26.pdf",
+            "page_number": 9,
+            "snippet": "M (www.ibam-\nconcursos.org.br), através da opção Documentação do Concurso e do Município de Balneário Piçarras\n(https://balneariopicarras.atende.net/), através da página “Processo Seletivo”, devendo o candidato\nacessar a aba “ARQUIVOS” para consulta.\n8.4. Após decididos todos os recursos, será também publicada, nos end",
+            "json_path": null,
+            "method": "deterministic-regex",
+            "method_version": "tenderproof-fields/1.2",
+            "validation": {
+              "ok": true,
+              "code": null,
+              "message": null
+            }
+          }
+        ]
+      },
+      "unknown_field": {
+        "name": "inscricao_fim",
+        "state": "unknown",
+        "value": null,
+        "reason": "período direto de inscrição não identificado; datas de outras etapas não são inscrições"
+      },
+      "unknown_approval_rejected": true,
+      "preserved_controlled_values": {
+        "inscricao_inicio": "2026-04-01",
+        "inscricao_fim": "2026-04-19",
+        "salario_min": 3500,
+        "salario_max": 4000
+      },
+      "proposal_creation_request_idempotent": true,
+      "application_idempotent": true,
+      "after_apply": {
+        "contests": 1,
+        "versions": 1,
+        "outbox": 1,
+        "notifications": 0
+      },
+      "rollback_restores_baseline": true,
+      "rollback_idempotent": true,
+      "after_rollback": {
+        "contests": 1,
+        "versions": 2,
+        "outbox": 2,
+        "notifications": 0
+      }
+    },
+    {
+      "database": "postgresql",
+      "passed": true,
+      "proposal_id": "tpp-135160ba9f3e4c25659fbe6cec2537d5",
+      "real_supported_update": {
+        "titulo": {
+          "label": "título",
+          "old": "Título anterior controlado para prova de atualização",
+          "new": "Municipio de Balneario Picarras/SC - 01/2026 PS"
+        }
+      },
+      "evidence": {
+        "value": "Municipio de Balneario Picarras/SC - 01/2026 PS",
+        "state": "supported",
+        "reason": null,
+        "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+        "items": [
+          {
+            "evidence_id": "ev-fac15a9f30",
+            "artifact_id": "art-3699547644",
+            "document_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+            "source_url": "https://www.ibam-concursos.org.br/documento/edit.psbp1_26.pdf",
+            "page_number": 9,
+            "snippet": "M (www.ibam-\nconcursos.org.br), através da opção Documentação do Concurso e do Município de Balneário Piçarras\n(https://balneariopicarras.atende.net/), através da página “Processo Seletivo”, devendo o candidato\nacessar a aba “ARQUIVOS” para consulta.\n8.4. Após decididos todos os recursos, será também publicada, nos end",
+            "json_path": null,
+            "method": "deterministic-regex",
+            "method_version": "tenderproof-fields/1.2",
+            "validation": {
+              "ok": true,
+              "code": null,
+              "message": null
+            }
+          }
+        ]
+      },
+      "unknown_field": {
+        "name": "inscricao_fim",
+        "state": "unknown",
+        "value": null,
+        "reason": "período direto de inscrição não identificado; datas de outras etapas não são inscrições"
+      },
+      "unknown_approval_rejected": true,
+      "preserved_controlled_values": {
+        "inscricao_inicio": "2026-04-01",
+        "inscricao_fim": "2026-04-19",
+        "salario_min": 3500,
+        "salario_max": 4000
+      },
+      "proposal_creation_request_idempotent": true,
+      "application_idempotent": true,
+      "after_apply": {
+        "contests": 1,
+        "versions": 1,
+        "outbox": 1,
+        "notifications": 0
+      },
+      "rollback_restores_baseline": true,
+      "rollback_idempotent": true,
+      "after_rollback": {
+        "contests": 1,
+        "versions": 2,
+        "outbox": 2,
+        "notifications": 0
+      }
+    }
+  ],
+  "limitations": [
+    "The prior canonical title, dates and salary are controlled test values, not historical IBAM data.",
+    "Unknown dates are observed in the real PDF extraction; no conflicting field was fabricated.",
+    "This proves title update, not a real change between two editions of the source.",
+    "Outbox is recorded but no notifications are delivered."
+  ],
+  "temporary_volume_removed": true,
+  "passed": true
+}

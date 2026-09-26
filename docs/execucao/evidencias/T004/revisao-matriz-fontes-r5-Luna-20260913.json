@@ -1,0 +1,30 @@
+{
+  "schema": "t004.luna.matrix-r5-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "MATRIX_R5_REJECT",
+  "scope": "read-only; matriz, T004 e T010 somente; sem rede, piloto, quadro ou edição da matriz",
+  "checks": {
+    "csv_sha256": "1baf4863afa01b4a4a3c3f3702f3fcd2284cacc16418a818e95d13edc1cb6bb8",
+    "json_sha256": "712c4f6f0f7a9f85bd70245ad96bd242e4842dfcf19a94954c26942b235c366e",
+    "csv_json_rows": "PASS: 99/99; numero e fonte únicos; campos comparados equivalentes",
+    "accepted_overlays": "PASS: oito overlays v82,v83,v84,v86,v88,v89,v90,v91 idênticos ao r4",
+    "snapshot": "PASS: explicitamente último snapshot live pré-outage, não revalidado; authoritative=false",
+    "runtime": "PASS: runtime_factory_absent=0; integração não certificada e no_source_wide_claim=true",
+    "blockers": "PASS: 18/20/22-25 insuficientes, 15 mismatch, 21 DO_NOT_RETRY, Garibaldi 33 accepted_with_blocker"
+  },
+  "blockers": [
+    {
+      "severity": "blocker",
+      "finding": "A linha JSON/CSV numero=5 (ibam_open) foi marcada LOCAL_REVIEWED_READY_FOR_IMPORT_PROPOSAL, mas o ID5 Consulplan é fonte numero=38 (institutoconsulplan_open). A linha 38 permanece T010_INSUFFICIENT e sem o run r5.",
+      "correction": "Mover o estado/ponteiro do run ID5 para numero=38, manter numero=5 BASELINE_ONLY, e preservar overlay_target_concurso=5 somente na linha 38."
+    },
+    {
+      "severity": "blocker",
+      "finding": "O ponteiro da linha 5 usa docs/execucao/evidencias/T004/*40120...* e *1edc...*, mas os artefatos r5 e suplemento existem em T010; os globs T004 não resolvem nenhum arquivo.",
+      "correction": "Apontar para paths exatos em docs/execucao/evidencias/T010 (r5 envelope/receipt/revisão e suplemento/receipt), sem curingas não resolvíveis."
+    }
+  ],
+  "t010_reconciliation": "T010 atual confirma ID5 fonte 38, run tp-reviewed-40120e7a2b6662b131075dc416d2cb18, não aplicado; portanto a matriz r5 contradiz sua própria proveniência.",
+  "conclusion": "A matriz é estruturalmente íntegra e não autoritativa, mas não pode ser aceita enquanto o registro ID5 estiver associado à fonte 5 e seus ponteiros forem inválidos."
+}

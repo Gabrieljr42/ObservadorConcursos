@@ -1,0 +1,41 @@
+{
+  "schema": "t012.cpcon.live-envelope-r5-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "BLOCKER",
+  "scope": "read_only envelope/evidence reconciliation; no live/API/DB/catalogue mutation",
+  "content_checks": {
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "run": "new envelope body is distinct from the superseded R2 handoff by parser/evidence method version, but no separate run ID is supplied in the envelope",
+    "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "byte_len": 498894,
+    "pages": 13,
+    "title_orgao_edital": "present: PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026; Universidade Estadual da Paraíba; 002/2026",
+    "cargo_count": 6,
+    "cargo_evidence": "six individual SHA-bound/page-bound snippets, cargos[0..5], no U+FFFD indicated",
+    "fields_scope": "reference_only; identity plus cargos only; no taxa/prova promotion"
+  },
+  "blocking_target_issue": {
+    "envelope_concurso_id": 34,
+    "why_invalid": "34 is already the canonical concurso used by the applied SHDias source (source 51 / MTEw/MzA4); reusing it would cross-link CPCON source 35 into another contest.",
+    "conflicting_evidence": [
+      "docs/execucao/evidencias/T012/shdias_open/apply-live-r6-20260913.json: concurso_id=34",
+      "docs/execucao/evidencias/T012/backend-deploy-batches-r1-20260913.json: web_concurso_34 and canonical_published_cargos=182",
+      "cpcon-002-receipt-r2.json: canonical_target=null and explicit instruction not to invent/reserve a target",
+      "revisao-Luna-r2-20260913.json: supersedes old target-34 receipt/envelope"
+    ],
+    "required_fix": "Set concurso_id null/unallocated in the handoff, allocate a fresh canonical target through the normal source/external duplicate-safe flow, then rerun ReviewedRun/import dry-run and proposal revalidation. Never infer/reuse 34 or source_number 35."
+  },
+  "old_artifact_guard": {
+    "old_r2_envelope": "must remain superseded; do not use cpcon-002-reviewed-run.json or its target 34",
+    "current_r5": "artifact/body evidence can be reviewed after target correction; content pins themselves match"
+  },
+  "side_effects": "No live import/proposal/apply or catalogue effects were performed or authorized.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r5.json",
+    "docs/execucao/evidencias/T012/cpcon_open/cpcon-002-receipt-r2.json",
+    "docs/execucao/evidencias/T012/cpcon_open/cpcon-002-reviewed-run-r2.json",
+    "docs/execucao/evidencias/T012/shdias_open/apply-live-r6-20260913.json"
+  ]
+}

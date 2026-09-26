@@ -1,0 +1,701 @@
+{
+  "observed_at": "2026-09-08T14:13:41.756956+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\b60sharefix",
+  "cycles": [
+    {
+      "source": "fundep_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-8b3dddbb5b2a",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle1-listing-bd4d8b4c23.html",
+          "sha256": "74b428ce9ffaf31d63dde74c4d7b4a238e5480edc15cdc8e4cbd6f7ff83a55f2",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:42.356401+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c929a836a302",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso Público - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:13:42.446996Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle1-detail-9f8492ebf7.html",
+              "sha256": "41159ec7095d739d01b5aa9b6a7a4693ec5e567428aa2a04801358b99474e191",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:43.249703+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fundep_open-doc-fcff851fccf14acc",
+            "title": "Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-9eae4776ce",
+            "sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+            "byte_len": 6958484,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:43.500704Z",
+            "storage_path": "art-9eae4776ce-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-fd6c8565941d",
+          "candidate": {
+            "candidate_id": "fundep_open-63",
+            "title_observed": "Concurso Público - DMAE UBERLÂNDIA",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/63/",
+            "external_id": "63",
+            "observed_at": "2026-09-08T14:13:42.447995Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: edital consolidado exige revisão dos efeitos das alterações",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/63/",
+              "file": "fundep_open-cycle1-detail-2259aab379.html",
+              "sha256": "3311b68478e842df9a2afeb1cd2135cc1fb47592488facbe45821d564adc4f81",
+              "bytes": 57916,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:44.519937+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-58ec507cb52e",
+          "candidate": {
+            "candidate_id": "fundep_open-65",
+            "title_observed": "Concurso Público - CÂMARA MUNICIPAL DE PASSOS - MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/65/",
+            "external_id": "65",
+            "observed_at": "2026-09-08T14:13:42.447995Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: edital consolidado exige revisão dos efeitos das alterações",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/65/",
+              "file": "fundep_open-cycle1-detail-eef03cea07.html",
+              "sha256": "55095bf34da741ce6386a5260534e3ed9c4069d88a5852563995164890f4ba46",
+              "bytes": 53218,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:45.212560+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.531
+    },
+    {
+      "source": "facet_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-33230167f47d",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle1-listing-c884746ea7.html",
+          "sha256": "79f7257fc75eeeeb5975944942fa9b5467af09a26470c9acfab176e82e55dc63",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:46.010996+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-93e10f1f2fbd",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:13:46.073325Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle1-detail-252bec7fe8.html",
+              "sha256": "3756afd7665bebd9f9326524f2ee313546d41a77d3877ef2417281ce78aeb65e",
+              "bytes": 115999,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:46.925111+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-568789702e",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:47.226327Z",
+            "storage_path": "art-568789702e-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-bde1da6a10bf",
+          "candidate": {
+            "candidate_id": "facet_open-42",
+            "title_observed": "Processo Seletivo - PREFEITURA MUNICIPAL DE SUMÉ-PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/42/",
+            "external_id": "42",
+            "observed_at": "2026-09-08T14:13:46.073325Z",
+            "source": "facet_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/42/",
+              "file": "facet_open-cycle1-detail-8509d45f19.html",
+              "sha256": "686ef05b060b0d68b97092ae0fe35778d4d9d30fc1e5738ffc12ca802cbf1a10",
+              "bytes": 78314,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:48.556602+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-2701af257ddb22f9",
+            "title": "EDITAL DO PROCESSO SELETIVO DE SUMÉ-PB 09/12/2025",
+            "url_requested": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/42/anexos/c0b81a77-c2f7-4602-95aa-2aba6a5540fb.pdf",
+            "url_final": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/42/anexos/c0b81a77-c2f7-4602-95aa-2aba6a5540fb.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DO PROCESSO SELETIVO DE SUMÉ-PB 09/12/2025' por conter 'edital' no título/URL; 10 documento(s) ignorado(s) (ex.: ADITIVO 03 21/01/2026; RESULTADO FINAL 15/01/2026; RESULTADO PRELIMINAR 09/01/2026; AVISO 01 04/01/2026; EDITAL DE CONVOCAÇÃO PARA AS ENTREVISTAS (RETIFICADO) 02/01/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-cce95fab81",
+            "sha256": "c80f288fb1ed2df73aed5a5a4aae4fbe087ff078107aba287cc73c800781f622",
+            "byte_len": 310536,
+            "url_requested": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/42/anexos/c0b81a77-c2f7-4602-95aa-2aba6a5540fb.pdf",
+            "url_final": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/42/anexos/c0b81a77-c2f7-4602-95aa-2aba6a5540fb.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:49.815970Z",
+            "storage_path": "art-cce95fab81-c80f288fb1ed2df73aed5a5a4aae4fbe087ff078107aba287cc73c800781f622.pdf"
+          },
+          "total_pages": 12,
+          "processed_pages": 12,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=12/12",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.828
+    },
+    {
+      "source": "fundep_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-cd1e9c1d7e64",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle2-listing-c5cca08cc6.html",
+          "sha256": "de3511460c93f10f6d5fc984b8252038fcb14a16a2e23bd6f14ee9a534cd74c4",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:51.855451+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0259caaedafb",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso Público - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:13:51.920489Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle2-detail-778761b101.html",
+              "sha256": "4efe9731ba738c0e96c3e1f8be465c4033b9e0b0b02d91dd49e82cb091822791",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:52.583218+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fundep_open-doc-fcff851fccf14acc",
+            "title": "Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-62fc37c377",
+            "sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+            "byte_len": 6958484,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:52.863461Z",
+            "storage_path": "art-62fc37c377-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-5cbb66266315",
+          "candidate": {
+            "candidate_id": "fundep_open-63",
+            "title_observed": "Concurso Público - DMAE UBERLÂNDIA",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/63/",
+            "external_id": "63",
+            "observed_at": "2026-09-08T14:13:51.920489Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: edital consolidado exige revisão dos efeitos das alterações",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/63/",
+              "file": "fundep_open-cycle2-detail-88fa7b5019.html",
+              "sha256": "8c5a4ef4749c9e67ded4d5f7ae8bf4aea60b8776dad8aa5c6e61fd47d9570476",
+              "bytes": 58126,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:53.805639+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-1ad88bb352a7",
+          "candidate": {
+            "candidate_id": "fundep_open-65",
+            "title_observed": "Concurso Público - CÂMARA MUNICIPAL DE PASSOS - MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/65/",
+            "external_id": "65",
+            "observed_at": "2026-09-08T14:13:51.920489Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: edital consolidado exige revisão dos efeitos das alterações",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/65/",
+              "file": "fundep_open-cycle2-detail-1ffe208882.html",
+              "sha256": "7d3b0628438dbac1b16c8034b14bf721535918d5e09fe8f2be02137e647f9a3d",
+              "bytes": 53038,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:54.527853+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.469
+    },
+    {
+      "source": "facet_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-dbe0c5b868a3",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle2-listing-172e8cb5cd.html",
+          "sha256": "bd4042340f47386b90f0892a7c639cb1cfd96a86001eec098b9103070af3ab05",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:55.321708+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-8a906cd82ade",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:13:55.393241Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle2-detail-c142bf07d9.html",
+              "sha256": "d09bcd9da63cf76cf8814173d08047183c9669b1eb6f8e6d2fae6e7eaeb86049",
+              "bytes": 116475,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:56.104038+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÃBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÃBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-4b48069896",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:56.519207Z",
+            "storage_path": "art-4b48069896-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-1f9185dfe879",
+          "candidate": {
+            "candidate_id": "facet_open-42",
+            "title_observed": "Processo Seletivo - PREFEITURA MUNICIPAL DE SUMÉ-PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/42/",
+            "external_id": "42",
+            "observed_at": "2026-09-08T14:13:55.393241Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FACET incompatível com dados do detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/42/",
+              "file": "facet_open-cycle2-detail-d9d1f07989.html",
+              "sha256": "01f18944431774f83b073532c226e4d56b96693054dac40b3f573a63b76f2c1d",
+              "bytes": 78484,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:57.719213+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-260a2a6aa02f",
+          "candidate": {
+            "candidate_id": "facet_open-39",
+            "title_observed": "Concurso Público - CÂMARA MUNICIPAL DE BAIA DA TRAIÇÃO - PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/39/",
+            "external_id": "39",
+            "observed_at": "2026-09-08T14:13:55.393241Z",
+            "source": "facet_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/39/",
+              "file": "facet_open-cycle2-detail-9c5d5c86f7.html",
+              "sha256": "e1b06f70b4fee21bd0470b25d5fbafc479d2e13bf17b2ef6cc6f9ba6b3355a0d",
+              "bytes": 67531,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:58.495601+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-0b0ff4adf5a11917",
+            "title": "EDITAL - CONCURSO PÚBLICO DA CÂMARA MUNICIPAL DE BAIA DA TRAIÇÃO - PB 14/10/2025",
+            "url_requested": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/39/anexos/3dfad644-94d7-490c-a06b-3cc8cddf8884.pdf",
+            "url_final": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/39/anexos/3dfad644-94d7-490c-a06b-3cc8cddf8884.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÚBLICO DA CÂMARA MUNICIPAL DE BAIA DA TRAIÇÃO - PB 14/10/2025' por conter 'edital' no título/URL; 12 documento(s) ignorado(s) (ex.: DECRETO DE HOMOLOGAÇÃO DO CONCURSO PÚBLICO 14/04/2026; RESULTADO FINAL PCD 19/12/2025; RESULTADO FINAL AC/PCD 19/12/2025; RESULTADO PRELIMINAR DA PROVA OBJETIVA PCD 16/12/2025; RESULTADO PRELIMINAR DA PROVA OBJETIVA AC/PCD 16/12/2025)."
+          },
+          "artifact": {
+            "artifact_id": "art-dbdfc88495",
+            "sha256": "4aaa7c0f02b30330d3635ad25dfdcf154bf4f251417c698fcb4a977b6127df9c",
+            "byte_len": 438802,
+            "url_requested": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/39/anexos/3dfad644-94d7-490c-a06b-3cc8cddf8884.pdf",
+            "url_final": "https://anexos.cdn.selecao.net.br/uploads/781/concursos/39/anexos/3dfad644-94d7-490c-a06b-3cc8cddf8884.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:13:59.630467Z",
+            "storage_path": "art-dbdfc88495-4aaa7c0f02b30330d3635ad25dfdcf154bf4f251417c698fcb4a977b6127df9c.pdf"
+          },
+          "total_pages": 15,
+          "processed_pages": 15,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=15/15",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.968
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "independent-review.t011-21-409.v1",
+  "reviewer": "Luna-independent",
+  "scope": ["docs/execucao/evidencias/T011/diagnostico-id21-409-20260912.json", "T011 manifest/package", "read-only GET proposal/catalog/review-status"],
+  "checks": {
+    "run_binding": "T011 run/artifact SHA and identity bind to catalog 21 FUNVAPI/Cajueiro; no replacement identity inferred",
+    "prior_entity": "GET confirms only prior proposal tpp-6e9c6c16a1f534dcd6738bdefa0a7f6d, state applied, version 32, prior run tpr-5d6ffb1c73be; no proposal for current run/key proven",
+    "catalog_review": "GET catalog 21 HTTP 200; review-status pending=true with four named retifications",
+    "containment": "409 had no proposal_id; no retry/POST/mutation; DO_NOT_RETRY is correct",
+    "dependency": "Four retifications must be independently read/conferenced, then identity/revision revalidated and a new reviewed run/proposal prepared"
+  },
+  "decision": "ACEITO",
+  "correction": "Nenhuma no diagnóstico; keep current run blocked and do not treat prior applied proposal as idempotent delivery for this run."
+}

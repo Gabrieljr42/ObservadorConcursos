@@ -1,0 +1,11 @@
+{
+  "schema":"t012.tests-evidence.v1",
+  "source":"w2_open",
+  "commands":[
+    {"command":"backend/.venv/Scripts/python.exe -m pytest tests/test_tenderproof_batch30_shared.py -q -k w2","result":"6 passed, 51 deselected","exit_code":0},
+    {"command":"backend/.venv/Scripts/python.exe -m pytest tests/test_reviewed_run_import.py -q","result":"4 passed, 1 warning","exit_code":0}
+  ],
+  "offline_real_dry_run":{"result":"PASS","artifact_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","byte_len":700244,"pages":40,"fields":["titulo","orgao","edital_numero","cargos"],"cargo_count":14,"snippets_verified":true,"content_receipt_verified":true},
+  "fail_closed_assertions":["source_number_59_not_converted_to_concurso_id","canonical_concurso_id_null","apply_false","no_db_or_service_mutation","pending_fields_not_promoted"],
+  "state":"W2_STRONG_BINDING_R2_READY_FOR_REVIEW"
+}

@@ -1,0 +1,1909 @@
+{
+  "observed_at": "2026-09-08T14:06:02.529569+00:00",
+  "scope": "Read-only public HTTP; verified TLS; one compatibility User-Agent; no cookies, login, challenge solving, browser, PDFs, production effects or adapter certification; 25 seconds and 2 MiB per request; redirects recorded only.",
+  "pages": [
+    {
+      "source": "aocp_open",
+      "url": "https://www.institutoaocp.org.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:05:59.975896+00:00",
+      "tls_verified": true,
+      "status": 403,
+      "location": null,
+      "bytes": 5649,
+      "sha256": "c5d8eb49e2a1735cd80abce492266252fd072f612b5dd7c8f233d2881ad08767",
+      "file": "aocp_open-0dcc6df54d6a.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "text_preview": "Just a moment... Enable JavaScript and cookies to continue",
+      "links": [],
+      "scripts": [],
+      "diagnosis": "HTTP access challenge; no challenge solving attempted"
+    },
+    {
+      "source": "seprod_open",
+      "url": "https://www.seprod.com.br/concursos/?utm_refererencia=em_andamento",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:05:59.976898+00:00",
+      "tls_verified": true,
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)",
+      "diagnosis": "Transport failed; no unverified TLS fallback"
+    },
+    {
+      "source": "fumarc_open",
+      "url": "https://www.fumarc.com.br/SitePages/Home.aspx",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:05:59.976898+00:00",
+      "tls_verified": true,
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+      "diagnosis": "Transport failed; no unverified TLS fallback"
+    },
+    {
+      "source": "epl_open",
+      "url": "https://www.eplconcursos.com.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:00.542490+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 20519,
+      "sha256": "afcc08a6f81de045a3a87de008546afe572cb9f9509b99334deb5e39e6b82740",
+      "file": "epl_open-5f0569b6780e.html",
+      "encoding": "utf-8",
+      "title": "Epl concursos",
+      "text_preview": "Toggle navigation INÍCIO A EPL SERVIÇOS PUBLICAÇÕES CONTATO Login CPF Senha Entrar Esqueci Senha Antigo Epl concursos Concursos Públicos e Processos Seletivos- Epl concursos Inscrições Abertas Em Andamento Finalizados Próximos INSCRIÇÕES ABERTAS NENHUM REGISTRO CADASTRADO NESSA SEÇÃO, PESQUISE NAS OUTRAS SEÇÕES DO NOSSO SITE. EM ANDAMENTO FINALIZADOS PRÓXIMOS NENHUM REGISTRO CADASTRADO NESSA SEÇÃO, PESQUISE NAS OUTRAS SEÇÕES DO NOSSO SITE. Desenvolvido por MH Informática",
+      "links": [
+        {
+          "url": "https://www.eplconcursos.com.br/",
+          "title": "INÍCIO"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/empresa",
+          "title": "A EPL"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/servicos",
+          "title": "SERVIÇOS"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/noticias",
+          "title": "PUBLICAÇÕES"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/fale-conosco",
+          "title": "CONTATO"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br",
+          "title": "Login"
+        },
+        {
+          "url": "http://antigo.​eplconcursos.​com.​br",
+          "title": "Antigo"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/concursos",
+          "title": "Inscrições Abertas"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/concursos/andamento",
+          "title": "Em Andamento"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/concursos/finalizados",
+          "title": "Finalizados"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br/concursos/proximos",
+          "title": "Próximos"
+        },
+        {
+          "url": "https://www.eplconcursos.com.br",
+          "title": "MH Informática"
+        },
+        {
+          "url": "https://restrito.eplconcursos.com.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://cdn.eplconcursos.com.br/SpryAssets/SpryValidationTextField.js",
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js",
+        "https://cdn.eplconcursos.com.br/js/bootstrap.min.js",
+        "https://www.eplconcursos.com.br/js/bootbox.min.js",
+        "https://cdn.eplconcursos.com.br/js/jquery.maskedinput.js",
+        "https://www.eplconcursos.com.br/js/jquery.printElement.js",
+        "https://www.eplconcursos.com.br/js/bootbox.min.js",
+        "https://www.google.com/recaptcha/api.js?render=6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn",
+        "https://www.googletagmanager.com/gtag/js?id=UA-73304711-5",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://www.eplconcursos.com.br/js/jquery_002.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ],
+      "diagnosis": "HTTP document available; source contract and scope still unvalidated"
+    },
+    {
+      "source": "unifil_open",
+      "url": "https://main.institutounifil.com.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:00.585011+00:00",
+      "tls_verified": true,
+      "status": 403,
+      "location": null,
+      "bytes": 5567,
+      "sha256": "5eb5ec05833ccc4f94b88d2cd2ecd23b881fd87b54277c1651046958e9408e15",
+      "file": "unifil_open-6012f5f7f665.html",
+      "encoding": "utf-8",
+      "title": "Just a moment...",
+      "text_preview": "Just a moment... Enable JavaScript and cookies to continue",
+      "links": [],
+      "scripts": [],
+      "diagnosis": "HTTP access challenge; no challenge solving attempted"
+    },
+    {
+      "source": "leandroferreira_open",
+      "url": "https://www.leandroferreira.com.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:00.808579+00:00",
+      "tls_verified": true,
+      "error_type": "ConnectError",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "diagnosis": "Transport failed; no unverified TLS fallback"
+    },
+    {
+      "source": "iuds_open",
+      "url": "https://www.iuds.org.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:01.066849+00:00",
+      "tls_verified": true,
+      "error_type": "ConnectError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)",
+      "diagnosis": "Transport failed; no unverified TLS fallback"
+    },
+    {
+      "source": "idgran_open",
+      "url": "https://idgran.com.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:01.148620+00:00",
+      "tls_verified": true,
+      "error_type": "ConnectError",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "diagnosis": "Transport failed; no unverified TLS fallback"
+    },
+    {
+      "source": "apta_open",
+      "url": "https://www.aptaconcursos.com.br",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:01.374017+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 241797,
+      "sha256": "684e064041b2c7b6ddd354cc619a14a6a28a073a840a41bba3bcda8e24787ce5",
+      "file": "apta_open-7b1c8274bb34.html",
+      "encoding": "utf-8",
+      "title": "Apta",
+      "text_preview": "Home Sobre a Empresa Serviços Contato Perguntas Frequentes Login Apta Apta Concursos Públicos/Processos Seletivos INSCRIÇÕES ABERTAS 1 EM ANDAMENTO 0 PRÓXIMOS 0 FINALIZADOS 173 CONCURSO PÚBLICO-01/2026 Câmara Municipal de Aragarças -GO INSCREVER-ME DOCUMENTOS 2ª VIA DO BOLETO Nenhum registro encontrado nesta seção Nenhum registro encontrado nesta seção CONCURSO PÚBLICO-01/2026 Prefeitura Municipal de Nova Ponte-MG DOCUMENTOS PROCESSO SELETIVO-02/2024 PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP DOCUMENTOS PROCESSO SELETIVO-01/2024 INSTITUTO DE ESTUDOS E PESQUISAS HUMANIZA-PR DOCUMENTOS CO",
+      "links": [
+        {
+          "url": "https://www.aptaconcursos.com.br#intro",
+          "title": ""
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br",
+          "title": "Home"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/sobre",
+          "title": "Sobre a Empresa"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/servicos",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/contato",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/FAQ",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/login_candidato_sistema",
+          "title": "Login"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br#inscricoes_abertas",
+          "title": "INSCRIÇÕES ABERTAS 1"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br#concursos_andamento",
+          "title": "EM ANDAMENTO 0"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br#concursos_proximos",
+          "title": "PRÓXIMOS 0"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br#concursos_finalizados",
+          "title": "FINALIZADOS 173"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+          "title": "Câmara Municipal de Aragarças -GO"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/login_candidato_sistema/realiza Inscrição/Câmara Municipal de Aragarças /708",
+          "title": "INSCREVER-ME"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/login_candidato_sistema/2ª Via de Boletos",
+          "title": "2ª VIA DO BOLETO"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Prefeitura+Municipal+de+Nova+Ponte/707",
+          "title": "Prefeitura Municipal de Nova Ponte-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Prefeitura+Municipal+de+Nova+Ponte/707",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/705",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/705",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/INSTITUTO+DE+ESTUDOS+E+PESQUISAS+HUMANIZA/704",
+          "title": "INSTITUTO DE ESTUDOS E PESQUISAS HUMANIZA-PR"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/INSTITUTO+DE+ESTUDOS+E+PESQUISAS+HUMANIZA/704",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+BOA+ESPERAN%C3%87A+DO+SUL/702",
+          "title": "PREFEITURA MUNICIPAL DE BOA ESPERANÇA DO SUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+BOA+ESPERAN%C3%87A+DO+SUL/702",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/703",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/703",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RINC%C3%83O/700",
+          "title": "PREFEITURA MUNICIPAL DE RINCÃO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RINC%C3%83O/700",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/701",
+          "title": "PREFEITURA MUNICIPAL - JABORANDI-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/701",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GETULINA/699",
+          "title": "PREFEITURA MUNICIPAL DE GETULINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GETULINA/699",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+TRABIJU/696",
+          "title": "CÂMARA MUNICIPAL DE TRABIJU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+TRABIJU/696",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/697",
+          "title": "PREFEITURA MUNICIPAL DE TERRA ROXA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/697",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/698",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/698",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+INDAIATUBA/693",
+          "title": "PREFEITURA MUNICIPAL DE INDAIATUBA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+INDAIATUBA/693",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+-+IBITINGA/695",
+          "title": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+-+IBITINGA/695",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/694",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/694",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/692",
+          "title": "PREFEITURA MUNICIPAL DE PONGAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/692",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/688",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/688",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/691",
+          "title": "PREFEITURA MUNICIPAL DE URU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/691",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/687",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/687",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CANITAR/689",
+          "title": "PREFEITURA MUNICIPAL DE CANITAR-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CANITAR/689",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+JULIANA/690",
+          "title": "PREFEITURA MUNICIPAL - SANTA JULIANA-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+JULIANA/690",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/686",
+          "title": "PREFEITURA MUNICIPAL - NOVA EUROPA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/686",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/683",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/683",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ARTUR+NOGUEIRA/684",
+          "title": "PREFEITURA MUNICIPAL DE ARTUR NOGUEIRA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ARTUR+NOGUEIRA/684",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/682",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/682",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+POMP%C3%89IA/681",
+          "title": "PREFEITURA MUNICIPAL DE POMPÉIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+POMP%C3%89IA/681",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMPRESA+MUNICIPAL+DE+DESENVOLVIMENTO+URBANO+E+RURAL+DE+BAURU+%E2%80%93+EMDURB/679",
+          "title": "EMPRESA MUNICIPAL DE DESENVOLVIMENTO URBANO E RURAL DE BAURU – EMDURB-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMPRESA+MUNICIPAL+DE+DESENVOLVIMENTO+URBANO+E+RURAL+DE+BAURU+%E2%80%93+EMDURB/679",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMPRESA+MUNICIPAL+DE+DESENVOLVIMENTO+URBANO+E+RURAL+DE+BAURU+%E2%80%93+EMDURB/680",
+          "title": "EMPRESA MUNICIPAL DE DESENVOLVIMENTO URBANO E RURAL DE BAURU – EMDURB-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMPRESA+MUNICIPAL+DE+DESENVOLVIMENTO+URBANO+E+RURAL+DE+BAURU+%E2%80%93+EMDURB/680",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/678",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/678",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+CANDIDO+MOTA/677",
+          "title": "CÂMARA MUNICIPAL DE CANDIDO MOTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+CANDIDO+MOTA/677",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/674",
+          "title": "PREFEITURA MUNICIPAL - JABORANDI-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/674",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/675",
+          "title": "PREFEITURA MUNICIPAL DE GUARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/675",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/676",
+          "title": "PREFEITURA MUNICIPAL DE GUARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/676",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+TABATINGA/673",
+          "title": "CÂMARA MUNICIPAL DE TABATINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+TABATINGA/673",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/672",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/672",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CODESAN+%E2%80%93+SERVI%C3%87OS+E+OBRAS/670",
+          "title": "CODESAN – SERVIÇOS E OBRAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CODESAN+%E2%80%93+SERVI%C3%87OS+E+OBRAS/670",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/671",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/671",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+DE+CRUZEIRO/669",
+          "title": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO DE CRUZEIRO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+DE+CRUZEIRO/669",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/667",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/667",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+BOA+ESPERAN%C3%87A+DO+SUL/668",
+          "title": "CÂMARA MUNICIPAL DE BOA ESPERANÇA DO SUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+BOA+ESPERAN%C3%87A+DO+SUL/668",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+CRUZ+DO+RIO+PARDO/652",
+          "title": "PREFEITURA MUNICIPAL DE SANTA CRUZ DO RIO PARDO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+CRUZ+DO+RIO+PARDO/652",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAPIA%C3%87U/666",
+          "title": "PREFEITURA MUNICIPAL DE GUAPIAÇU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAPIA%C3%87U/666",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+CRUZ+DO+RIO+PARDO/653",
+          "title": "PREFEITURA MUNICIPAL DE SANTA CRUZ DO RIO PARDO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+CRUZ+DO+RIO+PARDO/653",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PAULIST%C3%82NIA/665",
+          "title": "PREFEITURA MUNICIPAL DE PAULISTÂNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PAULIST%C3%82NIA/665",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PAULIST%C3%82NIA/664",
+          "title": "PREFEITURA MUNICIPAL DE PAULISTÂNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PAULIST%C3%82NIA/664",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CLEMENTINA/663",
+          "title": "PREFEITURA MUNICIPAL DE CLEMENTINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CLEMENTINA/663",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/662",
+          "title": "PREFEITURA MUNICIPAL DE IPUÃ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/662",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/661",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/661",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/659",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/659",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/660",
+          "title": "PREFEITURA MUNICIPAL DE TERRA ROXA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/660",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/657",
+          "title": "PREFEITURA MUNICIPAL DE GUAIMBÊ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/657",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/645",
+          "title": "PREFEITURA MUNICIPAL - NOVA EUROPA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/645",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/655",
+          "title": "PREFEITURA MUNICIPAL - CORUMBATAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/655",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/656",
+          "title": "PREFEITURA MUNICIPAL - CORUMBATAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/656",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JARDIN%C3%93POLIS/654",
+          "title": "PREFEITURA MUNICIPAL - JARDINÓPOLIS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JARDIN%C3%93POLIS/654",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ARTUR+NOGUEIRA/658",
+          "title": "PREFEITURA MUNICIPAL DE ARTUR NOGUEIRA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ARTUR+NOGUEIRA/658",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+JULIANA/644",
+          "title": "PREFEITURA MUNICIPAL DE SANTA JULIANA-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SANTA+JULIANA/644",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/651",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/651",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/650",
+          "title": "PREFEITURA MUNICIPAL DE GUAIMBÊ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/650",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/649",
+          "title": "PREFEITURA MUNICIPAL DE GUARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAR%C3%81/649",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+AURIFLAMA/648",
+          "title": "CÂMARA MUNICIPAL DE AURIFLAMA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+AURIFLAMA/648",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/FAIBI+-+IBITINGA/647",
+          "title": "FAIBI - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/FAIBI+-+IBITINGA/647",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CMDCA+DE+CRAVINHOS/646",
+          "title": "CMDCA DE CRAVINHOS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CMDCA+DE+CRAVINHOS/646",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CABR%C3%81LIA+PAULISTA/643",
+          "title": "PREFEITURA MUNICIPAL DE CABRÁLIA PAULISTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+CABR%C3%81LIA+PAULISTA/643",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+DE+OL%C3%8DMPIA/642",
+          "title": "PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE OLÍMPIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+DE+OL%C3%8DMPIA/642",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+JULIANA/630",
+          "title": "PREFEITURA MUNICIPAL - SANTA JULIANA-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+JULIANA/630",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+PEDREGULHO/641",
+          "title": "CÂMARA MUNICIPAL DE PEDREGULHO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+PEDREGULHO/641",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITUVERAVA+/640",
+          "title": "PREFEITURA MUNICIPAL - ITUVERAVA -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITUVERAVA+/640",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERV.+AUT.+MUNICIPAL+DE+SA%C3%9ADE-+SAMS+-+IBITINGA/639",
+          "title": "SERV. AUT. MUNICIPAL DE SAÚDE- SAMS - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERV.+AUT.+MUNICIPAL+DE+SA%C3%9ADE-+SAMS+-+IBITINGA/639",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/637",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/637",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/638",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/638",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/634",
+          "title": "PREFEITURA MUNICIPAL DE SEVERÍNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/634",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/635",
+          "title": "PREFEITURA MUNICIPAL DE SEVERÍNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/635",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/636",
+          "title": "PREFEITURA MUNICIPAL DE SEVERÍNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/636",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+C%C3%93RREGO+DO+OURO/623",
+          "title": "PREFEITURA MUNICIPAL DE CÓRREGO DO OURO-GO"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+C%C3%93RREGO+DO+OURO/623",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUARANT%C3%83/632",
+          "title": "PREFEITURA MUNICIPAL DE GUARANTÃ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUARANT%C3%83/632",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ELDORADO/633",
+          "title": "PREFEITURA MUNICIPAL DE ELDORADO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+ELDORADO/633",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/627",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/627",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/631",
+          "title": "PREFEITURA MUNICIPAL DE TERRA ROXA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/631",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/628",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/628",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ARAMINA/629",
+          "title": "PREFEITURA MUNICIPAL - ARAMINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ARAMINA/629",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+J%C3%9ALIO+MESQUITA/626",
+          "title": "CÂMARA MUNICIPAL DE JÚLIO MESQUITA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+J%C3%9ALIO+MESQUITA/626",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/625",
+          "title": "PREFEITURA MUNICIPAL DE URU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/625",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+QUEIROZ/624",
+          "title": "PREFEITURA MUNICIPAL DE QUEIROZ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+QUEIROZ/624",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+RIO+DAS+PEDRAS/622",
+          "title": "CÂMARA MUNICIPAL DE RIO DAS PEDRAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+RIO+DAS+PEDRAS/622",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/620",
+          "title": "PREFEITURA MUNICIPAL - CORUMBATAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/620",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/621",
+          "title": "PREFEITURA MUNICIPAL - CORUMBATAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+CORUMBATA%C3%8D/621",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/618",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/618",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SANTA+CASA+DE+GUAR%C3%81/619",
+          "title": "SANTA CASA DE GUARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SANTA+CASA+DE+GUAR%C3%81/619",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL++-+ITUVERAVA/617",
+          "title": "PREFEITURA MUNICIPAL  - ITUVERAVA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL++-+ITUVERAVA/617",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/614",
+          "title": "PREFEITURA MUNICIPAL DE PONGAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/614",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+LUT%C3%89CIA++/615",
+          "title": "PREFEITURA MUNICIPAL DE LUTÉCIA  -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+LUT%C3%89CIA++/615",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/616",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/616",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+BARRINHA/612",
+          "title": "PREFEITURA MUNICIPAL - BARRINHA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+BARRINHA/612",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/613",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/613",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/336",
+          "title": "PREFEITURA MUNICIPAL DE PONGAÍ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PONGA%C3%8D/336",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/337",
+          "title": "PREFEITURA MUNICIPAL DE URU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+URU/337",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/330",
+          "title": "PREFEITURA MUNICIPAL - NOVA EUROPA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+NOVA+EUROPA/330",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITAPOLIS/335",
+          "title": "PREFEITURA MUNICIPAL - ITAPOLIS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITAPOLIS/335",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/334",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/334",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+C%C3%82NDIDO+MOTA/331",
+          "title": "PREFEITURA MUNICIPAL DE CÂNDIDO MOTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+C%C3%82NDIDO+MOTA/331",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL++-+ITUVERAVA+/332",
+          "title": "PREFEITURA MUNICIPAL  - ITUVERAVA -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL++-+ITUVERAVA+/332",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/333",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/333",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PARAGUA%C3%87U+PAULISTA/328",
+          "title": "PREFEITURA MUNICIPAL DE PARAGUAÇU PAULISTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PARAGUA%C3%87U+PAULISTA/328",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/326",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/326",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/327",
+          "title": "PREFEITURA MUNICIPAL DE GUAIMBÊ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/327",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/325",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/325",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMDEF-+EMPRESA+MUN.+PARA+O+DESENV.+DE+FRANCA+-+FRANCA/322",
+          "title": "EMDEF- EMPRESA MUN. PARA O DESENV. DE FRANCA - FRANCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/EMDEF-+EMPRESA+MUN.+PARA+O+DESENV.+DE+FRANCA+-+FRANCA/322",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/323",
+          "title": "PREFEITURA MUNICIPAL DE ÁLVARO DE CARVALHO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/323",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/324",
+          "title": "PREFEITURA MUNICIPAL DE ÁLVARO DE CARVALHO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/324",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/320",
+          "title": "PREFEITURA MUNICIPAL - SANTA CRUZ DA ESPERANÇA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SANTA+CRUZ+DA+ESPERAN%C3%87A/320",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PINDORAMA+-+SP/321",
+          "title": "PREFEITURA MUNICIPAL DE PINDORAMA - SP-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PINDORAMA+-+SP/321",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+J%C3%9ALIO+MESQUITA/319",
+          "title": "PREFEITURA MUNICIPAL - JÚLIO MESQUITA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+J%C3%9ALIO+MESQUITA/319",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERV.+AUT.+MUNICIPAL+DE+SA%C3%9ADE-+SAMS+-+IBITINGA/313",
+          "title": "SERV. AUT. MUNICIPAL DE SAÚDE- SAMS - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERV.+AUT.+MUNICIPAL+DE+SA%C3%9ADE-+SAMS+-+IBITINGA/313",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/318",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/318",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/292",
+          "title": "PREFEITURA MUNICIPAL DE ÁLVARO DE CARVALHO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+%C3%81LVARO+DE+CARVALHO/292",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/314",
+          "title": "PREFEITURA MUNICIPAL DE IPUÃ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/314",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+IPU%C3%83+%28SAAEI%29+-+SP/315",
+          "title": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO IPUÃ (SAAEI) - SP-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+IPU%C3%83+%28SAAEI%29+-+SP/315",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+IPU%C3%83+%28SAAEI%29+-+SP/316",
+          "title": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO IPUÃ (SAAEI) - SP-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SERVI%C3%87O+AUT%C3%94NOMO+DE+%C3%81GUA+E+ESGOTO+IPU%C3%83+%28SAAEI%29+-+SP/316",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/311",
+          "title": "PREFEITURA MUNICIPAL DE IPUÃ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IPU%C3%83/311",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITAPOLIS/312",
+          "title": "PREFEITURA MUNICIPAL - ITAPOLIS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+ITAPOLIS/312",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/310",
+          "title": "PREFEITURA MUNICIPAL DE TERRA ROXA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TERRA+ROXA/310",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PINDORAMA+-+SP/308",
+          "title": "PREFEITURA MUNICIPAL DE PINDORAMA - SP-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PINDORAMA+-+SP/308",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/309",
+          "title": "HOSPITAL SÃO LUCAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/309",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+QUEIROZ/306",
+          "title": "PREFEITURA MUNICIPAL DE QUEIROZ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+QUEIROZ/306",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/305",
+          "title": "HOSPITAL SÃO LUCAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/305",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/304",
+          "title": "PREFEITURA MUNICIPAL DE GUAIMBÊ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUAIMB%C3%8A/304",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/303",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/303",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/302",
+          "title": "PREFEITURA MUNICIPAL DE COLINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+COLINA/302",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/300",
+          "title": "HOSPITAL SÃO LUCAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/300",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SOC.+POR.+DE+BENEFIC%C3%8ANCIA+DE+RIBEIR%C3%83O+PRETO/299",
+          "title": "SOC. POR. DE BENEFICÊNCIA DE RIBEIRÃO PRETO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SOC.+POR.+DE+BENEFIC%C3%8ANCIA+DE+RIBEIR%C3%83O+PRETO/299",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SOC.+POR.+DE+BENEFIC%C3%8ANCIA+DE+RIBEIR%C3%83O+PRETO/301",
+          "title": "SOC. POR. DE BENEFICÊNCIA DE RIBEIRÃO PRETO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SOC.+POR.+DE+BENEFIC%C3%8ANCIA+DE+RIBEIR%C3%83O+PRETO/301",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/295",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/295",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TRABIJU/296",
+          "title": "PREFEITURA MUNICIPAL DE TRABIJU-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TRABIJU/296",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/297",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/297",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/298",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/298",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IT%C3%81POLIS+/293",
+          "title": "PREFEITURA MUNICIPAL DE ITÁPOLIS -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IT%C3%81POLIS+/293",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/290",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/290",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/291",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/291",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MONTE+AZUL+PAULISTA/289",
+          "title": "PREFEITURA MUNICIPAL - MONTE AZUL PAULISTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MONTE+AZUL+PAULISTA/289",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/A+COMPANHIA+OPERACIONAL+DE+DESENVOLVIMENTO%2C+SANEAMENTO+E+A%C3%87%C3%95ES+URBANAS+%E2%80%93+CODAU/271",
+          "title": "A COMPANHIA OPERACIONAL DE DESENVOLVIMENTO, SANEAMENTO E AÇÕES URBANAS – CODAU-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/A+COMPANHIA+OPERACIONAL+DE+DESENVOLVIMENTO%2C+SANEAMENTO+E+A%C3%87%C3%95ES+URBANAS+%E2%80%93+CODAU/271",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/287",
+          "title": "HOSPITAL SÃO LUCAS-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/HOSPITAL+S%C3%83O+LUCAS/287",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+MOGI+MIRIM/285",
+          "title": "PREFEITURA MUNICIPAL DE MOGI MIRIM-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+MOGI+MIRIM/285",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/286",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/286",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/282",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/282",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/279",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/279",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/275",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/275",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RINC%C3%83O/283",
+          "title": "PREFEITURA MUNICIPAL DE RINCÃO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RINC%C3%83O/283",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/280",
+          "title": "PREFEITURA DA ESTÂNCIA TURÍSTICA - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+DA+EST%C3%82NCIA+TUR%C3%8DSTICA+-+IBITINGA/280",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/277",
+          "title": "PREFEITURA MUNICIPAL - MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+MOTUCA/277",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/281",
+          "title": "PREFEITURA MUNICIPAL - SERRA AZUL-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+SERRA+AZUL/281",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IT%C3%81POLIS+/272",
+          "title": "PREFEITURA MUNICIPAL DE ITÁPOLIS -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+IT%C3%81POLIS+/272",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PATROC%C3%8DNIO+PAULISTA/273",
+          "title": "PREFEITURA MUNICIPAL DE PATROCÍNIO PAULISTA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+PATROC%C3%8DNIO+PAULISTA/273",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/266",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/266",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/267",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/267",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/FAIBI+-+IBITINGA/269",
+          "title": "FAIBI - IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/FAIBI+-+IBITINGA/269",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/270",
+          "title": "PREFEITURA MUNICIPAL - JABORANDI-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+-+JABORANDI/270",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/268",
+          "title": "PREFEITURA MUNICIPAL DE SEVERÍNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/268",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+MOGI+MIRIM/264",
+          "title": "PREFEITURA MUNICIPAL DE MOGI MIRIM-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+MOGI+MIRIM/264",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+S%C3%83O+JO%C3%83O+BATISTA+DO+GL%C3%93RIA/248",
+          "title": "PREFEITURA MUNICIPAL DE SÃO JOÃO BATISTA DO GLÓRIA-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+S%C3%83O+JO%C3%83O+BATISTA+DO+GL%C3%93RIA/248",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TABATINGA/254",
+          "title": "PREFEITURA MUNICIPAL DE TABATINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TABATINGA/254",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/253",
+          "title": "PREFEITURA MUNICIPAL DE SEVERÍNIA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SEVER%C3%8DNIA/253",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/INSTITUTO+INNOVARE+-+%28UPA+SERT%C3%83OZINHO%29/250",
+          "title": "INSTITUTO INNOVARE - (UPA SERTÃOZINHO)-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/INSTITUTO+INNOVARE+-+%28UPA+SERT%C3%83OZINHO%29/250",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/251",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/251",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/252",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/252",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RIFAINA/249",
+          "title": "PREFEITURA MUNICIPAL DE RIFAINA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+RIFAINA/249",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/246",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/246",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/247",
+          "title": "PREFEITURA MUNICIPAL DE GUATAPARÁ-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUATAPAR%C3%81/247",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TAMBA%C3%9A+/245",
+          "title": "PREFEITURA MUNICIPAL DE TAMBAÚ -SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+TAMBA%C3%9A+/245",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CONSELHO+MUNICIPAL+DOS+DIREITOS+DA+CRIAN%C3%87A+E+DO+ADOLESCENTE+DE+IBITINGA/5",
+          "title": "CONSELHO MUNICIPAL DOS DIREITOS DA CRIANÇA E DO ADOLESCENTE DE IBITINGA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/CONSELHO+MUNICIPAL+DOS+DIREITOS+DA+CRIAN%C3%87A+E+DO+ADOLESCENTE+DE+IBITINGA/5",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+MOTUCA/3",
+          "title": "CÂMARA MUNICIPAL DE MOTUCA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%82MARA+MUNICIPAL+DE+MOTUCA/3",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SAAE+-+INDAIATUBA/2",
+          "title": "SAAE - INDAIATUBA-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/SAAE+-+INDAIATUBA/2",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SERT%C3%83OZINHO/4",
+          "title": "PREFEITURA MUNICIPAL DE SERTÃOZINHO-SP"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+SERT%C3%83OZINHO/4",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUARAN%C3%89SIA/685",
+          "title": "PREFEITURA MUNICIPAL DE GUARANÉSIA-MG"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br/concursos/publicacoes/PREFEITURA+MUNICIPAL+DE+GUARAN%C3%89SIA/685",
+          "title": "DOCUMENTOS"
+        },
+        {
+          "url": "http://mhinformatica.inf.br/",
+          "title": "MH Informática"
+        },
+        {
+          "url": "https://www.aptaconcursos.com.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8547410500398519",
+        "https://www.google.com/recaptcha/api.js?render=6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/jquery/jquery.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/jquery/jquery-migrate.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/js/jquery.maskedinput.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/js/jquery.bxslider.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/bootstrap/js/bootstrap.bundle.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/easing/easing.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/superfish/hoverIntent.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/superfish/superfish.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/wow/wow.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/venobox/venobox.min.js",
+        "https://aptaconcursos.com.br/template/apta_concursos/lib/owlcarousel/owl.carousel.min.js",
+        "https://www.aptaconcursos.com.br/js/bootbox.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+        "https://aptaconcursos.com.br/template/apta_concursos/js/main.js?v=1788876370"
+      ],
+      "diagnosis": "HTTP document available; source contract and scope still unvalidated"
+    },
+    {
+      "source": "shdias_open",
+      "url": "https://www.shdias.com.br/concursos/",
+      "basis": "Existing catalogue URL; one User-Agent compatibility check",
+      "observed_at": "2026-09-08T14:06:01.574823+00:00",
+      "tls_verified": true,
+      "status": 403,
+      "location": null,
+      "bytes": 30052,
+      "sha256": "f592accdf75bb18a9a9150b41e3f4876c2d56b6cc9bd964b246d6080b5defc4e",
+      "file": "shdias_open-ce8df6be6dea.html",
+      "encoding": "utf-8",
+      "title": "SHDIAS - Home",
+      "text_preview": "SHDIAS - Home SHDIAS Área do candidato person Home Sobre Sobre Quem somos Objetivos Missão, Visão e Valores Formas de contratação Estratégias e Iniciativas Politica de Privacidade Residência Médica Concursos / Seletivos Perguntas Frequentes MENU Home Sobre Sobre Quem somos Objetivos Missão, Visão e Valores Formas de contratação Estratégias e Iniciativas Politica de Privacidade Residência Médica Concursos / Seletivos Perguntas Frequentes Área do candidato person CONCURSOS / SELETIVOS campaign Inscrições abertas new_releases Em breve all_inclusive Em andamento done_all Finalizado filter_alt Filt",
+      "links": [
+        {
+          "url": "https://www.shdias.com.br/usuario/",
+          "title": "Área do candidato person"
+        },
+        {
+          "url": "https://www.shdias.com.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.shdias.com.br/",
+          "title": "Home"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/quem_somos",
+          "title": "Quem somos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/objetivos",
+          "title": "Objetivos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/missao",
+          "title": "Missão, Visão e Valores"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/formas_de_contratacao",
+          "title": "Formas de contratação"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/estrategias_e_iniciativas",
+          "title": "Estratégias e Iniciativas"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/politica_privacidade",
+          "title": "Politica de Privacidade"
+        },
+        {
+          "url": "https://www.shdias.com.br/residencia_medica",
+          "title": "Residência Médica"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos",
+          "title": "Concursos / Seletivos"
+        },
+        {
+          "url": "https://www.shdias.com.br/faq",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://www.shdias.com.br/",
+          "title": "Home"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/quem_somos",
+          "title": "Quem somos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/objetivos",
+          "title": "Objetivos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/missao",
+          "title": "Missão, Visão e Valores"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/formas_de_contratacao",
+          "title": "Formas de contratação"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/estrategias_e_iniciativas",
+          "title": "Estratégias e Iniciativas"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/politica_privacidade",
+          "title": "Politica de Privacidade"
+        },
+        {
+          "url": "https://www.shdias.com.br/residencia_medica",
+          "title": "Residência Médica"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos",
+          "title": "Concursos / Seletivos"
+        },
+        {
+          "url": "https://www.shdias.com.br/faq",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://www.shdias.com.br/usuario/",
+          "title": "Área do candidato person"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos/index/?status=&busca=",
+          "title": "campaign Inscrições abertas"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos/index/?status=proximos&busca=",
+          "title": "new_releases Em breve"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos/index/?status=andamento&busca=",
+          "title": "all_inclusive Em andamento"
+        },
+        {
+          "url": "https://www.shdias.com.br/concursos/index/?status=finalizado&busca=",
+          "title": "done_all Finalizado"
+        },
+        {
+          "url": "https://www.instagram.com/shdias_consultoria/",
+          "title": "Siga-nos no Instagram"
+        },
+        {
+          "url": "https://wa.me/+5519997064455?text=Ol%C3%A1",
+          "title": "WhatsApp"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/fale_conosco",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/quem_somos",
+          "title": "Quem somos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/objetivos",
+          "title": "Objetivos"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/missao",
+          "title": "Missão, Visão e Valores"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/formas_de_contratacao",
+          "title": "Formas de contratação"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/estrategias_e_iniciativas",
+          "title": "Estratégias e Iniciativas"
+        },
+        {
+          "url": "https://www.shdias.com.br/institucional/politica_privacidade",
+          "title": "Politica de Privacidade"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=UA-73304711-6",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+        "https://cdn.shdias.com.br//assets/plugins/jquery/jquery.min.js",
+        "https://cdn.shdias.com.br//assets/plugins/bootstrap/popper.min.js",
+        "https://cdn.shdias.com.br//assets/plugins/bootstrap/bootstrap.min.js",
+        "https://cdn.shdias.com.br//assets/plugins/bootstrap/bootstrap-slider.js",
+        "https://cdn.shdias.com.br//assets/plugins/tether/js/tether.min.js",
+        "https://cdn.shdias.com.br//assets/plugins/raty/jquery.raty-fa.js",
+        "https://cdn.shdias.com.br//assets/plugins/slick/slick.min.js",
+        "https://cdn.shdias.com.br//assets/plugins/jquery-nice-select/js/jquery.nice-select.min.js",
+        "https://cdn.shdias.com.br//js/jquery-1.10.2.min.js",
+        "https://cdn.shdias.com.br//js/jquery-migrate-1.2.1.min.js",
+        "https://cdn.shdias.com.br//js/bootstrap.min.js",
+        "https://cdn.shdias.com.br//js/material-scrolltop.min.js",
+        "https://cdn.shdias.com.br//js/jquery.inputmask.bundle.min.js",
+        "https://cdn.shdias.com.br//js/myscriptfirst.min.js",
+        "https://cdn.shdias.com.br//js/jquery.maskedinput.js",
+        "https://cdn.shdias.com.br//js/jquery.bxslider.min.js",
+        "https://cdn.shdias.com.br//lib/bootstrap/js/bootstrap.bundle.min.js",
+        "https://www.shdias.com.br/js/cadastros.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js",
+        "https://www.shdias.com.br/MVC/asset/js/jquery-validation-messages.js",
+        "https://cdn.jsdelivr.net/npm/sweetalert2@11",
+        "https://jsappcdn.hikeorders.com/main/assets/js/hko-accessibility.min.js?widgetId=jt1R8lUMZEhx",
+        "https://cdn.shdias.com.br//assets/js/script.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+        "https://cdn.shdias.com.br/js/jquery-eu-cookie-law-popup.js",
+        "https://www.shdias.com.br/asset/js/mascara_mh.js"
+      ],
+      "diagnosis": "HTTP 403 refusal despite HTML body; subsequent literal andamento link succeeds with 200"
+    }
+  ],
+  "followup_evidence": [
+    "backend/tests/fixtures/tenderproof_batch60_blockers/followup-manifest.json",
+    "backend/tests/fixtures/tenderproof_batch60_blockers/detail-manifest.json"
+  ],
+  "recovered": {
+    "epl_open": {
+      "listing_url": "https://www.eplconcursos.com.br/concursos/andamento",
+      "requires_browser_user_agent": true,
+      "scope": "Observed andamento listing; no complete historical coverage proof"
+    },
+    "apta_open": {
+      "listing_url": "https://www.aptaconcursos.com.br",
+      "requires_browser_user_agent": true,
+      "scope": "Observed personnel listings, excluding unrelated scope; no full coverage proof"
+    },
+    "shdias_open": {
+      "listing_url": "https://www.shdias.com.br/concursos/index/?status=andamento&busca=",
+      "requires_browser_user_agent": true,
+      "scope": "Observed andamento filter; /concursos/ remains HTTP 403"
+    }
+  },
+  "unresolved": {
+    "aocp_open": "Cloudflare HTTP 403. Search observes official /concursos/index.html, but no acquisition contract validated. Selection.net search result contains explicit test contest and cannot substitute production catalogue.",
+    "unifil_open": "Cloudflare HTTP 403 at official main portal. Search corroborates same host, no safe verified alternative.",
+    "seprod_open": "TLS certificate expired; no insecure fallback.",
+    "iuds_open": "TLS certificate expired; no insecure fallback.",
+    "fumarc_open": "TLS certificate chain cannot be validated with current verified HTTP transport. Search confirms same host official site; no trusted alternate chain established.",
+    "leandroferreira_open": "Catalogue host DNS resolution failed. Search results for municipality do not establish identity of named consultancy; cannot silently replace source with municipality.",
+    "idgran_open": "Catalogue host DNS resolution failed. No authoritative alternative domain observed in bounded search."
+  },
+  "official_search_evidence": [
+    {
+      "url": "https://www.institutoaocp.org.br/concursos/index.html",
+      "finding": "Official concurso navigation indexed; not direct acquisition proof."
+    },
+    {
+      "url": "https://institutoaocp.selecao.net.br/informacoes/1/",
+      "finding": "Title and publications explicitly say Teste; rejected as production substitute."
+    },
+    {
+      "url": "https://main.institutounifil.com.br/",
+      "finding": "Indexed official main portal; direct request remains challenge."
+    },
+    {
+      "url": "https://www.fumarc.com.br/conheca-a-fumarc",
+      "finding": "Indexed official institutional page, same host affected by TLS issuer validation."
+    },
+    {
+      "url": "https://www.seprod.com.br/concursos/",
+      "finding": "Indexed official route, same host affected by expired certificate."
+    }
+  ]
+}

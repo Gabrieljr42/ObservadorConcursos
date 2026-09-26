@@ -1,0 +1,26 @@
+{
+  "schema": "t012.fafipa.luna-parser-r4-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "FAFIPA_PARSER_R4_REJECT_FOR_INTEGRATION",
+  "scope": "read-only; parser/tests/preflight only; no fields.py, registry, API/DB or pilot mutation",
+  "checks": {
+    "pins": "PASS: parser SHA d26904eac0e12d41eaa6fc6e343401687a3d814b3c1137e16f52e62fc1a6b837; PDF SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f; 3630911 bytes; 38 pages",
+    "identity_fallback": "PASS: source fafipa_open/external 4208, organization Município de Mirador - PR and main edital 001/2026; empty identity_ids is explicitly documented fallback, not generic acceptance",
+    "guards": "PASS: byte drift, page count, identity drift and U+FFFD rejection are fail-closed; focused test suite 3 passed; compileall passed; fresh local extraction has no U+FFFD",
+    "receipt_consistency": "FAIL: T012-fafipa-open-pdf-r3-receipt.json reports replacement_characters_absent=false and replacement_characters_present_in_extracted_text=true, contradicting the fresh R4 preflight and actual clean extraction. This stale/ambiguous receipt cannot certify the gate.",
+    "integration_contract": "FAIL/PENDING: module exposes a standalone strong_preflight dict, not the normal fields/adapter extraction hook; no integration test proves the organization+edital fallback reaches publication._revalidate. Existing preflight remains a diagnostic and reviewed-run evidence is t012-r3, not parser-R4 output."
+  },
+  "required_corrections": [
+    "Regenerate the PDF receipt from the same R4 extraction, recording replacement_characters_absent=true and replacement_characters_present_in_extracted_text=false (or an unambiguous equivalent), with matching parser SHA.",
+    "Add an isolated integration/validation test showing the R4 fallback is invoked in the normal path and remains bounded to source/external/SHA/bytes/organization/edital; do not rely on an empty identity set alone.",
+    "Then rerun the full focused gate and importer/revalidate dry-run before integration."
+  ],
+  "evidence": [
+    "backend/app/tenderproof/fafipa_t012_r4.py",
+    "docs/execucao/evidencias/T012/fafipa_open/parser-r4/T012-fafipa-open-strong-binding-preflight.json",
+    "docs/execucao/evidencias/T012/fafipa_open/T012-fafipa-open-pdf-r3-receipt.json",
+    "backend/tests/test_t012_fafipa_r4.py"
+  ],
+  "safety": "No integration, import, proposal, apply or external mutation was performed."
+}

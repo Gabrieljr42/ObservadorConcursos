@@ -1,0 +1,19 @@
+{
+  "schema": "t012.apta.backend-integration-r8-independent-review.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only backend dispatch review; no live, pilot, DB, or source mutation",
+  "checks": {
+    "wiring": "PASS: fields.py exact apta_open/external 708 branch invokes strict APTA parser and retains only titulo/orgao/edital_numero",
+    "identity": "PASS: validation.py routes apta_open to strict identity_ids; source 48/external 708 and Unicode/percent-encoded detail URLs are supported",
+    "artifact": "PASS: SHA db9c6d26..., 362093 bytes, exact document URL and 20 ordered pages are pinned",
+    "guards": "PASS: empty/error/truncated/U+FFFD, source/external/SHA/bytes/document/detail URL and literal identity-marker drift fail closed",
+    "isolation": "PASS: create-contract, KLC strict dispatch and Avança two-artifact pins remain covered by regressions"
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_t012_apta_strong_preflight.py docs/execucao/evidencias/T012/apta_open/test_apta_parser_r7_proposed.py backend/tests/test_tenderproof_canonical.py -k 'apta or dispatch or create or update'", "result": "24 passed, 9 deselected"},
+    {"command": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/apta_aragarcas_parser.py backend/app/tenderproof/fields.py backend/app/tenderproof/validation.py backend/tests/test_t012_batch2_dispatch.py", "result": "PASS"}
+  ],
+  "warning": "No live/API/pilot effects; deployment should retain exact dispatcher and run the full batch regression before release.",
+  "live_mutation": false
+}

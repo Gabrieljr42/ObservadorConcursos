@@ -1,0 +1,48 @@
+{
+  "schema": "t012.reviewed-run-handoff.v1",
+  "state": "PROPOSTA_PRONTA",
+  "target_schema": "tenderproof.reviewed-run.v1",
+  "source": {
+    "source_id": "shdias_open",
+    "source_number": 51,
+    "adapter": "SHDIASAdapter",
+    "identity_confirmed": true
+  },
+  "reviewed_candidate": {
+    "external_id": "MTEw/MzA4",
+    "title": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+    "detail_url": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+    "opening_notice_url": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf"
+  },
+  "target_contract": {
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "reviewed_run_schema": "tenderproof.reviewed-run.v1",
+    "reviewed_fields_manifest": "docs/execucao/evidencias/T012/shdias_open/field-evidence.json",
+    "reference_only": true,
+    "apply": false
+  },
+  "handoff": {
+    "owner_user_id": 1,
+    "next_step": "standard_reviewed_run_import",
+    "required_before_import": [
+      "allocate canonical source and concurso IDs through the standard flow",
+      "perform normal human review before catalog mutation"
+    ],
+    "fail_closed_reasons": [
+      "canonical IDs are intentionally not invented",
+      "this proposal does not authorize publication or catalog mutation"
+    ]
+  },
+  "provenance": {
+    "listing_fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-listing-d24cf41921.html",
+    "detail_fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-detail-e633962f88.html",
+    "detail_sha256": "CC9E151C7CAE26D0C92BDE911C9D89F5B06706F3DF7EB4FB565FB2F892320D99",
+    "opening_pdf_artifact": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "opening_pdf_sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "opening_pdf_bytes": 697485,
+    "opening_pdf_pages": 44,
+    "network_used": true,
+    "catalogue_mutated": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "t012.apta_open.owner-scoped-runid-security-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only code/security review; no deploy, live or catalog mutation",
+  "checks": {
+    "derivation": "PASS: _run_id hashes source, owner_user_id, concurso_id, external_id, artifact SHA and semantic fields; evidence_id/path/timestamps do not affect identity.",
+    "cross_owner_isolation": "PASS: same semantic envelope under distinct owners derives distinct IDs; GET /runs/{run_id} returns 404 when stored owner differs.",
+    "same_owner_replay": "PASS: same owner/content returns idempotent; changed content at a forced collision raises strong conflict.",
+    "persisted_run_compatibility": "PASS: stored legacy IDs remain directly readable; no migration/renaming or takeover is attempted.",
+    "artifact_conflict": "PASS: artifact_id with a different SHA is rejected, preventing cross-owner content aliasing.",
+    "proposal_and_outbox_duplication": "PASS by scoped proposal uniqueness (owner, run_id, target, hash) and unchanged publication/outbox code; run import itself creates no proposal/version/outbox/notification.",
+    "authorization_tests": "PASS: directed JWT/owner-isolation test and reviewed-run suite, 6 passed.",
+    "compileall": "PASS"
+  },
+  "test_results": {
+    "directed": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_publication.py::test_real_jwt_authorization_and_owner_isolation",
+    "directed_result": "6 passed",
+    "broader_publication": "29 passed, 1 failed because preserved fixture ../docs/execucao/evidencias/T010/id1.pdf is absent; failure is fixture availability, not owner-scoped code"
+  },
+  "residual_condition": "Keep old persisted IDs readable and require normal owner-authenticated GET before proposal operations; do not synthesize or migrate legacy IDs.",
+  "mutations_performed": false
+}

@@ -1,0 +1,57 @@
+{
+  "evidence_id": "T010-ID16-ui-coordinator-v91-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/16",
+  "snapshots": 2,
+  "snapshots_identical_after_reload": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "observed": {
+    "title": "Concurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz-SP",
+    "cards": [
+      "Bibliotecário",
+      "Chefe de Controle Interno",
+      "Cirurgião Dentista",
+      "Contador",
+      "Coveiro",
+      "Cozinheiro",
+      "Dentista",
+      "Encanador",
+      "Engenheiro de Segurança do Trabalho",
+      "Farmacêutico Bioquímico",
+      "Fonoaudiólogo",
+      "Médico Clínico Geral",
+      "Médico Geriatra",
+      "Médio Ginecologista",
+      "Médico do Trabalho",
+      "Médico Pediatra",
+      "Padeiro",
+      "Tratorista"
+    ],
+    "cards_count": 18,
+    "immediate_plus_ac1_cards": 10,
+    "zero_plus_cadastro_reserva_cards": 8,
+    "all_cards_fields": ["remuneracao", "jornada", "requisitos", "taxa"],
+    "prova_data": "12/01/2025",
+    "inscricoes": "27/11/2024–29/12/2024",
+    "history": "13/09/2026: cargos+prova de Não informado para valor/data",
+    "invalid_tokens": {"null": 0, "undefined": 0, "NaN": 0},
+    "official_page_and_edital_link": true
+  },
+  "api_reconciliation": {
+    "version": 91,
+    "outbox": 91,
+    "notification": 90,
+    "proposal_id": "tpp-1a0fc40cc8df713e6958de0f43efc032",
+    "source": "docs/execucao/evidencias/T010/gate-ID16-pos-apply-20260913.json",
+    "version_number_visible_in_ui": false
+  },
+  "limits": [
+    "Evidência UI atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado e nenhum piloto foi operado nesta revisão.",
+    "O número de versão 91 vem da reconciliação API, não de texto visível na UI."
+  ]
+}

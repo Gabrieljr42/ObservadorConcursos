@@ -1,0 +1,38 @@
+{
+  "schema": "t005.review-receipt.v1",
+  "revision": "r2",
+  "contest": 32,
+  "source": "elo_open",
+  "source_id": 47,
+  "artifact_id": "art-07b137af65",
+  "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+  "byte_len": 429261,
+  "parser": "app.tenderproof.barra_longa_parser",
+  "run_id": "tp-reviewed-511f58b869b35d449311e6184b2d3dea",
+  "preflight": "passed",
+  "derivations": "equal",
+  "cargo_schedule_applicability": "each_cargo_evidence_pages_18_and_23",
+  "baseline_catalogue": {
+    "concurso_id": 32,
+    "cargos": null,
+    "inscricao_dates_match": true,
+    "prova_data_canonical": false,
+    "taxa_publishable": false
+  },
+  "expected_proposed_fields": [
+    "cargos"
+  ],
+  "dry_run": {
+    "status": "validated",
+    "dry_run": true,
+    "run_id": "tp-reviewed-511f58b869b35d449311e6184b2d3dea",
+    "fields": [
+      "cargos"
+    ],
+    "catalogue_mutated": false
+  },
+  "proposal": "prepared_isolated_no_apply",
+  "network": false,
+  "catalogue_mutated": false,
+  "review_required": true
+}

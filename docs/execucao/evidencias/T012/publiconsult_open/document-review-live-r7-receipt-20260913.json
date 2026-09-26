@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult.document-review-live-r7-receipt.v1",
+  "timestamp": "2026-09-13T14:34:06Z",
+  "status": "PREPARED_READY_FOR_DOCUMENT_APPROVAL",
+  "source_id": 56,
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "url_handling": {"complete_signed_manifest_url_used_in_memory": true, "requested_final_equal": true, "has_raw_1": true, "has_aws_access_key": true, "has_expires": true, "has_signature": true, "url_persisted": false, "url_logged": false},
+  "artifact": {"artifact_id": "publiconsult-open-taf-681-r2", "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "byte_len": 341466, "pages": 6},
+  "preflight": {"health": 200, "login": 200, "run_get": 200, "pending_before": true, "current_before": null, "checkpoint": {"contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "notifications": 91}},
+  "prepare": {"http": 200, "case_id": "drc-preserved-5b8ae617394ffc55fa7f3f2321677c81", "revision_hash": "cb5ea0d5910df1e4c4ccb990f4a309c3674f0abdfe4f82c2cd125f8cbf42b0ca", "documents": 1, "stored_sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "extracted_pages": 6},
+  "after": {"pending": true, "current_case_confirmed": true, "checkpoint": {"contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "notifications": 91}},
+  "approve_document": false,
+  "proposal": false,
+  "apply": false,
+  "next_gate": "independent document-effect approval; no proposal retry until document review is approved"
+}

@@ -1,0 +1,613 @@
+{
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99found",
+  "observed_at": "2026-09-08T14:57:49.788406+00:00",
+  "scope": "two bounded samples, not full source coverage or publication",
+  "tls_verified": true,
+  "browser_sessions": 0,
+  "limits": {
+    "listing_pages_per_cycle": 1,
+    "detail_attempts_per_cycle": 3,
+    "html_bytes": 2097152,
+    "driver_deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60
+  },
+  "cycles": [
+    {
+      "source": "funpec_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-a3ef3f2632ce",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funpec.br/processos-seletivos/novos/",
+          "https://funpec.br/processos-seletivos/em-andamento/",
+          "https://funpec.br/processos-seletivos/encerrados/",
+          "https://funpec.br/processos-seletivos/?pagina=1",
+          "https://funpec.br/processos-seletivos/?pagina=2",
+          "https://funpec.br/processos-seletivos/?pagina=3",
+          "https://funpec.br/processos-seletivos/?pagina=4",
+          "https://funpec.br/processos-seletivos/?pagina=5",
+          "https://funpec.br/processos-seletivos/?pagina=9"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funpec.br/processos-seletivos/",
+          "file": "funpec_selection-cycle1-listing-39fd47acac12.html",
+          "sha256": "39fd47acac1260463ef85c4f918bd67c27bcadbbcf49f34133772d51da99ea23",
+          "bytes": 70462,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:57:50.589127+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-9a84d36d71cd",
+          "candidate": {
+            "candidate_id": "funpec_selection-processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+            "title_observed": "PROCESSO SELETIVO 12/2026 – CUIDADOR EM SAÚDE - NEI (CADASTRO DE RESERVA) 12/2026",
+            "detail_url_observed": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
+            "external_id": "processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+            "observed_at": "2026-09-08T14:57:50.689760Z",
+            "source": "funpec_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: número/ano do edital FUNPEC diverge do processo observado",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
+              "file": "funpec_selection-cycle1-detail-77a7df9863e4.html",
+              "sha256": "77a7df9863e4992f5792cd3ec39f384b9ac1b611e5d03b4e6390c32ae862ae0d",
+              "bytes": 59535,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:57:51.579262+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          }
+        },
+        {
+          "run_id": "tpr-562b7ee9520c",
+          "candidate": {
+            "candidate_id": "funpec_selection-processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+            "title_observed": "PROCESSO SELETIVO 10/2026 – ANALISTA EM SEGURANÇA DA INFORMAÇÃO (CADASTRO DE RESERVA) 10/2026",
+            "detail_url_observed": "https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/",
+            "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+            "observed_at": "2026-09-08T14:57:50.689760Z",
+            "source": "funpec_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/",
+              "file": "funpec_selection-cycle1-detail-b862f2e7b4a3.html",
+              "sha256": "b862f2e7b4a3e3f74e4fb4c17d400d06ef1ec662f15b75de3093ff571f8ab457",
+              "bytes": 60028,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:57:52.263761+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funpec_selection-01cc9bdbdfa879c778",
+            "title": "EDITAL 10/2026",
+            "url_requested": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "url_final": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 10/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: COMUNICADO 001 – PRORROGAÇÃO DAS INSCRIÇÕES)."
+          },
+          "artifact": {
+            "artifact_id": "art-06a13d0281",
+            "sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+            "byte_len": 950097,
+            "url_requested": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "url_final": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:57:52.534419Z",
+            "storage_path": "art-06a13d0281-ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835.pdf"
+          },
+          "total_pages": 11,
+          "processed_pages": 11,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=11/11",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.766
+    },
+    {
+      "source": "fade_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-cceb2507bb3c",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://fade.org.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fade.org.br",
+          "file": "fade_selection-cycle1-listing-3a4464fba4f5.html",
+          "sha256": "3a4464fba4f54479f4a7608d00b5166b5cd6a908dea9d4c0836eaafa095e4a24",
+          "bytes": 115885,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:57:53.952154+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-554475d8bd2a",
+          "candidate": {
+            "candidate_id": "fade_selection-estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+            "title_observed": "Estágio em Saúde – Fisioterapia | Cadastro Reserva | Edital 092/2026 | Fade-UFPE",
+            "detail_url_observed": "https://fade.org.br/estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe/",
+            "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+            "observed_at": "2026-09-08T14:57:54.113926Z",
+            "source": "fade_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fade.org.br/estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe/",
+              "file": "fade_selection-cycle1-detail-f6ba6c48d6ac.html",
+              "sha256": "f6ba6c48d6acec2be8861ba53b21119b61ac37aeba478b951831e87a997c7332",
+              "bytes": 92289,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:57:54.524044+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fade_selection-c61d1abfbbb40793fa",
+            "title": "Edital 092/2026",
+            "url_requested": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "url_final": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 092/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-50eb480d4e",
+            "sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+            "byte_len": 688914,
+            "url_requested": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "url_final": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:57:54.687474Z",
+            "storage_path": "art-50eb480d4e-0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8.pdf"
+          },
+          "total_pages": 7,
+          "processed_pages": 7,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=7/7",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.015
+    },
+    {
+      "source": "fapergs_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-46f519bce1d8",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapergs.rs.gov.br/selecao-2025",
+          "file": "fapergs_selection-cycle1-listing-485a087a7f28.html",
+          "sha256": "485a087a7f286d10a644b1238e513da1906fac296b4d6b72852e9ae7bf9ec3b1",
+          "bytes": 91440,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:58:00.198559+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-005a5ef2d90f",
+          "candidate": {
+            "candidate_id": "fapergs_selection-selecao-2025",
+            "title_observed": "FAPERGS - Processo Seletivo 2025",
+            "detail_url_observed": "https://fapergs.rs.gov.br/selecao-2025",
+            "external_id": "selecao-2025",
+            "observed_at": "2026-09-08T14:58:00.308096Z",
+            "source": "fapergs_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapergs.rs.gov.br/selecao-2025",
+              "file": "fapergs_selection-cycle1-detail-6cf7b3dd7dec.html",
+              "sha256": "6cf7b3dd7dec36e79fe808453261c387e9ba600e98719aeda22dc5e5e454bb46",
+              "bytes": 91440,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:02.855455+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapergs_selection-273faaa93046856c84",
+            "title": "Edital Contratação Temporária",
+            "url_requested": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "url_final": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Contratação Temporária' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: PRIMEIRO TERMO ADITIVO AO EDITAL Nº01/2025 - PROCESSO SELETIVO SIMPLIFICADO - PSS; Lista preliminar de inscritos deferidos e indeferidos; Aviso - Lista Preliminar de Inscrições; Lista definitiva de inscritos; Lista das notas preliminares - Ampla Concorrência)."
+          },
+          "artifact": {
+            "artifact_id": "art-532eee66c8",
+            "sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+            "byte_len": 557707,
+            "url_requested": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "url_final": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:58:04.059035Z",
+            "storage_path": "art-532eee66c8-2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 9.578
+    },
+    {
+      "source": "funpec_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-5470704e06ab",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funpec.br/processos-seletivos/novos/",
+          "https://funpec.br/processos-seletivos/em-andamento/",
+          "https://funpec.br/processos-seletivos/encerrados/",
+          "https://funpec.br/processos-seletivos/?pagina=1",
+          "https://funpec.br/processos-seletivos/?pagina=2",
+          "https://funpec.br/processos-seletivos/?pagina=3",
+          "https://funpec.br/processos-seletivos/?pagina=4",
+          "https://funpec.br/processos-seletivos/?pagina=5",
+          "https://funpec.br/processos-seletivos/?pagina=9"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funpec.br/processos-seletivos/",
+          "file": "funpec_selection-cycle2-listing-39fd47acac12.html",
+          "sha256": "39fd47acac1260463ef85c4f918bd67c27bcadbbcf49f34133772d51da99ea23",
+          "bytes": 70462,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:58:05.712284+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-60617ea4bd93",
+          "candidate": {
+            "candidate_id": "funpec_selection-processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+            "title_observed": "PROCESSO SELETIVO 12/2026 – CUIDADOR EM SAÚDE - NEI (CADASTRO DE RESERVA) 12/2026",
+            "detail_url_observed": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
+            "external_id": "processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva",
+            "observed_at": "2026-09-08T14:58:05.784301Z",
+            "source": "funpec_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: número/ano do edital FUNPEC diverge do processo observado",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
+              "file": "funpec_selection-cycle2-detail-77a7df9863e4.html",
+              "sha256": "77a7df9863e4992f5792cd3ec39f384b9ac1b611e5d03b4e6390c32ae862ae0d",
+              "bytes": 59535,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:06.352985+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          }
+        },
+        {
+          "run_id": "tpr-9a38abd5ef7b",
+          "candidate": {
+            "candidate_id": "funpec_selection-processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+            "title_observed": "PROCESSO SELETIVO 10/2026 – ANALISTA EM SEGURANÇA DA INFORMAÇÃO (CADASTRO DE RESERVA) 10/2026",
+            "detail_url_observed": "https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/",
+            "external_id": "processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva",
+            "observed_at": "2026-09-08T14:58:05.784301Z",
+            "source": "funpec_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/",
+              "file": "funpec_selection-cycle2-detail-b862f2e7b4a3.html",
+              "sha256": "b862f2e7b4a3e3f74e4fb4c17d400d06ef1ec662f15b75de3093ff571f8ab457",
+              "bytes": 60028,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:06.981773+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funpec_selection-01cc9bdbdfa879c778",
+            "title": "EDITAL 10/2026",
+            "url_requested": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "url_final": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 10/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: COMUNICADO 001 – PRORROGAÇÃO DAS INSCRIÇÕES)."
+          },
+          "artifact": {
+            "artifact_id": "art-abd61a0cff",
+            "sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+            "byte_len": 950097,
+            "url_requested": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "url_final": "https://funpec.br/wp-content/uploads/2026/08/11-EDITAL-102026.-VF.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:58:07.293806Z",
+            "storage_path": "art-abd61a0cff-ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835.pdf"
+          },
+          "total_pages": 11,
+          "processed_pages": 11,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=11/11",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.094
+    },
+    {
+      "source": "fade_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-1d2a7e9a3dc3",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://fade.org.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fade.org.br",
+          "file": "fade_selection-cycle2-listing-3a4464fba4f5.html",
+          "sha256": "3a4464fba4f54479f4a7608d00b5166b5cd6a908dea9d4c0836eaafa095e4a24",
+          "bytes": 115885,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:58:08.613986+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b51a026901e9",
+          "candidate": {
+            "candidate_id": "fade_selection-estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+            "title_observed": "Estágio em Saúde – Fisioterapia | Cadastro Reserva | Edital 092/2026 | Fade-UFPE",
+            "detail_url_observed": "https://fade.org.br/estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe/",
+            "external_id": "estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe",
+            "observed_at": "2026-09-08T14:58:08.753652Z",
+            "source": "fade_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fade.org.br/estagio-em-saude-fisioterapia-cadastro-reserva-edital-092-2026-fade-ufpe/",
+              "file": "fade_selection-cycle2-detail-f6ba6c48d6ac.html",
+              "sha256": "f6ba6c48d6acec2be8861ba53b21119b61ac37aeba478b951831e87a997c7332",
+              "bytes": 92289,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:09.146697+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fade_selection-c61d1abfbbb40793fa",
+            "title": "Edital 092/2026",
+            "url_requested": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "url_final": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 092/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-bdb5d17cbc",
+            "sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+            "byte_len": 688914,
+            "url_requested": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "url_final": "https://fade.org.br/wp-content/uploads/2026/09/EDITAL-092_2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:58:09.315664Z",
+            "storage_path": "art-bdb5d17cbc-0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8.pdf"
+          },
+          "total_pages": 7,
+          "processed_pages": 7,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=7/7",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 1.844
+    },
+    {
+      "source": "fapergs_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-220db59aa3b6",
+      "listing_status": "awaiting_selection",
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapergs.rs.gov.br/selecao-2025",
+          "file": "fapergs_selection-cycle2-listing-3fdd4f88dadf.html",
+          "sha256": "3fdd4f88dadf619eb45c05f7b32afdc4d98f7d7ec5a1fab53cfee45b6cddbe4c",
+          "bytes": 91440,
+          "format": "decoded public HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:58:13.767469+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b20c4ae7df2e",
+          "candidate": {
+            "candidate_id": "fapergs_selection-selecao-2025",
+            "title_observed": "FAPERGS - Processo Seletivo 2025",
+            "detail_url_observed": "https://fapergs.rs.gov.br/selecao-2025",
+            "external_id": "selecao-2025",
+            "observed_at": "2026-09-08T14:58:13.875955Z",
+            "source": "fapergs_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapergs.rs.gov.br/selecao-2025",
+              "file": "fapergs_selection-cycle2-detail-485a087a7f28.html",
+              "sha256": "485a087a7f286d10a644b1238e513da1906fac296b4d6b72852e9ae7bf9ec3b1",
+              "bytes": 91440,
+              "format": "decoded public HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:14.319899+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapergs_selection-273faaa93046856c84",
+            "title": "Edital Contratação Temporária",
+            "url_requested": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "url_final": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Contratação Temporária' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: PRIMEIRO TERMO ADITIVO AO EDITAL Nº01/2025 - PROCESSO SELETIVO SIMPLIFICADO - PSS; Lista preliminar de inscritos deferidos e indeferidos; Aviso - Lista Preliminar de Inscrições; Lista definitiva de inscritos; Lista das notas preliminares - Ampla Concorrência)."
+          },
+          "artifact": {
+            "artifact_id": "art-8556c06ecc",
+            "sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+            "byte_len": 557707,
+            "url_requested": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "url_final": "https://fapergs.rs.gov.br/upload/arquivos/202507/25133102-edital-contratacao-temporaria.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:58:14.698660Z",
+            "storage_path": "art-8556c06ecc-2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.672
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 14,
+    "all_clients_closed": true
+  }
+}

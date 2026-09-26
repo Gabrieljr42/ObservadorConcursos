@@ -1,0 +1,12 @@
+{
+  "schema": "tenderproof.t010.id16.r3-document-review-proposal.v1",
+  "recorded_at": "2026-09-13T03:04:00-03:00",
+  "baseline": {"contests": 33, "sources": 99, "cargos": 162, "versions": 90, "proposals": 93, "outbox": 90, "notifications": 89, "push_devices": 0, "push_deliveries": 0, "push_delivery_attempts": 0},
+  "backup": {"bundle_prefix": "pilot-20260913T055455247Z", "restore_isolated": true, "counts": {"contests": 33, "versions": 90, "proposals": 93, "outbox": 90, "notifications": 89}},
+  "deploy": {"scope": "api-only", "health": 200, "regressions": {"8": 200, "14": 200, "17": 200, "32": 200}},
+  "artifact": {"artifact_id": "art-id16-retificacao01-e5d57b83713d", "sha256": "e5d57b83713d09e9095a23fd7767f3ab8f9c109cad8aa1636cb4f1bd13b38f05", "byte_len": 397534, "pages": 23, "content_type": "application/pdf"},
+  "document_review": {"run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "case_id": "drc-preserved-71b7cd7f72727d3d09e327f6df69c3a6", "revision_hash": "3bad4bbde3446bd3704d10ee17f0608f8c16728f7492335d587cae5fdcec99e0", "approve_effect": "no_field_change", "pending_after": false, "replay_same_case": true, "catalogue_mutation": false},
+  "proposal": {"id": "tpp-bdb86b21341b923ed50b5346fcc3ddb6", "hash": "13ae635924b1ef1d53207ec94f84ccc1481c027154710e9bd46f0fda7763be07", "state": "proposed", "concurso_id": 16, "source_id": 18, "eligible_fields": ["prova_data"], "expected_fields": ["cargos", "prova_data"], "baseline_cargos": null, "baseline_prova_data": null, "proposed_cargos_count": 18, "proposed_immediate": 10, "proposed_cr": 8, "proposed_prova_data": "2025-01-12", "cargos_blocker": "trecho, página, origem ou vínculo documental inválido", "approve": false, "apply": false},
+  "counts_after": {"versions": 90, "proposals": 94, "outbox": 90, "notifications": 89},
+  "decision": "STOP: proposal was created normally, but eligible_fields did not meet the released exact cargos+prova_data gate; no approve/apply or retry performed."
+}

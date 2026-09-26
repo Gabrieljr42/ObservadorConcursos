@@ -1,0 +1,270 @@
+{
+  "validated_at": "2026-09-08T13:11:34.278254+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-blocked-replay-20260908",
+  "scope": "offline official blocked samples; controlled due-time advancement between cycles",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "sources": [
+    {
+      "source": "rbo_open",
+      "candidate": "203",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "detail_failed:ValueError",
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "idecan_open",
+      "candidate": "24",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "detail_failed:ValueError",
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 0,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "detail_failed:ValueError",
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 0,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "ibfc_open",
+      "candidate": "496",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_page_limit",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "source": "admtec_open",
+      "candidate": "MTEz/MTIx",
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "detail_failed:ValueError",
+            "listing_exhaustiveness_unproven"
+          ],
+          "observations": 1,
+          "valid_observations": 0,
+          "known_candidate_preserved": true,
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "retry_or_failed",
+              "error": "ValueError"
+            }
+          ]
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "downloads": 0,
+  "drivers_closed": 16,
+  "metrics": {
+    "measured_at": 1788873096.7466345,
+    "jobs_by_status": {
+      "failed": 8,
+      "succeeded": 8
+    },
+    "retry_attempts": 0,
+    "oldest_ready_delay_seconds": 0,
+    "completed_cycles_by_source": [
+      {
+        "source": "admtec_open",
+        "cycles": 2,
+        "mean_seconds": 0.3155174255371094,
+        "max_seconds": 0.32154393196105957
+      },
+      {
+        "source": "ibfc_open",
+        "cycles": 2,
+        "mean_seconds": 0.2713048458099365,
+        "max_seconds": 0.27167820930480957
+      },
+      {
+        "source": "idecan_open",
+        "cycles": 2,
+        "mean_seconds": 0.21114087104797363,
+        "max_seconds": 0.22017145156860352
+      },
+      {
+        "source": "rbo_open",
+        "cycles": 2,
+        "mean_seconds": 0.28927016258239746,
+        "max_seconds": 0.33735132217407227
+      }
+    ],
+    "snapshot_pages": 16,
+    "snapshot_html_bytes": 389918,
+    "unconfirmed_browser_attempts": 0,
+    "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+  }
+}

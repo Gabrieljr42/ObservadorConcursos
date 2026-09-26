@@ -1,0 +1,49 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "avancasp_open",
+  "concurso_id": 272,
+  "external_id": "272",
+  "title": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+  "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+  "observed_at": "2026-09-13T00:00:00Z",
+  "reference_only": true,
+  "pending_fields": [],
+  "owner_user_id": 1,
+  "artifact": {
+    "artifact_id": "avancasp-open-detail-272-html-8f84661e",
+    "sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3",
+    "byte_len": 37232,
+    "url_requested": "https://avancasp.selecao.net.br/informacoes/272/",
+    "url_final": "https://avancasp.selecao.net.br/informacoes/272/",
+    "content_type": "text/html",
+    "downloaded_at": "2026-09-13T00:00:00Z",
+    "content_path": "tests/fixtures/tenderproof_pilot/avancasp_open-detail.html"
+  },
+  "fields": [
+    {
+      "field_name": "cargos",
+      "value": [
+        {"nome": "Agente de Fiscalização Ambiental", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "3473.20", "moeda": "BRL", "jornada": "40h", "requisitos": "Médio + Técnico", "taxa_inscricao": "74.00"},
+        {"nome": "Agente de Trânsito", "vagas_imediatas": 0, "cadastro_reserva": true, "vagas_observadas": "Cadastro de Reserva", "remuneracao": "2473.98", "moeda": "BRL", "jornada": "40h", "requisitos": "Médio", "taxa_inscricao": "74.00"},
+        {"nome": "Agente Fiscal de Obras", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "3473.20", "moeda": "BRL", "jornada": "40h", "requisitos": "Médio + Técnico", "taxa_inscricao": "74.00"},
+        {"nome": "Agrimensor", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "3713.64", "moeda": "BRL", "jornada": "40h", "requisitos": "Técnico", "taxa_inscricao": "74.00"},
+        {"nome": "Arquiteto - A", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "11735.45", "moeda": "BRL", "jornada": "40h", "requisitos": "Superior", "taxa_inscricao": "92.00"},
+        {"nome": "Auxiliar de Serviços", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "2204.14", "moeda": "BRL", "jornada": "40h", "requisitos": "Fundamental Incompleto", "taxa_inscricao": "55.00"},
+        {"nome": "Biólogo", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "4889.21", "moeda": "BRL", "jornada": "30h", "requisitos": "Superior", "taxa_inscricao": "92.00"},
+        {"nome": "Engenheiro Civil - A", "vagas_imediatas": 0, "cadastro_reserva": true, "vagas_observadas": "Cadastro de Reserva", "remuneracao": "11735.45", "moeda": "BRL", "jornada": "40h", "requisitos": "Superior", "taxa_inscricao": "92.00"},
+        {"nome": "Motorista", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "2711.76", "moeda": "BRL", "jornada": "40h", "requisitos": "Fundamental Completo", "taxa_inscricao": "55.00"},
+        {"nome": "Operador de Máquinas", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "3473.20", "moeda": "BRL", "jornada": "40h", "requisitos": "Fundamental Incompleto", "taxa_inscricao": "55.00"},
+        {"nome": "Professor de Educação Básica II - PEB II - Artes", "vagas_imediatas": 0, "cadastro_reserva": true, "vagas_observadas": "Cadastro de Reserva", "remuneracao": "4942.63", "moeda": "BRL", "jornada": "36h", "requisitos": "Superior", "taxa_inscricao": "92.00"},
+        {"nome": "Psicólogo - A", "vagas_imediatas": 0, "cadastro_reserva": true, "vagas_observadas": "Cadastro de Reserva", "remuneracao": "8202.12", "moeda": "BRL", "jornada": "40h", "requisitos": "Superior", "taxa_inscricao": "92.00"},
+        {"nome": "Servente de Limpeza", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "2204.14", "moeda": "BRL", "jornada": "40h", "requisitos": "Fundamental Incompleto", "taxa_inscricao": "55.00"},
+        {"nome": "Técnico em Edificações", "vagas_imediatas": 1, "cadastro_reserva": true, "vagas_observadas": "1 + CR", "remuneracao": "3713.64", "moeda": "BRL", "jornada": "40h", "requisitos": "Médio + Técnico", "taxa_inscricao": "74.00"}
+      ],
+      "evidence": [
+        {"evidence_id": "avancasp-272-title", "artifact_id": "avancasp-open-detail-272-html-8f84661e", "document_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3", "source_url": "https://avancasp.selecao.net.br/informacoes/272/", "page_number": 1, "snippet": "PREFEITURA MUNICIPAL DE CABRE", "method": "preserved_html_dom", "method_version": "t012-avancasp-v1"},
+        {"evidence_id": "avancasp-272-schedule", "artifact_id": "avancasp-open-detail-272-html-8f84661e", "document_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3", "source_url": "https://avancasp.selecao.net.br/informacoes/272/", "page_number": 1, "snippet": "04/09/2026 00:00 a 05/10/2026 23:59", "method": "preserved_html_dom", "method_version": "t012-avancasp-v1"},
+        {"evidence_id": "avancasp-272-exam", "artifact_id": "avancasp-open-detail-272-html-8f84661e", "document_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3", "source_url": "https://avancasp.selecao.net.br/informacoes/272/", "page_number": 1, "snippet": "DATA PREVISTA DA PROVA: 20/12/2026", "method": "preserved_html_dom", "method_version": "t012-avancasp-v1"},
+        {"evidence_id": "avancasp-272-jobs", "artifact_id": "avancasp-open-detail-272-html-8f84661e", "document_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3", "source_url": "https://avancasp.selecao.net.br/informacoes/272/", "page_number": 1, "snippet": "Agente de Fiscaliza", "method": "preserved_html_table", "method_version": "t012-avancasp-v1"}
+      ]
+    }
+  ]
+}

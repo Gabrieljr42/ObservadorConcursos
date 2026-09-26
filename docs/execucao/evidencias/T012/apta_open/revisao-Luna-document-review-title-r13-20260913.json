@@ -1,0 +1,34 @@
+{
+  "schema": "t012.luna.apta.document-review-title-review-r13.v1",
+  "verdict": "ACCEPT_FOR_SINGLE_EXACT_TITLE_PREPARE",
+  "scope": "read-only offline review; authorize one retry only; no approve/proposal/apply/live mutation",
+  "identity": {
+    "source": "apta_open",
+    "source_id": 48,
+    "external_id": "708",
+    "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+    "kind": "retificacao",
+    "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+    "byte_len": 76767,
+    "pages": 1,
+    "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf"
+  },
+  "mismatch": {
+    "manifest_title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+    "sent_title": "1ª Retificação do Edital do Concurso Público nº 01/2026",
+    "classification": "true exact-title mismatch; not Unicode, case, whitespace or HTML-entity normalization",
+    "prior_result": "409 with no retry, approval, proposal or mutation"
+  },
+  "authorized_action": {
+    "route": "one prepare-preserved retry for the existing owner/run and exact pending document",
+    "document_title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+    "preserve": "same URL, SHA, byte_len, page count, artifact_id and kind=retificacao",
+    "stop_on": ["any non-2xx/409 response", "identity/URL/hash/bytes/pages drift", "principal revalidation failure", "existing incompatible current case"],
+    "forbidden": ["new acquisition", "approve", "proposal", "apply", "changing manifest title or artifact pins"]
+  },
+  "tests": [
+    {"command":"pytest -q test_title_match_r13.py test_storage_path_r3.py test_apta_parser_r7_proposed.py test_t012_batch2_dispatch.py -k 'apta or title or storage_path'","result":"12 passed, 10 deselected"},
+    {"command":"compileall review_cases.py continuous_router.py contracts.py","result":"PASS"}
+  ],
+  "side_effects": {"retry_executed":false,"approve":false,"proposal":false,"apply":false,"live":false}
+}

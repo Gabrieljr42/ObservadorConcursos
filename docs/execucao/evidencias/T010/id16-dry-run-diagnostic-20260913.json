@@ -1,0 +1,21 @@
+{
+  "schema": "observador.t010.id16.dry_run_diagnostic.v1",
+  "recorded_at": "2026-09-13T02:02:26.0975631-03:00",
+  "input": {"path": "docs/execucao/evidencias/T010/id16.pdf", "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb", "bytes": 396219},
+  "generated_envelope": {"path": "docs/execucao/evidencias/T010/id16-generated-run490.json", "schema": "tenderproof.reviewed-run.v1", "source": "omni_open", "external_id": "246", "concurso_id": 16, "artifact_id": "art-0a483f2ba1", "fields_order": ["cargos", "prova_data"], "evidence_ids": ["cargo-1", "cargo-2", "cargo-3", "cargo-4", "cargo-5", "cargo-6", "cargo-7", "cargo-8", "cargo-9", "cargo-10", "cargo-11", "cargo-12", "cargo-13", "cargo-14", "cargo-15", "cargo-16", "cargo-17", "cargo-18", "prova-data"], "method": "pypdf-native-text", "method_version": "omni-osvaldo-cruz-246/1", "pages": {"1": 13, "2": 5, "22": 1}, "document_sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb"},
+  "importer_dry_run": {"status": "validated", "run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "fields": ["cargos", "prova_data"]},
+  "comparison": {
+    "previous_run_id": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae",
+    "generated_run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+    "match": false,
+    "field_values_equal": true,
+    "evidence_metadata_equal": true,
+    "evidence_diff": "18 cargo snippets differ only in pypdf whitespace/line wrapping: generated envelope uses native pypdf text; previous 781 envelope used processing-layer normalized text. prova_data evidence is equal.",
+    "outer_timestamp_diff": "generated envelope observed_at/downloaded_at=2026-09-13T00:00:00Z; previous receipt envelope used 2026-09-08T21:27:59.982220Z. These timestamps are excluded from _run_id.",
+    "candidate_document_artifact_ids_and_paths": "not identity-bearing in _run_id; unchanged SHA-bound artifact",
+    "canonicalization": "builder now emits cargos without nested evidence; field-level evidence is the sole evidence representation",
+    "repeat_dry_run": {"run_1": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "run_2": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "equal": true}
+  },
+  "mutation": {"import": false, "proposal": false, "approve": false, "apply": false},
+  "decision": "STOP legacy-781 substitution; canonical local generator is deterministic at 1f9a and no run ID is forced. Deployment/import must use one pinned extraction layer and regenerate its receipt together with the envelope."
+}

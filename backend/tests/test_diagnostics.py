@@ -1,5 +1,6 @@
 from unittest.mock import MagicMock, patch
 import pytest
+pytestmark = pytest.mark.usefixtures('legacy_crawler_enabled')
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 

@@ -1,0 +1,23 @@
+{
+  "schema": "independent-review.real-proposals.t011.v1",
+  "reviewer": "Luna-independent",
+  "scope": ["docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md", "T011 manifesto/package", "read-only GET proposal/contest/review-status"],
+  "checks": {
+    "proposed": "GET 200 for 17/18/20; all state=proposed, version_id=null, result=null, approved_by=null",
+    "binding": "concurso_id/run_id and artifact SHA match T011 accepted package/manifest for 17/18/20",
+    "payload": "proposed/eligible fields are identity and explicitly checked registration/identity fields; pending fields not promoted",
+    "record21_search": "GET query collection is unsupported (405); no proposal_id returned by 409. GET /concursos/21 and /review-status shows existing catalog target and pending document review, with no new mutation",
+    "not_sent": "dispatch evidence confirms 22/23/24/25 were not sent; no approval/application"
+  },
+  "records": [
+    {"record_id": 17, "proposal_id": "tpp-02c29e4baa1b036eab1d02de59a65c74", "decision": "ACEITO", "classification": "proposed; no mutation", "correction": "Nenhuma."},
+    {"record_id": 18, "proposal_id": "tpp-e592fd8efd3baebe12b3b76a696a04f3", "decision": "ACEITO", "classification": "proposed; no mutation", "correction": "Nenhuma."},
+    {"record_id": 20, "proposal_id": "tpp-49afc9246a42a37353b05df1bf11650a", "decision": "ACEITO", "classification": "proposed; no mutation", "correction": "Nenhuma."},
+    {"record_id": 21, "proposal_id": null, "decision": "DEVOLVIDO", "classification": "409 conflict unresolved; not demonstrably idempotent", "correction": "Do not retry. Reconcile the existing catalog target/document-review identity and preserve a GET-addressable proposal or explicit semantic conflict evidence before dispatch."},
+    {"record_id": 22, "decision": "ACEITO", "classification": "not sent by stop gate", "correction": "Nenhuma; remain blocked."},
+    {"record_id": 23, "decision": "ACEITO", "classification": "not sent by stop gate", "correction": "Nenhuma; remain blocked."},
+    {"record_id": 24, "decision": "ACEITO", "classification": "not sent by stop gate", "correction": "Nenhuma; remain blocked."},
+    {"record_id": 25, "decision": "ACEITO", "classification": "not sent by stop gate", "correction": "Nenhuma; remain blocked."}
+  ],
+  "authorization": "Read-only review only; no POST/retry/approval/application/quadro change."
+}

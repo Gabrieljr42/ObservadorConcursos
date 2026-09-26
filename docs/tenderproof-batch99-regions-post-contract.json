@@ -1,0 +1,42 @@
+{
+  "source": "fapeg_selection",
+  "scope": "Public read-only PDF export, not subscription or submission",
+  "detail_proof": "backend/tests/fixtures/tenderproof_batch99_regions/selection-manifest.json",
+  "script_proof": "backend/tests/fixtures/tenderproof_batch99_regions/script-manifest.json",
+  "content_type_proof": "backend/tests/fixtures/tenderproof_batch99_regions/downloader-manifest.json",
+  "request": {
+    "method": "POST",
+    "url": "https://selecao.go.gov.br/exportarEditalPdf",
+    "body": "177,0",
+    "content_type": "application/x-www-form-urlencoded"
+  },
+  "identity": "DocumentCandidate persists request method/body/type; document_manifest adds only POST metadata; document_identity component4 includes request, preserving GET tuple layout and hashes. Versions181/195 cannot collide with177 at same URL.",
+  "guards": [
+    "Typed request forbids arbitrary headers,credentials,body shape",
+    "Adapter binds endpoint/body/version/doc_id/kind to FAPEG009/2024",
+    "POST through common DNS/TLS/navigation/byte/deadline limits",
+    "RedirectPOST rejected without next network request",
+    "No GET/browser fallback",
+    "CheckpointDriver checks lease before export and compares lease candidate",
+    "Acquisition rejects unsupported driver explicitly",
+    "Recovery adopts persisted completed run without repeated POST"
+  ],
+  "tests": "tests/test_tenderproof_document_post.py:15passed; tests/test_tenderproof_batch99_regions.py:9passed;66existing HTTP/recovery/processing/acquisition/magic focals passed",
+  "live_report": "docs/tenderproof-batch99-fapeg-live.json",
+  "real_cycles": 2,
+  "valid_cycles": 2,
+  "pages": 29,
+  "bytes": 489850,
+  "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+  "all_4_clients_closed": true,
+  "pdf_header_policy": {
+    "helper": "app/tenderproof/pdf_header.py",
+    "prefix_limit": 16,
+    "allowed_prefix_bytes": "ASCII SPACE TAB CR LF",
+    "rewrites_bytes": false,
+    "signature_is_validity": false,
+    "strict_parser_unchanged": true,
+    "fapesc_outcome": "2live transport failures plus2offline strict parser failures preserved; no certification",
+    "raw_fapesc_sha256": "92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae"
+  }
+}

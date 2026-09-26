@@ -1,0 +1,12 @@
+{
+  "schema": "t012.publiconsult.publiconsult-r6-readonly-diagnosis.v1",
+  "timestamp": "2026-09-13T14:27:28Z",
+  "scope": "read-only GET/log/artifact listing; no prepare/retry or mutation",
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "get_state": {"pending": true, "pending_count": 1, "current": null},
+  "pending_url_redacted": "https://gsistbucket.s3.amazonaws.com/...TAF.pdf?AWSAccessKeyId=[redacted]&Expires=[redacted]&Signature=[redacted]&raw=1",
+  "prepare_r6_request_url": "...TAF.pdf?raw=1",
+  "finding": "O blob d358...bb7 existe no store com 341466 bytes. O 409 decorre da checagem literal de artifact.url_requested/final contra o manifesto pendente: o manifesto mantém a URL assinada completa (AWSAccessKeyId/Expires/Signature + raw=1), enquanto R6 enviou somente raw=1. document_identity normaliza assinaturas, mas a checagem posterior de URL é literal.",
+  "api_log": {"prepare_http": 409, "current_get_http": 200, "worker_matching_entries": false},
+  "secrets": "AWS query values redacted"
+}

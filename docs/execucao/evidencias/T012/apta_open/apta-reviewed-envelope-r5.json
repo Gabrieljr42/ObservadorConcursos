@@ -1,0 +1,42 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "apta_open",
+  "concurso_id": 1,
+  "external_id": "708",
+  "title": "Câmara Municipal de Aragarças",
+  "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+  "reference_only": true,
+  "pending_fields": [],
+  "owner_user_id": 1,
+  "observed_at": "2026-09-08T14:13:28.861827Z",
+  "artifact": {
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T14:13:29.857615Z",
+    "content_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "fields": [
+    {
+      "field_name": "titulo",
+      "value": "Câmara Municipal de Aragarças",
+      "original_value": "Câmara Municipal de Aragarças",
+      "evidence": [{"evidence_id":"ev-r5-title-c34c20e93c","artifact_id":"art-18bef50e17","document_sha256":"db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c","source_url":"https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf","page_number":1,"snippet":"CONCURSO PÚBLICO 01/2026; EDITAL DE ABERTURA COMPLETO; CÂMARA DE ARAGARÇAS; A Câmara Municipal de Aragarças, Estado de Goiás, por intermédio de seu Presidente","method":"deterministic-regex","method_version":"tenderproof-fields/1.21"}]
+    },
+    {
+      "field_name": "orgao",
+      "value": "Câmara Municipal De Aragarças",
+      "original_value": "Câmara Municipal de Aragarças",
+      "evidence": [{"evidence_id":"ev-r5-orgao-2b14d53a48","artifact_id":"art-18bef50e17","document_sha256":"db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c","source_url":"https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf","page_number":14,"snippet":"CÂMARA MUNICIPAL DE ARAGARÇAS/GO; ANEXO I – ATRIBUIÇÕES","method":"deterministic-regex","method_version":"tenderproof-fields/1.21"}]
+    },
+    {
+      "field_name": "edital_numero",
+      "value": "01/2026",
+      "original_value": "01/2026",
+      "evidence": [{"evidence_id":"ev-r5-edital-9f7f9e0a01","artifact_id":"art-18bef50e17","document_sha256":"db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c","source_url":"https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf","page_number":1,"snippet":"CONCURSO PÚBLICO 01/2026 - CÂMARA MUNICIPAL DE ARAGARÇAS/GO; EDITAL DE ABERTURA COMPLETO","method":"deterministic-regex","method_version":"tenderproof-fields/1.21"}]
+    }
+  ]
+}

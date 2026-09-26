@@ -1,0 +1,1868 @@
+{
+  "generated_at": "2026-09-08T14:46:38.656466+00:00",
+  "batch_gate": "accepted_bounded_partial_scope_with_blocked_sources",
+  "observed_plan_gate": "accepted_bounded_partial_scope_with_blocked_sources",
+  "previous_batch30_gate_preserved": "accepted_bounded_partial_scope_with_blocked_sources",
+  "scope": "Read-only report, fixture, persisted-run and PDF-byte audit. Page-limit recovery is offline revalidation, not process-crash recovery or an extra HTTP acquisition.",
+  "registration": {
+    "total_registered_adapters": 51,
+    "batch_additions": 30,
+    "batch_registered_adapters": 21,
+    "batch_missing_adapters": [
+      "aocp_open",
+      "seprod_open",
+      "fumarc_open",
+      "unifil_open",
+      "leandroferreira_open",
+      "iuds_open",
+      "idgran_open",
+      "idib_open",
+      "jcm_open"
+    ]
+  },
+  "counts": {
+    "sources_with_verified_valid_pdf": 19,
+    "sources_with_two_verified_cycles": 19,
+    "sources_without_verified_valid_pdf": 11,
+    "attempt_records_including_failed_trials": 107,
+    "distinct_attempted_source_candidate_pairs": 37,
+    "distinct_valid_source_candidate_pairs": 21,
+    "valid_sample_records_including_offline_reprocessing": 40,
+    "distinct_durable_pdf_files_verified": 40,
+    "distinct_pdf_sha256_verified": 20,
+    "physical_verified_pdf_bytes": 39684710,
+    "deduplicated_verified_pdf_bytes": 19651396
+  },
+  "sources_requiring_offline_page_limit_revalidation": [
+    "cesgranrio_open",
+    "fundep_open"
+  ],
+  "pdf_hashes_shared_across_source_entries": [
+    {
+      "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+      "sources": [
+        "consulplan_open",
+        "institutoconsulplan_open"
+      ]
+    }
+  ],
+  "source_count_note": "Catalogue entries are counted separately; shared PDF hashes do not become distinct documents or prove independent source families.",
+  "cycle_records": [
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "consulplan_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "institutoconsulplan_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "zambini_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "consulplan_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "institutoconsulplan_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-catalogue-live.json",
+      "source": "zambini_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-cpcon-valid-live.json",
+      "source": "cpcon_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-cpcon-valid-live.json",
+      "source": "cpcon_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-elo-live.json",
+      "source": "elo_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-elo-live.json",
+      "source": "elo_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-live.json",
+      "source": "cpcon_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-live.json",
+      "source": "gualimp_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-live.json",
+      "source": "cpcon_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-live.json",
+      "source": "gualimp_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-verified-live.json",
+      "source": "cpcon_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-verified-live.json",
+      "source": "gualimp_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-verified-live.json",
+      "source": "cpcon_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-extended-verified-live.json",
+      "source": "gualimp_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-cesgranrio-live.json",
+      "source": "cesgranrio_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-cesgranrio-live.json",
+      "source": "cesgranrio_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "ibam_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "fcc_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "cebraspe_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "avalia_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "ibam_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "fcc_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "cebraspe_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-live.json",
+      "source": "avalia_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-major-page-recovery.json",
+      "source": "cesgranrio_open",
+      "cycle": 1,
+      "offline_revalidation": true
+    },
+    {
+      "report": "tenderproof-batch60-major-page-recovery.json",
+      "source": "cesgranrio_open",
+      "cycle": 2,
+      "offline_revalidation": true
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "msconcursos_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "consep_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "funvapi_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "msconcursos_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "consep_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-own-live.json",
+      "source": "funvapi_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "epl_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "apta_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "shdias_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "epl_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "apta_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-recovered-live.json",
+      "source": "shdias_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-fixed-live.json",
+      "source": "fundep_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-fixed-live.json",
+      "source": "facet_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-fixed-live.json",
+      "source": "fundep_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-fixed-live.json",
+      "source": "facet_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "fundep_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "facet_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "educapb_open",
+      "cycle": 1,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "fundep_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "facet_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-live.json",
+      "source": "educapb_open",
+      "cycle": 2,
+      "offline_revalidation": false
+    },
+    {
+      "report": "tenderproof-batch60-shared-page-recovery.json",
+      "source": "fundep_open",
+      "cycle": 1,
+      "offline_revalidation": true
+    },
+    {
+      "report": "tenderproof-batch60-shared-page-recovery.json",
+      "source": "facet_open",
+      "cycle": 1,
+      "offline_revalidation": true
+    },
+    {
+      "report": "tenderproof-batch60-shared-page-recovery.json",
+      "source": "fundep_open",
+      "cycle": 2,
+      "offline_revalidation": true
+    },
+    {
+      "report": "tenderproof-batch60-shared-page-recovery.json",
+      "source": "facet_open",
+      "cycle": 2,
+      "offline_revalidation": true
+    }
+  ],
+  "validation_status_records": {
+    "pending": 59,
+    "valid": 40,
+    "wrong_contest": 8
+  },
+  "audit_errors": [],
+  "junit_reports": [
+    {
+      "file": "backend/.tenderproof/batch60-contemax-contracts.xml",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-elo-contracts.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-elo-reis-contracts.xml",
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-integrated-contracts.xml",
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-integrated-regression.xml",
+      "tests": 885,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 14
+    },
+    {
+      "file": "backend/.tenderproof/batch60-major-contracts-final.xml",
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-major-tests.xml",
+      "tests": 131,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-own-contracts.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-postgres.xml",
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "backend/.tenderproof/batch60-resource-guards.xml",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "tests_note": "Per-report counts overlap; do not sum these suites as unique tests.",
+  "remaining_gate_requirements": [
+    "Continuous replay for all new valid and blocked sources with deduplication and failure isolation.",
+    "Real process-crash recovery for the new valid source scope.",
+    "Mixed queue capacity proof covering the new batch and retry behavior.",
+    "Canonical creation/update review evidence from preserved new-batch PDFs with documentary holds.",
+    "Resolve missing contracts and external/documentary impediments or explicitly adjudicate their bounded exclusion before gate acceptance."
+  ],
+  "whole_source_coverage_certified": false,
+  "gate_acceptance_written": false,
+  "production_activation_performed": false,
+  "input_reports": [
+    {
+      "file": "docs/tenderproof-batch60-blockers.json",
+      "sha256": "ae64922e4777581159a6df3e611e04b199330f0badb321ca81af86660ecfbd06"
+    },
+    {
+      "file": "docs/tenderproof-batch60-catalogue-contracts.json",
+      "sha256": "02e183600fd743831cdfe8b2ebb0c1d24ab7aa03a9b8d42bd057e3d531596063"
+    },
+    {
+      "file": "docs/tenderproof-batch60-catalogue-live.json",
+      "sha256": "8efb72c7a286f76057f4d5b8561582739f8f6b0095a5bf2b1e7321c410d560fd"
+    },
+    {
+      "file": "docs/tenderproof-batch60-contemax-pdf-probe.json",
+      "sha256": "5789c96710dde82d60c1847566c4936dab54b41efda595a537b8b17960626250"
+    },
+    {
+      "file": "docs/tenderproof-batch60-contemax-validation.json",
+      "sha256": "0f82a34c51403c5bc1b3846ff33230606dc6c6e5633000ee856d1885617368dc"
+    },
+    {
+      "file": "docs/tenderproof-batch60-continuous-replay.json",
+      "sha256": "ff00434caabcbcbe102c488224db90c20d8102a8615f72fed8fc0d220441396a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-cpcon-refresh-proof.json",
+      "sha256": "eb58c69fd3109dc155d27fc060ec991a3231d8b9cfb314326f7508c2a8eb2abf"
+    },
+    {
+      "file": "docs/tenderproof-batch60-cpcon-valid-live.json",
+      "sha256": "9800792f71fb52ab710a323ee71118c3a8208b84ae454976afb3f9aea2d6918a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-elo-live.json",
+      "sha256": "3ed957e3dcd0c78571ec83921a2d446d617c6ce670cbe805b4a82ea6e035b62a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-extended-contracts.json",
+      "sha256": "34fd2aa79332c220f035297bad30756f7b11ef4afc2408f0c851a43e80b5c4a9"
+    },
+    {
+      "file": "docs/tenderproof-batch60-extended-live.json",
+      "sha256": "a13868f2bea0a6b76ae8b6384e1b80603d355055941220412ec69497d9d2a6f4"
+    },
+    {
+      "file": "docs/tenderproof-batch60-extended-verified-live.json",
+      "sha256": "b99a728068d39869735999303e2de2a6bcdf907a975bbf216dd3b4baf52a4185"
+    },
+    {
+      "file": "docs/tenderproof-batch60-gate-validation.json",
+      "sha256": "03de41d53412a37a1ad378ed45e65c658ab961112b23c9c4b75c7a9efce7cde2"
+    },
+    {
+      "file": "docs/tenderproof-batch60-major-cesgranrio-live.json",
+      "sha256": "668d4464dc7dbec0e9791265beadc064b5ecad5f02a27babb44300c5bcbfa97f"
+    },
+    {
+      "file": "docs/tenderproof-batch60-major-live.json",
+      "sha256": "10e1b244d9b32def82c6ff8e3a5c3239d0506bcd7f1a022b19d2272d51fcd551"
+    },
+    {
+      "file": "docs/tenderproof-batch60-major-page-recovery.json",
+      "sha256": "9c58fc63a5cbea69792e036f707b91096395c80b35d6d7a4a787bdd1c99548be"
+    },
+    {
+      "file": "docs/tenderproof-batch60-major-sas-identity.json",
+      "sha256": "98187d2f58107c9ce6bae3827f8585e423520cdd5cf99ea6cd82427c7a7ee63d"
+    },
+    {
+      "file": "docs/tenderproof-batch60-major-validation.json",
+      "sha256": "113107847b9b74ae65c7dde807539b7717723e9f0724dbc2571d914d0a21a7ce"
+    },
+    {
+      "file": "docs/tenderproof-batch60-material-update.json",
+      "sha256": "bef73492d09c98c13f6016c8cc6c4d42101074a1c991f0159b10d67137fe0764"
+    },
+    {
+      "file": "docs/tenderproof-batch60-mixed-validation.json",
+      "sha256": "d2fbe180e11e43256b49b04b8959a5391a3545349283b485c97f657b9096956d"
+    },
+    {
+      "file": "docs/tenderproof-batch60-offline-page-limits.json",
+      "sha256": "d24d41642ea1292d106cf01d6147582982ec0ff1cb7eb1561dea454552677bb8"
+    },
+    {
+      "file": "docs/tenderproof-batch60-own-live.json",
+      "sha256": "2488565d2ecf798c53df487c0957ffe9c171ad6d720deeb2d4d757dfd02865ee"
+    },
+    {
+      "file": "docs/tenderproof-batch60-postgres-validation.json",
+      "sha256": "41dc2373f98f538dc654c312a83a874ab85692a189d36ac2b31604547bbf7d4c"
+    },
+    {
+      "file": "docs/tenderproof-batch60-publication-live.json",
+      "sha256": "3cc8c21b12bb68eb4920e8a65038d9bdd9883441420c2a0b5383cfb01ba3777a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-recovered-live.json",
+      "sha256": "1eaf56bb82a3f9fcf69654f94966948403c56aa1aa361a66e2f6377aa47f7d29"
+    },
+    {
+      "file": "docs/tenderproof-batch60-recovery-validation.json",
+      "sha256": "484bd4f10252079811d9095d91c75a7baac3221e9155f1367dba272fa930a36a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-review.json",
+      "sha256": "7a00a30cd3cce71daedaf7b4964c6b88b54fed5c3eeb04572108e574ce94feb9"
+    },
+    {
+      "file": "docs/tenderproof-batch60-shared-contracts.json",
+      "sha256": "a7287c0f24306a3fb19022c8b579fedac35fcad2138932cac19b7a0dbe7999a1"
+    },
+    {
+      "file": "docs/tenderproof-batch60-shared-fixed-live.json",
+      "sha256": "1b26c68558fb5dd33bb353492586b6dada703457cefafe03b3a179c64eb65c4a"
+    },
+    {
+      "file": "docs/tenderproof-batch60-shared-live.json",
+      "sha256": "4b104154ecb97b719b9b93f44104e67ef04dd070a0b1e7f153c3f6ec7738899c"
+    },
+    {
+      "file": "docs/tenderproof-batch60-shared-page-recovery.json",
+      "sha256": "41e3faeb1337ac6f29fb36c861d74d555bdce252bbc5b1dbd65e7652bd3fd9dc"
+    },
+    {
+      "file": "docs/tenderproof-batch60-storage-measurement.json",
+      "sha256": "36dd8407bc001923933404735462bddcfcb56a2c03345ab15a516ac36df8c85d"
+    }
+  ],
+  "sources": [
+    {
+      "source": "aocp_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Cloudflare HTTP 403. Search observes official /concursos/index.html, but no acquisition contract validated. Selection.net search result contains explicit test contest and cannot substitute production catalogue.",
+      "samples": []
+    },
+    {
+      "source": "ibam_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "ibam_open",
+          "cycle": 1,
+          "external_id": "375",
+          "run_id": "tpr-339fa9cd253f",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-578b7c2032-31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43.pdf",
+          "artifact_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+          "artifact_bytes": 323450,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/ibam_open-cycle1-detail-80d1ff06a2.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/ibam_open-cycle1-listing-8bdb6985b1.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 11,
+          "processed_pages": 11,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "ibam_open",
+          "cycle": 2,
+          "external_id": "375",
+          "run_id": "tpr-55487a8736c3",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-4e9641cde4-31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43.pdf",
+          "artifact_sha256": "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43",
+          "artifact_bytes": 323450,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/ibam_open-cycle2-detail-80d1ff06a2.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/ibam_open-cycle2-listing-8bdb6985b1.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 11,
+          "processed_pages": 11,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "consulplan_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "consulplan_open",
+          "cycle": 1,
+          "external_id": "unai2026",
+          "run_id": "tpr-e545236bb2de",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-c2eb665edc-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf",
+          "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+          "artifact_bytes": 565628,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/consulplan_open-cycle1-detail-fbafd4b6dd.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/consulplan_open-cycle1-listing-f26177ec8a.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 31,
+          "processed_pages": 31,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "consulplan_open",
+          "cycle": 2,
+          "external_id": "unai2026",
+          "run_id": "tpr-32d25979ea96",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-72cd58cfec-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf",
+          "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+          "artifact_bytes": 565628,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/consulplan_open-cycle2-detail-0a2f458d9e.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/consulplan_open-cycle2-listing-c660881330.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 31,
+          "processed_pages": 31,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "seprod_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "TLS certificate expired; no insecure fallback.",
+      "samples": []
+    },
+    {
+      "source": "fcc_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "fcc_open",
+          "cycle": 1,
+          "external_id": "abgfg126",
+          "run_id": "tpr-fd75adfb79a9",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-6fd709ba03-820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693.pdf",
+          "artifact_sha256": "820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693",
+          "artifact_bytes": 829287,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/fcc_open-cycle1-detail-50b1e458fe.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/fcc_open-cycle1-listing-3a5e70b971.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 60,
+          "processed_pages": 60,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "fcc_open",
+          "cycle": 2,
+          "external_id": "abgfg126",
+          "run_id": "tpr-f8236f394d3b",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-930a4d122f-820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693.pdf",
+          "artifact_sha256": "820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693",
+          "artifact_bytes": 829287,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/fcc_open-cycle2-detail-50b1e458fe.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/fcc_open-cycle2-listing-3a5e70b971.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 60,
+          "processed_pages": 60,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "cebraspe_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "cebraspe_open",
+          "cycle": 1,
+          "external_id": "ADEAL_26",
+          "run_id": "tpr-b265e5e7a699",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-79982dcf4a-2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65.pdf",
+          "artifact_sha256": "2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65",
+          "artifact_bytes": 398954,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/cebraspe_open-cycle1-detail-fea67eb9ac.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/cebraspe_open-cycle1-listing-ef84f71b48.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 43,
+          "processed_pages": 43,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "cebraspe_open",
+          "cycle": 2,
+          "external_id": "ADEAL_26",
+          "run_id": "tpr-9e615e28e403",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-9b3015702e-2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65.pdf",
+          "artifact_sha256": "2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65",
+          "artifact_bytes": 398954,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/cebraspe_open-cycle2-detail-fea67eb9ac.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/cebraspe_open-cycle2-listing-ef84f71b48.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 43,
+          "processed_pages": 43,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "cesgranrio_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-major-page-recovery.json",
+          "source": "cesgranrio_open",
+          "cycle": 1,
+          "external_id": "27",
+          "run_id": "tpr-d95776409056",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60c100/artifacts/art-13073f3985-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf",
+          "artifact_sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+          "artifact_bytes": 1166736,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle1-detail-5cee87db38.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle1-listing-ee65058a05.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 81,
+          "processed_pages": 81,
+          "explicit_page_limit": 100
+        },
+        {
+          "report": "tenderproof-batch60-major-page-recovery.json",
+          "source": "cesgranrio_open",
+          "cycle": 2,
+          "external_id": "27",
+          "run_id": "tpr-aaba3dce233e",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60c100/artifacts/art-2d990f5468-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf",
+          "artifact_sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+          "artifact_bytes": 1166736,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle2-detail-5cee87db38.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/cesgranrio_open-cycle2-listing-ee65058a05.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 81,
+          "processed_pages": 81,
+          "explicit_page_limit": 100
+        }
+      ]
+    },
+    {
+      "source": "fundep_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-shared-page-recovery.json",
+          "source": "fundep_open",
+          "cycle": 1,
+          "external_id": "72",
+          "run_id": "tpr-e8b84824f14d",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60pages/artifacts/art-3abc5a2fa9-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf",
+          "artifact_sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+          "artifact_bytes": 6958484,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/fundep_open-cycle1-detail-9f8492ebf7.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/fundep_open-cycle1-listing-bd4d8b4c23.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 147,
+          "processed_pages": 147,
+          "explicit_page_limit": 160
+        },
+        {
+          "report": "tenderproof-batch60-shared-page-recovery.json",
+          "source": "fundep_open",
+          "cycle": 2,
+          "external_id": "72",
+          "run_id": "tpr-7dfd98cb96f6",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60pages/artifacts/art-d6063af848-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf",
+          "artifact_sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+          "artifact_bytes": 6958484,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/fundep_open-cycle2-detail-778761b101.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/fundep_open-cycle2-listing-c5cca08cc6.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 147,
+          "processed_pages": 147,
+          "explicit_page_limit": 160
+        }
+      ]
+    },
+    {
+      "source": "fumarc_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "TLS certificate chain cannot be validated with current verified HTTP transport. Search confirms same host official site; no trusted alternate chain established.",
+      "samples": []
+    },
+    {
+      "source": "epl_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "epl_open",
+          "cycle": 1,
+          "external_id": "52",
+          "run_id": "tpr-9e2c3d45a3e8",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+          "artifact_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+          "artifact_bytes": 784614,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-detail-2e60516108.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-listing-dc7d20e042.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 43,
+          "processed_pages": 43,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "epl_open",
+          "cycle": 2,
+          "external_id": "52",
+          "run_id": "tpr-f042c455d38d",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-508d44c1f6-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+          "artifact_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+          "artifact_bytes": 784614,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle2-detail-2e60516108.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle2-listing-dc7d20e042.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 43,
+          "processed_pages": 43,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "unifil_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Cloudflare HTTP 403 at official main portal. Search corroborates same host, no safe verified alternative.",
+      "samples": []
+    },
+    {
+      "source": "leandroferreira_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Catalogue host DNS resolution failed. Search results for municipality do not establish identity of named consultancy; cannot silently replace source with municipality.",
+      "samples": []
+    },
+    {
+      "source": "iuds_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "TLS certificate expired; no insecure fallback.",
+      "samples": []
+    },
+    {
+      "source": "msconcursos_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "msconcursos_open",
+          "cycle": 1,
+          "external_id": "54",
+          "run_id": "tpr-158d03b28af9",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-2d64ebc1f6-db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122.pdf",
+          "artifact_sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+          "artifact_bytes": 495590,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/msconcursos_open-cycle1-detail-30da94060c.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/msconcursos_open-cycle1-listing-ba5a8753a7.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 25,
+          "processed_pages": 25,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "msconcursos_open",
+          "cycle": 2,
+          "external_id": "54",
+          "run_id": "tpr-546e35b6e25a",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-ea338cea78-db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122.pdf",
+          "artifact_sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+          "artifact_bytes": 495590,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/msconcursos_open-cycle2-detail-30da94060c.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/msconcursos_open-cycle2-listing-ba5a8753a7.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 25,
+          "processed_pages": 25,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "facet_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 3,
+      "distinct_valid_pdf_hashes": 3,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-shared-fixed-live.json",
+          "source": "facet_open",
+          "cycle": 1,
+          "external_id": "42",
+          "run_id": "tpr-bde1da6a10bf",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60sharefix/artifacts/art-cce95fab81-c80f288fb1ed2df73aed5a5a4aae4fbe087ff078107aba287cc73c800781f622.pdf",
+          "artifact_sha256": "c80f288fb1ed2df73aed5a5a4aae4fbe087ff078107aba287cc73c800781f622",
+          "artifact_bytes": 310536,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle1-detail-8509d45f19.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle1-listing-c884746ea7.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 12,
+          "processed_pages": 12,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-shared-fixed-live.json",
+          "source": "facet_open",
+          "cycle": 2,
+          "external_id": "39",
+          "run_id": "tpr-260a2a6aa02f",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60sharefix/artifacts/art-dbdfc88495-4aaa7c0f02b30330d3635ad25dfdcf154bf4f251417c698fcb4a977b6127df9c.pdf",
+          "artifact_sha256": "4aaa7c0f02b30330d3635ad25dfdcf154bf4f251417c698fcb4a977b6127df9c",
+          "artifact_bytes": 438802,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle2-detail-9c5d5c86f7.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle2-listing-172e8cb5cd.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 15,
+          "processed_pages": 15,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-shared-page-recovery.json",
+          "source": "facet_open",
+          "cycle": 1,
+          "external_id": "44",
+          "run_id": "tpr-9fbc9f39f268",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60pages/artifacts/art-3b8123882b-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf",
+          "artifact_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+          "artifact_bytes": 1274606,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle1-detail-252bec7fe8.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle1-listing-c884746ea7.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 83,
+          "processed_pages": 83,
+          "explicit_page_limit": 120
+        },
+        {
+          "report": "tenderproof-batch60-shared-page-recovery.json",
+          "source": "facet_open",
+          "cycle": 2,
+          "external_id": "44",
+          "run_id": "tpr-2597b95c8cd4",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": true,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60pages/artifacts/art-7170601a67-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf",
+          "artifact_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+          "artifact_bytes": 1274606,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle2-detail-c142bf07d9.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/facet_open-cycle2-listing-172e8cb5cd.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 83,
+          "processed_pages": 83,
+          "explicit_page_limit": 120
+        }
+      ]
+    },
+    {
+      "source": "educapb_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-shared-live.json",
+          "source": "educapb_open",
+          "cycle": 1,
+          "external_id": "7",
+          "run_id": "tpr-ea05e239d260",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60share/artifacts/art-cd191bc2aa-54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25.pdf",
+          "artifact_sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+          "artifact_bytes": 1210044,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/educapb_open-cycle1-detail-e912022b76.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/educapb_open-cycle1-listing-8440974369.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22,
+          "processed_pages": 22,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-shared-live.json",
+          "source": "educapb_open",
+          "cycle": 2,
+          "external_id": "7",
+          "run_id": "tpr-1fc2120d6f06",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60share/artifacts/art-21db0ce35e-54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25.pdf",
+          "artifact_sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+          "artifact_bytes": 1210044,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_shared/educapb_open-cycle2-detail-19f58cc1d3.html",
+            "backend/tests/fixtures/tenderproof_batch60_shared/educapb_open-cycle2-listing-8440974369.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22,
+          "processed_pages": 22,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "contemax_open",
+      "adapter_registered": true,
+      "evidence_status": "implemented_without_valid_pdf",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Observed official principal HTTPS connection failed; no PDF bytes or insecure fallback.",
+      "samples": []
+    },
+    {
+      "source": "cpcon_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-cpcon-valid-live.json",
+          "source": "cpcon_open",
+          "cycle": 1,
+          "external_id": "processo-seletivo-simplificado-no-002-2026",
+          "run_id": "tpr-a2b0f1aee91f",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60cpcon/artifacts/art-46d2f9fe5e-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf",
+          "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+          "artifact_bytes": 498894,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_extended/cpcon_open-cycle1-detail-3c4741f17e.html",
+            "backend/tests/fixtures/tenderproof_batch60_extended/cpcon_open-cycle1-listing-eebfa561c8.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 13,
+          "processed_pages": 13,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-cpcon-valid-live.json",
+          "source": "cpcon_open",
+          "cycle": 2,
+          "external_id": "processo-seletivo-simplificado-no-002-2026",
+          "run_id": "tpr-fffbf9b390f7",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60cpcon/artifacts/art-f0392320c2-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf",
+          "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+          "artifact_bytes": 498894,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_extended/cpcon_open-cycle2-detail-b4e956482a.html",
+            "backend/tests/fixtures/tenderproof_batch60_extended/cpcon_open-cycle2-listing-c0ae768daf.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 13,
+          "processed_pages": 13,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "funvapi_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "funvapi_open",
+          "cycle": 1,
+          "external_id": "/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+          "run_id": "tpr-4975de79251d",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-fe79d9ce3e-a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360.pdf",
+          "artifact_sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+          "artifact_bytes": 1053021,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/funvapi_open-cycle1-detail-02c5f3c4be.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/funvapi_open-cycle1-listing-0fc71ea701.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 46,
+          "processed_pages": 46,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "funvapi_open",
+          "cycle": 2,
+          "external_id": "/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+          "run_id": "tpr-918b6ad2e33e",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-f26ef64529-a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360.pdf",
+          "artifact_sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+          "artifact_bytes": 1053021,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/funvapi_open-cycle2-detail-02c5f3c4be.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/funvapi_open-cycle2-listing-0fc71ea701.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 46,
+          "processed_pages": 46,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "consep_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "consep_open",
+          "cycle": 1,
+          "external_id": "203",
+          "run_id": "tpr-d7a02132ec99",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-dc052ed0e0-460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e.pdf",
+          "artifact_sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+          "artifact_bytes": 625770,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/consep_open-cycle1-detail-970894c22e.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/consep_open-cycle1-listing-27ac9f4226.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 34,
+          "processed_pages": 34,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-own-live.json",
+          "source": "consep_open",
+          "cycle": 2,
+          "external_id": "203",
+          "run_id": "tpr-cac4e5b80f90",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60own/artifacts/art-275c61754e-460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e.pdf",
+          "artifact_sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+          "artifact_bytes": 625770,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/consep_open-cycle2-detail-970894c22e.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/consep_open-cycle2-listing-27ac9f4226.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 34,
+          "processed_pages": 34,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "institutoconsulplan_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "institutoconsulplan_open",
+          "cycle": 1,
+          "external_id": "unai2026",
+          "run_id": "tpr-6db76fc64322",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-df86b94ccf-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf",
+          "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+          "artifact_bytes": 565628,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/institutoconsulplan_open-cycle1-detail-904323a836.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/institutoconsulplan_open-cycle1-listing-902182244e.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 31,
+          "processed_pages": 31,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "institutoconsulplan_open",
+          "cycle": 2,
+          "external_id": "unai2026",
+          "run_id": "tpr-2f0de8fdc762",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-c99dfff039-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf",
+          "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+          "artifact_bytes": 565628,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/institutoconsulplan_open-cycle2-detail-40b450206b.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/institutoconsulplan_open-cycle2-listing-f238d00e70.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 31,
+          "processed_pages": 31,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "avalia_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "avalia_open",
+          "cycle": 1,
+          "external_id": "631",
+          "run_id": "tpr-8079a5856a43",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-d08aaf24b2-55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98.pdf",
+          "artifact_sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+          "artifact_bytes": 628134,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/avalia_open-cycle1-detail-d735621a3d.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/avalia_open-cycle1-listing-023dc5658b.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22,
+          "processed_pages": 22,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-major-live.json",
+          "source": "avalia_open",
+          "cycle": 2,
+          "external_id": "631",
+          "run_id": "tpr-8177314f78b4",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/batch60-major-live-20260908/artifacts/art-549dea3b65-55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98.pdf",
+          "artifact_sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+          "artifact_bytes": 628134,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_major/avalia_open-cycle2-detail-762116d45b.html",
+            "backend/tests/fixtures/tenderproof_batch60_major/avalia_open-cycle2-listing-8daeac51c0.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 22,
+          "processed_pages": 22,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "idgran_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Catalogue host DNS resolution failed. No authoritative alternative domain observed in bounded search.",
+      "samples": []
+    },
+    {
+      "source": "gualimp_open",
+      "adapter_registered": true,
+      "evidence_status": "implemented_without_valid_pdf",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "Official initial detail/JSON captures succeeded, but subsequent two-cycle acquisition received browser challenge HTTP403; no valid PDF.",
+      "samples": []
+    },
+    {
+      "source": "idib_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "No implemented adapter or validated PDF evidence in this batch.",
+      "samples": []
+    },
+    {
+      "source": "jcm_open",
+      "adapter_registered": false,
+      "evidence_status": "contract_missing",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": false,
+      "distinct_valid_candidates": 0,
+      "distinct_valid_pdf_hashes": 0,
+      "blocker": "No implemented adapter or validated PDF evidence in this batch.",
+      "samples": []
+    },
+    {
+      "source": "elo_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-elo-live.json",
+          "source": "elo_open",
+          "cycle": 1,
+          "external_id": "137",
+          "run_id": "tpr-7f5f40fd0a5e",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60elo/artifacts/art-b3cd09bb2c-9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf.pdf",
+          "artifact_sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+          "artifact_bytes": 386847,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/elo_open-cycle1-detail-3749ebef01.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/elo_open-cycle1-listing-ec5a43b532.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 23,
+          "processed_pages": 23,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-elo-live.json",
+          "source": "elo_open",
+          "cycle": 2,
+          "external_id": "137",
+          "run_id": "tpr-385952345efa",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60elo/artifacts/art-ada63b963c-9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf.pdf",
+          "artifact_sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+          "artifact_bytes": 386847,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/elo_open-cycle2-detail-3749ebef01.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/elo_open-cycle2-listing-ec5a43b532.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 23,
+          "processed_pages": 23,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "apta_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "apta_open",
+          "cycle": 1,
+          "external_id": "708",
+          "run_id": "tpr-d5d2acb482b9",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+          "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+          "artifact_bytes": 362093,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/apta_open-cycle1-detail-1d6799692c.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/apta_open-cycle1-listing-279172bb39.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 20,
+          "processed_pages": 20,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "apta_open",
+          "cycle": 2,
+          "external_id": "708",
+          "run_id": "tpr-3e3c92c05409",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-0e4c13c003-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+          "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+          "artifact_bytes": 362093,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/apta_open-cycle2-detail-323b5d5e2f.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/apta_open-cycle2-listing-2c4414ab50.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 20,
+          "processed_pages": 20,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "shdias_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "shdias_open",
+          "cycle": 1,
+          "external_id": "MTEw/MzA4",
+          "run_id": "tpr-05530274f114",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-38726c69e6-f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7.pdf",
+          "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+          "artifact_bytes": 697485,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-detail-e633962f88.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-listing-d24cf41921.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 44,
+          "processed_pages": 44,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-recovered-live.json",
+          "source": "shdias_open",
+          "cycle": 2,
+          "external_id": "MTEw/MzA4",
+          "run_id": "tpr-b9d822a7662a",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/r60rec/artifacts/art-e519060b3e-f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7.pdf",
+          "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+          "artifact_bytes": 697485,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle2-detail-f45553feca.html",
+            "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle2-listing-189a0651d7.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 44,
+          "processed_pages": 44,
+          "explicit_page_limit": 60
+        }
+      ]
+    },
+    {
+      "source": "zambini_open",
+      "adapter_registered": true,
+      "evidence_status": "verified_valid_sample",
+      "homologation_state": "pending",
+      "coverage": "bounded samples only; whole-source coverage unproven",
+      "two_cycles_same_candidate_verified": true,
+      "distinct_valid_candidates": 1,
+      "distinct_valid_pdf_hashes": 1,
+      "blocker": null,
+      "samples": [
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "zambini_open",
+          "cycle": 1,
+          "external_id": "1966",
+          "run_id": "tpr-86eea67fa075",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-76ebfa5f9e-3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e.pdf",
+          "artifact_sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+          "artifact_bytes": 642421,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/zambini_open-cycle1-detail-f2b0802e43.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/zambini_open-cycle1-listing-c6eaa1ec9c.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 33,
+          "processed_pages": 33,
+          "explicit_page_limit": 60
+        },
+        {
+          "report": "tenderproof-batch60-catalogue-live.json",
+          "source": "zambini_open",
+          "cycle": 2,
+          "external_id": "1966",
+          "run_id": "tpr-817f51ff1bef",
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "offline_page_revalidation": false,
+          "error": null,
+          "artifact_path": "backend/.tenderproof/b60cat/artifacts/art-61ce72cdc0-3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e.pdf",
+          "artifact_sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+          "artifact_bytes": 642421,
+          "capture_paths": [
+            "backend/tests/fixtures/tenderproof_batch60_own/zambini_open-cycle2-detail-234d3740fc.html",
+            "backend/tests/fixtures/tenderproof_batch60_own/zambini_open-cycle2-listing-4a87564533.html"
+          ],
+          "persisted_run_checked": true,
+          "total_pages": 33,
+          "processed_pages": 33,
+          "explicit_page_limit": 60
+        }
+      ]
+    }
+  ]
+}

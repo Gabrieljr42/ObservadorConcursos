@@ -1,0 +1,16 @@
+{
+  "schema": "t011.id17.reviewed-run-receipt.v1",
+  "envelope_path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json",
+  "envelope_sha256": "58d7d17f88e43239cf31030369c59083d95a63d6e11e6ae994b4bdf6dda730f0",
+  "envelope_byte_len": 43397,
+  "run_id": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+  "owner_user_id": 1,
+  "reference_only": true,
+  "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+  "artifact_byte_len": 1094969,
+  "fields": ["titulo", "orgao", "edital_numero", "cargos"],
+  "pending_fields": [],
+  "created_at": "2026-09-12T00:00:00Z",
+  "network": false,
+  "pilot_touched": false
+}

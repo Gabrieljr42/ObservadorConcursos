@@ -1,0 +1,14 @@
+{
+  "schema": "t012.publiconsult_open.diagnostico-422-r1.v1",
+  "recorded_at": "2026-09-13T15:47:47.4963555Z",
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "paths": {"api": true, "worker": true},
+  "persisted_fields": ["orgao", "edital_numero"],
+  "fresh_fields": ["titulo", "orgao", "edital_numero"],
+  "revalidate": {"eligible": ["orgao", "edital_numero"], "blocked": ["titulo", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa", "cargos"]},
+  "root_cause": "Legacy owner1 run omitted titulo/evidence; current extractor reproduces a supported title, but create requires it in the persisted reviewed envelope.",
+  "proposal_422": "criação exige título, órgão e número do edital com evidência reproduzida",
+  "mutations": false,
+  "common_diagnosis": "docs/execucao/evidencias/T012/runtime-revalidation-422-r1-20260913.json"
+}

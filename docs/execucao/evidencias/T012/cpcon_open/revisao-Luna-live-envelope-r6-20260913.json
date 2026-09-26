@@ -1,0 +1,38 @@
+{
+  "schema": "t012.cpcon_open.luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "CPCON live envelope R6; review only, no live operation",
+  "evidence": {
+    "envelope": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6.json",
+    "receipt": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6-receipt.json",
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+    "organization": "Universidade Estadual da Paraíba",
+    "edital": "002/2026",
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_bytes": 498894,
+    "artifact_pages": 13,
+    "cargo_count": 6,
+    "individual_cargo_evidence_count": 6
+  },
+  "checks": {
+    "concurso_id_null": true,
+    "id999_only_harness": true,
+    "r5_superseded": true,
+    "r5_collision_not_reused": true,
+    "old_reviewed_run_not_reused": true,
+    "round_trip_and_revalidate": "PASS in receipt against preserved artifact",
+    "persisted": false,
+    "pending_fields_empty": true,
+    "no_live_api_db_pilot_effects": true
+  },
+  "decision_conditions": [
+    "Allocate a fresh positive canonical target through the normal duplicate-safe flow before live import/proposal.",
+    "Do not use the superseded R5 target, existing contest 34, source number 35, or ephemeral harness ID 999.",
+    "After allocation, rerun the normal live import/proposal gate against this pinned artifact and run."
+  ],
+  "mutations_performed": false
+}

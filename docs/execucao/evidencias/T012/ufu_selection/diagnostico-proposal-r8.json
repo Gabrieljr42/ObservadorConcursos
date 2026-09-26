@@ -1,0 +1,18 @@
+{
+  "status": "BLOCKED_SHARED_PATCH_REQUIRED",
+  "receipt": "live-proposal-receipt-r7-20260913.json",
+  "http": 422,
+  "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+  "artifact": {"sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "byte_len": 26619, "pages": 1},
+  "root_cause": {
+    "source_parser": "ufu_selection_parser.preflight/parse requires DETAIL_URL as the candidate detail URL and proves title/orgao/edital/inscricao literals",
+    "imported_artifact_url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+    "candidate_detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "shared_dispatch_failure": "fields.py checks artifact.url_requested == DETAIL_URL before invoking the strict parser; the persisted ReviewedRun correctly stores the linked administrative document URL, so all five replacements become FAILED and revalidation sees unsupported identity fields",
+    "why_not_parser": "the parser already rejects source/external drift, URL/hash/byte drift, truncation, empty/error HTML, U+FFFD and missing literal/date markers; changing DETAIL_URL to the detail page would make the persisted official document URL fail the adapter contract"
+  },
+  "minimum_shared_patch_for_T007": "fields.py must compare the pinned administrative DOCUMENT_URL for artifact metadata while separately requiring candidate.detail_url_observed == DETAIL_PAGE_URL; then invoke this parser without promoting prova_data",
+  "promoted_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+  "omitted": ["prova_data", "cronograma_proximo", "taxa", "cargos", "remuneracao", "docs"],
+  "tests": {"command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py", "result": "9 passed", "network": false}
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "t012.ufu.evidence-diff-r11-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_SINGLE_PROPOSAL_RETRY_WITH_PROCESS_CHECK",
+  "scope": "read-only; no retry/API/live mutation performed",
+  "run": {
+    "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+    "owner_user_id": 1,
+    "source": "ufu_selection",
+    "external_id": "1843",
+    "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "artifact_bytes": 26619
+  },
+  "evidence": {
+    "titulo": "value and reproduced snippet equal; metadata-only evidence_id/method_version difference",
+    "orgao": "value and reproduced snippet equal; metadata-only evidence_id/method_version/original_value difference",
+    "edital_numero": "value and reproduced snippet equal; metadata-only evidence_id/method_version difference",
+    "reproduced_evidence": "all required fields true under _reproduced_evidence identity checks",
+    "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "blocked_baseline_only": ["cargos", "prova_data", "taxa"]
+  },
+  "resolver": {
+    "read_only_status": "ok",
+    "required_fields": "all three present and eligible",
+    "identity": "source 40/external 1843 and pinned artifact match",
+    "proof_data": "not promoted"
+  },
+  "runtime_gate": {
+    "required_before_retry": "API/worker must report deploy image sha256:9dfcaadfe6ec3f929e591c8f8ede2a8c407fd4ee51ed645645f597f80aa05935 and the corresponding resolver/code hash, then pass the same run through the normal proposal route",
+    "current_local_process_attestation": "not available in this read-only workspace",
+    "stop_on_error": true,
+    "max_retry": 1,
+    "run_to_use": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+    "do_not_use": ["tp-reviewed-f3e9c58974f5f13419565aa22ded286d", "synthetic target", "approve/apply"]
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py backend/tests/test_tenderproof_ufu_observed_contract.py",
+    "result": "16 passed",
+    "interpretation": "local resolver/reproduction and zero-effect disposable revalidation pass"
+  },
+  "effects": {"proposal": false, "import": false, "version": false, "outbox": false, "notification": false}
+}

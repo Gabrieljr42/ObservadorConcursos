@@ -1,0 +1,19 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "artifact": {
+    "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "byte_len": 498894
+  },
+  "identity": "Universidade Estadual da Paraíba / 002/2026",
+  "dispatcher": "fields.py strict source/external branch; validation.py delegates exact resolver",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py backend/tests/test_t012_fafipa_r4.py backend/tests/test_t012_fafipa_dispatch_r5.py",
+    "result": "13 passed",
+    "negative_coverage": ["source", "external_id", "sha256", "U+FFFD/truncation (parser suite)"],
+    "side_effects": "zero PublicationProposal, ConcursoVersion and PublicationOutbox rows"
+  },
+  "network": false,
+  "pilot_mutated": false
+}

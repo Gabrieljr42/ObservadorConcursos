@@ -1,0 +1,37 @@
+{
+  "schema": "t012.avancasp.backend-pin-r4.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "shared backend dispatch only; offline preserved artifacts",
+  "identity": {"source": "avancasp_open", "external_id": "272", "detail_url": "https://avancasp.selecao.net.br/informacoes/272/"},
+  "accepted_artifacts": [
+    {
+      "artifact_id": "avancasp-open-edital-272-bbc8f6fc",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48,
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf"
+    },
+    {
+      "artifact_id": "avancasp-open-edital-272-6d52089a",
+      "sha256": "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd",
+      "byte_len": 749582,
+      "pages": 49,
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf"
+    }
+  ],
+  "implementation": {
+    "module": "backend/app/tenderproof/avancasp_t012.py",
+    "dispatch": "backend/app/tenderproof/fields.py existing strict avancasp_open/272 branch now consumes the pin map",
+    "legacy": "old aa3e/b0ba/742298/48 pin remains accepted only for legacy runs; it cannot authorize either new R2 artifact",
+    "guards": ["source/external/detail URL", "artifact SHA/byte_len/URL", "exact page count/order", "non-empty pages", "no error/truncated/U+FFFD", "literal identity markers"]
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_avancasp_r4_dispatch.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py",
+    "result": "14 passed",
+    "regression_command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_reviewed_run_import.py -k 'avancasp or klc or epl or publiconsult or apta or reviewed'",
+    "regression_result": "11 passed, 6 deselected",
+    "compileall": "PASS"
+  },
+  "negative_dimensions": ["source", "external_id", "SHA", "byte_len", "URL", "page count/order", "page error", "page truncated", "U+FFFD"],
+  "side_effects": {"docker": false, "network": false, "live_or_pilot": false, "proposal_or_apply": false}
+}

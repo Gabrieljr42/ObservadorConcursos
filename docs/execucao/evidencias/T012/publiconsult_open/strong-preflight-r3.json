@@ -1,0 +1,25 @@
+{
+  "schema": "t012.publiconsult-strong-preflight-r3.v1",
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "mode": "offline_ephemeral_id",
+  "revalidate_attempt": {
+    "id": 999999,
+    "result": "blocked",
+    "reason": "shared extract_fields returned orgao/edital_numero unknown and document_identity_ids empty; _revalidate rejected strong binding",
+    "no_catalog_or_pilot_write": true
+  },
+  "source_specific_parser": {
+    "module": "publiconsult_parser_r3.py",
+    "result": "passed",
+    "fresh_orgao": "Prefeitura Municipal de Votuporanga/SP",
+    "fresh_edital_numero": "1/2026",
+    "identity_ids": [],
+    "strong_binding": true,
+    "pinned_guards": ["source=publiconsult_open", "external_id=681", "artifact SHA exact", "identity text Votuporanga + Processo Seletivo 1/2026"]
+  },
+  "tests": {"path": "test_publiconsult_parser_r3.py", "result": "2 passed", "guards": ["correct identity binds", "wrong source fails", "wrong external_id fails", "altered bytes fail"]},
+  "handoff": "PARSER_MODULE_R3_READY",
+  "integration_limit": "Parser remains evidence-scoped; integrator must review before any shared extractor registration or normal proposal dry-run."
+}

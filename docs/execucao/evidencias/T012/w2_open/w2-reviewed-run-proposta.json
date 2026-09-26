@@ -1,0 +1,52 @@
+{
+  "schema": "t012.source-proposal.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "w2_open",
+  "source_number": 59,
+  "adapter": "W2Adapter",
+  "concurso_id": null,
+  "owner_user_id": 1,
+  "reference_only": true,
+  "external_id": "105",
+  "title": "Concurso Público - 001/2016 - PREFEITURA MUNICIPAL DE ESPÍRITO SANTO DO DOURADO/MG",
+  "detail_url": "https://www.w2consultores.com.br/informacoes/105/",
+  "artifact": {
+    "artifact_id": "art-8947229bb9",
+    "sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+    "byte_len": 700244,
+    "content_type": "application/pdf",
+    "url_requested": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/105/anexos/0d32376b9337f9a0604cfa5df04d59ee.pdf",
+    "url_final": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/105/anexos/0d32376b9337f9a0604cfa5df04d59ee.pdf",
+    "downloaded_at": "2026-09-08T00:07:21.652432Z",
+    "total_pages": 40,
+    "storage_path": "art-8947229bb9-d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd.pdf",
+    "content_path": "backend/.tenderproof/r30new/w2_open/artifacts/art-9b67588be8-d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd.pdf"
+  },
+  "fields": [
+    {"field_name":"titulo","value":"EDITAL DE CONCURSO PÚBLICO Nº 001/2016","evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":1,"snippet":"EDITAL DE CONCURSO PÚBLICO Nº 001/2016","method":"deterministic-pdf-text","validation":{"ok":true}}]},
+    {"field_name":"orgao","value":"Prefeitura Municipal de Espírito Santo do Dourado/MG","evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":1,"snippet":"PREFEITURA MUNICIPAL DE ESPÍRITO SANTO DO DOURADO (MG)","method":"deterministic-pdf-text","validation":{"ok":true}}]},
+    {"field_name":"edital_numero","value":"001/2016","evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":1,"snippet":"EDITAL DE CONCURSO PÚBLICO Nº 001/2016","method":"deterministic-pdf-text","validation":{"ok":true}}]},
+    {"field_name":"inscricao_inicio","value":"2016-08-08T08:00:00","evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":3,"snippet":"De 08h00min do dia 08/08/2016","method":"deterministic-pdf-text","validation":{"ok":true}}]},
+    {"field_name":"inscricao_fim","value":"2016-09-08T23:59:00","evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":3,"snippet":"às 23h59min do dia 08/09/2016","method":"deterministic-pdf-text","validation":{"ok":true}}]},
+    {"field_name":"cargos","value":[
+      {"nome":"Auxiliar de Serviços Internos e Externos","vagas_imediatas":5,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 44 horas semanais","requisitos":"Alfabetizado"},
+      {"nome":"Dentista do PSF","vagas_imediatas":1,"remuneracao":"1.484,36","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 40 horas semanais","requisitos":"Curso Superior Específico de Odontólogo, com registro no CRO/MG"},
+      {"nome":"Fonoaudióloga","vagas_imediatas":1,"remuneracao":"1.124,96","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Curso Superior Específico de Fonoaudiologia, com registro no CREFONO/MG"},
+      {"nome":"Médico Clinico Geral","vagas_imediatas":2,"remuneracao":"1.124,96","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Curso Superior Específico de Medicina, com registro no CRM/MG"},
+      {"nome":"Médico do PSF","vagas_imediatas":1,"remuneracao":"8.312,93","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Curso Superior Específico de Medicina, com registro no CRM/MG"},
+      {"nome":"Médico Pediatra","vagas_imediatas":2,"remuneracao":"1.671,63","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Curso Superior Específico de Medicina, com registro no CRM/MG"},
+      {"nome":"Médico Urologista","vagas_imediatas":1,"remuneracao":"1.124,96","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Curso Superior Específico de Medicina, com registro no CRM/MG"},
+      {"nome":"Motorista","vagas_imediatas":4,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 44 horas semanais","requisitos":"Alfabetizado + CNH categoria D e experiência comprovada de pelo menos 01 ano"},
+      {"nome":"Operário","vagas_imediatas":6,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 44 horas semanais","requisitos":"Alfabetizado"},
+      {"nome":"Professor de Creche","vagas_imediatas":10,"vagas_ampla_concorrencia":9,"vagas_pcd":1,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 40 horas semanais","requisitos":"Ensino Médio Completo"},
+      {"nome":"Professor PEB II","vagas_imediatas":6,"remuneracao":"1.281,38","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 40 horas semanais","requisitos":"Curso Nível Médio em Magistério ou Licenciatura Plena em Pedagogia"},
+      {"nome":"Psicólogo","vagas_imediatas":1,"remuneracao":"904,76","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 40 horas semanais","requisitos":"Curso Superior Específico de Psicologia, com registro no CRP/MG"},
+      {"nome":"Técnico em Enfermagem","vagas_imediatas":2,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 40 horas semanais","requisitos":"Ensino Médio Completo + Curso de Técnico de Enfermagem, com registro no COREN/MG"},
+      {"nome":"Técnico em Químico","vagas_imediatas":1,"remuneracao":"880,00","moeda":"BRL","remuneracao_observacao":"vencimento inicial; 20 horas semanais","requisitos":"Ensino Médio Completo + Curso de Técnico em Química, com registro no CRQ/MG"}
+    ],"evidence":[{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":1,"snippet":"QUADRO DE VAGAS ... Cargos ... Jornada de Trabalho ... Vencimento R$.","method":"deterministic-pdf-text","validation":{"ok":true}},{"artifact_id":"art-8947229bb9","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","page_number":2,"snippet":"Médico Pediatra ... Total de Vagas 042 001 043","method":"deterministic-pdf-text","validation":{"ok":true}}],"units":{"remuneracao":"BRL/vencimento inicial (periodicidade não inferida além do rótulo do edital)","jornada":"horas semanais","vagas":"vagas do quadro do edital"}}
+  ],
+  "pending_fields":[],
+  "provenance":{"listing_fixture":"backend/tests/fixtures/tenderproof_batch30_shared/w2_open-cycle1-listing-07645110dc.html","listing_sha256":"213786b05d26f40bdb3aa286a987a153973c1fbf179fc76bb5b48654c1ec204d","detail_fixture":"backend/tests/fixtures/tenderproof_batch30_shared/w2_open-cycle1-detail-b3aff74213.html","detail_sha256":"39bef1136243c06b51dfe17c6b0fd54a7c442ce0a1362ccaefb5441f37f57d12","run_id":"tpr-5aef37ae639a","document_id":"w2_open-doc-771ea45c2283b351","observed_at":"2026-09-08T00:07:21.652432Z","identity_rule":"candidate external_id 105, W2 detail /informacoes/105/ and document selection title Edital Normativo 08/06/2016 are linked in the preserved live run"},
+  "observed_at":"2026-09-08T00:07:21.652432Z",
+  "import_handoff":{"mode":"standard_reviewed_run_import","canonical_concurso_id":"to_be_allocated_by_integrator","apply":false,"omitted_fields":["prova_data","retificacoes_e_resultados"],"reason":"proposal is not promoted as formal ReviewedRun until canonical concurso_id is allocated; no identifier is invented"}
+}

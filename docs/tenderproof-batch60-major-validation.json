@@ -1,0 +1,387 @@
+{
+  "validated_at": "2026-09-08T14:24:22.365125+00:00",
+  "sources": [
+    {
+      "source": "ibam_open",
+      "adapter": "IBAMAdapter",
+      "implementation_state": "implemented",
+      "listing_urls": [
+        "https://www.ibam-concursos.org.br"
+      ],
+      "observed_valid_cycles": 2,
+      "samples": [
+        "375"
+      ],
+      "document_sha256": [
+        "31dc697767c4f44f594e6eca0d1003c5aed375d9a8b94ae96a2940dd75c10d43"
+      ],
+      "evidence": "tenderproof-batch60-major-live.json",
+      "scope": "bounded selected candidate and original notice only; supplementary bytes not acquired",
+      "coverage": "partial",
+      "browser_sessions": 0
+    },
+    {
+      "source": "fcc_open",
+      "adapter": "FCCAdapter",
+      "implementation_state": "implemented",
+      "listing_urls": [
+        "https://www.concursosfcc.com.br/concursoAndamento.html"
+      ],
+      "observed_valid_cycles": 2,
+      "samples": [
+        "abgfg126"
+      ],
+      "document_sha256": [
+        "820f9f51cd9bf08a5f8e20a97c0a26c22c543f19157ccbee6559a506404cd693"
+      ],
+      "evidence": "tenderproof-batch60-major-live.json",
+      "scope": "bounded selected candidate and original notice only; supplementary bytes not acquired",
+      "coverage": "partial",
+      "browser_sessions": 0
+    },
+    {
+      "source": "cebraspe_open",
+      "adapter": "CebraspeAdapter",
+      "implementation_state": "implemented",
+      "listing_urls": [
+        "https://apis.cebraspe.org.br/cebraspe/eventos/tipo/concursos/"
+      ],
+      "observed_valid_cycles": 2,
+      "samples": [
+        "ADEAL_26"
+      ],
+      "document_sha256": [
+        "2c459c415cd5e728985b3996ced9d7e78dbffb7ffb52339b73f8570f485d0c65"
+      ],
+      "evidence": "tenderproof-batch60-major-live.json",
+      "scope": "bounded selected candidate and original notice only; supplementary bytes not acquired",
+      "coverage": "partial",
+      "browser_sessions": 0
+    },
+    {
+      "source": "cesgranrio_open",
+      "adapter": "CesgranrioAdapter",
+      "implementation_state": "implemented",
+      "listing_urls": [
+        "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=1&pageSize=10"
+      ],
+      "observed_valid_cycles": 2,
+      "samples": [
+        "27"
+      ],
+      "document_sha256": [
+        "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f"
+      ],
+      "evidence": "tenderproof-batch60-major-page-recovery.json",
+      "scope": "bounded selected candidate and original notice only; supplementary bytes not acquired",
+      "coverage": "partial",
+      "browser_sessions": 0
+    },
+    {
+      "source": "avalia_open",
+      "adapter": "AvaliaAdapter",
+      "implementation_state": "implemented",
+      "listing_urls": [
+        "https://www2.avalia.org.br/concursos.jsp"
+      ],
+      "observed_valid_cycles": 2,
+      "samples": [
+        "631"
+      ],
+      "document_sha256": [
+        "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98"
+      ],
+      "evidence": "tenderproof-batch60-major-live.json",
+      "scope": "bounded selected candidate and original notice only; supplementary bytes not acquired",
+      "coverage": "partial",
+      "browser_sessions": 0
+    }
+  ],
+  "captures": [
+    {
+      "name": "cesgranrio-list-api",
+      "url": "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=1&pageSize=10",
+      "observed_at": "2026-09-08T14:17:05.926945+00:00",
+      "max_bytes": 2097152,
+      "status": 200,
+      "location": null,
+      "bytes": 10748,
+      "original_sha256": "4586f85a0d8b93d771713953c8776955002b7535c07c76a4cc6ce26fad82cd86",
+      "fixture_sha256": "0705142f79aa40d296b70f6b42505d1e2909244410a1345aad415c3c1a3f9426",
+      "file": "cesgranrio-list-api.json",
+      "format": "public JSON; signed URL queries removed",
+      "manifest": "manifest-cesgranrio-list-api.json"
+    },
+    {
+      "name": "cesgranrio-root-main8",
+      "url": "https://concursos.cesgranrio.org.br/main.1715d0bd4a4503a5.js",
+      "observed_at": "2026-09-08T14:14:38.912789+00:00",
+      "max_bytes": 8388608,
+      "status": 200,
+      "location": null,
+      "bytes": 5358238,
+      "original_sha256": "fb15a5b51196eb5a06710d7824186efb7805ba88739a3f60c9fef5c5c1253cbe",
+      "fixture_sha256": "fb15a5b51196eb5a06710d7824186efb7805ba88739a3f60c9fef5c5c1253cbe",
+      "file": "cesgranrio-root-main8.js",
+      "format": "raw JavaScript",
+      "manifest": "manifest-cesgranrio-main8.json"
+    },
+    {
+      "name": "cesgranrio-event27",
+      "url": "https://concursos.cesgranrio.org.br/api/PortalEventos/27",
+      "observed_at": "2026-09-08T14:15:35.340063+00:00",
+      "max_bytes": 2097152,
+      "status": 200,
+      "location": null,
+      "bytes": 1318,
+      "original_sha256": "7616d7e3bd6c5df5468811a62dbf32ebec2e4b02f2cae029c085dc8075c34305",
+      "fixture_sha256": "bdb7cee537128c3feac89cbeb4c0df5a0fcefd7c4d0dad3c98443ce908dce427",
+      "file": "cesgranrio-event27.json",
+      "format": "public JSON; signed URL queries removed",
+      "manifest": "manifest-cesgranrio-public-api.json"
+    },
+    {
+      "name": "cesgranrio-docs27",
+      "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+      "observed_at": "2026-09-08T14:15:35.340063+00:00",
+      "max_bytes": 2097152,
+      "status": 200,
+      "location": null,
+      "bytes": 1132,
+      "original_sha256": "2d1a30beaf7192ca8dcf2497105ab222ab140a870883bcb5cb006312128ac6b4",
+      "fixture_sha256": "9fe6fba1484b545ef6688176e4eae4d4858f3e703affb21b51a34574314cd320",
+      "file": "cesgranrio-docs27.json",
+      "format": "public JSON; signed URL queries removed",
+      "manifest": "manifest-cesgranrio-public-api.json"
+    },
+    {
+      "name": "cesgranrio-root-main",
+      "url": "https://concursos.cesgranrio.org.br/main.1715d0bd4a4503a5.js",
+      "observed_at": "2026-09-08T14:06:54.335544+00:00",
+      "error": "ValueError",
+      "manifest": "manifest-cesgranrio-root-main.json"
+    },
+    {
+      "name": "fcc-abgf",
+      "url": "https://www.concursosfcc.com.br/concursos/abgfg126/index.html",
+      "observed_at": "2026-09-08T14:04:17.987284+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 22606,
+      "original_sha256": "25a2e77dbe263fee034d87c5bd843582f4fd1faa27933b96f4a31e92483bd5e1",
+      "fixture_sha256": "53538dece35e19f2c0f18b1bc0cbbfa0d119205c556f4e5734c0a26fcbdc6200",
+      "file": "fcc-abgf.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details1.json"
+    },
+    {
+      "name": "cesgranrio-sema",
+      "url": "https://www.cesgranrio.org.br/concurso/sema-mt-2026/",
+      "observed_at": "2026-09-08T14:04:17.988793+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 83342,
+      "original_sha256": "ea1c89bdcbb2896f6666e1b3d238bebbc81146ee21c422cde75c307fae0cc745",
+      "fixture_sha256": "1b261c99c98c2f3cf6d60e2f06acc07634582261cc604df60788f8a84cde1a41",
+      "file": "cesgranrio-sema.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details1.json"
+    },
+    {
+      "name": "avalia634",
+      "url": "https://www2.avalia.org.br/concurso.jsp?id=634",
+      "observed_at": "2026-09-08T14:04:17.989804+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 11918,
+      "original_sha256": "51af0726b999f574d946a3c824c317c9159cd33d4838eb3186faf3a8905b6d39",
+      "fixture_sha256": "6914c8701ce9cf8589fd6f521e2d0903054350cdad8d2b5607d10833b1df7f48",
+      "file": "avalia634.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details1.json"
+    },
+    {
+      "name": "cebraspe-main",
+      "url": "https://www.cebraspe.org.br/concursos/static/js/main.68af135b.chunk.js",
+      "observed_at": "2026-09-08T14:04:17.991803+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 47108,
+      "original_sha256": "34c3de4829a34294e664826a35c6c7ec9a79db6c56451e9efa1c88dea084f42c",
+      "fixture_sha256": "34c3de4829a34294e664826a35c6c7ec9a79db6c56451e9efa1c88dea084f42c",
+      "file": "cebraspe-main.js",
+      "format": "raw JavaScript",
+      "manifest": "manifest-details1.json"
+    },
+    {
+      "name": "cebraspe-api",
+      "url": "https://apis.cebraspe.org.br/cebraspe/eventos/tipo/concursos/",
+      "observed_at": "2026-09-08T14:05:48.252796+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 244100,
+      "original_sha256": "a6795a75f1d4ec375179e2d099c7fa768e0838a1421a337d24d37c57dc67201f",
+      "fixture_sha256": "386838da512b4ee2ace6cbad5452d0987d28d99f80ccbecb55ab84bffd2ada91",
+      "file": "cebraspe-api.json",
+      "format": "public JSON; signed URL queries removed",
+      "manifest": "manifest-details2.json"
+    },
+    {
+      "name": "cesgranrio-portal27",
+      "url": "https://concursos.cesgranrio.org.br/portal/avaliacoes/27",
+      "observed_at": "2026-09-08T14:05:48.252796+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 4349,
+      "original_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+      "fixture_sha256": "00e76c5f93a9faa1720a8c83bd859a8a7af579ba7da972393b1f5a0a4524052e",
+      "file": "cesgranrio-portal27.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details2.json"
+    },
+    {
+      "name": "avalia621",
+      "url": "https://www2.avalia.org.br/concurso.jsp?id=621",
+      "observed_at": "2026-09-08T14:05:48.253804+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 12159,
+      "original_sha256": "accdc4f63df5b5bd538369d724f49f8e0a9e6ae1386e8a683833888efeef6486",
+      "fixture_sha256": "8164862a94989a902b976ad2ce19ae3fcac7fbff73d9399ace6b9c1883ac6939",
+      "file": "avalia621.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details2.json"
+    },
+    {
+      "name": "avalia631",
+      "url": "https://www2.avalia.org.br/concurso.jsp?id=631",
+      "observed_at": "2026-09-08T14:05:48.254203+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 13482,
+      "original_sha256": "04bccf39078cb4ad9e549eca80b464dc7a012b97d203a531536384ab587e9972",
+      "fixture_sha256": "61068875d1ecf3e70c6f63b88b6cc829b58bee64182e6644b0134434f0857954",
+      "file": "avalia631.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-details2.json"
+    },
+    {
+      "name": "cebraspe-adeal",
+      "url": "https://apis.cebraspe.org.br/cebraspe/eventos/ADEAL_26",
+      "observed_at": "2026-09-08T14:06:38.352064+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 1109,
+      "original_sha256": "ef1977c04324dfb7abe74a3c32dedbfdf3d852d1c542cef2c725a9ccf39c7c5d",
+      "fixture_sha256": "a163dca35cac1eb019751bd8d9e64769d4bcccb9bff022563c4baa84865fccf7",
+      "file": "cebraspe-adeal.json",
+      "format": "public JSON; signed URL queries removed",
+      "manifest": "manifest-details3.json"
+    },
+    {
+      "name": "cesgranrio-main",
+      "url": "https://concursos.cesgranrio.org.br/portal/main.1715d0bd4a4503a5.js",
+      "observed_at": "2026-09-08T14:06:38.352064+00:00",
+      "status": 404,
+      "location": null,
+      "bytes": 4349,
+      "original_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+      "fixture_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+      "file": "cesgranrio-main.js",
+      "format": "raw JavaScript",
+      "manifest": "manifest-details3.json"
+    },
+    {
+      "name": "ibam",
+      "url": "https://www.ibam-concursos.org.br",
+      "observed_at": "2026-09-08T14:03:40.050270+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 118667,
+      "original_sha256": "02ecb6778e1108d04822ba9bfe916d028ea52fabf906ca01efc75b3532d4ce88",
+      "fixture_sha256": "3e973f660e421b8f659fc1a390d0b1c98064673de53eadda717189caf9f27a17",
+      "file": "ibam.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-initial.json"
+    },
+    {
+      "name": "fcc",
+      "url": "https://www.concursosfcc.com.br/concursoAndamento.html",
+      "observed_at": "2026-09-08T14:03:40.050270+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 21008,
+      "original_sha256": "377c8dcc483afefffe6d603ded884e216660e1f63015798bb73d600f837ad97a",
+      "fixture_sha256": "c52ad7ed96d23204efd1cbe57f14e1978ce3dd7a9efae0b203e06b781ce34bf1",
+      "file": "fcc.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-initial.json"
+    },
+    {
+      "name": "cebraspe",
+      "url": "https://www.cebraspe.org.br/concursos/",
+      "observed_at": "2026-09-08T14:03:40.051270+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 16788,
+      "original_sha256": "13ed6c27fac94f5585df43d8cbbb96471bc91dcc9536854826b87351827c5ae6",
+      "fixture_sha256": "0eb159f64fad03c2497b26bd2d285d84d6bec6757b5469889c3a4751abe326fd",
+      "file": "cebraspe.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-initial.json"
+    },
+    {
+      "name": "cesgranrio",
+      "url": "https://www.cesgranrio.org.br/concursos/",
+      "observed_at": "2026-09-08T14:03:40.051270+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 93363,
+      "original_sha256": "42e7013e7318928b623c250360811cfdb50b58e4a98ed720851f5a0080fedafb",
+      "fixture_sha256": "9d1c88f88b55767fc656727e03689d562b33436dda88313f60c14c64180c53dc",
+      "file": "cesgranrio.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-initial.json"
+    },
+    {
+      "name": "avalia",
+      "url": "https://www2.avalia.org.br/concursos.jsp",
+      "observed_at": "2026-09-08T14:03:40.052279+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 92787,
+      "original_sha256": "7f6866802461b49a0374ecb76c1503545ea3920dac8cf01c29112c8d3baa5250",
+      "fixture_sha256": "d95fd0f698acac5fbc97b52501beb30b3c2f8019b7a7889c3541063b59b2366a",
+      "file": "avalia.html",
+      "format": "decoded UTF8 HTML; hidden values removed",
+      "manifest": "manifest-initial.json"
+    }
+  ],
+  "tests": {
+    "command": "python -m pytest tests/test_tenderproof_batch60_major.py -q --disable-warnings --junitxml=.tenderproof/batch60-major-contracts-final.xml",
+    "passed": 27,
+    "junit": "backend/.tenderproof/batch60-major-contracts-final.xml"
+  },
+  "limits": {
+    "html_bytes": 2097152,
+    "capture_timeout_s": 25,
+    "common_driver_request_timeout_s": 12,
+    "download_bytes": 31457280,
+    "default_pdf_pages": 60,
+    "cesgranrio_recovery_pages": 100,
+    "cesgranrio_js_investigation_bytes": 8388608
+  },
+  "production_enabled": false,
+  "canonical_writes": 0,
+  "registration_scope": "central registration performed by root agent, not this module",
+  "limitations": [
+    "IBAM IDs are observed data-bs-target section anchors, not invented remote detail routes. Card selection constrains document association; filename itself has no numeric candidate ID.",
+    "FCC wrapper file query is unwrapped only after exact viewer-route recognition; PDF path must retain exact contest slug.",
+    "Cebraspe historical INSS_22 has two IDs (1934/1940) in the official response: excluded, diagnosed, partial coverage.",
+    "Avalia634/621 had no publications;631 original valid. Opaque UUID PDFs require detail-origin and later PDF identity validation.",
+    "Cesgranrio public contents eventoId repeats content ID and is not a reliable event identity; requested API route plus per-event media directory bind the document; PDF validation confirms title.",
+    "Cesgranrio27 notice measured81pages and fails default60 as intended; two preserved acquisitions processed offline with explicit100page limit.",
+    "Cesgranrio SAS is read-only and removed from fixtures/reports; doc IDs ignore signed queries after URL validation. Continuous manifest signature normalization is a separately coordinated core change.",
+    "No full-source homologation from these samples; remaining tabs, historical variants, byte changes of unacquired supplementary documents and load remain outside this proof."
+  ]
+}

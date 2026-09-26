@@ -1,0 +1,55 @@
+{
+  "schema": "t012.publiconsult.document-review-live-r7-approve-proposal-receipt.v1",
+  "timestamp": "2026-09-13T14:39:11.5657734Z",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "preflight": {
+    "health_http": 200,
+    "login_http": 200,
+    "current_http": 200,
+    "case_id": "drc-preserved-5b8ae617394ffc55fa7f3f2321677c81",
+    "revision_hash": "cb5ea0d5910df1e4c4ccb990f4a309c3674f0abdfe4f82c2cd125f8cbf42b0ca",
+    "artifact_sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "pending_before": true,
+    "checkpoint_before": {"contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1}
+  },
+  "document_approval": {
+    "endpoint": "POST /tenderproof/continuous/document-review/{run_id}/cases/{case_id}/approve",
+    "http": 200,
+    "case_id": "drc-preserved-5b8ae617394ffc55fa7f3f2321677c81",
+    "revision_hash": "cb5ea0d5910df1e4c4ccb990f4a309c3674f0abdfe4f82c2cd125f8cbf42b0ca",
+    "decision": "no_field_change",
+    "decision_sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "approved": true,
+    "pending_after": false,
+    "current_after": null
+  },
+  "proposal_attempt": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "body_scope": {"run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "source_id": 56, "authorization": null},
+    "http": 422,
+    "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+    "proposal_id": null,
+    "persisted": false,
+    "retry": false,
+    "approve": false,
+    "apply": false
+  },
+  "after": {
+    "checkpoint_unchanged": true,
+    "contests": 34,
+    "sources": 33,
+    "canonical_cargos": 182,
+    "publications": 34,
+    "versions": 92,
+    "outbox": 92,
+    "notifications": 91,
+    "favorites": 0,
+    "alerts": 1,
+    "document_review_pending": false
+  },
+  "next_gate": "Do not retry proposal. Reconcile the normal proposal contract requiring reproduced title/orgao/edital evidence, then obtain an explicit new review before any further attempt. No catalog apply occurred."
+}

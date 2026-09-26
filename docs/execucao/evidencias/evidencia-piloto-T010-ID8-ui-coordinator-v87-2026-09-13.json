@@ -1,0 +1,37 @@
+{
+  "evidence_id": "T010-ID8-ui-coordinator-v87-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_PARCIAL_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/8",
+  "build_context": "pós-versão 87",
+  "reload_observed": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "observed": {
+    "cargo": "Guarda Civil Municipal",
+    "vagas_imediatas": 9,
+    "distribution": {
+      "ampla_concorrencia": 6,
+      "pcd": 1,
+      "ppp": 2
+    },
+    "cadastro_reserva": "apresentado separadamente",
+    "remuneracao": "variável/base não quantificada",
+    "jornada": "40h",
+    "requisito": "Ensino Médio + CNH AB",
+    "taxa": "R$ 156,67",
+    "historico": "atualizado",
+    "reload_stable": true
+  },
+  "pending": [
+    "prova_data"
+  ],
+  "schedule_text": "DATA DA PROVA — Pendente de conferência",
+  "limits": [
+    "Não alegar 06/12 como data publicada/confirmada.",
+    "Evidência atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado e nenhum piloto foi operado nesta revisão."
+  ]
+}

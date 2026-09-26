@@ -1,0 +1,51 @@
+{
+  "schema": "tenderproof.reviewed-field-evidence.v1",
+  "artifact_id": "shdias-open-00308-edital-2026",
+  "artifact_sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+  "source_url": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+  "fields": [
+    {
+      "field_name": "titulo",
+      "value": "CONCURSO PÚBLICO CPMH 001/2026 - Guarda",
+      "json_path": "titulo",
+      "evidence": [{"evidence_id":"shdias-00308-titulo","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":1,"snippet":"MUNICÍPIO DE HORTOLÂNDIA \nCONCURSO PÚBLICO CPMH 001/2026 - Guarda","json_path":"titulo","method":"manual_pdf_review","method_version":"t012-shdias-r3"}]
+    },
+    {
+      "field_name": "taxa_inscricao",
+      "value": "63.25",
+      "json_path": "taxa_inscricao",
+      "evidence": [{"evidence_id":"shdias-00308-taxa","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"ENSINO MÉDIO COMPLETO VALOR DA INSCRIÇÃO: R$ 63,25","json_path":"taxa_inscricao","method":"manual_pdf_review","method_version":"t012-shdias-r3"}]
+    },
+    {
+      "field_name": "prova_data",
+      "value": "2026-09-27",
+      "json_path": "prova_data",
+      "evidence": [{"evidence_id":"shdias-00308-prova","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":14,"snippet":"05.01.01. A realização da Prova Objetiva está prevista para o dia 27 de setembro de 2026 (DOMINGO).","json_path":"prova_data","method":"manual_pdf_review","method_version":"t012-shdias-r3"}]
+    },
+    {
+      "field_name": "cargos",
+      "value": [{"codigo":"301","nome":"Guarda Municipal – 4ª Classe (Feminino)","vagas":12,"remuneracao":"3971.37"},{"codigo":"302","nome":"Guarda Municipal – 4ª Classe (Masculino)","vagas":28,"remuneracao":"3971.37"}],
+      "json_path": "cargos",
+      "evidence": [
+        {"evidence_id":"shdias-00308-cargo-301","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"301 Guarda Municipal – 4ª Classe (Feminino) 11 01 12","json_path":"cargos[0]","method":"manual_pdf_review","method_version":"t012-shdias-r3"},
+        {"evidence_id":"shdias-00308-cargo-302","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"302 Guarda Municipal – 4ª Classe (Masculino) 25 03 28","json_path":"cargos[1]","method":"manual_pdf_review","method_version":"t012-shdias-r3"}
+      ]
+    },
+    {
+      "field_name": "vagas_total",
+      "value": 40,
+      "json_path": "cargos.vagas_total",
+      "units": {"derivation":"12 + 28","basis_paths":["cargos[0].vagas","cargos[1].vagas"]},
+      "evidence": [
+        {"evidence_id":"shdias-00308-vagas-301","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"301 Guarda Municipal – 4ª Classe (Feminino) 11 01 12","json_path":"cargos.vagas_total","method":"reviewed_derivation","method_version":"t012-shdias-r3"},
+        {"evidence_id":"shdias-00308-vagas-302","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"302 Guarda Municipal – 4ª Classe (Masculino) 25 03 28","json_path":"cargos.vagas_total","method":"reviewed_derivation","method_version":"t012-shdias-r3"}
+      ]
+    },
+    {
+      "field_name": "remuneracao",
+      "value": "3971.37",
+      "json_path": "cargos[*].remuneracao",
+      "evidence": [{"evidence_id":"shdias-00308-remuneracao","artifact_id":"shdias-open-00308-edital-2026","document_sha256":"F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7","source_url":"https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf","page_number":2,"snippet":"R$ 3.971,37 200h/m","json_path":"cargos[*].remuneracao","method":"manual_pdf_review","method_version":"t012-shdias-r3"}]
+    }
+  ]
+}

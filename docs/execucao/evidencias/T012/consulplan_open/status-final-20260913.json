@@ -1,0 +1,33 @@
+{
+  "task": "T012",
+  "source_id": 7,
+  "source": "consulplan_open",
+  "decision": "BLOCKER_DUPLICATE_ALREADY_PUBLISHED",
+  "candidate": {
+    "identity": "Câmara Municipal de Unaí/MG — VIII Concurso Público — Edital nº 1, de 26 de agosto de 2026",
+    "organizer": "Instituto Consulplan",
+    "external_id": "preserved-detail-not-required-for-duplicate",
+    "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+    "artifact_pages": 31,
+    "artifact_bytes": null,
+    "extracted_text": "backend/.tenderproof/r60kill/consulplan_open/processing/fa88d374b9cf5e059fad4a2fe406feae4c49cbf4803083ec521d3c75ee22557c/5dee0d334d564099b1c0d467fb548745/output.json",
+    "local_artifact": "backend/.tenderproof/r60kill/consulplan_open/artifacts/art-e49077dff2-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf"
+  },
+  "identity_evidence": [
+    {"page": 1, "snippet": "CÂMARA MUNICIPAL DE UNAÍ/MG — VIII CONCURSO PÚBLICO — EDITAL Nº 1, DE 26 DE AGOSTO DE 2026"},
+    {"page": 3, "snippet": "inscrições ... de 30 de outubro de 2026 a 1º de dezembro de 2026; taxa R$ 80,00"},
+    {"page": 31, "snippet": "ANEXO V — CRONOGRAMA PREVISTO; inscrições de 30/10/2026 até 01/12/2026"}
+  ],
+  "published_duplicate": {
+    "published_contest_id": 5,
+    "published_source_aliases": ["institutoconsulplan_open", "consulplan_open"],
+    "publication_evidence": "docs/tenderproof-batch60-publication-live.json",
+    "same_document_sha256": true,
+    "same_entity": true,
+    "same_title": true,
+    "reason": "Não se trata apenas da mesma banca: o órgão/entidade Câmara Municipal de Unaí/MG e o documento são os mesmos. O batch60 registra o mesmo SHA para consulplan_open e institutoconsulplan_open, enquanto o catálogo publicado vincula a seleção ao concurso_id 5."
+  },
+  "revalidation": {"status": "NOT_RUN", "reason": "Seleção já publicada; não abrir proposta duplicada nem mutar SQLite."},
+  "mutations": {"db": false, "services": false, "shared_dispatch": false, "pilot": false, "import": false, "proposal": false, "apply": false},
+  "resume_condition": "Nenhuma para esta seleção; só processar eventual retificação do mesmo concurso como atualização do concurso_id 5, sob o fluxo normal, nunca como novo concurso T012."
+}

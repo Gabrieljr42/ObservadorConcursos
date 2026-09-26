@@ -1,0 +1,344 @@
+{
+  "limits": "2MiB/25s, TLS verified, redirects recorded only, no PDF/browser",
+  "pages": [
+    {
+      "source": "fapex_selection",
+      "url": "https://fapex.org.br",
+      "kind": "official-home",
+      "observed_at": "2026-09-08T15:23:02.794488+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 124478,
+      "sha256": "f1989d13baa3aa27e21c8222dfaa3938f9fa2d0ca2907bcce18312d160b8808c",
+      "file": "fapex_selection-official-home.html",
+      "encoding": "utf-8",
+      "title": "Fapex - Fundação de apoio à pesquisa e à extensão",
+      "links": [
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/emendas.aspx",
+          "title": "EMENDAS PARLAMENTARES"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--",
+          "title": "ACESSIBILIDADE"
+        },
+        {
+          "url": "https://fapex.org.br#altocontraste",
+          "title": "ALTO CONTRASTE"
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/",
+          "title": ""
+        },
+        {
+          "url": "https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "Quem Somos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional",
+          "title": "A FAPEX"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade",
+          "title": "Identidade"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo",
+          "title": "Estrutura"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN",
+          "title": "Documentos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index",
+          "title": "Coordenador"
+        },
+        {
+          "url": "https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--",
+          "title": "Credenciamento"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://master.fapex.org.br/portaltransparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index",
+          "title": "Licitação"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria",
+          "title": "Ouvidoria"
+        },
+        {
+          "url": "https://www.ufba.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/mr8-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.ufrb.edu.br/portal/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/mr4-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "http://www.ufsb.edu.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m78-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "http://www.ufob.edu.br",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m74-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.portal.ifba.edu.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m70-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "http://www.cnpq.br",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7w-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "http://www.unilab.edu.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7s-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.portais.univasf.edu.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7k-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.gov.br/ebserh/pt",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7g-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.ufsj.edu.br/ascom/material_padronizado.php",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7c-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.portal.uneb.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7Y-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://www.uefs.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/lL8-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "http://www.portal.iphan.gov.br/",
+          "title": "Visitar Website"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/lL4-",
+          "title": "EDITAR"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImg--",
+          "title": "Compromisso com a integridade: FAPEX marca presença em um dos principais eventos nacionais promovidos pela CGU."
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImQ--",
+          "title": "FAPEX fortalece parcerias e amplia conexões durante a Bahia Farm Show 2026"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImA--",
+          "title": "FAPEX e FEALQ promovem troca de experiências em agenda institucional realizada em Salvador"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbmBkQ--",
+          "title": "FAPEX recebe visita institucional da FAPESE para troca de experiências na gestão de projetos"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbmBkA--",
+          "title": "50 Anos de dedicação à Universidade Federal da Bahia - UFBA"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index",
+          "title": "Mais notícias"
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2L",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2M",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portalfornecedor",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portalfinanciador/Login",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portalcoordenador",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/portalrh/",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Projeto/index",
+          "title": ""
+        },
+        {
+          "url": "https://www.catho.com.br/vagas/fapex/",
+          "title": ""
+        },
+        {
+          "url": "http://confies.org.br/institucional/",
+          "title": ""
+        },
+        {
+          "url": "https://master.fapex.org.br/sapro/documentos/validacao/checkauth.aspx",
+          "title": ""
+        },
+        {
+          "url": "http://www.fapex.org.br/Fapex/PortalTransparencia",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br#footer",
+          "title": ""
+        },
+        {
+          "url": "https://fapex.org.br",
+          "title": "http://www.fapex.org.br"
+        },
+        {
+          "url": "https://fapex.org.br",
+          "title": "14.645.162/0001-91"
+        },
+        {
+          "url": "https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil",
+          "title": ""
+        },
+        {
+          "url": "http://www.computacaobrasil.com.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/jquery.mobile.customized.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/jquery.easing.1.3.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/camera.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://dunsregistered.dnb.com",
+        "https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "faped_selection",
+      "url": "https://faped.org.br",
+      "kind": "listing-cycle2",
+      "observed_at": "2026-09-08T15:23:02.795490+00:00",
+      "status": 406,
+      "location": null,
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4",
+      "file": "faped_selection-listing-cycle2.html",
+      "encoding": "utf-8",
+      "title": "Not Acceptable!",
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

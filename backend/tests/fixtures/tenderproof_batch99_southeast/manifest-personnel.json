@@ -1,0 +1,41 @@
+[
+  {
+    "name": "fapece-vaga",
+    "url": "https://fapece.com.br/temos-vaga-2/",
+    "observed_at": "2026-09-08T15:01:30.600269+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 118620,
+    "original_sha256": "32fe9131bbbe4701653f6e311c0e4113da47951505fc7f41580f0d46d476d736",
+    "fixture_sha256": "cf4792310972d44d32c4b10c47e619a2ab62e8bc9e6cf832bc1aa3da9eb3bca6",
+    "file": "fapece-vaga.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesb-selecao",
+    "url": "https://selecao.ba.gov.br/",
+    "observed_at": "2026-09-08T15:01:30.601312+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 13363,
+    "original_sha256": "1551c5742308255dddbd4c9af1ed3ee05d45374c52250815ad6eb2812cbf78de",
+    "fixture_sha256": "d743d54eff27ebe00c1cc57d1a8ed7d3e80ac8bbdafc16d2ddce315be63fc4b2",
+    "file": "fapesb-selecao.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesq-editais-public",
+    "url": "https://fapesq.rpp.br/editais-1",
+    "observed_at": "2026-09-08T15:01:30.601312+00:00",
+    "max_bytes": 2097152,
+    "status": 302,
+    "location": "https://fapesq.rpp.br/editais/2026/editais-2026",
+    "bytes": 47,
+    "original_sha256": "a3bb80059cd155354ca422dc2a37e05c4b9f531ec69bf4064c48afecca44dfc0",
+    "fixture_sha256": "a3bb80059cd155354ca422dc2a37e05c4b9f531ec69bf4064c48afecca44dfc0",
+    "file": "fapesq-editais-public.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

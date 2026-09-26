@@ -1,0 +1,575 @@
+{
+  "scope": "bounded real unauthenticated public HTTP, TLS verified, no browser",
+  "pages": [
+    {
+      "source": "exame_open",
+      "kind": "listing",
+      "url": "https://concursos.exameconsultores.com.br/index/1/",
+      "observed_at": "2026-09-08T00:00:55.203409+00:00",
+      "file": "exame_open-listing.html",
+      "sha256": "6de191ac835397637ea1aec41831a35ec6abf71408b9f19a21cdf6fc76ecd248",
+      "bytes": 31291,
+      "status": 200,
+      "observed_tabs": [
+        "https://concursos.exameconsultores.com.br/index/abertos/",
+        "https://concursos.exameconsultores.com.br/index/1/",
+        "https://concursos.exameconsultores.com.br/index/2/",
+        "https://concursos.exameconsultores.com.br/index/3/",
+        "https://concursos.exameconsultores.com.br/index/5/",
+        "https://concursos.exameconsultores.com.br/index/7/",
+        "https://concursos.exameconsultores.com.br/index/4/"
+      ],
+      "detail_samples": [
+        "https://concursos.exameconsultores.com.br/informacoes/544/",
+        "https://concursos.exameconsultores.com.br/informacoes/536/",
+        "https://concursos.exameconsultores.com.br/informacoes/545/",
+        "https://concursos.exameconsultores.com.br/informacoes/543/",
+        "https://concursos.exameconsultores.com.br/informacoes/535/"
+      ]
+    },
+    {
+      "source": "exame_open",
+      "kind": "detail",
+      "url": "https://concursos.exameconsultores.com.br/informacoes/544/",
+      "observed_at": "2026-09-08T00:00:55.748908+00:00",
+      "file": "exame_open-detail.html",
+      "sha256": "74f60541af77076bb992cb0d75d604501d6906a3f25fa78cd331962c47df0035",
+      "bytes": 51432,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/6220e2a6-1c0e-49c5-a6cd-2ececf14dc7b.pdf",
+          "title": "RERRATIFICAÇÃO Nº 01 11/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf",
+          "title": "EDITAL 10/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/edeb2c5c-fbd8-466a-926a-4a5e4fa7b4ee.pdf",
+          "title": "PORTARIA Nº 038/2026 - DISPÕE SOBRE A NOMEAÇÃO DE COMISSÃO ESPECIAL DO CONCURSO PÚBLICO 22/06/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/a1d8be68-5438-4296-a958-ebb9c5a06852.pdf",
+          "title": "EXTRATOS DO EDITAL E DA RERRATIFICAÇÃO Nº 01 DO EDITAL NO JORNAL DE GRANDE CIRCULAÇÃO DA REGIÃO/MUNICÍPIO JORNAL SETE DIAS\" 14/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/d2185b06-2560-4412-8d32-c5df99951a7d.pdf",
+          "title": "EXTRATO DA RERRATIFICAÇÃO Nº 01 DO EDITAL NO DIÁRIO OFICIAL DO ESTADO  JORNAL MINAS GERAIS 13/08/2026"
+        }
+      ]
+    },
+    {
+      "source": "objetiva_open",
+      "kind": "listing",
+      "url": "https://concursos.objetivas.com.br",
+      "observed_at": "2026-09-08T00:00:55.930673+00:00",
+      "file": "objetiva_open-listing.html",
+      "sha256": "09b3bf7b841424ad4703d00f162b39383cb87296efaefe5fcc26f889b5d26cb7",
+      "bytes": 49792,
+      "status": 200,
+      "observed_tabs": [
+        "https://concursos.objetivas.com.br/index/abertos/",
+        "https://concursos.objetivas.com.br/index/1/",
+        "https://concursos.objetivas.com.br/index/3/"
+      ],
+      "detail_samples": [
+        "https://concursos.objetivas.com.br/informacoes/2604/",
+        "https://concursos.objetivas.com.br/informacoes/2621/",
+        "https://concursos.objetivas.com.br/informacoes/2617/",
+        "https://concursos.objetivas.com.br/informacoes/2605/",
+        "https://concursos.objetivas.com.br/informacoes/2603/"
+      ]
+    },
+    {
+      "source": "objetiva_open",
+      "kind": "detail",
+      "url": "https://concursos.objetivas.com.br/informacoes/2604/",
+      "observed_at": "2026-09-08T00:00:57.276374+00:00",
+      "file": "objetiva_open-detail.html",
+      "sha256": "66ba5adf3cab4127005fae761bc61c9b1319b17a18b485b69ffad3763482e14a",
+      "bytes": 30720,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/361/concursos/2604/anexos/d60af51e-86f7-4748-ba6d-24d34ffb8659.pdf",
+          "title": "Edital Nº 01/2026 - Edital de Abertura das Inscrições 01/09/2026"
+        }
+      ]
+    },
+    {
+      "source": "cotec_open",
+      "kind": "listing",
+      "url": "https://www.cotec.fadenor.com.br/index/abertos/",
+      "observed_at": "2026-09-08T00:00:57.711376+00:00",
+      "file": "cotec_open-listing.html",
+      "sha256": "6aff6bb1e5aaee8817c511b2a36ce9f80695c5c23788519b7a95128b0ca364b3",
+      "bytes": 16974,
+      "status": 200,
+      "observed_tabs": [
+        "https://www.cotec.fadenor.com.br/index/abertos/",
+        "https://www.cotec.fadenor.com.br/index/1/",
+        "https://www.cotec.fadenor.com.br/index/3/",
+        "https://www.cotec.fadenor.com.br/index/2/",
+        "https://www.cotec.fadenor.com.br/index/5/"
+      ],
+      "detail_samples": [
+        "https://www.cotec.fadenor.com.br/informacoes/28/"
+      ]
+    },
+    {
+      "source": "cotec_open",
+      "kind": "detail",
+      "url": "https://www.cotec.fadenor.com.br/informacoes/28/",
+      "observed_at": "2026-09-08T00:00:58.225821+00:00",
+      "file": "cotec_open-detail.html",
+      "sha256": "108cc56eafd109714da63b57886e8b9192f8b635004820726cc862440b0f0448",
+      "bytes": 49546,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/f89ef808-c374-4059-9b46-fa5e50f29bbf.pdf",
+          "title": "Edital (Conforme 3ª Retificação) 04/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/8f627f72-da48-4f08-91c0-78ddae2c3514.pdf",
+          "title": "1ª_Retificação 16/07/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/eb23eb53-01a1-492f-a15c-e172af1c6124.pdf",
+          "title": "2ª_Retificação 26/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/1acd3aa1-a5da-45f8-986a-3fd6ec8356a3.pdf",
+          "title": "3ª Retificação 04/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/846/concursos/28/anexos/266220dd-2ce5-468a-a1f9-f8b36cf73f72.pdf",
+          "title": "ANEXO I - ESPECIFICAÇÃO DOS CARGOS (Conforme a 1ª Retificação) 16/07/2026"
+        }
+      ]
+    },
+    {
+      "source": "quadrix_open",
+      "kind": "listing",
+      "url": "https://quadrix.org.br/index/abertos/",
+      "observed_at": "2026-09-08T00:00:58.412385+00:00",
+      "file": "quadrix_open-listing.html",
+      "sha256": "48dfa7f31183c996862f1893b5783eea06f10268372de75979cafb6cde53149e",
+      "bytes": 24298,
+      "status": 200,
+      "observed_tabs": [
+        "https://quadrix.org.br/index/abertos/",
+        "https://quadrix.org.br/index/1/",
+        "https://quadrix.org.br/index/3/",
+        "https://quadrix.org.br/index/4/",
+        "https://quadrix.org.br/index/6/"
+      ],
+      "detail_samples": [
+        "https://quadrix.org.br/informacoes/3073/",
+        "https://quadrix.org.br/informacoes/3070/",
+        "https://quadrix.org.br/informacoes/3057/"
+      ]
+    },
+    {
+      "source": "quadrix_open",
+      "kind": "detail",
+      "url": "https://quadrix.org.br/informacoes/3073/",
+      "observed_at": "2026-09-08T00:00:59.017363+00:00",
+      "file": "quadrix_open-detail.html",
+      "sha256": "00974d9db0eccb9953b969a346cb849c08ebe8c87a9c2e49741d47a90ed3f668",
+      "bytes": 29525,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+          "title": "Edital nÂº 1 (abertura) 31/08/2026"
+        },
+        {
+          "url": "https://quadrix.org.br/leitor-vlibras/pdf?pdf=https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+          "title": ""
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/ea36d1ef-8123-446b-b249-1d16dac8dda5.pdf",
+          "title": "Cronograma 31/08/2026"
+        },
+        {
+          "url": "https://quadrix.org.br/leitor-vlibras/pdf?pdf=https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/ea36d1ef-8123-446b-b249-1d16dac8dda5.pdf",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "source": "rbo_open",
+      "kind": "listing",
+      "url": "https://rboconcursos.selecao.net.br/index/abertos/",
+      "observed_at": "2026-09-08T00:00:59.188487+00:00",
+      "file": "rbo_open-listing.html",
+      "sha256": "56b48f5a4c1c7cf22365a8c7b9bc60c21d3fefccfe9bf506eff75404374f1b17",
+      "bytes": 21705,
+      "status": 200,
+      "observed_tabs": [
+        "https://rboconcursos.selecao.net.br/index/abertos/",
+        "https://rboconcursos.selecao.net.br/index/1/",
+        "https://rboconcursos.selecao.net.br/index/2/",
+        "https://rboconcursos.selecao.net.br/index/3/",
+        "https://rboconcursos.selecao.net.br/index/4/",
+        "https://rboconcursos.selecao.net.br/index/5/"
+      ],
+      "detail_samples": [
+        "https://rboconcursos.selecao.net.br/informacoes/203/",
+        "https://rboconcursos.selecao.net.br/informacoes/210/",
+        "https://rboconcursos.selecao.net.br/informacoes/209/"
+      ]
+    },
+    {
+      "source": "rbo_open",
+      "kind": "detail",
+      "url": "https://rboconcursos.selecao.net.br/informacoes/203/",
+      "observed_at": "2026-09-08T00:01:00.178558+00:00",
+      "file": "rbo_open-detail.html",
+      "sha256": "9ec5b41b1a51d593f52c882292bc57206189177865257b0c8c9f149355c60bcc",
+      "bytes": 23728,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/e1331b90-f1d9-440c-bb77-b17908b26cb8.pdf",
+          "title": "EDITAL DE ABERTURA RETIFICADO 18/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/814/concursos/203/anexos/2ac002b6-acc6-4384-9143-a94fc00ab55c.pdf",
+          "title": "RETIFICAÇÃO Nº 01 DO EDITAL DE ABERTURA 25/08/2026"
+        }
+      ]
+    },
+    {
+      "source": "sigma_open",
+      "kind": "listing",
+      "url": "https://concursos.sigmaassessoria.com.br",
+      "observed_at": "2026-09-08T00:01:00.401488+00:00",
+      "file": "sigma_open-listing.html",
+      "sha256": "9b2eed780e39920cc9d1056cbc0c9b5c5c8075d6d36f5cffb5bf8740744a9f6e",
+      "bytes": 15399,
+      "status": 200,
+      "observed_tabs": [
+        "https://concursos.sigmaassessoria.com.br/index/abertos/",
+        "https://concursos.sigmaassessoria.com.br/index/1/",
+        "https://concursos.sigmaassessoria.com.br/index/2/",
+        "https://concursos.sigmaassessoria.com.br/index/3/",
+        "https://concursos.sigmaassessoria.com.br/index/4/",
+        "https://concursos.sigmaassessoria.com.br/index/5/"
+      ],
+      "detail_samples": [
+        "https://concursos.sigmaassessoria.com.br/informacoes/264/"
+      ]
+    },
+    {
+      "source": "sigma_open",
+      "kind": "detail",
+      "url": "https://concursos.sigmaassessoria.com.br/informacoes/264/",
+      "observed_at": "2026-09-08T00:01:01.256207+00:00",
+      "file": "sigma_open-detail.html",
+      "sha256": "76d096cf6b274df013c9074e0a09d01644cd4c97cbd9fd9c20b5fa474ce5f64a",
+      "bytes": 18116,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/57/concursos/264/anexos/2271143d-3d46-4c71-bd43-9643c3552c97.pdf",
+          "title": "EDITAL COMPLETO 06/08/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/57/concursos/264/anexos/cc4243ab-5b2b-4946-9ec6-9719d4d10fbe.pdf",
+          "title": "EDITAL DE HOMOLOGAÇÃO DE INSCRIÇÕES E CONVOCAÇÃO PARA PROVA OBJETIVA 01/09/2026"
+        }
+      ]
+    },
+    {
+      "source": "fafipa_open",
+      "kind": "listing",
+      "url": "https://concursos.fundacaofafipa.org.br/",
+      "observed_at": "2026-09-08T00:01:01.452775+00:00",
+      "file": "fafipa_open-listing.html",
+      "sha256": "c51231f8203ff6a5d3a7d8d516aa35aaf58fc1fd53390a67eb6ed10ffddeaaf9",
+      "bytes": 68562,
+      "status": 200,
+      "observed_tabs": [
+        "https://concursos.fundacaofafipa.org.br/index/abertos/",
+        "https://concursos.fundacaofafipa.org.br/index/1/",
+        "https://concursos.fundacaofafipa.org.br/index/3/"
+      ],
+      "detail_samples": [
+        "https://concursos.fundacaofafipa.org.br/informacoes/4170/",
+        "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+        "https://concursos.fundacaofafipa.org.br/informacoes/4207/",
+        "https://concursos.fundacaofafipa.org.br/informacoes/4206/",
+        "https://concursos.fundacaofafipa.org.br/informacoes/4205/"
+      ]
+    },
+    {
+      "source": "fafipa_open",
+      "kind": "detail",
+      "url": "https://concursos.fundacaofafipa.org.br/informacoes/4170/",
+      "observed_at": "2026-09-08T00:01:02.186761+00:00",
+      "file": "fafipa_open-detail.html",
+      "sha256": "18401d7c671889230fa6b91d6c4d6402c0856becc06351b05a6b2794a2142ab1",
+      "bytes": 150214,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4170/anexos/07838580-5908-4eeb-90ab-defdb399c9a7.pdf",
+          "title": "Edital n.º 20.001/2026 - Cumprimento de Decisão Liminar 03/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4170/anexos/ec48cda2-87bb-4804-b78d-81f87d455c3b.pdf",
+          "title": "Edital n.º 19.001/2026 - Convocação para prova de títulos 03/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4170/anexos/c273bdc0-2b53-4085-ac43-c88a90125642.pdf",
+          "title": "Edital n.º 18.001/2026 - Convocação para prova discursiva - Procurador do Município Júnior 03/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4170/anexos/a125d5e6-f0b5-4e11-8de4-616048fbb826.pdf",
+          "title": "Edital n.º 17.001/2026 - Convocação para prova prática 03/09/2026"
+        },
+        {
+          "url": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4170/anexos/19d83523-36e2-468e-85fc-80907686c3c1.pdf",
+          "title": "Edital n.º 16.001/2026 - Convocação para prova de desempenho didático 03/09/2026"
+        }
+      ]
+    },
+    {
+      "source": "omni_open",
+      "kind": "listing",
+      "url": "https://portal.omniconcursospublicos.com.br",
+      "observed_at": "2026-09-08T00:01:02.453976+00:00",
+      "file": "omni_open-listing.html",
+      "sha256": "3ac44b764872630c528ab5862417d697f4ce2df6f2fa84a7e4018723cbb658a8",
+      "bytes": 125608,
+      "status": 200,
+      "observed_tabs": [
+        "https://portal.omniconcursospublicos.com.br/index/abertos/",
+        "https://portal.omniconcursospublicos.com.br/index/1/",
+        "https://portal.omniconcursospublicos.com.br/index/2/",
+        "https://portal.omniconcursospublicos.com.br/index/3/",
+        "https://portal.omniconcursospublicos.com.br/index/4/",
+        "https://portal.omniconcursospublicos.com.br/index/5/"
+      ],
+      "detail_samples": [
+        "https://portal.omniconcursospublicos.com.br/informacoes/239/"
+      ]
+    },
+    {
+      "source": "omni_open",
+      "kind": "detail",
+      "url": "https://portal.omniconcursospublicos.com.br/informacoes/239/",
+      "observed_at": "2026-09-08T00:01:03.309124+00:00",
+      "file": "omni_open-detail.html",
+      "sha256": "059c55463b69257dc3bc130e3e6e2b7d3a7c3f4d57e8cb674d4bef23a0a697d3",
+      "bytes": 107339,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/gO2nAYYvz3JvHM2zTe6a6RuSAP7AkEMfdbQIqFVT.pdf",
+          "title": "Edital 002/2024 de Abertura"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/3DQLG8c8njJPP9vE5QQ7O8litbsbOHI1zo7FeGCT.pdf",
+          "title": "Edital 002/2024 - Retificação 01"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/r9qelyNvIdJ5430qIpbmxrTyz4PLxf4oXwK9IiQe.pdf",
+          "title": "Edital de Resultado de Isenção da Taxa de Inscrição"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/KzjvJdcNwbDRjilDW6EuEvjM1kqTC0wpBy6AmjYg.pdf",
+          "title": "Anexo Único - Resultado de Isenção da Taxa de Inscrição"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/239/anexos/v578smc1kNHxAe5SSm31zGFBtRO941S6NraeVjVO.pdf",
+          "title": "Edital de Homologação das Inscrições"
+        }
+      ]
+    },
+    {
+      "source": "w2_open",
+      "kind": "listing",
+      "url": "https://www.w2consultores.com.br/index/todos/",
+      "observed_at": "2026-09-08T00:01:03.539741+00:00",
+      "file": "w2_open-listing.html",
+      "sha256": "65d8e1a0fe4919a0a9f9a281d646973b5ac35841327a01739ddc1446c75de3a6",
+      "bytes": 39138,
+      "status": 200,
+      "observed_tabs": [
+        "https://www.w2consultores.com.br/index/abertos/",
+        "https://www.w2consultores.com.br/index/1/",
+        "https://www.w2consultores.com.br/index/2/",
+        "https://www.w2consultores.com.br/index/3/",
+        "https://www.w2consultores.com.br/index/4/",
+        "https://www.w2consultores.com.br/index/5/",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=1&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=2&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=3&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=4&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=5&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=6&q=&pp=10",
+        "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=26&q=&pp=10"
+      ],
+      "detail_samples": [
+        "https://www.w2consultores.com.br/informacoes/32/",
+        "https://www.w2consultores.com.br/informacoes/105/",
+        "https://www.w2consultores.com.br/informacoes/92/",
+        "https://www.w2consultores.com.br/informacoes/33/",
+        "https://www.w2consultores.com.br/informacoes/23/"
+      ]
+    },
+    {
+      "source": "w2_open",
+      "kind": "detail",
+      "url": "https://www.w2consultores.com.br/informacoes/32/",
+      "observed_at": "2026-09-08T00:01:04.180466+00:00",
+      "file": "w2_open-detail.html",
+      "sha256": "109aa81d2f3912cded2e3898c1093fd7c77e59f54c823c739ddcc593b53bc553",
+      "bytes": 37421,
+      "status": 200,
+      "document_samples": [
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/32/anexos/634ffd87795ca166d8abc95c07eb3466.pdf",
+          "title": "Resultado Final 28/02/2012"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/32/anexos/4e81910472192a4e791dab7fe09310bf.pdf",
+          "title": "Parecer Recursos Resultado Parcial 28/02/2012"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/32/anexos/9fdd919ab312a08472cc55d1a45af834.pdf",
+          "title": "Edital Complementar - Gabarito Definitivo 17/02/2012"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/32/anexos/7adf4eb331be7d1a272c8e0b8f62b88f.pdf",
+          "title": "Parecer Recursos provas objetivas 17/02/2012"
+        },
+        {
+          "url": "https://anexos.cdn.selecao.net.br/uploads/41/concursos/32/anexos/4dac607e8b185ae2490cdceb8f585216.pdf",
+          "title": "Resultado Parcial 17/02/2012"
+        }
+      ]
+    },
+    {
+      "source": "consulpam_open",
+      "kind": "listing",
+      "url": "https://consulpam.selecao.net.br/index/abertos/",
+      "observed_at": "2026-09-08T00:01:04.377754+00:00",
+      "file": "consulpam_open-listing.html",
+      "sha256": "cf710c44680d65887487759a0b155974597ed0ca0a63a76d84e23fdd59f2fa77",
+      "bytes": 17387,
+      "status": 200,
+      "observed_tabs": [
+        "https://consulpam.selecao.net.br/index/abertos/",
+        "https://consulpam.selecao.net.br/index/1/",
+        "https://consulpam.selecao.net.br/index/2/",
+        "https://consulpam.selecao.net.br/index/3/",
+        "https://consulpam.selecao.net.br/index/4/",
+        "https://consulpam.selecao.net.br/index/5/"
+      ],
+      "detail_samples": []
+    },
+    {
+      "source": "idcap_open",
+      "kind": "listing",
+      "url": "https://www.idcap.org.br",
+      "observed_at": "2026-09-08T00:01:04.703512+00:00",
+      "file": "idcap_open-listing.html",
+      "sha256": "341a65c7a2895d3513f47f27df4046b7153a17c63daffd405eeea4b11efa8e1f",
+      "bytes": 155427,
+      "status": 200,
+      "observed_tabs": [
+        "https://www.idcap.org.br/index/1",
+        "https://www.idcap.org.br/index/abertos",
+        "https://www.idcap.org.br/index/3",
+        "https://www.idcap.org.br/index/5",
+        "https://www.idcap.org.br/index/abertos/",
+        "https://www.idcap.org.br/index/1/",
+        "https://www.idcap.org.br/index/3/",
+        "https://www.idcap.org.br/index/5/"
+      ],
+      "detail_samples": [
+        "https://www.idcap.org.br/informacoes/253/",
+        "https://www.idcap.org.br/informacoes/251/",
+        "https://www.idcap.org.br/informacoes/252/",
+        "https://www.idcap.org.br/informacoes/235/",
+        "https://www.idcap.org.br/informacoes/241/"
+      ]
+    },
+    {
+      "source": "idcap_open",
+      "kind": "detail",
+      "url": "https://www.idcap.org.br/informacoes/253/",
+      "observed_at": "2026-09-08T00:01:05.043156+00:00",
+      "file": "idcap_open-detail.html",
+      "sha256": "1224c0d552f39e50c6c814fa359cf9018733e0aa6d59cfe5b0f8e9c6be98d818",
+      "bytes": 21205,
+      "status": 200,
+      "document_samples": []
+    },
+    {
+      "source": "consulpam_open",
+      "kind": "own-listing",
+      "url": "https://www.consulpam.com.br/index.php?menu=concursos",
+      "observed_at": "2026-09-08T00:02:33.039362+00:00",
+      "file": "consulpam_open-own-listing.html",
+      "status": 200,
+      "bytes": 96951,
+      "sha256": "30c35d42c294f3ced8a955fb9489edbfa939906f450e46724977fd8a60b496e6"
+    },
+    {
+      "source": "consulpam_open",
+      "kind": "own-detail",
+      "url": "https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=879",
+      "observed_at": "2026-09-08T00:02:33.628404+00:00",
+      "file": "consulpam_open-own-detail.html",
+      "status": 200,
+      "bytes": 116152,
+      "sha256": "53578c0b981bb81e5ca83efdd2866a3a1ce9ce75046097a556930183d1a41d92"
+    },
+    {
+      "source": "consulpam_open",
+      "kind": "net-page1",
+      "url": "https://consulpam.selecao.net.br/index/1/",
+      "observed_at": "2026-09-08T00:02:33.787245+00:00",
+      "file": "consulpam_open-net-page1.html",
+      "status": 200,
+      "bytes": 43866,
+      "sha256": "03ecd286d9785abdafdd3d836e3893856d6d60083e0156daf0c481cd858d5b99"
+    },
+    {
+      "source": "w2_open",
+      "kind": "page2",
+      "url": "https://www.w2consultores.com.br/index/todos/?&ord=&dir=&pg=2&q=&pp=10",
+      "observed_at": "2026-09-08T00:02:34.162053+00:00",
+      "file": "w2_open-page2.html",
+      "status": 200,
+      "bytes": 38222,
+      "sha256": "d80f602954b3e948519a3aa82949293407b7da095779601ed112a216d1e04c75"
+    },
+    {
+      "source": "idcap_open",
+      "kind": "detail-alt0",
+      "url": "https://www.idcap.org.br/informacoes/251/",
+      "observed_at": "2026-09-08T00:02:34.819304+00:00",
+      "file": "idcap_open-detail-alt0.html",
+      "status": 200,
+      "bytes": 20923,
+      "sha256": "e179169095bd2b5d27a691f326936173a1cd443ca7f4ad6ca5e2c94d168db8da"
+    },
+    {
+      "source": "idcap_open",
+      "kind": "detail-alt1",
+      "url": "https://www.idcap.org.br/informacoes/252/",
+      "observed_at": "2026-09-08T00:02:35.248206+00:00",
+      "file": "idcap_open-detail-alt1.html",
+      "status": 200,
+      "bytes": 30118,
+      "sha256": "6cf9eb9e006bfa5612be6f1faeaea898b5d53cc58f1f0785a966fea4a9cc568c"
+    }
+  ]
+}

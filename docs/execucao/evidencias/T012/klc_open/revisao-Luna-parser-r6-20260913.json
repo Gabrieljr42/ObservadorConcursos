@@ -1,0 +1,28 @@
+{
+  "schema": "t012.klc_open.luna-parser-r6-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "requested_gate": "KLC_PARSER_R6_ACCEPT_FOR_INTEGRATION",
+  "findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:20,39-40",
+      "finding": "U+FFFD is not always fail-closed: public parse() exposes strict_text=False and then accepts replacement text. Dispatch uses the safe default, but a caller can bypass the required guard directly.",
+      "reproduction": "With the pinned PDF/pages, replace 'Teodoro' by 'Te�odoro' and call parse(..., strict_text=False); it returned supported fields (accepted_strict_false).",
+      "required_fix": "Remove the bypass or make strict_text a non-overridable production constant; add a regression proving direct parse and dispatch both reject U+FFFD."
+    },
+    {
+      "severity": "P2",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:23-25",
+      "finding": "The parser pins SHA and the receipt records 348300 bytes, but parse has no explicit expected byte-length constant/check.",
+      "required_fix": "Pin and assert the receipt byte length alongside SHA before integration."
+    }
+  ],
+  "positive_checks": {
+    "identity_and_url": "PASS: source klc_open/external_id 632 and exact HTTPS host/path URL are enforced; scheme/host/path/default substitutions fail by equality.",
+    "guards": "PASS otherwise: page order/count, page errors, truncation/errors, SHA drift and literal evidence are fail-closed.",
+    "types": "PASS: dispatch returns ExtractedField with Evidence bound to artifact, SHA, URL, page, snippet and validation.",
+    "tests": "8 passed in 1.30s; compileall PASS."
+  },
+  "gate": "Do not accept R6 until U+FFFD cannot be disabled through the public parser signature; wiring remains a separate later gate."
+}

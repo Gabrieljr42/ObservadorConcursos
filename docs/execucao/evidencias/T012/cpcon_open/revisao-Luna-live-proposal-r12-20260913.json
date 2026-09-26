@@ -1,0 +1,45 @@
+{
+  "schema": "t012.luna.cpcon.live-proposal-review-r12.v1",
+  "verdict": "ACCEPT_FOR_BACKUP_APPROVE_APPLY",
+  "scope": "read-only independent review; no approve/apply/live mutation",
+  "proposal": {
+    "id": "tpp-69bef8bb342812dbf19e216853063d2b",
+    "proposal_hash": "494bf663092068e6d65f74dd24cc45f8dfa4c30ad6a134ea59ab13a59fed4b4b",
+    "owner_user_id": 1,
+    "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+    "state": "proposed",
+    "action": "create",
+    "concurso_id": null,
+    "source_id": 35,
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026"
+  },
+  "payload_review": {
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_byte_len": 498894,
+    "detail_url_and_document_url": "exact CPCON pins",
+    "eligible_fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "cargo_count": 6,
+    "cargo_evidence_count": 6,
+    "top_level_unauthorized_fields_absent": ["remuneracao", "taxa", "documentos", "prova_data"],
+    "note": "per-cargo remuneration is part of the cargos values; no separate top-level remuneration/taxa/document fields are proposed",
+    "baseline": null,
+    "allocation": "source_id=35 identifies the source; concurso_id remains null and no source number/temporary ID is used as target"
+  },
+  "old_proposal": {
+    "id": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "state": "rejected",
+    "reason": "superseded invalid create allocation handoff",
+    "approval_or_apply": false,
+    "replay_reason_preserved": true
+  },
+  "counts": {"concursos":34,"proposals":99,"versions":92,"outbox":92,"notifications":91},
+  "local_checks": [
+    {"check":"ReviewedRun.model_validate + artifact SHA/bytes","result":"PASS"},
+    {"check":"import_reviewed_run dry_run","result":"validated; no persistence"},
+    {"command":"pytest -q backend/tests/test_cpcon_t012.py backend/tests/test_t012_batch2_dispatch.py backend/tests/test_reviewed_run_import.py","result":"26 passed"},
+    {"command":"compileall cpcon_t012.py fields.py publication.py","result":"PASS"}
+  ],
+  "expected_effects_if_approved_applied": "one canonical allocation/application only after separate backup, current baseline and authorization checks; this review performed none",
+  "side_effects": {"approve":false,"apply":false,"new_concurso":false,"new_version":false,"new_outbox":false,"new_notification":false}
+}

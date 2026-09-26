@@ -1,0 +1,42 @@
+{
+  "schema": "t012.klc-backend-bundle-r22.v1",
+  "status": "READY_FOR_FINAL_REVIEW",
+  "scope": "offline backend only; no Docker/API/live/deploy",
+  "principal_parser_preserved": true,
+  "retification": {
+    "module": "backend/app/tenderproof/klc_retificacao_t012.py",
+    "sha256": "37d62f342f49217e704753ef4546a5308ad5bb5f58a081c5c690e2ddfcf04b67",
+    "source": "klc_open",
+    "external_id": "632",
+    "artifact_id": "art-klc-ret1-1887b316",
+    "sha256_pdf": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+    "byte_len": 423600,
+    "pages": 1,
+    "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+    "title": "Retificação 1 - Alteração da Data da Prova",
+    "kind": "retificacao",
+    "promoted_fields": ["prova_data=2026-05-17"],
+    "other_fields": "not promoted",
+    "snippet": "ser aplicada no dia 17 de maio de 2026",
+    "guards": ["source/external", "artifact id/SHA/bytes", "URL/title/kind", "one physical page", "identity markers", "U+FFFD/error/truncated"]
+  },
+  "wiring": {
+    "fields_sha256": "cc7894950353e094aae49f3f93f0557259a701cb7a676bbbc875af3b2ab3f271",
+    "review_cases_sha256": "077742b189c5ad77810a6350eccfbc89676f03c4279f0cb6ac1eb46ed034dd98",
+    "method_version": "tenderproof-fields/1.22",
+    "dispatch": "retification pin is selected before the ten-page principal KLC parser",
+    "recovery": "METHOD_VERSION bump makes persisted old cases non-current; prepare-preserved recomputes and creates a new case, leaving old case auditably persisted"
+  },
+  "tests": {
+    "klc_retification_and_recovery": "8 passed",
+    "combined_KLC_FAFAIPA_Publiconsult_APTA_Avanca_document_review": "95 passed",
+    "compileall": "PASS"
+  },
+  "field_change_contract": {
+    "baseline": "prova_data=2026-05-10",
+    "new": "prova_data=2026-05-17",
+    "changes": ["prova_data"],
+    "publication_side_effects": false
+  },
+  "not_applied": true
+}

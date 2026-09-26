@@ -1,0 +1,55 @@
+{
+  "schema": "t012.publiconsult.document-review-decision-r2.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "document-review read-only; sem prepare/approve/apply/live mutation",
+  "verdict": "ACCEPT_FOR_PREPARE_APPROVE",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "selection_identity": {
+    "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+    "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+    "identity_basis": "artifact page 1 explicitly names Prefeitura Municipal de VOTUPORANGA/SP and Processo Seletivo Nº 1/2026"
+  },
+  "pending_document": {
+    "kind_decision": "convocacao_taf",
+    "title": "Edital de Convocação para o Teste de Aptidão Física - TAF",
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+    "role": "convocação/documento derivado; não é o edital principal de abertura",
+    "normal_review_action": "approve document review only after recording this normalized kind and receipt"
+  },
+  "artifact": {
+    "path": "docs/execucao/evidencias/T012/publiconsult_open/document-taf-681.pdf",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "content_type": "application/pdf",
+    "requested_url_equals_final_url": true,
+    "page_receipt_artifact_id": "publiconsult-open-taf-681-r2",
+    "page_integrity": "PASS: 6/6 pages non-empty, error=null, truncated=false; SHA/bytes independently match receipt and pages JSON"
+  },
+  "content_and_provenance": {
+    "identity": "PASS: page 1 names Votuporanga/SP and Processo Seletivo Nº 1/2026; URL path /681/ and selection detail bind exact candidate.",
+    "document_role": "PASS: page 1 labels Edital de Convocação para o Teste de Aptidão Física - TAF and says it follows the opening edital; it is not mixed into the principal edital artifact.",
+    "date": "PASS: TAF scheduled for 20/09/2026 (Sunday), with 09h30 and 13h30 cohorts on pages 2 and 4; document signed Votuporanga, 09/09/2026 on page 1.",
+    "content": "PASS: pages 1-6 preserve the TAF purpose, eligible function, location, attendance/medical-certificate requirements, clothing/equipment rules, privacy statement and complete candidate lists.",
+    "provenance": "PASS: one requested/final official artifact URL, HTTP 200 application/pdf, exact PDF header, one acquisition request, candidate/detail binding and no catalog mutation."
+  },
+  "guards": {
+    "principal_separation": "PASS: principal opening edital remains SHA 7e3bc67a... and 25 pages; this TAF has distinct SHA/size/6 pages and must remain a separate document case.",
+    "publication_scope": "PASS: no contest field, cargo, fee, salary or principal-edital value is promoted by this decision.",
+    "old_blocker": "RESOLVED_FOR_DOCUMENT_REVIEW: r1 blocker was specifically absent bytes; r2 preserves and verifies those bytes.",
+    "live_effects": "NONE: no API, DB, pilot, proposal, approve or apply operation performed."
+  },
+  "required_next_steps": [
+    "Use the normal document-review endpoint to approve this exact pending document as kind convocacao_taf, owner/run-bound, with this SHA/bytes/pages receipt.",
+    "After document review only, rerun duplicate/CAS and the principal-edital proposal gate once; do not treat TAF as replacement for the principal edital or as a new selection."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-681.pdf",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-acquisition-r2.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-pages-r2.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/live-proposal-receipt-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-decision-r1.json"
+  ]
+}

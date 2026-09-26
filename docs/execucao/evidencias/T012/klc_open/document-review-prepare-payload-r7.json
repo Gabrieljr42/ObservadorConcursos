@@ -1,0 +1,9 @@
+{
+  "schema":"t012.klc_open.prepare-preserved-payload-r7.v1",
+  "action":"prepare-preserved",
+  "owner_user_id":1,"run_id":"tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc","source_id":57,"external_id":"632",
+  "document":{"title":"Retificação 1 - Alteração da Data da Prova","kind":"retificacao","url":"https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf","artifact_id":"art-klc-ret1-1887b316","sha256":"0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60","byte_len":423600,"expected_page_count":1,"content_path":"docs/execucao/evidencias/T012/klc_open/retificacao-1-1887b316.pdf"},
+  "decision":{"no_field_change":false,"field":"prova_data","old_value":"2026-05-10","new_value":"2026-05-17","evidence_page":1,"evidence_snippet":"17 de maio de 2026"},
+  "dispatch":"hold until independent document review; no retry of prior principal-manifest prepare",
+  "mutation":false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "t011.id17.gate-import-proposal.v1",
+  "timestamp": "2026-09-12T23:57:20.2858234-03:00",
+  "decision": "PROPOSED_WAITING_INDEPENDENT_REVIEW",
+  "backup_reused": "/backups/pilot-20260913T023156478Z",
+  "envelope": {
+    "path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json",
+    "sha256": "58d7d17f88e43239cf31030369c59083d95a63d6e11e6ae994b4bdf6dda730f0",
+    "byte_len": 43397,
+    "run_id": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc"
+  },
+  "artifact": {
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "owner_user_id": 1,
+    "reference_only": true
+  },
+  "import": {
+    "dry_run": {"status": "validated", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    "apply_once": {"status": "imported", "fields": ["titulo", "orgao", "edital_numero", "cargos"]}
+  },
+  "proposal": {
+    "id": "tpp-83d38414eccb6f38e1b1c3d7ab31b291",
+    "state": "proposed",
+    "hash": "ffa5910d25c23192835d6d3c6f4956f388c2e60078a813958bcce59b146b157a",
+    "concurso_id": 17,
+    "source_id": 34,
+    "eligible_fields": ["cargos"],
+    "baseline_cargos": null,
+    "proposed_cargo_count": 27,
+    "vagas_total": 79,
+    "vagas_ampla_concorrencia": 74,
+    "vagas_pcd": 5,
+    "cadastro_reserva_nonnull": 0,
+    "empty_requirements": 0,
+    "replacement_characters": 0,
+    "approved": false,
+    "applied": false
+  },
+  "counts_before": {"proposals": 86, "versions": 84, "outbox": 84, "notifications": 83},
+  "counts_after": {"proposals": 87, "versions": 84, "outbox": 84, "notifications": 83},
+  "legacy_preserved": {"proposal_id": "tpp-02c29e4baa1b036eab1d02de59a65c74", "state": "no_change", "mutated": false},
+  "next_gate": "independent post-import review; no approve/apply"
+}

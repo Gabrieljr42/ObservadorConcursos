@@ -1,0 +1,28 @@
+{
+  "schema": "t011.id17.artifact-local-verification.v1",
+  "timestamp": "2026-09-12T22:50:28-03:00",
+  "operator": "Luna integrador",
+  "network": false,
+  "artifact": {
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "runtime_path": "/var/lib/observador/tenderproof/artifacts/art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f.pdf",
+    "local_path": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "declared_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "observed_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "sha_match": true,
+    "byte_len": 1094969,
+    "pages": 50,
+    "copied_intact": true
+  },
+  "baseline_read_only": {
+    "concurso_id": 17,
+    "source_id": 34,
+    "external_id": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+    "title": "PREFEITURA MUNICIPAL DE CUBATI-PB",
+    "edital_numero": "001/2024",
+    "cargos": null,
+    "content_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "api_http": 200
+  },
+  "gate": "ID17 permanece DEVOLVIDO: ainda requer revisão independente das quotas/AC-PcD-CR, parser rerun e envelope/proposta; nenhum import/proposal/apply executado"
+}

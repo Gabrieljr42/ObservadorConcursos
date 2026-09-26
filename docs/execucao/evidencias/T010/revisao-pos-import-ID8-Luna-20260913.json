@@ -1,0 +1,54 @@
+{
+  "schema": "t010.id8.post-import-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only",
+  "decision": "LIBERA_APPROVE_APPLY_UNICO",
+  "proposal": {
+    "id": "tpp-9f545731df8ae21c456385bd3f1d9d4b",
+    "hash": "c04210fd203f657cb4f196012497e4c93176b54f4c5e35b3ae77d361e6e78f6e",
+    "state": "proposed",
+    "concurso_id": 8,
+    "source_id": 45,
+    "eligible_fields": ["cargos"],
+    "baseline_version": 57,
+    "baseline_cargos": null,
+    "material_diff": "cargos only"
+  },
+  "provenance": {
+    "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e",
+    "envelope_sha256": "81c37dc42f00d4189607bab6029e7476ce86dac363f58dfd0abeb59d850a469c",
+    "artifact_id": "art-cdeead8742",
+    "artifact_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "artifact_bytes": 1048994,
+    "artifact_pages": 75,
+    "owner_user_id": 1,
+    "reference_only": true
+  },
+  "payload_audit": {
+    "cargo_count": 1,
+    "nome": "Guarda Civil Municipal",
+    "vagas_imediatas": 9,
+    "vagas_ac": 6,
+    "vagas_pcd": 1,
+    "vagas_ppp": 2,
+    "cadastro_reserva": 11,
+    "jornada": "40h semanais",
+    "requisitos": "Ensino Médio Completo; CNH ou Permissão para Dirigir categoria AB ou superior",
+    "remuneracao": "salário-mínimo + 30% (periculosidade) + adicional noturno",
+    "remuneracao_observacao": "base do salário-mínimo não quantificada; nenhuma base inventada",
+    "taxa_inscricao": "156.67",
+    "prova_data": "2026-12-06",
+    "evidence_pages": [3, 5, 68, 72]
+  },
+  "state_checks": {
+    "api_get_concurso_8": "HTTP 200; cargos permanece null (não aplicado)",
+    "health": 200,
+    "counts": {"proposals": 90, "versions": 85, "outbox": 85, "notifications": 84},
+    "approve_apply": false,
+    "no_new_version_outbox_notification": true,
+    "isolated_predecessor": "PASS em SQLite descartável; catálogo null"
+  },
+  "release_scope": "Liberar uma única sequência approve+apply desta proposta, sem alterar payload; revalidar hash/estado e executar revisão pós-apply. Não liberar nenhuma outra proposta nem edição de quadro.",
+  "mutation": "none"
+}

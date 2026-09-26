@@ -1,0 +1,10 @@
+{
+  "schema": "observador.t010.id16.import_proposal_blocked.v1",
+  "recorded_at": "2026-09-13T02:12:27.4295407-03:00",
+  "run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+  "import": {"dry_run": "validated", "apply": "imported", "fields": ["cargos", "prova_data"]},
+  "proposal": {"created": false, "http_expected": 201, "proposal_count_before": 93, "proposal_count_after": 93},
+  "blocker": {"http": 422, "reason": "Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados.", "document_review_endpoint": "/tenderproof/continuous/document-review/tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "pending_documents": [{"kind": "retificacao", "title": "Edital 002/2024 - Retificação 01", "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/246/anexos/245c22cb-a262-48d9-8091-f198385143f1.pdf"}]},
+  "mutation": {"approve": false, "apply": false, "retry": false},
+  "decision": "STOP; document-review decision required before normal proposal creation"
+}

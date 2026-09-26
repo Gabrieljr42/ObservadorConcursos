@@ -1,0 +1,42 @@
+[
+  {
+    "source": "ibfc_open",
+    "url": "https://concursos.ibfc.org.br/index/abertos/",
+    "observed_at": "2026-09-08T00:01:34.523076+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 10518,
+    "sha256": "8e5b30cd98b3f0572ea77aa6b9835c011622fae0293de61e13f46a46ccc1be19",
+    "file": "ibfc_open-listing.html"
+  },
+  {
+    "source": "reisesreis_open",
+    "url": "https://novo.reisauditores.com.br/concursos-em-andamento",
+    "observed_at": "2026-09-08T00:01:34.524076+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 12132,
+    "sha256": "3f4b64bd824fb12696abe42d78ca0175ebae3f69bc524366ff8f3f9618a48b3b",
+    "file": "reisesreis_open-listing.html"
+  },
+  {
+    "source": "admtec_open",
+    "url": "https://admtec.org.br/",
+    "observed_at": "2026-09-08T00:01:34.524076+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 689,
+    "sha256": "0db73e6cf17c5fc42ee6c27a1b33381b4f1b063fbd3c8219b4eec9814010df7c",
+    "file": "admtec_open-listing.html"
+  },
+  {
+    "source": "institutomais_open",
+    "url": "https://www.institutomais.org.br/Concursos/ConcursosAbertos",
+    "observed_at": "2026-09-08T00:01:34.525071+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 17299,
+    "sha256": "de44449230f2f1e40719c6ed213873e14d3f0be28d4bd5f3137205592e53d2b6",
+    "file": "institutomais_open-listing.html"
+  }
+]

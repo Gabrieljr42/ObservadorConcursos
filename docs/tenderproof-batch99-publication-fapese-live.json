@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-09-08T15:48:41.128812+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replayfapese\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-b29fa2c431c5577499d733509e028ea3-1",
+      "source": "fapese_selection",
+      "document_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+      "fields": {
+        "titulo": {
+          "value": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "007/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-7d61baad11ec54599d6572247ea3e9ca-1",
+      "source": "fapese_selection",
+      "document_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+      "fields": {
+        "titulo": {
+          "value": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "007/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 60,
+  "source_filter": null,
+  "counts": {
+    "concursos": 0,
+    "versions": 0,
+    "outbox": 0,
+    "notifications": 0
+  },
+  "states": {
+    "blocked": 2
+  },
+  "sources_with_creation": [],
+  "temporary_database_removed": true
+}

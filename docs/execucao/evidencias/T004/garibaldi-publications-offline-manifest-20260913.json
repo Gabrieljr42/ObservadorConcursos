@@ -1,0 +1,23 @@
+{
+  "schema": "t004.garibaldi.publications.offline-manifest.v1",
+  "scope": "offline metadata only; no network, Docker, pilot, or canonical mutation",
+  "identity": {
+    "concurso_id": 33,
+    "source_id": 49,
+    "source": "legalle_open",
+    "external_id": "2486",
+    "edital_numero": "04/2025",
+    "titulo": "Município de Garibaldi",
+    "orgao": "Prefeitura Municipal De Garibaldi",
+    "detail_url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2486"
+  },
+  "documents": [
+    {"role":"base","title":"Edital nº 04/2025 - Abertura e Inscrições","kind":"edital","url":"https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2486/50921b562874797cb1e4ab5d043289c8.pdf","sha256":"344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129","identity":{"source_id":49,"external_id":"2486","edital_numero":"04/2025"}},
+    {"role":"amendment","title":"Retificação da Classificação Final","kind":"retificacao","url":"https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2486/18aa84ac61e8288dd79fbe04b6a55cb2.pdf","sha256":"d7d2967a1612ccc5abcb3fad52022bf140017486ca0f555bfb535ea2a6aacab6","identity":{"source_id":49,"external_id":"2486","edital_numero":"04/2025"}},
+    {"role":"amendment","title":"Retificação do Cronograma","kind":"retificacao","url":"https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2486/b2c180f2ef928de41e3c1bd6039f792a.pdf","sha256":"ab68844c2bbed8a92a1652228903ee6f0b581faac54d4d3ab5a7a147ad0d85ec","identity":{"source_id":49,"external_id":"2486","edital_numero":"04/2025"}},
+    {"role":"amendment","title":"Retificação","kind":"retificacao","url":"https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2486/494f9997aff8e7ed96fe2dfb600c2971.pdf","sha256":"f98866f076889f4dd32a049603ea4098120d193dbfd76f4c81f367f60ec3b3cc","identity":{"source_id":49,"external_id":"2486","edital_numero":"04/2025"}}
+  ],
+  "bytes": {"available_locally": false,"verified_files": [],"consequence":"cannot run normal TenderProof create_proposal/_revalidate or certify live publication without preserved PDFs/content receipt"},
+  "effects": {"field_changes": ["resultado_final_prazo","cargos"],"false_field_change": "not inferred from document metadata; requires preserved content and review decisions"},
+  "status": "READY_FOR_ISOLATED_REFERENCE_LEDGER_TEST_ONLY"
+}

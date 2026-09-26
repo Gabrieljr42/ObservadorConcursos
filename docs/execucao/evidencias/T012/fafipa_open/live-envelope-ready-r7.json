@@ -1,0 +1,32 @@
+{
+  "schema":"tenderproof.live-envelope-allocation.v1","source":"fafipa_open","concurso_id":null,"external_id":"4208","run_id":"tp-reviewed-r7-fafipa-open-4208-26c059dcd502f08d",
+  "title":"Concurso Público do Município de Mirador - PR","detail_url":"https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+  "artifact":{"artifact_id":"fafipa-4208-edital","sha256":"26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f","byte_len":3630911,"pages":38,"url":"https://anexos-r2.selecao.net.br/uploads/281/concursos/4208/anexos/7c626742-c657-4e0c-b36c-7d59336ee942.pdf"},
+  "fields":[
+    {"field_name":"titulo","value":"Concurso Público do Município de Mirador - PR","evidence":[{"evidence_id":"r7-titulo","page_number":1,"snippet":"realização do Concurso Público"}]},
+    {"field_name":"orgao","value":"Município de Mirador - PR","evidence":[{"evidence_id":"r7-orgao","page_number":1,"snippet":"Município de Mirador, Estado do Paraná"}]},
+    {"field_name":"edital_numero","value":"001/2026","evidence":[{"evidence_id":"r7-edital","page_number":1,"snippet":"01.001/2026"}]},
+    {"field_name":"inscricao_inicio","value":"2026-09-02","evidence":[{"evidence_id":"r7-inscricao-inicio","page_number":36,"snippet":"Período para solicitação de inscrição"}]},
+    {"field_name":"inscricao_fim","value":"2026-10-07","evidence":[{"evidence_id":"r7-inscricao-fim","page_number":36,"snippet":"Período para solicitação de inscrição"}]},
+    {"field_name":"prova_data","value":"2026-11-01","evidence":[{"evidence_id":"r7-prova","page_number":36,"snippet":"Aplicação da prova objetiva | discursiva"}]},
+    {"field_name":"cargos","value":[
+      {"nome":"Auxiliar Administrativo","vagas":4,"remuneracao":"1883.84"},
+      {"nome":"Auxiliar de Clínica Dentária","vagas":"cadastro_reserva","remuneracao":"1636.20"},
+      {"nome":"Farmacêutico","vagas":1,"remuneracao":"3890.46"},
+      {"nome":"Fisioterapeuta","vagas":1,"remuneracao":"3890.46"},
+      {"nome":"Médico Clínico Geral","vagas":1,"remuneracao":"15159.36"},
+      {"nome":"Motorista","vagas":7,"remuneracao":"2721.01"},
+      {"nome":"Operador de Máquinas Rodoviárias","vagas":1,"remuneracao":"2721.01"},
+      {"nome":"Professor (20h)","vagas":4,"remuneracao":"2565.32"},
+      {"nome":"Professor (40h)","vagas":5,"remuneracao":"5130.63"},
+      {"nome":"Professor de Educação Física","vagas":2,"remuneracao":"2565.32"},
+      {"nome":"Técnico em Eletrotécnica","vagas":1,"remuneracao":"3350.21"},
+      {"nome":"Técnico em Enfermagem","vagas":"cadastro_reserva","remuneracao":"1883.84"},
+      {"nome":"Técnico em Higiene Dental","vagas":"cadastro_reserva","remuneracao":"1883.84"},
+      {"nome":"Vigia","vagas":"cadastro_reserva","remuneracao":"1636.20"}
+    ],"evidence":[
+      {"evidence_id":"r7-cargo-01","page_number":2,"snippet":"Auxiliar administrativo"},{"evidence_id":"r7-cargo-02","page_number":2,"snippet":"Auxiliar de Clínica Dentária"},{"evidence_id":"r7-cargo-03","page_number":2,"snippet":"Farmacêutico"},{"evidence_id":"r7-cargo-04","page_number":2,"snippet":"Fisioterapeuta"},{"evidence_id":"r7-cargo-05","page_number":3,"snippet":"Médico Clínico Geral"},{"evidence_id":"r7-cargo-06","page_number":2,"snippet":"Motorista"},{"evidence_id":"r7-cargo-07","page_number":2,"snippet":"Operador de Máquinas Rodoviárias"},{"evidence_id":"r7-cargo-08","page_number":3,"snippet":"Professor"},{"evidence_id":"r7-cargo-09","page_number":3,"snippet":"Professor"},{"evidence_id":"r7-cargo-10","page_number":3,"snippet":"Professor de Educação Física"},{"evidence_id":"r7-cargo-11","page_number":2,"snippet":"Técnico em Eletrotécnica"},{"evidence_id":"r7-cargo-12","page_number":2,"snippet":"Técnico em Enfermagem"},{"evidence_id":"r7-cargo-13","page_number":2,"snippet":"Técnico em Higiene Dental"},{"evidence_id":"r7-cargo-14","page_number":2,"snippet":"Vigia"}
+    ]}
+  ],
+  "pending_fields":[],"reference_only":true,"owner_user_id":1,"allocation_status":"READY_FOR_REVIEW","not_applied":true
+}

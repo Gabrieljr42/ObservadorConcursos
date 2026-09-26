@@ -1,8 +1,8 @@
 from datetime import datetime
 from decimal import Decimal
-from typing import Any
+from typing import Any, Literal
 
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, field_validator
 
 
 class SourceCreate(BaseModel):
@@ -21,6 +21,8 @@ class SourceOut(BaseModel):
     list_url: str | None
     source_type: str
     active: bool
+    revoked_at: datetime | None
+    revoke_reason: str | None
     frequency_minutes: int
     created_at: datetime
     updated_at: datetime
@@ -37,6 +39,7 @@ class ConcursoOut(BaseModel):
     titulo: str
     modalidade: str | None
     cargo: str | None
+    cargos: list[dict[str, Any]] | None = None
     area: str | None
     cidade: str | None
     uf: str | None
@@ -92,6 +95,7 @@ class ConcursoPublicationOut(BaseModel):
     raw_data: dict[str, Any] | None
     created_at: datetime
     updated_at: datetime
+    reference_only: bool = False
 
     model_config = {'from_attributes': True}
 
@@ -226,6 +230,58 @@ class NotificationOut(BaseModel):
     read_at: datetime | None
     created_at: datetime
     concurso: ConcursoOut | None = None
+
+    model_config = {'from_attributes': True}
+
+
+class PushDeviceRegister(BaseModel):
+    platform: Literal['android', 'ios']
+    device_id: str = Field(min_length=1, max_length=128)
+    token: str = Field(min_length=24, max_length=512)
+
+    @field_validator('device_id')
+    @classmethod
+    def strict_device_id(cls, value: str) -> str:
+        if value != value.strip() or any(ord(char) < 33 or ord(char) > 126 for char in value):
+            raise ValueError('device_id deve ser identificador ASCII sem espaços')
+        return value
+
+    @field_validator('token')
+    @classmethod
+    def strict_expo_token(cls, value: str) -> str:
+        if value != value.strip() or not (
+            (value.startswith('ExponentPushToken[') or value.startswith('ExpoPushToken['))
+            and value.endswith(']')
+            and len(value.rsplit('[', 1)[-1][:-1]) >= 8
+            and all(char.isalnum() or char in '-_.' for char in value.rsplit('[', 1)[-1][:-1])
+        ):
+            raise ValueError('token Expo inválido')
+        return value
+
+
+class PushDeviceOut(BaseModel):
+    id: int
+    device_id: str
+    platform: str
+    active: bool
+    created_at: datetime
+    updated_at: datetime
+    last_seen_at: datetime
+
+    model_config = {'from_attributes': True}
+
+
+class PushDeliveryOut(BaseModel):
+    id: int
+    notification_id: int
+    device_id: int
+    status: str
+    attempts: int
+    next_attempt_at: datetime
+    provider_message_id: str | None
+    last_error: str | None
+    created_at: datetime
+    updated_at: datetime
 
     model_config = {'from_attributes': True}
 

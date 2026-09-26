@@ -1,0 +1,20 @@
+"""Retry the terminal PROFIX extraction timeout from preserved bytes, offline."""
+import hashlib,json
+from pathlib import Path
+from app.tenderproof.processing import ProcessingService,ProcessingLimits
+
+def main():
+    source=Path('/evidence/current-documents-20260909T150101Z');out=Path('/evidence/current-reprocessing');out.mkdir(exist_ok=True)
+    service=ProcessingService(out/'jobs');report=[]
+    for d in json.loads((source/'report.json').read_text())['documents']:
+        if d.get('error')!='ProcessingError: timeout':continue
+        raw=(source/(d['sha256']+'.pdf')).read_bytes()
+        if hashlib.sha256(raw).hexdigest()!=d['sha256']:raise ValueError('input hash mismatch')
+        row={'url':d['url'],'sha256':d['sha256'],'previous_error':d['error']};report.append(row)
+        job=service.enqueue('fundect-current-reprocessing',raw,operation='extract_pdf',limits=ProcessingLimits(max_pages=200,max_bytes=30*1024*1024,total_seconds=180,operation_seconds=170,max_output_bytes=8*1024*1024))
+        job=service.execute(job['id'],'fundect-current-reprocessing');row.update(job_id=job['id'],state=job['state'],error=job.get('error'))
+        if job['state']=='succeeded':
+            data=service.result(job['id'],'fundect-current-reprocessing');(out/(d['sha256']+'.json')).write_text(json.dumps(data,ensure_ascii=False),encoding='utf-8');row.update(total_pages=data['total_pages'],empty_pages=sum(not p['text'].strip()for p in data['pages']))
+        (out/'verification.json').write_text(json.dumps(report,indent=2),encoding='utf-8');print(json.dumps(row),flush=True)
+
+if __name__=='__main__':main()

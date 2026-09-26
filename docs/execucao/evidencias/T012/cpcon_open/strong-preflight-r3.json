@@ -1,0 +1,10 @@
+{
+  "schema":"t012.cpcon_open.strong-preflight-r3.v1",
+  "status":"CPCON_PARSER_R3_FIXED",
+  "source":"cpcon_open","external_id":"processo-seletivo-simplificado-no-002-2026","source_number":35,
+  "artifact":{"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":"13/13"},
+  "strong_identity":{"module":"backend/app/tenderproof/cpcon_t012.py","resolver_contract":"document_identity_ids(candidate,pages)","typeerror":"PASS; no positional artifact required","identity_ids":["processo-seletivo-simplificado-no-002-2026"],"orgao":"Universidade Estadual da Paraíba","edital_numero":"002/2026","literal_evidence":"PASS; U+FFFD=0; truncation rejected"},
+  "revalidate":{"target_id":999,"mode":"ephemeral in-memory Concurso/Source plus preserved-byte store; no DB/catalog write","result":"BLOCKED_SHARED_REVALIDATE","http_status":422,"detail":"TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)","cause":"shared fields.extract_fields returns orgao/edital_numero unknown and document_identity_ids returns empty for CPCON; source-specific module is intentionally not wired into fields.py/shared registry"},
+  "tests":{"command":".\\.venv\\Scripts\\python.exe -m pytest tests/test_cpcon_t012.py -q","result":"5 passed","coverage":"CPCONAdapter wrapper -> validation.document_identity_ids -> publication._revalidate; U+FFFD/drift/truncation fail-closed","fail_closed":"PASS"},
+  "gate":"Do not import/propose until integrator reviews the source-specific module and decides whether to wire it in the shared revalidation path. No network/API/DB/pilot/apply."
+}

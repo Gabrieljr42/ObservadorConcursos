@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-07T23:20:10.369891+00:00",
+  "completed_plan_steps": [
+    8,
+    9,
+    10
+  ],
+  "source_inventory": {
+    "generated_at": "2026-09-07T22:58:18.248270+00:00",
+    "total_sources": 99,
+    "categories": {
+      "banca": 63,
+      "institutional_selection": 36
+    },
+    "families": {
+      "own_portal": 56,
+      "selecao.net.br": 5,
+      "selecao.site": 2,
+      "institutional_portal": 36
+    },
+    "catalogue_sha256": "e497f3a747d4322e99b51ca7e8f92bb9e7c34483e6e8c820f759814f16e4d1cf",
+    "probe_counts": {
+      "http_observed": 87,
+      "blocked_or_challenge": 7,
+      "tls_verification_failed": 4,
+      "dns_resolution_failed": 3,
+      "response_too_large": 1,
+      "http_error": 1
+    },
+    "detail_probe_counts": {
+      "http_observed": 25
+    },
+    "current_summary": {
+      "listing_urls_catalogued": 103,
+      "listing_urls_probed": 103,
+      "sample_detail_urls_probed": 25,
+      "source_observation_counts": {
+        "some_http_content_observed": 85,
+        "access_requires_investigation": 14
+      },
+      "sources_with_document_links_in_sample": 39,
+      "sources_with_contest_document_candidates_in_sample": 26,
+      "new_tenderproof_sources_certified": 0
+    }
+  },
+  "registered_tenderproof_adapters": [
+    "ibgp_open",
+    "imeso_open"
+  ],
+  "remaining_adapters": 97,
+  "integrated_tests": {
+    "tests": 481,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 14,
+    "passed": 467,
+    "live_deselected": 2,
+    "seconds": 54.974,
+    "junit": "backend/.tenderproof/expansion-tests-20260907.xml",
+    "note": "Integrated run before the subsequent targeted late-callback cleanup regression."
+  },
+  "http_live": {
+    "started_at": "2026-09-07T23:06:04.765296+00:00",
+    "completed_at": "2026-09-07T23:06:15.085623+00:00",
+    "canonical_writes": 0,
+    "browser_sessions": 0,
+    "sources": [
+      {
+        "source": "ibgp_open",
+        "observed_candidates": 0,
+        "remaining_listing_urls": []
+      },
+      {
+        "source": "imeso_open",
+        "observed_candidates": 115,
+        "remaining_listing_urls": [],
+        "run_id": "tp-expansion-imeso_open",
+        "selected_candidate": "139",
+        "execution_status": "completed",
+        "error": null,
+        "validation_status": "valid",
+        "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+        "pdf_pages": 29,
+        "fields": {
+          "titulo": "supported",
+          "orgao": "supported",
+          "edital_numero": "supported",
+          "inscricao_inicio": "supported",
+          "inscricao_fim": "supported",
+          "remuneracao": "unknown"
+        }
+      }
+    ]
+  },
+  "artifact_restart_verification": [
+    {
+      "source": "imeso_open",
+      "run_persisted": true,
+      "artifact_valid": true,
+      "status": "completed"
+    }
+  ],
+  "browser_live": {
+    "scope": "one_real_ibgp_listing",
+    "started_at": "2026-09-07T23:14:38.253556+00:00",
+    "max_browser_launches": 1,
+    "detail_jobs_executed": 0,
+    "canonical_writes": 0,
+    "scheduler_started": false,
+    "result": {
+      "status": "succeeded",
+      "kind": "listing",
+      "candidates": 9
+    },
+    "job_status": "succeeded",
+    "candidates": 9,
+    "browser_sessions": 1,
+    "all_sessions_confirmed_closed": true,
+    "browser_journal_pending": 0,
+    "coverage_complete": false,
+    "coverage_note": "Uma listagem; abas e detalhes não executados nesta prova.",
+    "completed_at": "2026-09-07T23:14:51.187639+00:00",
+    "source_paused_after_probe": true
+  },
+  "celery_redis_integration": {
+    "synthetic": true,
+    "checks": {
+      "duplicate_delivery_single_claim": true,
+      "checkpoint_before_download": true,
+      "worker_confirmed_dead": true,
+      "durable_tick_redispatch": true,
+      "cycle_completed": true,
+      "one_review_observation": true,
+      "fence_incremented_after_worker_death": true,
+      "separate_process_reads_run_pdf": true
+    },
+    "passed": true,
+    "workers_stopped": true,
+    "report": "docs/tenderproof-continuous-validation.json"
+  },
+  "configuration": {
+    "compose_validated": true,
+    "python_compilation_passed": true,
+    "real_env_modified": false,
+    "production_collection_activated": false,
+    "canonical_publication_activated": false,
+    "deployment_model": "single host, shared persistent local volume"
+  },
+  "limitations": [
+    "Inventory is not certification of all 99 sources.",
+    "Live listings are bounded observations, not proof of complete coverage.",
+    "PostgreSQL optional tests were not rerun in this expansion; publication regression passed on SQLite.",
+    "Browser charge in dollars not measured; one session created and closure confirmed."
+  ],
+  "final_browser_cleanup_tests": {
+    "tests": 57,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 57,
+    "junit": "backend/.tenderproof/expansion-browser-cleanup-tests-20260907.xml",
+    "live_browser_sessions_created": 0,
+    "regressions_added": 9
+  },
+  "final_validation_at": "2026-09-07T23:22:36.905572+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "t012.aguia.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "AGUIA_ACCEPT_FOR_ARTIFACT_STAGE",
+  "scope": "read_only; no Docker/API/DB; no catalogue mutation",
+  "identity": {
+    "source": "aguia_open",
+    "source_number": 27,
+    "external_id": "43",
+    "title": "Prefeitura Municipal de Bálsamo",
+    "selection_type": "Processo Seletivo 01/2025",
+    "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+    "status": "confirmed_by_preserved_listing_and_detail"
+  },
+  "publicability": {
+    "scope": "public employment selection / processo seletivo",
+    "not_funding_or_scholarship": true,
+    "fields_proven": ["titulo", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos", "remuneracao"],
+    "cargo_count": 4,
+    "retificacoes_observed": 2,
+    "results_observed": true
+  },
+  "duplicate_check": {
+    "listing_to_detail": "one candidate 43 maps to one detail /edital/ver/43",
+    "catalogue_mutated": false,
+    "cross_catalogue_clearance": "not claimable until canonical source/concurso allocation"
+  },
+  "artifact_integrity": {
+    "detail_fixture": "backend/tests/fixtures/tenderproof_batch30_edital/aguia_open-cycle1-detail-a49b5d9ccc.html",
+    "detail_byte_len": 62352,
+    "detail_sha256": "0ABDB50782C6615CB7375C82BD7CB68CDCC66E6D13F8FE4E3F632269073A5832",
+    "opening_pdf_url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "opening_pdf_bytes_preserved": false,
+    "content_receipt_for_opening_pdf": false
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest docs/execucao/evidencias/T012/aguia_open/test_proposal_fail_closed.py -q",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "import_decision": {
+    "reference_only": true,
+    "canonical_concurso_id": null,
+    "apply": false,
+    "decision": "NOT_IMPORTABLE_YET",
+    "required_before_import_or_normal_proposal": [
+      "allocate canonical source and concurso IDs through the standard flow",
+      "preserve opening-notice PDF bytes and record byte_len/SHA content receipt",
+      "attach the PDF artifact and rerun normal reviewed-run validation/human review"
+    ]
+  },
+  "evidence": [
+    "proposal-envelope.json",
+    "proposal-receipt.json",
+    "reviewed-run-handoff.json",
+    "detail-check.json",
+    "test_proposal_fail_closed.py"
+  ]
+}

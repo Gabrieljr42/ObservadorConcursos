@@ -1,0 +1,25 @@
+{
+  "schema": "t012.apta_open.luna-parser-r3-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "APTA_PARSER_R3_ACCEPT_FOR_INTEGRATION",
+  "scope": [
+    "backend/app/tenderproof/apta_aragarcas_parser.py",
+    "backend/tests/test_t012_apta_strong_preflight.py",
+    "backend/tests/test_t012_apta_open_selection.py",
+    "docs/execucao/evidencias/T012/apta_open/strong-preflight-r3.json"
+  ],
+  "checks": {
+    "artifact_pins": "PASS: source apta_open, external_id 708, SHA db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c, 362093 bytes and 20 pages.",
+    "identity": "PASS: fresh/native extraction requires edital 01/2026, EDITAL DE ABERTURA COMPLETO and Câmara Municipal de Aragarças; the PDF's proven inscription window is 17/08/2026 through 20/09/2026.",
+    "guards": "PASS: SHA/byte drift, page-count drift, empty pages, U+FFFD, PageText error/truncation, identity-marker drift and expired currentness are fail-closed or return a FAILED ExtractedField.",
+    "contract_shape": "PASS: extract_identity accepts Artifact/PageText pages and returns the repository's ExtractedField/Evidence/FieldState types; evidence is bound to artifact SHA, URL and page. Its edital-only output is intentional and does not invent unproven fields.",
+    "identity_fallback": "PASS: empty document_identity_ids is explicitly documented as the APTA PDF fallback; source/external/SHA/bytes are pinned before identity fields are accepted.",
+    "real_revalidation": "PASS after R2 dispatch: exact orgao+edital fallback is accepted with pinned source/external/SHA/bytes/detail/document URLs; no publication side effects."
+  },
+  "tests": {
+    "command": ".venv\\Scripts\\python.exe -m pytest -q tests/test_t012_apta_strong_preflight.py tests/test_t012_apta_open_selection.py",
+    "result": "6 passed, 15 warnings in 11.48s",
+    "compileall": "PASS: app/tenderproof/apta_aragarcas_parser.py"
+  },
+  "integration_boundary": "Integrated in fields.py only for apta_open/708; route invokes the pinned parser and preserves the exact orgao+edital strong-binding guard before _revalidate."
+}

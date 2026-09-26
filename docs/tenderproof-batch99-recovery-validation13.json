@@ -1,0 +1,889 @@
+{
+  "validated_at": "2026-09-08T12:37:10.811355-03:00",
+  "scope": "offline process crash/recovery; original captures and PDFs; no source availability claim",
+  "original_read_only": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "controlled_fixture": "Only new isolated crashed job lease_until set to0; real os._exit73 after run commit; max_attempts1 final-attempt recovery.",
+  "sources": [
+    {
+      "source": "fade_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fade_selection",
+          "--source",
+          "fade_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fade_selection",
+          "--source",
+          "fade_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 41928,
+        "run_id": "tp-tcj-8a57cf129771555482502090dd217d38-1",
+        "job_id": "tcj-8a57cf129771555482502090dd217d38",
+        "cycle": "tcc-2db7110a899f44b78681fd79fa0ccebf",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 40296,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-a93851bc0227b9814a083def6cda063880a51e4d3f4df716d5f55bce5fc8e152",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "0c36f1cd1b6e862fd58d06c439c24e7c5e75cfc5fe6dfbd62e7f39559b3dccd8",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapeg_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapeg_selection",
+          "--source",
+          "fapeg_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapeg_selection",
+          "--source",
+          "fapeg_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 42584,
+        "run_id": "tp-tcj-bd9cb3033c5856c1b1ba42df6308fb4d-1",
+        "job_id": "tcj-bd9cb3033c5856c1b1ba42df6308fb4d",
+        "cycle": "tcc-e86cf73b73b0401e97e50531c0cd64a7",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 31764,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-9502fb4f82e9c62d34faab9dce9ad6f8e7e3964de86e1c54d3e333e2f6f8ffcf",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapergs_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapergs_selection",
+          "--source",
+          "fapergs_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapergs_selection",
+          "--source",
+          "fapergs_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 40780,
+        "run_id": "tp-tcj-ac6cabf906995ed5819261013bece85e-1",
+        "job_id": "tcj-ac6cabf906995ed5819261013bece85e",
+        "cycle": "tcc-812f4be3969b44079932113d7c66fd82",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 4848,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-87c4c90b84e9c93e59ec5d731ad441d2a6ceff857fa4162216ae0ba869a5562b",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "2f1097c367f35dbf930bacacb43c7cd8f8732662d37be48e0240c2a256093444",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "faperj_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\faperj_selection",
+          "--source",
+          "faperj_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\faperj_selection",
+          "--source",
+          "faperj_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 37784,
+        "run_id": "tp-tcj-6f8cfda87f2f522097ecc1bd5598ebcb-1",
+        "job_id": "tcj-6f8cfda87f2f522097ecc1bd5598ebcb",
+        "cycle": "tcc-da22693b43194eae9c5d75c7e829fe71",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 3508,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-7464bb466e553b3e13b4f7cf2c34dd39d86c98e6ef1a85ac32063022bb50bdfe",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapesb_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapesb_selection",
+          "--source",
+          "fapesb_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapesb_selection",
+          "--source",
+          "fapesb_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 30768,
+        "run_id": "tp-tcj-1fda87bc71d751bdb8874db418ab0754-1",
+        "job_id": "tcj-1fda87bc71d751bdb8874db418ab0754",
+        "cycle": "tcc-d252c552a3684af99f905a6c83b8344c",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 34420,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-0586e0f3898ee05a6633b1cc45cb40801aca8f5aa0a15226a420dda5b173adff",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapesp_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapesp_selection",
+          "--source",
+          "fapesp_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapesp_selection",
+          "--source",
+          "fapesp_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 32708,
+        "run_id": "tp-tcj-8cdf31fd680e5a00baa2e4b3b9f166d3-1",
+        "job_id": "tcj-8cdf31fd680e5a00baa2e4b3b9f166d3",
+        "cycle": "tcc-0ace94fe94e24197a3e67ca39d057e73",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 40728,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-ca007f7d75928ab979224fcb1b48802eee3498da4d0ad94f95de526181411f2f",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapespa_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapespa_selection",
+          "--source",
+          "fapespa_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapespa_selection",
+          "--source",
+          "fapespa_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 40948,
+        "run_id": "tp-tcj-6e0efbcad79d5cf6b79869ec46c42f12-1",
+        "job_id": "tcj-6e0efbcad79d5cf6b79869ec46c42f12",
+        "cycle": "tcc-c4e216e897b244918a1ebf90b4f8848a",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 40936,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-f439a18c515d47c5f91e2126ef0ec0dff37dd4b208dc347c368a609224f8ef0f",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "fapex_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapex_selection",
+          "--source",
+          "fapex_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\fapex_selection",
+          "--source",
+          "fapex_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 5192,
+        "run_id": "tp-tcj-cc8ba499fcd75a8f94f1ef16cfef4747-1",
+        "job_id": "tcj-cc8ba499fcd75a8f94f1ef16cfef4747",
+        "cycle": "tcc-8ac3e573a8e74fa59162cc82c1e63c52",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 42620,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-6a27c48ea6b81a139eaf29a9948435f8313aa53f4006fe9ed998078032d4a2bd",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "58b13b72f0bd318cb7631a28c0da08c94caa0a575f91b66f7ef16b909b9353e7",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "funpec_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\funpec_selection",
+          "--source",
+          "funpec_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\funpec_selection",
+          "--source",
+          "funpec_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 12092,
+        "run_id": "tp-tcj-4705d058f07a55488fa3507e21ef3b84-1",
+        "job_id": "tcj-4705d058f07a55488fa3507e21ef3b84",
+        "cycle": "tcc-42a504be79be4be5872c0aae1aedeadd",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 41464,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-df1cd9371b9318042074043327213fed950ce718c61c37f593a32e9d90f9917d",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "ded6e9d9326b7bfc0a6d112db838ac9b17b3269270f89bebcb5ef9b626dc2835",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "ieses_open",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\ieses_open",
+          "--source",
+          "ieses_open",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\ieses_open",
+          "--source",
+          "ieses_open",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 13596,
+        "run_id": "tp-tcj-f244a9e5372d53578fb776557227e61b-1",
+        "job_id": "tcj-f244a9e5372d53578fb776557227e61b",
+        "cycle": "tcc-ccc7b9bf618c44998a1897cdd0b909fb",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 42032,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-8814e139f1f2d8f85bc6afeeb4c9bff05519ad3a9166cb1a7111e6752c64bf1d",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "klc_open",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\klc_open",
+          "--source",
+          "klc_open",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\klc_open",
+          "--source",
+          "klc_open",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 39524,
+        "run_id": "tp-tcj-7eda348ab3b85a84a8f5f50b84b26d74-1",
+        "job_id": "tcj-7eda348ab3b85a84a8f5f50b84b26d74",
+        "cycle": "tcc-847c1e9fa1724b52a1ef492959fdd1b0",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 42308,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-d7d0959abce4088ee127444f56a5ea01c0dea424c08affbaaadebf04ebf7fd2c",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "legatus_open",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\legatus_open",
+          "--source",
+          "legatus_open",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\legatus_open",
+          "--source",
+          "legatus_open",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 11636,
+        "run_id": "tp-tcj-d9f70f91a6825dff85ee1e58f7616599-1",
+        "job_id": "tcj-d9f70f91a6825dff85ee1e58f7616599",
+        "cycle": "tcc-82f343219bfe4fdd93538b0ca8ecf5cc",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 39956,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-aef502b5ec48fee212e6ea2ed7a4840c8656a129e7029d31b210b2b038587c2d",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    },
+    {
+      "source": "verbena_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\verbena_selection",
+          "--source",
+          "verbena_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replay13",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99kill13\\verbena_selection",
+          "--source",
+          "verbena_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 37928,
+        "run_id": "tp-tcj-ee97358b03225163a845a02d62aee082-1",
+        "job_id": "tcj-ee97358b03225163a845a02d62aee082",
+        "cycle": "tcc-abc242d08a284c35b2bbdbd618caf1dd",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 38740,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-f3b30ed2ad720f4eacbf9c6b558931035e80f09d91eb04ba61f4ebc235108f2c",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    }
+  ],
+  "passed": true,
+  "process_cleanup": {
+    "alive_pids": [],
+    "child_process_count": 26,
+    "confirmed_absent": true
+  }
+}

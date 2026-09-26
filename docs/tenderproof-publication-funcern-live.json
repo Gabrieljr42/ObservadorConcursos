@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-09-07T23:54:34.619824+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\pilot-live-20260907\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tpr-831aba3f31cc",
+      "source": "funcern_selection",
+      "document_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público Lagoa de Pedras/RN",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Lagoa De Pedras",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00",
+              "1800.00",
+              "2000.00",
+              "2500.00",
+              "4500.00"
+            ],
+            "escopo": "DOS CARGOS, COM FULCRO NA RESPECTIVA LEGISLAÇÃO MUNICIPAL. Cargo 1: AUXILIAR ADMINISTRATI",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 1,
+      "proposal_id": "tpp-3eee6e1e6856d975740881bb7acacdab",
+      "version_id": 1,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Concurso Público Lagoa de Pedras/RN"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Lagoa De Pedras"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 80,
+  "source_filter": [
+    "funcern_selection"
+  ],
+  "counts": {
+    "concursos": 1,
+    "versions": 1,
+    "outbox": 1,
+    "notifications": 0
+  },
+  "states": {
+    "applied": 1
+  },
+  "sources_with_creation": [
+    "funcern_selection"
+  ],
+  "temporary_database_removed": true
+}

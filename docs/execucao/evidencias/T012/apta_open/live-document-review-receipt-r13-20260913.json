@@ -1,0 +1,16 @@
+{
+  "schema": "t012.apta.live-document-review-receipt.v13.v1",
+  "recorded_at": "2026-09-13T13:22:17.9404554-03:00",
+  "source_id": 48,
+  "external_id": "708",
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "owner_user_id": 1,
+  "preflight": {"health": 200, "login": 200, "checkpoint_contests": 34, "catalogue_match": []},
+  "artifact": {"artifact_id": "art-apta-ret2-708", "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786", "byte_len": 76767, "pages": 1, "kind": "retificacao", "staged": true},
+  "manifest_title_used": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+  "prepare": {"status_code": 500, "body": "Internal Server Error"},
+  "state_after_read_only": {"pending": true, "documents": [{"kind": "retificacao", "title": "Edital de Retificação I ao Edital de Abertura de Inscrições", "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf"}]},
+  "effects": {"retry": false, "document_approved": false, "proposal_created": false, "canonical_mutation": false, "approve": false, "apply": false},
+  "result": "APTA_R13_BLOCKED_PREPARE_500",
+  "stop_rule": "500; no retry"
+}

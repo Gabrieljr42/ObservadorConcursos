@@ -1,0 +1,28 @@
+[
+  {
+    "name": "cesgranrio-event27",
+    "url": "https://concursos.cesgranrio.org.br/api/PortalEventos/27",
+    "observed_at": "2026-09-08T14:15:35.340063+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 1318,
+    "original_sha256": "7616d7e3bd6c5df5468811a62dbf32ebec2e4b02f2cae029c085dc8075c34305",
+    "fixture_sha256": "bdb7cee537128c3feac89cbeb4c0df5a0fcefd7c4d0dad3c98443ce908dce427",
+    "file": "cesgranrio-event27.json",
+    "format": "public JSON; signed URL queries removed"
+  },
+  {
+    "name": "cesgranrio-docs27",
+    "url": "https://concursos.cesgranrio.org.br/api/PortalEventoConteudos/publico/27",
+    "observed_at": "2026-09-08T14:15:35.340063+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 1132,
+    "original_sha256": "2d1a30beaf7192ca8dcf2497105ab222ab140a870883bcb5cb006312128ac6b4",
+    "fixture_sha256": "9fe6fba1484b545ef6688176e4eae4d4858f3e703affb21b51a34574314cd320",
+    "file": "cesgranrio-docs27.json",
+    "format": "public JSON; signed URL queries removed"
+  }
+]

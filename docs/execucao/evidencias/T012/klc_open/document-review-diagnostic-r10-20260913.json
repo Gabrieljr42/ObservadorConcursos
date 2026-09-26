@@ -1,0 +1,62 @@
+{
+  "schema": "t012.klc_open.document-review-diagnostic-r10.v1",
+  "recorded_at": "2026-09-13",
+  "reviewer": "Luna",
+  "scope": "offline-only; no API, Docker, live mutation or backend edit",
+  "verdict": "BLOCKED",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "deterministic_findings": [
+    {
+      "code": "PAYLOAD_SHAPE_MISMATCH",
+      "evidence": "document-review-prepare-payload-r7.json places artifact_id, sha256, byte_len and expected_page_count inside document and has no top-level artifact object.",
+      "route_contract": "PreservedReviewRequest requires document={title,url,kind,...}, artifact=Artifact, expected_page_count; extra document keys are forbidden.",
+      "offline_result": "Pydantic validation fails before prepare_preserved with extra_forbidden document fields and missing required artifact fields: url_requested, url_final, downloaded_at (plus artifact identity fields at top level)."
+    },
+    {
+      "code": "ARTIFACT_NOT_REGISTERED_IN_LOCAL_STORE",
+      "evidence": "The exact PDF exists at docs/execucao/evidencias/T012/klc_open/retificacao-1-1887b316.pdf and matches SHA/423600 bytes, but no matching artifact blob was found under the local TenderProof artifact store.",
+      "route_effect": "Even a schema-correct request reaches store.load_artifact_bytes and fails closed as preserved artifact absent/divergent unless the artifact is registered in that run's store with the exact bytes/hash."
+    }
+  ],
+  "manifest_binding": {
+    "owner_user_id": 1,
+    "source_id": 57,
+    "external_id": "632",
+    "kind": "retificacao",
+    "title": "Retificação 1 - Alteração da Data da Prova",
+    "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+    "artifact_id": "art-klc-ret1-1887b316",
+    "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+    "byte_len": 423600,
+    "expected_page_count": 1,
+    "field_change_only": {"field": "prova_data", "from": "2026-05-10", "to": "2026-05-17"}
+  },
+  "corrected_wire_payload": {
+    "document": {
+      "title": "Retificação 1 - Alteração da Data da Prova",
+      "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "kind": "retificacao"
+    },
+    "artifact": {
+      "artifact_id": "art-klc-ret1-1887b316",
+      "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+      "byte_len": 423600,
+      "url_requested": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "url_final": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "downloaded_at": "<preserved acquisition timestamp>",
+      "content_type": "application/pdf",
+      "storage_path": "<registered artifact-store filename>"
+    },
+    "expected_page_count": 1
+  },
+  "offline_checks": {
+    "pydantic_corrected_shape": "PASS",
+    "disposable_case_creation_equivalent": "PASS: backend/tests/test_tenderproof_document_review_gate.py -k prepare_preserved_local_artifact_is_authenticated_idempotent_and_noop (1 passed)",
+    "disposable_hash_and_cross_run_guards": "PASS: same suite -k prepare_preserved_rejects_cross_run_pending_and_hash_drift (1 passed)",
+    "network": false,
+    "docker": false,
+    "catalogue_mutation": false
+  },
+  "exact_correction": "Register the already-preserved PDF in the TenderProof store for this owner/run using the exact artifact_id, SHA and byte length, retain its generated storage_path and acquisition timestamp, then send corrected_wire_payload once. Do not place artifact metadata in document, do not use content_path as a substitute for storage_path, do not retry the malformed request, and do not promote fields other than prova_data.",
+  "next_step": "After registration in the disposable/authorized target store, capture the exact HTTP status/body on one fresh authorized prepare-preserved attempt. Until then, no retry is authorized."
+}

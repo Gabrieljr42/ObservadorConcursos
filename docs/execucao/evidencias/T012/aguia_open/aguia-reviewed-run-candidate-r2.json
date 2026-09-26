@@ -1,0 +1,37 @@
+{
+  "schema": "t012.reviewed-run-candidate.v2",
+  "state": "READY_FOR_REVIEW",
+  "source": "aguia_open",
+  "source_number": 27,
+  "canonical_concurso_id": null,
+  "external_id": "43",
+  "title": "Prefeitura Municipal de Bálsamo - Processo Seletivo 01/2025",
+  "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+  "artifact": {
+    "artifact_id": "aguia-open-43-pdf-r2",
+    "sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+    "byte_len": 501543,
+    "pages": 18,
+    "url_requested": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "url_final": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "content_type": "application/pdf",
+    "content_path": "docs/execucao/evidencias/T012/aguia_open/artifacts/aguia-43.pdf"
+  },
+  "fields": {
+    "edital_numero": {"value":"01/2025","evidence":{"page":1,"snippet":"01/2025"}},
+    "orgao": {"value":"Prefeitura Municipal de Bálsamo","evidence":{"page":1,"snippet":"PREFEITURA MUNICIPAL"}},
+    "inscricao_inicio": {"value":"2025-12-05T00:00:00","evidence":{"page":2,"snippet":"05 de dezembro de 2025"}},
+    "inscricao_fim": {"value":"2025-12-16T23:59:00","evidence":{"page":2,"snippet":"16 de dezembro de 2025"}},
+    "taxa_inscricao": {"value":"65.00","evidence":{"page":1,"snippet":"VALOR DA INSCRIÇÃO R$ 65,00"}},
+    "prova_data": {"value":"2026-01-25","evidence":{"page":18,"snippet":"25/01/2026"}},
+    "cargos": [
+      {"codigo":"300","nome":"Educação Infantil - PEB I","remuneracao":"3445.71","jornada":"30h","requisitos":"Licenciatura em Pedagogia","evidence":[{"page":1,"snippet":"300 Educação Infantil"},{"page":1,"snippet":"30h 3.445,71"},{"page":1,"snippet":"Licenciatura em"}]},
+      {"codigo":"301","nome":"Ensino Fundamental - Anos Iniciais - PEB I","remuneracao":"3445.71","jornada":"30h","requisitos":"Licenciatura em Pedagogia","evidence":[{"page":1,"snippet":"301"},{"page":1,"snippet":"30h 3.445,71"},{"page":1,"snippet":"Licenciatura em"}]},
+      {"codigo":"302","nome":"Artes - Anos Iniciais - PEB II","remuneracao":"3445.71","jornada":"30h","requisitos":"Licenciatura em artes","evidence":[{"page":2,"snippet":"302"},{"page":2,"snippet":"30h 3.445,71"},{"page":2,"snippet":"Licenciatura em"}]},
+      {"codigo":"303","nome":"Educação Física - Anos Iniciais - PEB II","remuneracao":"3445.71","jornada":"30h","requisitos":"Licenciatura em Educação Física","evidence":[{"page":2,"snippet":"303"},{"page":2,"snippet":"30h 3.445,71"},{"page":2,"snippet":"Licenciatura em"}]}
+    ]
+  },
+  "reference_only": true,
+  "apply": false,
+  "pending": ["canonical_concurso_id allocation", "literal cargo-name accent verification in isolated text layer"]
+}

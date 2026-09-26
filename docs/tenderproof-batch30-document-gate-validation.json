@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-09-08T13:37:46.476233+00:00",
+  "backend_regression": {
+    "passed": 714,
+    "skipped": 14,
+    "deselected": 2,
+    "duration_s": 171.56,
+    "junit": "backend/.tenderproof/batch30-document-gate-regression.xml"
+  },
+  "postgres": {
+    "passed": 37,
+    "duration_s": 69.62,
+    "image": "postgres:17-alpine",
+    "disposable_container_id": "b2f2750dac8a43608e42ec3666be9dae4396c198cadafd977905d2605cd24f3f",
+    "removed_and_confirmed": true,
+    "junit": "backend/.tenderproof/batch30-document-gate-postgres.xml"
+  },
+  "ui": {
+    "typescript": "passed",
+    "component_interactions": "passed including new documentary hold on old approved proposal",
+    "web_export": "passed23routes",
+    "artifact": "mobile/dist-tenderproof-stage13"
+  },
+  "publication_block_proof": "tenderproof-batch30-document-hold-publication.json",
+  "change_proof": "tenderproof-batch30-complementary-change-validation.json",
+  "production_enabled": false,
+  "limitations": [
+    "Effects are not interpreted or released automatically.",
+    "Mixed concurrency/backlog capacity and material update proof remain to be completed before batch gate."
+  ]
+}

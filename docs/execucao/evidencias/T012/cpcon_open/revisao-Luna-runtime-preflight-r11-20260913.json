@@ -1,0 +1,44 @@
+{
+  "review": "Luna CPCON runtime preflight R11",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_REJECT_OLD_CREATE_PROPOSAL",
+  "evidence": "runtime-runid-preflight-r11-20260913.json",
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r9.json",
+    "sha256": "a97ed4c422533f8c4c660bfbf9bd13afe10a9296c87b0fbff860118b5c7bfed0",
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_bytes": 498894,
+    "owner_user_id": 1,
+    "source": "cpcon_open",
+    "source_id": 35,
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "concurso_id": null,
+    "fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "cargo_count": 6,
+    "proposal_target": null
+  },
+  "runtime": {
+    "importer_sha256": "c5e0de9db3c115d03d415c9799ac7d34a29a562255e0eba594db2c0c1e1346d8",
+    "image_digest": "sha256:897b2c537f5561b858110dd67e214a535f597698d924b9c0fb5a45ef3113f69f",
+    "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+    "paths_and_processes": 6,
+    "all_validated": true,
+    "all_same_run": true,
+    "all_same_fields": true,
+    "network": false
+  },
+  "stale_run_rejected": "tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76",
+  "old_proposal": {
+    "id": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "state": "proposed",
+    "action": "reject before replacement proposal",
+    "reason": "bound to stale/mismatched run handoff; do not approve or apply"
+  },
+  "authorized_sequence": [
+    "import exactly the envelope and bind the returned run_id tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+    "audit-reject old proposal tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "create exactly one new pending proposal for the same owner/source/external, target null, and exact bb5b run",
+    "stop before approve/apply; recheck proposal hash, baseline, eligible fields and side-effect counts"
+  ],
+  "mutations_performed_by_review": false
+}

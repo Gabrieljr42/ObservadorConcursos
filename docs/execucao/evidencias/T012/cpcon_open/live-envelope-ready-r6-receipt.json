@@ -1,0 +1,13 @@
+{
+  "schema":"t012.cpcon_open.live-envelope-r6-receipt.v1",
+  "status":"CPCON_LIVE_ENVELOPE_R6_READY_FOR_REVIEW",
+  "envelope":"live-envelope-ready-r6.json",
+  "r6_disposition":"canonical_target_unallocated",
+  "concurso_id":null,
+  "r5_superseded":{"file":"live-envelope-ready-r5.json","reason":"concurso_id=34 collided with an existing SHDias contest; not reusable"},
+  "artifact":{"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":13},
+  "fields":{"titulo":1,"orgao":1,"edital_numero":1,"cargos":6},
+  "deterministic_run_id":"changes only after a positive canonical target is allocated; do not infer or reserve one",
+  "harness":{"ephemeral_concurso_id":999,"reviewed_run_validation":"PASS with temporary ID only","import_dry_run":"PASS","revalidate":"PASS for all four fields against preserved bytes","persisted":false},
+  "guards":["old run tp-reviewed-d5a97b3c28480927445e02c413470637 never reused","no API/DB/pilot/live mutation"]
+}

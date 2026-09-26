@@ -1,0 +1,21 @@
+{
+  "schema": "t012.publiconsult.live-import-receipt-r12.v1",
+  "recorded_at": "2026-09-13T13:50:36.1562168-03:00",
+  "source_id": 56,
+  "external_id": "681",
+  "source": "publiconsult_open",
+  "owner_user_id": 1,
+  "preflight": {"health": 200, "contests": 35, "distinct_source_ids": 34, "catalog_match": 0, "canonical_cargos": 188},
+  "envelope": {"path": "docs/execucao/evidencias/T012/publiconsult_open/reviewed-run-r12.json", "principal_artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "principal_byte_len": 720592, "principal_fields": ["titulo", "orgao", "edital_numero"], "taf_artifact_sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "taf_byte_len": 341466, "taf_pages": 6, "taf_role": "offline documentary provenance only"},
+  "dry_runs": [
+    {"path": "/tmp/publiconsult-r12-a/principal.pdf", "status": "validated", "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a"},
+    {"path": "/tmp/publiconsult-r12-b/principal.pdf", "status": "validated", "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a"}
+  ],
+  "import": {"status": "imported", "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a", "owner": 1, "target": null},
+  "document_review_read_only": {"pending": false, "documents": 0, "case_id": null, "reason": "", "principal": "imported reference/evidence; no document-review case prepared", "taf": "offline only; not dispatched, prepared or approved"},
+  "proposal": {"created": false, "approve": false, "apply": false},
+  "counts_after": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "versions": 93, "outbox": 93, "notifications": 92, "favorites": 0, "alerts": 1},
+  "result": "PUBLICONSULT_IMPORTED_DOCUMENT_REVIEW_PENDING_NEXT_GATE",
+  "stop_rule": "Import-only operation complete; no proposal/document prepare/approve/apply in this round.",
+  "other_sources_touched": false
+}

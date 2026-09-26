@@ -1,0 +1,30 @@
+{
+  "schema": "t012.w2.luna-r2-strong-binding-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "W2_STRONG_BINDING_R2_ACCEPT_FOR_LIVE_RETRY",
+  "scope": "read-only; no API/DB/import/proposal/apply",
+  "checks": {
+    "identity": "PASS: source=w2_open/#59, external_id=105, candidate detail /informacoes/105/, Espírito Santo do Dourado/MG, principal document Edital Normativo 08/06/2016",
+    "artifact": "PASS: local PDF independently hashes d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd, 700244 bytes, 40 pages; URL equals document URL and content receipt",
+    "strong_binding": "PASS conditionally: fresh supported orgao and edital_numero are both page-backed and equal the document identity; source_number 59 is not converted to concurso_id",
+    "evidence": "PASS: every promoted field carries artifact_id, SHA, source_url, page, snippet; content receipt cr-w2-105-pdf-r2 and json_path references are retained",
+    "cargo_table": "PASS: 14 cargos; immediate-vacancy sum 43, with Professor de Creche 9 ampla + 1 PcD; p1/p2 table and total 042/001/043 checks retained",
+    "dry_run": "PASS: local bytes, MIME, 40 pages, identity, document kind, fields, receipt and fail-closed guards validated without persistence",
+    "tests": "PASS: W2 suite 6 passed; reviewed-run importer 4 passed (one non-blocking Pydantic warning)",
+    "safety": "PASS: reference_only=true, canonical concurso_id=null, proposal/approve/apply false, no DB/service mutation"
+  },
+  "conditions": [
+    "Allocate the canonical concurso_id through the normal integrator flow; never use source_number 59 as the ID.",
+    "Construct formal tenderproof.reviewed-run.v1 without changing values/evidence, rerun _revalidate and duplicate/CAS checks, then retry proposal creation only.",
+    "No approve/apply is authorized by this review."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/w2_open/w2-reviewed-run-r2.json",
+    "docs/execucao/evidencias/T012/w2_open/live-proposal-receipt-r2.json",
+    "docs/execucao/evidencias/T012/w2_open/dry-run-r2.json",
+    "docs/execucao/evidencias/T012/w2_open/tests-fail-closed-r2.json",
+    "docs/execucao/evidencias/T012/w2_open/derivation-a.json",
+    "docs/execucao/evidencias/T012/w2_open/derivation-b.json"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "review_date": "2026-09-08",
+  "reviewer": "independent ibfc_contract_repair agent",
+  "scope": "Independent audit of core POST export for observed FAPEG 009/2024, followed by root-authorized publication/UI correction and isolated regression tests",
+  "outcome": "no_confirmed_blocking_acquisition_defect_downstream_access_corrected",
+  "acceptance_scope": "Acquisition, persisted request identity, fenced checkpoints and local recovery. This review alone does not accept batch99 or certify canonical publication of FAPEG.",
+  "core_files_edited": ["backend/app/tenderproof/publication.py"],
+  "reviewed": [
+    "backend/app/tenderproof/contracts.py:88",
+    "backend/app/tenderproof/http_driver.py:51",
+    "backend/app/tenderproof/http_driver.py:159",
+    "backend/app/tenderproof/http_driver.py:260",
+    "backend/app/tenderproof/acquisition.py:69",
+    "backend/app/tenderproof/continuous.py:85",
+    "backend/app/tenderproof/continuous.py:205",
+    "backend/app/tenderproof/continuous_store.py:430",
+    "backend/app/tenderproof/continuous_store.py:491",
+    "backend/app/tenderproof/document_identity.py:47",
+    "backend/app/tenderproof/recovery.py",
+    "backend/app/tenderproof/recovery_integration.py:21",
+    "backend/app/tenderproof/batch99_regions_adapters.py"
+  ],
+  "verified_properties": [
+    "Typed request forbids additional headers, methods, content types and non-observed raw-body shape; source adapter binds endpoint, document ID, body and kind to the observed contest.",
+    "POST uses common public DNS, source URL, TLS, request-count, byte and stream-deadline guards; every POST redirect is rejected before following it.",
+    "Acquisition rejects a driver without POST support. HTTP/HTML failures do not invoke GET or browser fallback even when browser fallback is enabled.",
+    "Checkpoint wrapper rejects a stale lease before transport and compares the request candidate to the leased source/external-ID/detail identity.",
+    "POST request body participates in manifest and acquired-document identity, distinguishing versions at one endpoint. Changed request body creates a durable, deduplicated review hold.",
+    "Legacy GET manifests retain their former shape; existing signed-URL identity, historical observation matching and document-review regression tests pass.",
+    "Completed preserved official POST result recovers after a controlled queue-commit failure without reopening a driver or posting again. This focal recovery test does not kill a separate OS process.",
+    "Declarative recovery is still bounded candidate discovery for its existing supported source and has no network executor that can synthesize or replay POST requests."
+  ],
+  "blocking_findings": [],
+  "integration_observations": [
+    {
+      "id": "post-canonical-link",
+      "status": "resolved_in_authorized_followup",
+      "classification": "downstream UX integration limitation, not an acquisition blocker",
+      "files": ["backend/app/tenderproof/publication.py:377", "mobile/src/components/TenderProofReview.tsx:143"],
+      "evidence": "Creation still stores/shows artifact.url_final as link_edital. For FAPEG this is https://selecao.go.gov.br/exportarEditalPdf while the observed export also requires body 177,0. The URL alone does not encode the selected document.",
+      "impact": "Do not certify that this canonical URL alone is a working GET download of the original edital. Full request remains in the persisted run/proposal and original bytes remain preserved.",
+      "recommendation": "When validating canonical FAPEG UX, use an authorized preserved-artifact download or the official detail page for navigation, preserving official endpoint and request provenance separately. Do not silently issue GET as a substitute.",
+      "resolution": "New POST creations bind the observed official detail page as link_edital. Creation and update proposal views expose the existing authenticated artifact path and official page. UI invokes the existing authenticated PDF handler and offers an official-page link. Older creation proposals carrying the endpoint are marked stale and rejected until prepared/reviewed anew.",
+      "limit": "No live GET probe or real canonical FAPEG publication was performed. Canonical create/update behavior uses explicitly synthetic controlled POST metadata and synthetic PDF; the authorization test serves the real preserved FAPEG PDF."
+    },
+    {
+      "id": "publication-request-contract-revalidation",
+      "status": "resolved_in_authorized_followup",
+      "classification": "defense-in-depth observation; no normal-flow exploit demonstrated",
+      "files": ["backend/app/tenderproof/publication.py:70"],
+      "evidence": "Publication revalidates candidate identity, endpoint URLs, preserved hash/bytes and extracted evidence, but does not call source.validate_document_request for the persisted POST descriptor.",
+      "impact": "Independent checking of the stored method/body contract is weaker here than at acquisition. Demonstrating a bypass would require a path to alter trusted persisted run metadata; this audit did not find such a path and does not claim unsafe canonical fields can be published.",
+      "recommendation": "Repeat source request-contract validation during publication without treating historical GET records as implicit POST.",
+      "resolution": "Publication now invokes the source request validator when present or when POST metadata is supplied; rejects a source without the contract. Three negative tests use the real FAPEG adapter: altered body, missing request and wrong document ID are rejected before PDF processing."
+    }
+  ],
+  "tests": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_tenderproof_batch99_post_review.py tests/test_tenderproof_document_post.py tests/test_tenderproof_batch99_regions.py -q --junitxml=.tenderproof/batch99-post-review.xml",
+      "cwd": "backend",
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 25.62,
+      "junit": "backend/.tenderproof/batch99-post-review.xml",
+      "new_independent_cases": 6
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_tenderproof_document_identity.py tests/test_tenderproof_recovery.py tests/test_tenderproof_recovery_integration.py tests/test_tenderproof_document_review_gate.py -q --junitxml=.tenderproof/batch99-post-review-compatibility.xml",
+      "cwd": "backend",
+      "passed": 73,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 17.01,
+      "junit": "backend/.tenderproof/batch99-post-review-compatibility.xml"
+    }
+  ],
+  "authorized_followup_validation": {
+    "changed_files": [
+      "backend/app/tenderproof/publication.py",
+      "backend/tests/test_tenderproof_publication_post.py",
+      "mobile/src/api/tenderproof.ts",
+      "mobile/src/components/TenderProofReview.tsx",
+      "mobile/scripts/test-tenderproof-post-review.cjs"
+    ],
+    "untouched": "Acquisition, canonical.py, models, migration, services, artifact router and storage were not changed.",
+    "backend": {
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_tenderproof_publication_post.py tests/test_tenderproof_publication.py tests/test_tenderproof_canonical.py -q --junitxml=.tenderproof/batch99-post-publication.xml",
+      "cwd": "backend",
+      "passed": 43,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 62.85,
+      "junit": "backend/.tenderproof/batch99-post-publication.xml",
+      "new_cases": 7,
+      "authorization": "Existing artifact route: missing JWT 401, different owner 404, wrong artifact ID 404, exact owner 200 with byte-for-byte preserved FAPEG PDF and its SHA256.",
+      "canonical_fixture": "Controlled synthetic POST descriptor on the existing synthetic publication fixture; creates and updates through real publication/review/apply logic, idempotent repeat, official-page canonical link on create. This is not a claim of real FAPEG canonical minimum fields."
+    },
+    "frontend": [
+      {"cwd": "mobile", "command": "node scripts/test-tenderproof-post-review.cjs", "exit_code": 0, "scope": "Create/update review invokes authenticated PDF handler and official-page navigation; never opens the export endpoint as GET."},
+      {"cwd": "mobile", "command": "node scripts/test-tenderproof-review.cjs", "exit_code": 0, "scope": "Existing review, approval, stale-proposal, rollback and document-pending component interactions."},
+      {"cwd": "mobile", "command": "node node_modules/typescript/bin/tsc --noEmit", "exit_code": 0}
+    ],
+    "api": {
+      "field": "proposal.document_access",
+      "get_documents": null,
+      "post_documents": {"mode": "preserved_pdf", "official_page_url": "observed candidate detail URL", "artifact_download_path": "/tenderproof/runs/{run_id}/artifacts/{artifact_id}", "artifact_id": "preserved artifact ID", "sha256": "preserved hash", "requires_authentication": true},
+      "note": "Authenticated path is relative and must use the existing JWT API client, not an unauthenticated public hyperlink. Acquisition endpoint/body remain unmodified in the persisted run/proposal."
+    }
+  },
+  "final_postgresql_validation": {
+    "report": "docs/tenderproof-batch99-post-final-postgres.json",
+    "log": "docs/tenderproof-batch99-post-final-postgres.log",
+    "junit": "backend/.tenderproof/batch99-post-final-postgres.xml",
+    "harness": "backend/scripts/tenderproof_batch99_identity_validation.py reused without file changes; NAME=tenderproof-batch99-post-final-pg-20260908; PORT=55473; PYTEST_ADDOPTS=--junitxml=.tenderproof/batch99-post-final-postgres.xml",
+    "command": "python -m pytest -q tests/test_tenderproof_publication.py tests/test_tenderproof_canonical.py tests/test_tenderproof_publication_post.py tests/test_concurso_identity_migration.py tests/test_crawl_resilience.py tests/test_tenderproof_publication_postgres.py::test_postgres_additive_migration_from_canonical_tables --disable-warnings --tb=short",
+    "passed": 89,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_elapsed_seconds": 83.44,
+    "process_elapsed_seconds": 85.14,
+    "scope": "PostgreSQL configured for publication, canonical and POST-publication fixtures; identity migration includes both SQLite and PostgreSQL parameterizations. Includes CAS concurrency, migration idempotence/rollback guards, legacy identity audit, crawl resilience and additive publication schema migration.",
+    "container_id": "d0dde50f273c3b0ec564db6141e6ec20999f4ab0a623c69680793c9ed803fdfa",
+    "container_name": "tenderproof-batch99-post-final-pg-20260908",
+    "image": "postgres:16-alpine",
+    "binding_verified": "127.0.0.1:55473 -> 5432/tcp",
+    "tmpfs_verified": "/var/lib/postgresql/data:rw,size=512m",
+    "mounts_verified": [],
+    "credentials": "random password in child environment only; absent from commands, reports and logs",
+    "cleanup": {
+      "own_container_removal_exit_code": 0,
+      "container_absent": true,
+      "independent_confirmation": "docker container ls --all --filter name=tenderproof-batch99-post-final-pg-20260908 --format '{{.ID}} {{.Names}}' returned exit0 and empty output",
+      "named_or_host_volumes_created": 0,
+      "tmpfs_removed_with_container": true,
+      "unrelated_resources_modified": false
+    },
+    "core_files_changed_for_this_validation": []
+  },
+  "source_evidence": {
+    "report": "docs/tenderproof-batch99-regions-post-contract.json",
+    "fixture_manifest": "backend/tests/fixtures/tenderproof_batch99_regions/pdf-retry-manifest.json",
+    "pdf_sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+    "pages": 29,
+    "request_body": "177,0",
+    "evidence_is_preserved_real_pdf": true
+  },
+  "resources": {
+    "new_network_requests": 0,
+    "browser_sessions": 0,
+    "containers_created": 1,
+    "containers_remaining": 0,
+    "production_writes": 0,
+    "test_subprocesses_exited": true,
+    "new_test_http_clients_closed": true,
+    "database_scope": "pytest temporary isolated SQLite fixtures and generated schemas in the removed private PostgreSQL container"
+  },
+  "limitations": [
+    "No production activation, live transport rerun or separate-process crash proof was performed by this audit. A final isolated PostgreSQL regression was subsequently run and cleaned up as recorded above.",
+    "Response limits were exercised with deterministic HTTP streams; socket/DNS wall-clock behavior remains the existing shared HTTP implementation.",
+    "First acquisition of historical GET metadata remains a baseline; POST metadata is additive and is not inferred for old GET documents.",
+    "Public URL redirects, alternate endpoints and document bodies outside the observed FAPEG contract remain explicitly unsupported."
+  ]
+}

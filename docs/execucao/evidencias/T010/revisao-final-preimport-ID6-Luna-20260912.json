@@ -1,0 +1,54 @@
+{
+  "schema": "t010.id6.final-preimport-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "DEVOLVE",
+  "scope": "Somente gate pré-importação; nenhuma mutação, import, POST, aprovação ou aplicação realizada.",
+  "artifact_check": {
+    "path": "docs/execucao/evidencias/T010/id6.pdf",
+    "sha256_recomputed": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "envelope_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "bytes_recomputed": 597314,
+    "envelope_byte_len": 597314,
+    "match": true
+  },
+  "independent_parser": {
+    "source": "imeso_open",
+    "external_id": "139",
+    "method": "deterministic-regex / tenderproof-fields/1.21",
+    "state": "supported",
+    "rows": 11,
+    "value_equal": true,
+    "units_equal": true,
+    "all_pages": 22,
+    "all_rows": "microáreas 1–11; 1 imediata + CR; AC 1; PcD 0; BRL 3242.00/mês; 40h; requisito literal; taxa 120.00",
+    "unknown_or_proof_date_promoted": false
+  },
+  "evidence_compare": {
+    "literal_snippets_sha_page_url": "match for 11/11",
+    "json_raw_byte_equal": false,
+    "difference": "parser gera evidence_id determinístico diferente e defaults validation={ok:true}, json_path=null ausentes no JSON bruto do envelope; conteúdo/snippet/página/SHA/URL/método coincidem",
+    "required_action": "regenerar/canonicalizar as 11 Evidence no envelope ou registrar explicitamente a comparação sem esses defaults antes do import"
+  },
+  "identity_and_baseline": {
+    "envelope": {"concurso_id": 6, "source": "imeso_open", "external_id": "139", "detail_url": "https://portal.imeso.com.br/edital/ver/139"},
+    "checkpoint_get": {"user_id": 1, "contest_id": 6, "source_id": 17, "external_id": "139", "edital": "001/2026", "cargos": null},
+    "artifact_url_match": true,
+    "persisted_run_get": "404 for tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "proposal_or_duplicate": "none observed; no run persisted"
+  },
+  "blocking_finding": {
+    "owner_user_id_envelope": 9100704,
+    "authenticated_pilot_user_id": 1,
+    "impact": "publication.create_proposal rejects run.owner_user_id != current user; importing this envelope would make the run inaccessible to the current operator and cannot safely precede proposal creation",
+    "correction": "use owner_user_id=1 (or authenticate an existing, verified owner whose ID is 9100704 and prove that user exists); recompute deterministic run_id after any envelope change"
+  },
+  "dry_run": {
+    "import_validation": "validated offline",
+    "tests": "7 passed: test_imeso_berizal_jobs.py + test_reviewed_run_import.py",
+    "persisted": false,
+    "network_writes": false,
+    "pilot_db_writes": false
+  },
+  "gate_conclusion": "DEVOLVE: corrigir owner_user_id para o operador autenticado, regenerar run_id/receipt e canonicalizar ou justificar a diferença JSON das Evidence; somente então reexecutar dry-run e liberar import + criação de proposta, ainda sem approve/apply."
+}

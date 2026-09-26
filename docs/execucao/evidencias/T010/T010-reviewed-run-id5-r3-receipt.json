@@ -1,0 +1,9 @@
+{
+  "schema":"t010.id5.reviewed-run-r3.receipt.v1","record_id":5,"status":"ID5_R3_READY_FOR_REVIEW",
+  "supersedes":["docs/execucao/evidencias/T010/T010-reviewed-run-id5.json","docs/execucao/evidencias/T010/T010-reviewed-run-id5-r2.json"],
+  "superseded_runs":["tp-reviewed-a2c424da86d00219b4709266d52a25fe","tp-reviewed-1e82ffa7d41472d79cc8b2d4ff265766"],
+  "envelope":"docs/execucao/evidencias/T010/T010-reviewed-run-id5-r3.json","envelope_sha256":"994d88fe402c15550b939b0a8c5a0cb8ec6fc08c4b748b8d5e7d771ab5659f2e","run_id":"tp-reviewed-28dbf6ab7b67daf8a5f3f4b09b62ee7c",
+  "change":"taxa_inscricao=80.00 permanece nos três cargos e agora cada ocorrência tem Evidence p3 verbatim com json_path cargos[0..2].taxa_inscricao",
+  "validation":{"reviewed_run_model":"pass","import_dry_run":"validated","tests":"3 passed","seven_reviewed_run_dry_runs":"validated","network":false,"proposal":false,"apply":false},
+  "gate":"independent review r3; r1/r2 preservados como superseded"
+}

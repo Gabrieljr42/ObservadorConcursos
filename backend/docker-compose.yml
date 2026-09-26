@@ -12,8 +12,10 @@ services:
       CELERY_BROKER_URL: redis://redis:6379/0
       CELERY_RESULT_BACKEND: redis://redis:6379/1
       PYTHONUNBUFFERED: "1"
+      TENDERPROOF_ARTIFACT_DIR: /var/lib/observador/tenderproof/artifacts
     volumes:
       - ./:/app
+      - tenderproof_data:/var/lib/observador/tenderproof
     ports:
       - "8000:8000"
     depends_on:
@@ -27,7 +29,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: observador_worker
-    command: celery -A app.worker.celery_app worker --loglevel=info
+    command: celery -A app.worker.celery_app worker --loglevel=info -Q celery,tenderproof
     env_file:
       - .env
     environment:
@@ -35,8 +37,10 @@ services:
       CELERY_BROKER_URL: redis://redis:6379/0
       CELERY_RESULT_BACKEND: redis://redis:6379/1
       PYTHONUNBUFFERED: "1"
+      TENDERPROOF_ARTIFACT_DIR: /var/lib/observador/tenderproof/artifacts
     volumes:
       - ./:/app
+      - tenderproof_data:/var/lib/observador/tenderproof
     depends_on:
       postgres:
         condition: service_healthy
@@ -56,8 +60,10 @@ services:
       CELERY_BROKER_URL: redis://redis:6379/0
       CELERY_RESULT_BACKEND: redis://redis:6379/1
       PYTHONUNBUFFERED: "1"
+      TENDERPROOF_ARTIFACT_DIR: /var/lib/observador/tenderproof/artifacts
     volumes:
       - ./:/app
+      - tenderproof_data:/var/lib/observador/tenderproof
     depends_on:
       postgres:
         condition: service_healthy
@@ -112,3 +118,4 @@ services:
 volumes:
   postgres_data:
   redis_data:
+  tenderproof_data:

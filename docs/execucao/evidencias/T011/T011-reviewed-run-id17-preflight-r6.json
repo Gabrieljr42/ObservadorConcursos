@@ -1,0 +1,15 @@
+{
+  "schema": "t011.id17.preflight.v1",
+  "envelope": "T011-reviewed-run-id17.json",
+  "envelope_sha256": "60afc4ad5b0f8eba96def9817e04f994b9abafad3819815fd8ee392ce3182174",
+  "run_id": "tp-reviewed-b64ff5228138c8157f8c5e4960046c79",
+  "processes": [
+    {"status": "validated", "dry_run": true, "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"status": "validated", "dry_run": true, "fields": ["titulo", "orgao", "edital_numero", "cargos"]}
+  ],
+  "deterministic": true,
+  "isolated_only": true,
+  "canonical_import": false,
+  "network": false,
+  "pilot_touched": false
+}

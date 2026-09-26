@@ -1,0 +1,19 @@
+{
+  "schema": "t012.luna.apta.smoke-fix-review.v1",
+  "verdict": "ACCEPT_TEST_FIX_NO_RUNTIME_REBUILD",
+  "scope": "read-only offline review; no live/API/Docker/deploy mutation",
+  "fixture_review": {
+    "root_cause_confirmed": "The former Artifact fixture omitted storage_path; strict apta_open/708 dispatch then resolved a directory and raised PermissionError, turning fields into FAILED despite valid pinned bytes/markers.",
+    "changes_are_test_only": true,
+    "storage_path": "The fixture now binds the Artifact to the pinned 362093-byte PDF whose SHA is db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.",
+    "contract": "The test consumes the versioned R6 envelope and asserts exactly titulo, orgao, edital_numero; it no longer promotes the obsolete remuneration field.",
+    "runtime_dispatch": "The exercised real extract_fields path returns supported titulo/orgao/edital_numero with artifact-bound evidence and no cargos/remuneracao."
+  },
+  "checks": [
+    {"command":"PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py","result":"3 passed"},
+    {"command":"PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_avancasp_r4_dispatch.py backend/tests/test_publiconsult_r10_dispatch.py backend/tests/test_reviewed_run_import.py","result":"37 passed, 1 warning"},
+    {"command":"PYTHONPATH=backend backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof backend/tests/test_t012_apta_open_selection.py","result":"PASS"}
+  ],
+  "warning": "Only the existing Pydantic warning about ReviewedRun.schema was emitted.",
+  "side_effects": {"application_code_changed":false,"proposal":false,"apply":false,"live":false,"docker":false}
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "t012.klc632.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "revision": "R2",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "klc_open",
+    "external_id": "632",
+    "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+    "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+    "status": "identity_supported_by_envelope_and_replay"
+  },
+  "artifact": {
+    "path": "backend/.tenderproof/r99kill13/klc_open/artifacts/art-96637dad76-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf",
+    "byte_len": 348300,
+    "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "content_type": "application/pdf",
+    "verified_local": true
+  },
+  "checks": {
+    "public_employment_scope": true,
+    "duplicate_replay": "same run_id and validated dry-run twice",
+    "fail_closed_report": "PASS",
+    "tests": "reported PASS",
+    "canonical_target": "PASS_FOR_HANDOFF: concurso_id=null and source_number=57 is provenance only; importer rejection of null is the intended fail-closed allocation guard",
+    "field_provenance": "PASS: field-level literal evidence now covers name, remuneration, jornada, requisito, taxa and benefit; all evidence binds artifact SHA/URL/page",
+    "vagas": "PASS: vagas_imediatas removed; cadastro_reserva=true preserves CR without inventing an immediate vacancy"
+  },
+  "decision": "Accept as a conditional canonical-allocation import/proposal handoff. Do not import now: allocate the canonical concurso ID through the normal flow, then rerun the standard ReviewedRun dry-run and proposal gate. Never substitute source_number=57 as concurso_id."
+}

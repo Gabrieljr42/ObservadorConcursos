@@ -1,0 +1,235 @@
+{
+  "observed_at": "2026-09-08T15:26:59.679975+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99iesesfinal",
+  "cycles": [
+    {
+      "source": "ieses_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-3e626bed3e86",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ieses.org/projetos/api?offset=12&limit=12"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ieses.org/projetos/api?offset=0&limit=12",
+          "file": "ieses_open-cycle1-listing-6a4c9c5d51.html",
+          "sha256": "e37c1c5791f4f5bbaf2f56a543a020c007628f5fdadc1329fdfeb0893791eedf",
+          "bytes": 4907,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T15:27:00.321124+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b2c3b4fafd3b",
+          "candidate": {
+            "candidate_id": "ieses_open-scgas2026",
+            "title_observed": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+            "detail_url_observed": "https://scgas2026.ieses.org/",
+            "external_id": "scgas2026",
+            "observed_at": "2026-09-08T15:27:00.321124Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://scgas2026.ieses.org/",
+              "file": "ieses_open-cycle1-detail-08f7d3839e.html",
+              "sha256": "d91f5dbe3c97faf60b8f5efb494fc89dc760ca55ff37008131606f0241e42463",
+              "bytes": 17034,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:27:01.033750+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ieses_open-doc-2258cddd68a15eea",
+            "title": "Edital 001/2026",
+            "url_requested": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "url_final": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2026' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Edital 001/2026 - Após Retificação 001; Retificação 001; Portaria 001 - Deferimento e Indeferimento de Isenção; Edital 001/2026 - Publicação DOESC).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-7c514a2906",
+            "sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+            "byte_len": 307888,
+            "url_requested": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "url_final": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:27:01.516091Z",
+            "storage_path": "art-7c514a2906-ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf.pdf"
+          },
+          "total_pages": 23,
+          "processed_pages": 23,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=23/23",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.812
+    },
+    {
+      "source": "ieses_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-2922ba2988cc",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ieses.org/projetos/api?offset=12&limit=12"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ieses.org/projetos/api?offset=0&limit=12",
+          "file": "ieses_open-cycle2-listing-6a4c9c5d51.html",
+          "sha256": "e37c1c5791f4f5bbaf2f56a543a020c007628f5fdadc1329fdfeb0893791eedf",
+          "bytes": 4907,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T15:27:02.992966+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-44e676de8242",
+          "candidate": {
+            "candidate_id": "ieses_open-scgas2026",
+            "title_observed": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+            "detail_url_observed": "https://scgas2026.ieses.org/",
+            "external_id": "scgas2026",
+            "observed_at": "2026-09-08T15:27:02.993972Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://scgas2026.ieses.org/",
+              "file": "ieses_open-cycle2-detail-16b24d1ef3.html",
+              "sha256": "2d881278a864b15fd69f91240717bfe785effa314ada1855a21715fa8f5ca38f",
+              "bytes": 17034,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:27:03.674289+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ieses_open-doc-2258cddd68a15eea",
+            "title": "Edital 001/2026",
+            "url_requested": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "url_final": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2026' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Edital 001/2026 - Após Retificação 001; Retificação 001; Portaria 001 - Deferimento e Indeferimento de Isenção; Edital 001/2026 - Publicação DOESC).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-8953c033ad",
+            "sha256": "ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf",
+            "byte_len": 307888,
+            "url_requested": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "url_final": "https://iesesconcursos.nyc3.cdn.digitaloceanspaces.com/2026/scgas0012026/documentos/edital_20260810_101748.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:27:03.836371Z",
+            "storage_path": "art-8953c033ad-ba90f349be370f5135737406e02b7afe39a5459661e7ccb0d283baf8ca221ebf.pdf"
+          },
+          "total_pages": 23,
+          "processed_pages": 23,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=23/23",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 2.281
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "t012.luna.apta.document-review-retificacao-r12.v1",
+  "verdict": "ACCEPT_FOR_SINGLE_DOCUMENT_PREPARE",
+  "scope": "read-only offline review; prepare authorization only; no approve/proposal/apply/live mutation",
+  "identity": {
+    "source": "apta_open",
+    "source_id": 48,
+    "external_id": "708",
+    "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/C%C3%A2mara+Municipal+de+Aragar%C3%A7as+/708",
+    "document_title": "1ª Retificação do Edital do Concurso Público nº 01/2026",
+    "kind": "retificacao"
+  },
+  "artifact": {
+    "artifact_id": "art-apta-ret2-708",
+    "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+    "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+    "byte_len": 76767,
+    "pages": 1,
+    "integrity": "local SHA256 and pypdf page count match receipt; no truncation or processing errors"
+  },
+  "reading": {
+    "effect": "exam_question_distribution_only",
+    "supported_literal_markers": ["Retifica-se o item 9.9", "Estrutura da Prova Objetiva", "15 questões", "05 questões", "Permanecem inalterados os demais itens"],
+    "interpretation": "Only item 9.9 distribution changes; no catalog field is promoted from this document alone.",
+    "unchanged": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa", "cargos", "remuneracao"]
+  },
+  "store_roundtrip": "PASS: DocumentCandidate preserves title/kind=retificacao and isolated TenderProofStore saves/loads hash-addressed bytes",
+  "limits": ["one document-review prepare for this exact run/artifact only", "compare against principal art-18bef50e17 during review", "stop on URL/SHA/bytes/pages/identity mismatch", "no approve/proposal/apply authorized"],
+  "tests": [
+    {"command":"pypdf extraction + receipt/hash verification","result":"PASS; 1 page and all five literal markers found"},
+    {"command":"pytest -q test_amendment_delivery_guards.py test_catalogue_review_status.py test_storage_path_r3.py test_apta_parser_r7_proposed.py","result":"19 passed"},
+    {"command":"compileall review_cases.py contracts.py continuous_router.py","result":"PASS"},
+    {"command":"isolated TenderProofStore save/load + DocumentCandidate round-trip","result":"PASS"}
+  ],
+  "side_effects": {"api":false,"live":false,"docker":false,"approve":false,"proposal":false,"apply":false}
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "t010.id6.post-import-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "release": "Liberado apenas approve + apply único desta proposta; não liberar replay/segunda execução nem outros registros.",
+  "run_get": {
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "owner_user_id": 1,
+    "source": "imeso_open",
+    "external_id": "139",
+    "concurso_id": 6,
+    "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "artifact_byte_len": 597314,
+    "fields": ["cargos"],
+    "cargo_rows": 11,
+    "identity": "Berizal/IMESO/Edital 001/2026; source_id 17 e detail_url portal.imeso.com.br/edital/ver/139"
+  },
+  "proposal_get": {
+    "proposal_id": "tpp-b47411064f1b447b5a6f519c5b925f42",
+    "proposal_hash": "8655bd498afcfa7d51e2c3f0e930f3178420d8446edbf7e919eddcfd593114a9",
+    "state": "proposed",
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "concurso_id": 6,
+    "identity_source_id": 17,
+    "identity_external_id": "139",
+    "eligible_fields": ["cargos"],
+    "baseline_cargos": null,
+    "proposed_rows": 11,
+    "run_vs_proposed_cargos_equal": true,
+    "diff_scope": "somente cargos; baseline null -> 11 linhas",
+    "blocked_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+    "approved_fields": [],
+    "approved_at": null,
+    "version_id": null,
+    "result": null,
+    "applied_at": null,
+    "stale": false
+  },
+  "payload_checks": {
+    "each_row": "microárea 1–11; 1 imediata + CR; AC 1; PcD 0; R$ 3242.00/mês; 40h; requisito literal; taxa R$120.00",
+    "evidence_items": 11,
+    "evidence_sha_page_url": "cada item SHA 8e6f…dd6c, página 22, URL PDF canônica, método deterministic-regex e validation.ok=true",
+    "proof_date_or_unknown": "não promovido; prova_data explicitamente bloqueado"
+  },
+  "side_effect_gate": {
+    "health": 200,
+    "checkpoint": "concursos 33, versões 82, notificações 81; sem incremento após import/proposta",
+    "outbox": 82,
+    "proposal_count_after": 85,
+    "new_version_or_notification": false,
+    "apply_before_review": false,
+    "duplicate_conflict": false
+  },
+  "queries": [
+    "GET /tenderproof/runs/tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "GET /tenderproof/publications/proposals/tpp-b47411064f1b447b5a6f519c5b925f42",
+    "GET /sync/checkpoint",
+    "GET /health"
+  ],
+  "gate_conclusion": "ACEITA: o run e a proposta conferem integralmente; autorizar somente approve + apply único com hash 8655bd498afca7d51e2c3f0e930f3178420d8446edbf7e919eddcfd593114a9 e revisão read-only posterior."
+}

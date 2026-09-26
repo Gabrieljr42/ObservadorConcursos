@@ -1,0 +1,13 @@
+{
+  "schema_version": "t010.reviewed-run-preflight.v1",
+  "read_only": true,
+  "review_gate": "docs/execucao/tarefas/revisao-independente-T010-ID6-imeso-parser-r2-20260912-01.md",
+  "reviewed_run": "docs/execucao/evidencias/T010/T010-reviewed-run-id6.json",
+  "run_id_dry_run": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+  "identity": {"owner_user_id": 1, "concurso_id": 6, "source_id": 17, "source": "imeso_open", "external_id": "139", "detail_url": "https://portal.imeso.com.br/edital/ver/139", "artifact_id": "art-d4814aabe4", "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc", "byte_len": 597314},
+  "catalogue_baseline": {"observation": "snapshot preservado delivery-current-20260912T195125613173Z", "id": 6, "cargos": null, "source_id": 17, "external_id": "139", "orgao": "Prefeitura Municipal De Berizal", "edital_numero": "001/2026"},
+  "expected_material_diff": {"cargos": {"from": null, "to": "11 parser-supported microárea rows; each 1+CR, AC1, PcD0, BRL 3242.00/month, 40h, requirement and fee 120.00"}},
+  "local_validation": {"reviewed_run_model": "pass", "import_dry_run": "validated", "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18", "extract_fields": "supported cargos=11", "revalidate_create_proposal_isolated": "tests/test_imeso_berizal_jobs.py 3 passed; isolated fixture only", "evidence_canonicalization": "IDs t010-id6-cargo-01..11; explicit validation.ok=true; values/snippets unchanged"},
+  "dispatch": {"imported": false, "proposal_created": false, "approved": false, "applied": false, "network": false, "pilot_db": false},
+  "next_gate": "revisão independente do envelope; nenhum import/POST até aceite"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "t012.fafipa.luna-r4-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "requested_gate": "FAFIPA_PARSER_R4_ACCEPT_FOR_INTEGRATION",
+  "findings": [
+    {
+      "severity": "P1",
+      "path": "backend/app/tenderproof/fafipa_t012_r4.py:37-40",
+      "finding": "strong_preflight does not reject U+FFFD in freshly extracted page text. It only checks page count and Mirador/01.001/2026, then returns a successful binding. A controlled extraction with those identity strings plus a replacement glyph was accepted.",
+      "reproduction": "Monkeypatched extract_pages_isolated to return 38 pages with 'Município de Mirador - PR 01.001/2026 �'; strong_preflight(actual pinned PDF bytes) returned successfully.",
+      "required_fix": "Fail closed when any extracted page text contains U+FFFD (or an equivalent explicit unreadable/replacement signal), with a regression test. Do not sanitize or promote such text."
+    },
+    {
+      "severity": "P2",
+      "path": "backend/app/tenderproof/fafipa_t012_r4.py:41-48",
+      "finding": "document_identity_ids=[] is acceptable only under the exact documented fallback organization+main_edital binding; this module implements that fallback and pins source/external/SHA/bytes/pages. However, no integration in fields.py was found, so the fallback is not yet wired into the normal publication path.",
+      "required_fix": "Integrate the strong preflight/fallback through the normal fields/revalidation path, retaining the exact source, organization and edital constraints; do not treat an empty identity set as generic acceptance."
+    }
+  ],
+  "positive_checks": {
+    "artifact": "PASS: source fafipa_open, external_id 4208, SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes, 38 pages.",
+    "identity": "PASS on clean extraction: Município de Mirador - PR and edital 001/2026 are required.",
+    "byte_drift": "PASS: appended-byte mutation raises ValueError.",
+    "tests": "6 passed in 7.35s: test_t012_fafipa_r4.py, test_t012_fafipa_pdf_r3.py, test_t012_fafipa.py.",
+    "compileall": "PASS: app/tenderproof/fafipa_t012_r4.py"
+  },
+  "gate": "Do not release R4 for fields.py integration until the U+FFFD fail-closed guard and its regression test are added; then rerun the six-test gate and integration-specific tests."
+}

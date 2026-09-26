@@ -1,0 +1,22 @@
+{
+  "schema": "t012.luna.dispatch-batch2-r2-review.v1",
+  "verdict": "CHANGES_REQUIRED",
+  "decision": "The behavioral contract is now coherent and tests pass, but one source docstring still contradicts the implemented route.",
+  "apta": {
+    "identity": "PASS: exact apta_open/708, SHA db9c6d26..., 362093 bytes, 20 pages, currentness and PDF markers pinned.",
+    "binding": "PASS: test now proves real _revalidate accepts only the exact contest orgao + edital 01/2026 fallback, with no publication side effects; receipt/preflight evidence documents this exact fallback.",
+    "contract_mismatch": "BLOCKER: backend/app/tenderproof/apta_aragarcas_parser.py lines 3-5 still say the parser is not routed through the shared extractor, while fields.py and strong-preflight-r3.json document an active exact apta_open/708 route. Update this docstring before deploy so the operational contract is unambiguous."
+  },
+  "other_sources": {
+    "klc_632": "PASS: exact source/external, SHA/bytes/URL/pages and literal evidence guards.",
+    "epl_52": "PASS: exact source/external, SHA/bytes/URL/pages and truncation/replacement guards.",
+    "publiconsult_681": "PASS: exact source/external, official URL/SHA/bytes/25 pages and identity evidence.",
+    "avancasp_272": "PASS: exact source/external, SHA/bytes, page-1 identity and parser fail-closed guards."
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "result": "6 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_t012_apta_strong_preflight.py -k 'dispatch_extracts or source_branch_rejects or apta_'", "result": "9 passed, 5 deselected"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/fields.py backend/app/tenderproof/klc_t012.py backend/app/tenderproof/epl_t012.py backend/app/tenderproof/publiconsult_t012.py backend/app/tenderproof/avancasp_t012.py backend/app/tenderproof/apta_aragarcas_parser.py", "result": "PASS"}
+  ],
+  "required_fix": "Change only the stale APTA parser module docstring (or explicitly document why it is intentionally source-specific despite the fields.py route), then rerun the batch2 gate. No code/data/Docker/pilot mutation was performed."
+}

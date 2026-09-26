@@ -1,0 +1,16 @@
+{
+  "schema": "t012.apta.document-parser-r15.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "offline parser/document-review path; no Docker, live API, pilot or deployment",
+  "root_cause": "prepare_preserved called generic review_fields for the one-page APTA retification; fields.py routed it into the principal APTA/708 parser pinned to exactly 20 pages, raising ValueError page count drift outside an HTTPException boundary and producing HTTP 500.",
+  "principal_contract": {"sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c", "byte_len": 362093, "pages": 20, "fields": ["titulo", "orgao", "edital_numero"]},
+  "retification_contract": {"sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786", "byte_len": 76767, "pages": 1, "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf", "title": "Edital de Retificação I ao Edital de Abertura de Inscrições", "kind": "retificacao", "effect": "no_field_change", "promoted_fields": []},
+  "implementation": [
+    "added strict validate_retification with source/external/SHA/bytes/URL/title/kind/page/flags/literal guards",
+    "review_fields routes only APTA/708 retificacao documents to that validator and returns no fields",
+    "prepare and prepare_preserved convert parser ValueError into HTTP 409 rather than leaking HTTP 500",
+    "principal 20-page parser and its guards remain unchanged"
+  ],
+  "tests": {"command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_apta_retification_review.py backend/tests/test_t012_apta_open_selection.py backend/tests/test_t012_apta_strong_preflight.py", "result": "11 passed", "document_review_regression": "43 passed", "compileall": "PASS", "negatives": ["SHA", "URL", "title", "pages"]},
+  "side_effects": {"proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

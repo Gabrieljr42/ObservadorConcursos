@@ -1,0 +1,81 @@
+name: observador-pilot
+
+x-runtime: &runtime
+  image: observador-product:local
+  build:
+    context: .
+  env_file: .env.pilot
+  environment:
+    DATABASE_URL: postgresql+psycopg://postgres:${PILOT_DB_PASSWORD}@postgres:5432/observador
+    CELERY_BROKER_URL: redis://redis:6379/0
+    CELERY_RESULT_BACKEND: redis://redis:6379/1
+    TENDERPROOF_ARTIFACT_DIR: /var/lib/observador/tenderproof/artifacts
+    TENDERPROOF_SOLARI_BUDGET_PATH: /var/lib/observador/tenderproof/solari-budget.sqlite3
+    TENDERPROOF_SOLARI_BUDGET_USD: "20.00"
+    TENDERPROOF_SOLARI_BUDGET_AUTHORITY: "User authorized USD20 total new Browser and Sandbox sessions on 2026-09-08 in product completion task"
+    PYTHONDONTWRITEBYTECODE: "1"
+  volumes:
+    - ./app:/app/app:ro
+    - ./scripts:/app/scripts:ro
+    - pilot_tenderproof:/var/lib/observador/tenderproof
+    - pilot_backups:/backups
+  restart: unless-stopped
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  web:
+    image: observador-product:local
+    command: python /app/scripts/serve_pilot_web.py
+    volumes:
+      - ./scripts:/app/scripts:ro
+      - ../mobile/dist-local-pilot:/web:ro
+    ports:
+      - "127.0.0.1:13000:13000"
+    restart: unless-stopped
+  api:
+    <<: *runtime
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "127.0.0.1:18000:8000"
+  worker:
+    <<: *runtime
+    command: celery -A app.worker.celery_app worker --loglevel=info --concurrency=2 -Q celery,tenderproof
+  scheduler:
+    <<: *runtime
+    command: celery -A app.worker.celery_app beat --loglevel=info --schedule=/var/lib/observador/tenderproof/celerybeat-schedule
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: observador
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PILOT_DB_PASSWORD}
+    volumes:
+      - pilot_postgres:/var/lib/postgresql/data
+      - pilot_backups:/backups
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d observador"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - pilot_redis:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  pilot_postgres:
+  pilot_redis:
+  pilot_tenderproof:
+  pilot_backups:

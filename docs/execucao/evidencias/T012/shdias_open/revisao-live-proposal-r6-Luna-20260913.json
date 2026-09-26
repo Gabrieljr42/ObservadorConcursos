@@ -1,0 +1,54 @@
+{
+  "schema": "t012.shdias_open.luna-live-proposal-r6-review.v1",
+  "verdict": "SHDIAS_R6_ACCEPT_FOR_APPROVE_APPLY",
+  "proposal": {
+    "id": "tpp-6b29997ad6f0ef865bcfdf307044c4e3",
+    "state": "proposed",
+    "hash": "1d4a296974a3dbc6b0210e9be1eb5668a2a1587567b0e47e0beecb326b3f786a",
+    "baseline": "all null",
+    "eligible_fields": ["cargos", "edital_numero", "orgao", "prova_data", "taxa", "titulo"],
+    "taxa": "63.25",
+    "concurso_id": null,
+    "owner": 1
+  },
+  "identity_and_content": {
+    "source": "shdias_open",
+    "source_id": 51,
+    "external_id": "MTEw/MzA4",
+    "process": "00308",
+    "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+    "artifact_bytes": 697485,
+    "artifact_pages": 44,
+    "title": "CONCURSO PÚBLICO CPMH 001/2026 - Guarda",
+    "orgao": "Município de Hortolândia",
+    "edital": "001/2026",
+    "prova_data": "2026-09-27",
+    "cargos": [
+      {"codigo": "301", "vagas": 12, "remuneracao": "3971.37"},
+      {"codigo": "302", "vagas": 28, "remuneracao": "3971.37"}
+    ],
+    "evidence": "All promoted values are backed by the preserved PDF and the R5 parser/dispatch revalidation; no unproven top-level fields were added."
+  },
+  "duplicate_and_history": {
+    "old_proposal": "tpp-68684a6f8673f3f039323fd14b3daa80 remains rejected and preserved; approve/apply=false",
+    "before": {"concursos": 33, "fontes_distintas": 32, "cargos": 180, "versions": 91, "outbox": 91, "notifications": 90, "proposals": 96},
+    "after_proposal_only": {"concursos": 33, "fontes_distintas": 32, "cargos": 180, "versions": 91, "outbox": 91, "notifications": 90, "proposals": 97},
+    "duplicate_check": "No canonical contest/source/cargo mutation occurred; CAS baseline is null for this new external identity."
+  },
+  "expected_apply": {
+    "approve_apply": "one new Concurso under existing source_id 51 (not a new source), exactly two cargo rows from the payload, one version and one pending outbox; explicit internal outbox drain then creates one notification.",
+    "no_overwrite": "Existing contests are not targeted because action=create, concurso_id=null and identity is new.",
+    "ui": "After apply and normal catalog refresh, the new contest is discoverable; this review did not mutate or perform that smoke."
+  },
+  "evidence_files": [
+    "docs/execucao/evidencias/T012/shdias_open/deploy-live-r6-20260913.json",
+    "docs/execucao/evidencias/T012/shdias_open/integration-r5.json",
+    "docs/execucao/evidencias/T012/shdias_open/field-evidence.json",
+    "docs/execucao/evidencias/T012/shdias_open/parser-r6.json",
+    "docs/execucao/evidencias/T012/shdias_open/revisao-live-proposal-r5-20260913.json"
+  ],
+  "constraints": [
+    "Read-only review; no pilot/API mutation, approve, apply, or notification drain performed.",
+    "Approval/apply and post-apply UI discoverability remain operational gates for the integrator."
+  ]
+}

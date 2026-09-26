@@ -1,0 +1,229 @@
+{
+  "observed_at": "2026-09-08T15:10:59.375717+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+  "cycles": [
+    {
+      "source": "fapesb_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-024f834fb4c1",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapesb.ba.gov.br/reda/",
+          "file": "fapesb_selection-cycle1-listing-dc821f3a06.html",
+          "sha256": "ef27c8487dee0bb96d831150fc3431d60f1fe5d69d1e1726e3c32c4129aba2ea",
+          "bytes": 111433,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:11:02.350158+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-515211f9d348",
+          "candidate": {
+            "candidate_id": "fapesb_selection-01-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO – EDITAL Nº 01/2026 – FAPESB",
+            "detail_url_observed": "https://www.fapesb.ba.gov.br/reda/#reda-tab-2026",
+            "external_id": "01-2026",
+            "observed_at": "2026-09-08T15:11:02.496452Z",
+            "source": "fapesb_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapesb.ba.gov.br/reda/#reda-tab-2026",
+              "file": "fapesb_selection-cycle1-detail-d180bc6fa8.html",
+              "sha256": "2c229a342ca1be2fb937ef4fb31fc09acc5e3f6c1d8c3016b949387d60f78a13",
+              "bytes": 111433,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:11:05.455511+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesb_selection-89287dab2aed9ba7",
+            "title": "Edital de abertura",
+            "url_requested": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "url_final": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de abertura' por conter 'edital' no título/URL; 28 documento(s) ignorado(s) (ex.: Administração; Ciências contábeis; Jornalismo; Psicologia; Administração)."
+          },
+          "artifact": {
+            "artifact_id": "art-d0aeae88ef",
+            "sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+            "byte_len": 3383021,
+            "url_requested": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "url_final": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:11:07.889821Z",
+            "storage_path": "art-d0aeae88ef-3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1.pdf"
+          },
+          "total_pages": 9,
+          "processed_pages": 9,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=9/9",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "conflict"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 10.094
+    },
+    {
+      "source": "fapesb_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-50ad015122a2",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapesb.ba.gov.br/reda/",
+          "file": "fapesb_selection-cycle2-listing-f50615b478.html",
+          "sha256": "3e80b6adb027c46cacf918dfb282f1620fb6e6f7ebb88bf7fa1f52ff49990c35",
+          "bytes": 111433,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:11:12.384261+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-96c744a63fc7",
+          "candidate": {
+            "candidate_id": "fapesb_selection-01-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO – EDITAL Nº 01/2026 – FAPESB",
+            "detail_url_observed": "https://www.fapesb.ba.gov.br/reda/#reda-tab-2026",
+            "external_id": "01-2026",
+            "observed_at": "2026-09-08T15:11:12.507365Z",
+            "source": "fapesb_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapesb.ba.gov.br/reda/#reda-tab-2026",
+              "file": "fapesb_selection-cycle2-detail-d788381d92.html",
+              "sha256": "d72e1ee6ece330d657cd3f8a080092b1a83fdd247fdf5c4b8484c72b88f5967e",
+              "bytes": 111433,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:11:16.438905+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesb_selection-89287dab2aed9ba7",
+            "title": "Edital de abertura",
+            "url_requested": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "url_final": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de abertura' por conter 'edital' no título/URL; 28 documento(s) ignorado(s) (ex.: Administração; Ciências contábeis; Jornalismo; Psicologia; Administração)."
+          },
+          "artifact": {
+            "artifact_id": "art-6007199e76",
+            "sha256": "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1",
+            "byte_len": 3383021,
+            "url_requested": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "url_final": "https://www.fapesb.ba.gov.br/wp-content/uploads/2019/08/EDITAL_DEFINITIVO_REDA_2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:11:18.909334Z",
+            "storage_path": "art-6007199e76-3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1.pdf"
+          },
+          "total_pages": 9,
+          "processed_pages": 9,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=9/9",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "conflict"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 11.031
+    }
+  ]
+}

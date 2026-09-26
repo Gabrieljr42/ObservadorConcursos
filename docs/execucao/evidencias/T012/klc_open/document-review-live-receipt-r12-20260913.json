@@ -1,0 +1,50 @@
+{
+  "schema": "t012.klc_open.document-review-live-receipt-r12.v1",
+  "recorded_at": "2026-09-13T17:22:55.9560524Z",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "owner_user_id": 1,
+  "source_id": 57,
+  "external_id": "632",
+  "preflight": {"health": 200, "login": 200, "checkpoint": 200, "pending": true, "documents": 1, "current_case": null, "artifact_registered": {"artifact_id": "art-klc-ret1-1887b316", "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60", "byte_len": 423600, "pages": 1, "replay_or_new": "new registration; no prior blob for artifact_id"}},
+  "operation": {
+    "endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "attempts": 1,
+    "http": 200,
+    "case_id": "drc-preserved-3285cc14300264cf42df74b4fc2551f9",
+    "revision_hash": "2359dc6002318ba6e69bb3b975b1efcbd4520f5069fd88637b6365d2681886a9",
+    "approved_at": null,
+    "approval": false,
+    "proposal": false,
+    "apply": false
+  },
+  "case": {
+    "identity": [1, "klc_open", "real", "632"],
+    "selected_document_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "extraction_method_version": "tenderproof-fields/1.21",
+    "revision_manifest": [
+      {"kind": "edital", "title": "Edital de Processo Seletivo", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf"},
+      {"kind": "retificacao", "title": "Retificação 1 - Alteração da Data da Prova", "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf"},
+      {"kind": "outro", "title": "Edital de Homologação das Inscrições e Divulgação do Local de Prova", "url": "https://www.klcconcursos.com.br/editais/c7bedf451c4cb436123ee210c7c40c68.pdf"},
+      {"kind": "gabarito", "title": "Edital de Divulgação do Gabarito Preliminar", "url": "https://www.klcconcursos.com.br/editais/2cb174f9d07c3a6af075d52b7186028d.pdf"},
+      {"kind": "gabarito", "title": "Edital de Divulgação do Gabarito Oficial", "url": "https://www.klcconcursos.com.br/editais/37c24a4ca617399a3b74a1eb5e4c75e0.pdf"},
+      {"kind": "resultado", "title": "Edital de Resultado Preliminar", "url": "https://www.klcconcursos.com.br/editais/85df59eae1dda4fe0fa0abd6b043dd9b.pdf"},
+      {"kind": "resultado", "title": "Edital de Resultado Final", "url": "https://www.klcconcursos.com.br/editais/d58675fa489f977d2d876fad60302190.pdf"}
+    ],
+    "document": {"kind": "retificacao", "title": "Retificação 1 - Alteração da Data da Prova", "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf"},
+    "artifact": {"artifact_id": "art-klc-ret1-1887b316", "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60", "byte_len": 423600, "content_type": "application/pdf", "storage_path": "art-klc-ret1-1887b316-0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60.pdf"},
+    "page": {"page_number": 1, "char_count": 1618, "extraction_method": "pdf_text", "truncated": false, "error": null, "text_contains": ["002/2026", "17 de maio de 2026"]},
+    "fields": [
+      {"field_name": "titulo", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "orgao", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "edital_numero", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "inscricao_inicio", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "inscricao_fim", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "prova_data", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "remuneracao", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"},
+      {"field_name": "cargos", "state": "failed", "reason": "klc_open/632 indisponível ou divergente: KLC artifact metadata or URL drift"}
+    ]
+  },
+  "postflight": {"pending": true, "documents": 1, "current_case": "drc-preserved-3285cc14300264cf42df74b4fc2551f9", "catalog_mutation": false, "counts_after": "unchanged; 35 contests/34 sources/188 cargos/93 versions/93 outbox/92 notifications/fav0/alert1"},
+  "result": "KLC_PREPARE_R12_CASE_CREATED_FIELDS_FAILED",
+  "next_gate": "Independent review of the created case and KLC metadata/URL drift; no document approval, proposal or apply."
+}

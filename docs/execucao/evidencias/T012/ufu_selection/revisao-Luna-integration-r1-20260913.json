@@ -1,0 +1,29 @@
+{
+  "schema": "t012.ufu_selection.luna-integration-review-r1.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read_only; no deploy/live/API/DB/catalogue mutation",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py backend/tests/test_t012_batch2_dispatch.py",
+    "result": "27 passed, 97 warnings in 83.93s",
+    "side_effects": "UFU tests assert zero proposal/version/outbox; batch regressions remain green"
+  },
+  "sha256_snapshot": {
+    "backend/app/tenderproof/fields.py": "89CEE274D3DA8D85D59D4A598BECAAF4DC4F17F8DD1C1D6F2E9D8FAB0ADFABD1",
+    "backend/app/tenderproof/ufu_selection_parser.py": "105BDB4DD311380175CD2F85BBAA308ABAF95B7861377CE65D6A7EBCED0A26B3",
+    "backend/tests/test_ufu_selection_preflight.py": "500173021799AE029FB56898850A66FF76E1DA32105FEADD2FD3239977258BD2",
+    "backend/tests/test_t012_fafipa_dispatch_r5.py": "A0DD10316B7A413354F12682CF05A109629E41FC73D05BF86234BB58DF4DABB2",
+    "backend/tests/test_cpcon_t012.py": "C9D23D0BAA714FD0375703667BCB752130B0A4CA211E341313247F1B10AF0518",
+    "backend/tests/test_t012_batch2_dispatch.py": "4F6CC32BDC6E7420834158C83072E6D0C6E3EACEFD5C09F6EBE6A7806827BBE0"
+  },
+  "ufu_checks": {
+    "routing": "PASS: exact source/external 40/1843 branch; pin or URL drift becomes FAILED without generic fallback",
+    "artifact": "PASS: official UTF-8 HTML logical page, SHA 72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf, 26619 bytes and exact detail URL",
+    "fresh_evidence": "PASS: dispatcher reparses the pinned stored bytes and carries parser-produced identity/timeline evidence; required literals are independently checked",
+    "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+    "not_promoted": ["taxa", "cargos", "remuneracao", "linked_documents"],
+    "reference_only": true,
+    "currentness": "PASS: exam/next schedule 2026-10-15 remains future as of 2026-09-13; closed registration alone does not make the selection concluded"
+  },
+  "gate": "Deploy is acceptable for this source branch. Keep the HTML reference-only and do not import, propose, approve or apply without separate canonical and publication gates."
+}

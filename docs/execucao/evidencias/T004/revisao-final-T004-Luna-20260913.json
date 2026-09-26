@@ -1,0 +1,33 @@
+{
+  "schema": "t004.luna.final-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "T004_FINAL_REJECT",
+  "scope": "read-only review of docs/execucao/tarefas/T004.md and accepted evidence",
+  "passes": {
+    "state": "EM_REVISAO/PARCIAL is explicit",
+    "r5_matrix": "content and blockers match accepted r5-r2 matrix",
+    "inventory": "runtime_factory_absent=0 and no generic adapter absence claim",
+    "garibaldi": "offline accepted_with_blocker with concrete bytes/content/live condition",
+    "preserved_blockers": "18/20/22-25, ID15 mismatch, ID21 DO_NOT_RETRY and owner/conditions are stated",
+    "no_apply_claim": "final section explicitly says ID5 not imported/proposed/approved/applied and no live mutation"
+  },
+  "required_corrections": [
+    {
+      "lines": "16-22",
+      "issue": "The 'Estado corrente' section still presents r4 as current and says ID5/concurso 5 is insufficient; this contradicts final r5 (ID5 local-ready, source 38). It is not labeled historical/superseded.",
+      "fix": "Mark the entire section historical/superseded by r5 or update its matrix/state/blocker claims to r5."
+    },
+    {
+      "lines": "35-39",
+      "issue": "The older ID5 r3 section says ready and points to r3 while r5 supersedes it; section is not explicitly historical.",
+      "fix": "Label this checkpoint superseded by r5 and point the current statement to r5 artifacts."
+    },
+    {
+      "lines": "43-45",
+      "issue": "Line 43 links `../evidencias/revisao-matriz-fontes-r5-r2-Luna-20260913.json`, but the accepted review is under `../evidencias/T004/`; the current link does not resolve. Line 45 labels envelope SHA `bd1f...275a7` as artifact SHA; PDF artifact SHA is `9bdb0e...dac32`.",
+      "fix": "Correct the review link to the actual T004 path and distinguish envelope SHA from artifact/PDF SHA."
+    }
+  ],
+  "conclusion": "The operational posture is correctly partial and non-live, but stale unlabelled checkpoints, one broken evidence link and one mislabeled hash prevent final acceptance."
+}

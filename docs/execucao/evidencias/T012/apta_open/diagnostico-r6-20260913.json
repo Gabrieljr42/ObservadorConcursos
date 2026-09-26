@@ -1,0 +1,26 @@
+{
+  "schema": "t012.apta.r6-diagnosis.v1",
+  "decision": "READY_FOR_REVIEW",
+  "r5_rejection_addressed": [
+    "concurso_id is null rather than disposable 1/999",
+    "content_path resolves to the evidence staging package, not backend/.tenderproof/r60rec",
+    "artifact is copied and verified in a hash-addressed staging root",
+    "only titulo/orgao/edital_numero are present"
+  ],
+  "artifact": {
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20
+  },
+  "run_id": "tp-reviewed-8819b2699ed9842b37c374f774d7d085",
+  "isolated_results": {
+    "schema_validation": "PASS",
+    "dry_run": "validated",
+    "commit_run_artifact": "imported in temporary SQLite/store",
+    "replay": "idempotent",
+    "owner_901": "distinct run ID; no takeover",
+    "negative_path_sha": "rejected"
+  },
+  "known_blocker": "The generic APTA parser regression suite currently reports fields as failed for the preserved PDF; this is separate from the reviewed-run contract and must be fixed before parser/live dispatch.",
+  "prohibitions": ["no API", "no Docker", "no canonical allocation", "no proposal/approval/apply"]
+}

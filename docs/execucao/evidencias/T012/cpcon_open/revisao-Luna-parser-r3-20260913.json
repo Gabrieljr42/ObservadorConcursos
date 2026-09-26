@@ -1,0 +1,18 @@
+{
+  "schema": "t012.cpcon.luna-parser-r3-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "CPCON_PARSER_R3_REJECT_FOR_INTEGRATION",
+  "scope": "read-only; parser/tests/preflight only; fields.py and registry untouched",
+  "checks": {
+    "pin": "PASS: SOURCE cpcon_open, external slug processo-seletivo-simplificado-no-002-2026, SHA 6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05, 498894 bytes; preserved PDF is 13 pages",
+    "identity_values": "PASS: literal UEPB organization and edital 002/2026 are returned; exact pinned snippets reject U+FFFD and non-verbatim text",
+    "guards": "PASS: source/external/SHA/byte drift, missing page, truncation/error, duplicate/missing 002/2026 and U+FFFD fail closed",
+    "tests": "PASS: tests/test_cpcon_t012.py 2 passed; compileall passed",
+    "preflight": "PASS as a diagnostic: shared revalidation remains blocked with HTTP 422 and no DB/catalog writes",
+    "contract": "FAIL: document_identity_ids in cpcon_t012.py:49 has signature (artifact, pages, candidate), but validation.document_identity_ids and every source adapter contract call (candidate, pages). Wiring it as-is raises TypeError; current tests bypass the real contract by calling the helper directly."
+  },
+  "required_correction": "Change document_identity_ids to the adapter contract (candidate, pages), update the focused test to call through the validation/adapter path, and preserve the existing fail-closed identity guards. Then rerun shared _revalidate and the focused tests in an isolated disposable flow.",
+  "blocking_evidence": "docs/execucao/evidencias/T012/cpcon_open/strong-preflight-r3.json states BLOCKED_SHARED_REVALIDATE because the module is not wired; backend/app/tenderproof/validation.py:26 calls resolver(candidate,pages), while cpcon_t012.py:49 requires three arguments.",
+  "safety": "No integration, import, proposal, API, DB, network or pilot mutation was performed."
+}

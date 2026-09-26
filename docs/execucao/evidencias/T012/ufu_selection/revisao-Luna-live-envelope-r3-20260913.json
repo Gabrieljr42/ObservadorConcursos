@@ -1,0 +1,23 @@
+{
+  "schema": "t012.ufu_selection.luna-envelope-r3-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "scope": "offline schema/import/round-trip review; no live or mutation",
+  "checks": {
+    "create_contract": "PASS: concurso_id=null, owner_user_id=1, source_id=40/external_id=1843; no run_id or synthetic target in envelope.",
+    "artifact": "PASS: local HTML path exists and hashes to 26619 bytes/SHA 72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf; URL/detail pin matches.",
+    "fields": "PASS: exactly titulo, orgao, edital_numero, inscricao_inicio, inscricao_fim.",
+    "negative_scope": "PASS: prova/cronograma_proximo/taxa/cargos/remuneracao/docs are omitted and not promoted.",
+    "schema_import_replay": "PASS: current ReviewedRun validates; isolated import then replay is idempotent; owner 2 derives a distinct run; drift negatives covered by preflight tests.",
+    "run_handoff": "FAIL: no live-envelope R3 receipt containing a derived run_id or proposal handoff is present. Current importer independently derives tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c, but package-receipt-r3 only asserts that a run exists and does not bind this ID to a proposal target null.",
+    "proposal_target": "UNPROVEN: target null is declared, but no R3 proposal/run receipt proves the exact run linkage."
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py",
+    "result": "8 passed",
+    "compileall": "PASS"
+  },
+  "required_fix": "Produce a receipt/handoff for this exact envelope containing the current derived run_id, owner 1, source/external binding and proposal target null; then rerun the live preflight. Do not import/propose live before that binding exists.",
+  "mutations_performed": false
+}

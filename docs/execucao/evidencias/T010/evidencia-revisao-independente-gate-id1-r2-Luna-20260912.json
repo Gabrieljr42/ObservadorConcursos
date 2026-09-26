@@ -1,0 +1,69 @@
+{
+  "schema": "t010.id1.independent-gate-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "queries": {
+    "health": "GET http://localhost:18000/health",
+    "run": "GET /tenderproof/runs/tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "proposal": "GET /tenderproof/publications/proposals/tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "checkpoint": "GET /sync/checkpoint"
+  },
+  "run": {
+    "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "owner_user_id": 1,
+    "source": "access_open",
+    "external_id": "183",
+    "detail_url": "https://access.selecao.net.br/informacoes/183/",
+    "artifact_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "validation_status": "valid",
+    "fields_only": ["cargos"],
+    "cargo": {
+      "nome": "Professor Auxiliar",
+      "vagas_imediatas": 10,
+      "vagas_ampla_concorrencia": 9,
+      "vagas_pcd": 1,
+      "remuneracao": "30.53",
+      "moeda": "BRL",
+      "remuneracao_observacao": "por hora-aula",
+      "jornada": "até 40 horas semanais",
+      "requisitos": "Licenciatura Plena em Pedagogia ou Normal Superior, ambas com habilitação na Educação Infantil e nos anos iniciais do Ensino Fundamental"
+    }
+  },
+  "proposal": {
+    "proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "concurso_id": 1,
+    "source_id": 19,
+    "state": "proposed",
+    "baseline_cargos": null,
+    "proposed_cargos_equals_run": true,
+    "eligible_fields": ["cargos"],
+    "approved_fields": [],
+    "approved_at": null,
+    "version_id": null,
+    "result": null,
+    "material_diff_by_content": true,
+    "finding": "Baseline cargos is null and proposed cargos is the exact non-null structured cargo from the run; the material diff is established by content, not by receipt flag."
+  },
+  "checkpoint": {
+    "health_status": "ok",
+    "env": "local-pilot",
+    "publications": 34,
+    "versions": 81,
+    "notifications": 80,
+    "alerts": 1,
+    "favorites": 0,
+    "concursos": 33,
+    "recent_updates": 81,
+    "intact": true
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T010/evidencia-gate-id1-reviewed-run-proposta-20260912.json",
+    "docs/execucao/evidencias/T010/T010-reviewed-run-id1.json",
+    "docs/execucao/evidencias/T010/id1.pdf"
+  ],
+  "gate_conclusion": "Eligible for the separately authorized next gate only; this review does not approve or apply the proposal."
+}

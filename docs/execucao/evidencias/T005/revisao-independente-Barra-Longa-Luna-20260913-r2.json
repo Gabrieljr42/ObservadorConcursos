@@ -1,0 +1,47 @@
+{
+  "schema": "t005.independent-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "offline_read_only",
+  "decision": "ACEITO_CONDICIONAL_INTEGRACAO_SERIAL",
+  "artifact": {
+    "artifact_id": "art-07b137af65",
+    "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+    "byte_len": 429261,
+    "pages": 23,
+    "identity": "concurso32/source47/elo_open/external129; Barra Longa; Edital 01/2026"
+  },
+  "run": {
+    "run_id": "tp-reviewed-9b6433a0bdb236a6f69bc4e5eaa17c64",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "preflight": "passed",
+    "derivations": "equal",
+    "dry_run": "validated",
+    "isolated_proposal": "prepared, apply=false, no proposal_id/version/event",
+    "network": false,
+    "catalogue_mutated": false
+  },
+  "evidence_audit": {
+    "cargo_rows": 7,
+    "each_row_has_unique_evidence_ids": true,
+    "each_row_pages": [18, 23],
+    "cargo_evidence": "p.18 identifies exactly one distinct microárea and its row; p.23 is linked per row only to the common registration interval and exam/TAF date. 21 evidence IDs are unique; no duplicated cargo row or semantic double counting.",
+    "p18_snippet": "3.242,00 -- 01 ... 40h 162,10; requisitos ...; prova objetiva",
+    "p23_snippets": ["18/08/2026 a 18/09/2026", "18/10/2026 ... Objetiva de Múltipla Escolha e TAF"],
+    "values": {"vagas": 7, "ampla": 7, "pcd": 0, "cr": null, "remuneracao": "3242.00", "unidade": "R$/mês", "jornada": "40h/semana", "taxa": "162.10", "prova_data": "2026-10-18"},
+    "retificacoes_publicacoes": "blocked as unproven; no inference",
+    "u_fffd": 0
+  },
+  "verification": {
+    "parser_tests": "3 passed",
+    "guards": ["SHA/bytes/pages", "identity", "seven unique rows", "required literals", "drift", "U+FFFD"],
+    "baseline_cargos": null,
+    "fields_py": "not integrated by design; no approval implied"
+  },
+  "release": {
+    "allowed_next": "only serial integration of the SHA-pinned parser into fields.py/service, then repeat preflight, two derivations, dry-run and isolated proposal",
+    "blocked": ["canonical import", "canonical proposal", "approve", "apply", "pilot/quadro"],
+    "mutation": "none"
+  }
+}

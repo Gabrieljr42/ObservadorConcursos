@@ -1,0 +1,50 @@
+{
+  "review": "Luna KLC document-review blocker R4",
+  "date": "2026-09-13",
+  "verdict": "READY_FOR_DOCUMENT_OPERATION",
+  "scope": "offline read-only review; no API, Docker, live or central-document mutation",
+  "receipt": "live-proposal-receipt-r4-20260913.json",
+  "pending_manifest_exact_identity": {
+    "owner_user_id": 1,
+    "source": "klc_open",
+    "source_id": 57,
+    "external_id": "632",
+    "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+    "document": {
+      "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+      "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+      "kind": "edital"
+    },
+    "artifact": {
+      "artifact_id": "art-96637dad76",
+      "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+      "byte_len": 348300,
+      "pages": 10,
+      "content_type": "application/pdf"
+    }
+  },
+  "identity_checks": {
+    "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+    "artifact_url_requested_equals_final": true,
+    "title_kind_sha_bytes_pages": "match R3 envelope, R4 receipt and document-review package",
+    "fields_are_reference_only": true,
+    "promoted_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "cargos"],
+    "cargo_count": 1,
+    "no_independent_proof_date": true
+  },
+  "safe_review_procedure": {
+    "authority": "First GET /tenderproof/document-review/tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc and require exactly the manifest identity above; do not synthesize source_number=57 as concurso_id.",
+    "prepare": "If the exact pending PDF remains in the official listing, POST /tenderproof/document-review/{run_id}/prepare. If listing has disappeared, use only the authenticated prepare-preserved route with the exact pending document, registered artifact, and expected_page_count=10; never fetch or upload an arbitrary URL.",
+    "preserved_document": {"title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf", "kind": "edital", "file_format": "pdf"},
+    "approval": "Approve exactly one decision for artifact SHA 84c944…711b4, using a literal page-1 snippet and reason >=20 chars, effect=no_field_change (or reflected_in_selected_document only if the operator verifies that interpretation); omit changes. This clears document review without changing catalog fields.",
+    "proposal_after_review": "Re-run the exact imported run and create one proposal with owner 1, source 57, external 632, target null; stop before approve/apply."
+  },
+  "side_effects": "R4 receipt shows proposal HTTP 409 and unchanged contests/cargos/proposals/versions/outbox/notifications; document review approval is the only intended review-ledger mutation.",
+  "tests": {
+    "parser_and_dispatch": "31 passed, 1 stale fixture failure",
+    "stale_failure": "test_create_envelope_r3.py still expects old run tp-reviewed-600b17424a6e39e5c30c73f152fb0caf; current R4 receipt/import authority is 8dc0f15d53da4a5037d515b2888a14fc",
+    "content_conclusion": "stale expected-run assertion only; identity, URL, SHA, bytes, pages and negative parser checks pass"
+  },
+  "no_undue_field_promotion": true,
+  "mutations_by_review": false
+}

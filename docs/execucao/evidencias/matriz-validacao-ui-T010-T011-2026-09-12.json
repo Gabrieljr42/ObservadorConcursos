@@ -1,0 +1,50 @@
+{
+  "schema": "ui-validation-matrix.t010-t011.v1",
+  "date": "2026-09-12",
+  "read_only": true,
+  "route_template": "/concurso/{id}",
+  "api_state": {"health": "HTTP 200", "checkpoint_snapshot": {"concursos": 33, "sources": 32, "structured_jobs": 112}, "note": "Valid checked fields coincide in the pilot after proposals were revalidated/applied as no_change; T010/16 has prior application v24. reference_only describes documentary provenance where applicable, not application status; no pending field is a check target."},
+  "ui_validation": {
+    "decision": "NAO_ACEITA",
+    "scope": "14 routes opened successfully; every route lacked the Cargos e requisitos section and showed CARGO=Pendente de conferência.",
+    "results": [
+      {"id":1,"observed":"Birigui only; Professor Auxiliar, R$30,53/hora-aula and 10 vagas absent"},
+      {"id":5,"observed":"Unaí and date only; VIII Concurso and R$80 absent"},
+      {"id":6,"observed":"Berizal only; Agente Comunitário de Saúde, R$3.242 and 11 vagas absent"},
+      {"id":7,"observed":"Garça only; Técnico Legislativo, R$3.378,77 and 35h absent"},
+      {"id":8,"observed":"Reriutaba only; Guarda, CNH and 9 vagas absent"},
+      {"id":14,"observed":"FAPESE only; Articulador, R$60 and R$7.488 absent"},
+      {"id":16,"observed":"Osvaldo Cruz with document_review pending; Bibliotecário, R$2.327,96 and date absent"},
+      {"id":17,"observed":"No checked target visible"},
+      {"id":18,"observed":"Quadrix only"},
+      {"id":20,"observed":"Date only"},
+      {"id":22,"observed":"No checked target visible"},
+      {"id":23,"observed":"No checked target visible"},
+      {"id":24,"observed":"No checked target visible"},
+      {"id":25,"observed":"Dates only; 432 vagas absent"}
+    ],
+    "common_failure": "Cargos e requisitos absent; CARGO remains Pendente de conferência",
+    "revalidation": [{"id":1,"decision":"ACEITA_ID1_GATE","historical_failure_preserved":true,"observed":"Coordinator CUA later observed title Prefeitura Municipal de Birigui/SP; CARGO Professor Auxiliar; Cargos e requisitos; 10 vagas imediatas (AC 9, PcD 1); R$30,53 por hora-aula; até 40 horas semanais; full requirement text; history update and structured diff.","note":"This supersedes only the ID1 UI result for the new applied version; the prior 14-route failure remains historical and overall matrix remains NAO_ACEITA."}]
+  },
+  "records": [
+    {"task":"T010","id":1,"route":"/concurso/1","checked_targets":["Prefeitura Municipal de Birigui/SP — Concurso Público 01/2026, Edital 179/2026","Professor Auxiliar; até 40 horas semanais","R$ 30,53 por hora-aula; 10 vagas (9 AC + 1 PcD)"]},
+    {"task":"T010","id":5,"route":"/concurso/5","checked_targets":["Câmara Municipal de Unaí/MG — VIII Concurso Público, Edital 1/2026","Inscrições: 30/10/2026 16:00 a 01/12/2026 16:00 (Brasília)","Taxa de inscrição: R$ 80,00; tabela de cargos no item 1.1.2"]},
+    {"task":"T010","id":6,"route":"/concurso/6","checked_targets":["Prefeitura Municipal de Berizal/MG — Edital 001/2026","Agente Comunitário de Saúde — microáreas 1–11; 40 horas semanais","R$ 3.242,00 mensal; 11 vagas imediatas + cadastro de reserva"]},
+    {"task":"T010","id":7,"route":"/concurso/7","checked_targets":["Câmara Municipal de Garça/SP — Edital 001/2026","Técnico Legislativo; Ensino Médio; 35 horas semanais","R$ 3.378,77 mensal + auxílio alimentação R$ 680 e vale-transporte"]},
+    {"task":"T010","id":8,"route":"/concurso/8","checked_targets":["Prefeitura Municipal de Reriutaba/CE — Edital 01/2026 de 02/09/2026","Guarda Civil Municipal; Ensino Médio; CNH AB ou superior","9 vagas imediatas (6 AC + 1 PcD + 2 PPP) + 11 cadastro de reserva; remuneração salário-mínimo + adicionais"]},
+    {"task":"T010","id":14,"route":"/concurso/14","checked_targets":["FAPESE — PRONERA, Edital 007/2026","Articulador(a) político-pedagógico e Técnico de Apoio; prestação PF/cadastro reserva","R$ 60,00 por hora efetivamente prestada; até R$ 7.488,00 por etapa"]},
+    {"task":"T010","id":16,"route":"/concurso/16","checked_targets":["Prefeitura de Osvaldo Cruz/SP — Concurso Público 002/2024","Bibliotecário 40h/R$ 2.327,96 e Contador 40h/R$ 8.572,64","Documento/período 2024/2025; prova em 12/01/2025"]},
+    {"task":"T011","id":17,"route":"/concurso/17","checked_targets":["27 cargos; 79 vagas","Carga horária de 40h","Remuneração por cargo em BRL e taxas BRL"]},
+    {"task":"T011","id":18,"route":"/concurso/18","checked_targets":["Identidade e cidade/UF do concurso Quadrix","Cargos e totais impressos","Requisitos e remunerações em BRL (unidade temporal não especificada)"]},
+    {"task":"T011","id":20,"route":"/concurso/20","checked_targets":["Prova em 08/03/2026","Cargos/exemplos e vagas","Carga horária e remunerações em BRL (unidade temporal não especificada)"]},
+    {"task":"T011","id":22,"route":"/concurso/22","checked_targets":["Retificações de 31/07, 14/08 e 31/08/2026","Validade de 2 anos após homologação","Identidade e cidade/UF"]},
+    {"task":"T011","id":23,"route":"/concurso/23","checked_targets":["191 vagas","Etapas: objetiva e títulos para nível superior","Identidade e cidade/UF"]},
+    {"task":"T011","id":24,"route":"/concurso/24","checked_targets":["Carga mínima de 40h por semana","Taxa: nível médio R$ 100; nível superior R$ 150","Assistente Legislativo de Contabilidade: 1 vaga/R$ 5.311,00; Técnico Legislativo: R$ 5.940,53"]},
+    {"task":"T011","id":25,"route":"/concurso/25","checked_targets":["432 vagas","Inscrições: 24/08/2026 a 01/10/2026","Cargos nominais e início do quadro de requisitos/carga/remuneração"]}
+  ],
+  "excluded": [
+    {"task":"T010","id":15,"route":"/concurso/15","reason":"do_not_dispatch: identidade PDF Edital 010/2025 diverge do alvo de catálogo 005/2025; não há entidade preservada compatível."},
+    {"task":"T011","id":21,"route":"/concurso/21","reason":"do_not_retry: aguardando conferência das quatro retificações Funvapi e nova run/revalidação."}
+  ],
+  "sources": ["docs/execucao/evidencias/T010/T010-pacotes-revisao.json","docs/execucao/evidencias/T011/pacotes-proposta-revisao.json","docs/execucao/evidencias/revisao-independente-T010-T011-Luna-20260912.json","docs/execucao/evidencias-redeploy-t007-r2-t008-r3-2026-09-12.md"]
+}

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Fapex - Fundação de apoio à pesquisa e à extensão</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Fapex - Fundação de Apoio à Pesquisa e a Extensão">
+	<meta name="keywords" content="Fapex,Fundaçao,Projetos">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <!--[if (gte IE 9)|!(IE)]>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <![endif]-->   
+        <noscript>
+            <META http-equiv="refresh" content="0;URL=https://fapex.org.br:443/Fapex/Geral/Excecao/Home/noscript"> 
+        </noscript>
+        <!-- Favicon -->
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/css/style.css"/>
+        <link rel="shortcut icon" type="image/png" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/img/favicon.png"/>
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/contrast.css" type="text/css"/>
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/css/toastr8.css">
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/bootstrap-override.css" rel="stylesheet">
+        <!-- Font Avesome Styles -->
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/font-awesome/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/m-personal.css" type="text/css"/>    
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/flexslider.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/material-design-icons/www/css/material-icons.css"/> 
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/w3-personalized.css"> 
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.css"/>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js"></script>        
+		<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js"></script>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js"></script>
+        <script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js"></script>
+
+    <script>
+        function getUrlWithoutParameter(url) 
+        {
+            var urlparts= url.split('/p/');
+
+            return urlparts.length == 2 ? urlparts[0].trim() : url.trim();
+        }
+
+        var pagesUrl = 
+        [
+            'https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Projeto/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Edital/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Home/index'
+        ];
+               
+        var urlWithoutParams = getUrlWithoutParameter(window.location.href);
+
+        if(jQuery.inArray(urlWithoutParams,pagesUrl) != -1)
+        {
+            window.history.pushState(window.location.href,null,getUrlWithoutParameter(window.location.href));
+        }    
+        
+        function notify(cls,title,message)
+        {
+            jQuery('.HarpNotify').children().eq(0).attr('class',cls);
+            jQuery('.bg').show();
+            jQuery('.'+cls).find('.n-icon').show();
+            jQuery('.'+cls).find('p').text(title);
+            jQuery('.'+cls).find('span').text(message);
+            jQuery('.HarpNotify').show();
+        }
+    </script>        
+    </head>
+   <body style="background-color:#E4E4E4;">
+       
+	   <div id="cAll">
+        <!-- Header -->
+          <header id="header">
+    <div class="container">
+        <div class="row t-container" >
+        <!-- logo -->
+        <div class="span3" style="padding-top:1.8%;float:left;">
+          <div class="logo" id="logoImagem">
+              <a href="https://fapex.org.br:443/Fapex/Site" accesskey="h"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/pessoaJuridica/3a5082fbf2cb8a7e4f208a461f5b524c.png" alt=""></a>
+          </div>            
+        </div>
+		<div style="padding-top:5px;float:right;text-align:right; margin-right:10px;font-weight:bold;font-size:8pt;color:#27408B;">
+			<a accesskey="p" href="https://master.fapex.org.br/portaltransparencia/emendas.aspx" target="_blank">EMENDAS PARLAMENTARES</a> |
+			<a accesskey="a" href="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--">ACESSIBILIDADE</a> | 
+			<a accesskey="c" href="#altocontraste" id="altocontraste" onclick="window.toggleContrast()">ALTO CONTRASTE</a>
+		</div>
+        <input type="hidden" name="fingerprintCurrent">
+        <div class="container" id="lnksImgs"  style="padding-top:2.5%;">
+            <ul id="linksCabecalho"> 
+                    
+                        <li>
+							<a href="https://master.fapex.org.br/sapro/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/f06741218e2a823b04c62d1d43e897d9.png" alt="ACOMPANHAMENTO DE PROJETOS" style="width:60px;height:45px;" title="ACOMPANHAMENTO DE PROJETOS" class="linksUteis"></a>
+						</li>
+                    
+                        <li>
+							<a href="https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/b80dc7521637dd66b6840ad394e11026.png" alt="WEBMAIL" style="width:60px;height:45px;" title="WEBMAIL" class="linksUteis"></a>
+						</li>
+                    
+            </ul>  
+        </div>            
+        <!-- fim logo -->
+
+        <!-- menu -->
+            <style>
+#nav ul li:active
+{
+	background-color:#6CA6CD !important;
+}
+#nav ul li a:active
+{
+	background-color:#6CA6CD !important;
+}
+.mn-1
+{
+    display:block;
+    width:100%;
+    text-align:center;	
+}
+</style>
+<div class="row-fluid">
+    <div class="span12" style="padding-top:2%;padding-left:4px;">
+         <nav id="nav" role="navigation" class="menu-h">
+                <ul class="clearfix menuSite">
+                    <li id="li-institucional">
+						<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional" title="Institucional" id="mn-1" class="mn-1">Quem Somos</a>
+						<div class="dropdown" style="display:none;">
+						  <div class="dropdown-content">
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional" accesskey="0">A FAPEX</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade">Identidade</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo">Estrutura</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN">Documentos</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos">Contatos</a>
+							<a href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html">FAQ</a>
+						  </div>
+						</div>
+					</li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index" title="" id="mn-2" accesskey="1">Coordenador</a></li>
+                    <li><a href="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--" title="" id="mn-4">Credenciamento</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index" title="Notícias" id="mn-3" accesskey="2">Notícias</a></li>                  
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/index" title="" id="mn-5" accesskey="3">Editais</a></li>  
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao" title="Legislação" id="mn-6">Legislação</a></li>
+                    <li><a href="https://master.fapex.org.br/portaltransparencia/" title="Transparência" target="_blank" id="mn-7" accesskey="4">Transparência</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index" title="Licitação" target="_blank" id="mn-9">Licitação</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria" title="Ouvidoria" id="mn-8">Ouvidoria</a></li>
+               </ul>
+        </nav>
+    </div> 
+</div> 
+<style>
+    .menu-h-li a:hover{ color: #FF0000; }
+</style>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js"></script>
+<script>
+jQuery(document).ready(function()
+{
+	var urlCurrent = window.location.href;
+	var urlBase = urlCurrent;
+	var uc = urlCurrent.split('/');
+	if(uc.length > 6)
+	{
+		var hsh = uc[7].indexOf("#");
+		var lurl = uc[7];
+		
+		if(hsh > 0)
+		{
+			lurl = lurl.substr(0,hsh);
+		}
+		urlBase = uc[0]+'/'+uc[1]+'/'+uc[2]+'/'+uc[3]+'/'+uc[4]+'/'+uc[5]+'/'+uc[6]+'/'+lurl;
+		var urlV = 'https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional';
+	}
+	console.log(urlV,urlBase);
+	if(urlV == urlBase)
+	{
+		var mn1 = jQuery('#mn-1').clone().removeClass('mn-1');
+		jQuery('body').remove('dropdown');
+		jQuery('#li-institucional').empty().append(mn1);
+		console.log('ok 2');
+		//jQuery('body').removeClass('dropdown-content');
+	}
+	
+	jQuery('#li-institucional').hover(function()
+	{
+		console.log('hovered in!');
+		jQuery('.dropdown').show(200);
+	},function()
+	{
+		console.log('hovered out!');
+		jQuery('.dropdown').hide(200);
+	});
+});  	
+jQuery(document).ready(function()
+{
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+    {
+      jQuery('.menu-h').removeAttr('id');  
+      jQuery('.menu-h ul').css({
+          'list-style-type':'none',
+          'color': '#27408B'
+      });
+      jQuery('.menu-h ul li').hover(function(){
+          jQuery(this).addClass('menu-h-li');
+      });    
+    }
+});    
+
+jQuery(document).ready(function()
+{
+    jQuery('a').on('click',function()
+    {
+        var hrf = jQuery(this).attr('href');
+       // console.log(hrf);
+        if(typeof hrf != 'undefined')
+        {
+            localStorage.removeItem(hrf);
+            localStorage.setItem(jQuery(this).attr('id'),hrf);
+        }
+    });
+});
+
+var pages = {'Edital':'mn-5','Noticia':'mn-3','Projeto':'mn-4','Coordenador':'mn-2','Fundacao':'mn-6','legislacao':'mn-6','institucional':'mn-1','index#atuacao':'mn-1','index#historico':'mn-1','index#deliberativo':'mn-1','index#fiscal':'mn-1','index#setores':'mn-1','index#nrqN':'mn-1','index#nrqO':'mn-1','index#nrqP':'mn-1','index#nrqA':'mn-1','index#contato':'mn-1','ouvidoria':'mn-8'};
+
+jQuery(window).on('load', function() 
+{
+        var k = null;
+        var k2 = null;
+    
+        var url = window.location.href;
+         
+        var sp = url.split('/');
+    
+        if(typeof sp[7] != 'undefined')
+        {
+             if(sp[7] in pages)
+             { 
+                k = pages[sp[7]];
+             }  
+        }
+        
+        
+        if(typeof sp[6] != 'undefined')
+        {   
+             if(sp[6] in pages)
+             { 
+                k2 = pages[sp[6]];
+             }
+        }
+        console.log(k,k2,sp);
+        if(k != null)
+        {
+            jQuery('#'+k).css({'background-color':'#6CA6CD'});
+        }
+        else if(k2 != null)
+        {
+            jQuery('#'+k2).css({'background-color':'#6CA6CD'});
+        }
+});
+</script>
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width:520px;
+    height:37px;
+    padding:0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content 
+{
+    position: absolute;
+    min-width: 590px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a 
+{
+    padding: 9px 17px 9px 18px;
+    text-decoration: none;
+    display: block;
+    color:#273E74 !important;
+    height:23px;
+    float:left;
+    margin-right:1px !important;
+    background-color:#E4E4E4;
+}
+.dropdown-content:active 
+{
+   background-color:#273E74 !important;
+}
+.dropdown-content a:active 
+{
+   background-color:#273E74 !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #6CA6CD;height:20px;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+
+
+        <!-- fim menu -->
+        </div>   
+  </div> 
+    <div class="container">
+            <!-- slider -->
+                
+            <!-- fim slider -->
+    </div>
+</header> 
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js"></script>
+
+<style>
+    #linksCabecalho
+    {
+        float:right;
+        height:47px;
+        text-align:left;
+        list-style-type:none;
+    }
+    #linksCabecalho li
+    {
+        float:left;
+        border:1px dotted #8DB6CD;
+        height:47px;
+    } 
+    #linksCabecalho img
+    {
+        height:47px;
+    } 
+    
+    #linksCabecalho a
+    {
+        display:inline-block;
+        height:47px;
+    }     
+    .clear-both-left
+    {
+        clear:both;
+        float:left;
+    }
+    .clear-both-right
+    {
+        clear:both;
+        float:right;
+    }   
+    .tituloHome
+    {
+        color:#444444;
+        font-size:18px;
+        font-weight:bold;
+        text-align:left;
+    }
+	
+	.vpw-settings-btn-close { height:28px !important; width:28px !important;}
+	.vpw-component-play { height:20px !important; width:24px !important;}
+	.vpw-component-pause { height:15px !important; width:23px !important;}
+	.vpw-component-restart { height:34px !important; width:33px !important;}
+</style>
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/jquery-ui-1.10.3.custom.min.css"/>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js"></script>
+        
+<script>
+  jQuery(function() 
+  {         
+         /*   var fingerPrint = new Fingerprint2();
+
+            fingerPrint.get(function (result, components) 
+            {
+                jQuery('input[name="fingerprintCurrent"]').val(result);
+
+            }); 
+        
+            var result = jQuery('input[name="fingerprintCurrent"]').val();
+
+            var s = localStorage.getItem(result);
+            //execute para limpar e depois comente
+         // localStorage.removeItem(result);
+            if(s == null)
+            {
+                jQuery('#linksCabecalho').find('div').remove('.tooltip');
+                
+                localStorage.setItem(result,jQuery('#linksCabecalho').parent().html());             
+            }
+            
+            if(s != null )
+            {
+					var prevC = jQuery(s).find('li').length;
+					var currentC = jQuery('#linksCabecalho').find('li').length;
+					
+					if(prevC != currentC)
+					{
+						localStorage.setItem(result,jQuery('#linksCabecalho').parent().html());  
+					}
+			}
+          //  console.log(jQuery(s).find('li').length);
+            
+            s = localStorage.getItem(result);
+            
+            jQuery('#lnksImgs').empty().append(s).show();
+            jQuery('#linksCabecalho').show();
+
+            jQuery( "#linksCabecalho" ).sortable
+            ({
+                revert: true,
+                scroll: false,
+                stop: function (event, ui) 
+                {
+                    jQuery('#linksCabecalho').find('div').remove('.tooltip');
+                    
+                    
+                    localStorage.setItem(result,jQuery('#linksCabecalho').parent().html()); 
+                }             
+            }); 
+            
+             jQuery('.linksUteis').tooltip();
+            //localStorage.removeItem(result);
+           // jQuery('.linksUteis').tooltip();*/
+            jQuery('.linksUteis').tooltip();
+            jQuery( "#linksCabecalho" ).disableSelection();   
+  });
+  </script>
+
+        <!--End Header-->
+        
+         <!-- content -->
+         <div>
+            <div id="content" style="background-color:#FFFFFF;">
+                <div class="container"> 
+                    
+                      <div class="HarpNotify">
+                          <div class="hidden">
+                              <div class="bg"></div>
+                              <div class="n-icon"></div>
+                              <p></p>
+                              <span></span>
+                          </div>
+                      </div>
+                                        
+                    <style>
+    #redesSociais
+    {
+        width:98%;
+        height:auto;
+        float:left;
+    }
+</style>
+  
+<!-- Content -->
+      <div class="row">
+        <div id="spanGroup" class="span8">
+                <span style="float:left;display:block;text-align:justify;font-size:14px;font-family:Arial,'Trebuchet MS';">
+                    <h3 style="color: #333;font-weight:bold;font-size:1.5rem;letter-spacing:-0.06rem;margin:0;">
+                        <p style="font-size:0.8rem;line-height:1.2;text-transform:initial;color:#27408B;font-weight:initial;margin:0;background-color:#EEEEEE;padding:4px;">DATA DE LANÇAMENTO : 30/04/2026 13:19:53</p>               
+                        <p>Seleção de Bolsistas para o Projeto MAIS GESTÃO Bahia: promoção e fortalecimento das organizações da agricultura familiar dos Povos e Comunidades Tradicionais (associações/ cooperativas) para comercialização e acesso aos mercados do Estado da Bahia</p>
+                        <p style="font-size:1rem;line-height:1.2;text-transform:initial;color:#999999;font-weight:initial;margin:0;">A UFRB, por intermédio da FAPEX e do CETENS, torna pública a Seleção de Bolsistas para atuação no referido projeto.</p>
+                    </h3>
+                    <div id="redesSociais">
+                        
+                                <div style="display:inline-block;float:left;vertical-align: baseline !important;margin-right:0.5em;text-align:right;float:right;">    
+                                    
+                                </div>
+                        
+                    </div>                    
+                    <hr style="background-color:#AAAAAA;margin-top:5px;"/>
+                    <div id="imagensEditais" style="text-align:center; margin-bottom:10px;">
+                        <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/7d84d7b417b9cbcdf60c70fef215f764.png" alt="" style="width:570px; height:220px;">
+                           
+                                
+                         
+                    </div>
+                    <p>A Universidade Federal do Rec&ocirc;ncavo da Bahia - UFRB, por interm&eacute;dio da Funda&ccedil;&atilde;o de Apoio &agrave; Pesquisa e &agrave; Extens&atilde;o e do Centro de Ci&ecirc;ncia e Tecnologia em Energia e Sustentabilidade &ndash; CETENS, torna p&uacute;blica a chamada para a Sele&ccedil;&atilde;o de Bolsistas de Est&aacute;gio de N&iacute;vel M&eacute;dio e Superior para atua&ccedil;&atilde;o no Projeto &ldquo;MAIS GEST&Atilde;O Bahia: promo&ccedil;&atilde;o e fortalecimento das organiza&ccedil;&otilde;es da agricultura familiar dos Povos e Comunidades Tradicionais (associa&ccedil;&otilde;es/ cooperativas) para comercializa&ccedil;&atilde;o e acesso aos mercados do Estado da Bahia&rdquo;.</p>
+                </span>           
+        </div>   
+        <span id="aEditais">  
+            <div class="span4">
+                    <span style="float:left;display:block;text-align:justify;font-size:14px;font-family:Arial,'Trebuchet MS';width:100%;">
+                        <h3 style="color: #333;font-weight:bold;font-size:1.5rem;letter-spacing:-0.06rem;margin:0;">
+                            <p style="font-size:0.8rem;line-height:1.2;text-transform:initial;color:#27408B;font-weight:initial;margin:0;background-color:#EEEEEE;padding:4px;">ARQUIVOS</p>               
+                        </h3>
+                        <ul class="w3-ul" style="width:100%;">
+                              
+                                  <li style="text-align:left;">
+                                      <a href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp69fb6a759c883_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf" target="_blank" style="height:34px;">
+                                          <p class="cp" style="width:90%;">
+                                             ABERTURA E INSCRIÇÕES
+                                          </p>
+                                          <p class="cp" style="width:10%;">
+                                           <i class="material-icons" style="background-color:#27408B;color:#FFFFFF;"></i>
+                                          </p>
+                                          <hr style="background-color:#AAAAAA;margin-top:5px;"/>
+                                      </a>
+                                  </li>   
+                              
+                                  <li style="text-align:left;">
+                                      <a href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/arquivos/pdf/editais/tmp69fb6b2d31462_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf" target="_blank" style="height:34px;">
+                                          <p class="cp" style="width:90%;">
+                                             RETIFICAÇÃO 01
+                                          </p>
+                                          <p class="cp" style="width:10%;">
+                                           <i class="material-icons" style="background-color:#27408B;color:#FFFFFF;"></i>
+                                          </p>
+                                          <hr style="background-color:#AAAAAA;margin-top:5px;"/>
+                                      </a>
+                                  </li>   
+                                  
+                          </ul>
+                    </span> 
+            </div>   
+        </span>    
+       <div class="row">
+		   <div class="span3" style="float:right;">
+			   <a class="w3-button w3-blue" style="float:right;padding:10px;cursor:pointer;" href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/index">RETORNAR PARA EDITAIS</a>
+		   </div>
+                   <div class="span1 links-edicao" style="display:none;float:right;">
+                            <a class="w3-button w3-red" target="_blank" style="float:right;padding:10px;cursor:pointer;font-size:11px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Edital/editar/id/nr2N">EDITAR</a>
+                   </div>  
+       </div>
+        <div class="row space50"></div>  
+       </div>
+  <!-- Content End -->
+<div id="noticias-importantes">
+    
+</div>
+<!--fim notícias importanes-->
+<div class="row space20"></div>
+ 
+<style>
+    .cp 
+    {  
+      height:auto;
+      text-align:justify;
+      float:left;
+      display:inline-block;
+      padding:0;
+      font-size:14px;
+      color:#142859;
+      
+    }
+    .w3-ul li:hover
+    {
+        font-weight:bold;
+    }
+    .titulo-4
+    {
+        margin:4px;
+    }  
+    a:hover
+    {
+        color:#FF0000;
+    }
+</style>     
+
+                </div>
+            </div>
+         </div>    
+         <!-- fim content -->
+         <!--Footer-->
+            <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js"></script>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js"></script>        
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js"></script>
+<!-- Footer -->
+    <div class="enviarMensagemLoader" style="width:300px;">    
+        <div class="w3-row w3-right-align">
+                 <div class="div-container-loader w3-right w3-col s12"></div>
+        </div>        
+    </div>  
+
+<style>
+    .overlay {
+background:transparent;
+position:relative;
+width:640px; /* your iframe width */
+height:480px; /* your iframe height */
+top:480px; /* your iframe height */
+margin-top:-480px; /* your iframe height */
+}
+</style>
+
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+        <a name="contato" accesskey="5" href="#footer"></a> 
+            
+<!--            <div class="span5">  -->
+            <h3>FALE CONOSCO</h3>
+                <div>         
+                    <form action="https://fapex.org.br:443/Fapex/Site/Principal/Contato/enviar" method="post" id="form-contato">
+                      <input name="Contato[nome]" value="" id="name" type="text" data-validetta="required,minLength[8],regExp[nome]"  data-vd-message-required="Nome deve ser informado!" data-vd-message-minlength="Nome muito curto informe pelo menos 8 caractéres!" placeholder="Nome"  style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;">
+                      <input  name="Contato[email]" value="" id="email" type="text" data-validetta="required,email"  data-vd-message-required="E-Mail deve ser informado!" data-vd-message-email="O E-Mail informado é inválido!" placeholder="E-Mail"  style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;" class="email">
+                      <input  name="Contato[telefone]" value="" id="telefone" type="text" placeholder="Telefone" data-validetta="required,regExp[telefone]"  data-vd-message-required="Telefone deve ser informado!" style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;" class="phone">
+                          <select  name="Contato[idEstruturaLogica]" data-validetta="required"  data-vd-message-required="Selecione o setor de destino para sua mensagem!" style="background-color:#464646;color:#FFFFFF;height:50px;width:103%;border:none;">
+                            <option value="">SELECIONE UM SETOR</option>
+                            
+                                <option value="lA--">DIRETORIA EXECUTIVA (DIREX)</option>
+                            
+                                <option value="nb8-">SUPERINTENDÊNCIA (SUPER)</option>
+                            
+                                <option value="nbw-">ASSESSORIA JURÍDICA (ASJUR)</option>
+                            
+                                <option value="nb4-">ASSESSORIA DE COMUNICAÇÃO (ASCOM)</option>
+                            
+                                <option value="nb0-">ASSESSORIA DE SAÚDE OCUPACIONAL E SEGURANÇA DO TRABALHO (ASOST)</option>
+                            
+                                <option value="lQ--">ASSESSORIA DE TECNOLOGIA DA INFORMAÇÃO (ASTIN)</option>
+                            
+                                <option value="nro-">COORDENAÇÃO DE COMPRAS E SERVIÇOS</option>
+                            
+                                <option value="nbc-">GERÊNCIA ADMINISTRATIVA (GERAD)</option>
+                            
+                                <option value="nrs-">COORDENAÇÃO DE RH (COORH)</option>
+                            
+                                <option value="nbY-">COORDENAÇÃO DE LOGÍSTICA (COLOG)</option>
+                            
+                                <option value="nrc-">COORDENAÇÃO DE LICITAÇÃO E CONTRATOS</option>
+                            
+                                <option value="nrk-">GERÊNCIA FINANCEIRA (GEFIN)</option>
+                            
+                                <option value="nbs-">COORDENAÇÃO DE PESSOAL (COOPE)</option>
+                            
+                                <option value="nr0-">COORDENAÇÃO DE CONTABILIDADE (CCONT)</option>
+                            
+                                <option value="nr8-">COORDENAÇÃO DE PRESTAÇÃO DE CONTAS (CPCON)</option>
+                            
+                                <option value="nr4-">COORDENAÇÃO FINANCEIRA (COFIN)</option>
+                            
+                                <option value="nbo-">GERÊNCIA DE PROJETOS (GEPRO)</option>
+                            
+                          </select>
+                      <textarea  name="Contato[mensagem]" id="message" data-validetta="required,minLength[8]"  data-vd-message-required="Mensagem deve ser informada!" data-vd-message-minlength="Mensagem muito curta informe pelo menos 8 caractéres!" placeholder="Mensagem" style="background-color:#464646;color:#FFFFFF;height:100px;width:100%;border:none;resize:none;"></textarea><br>
+                      <textarea name="Contato[mensagemNaoPreenchida]"></textarea>
+                      <input type="hidden" name="Contato[tempoDeEspera]" value="">
+                      <div class="g-recaptcha" data-sitekey="6Lcha1EUAAAAAJrNEm3pE7P5L8uhZ-Kvwx8wyBQN" data-callback="recaptchaCallback"></div>
+                      
+                      <button type="submit" class="btn f-right" id="enviarMensagem" disabled>ENVIAR<i class="icon-ok"></i></button>
+                      <script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
+                      <script>
+						function recaptchaCallback() 
+						{
+								jQuery('#enviarMensagem').removeAttr('disabled');
+						};
+                      </script>
+                    </form>
+                </div>              
+            </div>    
+            <div class="span4">
+                 <h3>MAPA</h3>
+                  <div style="border:none;">  	  
+                    <iframe
+                    width="100%" 
+                    height="370" 
+                    frameborder="0" 
+                    style="border:none;"
+                    pointer-events:none
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQ1y-wSKeN8qckR9sQ4LR_hp7k2SxfzWs
+                      &q=FAPEX,Salvador+Pituba+BA" allowfullscreen>
+                  </iframe> 
+                  </div>                 
+            </div>            
+            <div class="span4">
+                        
+                      
+                            <h3>ENDEREÇO</h3>
+                            Rua Professor Edgard Mata, Nº 001, Ondina, 
+                            
+                            <br/>CEP: 40.170-140<br/>Salvador - BA<br/><br/>
+                            <i class="icon-phone"></i>+55(71) 3183-8400<br/>
+                            <i class="icon-envelope"></i>
+                            <a href="mailto:contato@fapex.org.br">contato@fapex.org.br</a><br/>
+                            <i class="icon-home"></i><a href="#">http://www.fapex.org.br</a><br/>
+                            <i class="icon-book" style="color:#273E74;"></i><a href="#" style="color:#273E74;">14.645.162/0001-91</a>
+                            <div class="row space40"></div>    
+                    
+            <div style="height:100px; float:left;">
+            <script language="JavaScript" src="https://dunsregistered.dnb.com" type="text/javascript"></script>
+            </div>
+			<div style="height:100px; float:left; margin-left:20px;">
+			<a href="https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil" target="_blank"><img src="https://www.fapex.org.br:443/Fapex/Harp/sys/web/pub/img/selo-empresa-color.png" style="width:180px;" /></a>
+			</div>
+<div class="clear"></div>			
+                   <div style="height:50px;width:215px;position: relative;">
+                       <span style="position: absolute;bottom: 0;right: 0;font-size:11px;">Última atualização: 22/07/2026 09:57</span>
+                   </div>
+            </div> 
+            
+<!--        </div>-->
+
+
+      </div>
+<!--      <div class="row">
+          <div clas="span12" style="float:right;">
+                <div id="redesSciais">
+                    
+                        <a href="" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/redesSociais/" alt="" style="width:32px;height:32px;"></a>
+                    
+                </div>
+          </div>
+      </div>-->
+      <div class="row space50"></div>
+      <div class="row">
+        <div class="span6">
+          <div class="logo-footer">
+              <a href="http://www.computacaobrasil.com.br" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/logo_cb_rodape_branca.png" style="width:208px;height:65px;"/></a>
+          </div>                       
+        </div>
+        <div class="span6 right">
+          © 2026. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+</div>
+	
+  </footer>
+  
+  <style>
+      textarea[name="Contato[mensagemNaoPreenchida]"]
+      {
+          display:none;
+      }
+  </style>
+<script language="javascript" type="text/javascript">
+//   jQuery('#enviarMensagem').click(function()
+//   {
+//        scrollToTop('.enviarMensagemLoader');
+//   });
+   // loaderGif('#enviarMensagem','140px','137px',true);
+    var tempoEspera = jQuery('input[name="Contato\[tempoDeEspera\]"]').val();
+    //console.log(tempoEspera);
+    if(tempoEspera > 0)
+    {
+        jQuery('#enviarMensagem').prop('disabled',true);
+        window.setTimeout(function(){jQuery('#enviarMensagem').prop('disabled',false);},(parseInt(tempoEspera) * 100000));
+    }
+    jQuery(document).ready(function()
+    {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+        {
+          jQuery('#form-contato input').css({'width':(parseInt(window.innerWidth) - 32)+'px'});
+          jQuery('#form-contato select').css({'width':(parseInt(window.innerWidth) - 20)+'px'});
+          jQuery('#form-contato textarea').css({'width':(parseInt(window.innerWidth) - 32)+'px'});
+          
+     //     jQuery('#linksCabecalho').css({'float':'left'});
+        }
+    });      
+</script>
+<!--<link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jquery-validation-1.16.0/demo/css/screen.css"/> -->
+<link rel="stylesheet" type="text/css" media="screen" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.min.css"/>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js"></script>        
+<script type="text/javascript">
+jQuery('#form-contato').validetta
+({
+    validators: {
+        regExp: {
+            nome : {
+                pattern :  /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
+                errorMessage : 'Nome inválido números e alguns caractéres especiais não são válidos!'
+            },
+            telefone:
+            {
+                pattern : /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4,}))$/,
+                errorMessage : 'Telefone inválido!'
+            }
+        }
+    },    
+    onValid : function() 
+    {
+        scrollToTop('.enviarMensagemLoader');
+    },
+    onError : function( event )
+    {
+        event.preventDefault();  
+    }
+});
+</script>
+  <!-- Footer End -->
+ 
+  
+
+         <!--fim Footer-->
+        </div>
+		<div vw class="enabled">
+		<div vw-access-button class="active"></div>
+		<div vw-plugin-wrapper>
+		  <div class="vw-plugin-top-wrapper"></div>
+		</div>
+		</div>
+		  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		  <script>
+			new window.VLibras.Widget('https://vlibras.gov.br/app');
+		  </script>
+   </body> 
+</html>
+<!-- JavaScripts -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150104269-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150104269-1');
+</script>
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/functions.js"></script>
+<script type="text/javascript" defer src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/jquery.flexslider.js"></script>
+<script>
+    jQuery(document).ready(function()
+    {
+        var currentPage = jQuery('input[name="paginacao\[currentPage\]"]').val();
+        
+        jQuery('#page-'+currentPage).css({'background-color':'#132959','color':'#FFFFFF'});
+        var urlBase = 'https://fapex.org.br:443/Fapex/GerenciadorSite/Autenticacao/AutenticacaoUsuario/hasAuth';
+
+        jQuery.ajax({
+            'url':urlBase,
+            'async':true,
+            'method':'POST',
+            'dataType': 'json',
+            success:function(result)
+            {
+              
+                if(result.session == 1)
+                {  console.log(result);
+                    if(jQuery('.links-edicao').length > 0)
+                    {
+                       jQuery('.links-edicao').show(); 
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+
+           
+

@@ -1,0 +1,3667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADM&amp;TEC</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<meta content="ADM&amp;TEC" name="autor"/>
+<meta content="" property="og:url"/>
+<meta content="ADM&amp;TEC" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="ADM&amp;TEC" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="496033650515078" property="fb:app_id"/>
+<meta content="index, follow" name="robots"/>
+<link href="//cdn.admtec.org.br//css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/style-metronic.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/style.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/style-responsive.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/profile.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/red.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/styleMorki.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/material-scrolltop.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/style.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.admtec.org.br//css/sistema_mh.css" rel="stylesheet" type="text/css"/>
+<link href="https://admtec.org.br/asset/css/feather.css" rel="stylesheet" type="text/css"/>
+<link href="//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" type="text/css"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WMEYPMQT2F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMEYPMQT2F');
+</script>
+<link href="//cdn.admtec.org.br//img/icone.png" rel="shortcut icon" type="image/x-icon"/>
+<script src="https://www.google.com/recaptcha/api.js?render=6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn"></script>
+<script src="//cdn.admtec.org.br//js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery-migrate-1.2.1.min.js" type="text/javascript">
+</script><script src="//cdn.admtec.org.br//js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/material-scrolltop.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/myscriptfirst.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://admtec.org.br/js/cadastros.js"></script>
+<script crossorigin="anonymous" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" referrerpolicy="no-referrer" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--[if lt IE 9]>
+<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet"/>
+<script type="text/javascript">
+    var Site_atual='https://admtec.org.br/';
+function Inicio(pagina)
+{
+
+location.href=pagina ;
+}
+function nova_pagina(pagina){
+    window.open(""+pagina+"");	
+}
+function voltar(){
+window.history.go(-1);
+}
+ $(document).ready(function()
+    {
+        $("#login_sistema").validate({
+            rules: {
+               
+                reCaptcha: {
+                    reCaptchaMethod: true   
+                }
+            },
+            messages: {
+                cpf_candidato_login: "Informe o CPF",
+                senha_candidato_login: "Informe a senha"
+            },
+            submitHandler: function(form) 
+                {
+                    Swal_aguarde('Realizando Login');
+
+                var formData =  new FormData(jQuery('#login_sistema')[0]);
+                $.ajax({
+                    url: 'https://admtec.org.br/usuario/verifica_login',
+                    type: 'POST',
+                    data: formData,
+                    success: function(data) 
+                        {
+                            console.log(data);
+                            Swal.close();
+                            var data=JSON.parse(data);
+                            
+                             //$('#Modal').modal('hide');
+                            Swal.fire({
+                                title: data.mensagem,
+                                icon: data.status,
+                                confirmButtonText: "OK",  
+                                timer: 3000,
+                                showConfirmButton: true,
+                                }).then((result) => {
+                                    if(data.status=='error')
+                                        {
+                                            if(data.redireciona==true)
+                                                location.href='https://admtec.org.br/usuario/cadastrar//';
+                                            return false;
+                                        }
+                                    window.location.reload(true);
+
+
+                                    });
+                        },
+                error: function (request, status, error) {
+                alert(request.responseText);
+                console.log(request.responseText);
+                 Swal.close();
+            },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    xhr: function() 
+                        { // Custom XMLHttpRequest
+                            var myXhr = $.ajaxSettings.xhr();
+                            if (myXhr.upload)
+                                { // Avalia se tem suporte a propriedade upload
+                                    myXhr.upload.addEventListener('progress', function(evt) {
+                                    if (evt.lengthComputable) 
+                                        {
+                                            var percentComplete = evt.loaded / evt.total;
+                                            percentComplete = parseInt(percentComplete * 100);
+                                            $('#progress_bar_upload').attr('aria-valuenow', percentComplete).css('width', percentComplete+'%');                                
+                                        }
+
+                                    }, false);
+                                }
+                            return myXhr;
+                        }
+                    });
+                      
+     
+        }
+    });
+});
+
+</script>
+<style>
+     #icone_login:hover{
+            color:#990000 !important;
+        }
+    .modal-dialog-centered {
+     display: -webkit-box; 
+    display: -ms-flexbox;
+     display: flex; 
+     -webkit-box-align: center; 
+    -ms-flex-align: center;
+     align-items: center; 
+     min-height: calc(100% - (0.5rem * 2));
+    }
+</style>
+</head>
+<body class="page-header-fixed">
+<div id="div_cadastro"></div>
+<div class="modal fade c-content-login-form" id="login-div" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content c-square">
+<div class="modal-body">
+<div class="modal-header c-no-border">
+<h3 class="c-font-24 c-font-sbold">Seja bem-vindo!</h3>
+<p>Por favor, informe o seu CPF e a sua senha para acessar a área do candidato</p>
+<button aria-label="Close" class="close" data-dismiss="modal" style="
+    position: absolute;
+    right: 15px;
+    top: 15px;
+" type="button"><span aria-hidden="true">×</span></button>
+</div>
+<form accept-charset="UTF-8" id="login_sistema" method="post" role="form">
+<div class="form-group">
+<input class="form-control" id="cpf_candidato_login_header" name="cpf_candidato" placeholder="CPF" required="required" size="15" type="text"/>
+<script type="text/javascript">$("#cpf_candidato_login_header").mask("999.999.999-99");</script>
+</div>
+<div class="form-group">
+<div id="aviso_caps_lock" style="visibility: hidden; color: #000;">CAPS LOCK ATIVADO</div>
+<input class="form-control" name="senha" onkeypress="checar_caps_lock(event)" placeholder="Senha" required="" type="password" value=""/>
+</div>
+<input class="btn btn-lg btn-primary btn-block" id="Bnt_candidato_login" name="Bnt_candidato_login_mvc" type="submit" value="Login"/>
+<div class="form-group" style="text-align: right">
+<a class="c-btn-forgot" href="https://admtec.org.br/login/esqueci_senha/" id="forget-password-a">Esqueceu sua senha?</a>
+</div>
+</form>
+</div>
+<!--                    <div class="modal-footer c-no-border">                
+                        <span class="c-text-account">Não tem uma conta ainda?</span>
+                        <a href="https://admtec.org.br/Dados_Pessoais" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-slim c-btn-border-1x c-btn-square c-btn-signup">Inscreva-se</a>
+                    </div>-->
+</div>
+</div>
+</div>
+<nav class="navbar navbar-default" id="main-nav">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".navbar-morki" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://admtec.org.br"><img src="//cdn.admtec.org.br//img/logo-nav.png" style="    max-width: 220px;"/></a>
+</div>
+<div class="collapse navbar-collapse navbar-morki">
+<ul class="nav navbar-nav navbar-left" id="nav-menu">
+<li><a data-scroll="" href="//admtec.org.br/concursos/">Concursos</a></li>
+<li><a href="//admtec.org.br/formacao/">Formação</a></li>
+<li><a href="https://api.whatsapp.com/send?phone=5581997690218"><i class="fa fa-phone-alt" style="font-size: 19px;"></i><span>(81) 99769-0218</span></a></li>
+<li class="mailme"><a href="/cdn-cgi/l/email-protection#a2c1cdccc1d7d0d1cdd1e2c3c6cfd6c7c18ccdd0c58cc0d0"><i class="fa fa-envelope social-footer"></i> <span><span class="__cf_email__" data-cfemail="0e6d61606d7b7c7d617d4e6f6a637a6b6d20617c69206c7c">[email protected]</span></span></a></li>
+<li class="dropdown notifications-menu">
+<a class="btn c-theme-btn c-btn-square c-btn-uppercase btn-danger" data-target="#login-div" data-toggle="modal" id="icone_login" onclick="onClick();javascript:setFocusField('login-form-cpf')" style="color:#FFF">
+                                            Área do Candidato   <i class="fa fa-user-circle" style="font-size: 19px;"></i>
+</a>
+</li>
+<!--<li class="dropdown notifications-menu ">-->
+<!--                                      <li class="dropdown notifications-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-bell-o" style="color:#990000 !important"></i>
+                                            <span class="label-notify label-warning">6</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="notification-header">Você tem 6 notificações</li>
+                                            <li>
+
+                                                <ul class="notification-itens">
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-campo-alegre-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Campo Alegre (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/fundo-municipal-de-saude-de-gloria-do-goita-pe">
+                                                                <i class="fa fa-pencil"></i> Fundo Municipal de Saúde de Glória do Goitá (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-sao-luiz-do-quitunde-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de São Luis do Quitunde (AL)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-aracoiaba-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Araçoiaba (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-santa-maria-da-boa-vista-pe">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Santa Maria da Boa Vista (PE)                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/prefeitura-de-palmeira-dos-indios-al">
+                                                                <i class="fa fa-pencil"></i> Prefeitura de Palmeira dos Índios (AL)                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                            </li>
+                                            <li class="notification-footer"><a href="/concursos">Ver todos</a></li>
+                                        </ul>
+                                    </li>
+							          -->
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<br/><br/>
+<div class="container">
+<div class="inner_section">
+<div class="row">
+<title>PREFEITURA MUNICIPAL DE IGUARACY - </title>
+<style>
+                .alert-secondary 
+                {
+                    color: #383d41;
+                    background-color: #e2e3e5;
+                    border-color: #d6d8db;
+                }
+            </style>
+<section class="" id="speakers">
+<div class="section-header mb-3" style="text-align: center;">
+<h2>PREFEITURA MUNICIPAL DE IGUARACY-PERNAMBUCO</h2>
+<p>
+<span class="px-2 mb-2" style="    font-size: 160%;
+                                color: #2742325c;">CONCURSO PÚBLICO -  
+                            </span>
+<br/>
+<br/>
+</p><div class="alert alert-info" role="alert" style="border-radius: 20px">
+<!DOCTYPE html>
+
+<p><span style="font-size: 14pt;"><strong>COMUNICADO</strong></span></p>
+<p>O Instituto ADM&amp;TEC informa a reaplicação das provas objetivas do Concurso Público de Iguaracy/PE para cargos de nível médio e técnico, realizadas à tarde em 15 de dezembro de 2024. A decisão cumpre recomendação do Ministério Público de Pernambuco (Procedimento nº 02251.000.460/2024) e Decreto Municipal nº 032/2025, que anulou parcialmente o certame nº 001/2024. As novas provas para os cargos de Agente Administrativo, Agente Comunitário de Saúde, Agente de Combate a Endemias, Auxiliar de Saúde Bucal, Guarda Municipal e Técnico em Radiologia ocorrerão em <span style="font-size: 12pt;"><strong>01 de fevereiro de 2026</strong></span>, com locais e horários a serem divulgados.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</div>
+</div>
+</section>
+<section class="section-with-bg pt-4" id="speakers">
+<div class="row">
+<div class="card col-sm-12 col-md-12 col-lg-3 mb-2">
+<div class="card-body" style="background: #ffff;border-radius: 15px;padding-top: 10px;padding-left: 5px;padding-right: 5px;">
+<div class="row justify-content-center">
+<div class="col-lg-12 text-center">
+<img class="img-thumbnail border-0" src="https://arquivo.admtec.org.br/logo/1724770457.jpg"/>
+</div>
+</div>
+<small class="py-2">
+<!DOCTYPE html>
+
+</small><p style="text-align: center;">Concurso público para provimento de vagas em cargos efetivos na <strong>Prefeitura Municipal de Iguaracy (PE).</strong></p>
+</div>
+</div>
+<div class="col-lg-9 card mx-2-md mb-2">
+<div class="card-body" style="background: #ffff;border-radius: 31px;padding: 11px 27px;">
+<div class="row">
+<div class="col-12 col-md-8">
+<h5 class="my-0">
+<div class="py-3">
+<small class="text-primary">Período de Inscrições:</small>
+<span class="d-block"> 
+                                                                                   29/10/2024 - 17:00:00 a 01/12/2024 - 23:59:59                                                </span>
+</div>
+</h5>
+</div>
+</div>
+<ul class="d-sm-flex nav nav-tabs card-title text-muted text-uppercase text-center mb-4" role="tablist">
+<li class="nav-item active">
+<a class="nav-link" data-toggle="tab" href="#tab0" role="tab">
+                                                  DOCUMENTOS
+                                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#tab1" role="tab">
+                                                  CARGOS DISPONÍVEIS
+                                                </a>
+</li>
+</ul>
+<div class="tab-content row">
+<div class="col tab-pane fade in active" id="tab0" role="tabpanel" style="    padding-top: 11px;
+            ">
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Edital e alterações
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/IGUARACY_EDITAL_DE_CONVOCACAO_CURSO2026_com_cronograma_2026_04_15_11_10_17.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Edital de Convocação (Curso de Formação)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/IGUARACY_EDITAL_DE_CONVOCACAO_CURSO2026_com_cronograma_2026_04_15_11_10_17.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/IGUA_EDITAL_DE_CONVOCACAO_TAF_2026_2026_03_20_09_26_31.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Edital de Convocação - Teste de Aptidão Física (Reaplicação)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/IGUA_EDITAL_DE_CONVOCACAO_TAF_2026_2026_03_20_09_26_31.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/11/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/20251110_IGUARACY_EDITAL_DE_CONVOCAC_A_O_2025_11_10_13_44_56.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Edital de Convocação  (Reaplicação das provas para os cargos de nível médio e técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/20251110_IGUARACY_EDITAL_DE_CONVOCAC_A_O_2025_11_10_13_44_56.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">12/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDITAL Retifica??o 3 - Iguaracy-PE - 1202 - Publicado_2025_02_12_10_13_01.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Edital do Concurso (Retificado em 12/02/2025)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDITAL Retifica??o 3 - Iguaracy-PE - 1202 - Publicado_2025_02_12_10_13_01.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Publicações oficiais
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">23/10/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AVISO_AOS_CANDIDATOS_01_2025_11_19_11_13_25.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AVISO AOS CANDIDATOS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AVISO_AOS_CANDIDATOS_01_2025_11_19_11_13_25.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">23/10/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DECRETO_032_2025_10_23_11_56_16.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Decreto 032 - Anulação dos Cargos de Nível Médio e Técnico                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DECRETO_032_2025_10_23_11_56_16.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">23/10/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DECRETO_031_2025_10_23_11_55_48.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Decreto 031 - Homologação Parcial do Concurso Público                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DECRETO_031_2025_10_23_11_55_48.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">23/10/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PORTARIA_534_2025_10_23_11_55_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Portaria 534 - Definição da comissão organizadora                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PORTARIA_534_2025_10_23_11_55_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">29/10/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Munic?pio de Iguaracy - edital_2024_10_29_16_52_56.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Diário Oficial - Publicação do edital                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Munic?pio de Iguaracy - edital_2024_10_29_16_52_56.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">29/10/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DO Comiss?o ConcursoMunic?pio de Iguaracy Publica??o AMUPE (1)_2024_10_29_16_49_43.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Portaria - Definição da comissão organizadora                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/DO Comiss?o ConcursoMunic?pio de Iguaracy Publica??o AMUPE (1)_2024_10_29_16_49_43.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">22/04/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICA??ES/1 Publica??o Munic?pio de Iguaracy - Extrato de Publica??o - AMUPE (1)_2024_08_27_14_50_10.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Diário Oficial - Contratação da organizadora                                                             </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICA??ES/1 Publica??o Munic?pio de Iguaracy - Extrato de Publica??o - AMUPE (1)_2024_08_27_14_50_10.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Resultados finais
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_05_11_10_28_31.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final Após o Curso de Formação - GUARDA MUNICIPAL (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_05_11_10_28_31.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_05_11_10_27_52.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final Após o Curso de Formação - GUARDA MUNICIPAL                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_05_11_10_27_52.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_05_11_10_26_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final Após o Curso de Formação - AGENTE DE COMBATE ÀS ENDEMIAS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_05_11_10_26_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_05_11_10_22_38.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final Após o Curso de Formação - AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF SANTA ANA)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_05_11_10_22_38.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_05_11_10_21_56.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final Após o Curso de Formação - AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF JABITACA)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_05_11_10_21_56.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_04_09_10_30_35.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                GUARDA MUNICIPAL (PCD) - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_04_09_10_30_35.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_04_09_10_29_38.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                GUARDA MUNICIPAL - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_04_09_10_29_38.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/TECNICO_EM_RADIOLOGIA_2026_04_09_09_07_23.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                TÉCNICO EM RADIOLOGIA - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/TECNICO_EM_RADIOLOGIA_2026_04_09_09_07_23.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR_DE_SAUDE_BUCAL_2026_04_09_09_06_16.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AUXILIAR DE SAÚDE BUCAL - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR_DE_SAUDE_BUCAL_2026_04_09_09_06_16.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_04_09_09_05_03.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE DE COMBATE ÀS ENDEMIAS - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_04_09_09_05_03.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_04_09_09_03_47.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF SANTA ANA) - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_04_09_09_03_47.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_04_09_09_02_35.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF JABITACA) - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_04_09_09_02_35.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_ADMINISTRATIVO_PCD_2026_04_09_09_00_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE ADMINISTRATIVO (PCD) - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_ADMINISTRATIVO_PCD_2026_04_09_09_00_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_ADMINISTRATIVO_2026_04_09_08_59_01.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE ADMINISTRATIVO - Resultado Final do Concurso                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_ADMINISTRATIVO_2026_04_09_08_59_01.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/01/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/r_f_PROFESSOR_ENSINO_FUNDAMENTAL_I_2026_01_27_12_15_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL I (150 H/A) (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/r_f_PROFESSOR_ENSINO_FUNDAMENTAL_I_2026_01_27_12_15_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA - PCD_2025_02_26_09_26_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – MATEMÁTICA (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA - PCD_2025_02_26_09_26_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2025_02_26_09_25_47.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – MATEMÁTICA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2025_02_26_09_25_47.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA - PCD_2025_02_26_09_25_06.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – LINGUA PORTUGUESA (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA - PCD_2025_02_26_09_25_06.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2025_02_26_09_24_33.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – LINGUA PORTUGUESA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2025_02_26_09_24_33.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGL?S_2025_02_26_09_23_52.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - INGLÊS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGL?S_2025_02_26_09_23_52.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2025_02_26_09_21_29.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - HISTÓRIA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2025_02_26_09_21_29.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2025_02_26_09_20_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - GEOGRAFIA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2025_02_26_09_20_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA - PCD_2025_02_26_09_19_15.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - EDUCAÇÃO FÍSICA (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA - PCD_2025_02_26_09_19_15.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2025_02_26_09_18_29.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - EDUCAÇÃO FÍSICA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2025_02_26_09_18_29.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS - PCD_2025_02_26_09_17_26.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - CIÊNCIAS (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS - PCD_2025_02_26_09_17_26.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2025_02_26_09_16_35.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - CIÊNCIAS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2025_02_26_09_16_35.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2025_02_26_09_15_05.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PROFESSOR ENSINO FUNDAMENTAL I (150 H/A)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2025_02_26_09_15_05.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PSIC?LOGO_2025_02_26_09_14_15.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - PSICÓLOGO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PSIC?LOGO_2025_02_26_09_14_15.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ODONT?LOGO_2025_02_26_09_13_37.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - ODONTÓLOGO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ODONT?LOGO_2025_02_26_09_13_37.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/NUTRICIONISTA_2025_02_26_09_12_44.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso -  NUTRICIONISTA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/NUTRICIONISTA_2025_02_26_09_12_44.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/M?DICO_2025_02_26_09_12_04.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - MÉDICO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/M?DICO_2025_02_26_09_12_04.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FISIOTERAPEUTA_2025_02_26_09_08_41.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - FISIOTERAPEUTA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FISIOTERAPEUTA_2025_02_26_09_08_41.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FARMAC?UTICO_2025_02_26_09_06_22.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - FARMACÊUTICO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FARMAC?UTICO_2025_02_26_09_06_22.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO - PCD_2025_02_26_09_05_30.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - EDUCADOR FÍSICO (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO - PCD_2025_02_26_09_05_30.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2025_02_26_09_03_54.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - EDUCADOR FÍSICO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2025_02_26_09_03_54.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ASSISTENTE SOCIAL_2025_02_26_09_02_42.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - ASSISTENTE SOCIAL                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ASSISTENTE SOCIAL_2025_02_26_09_02_42.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/COVEIRO_2025_02_25_16_44_02.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso – COVEIRO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/COVEIRO_2025_02_25_16_44_02.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA - PCD_2025_02_25_16_40_43.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso – MOTORISTA (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA - PCD_2025_02_25_16_40_43.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA_2025_02_25_16_39_56.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso – MOTORISTA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA_2025_02_25_16_39_56.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS - PCD_2025_02_25_16_37_58.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso -  AUXILIAR DE SERVIÇOS GERAIS (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS - PCD_2025_02_25_16_37_58.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS_2025_02_25_16_36_46.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso -  AUXILIAR DE SERVIÇOS GERAIS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS_2025_02_25_16_36_46.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL - PCD_2025_02_25_16_21_21.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - AGENTE DE LIMPEZA EDUCACIONAL (PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL - PCD_2025_02_25_16_21_21.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL_2025_02_25_16_20_39.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Concurso - AGENTE DE LIMPEZA EDUCACIONAL                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL_2025_02_25_16_20_39.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Avaliação de títulos
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA - PCD_2025_01_21_11_13_18.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – MATEMÁTICA - PCD                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA - PCD_2025_01_21_11_13_18.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2025_01_21_11_12_38.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – MATEMÁTICA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2025_01_21_11_12_38.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA - PCD_2025_01_21_11_11_12.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – LÍNGUA PORTUGUESA - PCD                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA - PCD_2025_01_21_11_11_12.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2025_01_21_11_09_47.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) – LÍNGUA PORTUGUESA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2025_01_21_11_09_47.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGL?S_2025_01_21_11_08_03.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - INGLÊS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGL?S_2025_01_21_11_08_03.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2025_01_21_11_07_07.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - HISTÓRIA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2025_01_21_11_07_07.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2025_01_21_11_04_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - GEOGRAFIA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2025_01_21_11_04_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA - PCD_2025_01_21_11_02_46.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - EDUCAÇÃO FÍSICA - PCD                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA - PCD_2025_01_21_11_02_46.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2025_01_21_11_01_48.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - EDUCAÇÃO FÍSICA                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2025_01_21_11_01_48.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS - PCD_2025_01_21_10_59_17.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - CIÊNCIAS - PCD                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS - PCD_2025_01_21_10_59_17.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2025_01_21_10_58_43.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL II (200 H/A) - CIÊNCIAS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2025_01_21_10_58_43.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I - PCD_2025_01_21_10_57_34.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL I (150 H/A) - PCD                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I - PCD_2025_01_21_10_57_34.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">31/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2025_01_21_10_56_53.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Prova de Títulos - PROFESSOR ENSINO FUNDAMENTAL I (150 H/A)                                                             </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2025_01_21_10_56_53.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Etapas de segunda fase
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RF_IGUA_TITULOS_2025_02_24_10_18_35.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final da Prova de Títulos (Todos os cargos de Professor)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RF_IGUA_TITULOS_2025_02_24_10_18_35.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">14/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RP_IGUA_TITULOS_2025_02_12_14_29_00.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar da Prova de Títulos  (Todos os cargos de Professor)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RP_IGUA_TITULOS_2025_02_12_14_29_00.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Avaliações objetivas
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Tecnico_em_Radiologia_2026_02_02_09_10_30.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                TÉCNICO RADIOLOGIA - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Tecnico_em_Radiologia_2026_02_02_09_10_30.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Guarda_Municipal_2026_02_02_09_09_53.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                GUARDA MUNICIPAL - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Guarda_Municipal_2026_02_02_09_09_53.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Auxiliar_de_Saude_Bucal_2026_02_02_09_09_12.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AUXILIAR DE SERVIÇOS BUCAL - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Auxiliar_de_Saude_Bucal_2026_02_02_09_09_12.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_de_Combate_a_Endemias_2026_02_02_09_08_15.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE DE COMBATE A ENDEMIAS - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_de_Combate_a_Endemias_2026_02_02_09_08_15.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_Comunitario_Saude_2026_02_02_09_06_59.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE COMUNITÁRIO DE SAÚDE - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_Comunitario_Saude_2026_02_02_09_06_59.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">02/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_Administrativo_2026_02_02_09_06_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE ADMINISTRATIVO - ( Provas realizadas dia 01/02/2026 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Agente_Administrativo_2026_02_02_09_06_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PSIC?LOGO_2024_12_18_09_48_55.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PSICÓLOGO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PSIC?LOGO_2024_12_18_09_48_55.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2024_12_18_09_48_02.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - MATEMÁTICA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - MATEM?TICA_2024_12_18_09_48_02.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2024_12_18_09_46_48.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - LÍNGUA PORTUGUESA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - L?NGUA PORTUGUESA_2024_12_18_09_46_48.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGLES_2024_12_18_09_43_11.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - INGLES ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - INGLES_2024_12_18_09_43_11.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2024_12_18_09_40_34.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - HISTÓRIA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - HIST?RIA_2024_12_18_09_40_34.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2024_12_18_09_39_11.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - GEOGRAFIA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - GEOGRAFIA_2024_12_18_09_39_11.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2024_12_18_09_31_51.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - EDUCAÇÃO FÍSICA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - EDUCA??O F?SICA_2024_12_18_09_31_51.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2024_12_18_09_28_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR FUNDAMENTAL II - CIÊNCIAS ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR FUNDAMENTAL II - CI?NCIAS_2024_12_18_09_28_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2024_12_18_09_27_01.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                PROFESSOR ENSINO FUNDAMENTAL I ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/PROFESSOR ENSINO FUNDAMENTAL I_2024_12_18_09_27_01.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ODONT?LOGO_2024_12_18_09_23_30.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                ODONTÓLOGO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ODONT?LOGO_2024_12_18_09_23_30.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/NUTRICIONISTA_2024_12_18_09_22_47.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                NUTRICIONISTA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/NUTRICIONISTA_2024_12_18_09_22_47.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/M?DICO_2024_12_18_09_21_48.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                MÉDICO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/M?DICO_2024_12_18_09_21_48.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FISIOTERAPEUTA_2024_12_18_09_20_54.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                FISIOTERAPEUTA ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FISIOTERAPEUTA_2024_12_18_09_20_54.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FARMAC?UTICO_2024_12_18_09_20_03.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                FARMACÊUTICO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/FARMAC?UTICO_2024_12_18_09_20_03.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2024_12_18_09_19_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                EDUCADOR FÍSICO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2024_12_18_09_19_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2024_12_18_09_19_09.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                EDUCADOR FÍSICO ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/EDUCADOR F?SICO_2024_12_18_09_19_09.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ASSISTENTE SOCIAL_2024_12_18_09_18_12.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                ASSISTENTE SOCIAL ( Provas realizadas dia 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/ASSISTENTE SOCIAL_2024_12_18_09_18_12.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA_2024_12_18_09_04_20.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                MOTORISTA (Provas realizadas dia 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/MOTORISTA_2024_12_18_09_04_20.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/COVEIRO_2024_12_18_09_02_27.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                COVEIRO (Provas realizadas dia 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/COVEIRO_2024_12_18_09_02_27.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS_2024_12_18_08_59_58.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AUXILIAR DE SERVIÇOS GERAIS (Provas realizadas dia 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AUXILIAR DE SERVI?OS GERAIS_2024_12_18_08_59_58.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL_2024_12_18_08_56_30.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                AGENTE DE LIMPEZA EDUCACIONAL ( Provas realizadas dia 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE DE LIMPEZA EDUCACIONAL_2024_12_18_08_56_30.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Gabarito das provas objetivas
+
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">24/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RECURSO_DO_GABARITO_PRELIMINAR_PROVAS_01_02_26_2026_02_24_10_04_31.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                RESPOSTAS AOS RECURSOS DO GABARITO PRELIMINAR (PROVAS REAPLICADAS DOS NÍVEIS MÉDIO E TÉCNICO EM 01/02/2026)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RECURSO_DO_GABARITO_PRELIMINAR_PROVAS_01_02_26_2026_02_24_10_04_31.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">24/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito_definitivo_Iguaracy_NOVA_APLICACAO_2026_02_24_10_00_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                GABARITO DEFINITIVO - REAPLICAÇÃO DAS PROVAS OBJETIVAS DOS NÍVEIS MÉDIO E TÉCNICO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito_definitivo_Iguaracy_NOVA_APLICACAO_2026_02_24_10_00_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">01/02/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito_preliminar_Iguaracy_NOVA_APLICACAO_2026_02_01_19_29_47.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                GABARITO PRELIMINAR - REAPLICAÇÃO DAS PROVAS OBJETIVAS DOS NÍVEIS MÉDIO E TÉCNICO                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito_preliminar_Iguaracy_NOVA_APLICACAO_2026_02_01_19_29_47.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito Definitivo Iguaracy_2025_01_10_16_54_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Gabarito Definitivo (Provas aplicadas em 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito Definitivo Iguaracy_2025_01_10_16_54_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">10/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RECURSO DEFINITIVO Iguaracy_2025_01_10_16_52_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Respostas aos recursos do gabarito preliminar (provas aplicadas em 15/12/2024)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RECURSO DEFINITIVO Iguaracy_2025_01_10_16_52_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">17/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito Preliminar Iguaracy CORRIGIDO_2024_12_17_17_43_19.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                 Retificação do Gabarito Preliminar (Provas aplicadas em 15/12/2024 )                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Gabarito Preliminar Iguaracy CORRIGIDO_2024_12_17_17_43_19.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Publicações
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_2026_05_11_10_15_39.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Respostas aos recursos do resultado preliminar do Curso de Formação                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_2026_05_11_10_15_39.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">09/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_TAF_iguaracy_2026_04_09_10_28_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos do resultado preliminar do teste de aptidão física (TAF)	                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_TAF_iguaracy_2026_04_09_10_28_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_obj_iguaracy_reap_2026_03_20_09_24_48.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos do resultado preliminar de notas (Reaplicação dos níveis médio e técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_obj_iguaracy_reap_2026_03_20_09_24_48.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_PCD_2026_03_20_09_22_34.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista final das notas - PCD (Reaplicação do Nível Médio e Técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_PCD_2026_03_20_09_22_34.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_2026_03_20_09_21_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista final das notas - Ampla Concorrência (Reaplicação do Nível Médio e Técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_2026_03_20_09_21_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_prel_pcd_2026_03_13_08_17_02.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista preliminar das notas - PCD (Reaplicação do Nível Médio e Técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_prel_pcd_2026_03_13_08_17_02.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_prel_2026_03_13_08_16_42.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista preliminar das notas - Ampla Concorrência (Reaplicação do Nível Médio e Técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/notas_prov_objetiva_reaplic_prel_2026_03_13_08_16_42.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">19/11/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/concorrencia_igua_reaplicacao_2025_11_19_11_29_28.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Concorrência por categoria profissional (Reaplicação das provas para os cargos de nível médio e técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/concorrencia_igua_reaplicacao_2025_11_19_11_29_28.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/11/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/alt_dados_iguaracy_reaplicacao_2025_11_18_09_17_50.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos da alteração de dados pessoais (Reaplicação dos níveis médio e técnico)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/alt_dados_iguaracy_reaplicacao_2025_11_18_09_17_50.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">27/02/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_tit_iguaracy_2025_02_24_10_19_24.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos do resultado preliminar da prova de títulos                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_tit_iguaracy_2025_02_24_10_19_24.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">30/01/2025</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_obj_iguaracy_2025_01_21_10_48_03.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos do resultado preliminar das notas da prova objetiva                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec_obj_iguaracy_2025_01_21_10_48_03.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">05/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/alt_dados_iguaracy_2024_12_05_10_08_21.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos da alteração de dados pessoais                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/alt_dados_iguaracy_2024_12_05_10_08_21.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">04/12/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Quantitativo dos candidatos por vaga (iguaracy)_2024_12_04_15_24_26.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Concorrência por categoria profissional                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/Quantitativo dos candidatos por vaga (iguaracy)_2024_12_04_15_24_26.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">25/11/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/recursos_rp_ISEN2_2025_01_10_09_46_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resposta aos recursos do resultado preliminar da solicitação de isenção da taxa de inscrição                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/recursos_rp_ISEN2_2025_01_10_09_46_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">25/11/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RF_ISEN??O_IGUARACY_2024_11_25_08_05_33.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado final da solicitação de isenção da taxa de inscrição                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/RF_ISEN??O_IGUARACY_2024_11_25_08_05_33.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">18/11/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/isen??o_iguaracy_2024_11_18_10_26_06.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado preliminar da solicitação de isenção da taxa de inscrição                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/isen??o_iguaracy_2024_11_18_10_26_06.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/11/2024</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec- IMPUG Iguaracy new_2024_11_15_16_07_02.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado dos recursos de impugnação do edital                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rec- IMPUG Iguaracy new_2024_11_15_16_07_02.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Teste de aptidão
+física
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">09/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_taf_igua_PCD_2026_04_09_10_31_02.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Teste de Aptidão Física - PCD (GUARDA MUNICIPAL)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_taf_igua_PCD_2026_04_09_10_31_02.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">09/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_taf_igua_AMPLA_2026_04_09_10_29_45.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Teste de Aptidão Física (GUARDA MUNICIPAL)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_taf_igua_AMPLA_2026_04_09_10_29_45.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">01/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_taf_igua_reap_pcd_2026_04_01_09_29_13.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar do Teste de Aptidão Física  - PCD (GUARDA MUNICIPAL)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_taf_igua_reap_pcd_2026_04_01_09_29_13.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">01/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_taf_igua_reap_2026_04_01_09_28_44.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar do Teste de Aptidão Física (GUARDA MUNICIPAL)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_taf_igua_reap_2026_04_01_09_28_44.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_03_20_09_28_31.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Teste de Aptidão Física - GUARDA MUNICIPAL - PCD (Reaplicação)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_PCD_2026_03_20_09_28_31.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">20/03/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_03_20_09_27_33.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de convocação - Teste de Aptidão Física - GUARDA MUNICIPAL (Reaplicação)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_MUNICIPAL_2026_03_20_09_27_33.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="" style="background: #e7e6e6;border-radius: 3px;height: 40px;">
+<h2 style="
+                                                        font-size: 16px;
+                                                        font-weight: bolder;
+                                                        color: #000;
+                                                        padding: 10px;
+                                                        text-transform: none;
+                                                ">Curso de Formação
+                                                </h2></div> <div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_GUARDA_2026_05_11_10_14_44.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Curso de Formação - GUARDA MUNICIPAL                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_GUARDA_2026_05_11_10_14_44.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_ACS_2026_05_11_10_14_00.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Curso de Formação - AGENTE COMUNITÁRIO DE SAÚDE - ACS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_ACS_2026_05_11_10_14_00.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">13/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_ACE_2026_05_11_10_13_10.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Final do Curso de Formação - AGENTE DE COMBATE ÀS ENDEMIAS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rf_curso_IGUA_ACE_2026_05_11_10_13_10.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">07/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_ACE_2026_05_06_11_18_21.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar do Curso de Formação - AGENTE DE COMBATE ÀS ENDEMIAS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_ACE_2026_05_06_11_18_21.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">07/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_ACS_2026_05_06_11_17_18.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar do Curso de Formação - AGENTE COMUNITÁRIO DE SAÚDE - ACS                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_ACS_2026_05_06_11_17_18.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">07/05/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_GUARDA_2026_05_06_11_16_20.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Resultado Preliminar do Curso de Formação - GUARDA MUNICIPAL                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/rp_curso_IGUA_GUARDA_2026_05_06_11_16_20.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_04_15_11_06_44.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de Convocação - Curso de Formação (AGENTE DE COMBATE ÀS ENDEMIAS)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_DE_COMBATE_AS_ENDEMIAS_2026_04_15_11_06_44.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_PCD_2026_04_15_11_06_10.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de Convocação - Curso de Formação (GUARDA MUNICIPAL - PCD)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_PCD_2026_04_15_11_06_10.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_04_15_11_05_40.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de Convocação - Curso de Formação (AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF SANTA ANA))                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_SANTA_ANA_2026_04_15_11_05_40.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_04_15_11_04_59.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de Convocação - Curso de Formação (AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF JABITACA))                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/AGENTE_COMUNITARIO_DE_SAUDE_ACS_MICROAREA_ESF_JABITACA_2026_04_15_11_04_59.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-2 col-sm-2">
+<div class="" style="padding-top: 8px">
+<span class="d-block text-publicacao">15/04/2026</span>
+</div>
+</div>
+<div class="col-md-8 col-sm-8">
+<a class="btn-text p-0 d-block text-left" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_2026_04_15_11_03_49.pdf" target="new">
+<h4 class="mb-2 text-publicacao" style="text-align: initial;    margin: 0px;">
+                                                                Lista de Convocação - Curso de Formação (GUARDA MUNICIPAL)                                                            </h4>
+</a>
+</div>
+<div class="col-md-2 col-sm-2">
+<div class="btn btn-text p-0 d-block text-left">
+<a class="btn btn-theme btn-light py-1" href="https://cdn-arquivo.concursos.srv.br/AdmTec/00113/PUBLICACOES/GUARDA_2026_04_15_11_03_49.pdf" style="width: 60px;" target="new"><i class="fa fa-download"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-3"/>
+</div>
+<div class="col tab-pane fade in" id="tab1" role="tabpanel" style="    padding-top: 11px;
+            ">
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO FUNDAMENTAL </small>
+<h5 class="mb-0">AGENTE DE LIMPEZA EDUCACIONAL</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 80,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO FUNDAMENTAL </small>
+<h5 class="mb-0">AUXILIAR DE SERVIÇOS GERAIS </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 80,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO FUNDAMENTAL </small>
+<h5 class="mb-0">COVEIRO</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 80,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO FUNDAMENTAL </small>
+<h5 class="mb-0">MOTORISTA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 80,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">AGENTE ADMINISTRATIVO </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF JABITACA)</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">AGENTE COMUNITÁRIO DE SAÚDE - ACS (MICROÁREA ESF SANTA ANA)</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">AGENTE DE COMBATE ÀS ENDEMIAS </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">AUXILIAR DE SAÚDE BUCAL </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO </small>
+<h5 class="mb-0">GUARDA MUNICIPAL </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO MÉDIO/TÉCNICO </small>
+<h5 class="mb-0">TÉCNICO EM RADIOLOGIA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 100,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">ASSISTENTE SOCIAL </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">EDUCADOR FÍSICO </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">FARMACÊUTICO </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">FISIOTERAPEUTA</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">MÉDICO </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">NUTRICIONISTA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">ODONTÓLOGO</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR ENSINO FUNDAMENTAL I </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - CIÊNCIAS </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - EDUCAÇÃO FÍSICA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - GEOGRAFIA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - HISTÓRIA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - INGLÊS </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - LÍNGUA PORTUGUESA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PROFESSOR FUNDAMENTAL II - MATEMÁTICA </h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+<div class="row schedule-item">
+<div class="col-12 col-md-9">
+<div class="p-0 d-block text-left">
+<small class="text-primary">Cargo - ENSINO SUPERIOR </small>
+<h5 class="mb-0">PSICÓLOGO</h5>
+</div>
+</div>
+<div class="col-12 col-md-3">
+<small class="text-primary">Valor da Inscrição</small>
+<h5 class="mb-0">R$ 120,00</h5>
+</div>
+<!--                                            <div class="col-6 col-md-3">
+                                                <div class="">
+                                                   <small class="text-primary">
+                                                                                                    </small>
+                                                </div>
+                                            </div>-->
+</div>
+<hr class="my-3"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+    var descricao = "PREFEITURA MUNICIPAL DE IGUARACY - CONCURSO PÚBLICO -  - Período de Inscrições: 29/10/2024 - 17:00:00 a 01/12/2024 - 23:59:59";
+
+// Seleciona a meta tag existente
+var $meta = $('meta[property="og:description"]');
+
+// Se existir, atualiza; se não, cria e adiciona ao <head>
+if ($meta.length) {
+  $meta.attr('content', descricao);
+} else {
+  $('<meta>', { property: 'og:description', content: descricao }).appendTo('head');
+}
+</script>
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper="">
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script src="//cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script>
+<script src="https://admtec.org.br/asset/js/mascara_mh.js"></script>
+<script src="//vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('//vlibras.gov.br/app');
+  </script>
+<div class="rodape">
+<div class="container">
+<div class="row row-foot">
+<div class="session-foot">
+<div class="col-md-4 col-sm-4">
+<h2>Sobre</h2>
+<p>O Instituto de Administração e Tecnologia - ADM&amp;TEC, constituído em 1991, é uma sociedade civil sem fins lucrativos, fundada por professores da Faculdade de Administração e Direito de Pernambuco - FCAP, uma das unidades da Universidade de Pernambuco - UPE.</p>
+<a href="/sobre" style="color: #990000;">Saiba mais...</a>
+</div>
+</div>
+<div class="session-foot">
+<div class="col-md-4 col-sm-4">
+<div class="extra-page">
+<ul class="links-uteis">
+<li>
+<h2>Links úteis</h2>
+</li>
+<li>
+<a data-scroll="" href="//admtec.org.br/formacao">Formação</a>
+</li>
+<br/>
+<li>
+<a data-scroll="" href="//admtec.org.br/desenvolvimento">Desenvolvimento institucional</a>
+</li>
+<br/>
+<br/>
+<li>
+<a href="https://www.facebook.com/Institutodeadministracaoetecnologia" target="_blank">ADM&amp;TEC no Facebook</a>
+</li>
+<li>
+<a href="https://www.instagram.com/institutoadmtec/" target="_blank">ADM&amp;TEC no Instagram</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="session-foot">
+<div class="col-md-4 col-sm-4">
+<h2>Contato</h2>
+<a href="/cdn-cgi/l/email-protection#93f0fcfdf0e6e1e0fce0d3f2f7fee7f6f0bdfce1f4bdf1e1" style="color: #990000;"><span class="__cf_email__" data-cfemail="dab9b5b4b9afa8a9b5a99abbbeb7aebfb9f4b5a8bdf4b8a8">[email protected]</span></a>
+<p><i class="fa fa-phone-alt" style="font-size: 19px;"></i>(81) 3445.4469</p>
+<p><a href="https://api.whatsapp.com/send?phone=5581997690218"><svg height="30" viewbox="0 0 448 512" width="25" xmlns="http://www.w3.org/2000/svg"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" fill="#990000" opacity="1"></path></svg>
+<span>(81) 99769-0218</span></a></p>
+<br/>
+<p>Segunda a sexta. Das 9:00 às 17:00</p>
+<br/>
+<p>R. Profa. Ângela Pinto, 88 – Sala 5 – Torre<br/>Recife/PE – CEP: 50710-010<br/>Fone: (81) 3445.4469<br/>CNPJ: 35.328.913/0001-16</p>
+</div>
+</div>
+</div>
+<br/><br/>
+<div class="text-rodape">
+<p class="copyright">
+					2026 © Desenvolvido por MH Informática Ltda
+                    </p>
+</div>
+</div>
+</div>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"><i aria-hidden="true" class="fa fa-arrow-up" style="color: #fff; font-size: 20px;"></i></button>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		$('body').materialScrollTop();
+	</script>
+<script src="//cdn.admtec.org.br//js/hover-dropdown.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.themepunch.plugins.min.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/app.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/index.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/ui-extended-modals.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/jquery.sticky.min.js" type="text/javascript"></script>
+<script src="//cdn.admtec.org.br//js/owl.carousel.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+			App.initBxSlider();
+			Index.initRevolutionSlider();
+			//Sticky JS
+		$(".navbar-default").sticky({topSpacing: 0});
+		$('.owl-carousel').owlCarousel();
+		});
+	</script>
+<script>
+		    grecaptcha.ready(function() {
+          grecaptcha.execute('6LegOYYhAAAAAB5coPdL7jydCro8YZAUqM65pAmn', {action: 'submit'}).then(function(token) {
+               $('<input>', {
+                    type: 'hidden',
+                    name: 'g-recaptcha-response',
+                    value: token
+                }).appendTo('form');// Add your logic to submit to your backend server here.
+          });
+        });
+
+	</script>
+</body></html>

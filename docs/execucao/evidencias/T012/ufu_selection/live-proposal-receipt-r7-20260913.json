@@ -1,0 +1,19 @@
+{
+  "schema": "t012.ufu-selection.live-proposal-receipt-r7.v1",
+  "timestamp": "2026-09-13T15:08:11.854583Z",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "snapshot_sha256": "c0f7d2dbf286ddb0d7e95295c64a6486c6733aa414b44b1f7a8fe39a241c8303",
+  "canonical_payload_sha256": "d8ee8f25098087ed7a3a2d4b59bdd6a77e30b1a3b8ec5419b1b778e132ca64d3",
+  "artifact": {"artifact_id": "ufu-selection-1843-detail-2026", "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "byte_len": 26619},
+  "preflight": {"health": 200, "login": 200, "checkpoint": 200, "catalog_match": false, "run_before_http": 404, "before": {"contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1}},
+  "dry_run": {"status": "validated", "run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d", "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"], "writes": false},
+  "import": {"status": "imported", "run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d", "owner_user_id": 1, "source": "ufu_selection", "reference_only": true, "fields_supported": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"], "semantic_hash": null},
+  "proposal_attempt": {"endpoint": "POST /tenderproof/publications/proposals", "body": {"run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d", "source_id": 40, "concurso_id": null, "authorization": null}, "http": 422, "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida", "proposal_id": null, "persisted": false, "retry": false, "approve": false, "apply": false},
+  "after": {"catalog_contests": 34, "catalog_sources": 33, "catalog_cargos": 182, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1, "proposals": "unchanged at known baseline 98"},
+  "gate": "BLOCKED_UFU_CREATE_PROPOSAL_422",
+  "next_step": "Diagnose the normal create-contract evidence reproduction for source_id 40; no retry until reviewed. No catalog mutation occurred."
+}

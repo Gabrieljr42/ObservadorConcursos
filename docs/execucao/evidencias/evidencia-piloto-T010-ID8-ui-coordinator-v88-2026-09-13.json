@@ -1,0 +1,32 @@
+{
+  "evidence_id": "T010-ID8-ui-coordinator-v88-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/8",
+  "build_context": "pós-versão 88",
+  "reload_observed": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "closes_prior_pending": "prova_data",
+  "observed": {
+    "prova_data": "06/12/2026",
+    "pending_text_present": false,
+    "cargo": "Guarda Civil Municipal",
+    "distribution": {
+      "ampla_concorrencia": 6,
+      "pcd": 1,
+      "ppp": 2
+    },
+    "history_entries_on_2026_09_13": 2
+  },
+  "references": [
+    "docs/execucao/evidencias/evidencia-piloto-T010-ID8-ui-coordinator-v87-2026-09-13.md"
+  ],
+  "limits": [
+    "Evidência atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado.",
+    "Nenhuma operação de app/piloto foi feita nesta revisão."
+  ]
+}

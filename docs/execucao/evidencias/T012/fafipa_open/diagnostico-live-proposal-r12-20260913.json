@@ -1,0 +1,34 @@
+{
+  "schema": "t012.fafipa.live-proposal-diagnosis-r12.v1",
+  "proposal_id": "tpp-dca14c9c1fd86b46488e4934eeb876fb",
+  "receipt": "docs/execucao/evidencias/T012/fafipa_open/live-proposal-receipt-r11-20260913.json",
+  "verdict": "REJECT_LIVE_PROPOSAL",
+  "reason": "A proposta normal retornou seis elegíveis e zero cargos, enquanto o envelope R9/R10 declara sete campos e 14 cargos. O drift é confirmado e não pode ser aprovado/aplicado.",
+  "expected": {
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "field_count": 7,
+    "cargo_count": 14,
+    "cargo_evidence_count": 14
+  },
+  "live_observed": {
+    "eligible_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+    "eligible_field_count": 6,
+    "proposed_cargo_count": 0,
+    "run_id": "tp-reviewed-74428350e1198b4564a90e480afe06cb",
+    "proposal_state": "proposed"
+  },
+  "root_cause": {
+    "revalidation": "backend/app/tenderproof/publication.py::_revalidate (lines 203-223) only places a field in eligible when fresh_field.value equals the reviewed value and every reviewed evidence item passes _reproduced_evidence (lines 230-240).",
+    "source_dispatch": "backend/app/tenderproof/fields.py (lines 500-519) dispatches FAFIPA/4208 to app.tenderproof.fafipa_t012_r4.extract_fields.",
+    "parser": "backend/app/tenderproof/fafipa_t012_r4.py::extract_fields (lines 174-196) reproduces the same 14-value cargos list but emits one aggregate cargos evidence on page 2 with needle 'QUADRO DE VAGAS'.",
+    "envelope_shape": "reviewed-envelope-ready-r9.json carries 14 cargos evidence items (r9-cargo-01..r9-cargo-14), each with cargo-specific page/snippet (pages 2/3).",
+    "why_zero": "The cargo value is equal, but the 14 reviewed evidence snippets/pages are not equal to the fresh parser's single aggregate evidence. _reproduced_evidence therefore fails; cargos is put in blocked, not eligible. The normal proposal response consequently exposes six fields and zero proposed cargos.",
+    "url_and_hash": "This is not an artifact URL or SHA failure: the receipt records artifact SHA 26c059dc...1276f, local SHA match, and the six identity/date fields reproduced."
+  },
+  "correction_bounded": {
+    "required": "Make the FAFIPA source-specific parser emit the same 14 cargo-specific Evidence records (artifact_id, document_sha256, artifact.url_final, exact page_number and exact snippet) as the accepted R9 envelope, or regenerate R9 with the parser's exact aggregate evidence only if the contract permits that evidence shape.",
+    "fail_closed": "Before any retry, run fresh extraction and assert cargos value equality, evidence cardinality 14, and _reproduced_evidence true for all 14 items; require eligible_fields to equal the seven expected fields.",
+    "operational": "Do not retry, approve, apply, or create another proposal until the bounded parser/evidence correction is tested and the existing proposal is handled by the integrator's normal proposal-state procedure. No backend edit was made in this diagnosis."
+  },
+  "mutations": {"backend": false, "live": false, "retry": false, "approve": false, "apply": false}
+}

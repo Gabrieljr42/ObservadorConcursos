@@ -1,0 +1,30 @@
+{
+  "schema": "t012.backend-bundle-r19.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "ACCEPT_DEPLOY_BUNDLE",
+  "scope": "offline read-only; no Docker/API/live/deploy or central-document mutation",
+  "files_sha256": {
+    "backend/app/tenderproof/fafipa_t012_r4.py": "a850115c7ff661a7758ee440d088d93da6b383f3c1b3c83a94539cfee8f62b23",
+    "backend/app/tenderproof/publiconsult_t012.py": "9b3e62af3e02aa9ed45ab593dcd34fc88104ade94b1d594591a8e72f7f7f537b",
+    "backend/app/tenderproof/apta_aragarcas_parser.py": "c48d314eb47aa0947b533541ece12a05e9a406224725762d22de1c561c69d4ea",
+    "backend/app/tenderproof/fields.py": "10388ce71a2f697b7dcb6296da2cf53e9bcda7450eb3afbd5e83d3cd91a6d065",
+    "backend/app/tenderproof/review_cases.py": "36171f06ca4a81d29ec0435097368f752fbc7a0a71f5c2858d345e577c252534",
+    "backend/app/tenderproof/avancasp_t012.py": "63966b8b7f42d71eeb1ae3b0daf80f965e02231051052c4648a09aa1841833a3"
+  },
+  "runtime_provenance": {
+    "fafipa": "one active extract_fields; 7 fields; cargos has 14 literal Evidence records, all _reproduced_evidence=True; parser method fafipa-4208-r13; semantic evidence changes require a new owner-scoped run_id",
+    "publiconsult": "source/external/PDF pins strict; three canonical distinct field snippets; TAF excluded; exported reproduction and _reproduced_evidence pass; new run required because R12 provenance is stale",
+    "apta": "R16 principal/retificacao routing preserved; ProcessingError precedes ValueError and busy/parser failures are actionable HTTP 409",
+    "avancasp": "dispatcher and both accepted artifact pins c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637 and 49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd preserved"
+  },
+  "tests": {
+    "source_dispatch_and_parser": "26 passed",
+    "canonical_identity_batch2_avancasp": "57 passed",
+    "document_review_gate": "26 passed",
+    "targeted_busy_apta": "9 passed",
+    "fafipa_active_parser_reproduction": "7 fields / 14 cargo evidence / all reproduced",
+    "compileall": "PASS"
+  },
+  "warning": "publiconsult_t012.py __main__ contains a stale len(fields)==2 assertion although fields_for_run intentionally returns three principal identity fields; deployment imports the function and tests assert three. Correct this smoke assertion before using module execution as an operational check.",
+  "side_effects": {"live": false, "docker": false, "proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

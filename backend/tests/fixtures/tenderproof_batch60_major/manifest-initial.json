@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ibam",
+    "url": "https://www.ibam-concursos.org.br",
+    "observed_at": "2026-09-08T14:03:40.050270+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 118667,
+    "original_sha256": "02ecb6778e1108d04822ba9bfe916d028ea52fabf906ca01efc75b3532d4ce88",
+    "fixture_sha256": "3e973f660e421b8f659fc1a390d0b1c98064673de53eadda717189caf9f27a17",
+    "file": "ibam.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fcc",
+    "url": "https://www.concursosfcc.com.br/concursoAndamento.html",
+    "observed_at": "2026-09-08T14:03:40.050270+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 21008,
+    "original_sha256": "377c8dcc483afefffe6d603ded884e216660e1f63015798bb73d600f837ad97a",
+    "fixture_sha256": "c52ad7ed96d23204efd1cbe57f14e1978ce3dd7a9efae0b203e06b781ce34bf1",
+    "file": "fcc.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "cebraspe",
+    "url": "https://www.cebraspe.org.br/concursos/",
+    "observed_at": "2026-09-08T14:03:40.051270+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 16788,
+    "original_sha256": "13ed6c27fac94f5585df43d8cbbb96471bc91dcc9536854826b87351827c5ae6",
+    "fixture_sha256": "0eb159f64fad03c2497b26bd2d285d84d6bec6757b5469889c3a4751abe326fd",
+    "file": "cebraspe.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "cesgranrio",
+    "url": "https://www.cesgranrio.org.br/concursos/",
+    "observed_at": "2026-09-08T14:03:40.051270+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 93363,
+    "original_sha256": "42e7013e7318928b623c250360811cfdb50b58e4a98ed720851f5a0080fedafb",
+    "fixture_sha256": "9d1c88f88b55767fc656727e03689d562b33436dda88313f60c14c64180c53dc",
+    "file": "cesgranrio.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "avalia",
+    "url": "https://www2.avalia.org.br/concursos.jsp",
+    "observed_at": "2026-09-08T14:03:40.052279+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 92787,
+    "original_sha256": "7f6866802461b49a0374ecb76c1503545ea3920dac8cf01c29112c8d3baa5250",
+    "fixture_sha256": "d95fd0f698acac5fbc97b52501beb30b3c2f8019b7a7889c3541063b59b2366a",
+    "file": "avalia.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

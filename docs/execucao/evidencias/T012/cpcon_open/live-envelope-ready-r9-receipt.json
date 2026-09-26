@@ -1,0 +1,14 @@
+{
+  "schema":"t012.cpcon_open.live-envelope-r9-receipt.v1",
+  "status":"READY_FOR_REVIEW",
+  "envelope":"live-envelope-ready-r9.json",
+  "owner_user_id":1,"source":"cpcon_open","source_id":35,
+  "external_id":"processo-seletivo-simplificado-no-002-2026","concurso_id":null,
+  "derived_run_id":"tp-reviewed-07cdb2ac5f0e960d05dc6a5b300fd7db",
+  "artifact":{"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":13},
+  "fields":{"titulo":1,"orgao":1,"edital_numero":1,"cargos":6},
+  "checks":{"schema":"PASS","import_dry_run":"PASS","artifact_round_trip":"PASS","first_import":"PASS isolated temp store","replay":"PASS idempotent","owner_2":"PASS distinct derived run; no owner takeover","negative_sha":"PASS rejected","extra_fields":"PASS none"},
+  "proposal_create_handoff":{"source_id":35,"concurso_id":null,"run_id":"tp-reviewed-07cdb2ac5f0e960d05dc6a5b300fd7db","owner_user_id":1,"dispatch":"await canonical allocator/review; no live call"},
+  "mutations":{"api":false,"docker":false,"live":false,"catalogue":false},
+  "supersedes":["live-envelope-ready-r6.json","live-envelope-ready-r7.json","live-envelope-ready-r8.json"]
+}

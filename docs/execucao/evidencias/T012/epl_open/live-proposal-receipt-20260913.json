@@ -1,0 +1,17 @@
+{
+  "schema":"t012.epl-live-proposal-receipt.v1",
+  "timestamp":"2026-09-13T14:15:00Z",
+  "status":"BLOCKED_DOCUMENT_REVIEW",
+  "source_id":21,
+  "source":"epl_open",
+  "external_id":"52",
+  "health":"200",
+  "artifact":{"path":"backend/.tenderproof/r60rec/artifacts/art-508d44c1f6-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf","sha256":"b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f","byte_len":784614,"pages":43},
+  "allocation":{"materialized_review_envelope_id":35,"catalog_created":false,"source_number_not_target":true,"concurso21_not_reused":true,"temporary_999_not_used":true},
+  "run":{"run_id":"tp-reviewed-686f8521ba7873e8ebdc22f46213e785","dry_run":"validated","import":"imported","fields":["orgao","edital_numero"]},
+  "duplicate_cas":{"source_id":21,"external_id":"52","catalog_match":false,"proposal_match":false},
+  "proposal_attempt":{"http":409,"retry":false,"approve":false,"apply":false,"reason":"document-review pendente; três retificações aguardam revisão para candidato 52"},
+  "pending_documents":[{"kind":"retificacao","title":"Errata do Edital n° 10","url":"https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/ERRATA%20EDITAL%2010_1705951014.pdf"},{"kind":"retificacao","title":"09 - Retificação do Edital de Abertura","url":"https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/09%20-%20RETIFICACAO%20EDITAL%2001_1701470949.pdf"},{"kind":"retificacao","title":"05 - Retificação do Edital de Abertura","url":"https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/05%20-%20EDITAL%20DE%20RETIFICACAO%20DO%20EDITAL%2001_1701470876.pdf"}],
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"document-review resolution; no proposal retry until retifications are resolved"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "t012.cpcon.luna-r2-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "CPCON_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "artifact": "PASS: local PDF SHA 6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05, 498894 bytes, 13 pages",
+    "identity": "PASS: source #35 cpcon_open, external processo-seletivo-simplificado-no-002-2026, UEPB, edital 002/2026; source distinct from baseline",
+    "evidence": "PASS: 9/9 literal snippets (3 identity + 6 cargo), all SHA-bound; U+FFFD=0; only titulo/orgao/edital_numero/cargos included; taxa/prova omitted",
+    "schema": "PASS after canonical allocation: fields match actual ReviewedRun shape; current model precheck is intentionally blocked solely by concurso_id=null",
+    "duplicate": "PASS: source absent from sanitized 32-source/33-contest snapshot and no target is reserved/invented in r2",
+    "publicability": "PASS: official UEPB processo seletivo simplificado with six technical-laboratory functions; remuneration unit explicitly left temporal-unspecified",
+    "receipt": "PASS: r2 envelope SHA b17697a1b718667147753c627ab915de4db2d28535ca4688b4335462442808f4; receipt records target unallocated and no proposal/apply"
+  },
+  "warning": "Ignore superseded cpcon-002-receipt.json, which claims target 34/old envelope and conflicts with r2. Use only cpcon-002-receipt-r2.json and cpcon-002-reviewed-run-r2.json.",
+  "conditions": [
+    "Integrator allocates a new canonical concurso_id without editing material fields/evidence, then reruns ReviewedRun validation and importer dry-run.",
+    "Do not dispatch, approve or apply until that allocation and normal proposal review pass."
+  ],
+  "conclusion": "R2 is safe for canonical-target allocation and subsequent import/proposal handoff; null target is correctly fail-closed."
+}

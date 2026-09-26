@@ -1,0 +1,156 @@
+{
+  "method": "Strict reversible cp1252 encode then UTF8 decode on individually affected lines; no replacement characters or lossy decoding",
+  "fixes": [
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 33,
+      "before": "raise ValueError('identidade canÃ´nica da fundaÃ§Ã£o incompatÃ­vel')",
+      "after": "raise ValueError('identidade canônica da fundação incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 36,
+      "before": "raise ValueError('tÃ­tulo da fundaÃ§Ã£o incompatÃ­vel ou ambÃ­guo')",
+      "after": "raise ValueError('título da fundação incompatível ou ambíguo')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 40,
+      "before": "raise ValueError('nÃºmero/ano do cabeÃ§alho incompatÃ­vel')",
+      "after": "raise ValueError('número/ano do cabeçalho incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 42,
+      "before": "raise ValueError('seleÃ§Ã£o fora do escopo de pessoal')",
+      "after": "raise ValueError('seleção fora do escopo de pessoal')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 48,
+      "before": "raise ValueError('documento fora do diretÃ³rio oficial observado')",
+      "after": "raise ValueError('documento fora do diretório oficial observado')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 93,
+      "before": "raise ValueError('nÃºmero/ano do edital FUNPEC diverge do processo observado')",
+      "after": "raise ValueError('número/ano do edital FUNPEC diverge do processo observado')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 121,
+      "before": "raise ValueError('nÃºmero/ano do edital FADE incompatÃ­vel')",
+      "after": "raise ValueError('número/ano do edital FADE incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 155,
+      "before": "raise ValueError('identidade FAPERGS 2025 incompatÃ­vel')",
+      "after": "raise ValueError('identidade FAPERGS 2025 incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 161,
+      "before": "raise ValueError('PDF FAPERGS fora do diretÃ³rio observado')",
+      "after": "raise ValueError('PDF FAPERGS fora do diretório observado')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 210,
+      "before": "raise ValueError('cabeÃ§alho pÃºblico FAPEX ausente')",
+      "after": "raise ValueError('cabeçalho público FAPEX ausente')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 213,
+      "before": "raise ValueError('tÃ­tulo ou escopo de pessoal FAPEX incompatÃ­vel')",
+      "after": "raise ValueError('título ou escopo de pessoal FAPEX incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 219,
+      "before": "raise ValueError('documento FAPEX fora do diretÃ³rio pÃºblico de editais')",
+      "after": "raise ValueError('documento FAPEX fora do diretório público de editais')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 256,
+      "before": "raise ValueError('tÃ­tulo sem identificador de seÃ§Ã£o observado')",
+      "after": "raise ValueError('título sem identificador de seção observado')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 267,
+      "before": "raise ValueError('identidade de seÃ§Ã£o ausente ou incompatÃ­vel')",
+      "after": "raise ValueError('identidade de seção ausente ou incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 279,
+      "before": "raise ValueError('seÃ§Ã£o documental ausente, duplicada ou incompatÃ­vel')",
+      "after": "raise ValueError('seção documental ausente, duplicada ou incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 285,
+      "before": "raise ValueError('URL de seÃ§Ã£o incompatÃ­vel')",
+      "after": "raise ValueError('URL de seção incompatível')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 298,
+      "before": "raise ValueError('documento fora do diretÃ³rio da fundaÃ§Ã£o')",
+      "after": "raise ValueError('documento fora do diretório da fundação')"
+    },
+    {
+      "file": "app/tenderproof/batch99_foundation_adapters.py",
+      "line": 338,
+      "before": "raise ValueError('identificador FATEC invÃ¡lido')",
+      "after": "raise ValueError('identificador FATEC inválido')"
+    },
+    {
+      "file": "app/services.py",
+      "line": 34,
+      "before": "raise ValueError('Fonte nÃƒÆ’Ã‚Â£o encontrada')",
+      "after": "raise ValueError('Fonte não encontrada')"
+    },
+    {
+      "file": "app/services.py",
+      "line": 106,
+      "before": "'label': 'publicaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes adicionadas',",
+      "after": "'label': 'publicações adicionadas',"
+    },
+    {
+      "file": "app/services.py",
+      "line": 244,
+      "before": "raise AmbiguousContestIdentity('identificador existente nÃƒÂ£o pode ser substituÃƒÂ­do')",
+      "after": "raise AmbiguousContestIdentity('identificador existente não pode ser substituído')"
+    },
+    {
+      "file": "app/services.py",
+      "line": 250,
+      "before": "raise AmbiguousContestIdentity('identidade alterada concorrentemente; repetir resoluÃƒÂ§ÃƒÂ£o em nova transaÃƒÂ§ÃƒÂ£o')",
+      "after": "raise AmbiguousContestIdentity('identidade alterada concorrentemente; repetir resolução em nova transação')"
+    },
+    {
+      "file": "app/services.py",
+      "line": 266,
+      "before": "raise AmbiguousContestIdentity('identidade de concurso ambÃƒÆ’Ã‚Â­gua; URL compartilhada exige identificador explÃƒÆ’Ã‚Â­cito')",
+      "after": "raise AmbiguousContestIdentity('identidade de concurso ambígua; URL compartilhada exige identificador explícito')"
+    }
+  ],
+  "files_sha256": {
+    "app/tenderproof/batch99_foundation_adapters.py": "ee907ea762ac95f9b2f8638ab49ecfe95d2c4a50bd1140ed3fa36aaeb8ecdcf0",
+    "app/services.py": "3ed911c481084f8a63f2e4cf48f02fe5a86f5f88fa97b6f5ab851444fe7885fe"
+  },
+  "validation": {
+    "tests": [
+      "tests/test_tenderproof_batch99_foundations.py",
+      "tests/test_crawl_resilience.py"
+    ],
+    "passed": 53,
+    "failed": 0,
+    "source_live": "docs/tenderproof-batch99-fapese-live.json"
+  }
+}

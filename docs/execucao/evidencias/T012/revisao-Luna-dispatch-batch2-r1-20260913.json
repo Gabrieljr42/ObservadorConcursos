@@ -1,0 +1,37 @@
+{
+  "schema": "t012.dispatch-batch2.luna-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "CHANGES_REQUIRED",
+  "scope": "read_only; no Docker, pilot, API, DB or catalogue mutation",
+  "directed_test": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py",
+    "result": "6 passed in 15.53s",
+    "note": "This confirms the happy-path fixtures and external-id fail-closed branch, not every metadata/URL bypass below."
+  },
+  "sources": {
+    "epl_open/52": {"verdict":"PASS", "reason":"fields.py routes exact pair to typed extract_identity; parser checks artifact SHA/bytes/URLs, 43 pages, markers, errors/truncation/U+FFFD."},
+    "publiconsult_open/681": {"verdict":"PASS", "reason":"fields_for_run enforces exact source/external, SHA/bytes, requested/final URL and 25-page/U+FFFD parser; typed fields/validation returned."},
+    "klc_open/632": {"verdict":"BLOCKED", "reason":"klc_t012.parse pins content SHA/bytes and final document_url but fields.py does not enforce artifact.sha256/byte_len or artifact.url_requested before reading storage and emitting evidence; an Artifact metadata mismatch can pass against pinned bytes. Add an Artifact-bound dispatch check and regression test."},
+    "avancasp_open/272": {"verdict":"BLOCKED", "reason":"avancasp_t012 checks source/external, SHA/bytes and page 1 only; it has no official document URL pin, no full-page count/order/U+FFFD/error/truncation guard, and batch routing can accept an artifact URL different from the accepted PDF provenance. Additionally the accepted reviewed-envelope/receipt points to an HTML artifact SHA 8f84661e, while batch2 routes a different PDF SHA b0ba7e; reconcile the exact reviewed run before any canonical use."},
+    "apta_open/708": {"verdict":"BLOCKED", "reason":"apta extract_identity checks source/external/SHA/bytes and 20 pages/text flags, but does not enforce DETAIL_URL/DOCUMENT_URL or artifact URL binding; emitted Evidence inherits arbitrary artifact.url_final. Add exact URL pins/tests before promotion."}
+  },
+  "routing": {
+    "strict_source_external": "PASS: fields.py exact source set and per-source external map; mismatches become FAILED without generic fallback",
+    "side_effects": "PASS by receipt and directed test: no proposal/version/outbox writes, network false, pilot_mutated false",
+    "validation": "PARTIAL: source dispatch is applied inside extract_fields, but the three blocked branches lack full artifact/document binding required for fail-closed production use"
+  },
+  "required_before_deploy": [
+    "Bind KLC/APTA/Avança artifact requested/final URLs (and KLC artifact metadata) to their accepted pins.",
+    "Add Avança full-page/U+FFFD/error/truncation/page-count guards and reconcile HTML reviewed envelope versus PDF run/SHA.",
+    "Add negative tests for each failed binding, then rerun batch and source parser suites."
+  ],
+  "evidence": [
+    "backend/app/tenderproof/fields.py:437-488",
+    "backend/app/tenderproof/klc_t012.py",
+    "backend/app/tenderproof/avancasp_t012.py",
+    "backend/app/tenderproof/apta_aragarcas_parser.py",
+    "docs/execucao/evidencias/T012/avancasp_open/receipt.json",
+    "docs/execucao/evidencias/T012/avancasp_open/strong-preflight-receipt.json",
+    "backend/tests/test_t012_batch2_dispatch.py"
+  ]
+}

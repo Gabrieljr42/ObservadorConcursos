@@ -1,0 +1,19 @@
+{
+  "schema": "t012.cpcon_open.runtime-runid-preflight-r11.v1",
+  "timestamp": "2026-09-13T15:19:45.1444895Z",
+  "scope": "read-only dry-run diagnosis; no import/rejection/proposal/approve/apply",
+  "envelope": {"path": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r9.json", "sha256": "a97ed4c422533f8c4c660bfbf9bd13afe10a9296c87b0fbff860118b5c7bfed0", "byte_len": 8581},
+  "artifact": {"sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05", "byte_len": 498894},
+  "importer": {"path": "backend/app/tenderproof/reviewed_run_import.py", "sha256": "c5e0de9db3c115d03d415c9799ac7d34a29a562255e0eba594db2c0c1e1346d8", "image_digest": "sha256:897b2c537f5561b858110dd67e214a535f597698d924b9c0fb5a45ef3113f69f"},
+  "semantic_identity": {"run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "semantic_payload_sha256": "e0e40256496d00283483dc73c0f0946351f30053caa7b3557898e116e4e907e1", "owner_user_id": 1, "source": "cpcon_open", "external_id": "processo-seletivo-simplificado-no-002-2026", "concurso_id": null, "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+  "processes": [
+    {"process": 1, "path": "a", "content_path": "/tmp/cpcon-r11-a/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"process": 1, "path": "b", "content_path": "/tmp/cpcon-r11-b/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"process": 2, "path": "a", "content_path": "/tmp/cpcon-r11-a/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"process": 2, "path": "b", "content_path": "/tmp/cpcon-r11-b/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"process": 3, "path": "a", "content_path": "/tmp/cpcon-r11-a/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"process": 3, "path": "b", "content_path": "/tmp/cpcon-r11-b/artifact.pdf", "status": "validated", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "fields": ["titulo", "orgao", "edital_numero", "cargos"]}
+  ],
+  "stability": {"all_six_same_run": true, "all_six_same_fields": true, "all_six_validated": true, "expected_offline_run": "tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76", "expected_offline_run_is_stale_or_mismatched": true},
+  "conclusion": "The deployed importer deterministically returns bb5b... for the byte-identical R9 envelope across three processes and two content paths. No live operation is authorized until the R10 expected run handoff is reconciled."
+}

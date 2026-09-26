@@ -1,0 +1,229 @@
+{
+  "observed_at": "2026-09-08T15:04:05.558034+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+  "cycles": [
+    {
+      "source": "faperj_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-58c846e4f0ea",
+      "listing_status": "failed",
+      "candidates_sampled": 0,
+      "coverage": {},
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://faperj.br/arquivo_noticias.phtml",
+          "file": "faperj_selection-cycle1-listing-80418a02d2.html",
+          "sha256": "fca77713efbdb59a046b34fd619f8778959d434fd99bb3c494ff01819f8ed636",
+          "bytes": 27842,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:04:06.151203+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e49b199900ee",
+          "candidate": {
+            "candidate_id": "faperj_selection-812.7.4",
+            "title_observed": "Diretor de Tecnologia",
+            "detail_url_observed": "https://faperj.br/?id=812.7.4",
+            "external_id": "812.7.4",
+            "observed_at": "2026-09-08T15:04:07.067423Z",
+            "source": "faperj_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://faperj.br/?id=812.7.4",
+              "file": "faperj_selection-cycle1-detail-e70c5bb402.html",
+              "sha256": "3deb381fff821ffeaa6601414947ed89b8590ff35da0fd337e6fefaf6765a69a",
+              "bytes": 22505,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:04:07.486775+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "faperj_selection-0157ba7bf78586e5",
+            "title": "Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)",
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c261b479f3",
+            "sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+            "byte_len": 80400,
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:04:07.654553Z",
+            "storage_path": "art-c261b479f3-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf"
+          },
+          "total_pages": 4,
+          "processed_pages": 4,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=4/4",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "selection_provenance": {
+        "kind": "explicitly followed official article outside current listing sample",
+        "url": "https://faperj.br/?id=812.7.4",
+        "fixture": "faperj-diretor.html",
+        "sha256": "6e7d85fd0c2a9377e89c20f47dc47f8c209381825be723359220592f78a97ff5",
+        "listing_discovery_claim": false
+      },
+      "duration_s": 2.703
+    },
+    {
+      "source": "faperj_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-7e4ac4084a1c",
+      "listing_status": "failed",
+      "candidates_sampled": 0,
+      "coverage": {},
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://faperj.br/arquivo_noticias.phtml",
+          "file": "faperj_selection-cycle2-listing-80418a02d2.html",
+          "sha256": "fca77713efbdb59a046b34fd619f8778959d434fd99bb3c494ff01819f8ed636",
+          "bytes": 27842,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T15:04:08.667583+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f8de62d189c7",
+          "candidate": {
+            "candidate_id": "faperj_selection-812.7.4",
+            "title_observed": "Diretor de Tecnologia",
+            "detail_url_observed": "https://faperj.br/?id=812.7.4",
+            "external_id": "812.7.4",
+            "observed_at": "2026-09-08T15:04:08.779283Z",
+            "source": "faperj_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://faperj.br/?id=812.7.4",
+              "file": "faperj_selection-cycle2-detail-e70c5bb402.html",
+              "sha256": "3deb381fff821ffeaa6601414947ed89b8590ff35da0fd337e6fefaf6765a69a",
+              "bytes": 22505,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T15:04:09.174026+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "faperj_selection-0157ba7bf78586e5",
+            "title": "Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)",
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-bef35943e1",
+            "sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+            "byte_len": 80400,
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:04:09.351469Z",
+            "storage_path": "art-bef35943e1-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf"
+          },
+          "total_pages": 4,
+          "processed_pages": 4,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=4/4",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "selection_provenance": {
+        "kind": "explicitly followed official article outside current listing sample",
+        "url": "https://faperj.br/?id=812.7.4",
+        "fixture": "faperj-diretor.html",
+        "sha256": "6e7d85fd0c2a9377e89c20f47dc47f8c209381825be723359220592f78a97ff5",
+        "listing_discovery_claim": false
+      },
+      "duration_s": 1.781
+    }
+  ]
+}

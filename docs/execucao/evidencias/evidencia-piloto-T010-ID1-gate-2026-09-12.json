@@ -1,0 +1,46 @@
+{
+  "schema": "pilot-validation.t010-id1.v1",
+  "decision": "ACEITA_ID1_GATE",
+  "read_only_api": {
+    "login_http": 200,
+    "detail_http": 200,
+    "versions_http": 200,
+    "checkpoint_http": 200,
+    "proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "proposal_state": "applied",
+    "proposal_action": "update",
+    "version_id": 82,
+    "proposal_approved_fields": ["cargos"],
+    "detail": {
+      "titulo": "Prefeitura Municipal de Birigui/SP",
+      "cargo": "Professor Auxiliar",
+      "vagas_imediatas": 10,
+      "vagas_ampla_concorrencia": 9,
+      "vagas_pcd": 1,
+      "cadastro_reserva": null,
+      "remuneracao": "30.53",
+      "moeda": "BRL",
+      "remuneracao_observacao": "por hora-aula",
+      "jornada": "até 40 horas semanais",
+      "requisitos": "Licenciatura Plena em Pedagogia ou Normal Superior, ambas com habilitação na Educação Infantil e nos anos iniciais do Ensino Fundamental"
+    },
+    "checkpoint_matches_detail": true,
+    "latest_version": {
+      "id": 82,
+      "concurso_id": 1,
+      "change_type": "updated",
+      "changed_fields": ["cargos"],
+      "change_summary": "Vagas, remuneração, jornada e requisitos por cargo foram atualizados.",
+      "proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05"
+    },
+    "material_change_count_for_gate": 1
+  },
+  "ui_observation": {
+    "surface": "http://localhost:13000/concurso/1",
+    "captured_by": "coordinator CUA",
+    "title": "Prefeitura Municipal de Birigui/SP",
+    "targets": ["CARGO Professor Auxiliar","Cargos e requisitos","10 vagas imediatas; AC 9; PcD 1","R$ 30,53 por hora-aula","até 40 horas semanais","requisito completo exibido","histórico: Vagas, remuneração, jornada e requisitos por cargo foram atualizados.","diff: Cargos e condições Não informado → Valor estruturado atualizado"]
+  },
+  "historical_failure": "Previous 14-route UI failure remains preserved in matriz-validacao-ui-T010-T011-2026-09-12.json; this evidence is a later ID1 revalidation after apply.",
+  "artifacts": ["docs/execucao/evidencias/matriz-validacao-ui-T010-T011-2026-09-12.json","docs/execucao/evidencias/matriz-validacao-ui-T010-T011-2026-09-12.md"]
+}

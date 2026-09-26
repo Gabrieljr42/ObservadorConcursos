@@ -1,0 +1,28 @@
+{
+  "scope": "Public documents only, exact observed requests, TLS verified, no production",
+  "documents": [
+    {
+      "source": "fapeg_selection",
+      "url": "https://selecao.go.gov.br/exportarEditalPdf",
+      "method": "POST",
+      "body": "177,0",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "basis": "Official observed downloader default contentType and original publication row177",
+      "observed_at": "2026-09-08T15:07:53.509685+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "content_type": "application/pdf",
+      "location": null,
+      "bytes": 489850,
+      "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+      "file": "fapeg_selection-fd9ad5e3fb8490bf.pdf",
+      "pages": 29,
+      "text_file": "fapeg_selection-fd9ad5e3fb8490bf.pdf.txt",
+      "text_sha256": "daaac26e0f605f6b6466df27745f180f5ef16730d87294cedd41d5beb0f0602a",
+      "first_page_excerpt": " \n                                                                \nCronograma - Processo Seletivo Simplificado - FAPEG\nDATA ATIVIDADE INFORMAÇÃO\n02/09/2024 10:00 Publicação do Edital https://selecao.go.gov.br/\n03/09/2024 08:00 à 04/09/2024 18:00 Impugnação do Edital https://selecao.go.gov.br/\n06/09/2024 12:00 Divulgação da Ata de Impugnação do Edital https://selecao.go.gov.br/\n06/09/2024 12:00 à 23/09/2024 18:00 Inscrições https://selecao.go.gov.br/\n*Último dia para pagamento\nda taxa de inscrição:\n24/09/2024.\n06/09/2024 12:00 à 10/09/2024 18:00 Solicitação de Isenção da Taxa de Inscrição https://selecao.go.gov.br/\n06/09/2024 12:00 à 13/09/2024 10:00 Análise das Solicitações de Isenção da Taxa de\nInscrição\nhttps://selecao.go.gov.br/\n13/09/2024 16:00 Resultado Preliminar das Solicitações de Isenção da\nTaxa de Inscrição\nhttps://selecao.go.gov.br/\n16/09/2024 08:00 à 17/09/2024 18:00 Interposição de Recurso Contra o Resultado\nPreliminar da Solicitação de Isenção da Taxa de\nInscrição\nhttps://selecao.go.gov.br/\n16/09/2024 08:00 à 19/09/2024 10:00 Análise dos Recursos Contra Indeferimento de\nIsenção da Taxa de Inscrição\nhttps://selecao.go.gov.br/\n19/09/2024 16:00 Ata de Decisão dos Recursos contra o Resultado\nPreliminar dos Pedidos de Isenção da Taxa de\nInscrição\nhttps://selecao.go.gov.br/\n19/09/2024 16:00 Resultado Definitivo das Solicitações de Isenção da\nTaxa de Inscrição\nhttps://selecao.go.gov.br/\n27/09/2024 16:00 Resultado Preliminar das Inscrições Deferidas e\nIndeferidas\nhttps://selecao.go.gov.br/\n30/09/2024 08:00 à 01/10/2024 18:00 Interposição de Recurso Contra Resultado\nPreliminar das Inscrições Deferidas e Indeferidas\nhttps://selecao.go.gov.br/\n30/09/2024 08:00 à 02/10/2024 10:00 Análise dos Recursos Contra Resultado Preliminar\ndas Inscrições Deferidas e Indeferidas\nhttps://selecao.go.gov.br/\n02/10/2024 16:00 Ata de Decisão dos Recursos contra o Resultado\nPreliminar das Inscrições Deferidas e Indeferidas\nhttps://selecao.go.gov.br/\n02/10/2024 16:00 Resultado Definitivo das Inscrições Deferidas e\nIndeferidas\nhttps://selecao.go.gov.br/\n04/10/2024 10:00 Relação dos Candidatos Aptos para a Análise\nCurricular\nhttps://selecao.go.gov.br/\n \n                                                                \nCronograma - Processo Seletivo Simplificado - FAPEG\nDATA ATIVIDADE INFORMAÇÃO\n04/10/2024 10:00 à 11/10/2024 20:00 Análise e Correção dos dados e documentações do\ncandidato de itens pontuados automaticamente pelo\nsistema\nhttps://selecao.go.gov.br/\n14/10/2024 16:00 Resultado Preliminar da Análise Curricular https://selecao.go.gov.br/\n15/10/2024 08:00 à 16/10/2024 18:00 Interposição de Recurso Contra o Resultado\nPreliminar da Análise Curricular\nhttps://selecao.go.gov.br/\n15/10/2024 08:00 à 17/10/2024 10:00 Análise dos Recursos Contra o Resultado Preliminar\nda Análise Curricular\nhttps://selecao.go.gov.br/\n17/10/2024 16:00 Ata de Decisão dos Recursos contra o Resultado\nPreliminar da Análise Curricular\nhttps://selecao.go.gov.br/\n17/10/2024 16:00 Resultado Definitivo da Análise Curricular https://selecao.go.gov.br/\n18/10/2024 16:00 Edital de Convocação para a Entrevista https://selecao.go.gov.br/\n23/10/2024 08:00 à 29/10/2024 18:00 Realização das Entrevistas As\nentrevistas serão realizadas pr\nesencialmente, na cidade de\nGoiânia-GO, da forma\ndefinida no respectivo Edital\nde Convocação.\n30/10/2024 16:00 Resultado Preliminar da Entrevista https://selecao.go.gov.br/\n31/10/2024 08:00 à 01/11/2024 18:00 Interposição de Recurso Contra o Resultado\nPreliminar",
+      "client_closed": true
+    }
+  ]
+}

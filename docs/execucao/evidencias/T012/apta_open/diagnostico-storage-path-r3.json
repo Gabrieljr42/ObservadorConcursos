@@ -1,0 +1,35 @@
+{
+  "schema": "t012.apta.storage-path-diagnosis.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "offline reproduction only; no live/import/proposal/API/DB mutation",
+  "verdict": "APTA_STORAGE_PATH_DIAGNOSIS_READY",
+  "source": "apta_open",
+  "external_id": "708",
+  "pins": {
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "preserved_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "reproduction": {
+    "envelope_storage_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "configured_default_artifact_dir": "backend/.tenderproof/artifacts",
+    "resolver": "backend/app/tenderproof/fields.py:452-456",
+    "behavior": "relative storage_path is reduced to basename and joined to artifact_dir; recorded r60rec/artifacts directory is discarded",
+    "observed": "preserved file exists and matches SHA/bytes; backend/.tenderproof/artifacts/<basename> is absent, so dispatcher cannot consume the R2 path",
+    "permission_note": "The reported Permission denied is the dispatcher-side access failure from R1/R2; the deterministic root cause is the unconsumable deployment path, not a hash mismatch."
+  },
+  "operational_correction": {
+    "safe_contract": "Set TENDERPROOF_ARTIFACT_DIR to the deployment-local artifact directory and provide only its canonical basename in Artifact.storage_path; store.save_artifact_file/commit_run_artifact rewrites it to <artifact_id>-<sha256>.pdf.",
+    "do_not": ["do not use the preserved r60rec directory as live storage_path", "do not weaken basename confinement", "do not import/propose/live-dispatch in this diagnostic"],
+    "valid_fixture_test": "docs/execucao/evidencias/T012/apta_open/test_storage_path_r3.py",
+    "test_scope": "isolated tmp artifact root; verifies 362093 bytes, SHA, canonical basename and store round-trip",
+    "test_result": "1 passed",
+    "validated_storage_path": "<configured-artifact-dir>/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/apta_open/revisao-Luna-live-envelope-r1-20260913.json",
+    "docs/execucao/evidencias/T012/apta_open/revisao-Luna-live-envelope-r2-20260913.json",
+    "backend/app/tenderproof/store.py:53-60,296-333",
+    "backend/app/tenderproof/fields.py:440-456"
+  ]
+}

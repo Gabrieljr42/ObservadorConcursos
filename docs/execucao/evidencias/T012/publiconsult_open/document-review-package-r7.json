@@ -1,0 +1,42 @@
+{
+  "schema": "t012.publiconsult.document-review-package-r7.v1",
+  "status": "BLOCKED_REDACTED_SIGNED_URL_NOT_DISPATCHABLE",
+  "scope": "offline package only; no API/live/prepare/approve/apply mutation",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "document": {
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "semantic_kind": "convocacao_taf",
+    "url_template_redacted": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?AWSAccessKeyId=[redacted]&Expires=[redacted]&Signature=[redacted]&raw=1",
+    "url_source": "read-only manifest diagnosis; literal signed query required"
+  },
+  "artifact": {
+    "artifact_id": "publiconsult-open-taf-681-r2",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "content_type": "application/pdf",
+    "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf"
+  },
+  "correction_proven": {
+    "r6_failure": "R6 sent only ?raw=1; server manifest retains signed AWS query plus raw=1 and checks artifact URL literally after document_identity normalization.",
+    "r7_required_change": "Set artifact.url_requested and artifact.url_final to the exact owner-authenticated pending signed URL, preserving all query names, values, order/encoding and raw=1.",
+    "sha_bytes_store": "PASS: read-only diagnosis confirms blob exists with SHA/341466 bytes; no payload change needed"
+  },
+  "payload_status": {
+    "dispatchable": false,
+    "reason": "Secret query values are redacted and are not present in local artifacts; placeholders must never be sent as a live URL.",
+    "required_injection": "Owner-authenticated manifest export must inject the literal signed values into both URL fields immediately before any future single prepare attempt. Do not alter title/kind/SHA/pages/run/owner."
+  },
+  "next_gate": "Obtain the exact signed URL through the authorized owner-bound manifest view, compare byte-for-byte, inject locally without logging secrets, and only then consider one prepare-preserved call. Stop on any 409; no proposal retry.",
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/diagnostico-document-review-r6-readonly-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r6-receipt-20260913.json",
+    "backend/app/tenderproof/review_cases.py:246-260",
+    "backend/app/tenderproof/document_identity.py"
+  ]
+}

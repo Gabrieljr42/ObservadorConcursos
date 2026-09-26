@@ -1,0 +1,41 @@
+{
+  "provenance": "live public HTTP capture; sanitized hidden values and public signed URL queries; no browsers or credential use;2MiB/page20s",
+  "pages": [
+    {
+      "name": "publiconsult-listing",
+      "url": "https://publiconsult.com.br/Concurso/Index",
+      "observed_at": "2026-09-08T12:47:27.609150+00:00",
+      "status": 200,
+      "decoded_encoding": "utf-8",
+      "bytes": 33508,
+      "original_sha256": "3bacf4a47ffefb3c17c481730d14149aec3ceb2c49c3c97f66819b81a2b32273",
+      "fixture_sha256": "7a6b07adb2fb2a6d8fafd16be066ebff40d3afd4f4525a8596b540129ec3b779",
+      "redacted_signed_links": 13,
+      "file": "publiconsult-listing.html",
+      "signed_query_keys": [
+        "AWSAccessKeyId",
+        "Expires",
+        "Signature",
+        "raw"
+      ]
+    },
+    {
+      "name": "publiconsult-detail",
+      "url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+      "observed_at": "2026-09-08T12:47:28.208260+00:00",
+      "status": 200,
+      "decoded_encoding": "utf-8",
+      "bytes": 25854,
+      "original_sha256": "79cb161cc9966b28b29a67fba489078efd506e456fbbeeea5afc22fdadc7a3f9",
+      "fixture_sha256": "8ffe5f542195e2be24e5e33fca5abdefabf28c37041e7ab4d4be30f54fa73901",
+      "redacted_signed_links": 16,
+      "file": "publiconsult-detail.html",
+      "signed_query_keys": [
+        "AWSAccessKeyId",
+        "Expires",
+        "Signature",
+        "raw"
+      ]
+    }
+  ]
+}

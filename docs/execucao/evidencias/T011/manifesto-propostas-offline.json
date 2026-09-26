@@ -1,0 +1,38 @@
+{
+  "schema": "tenderproof.t011-offline-proposal-manifest.v1",
+  "generated_at": "2026-09-12T18:34:33-03:00",
+  "mode": "offline_manifest_only",
+  "proposal_created": false,
+  "approval_performed": false,
+  "application_performed": false,
+  "gate": {"T007": "blocked", "T008": "blocked", "pilot_dispatch": false},
+  "accepted_packet": {
+    "path": "docs/execucao/evidencias/T011/pacotes-proposta-revisao.json",
+    "sha256": "3bf75b5455322da4c4734150eb0490242de7df7206714f7a860b3bb62c48e839",
+    "binding": "each record is linked by concurso_id, run_id and artifact_sha256"
+  },
+  "normal_flow": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "action": "create_normal_publication_proposal",
+    "implementation": "backend/app/tenderproof/publication_router.py:77-83",
+    "payload_schema": {"run_id": "non-empty string <=128", "concurso_id": "positive integer", "source_id": "optional positive integer", "authorization": "optional object"},
+    "idempotency_basis": ["run_id", "concurso_id", "artifact_sha256"],
+    "checked_fields_location": "manifest-only metadata; HTTP payload contains no unchecked fields"
+  },
+  "validation": {
+    "static_schema_check": "passed",
+    "dry_run": "deferred_until_T007_T008_acceptance",
+    "dry_run_scope": "no route, database, proposal, approval, application or synchronization call",
+    "receipt": "schema-valid payloads; execution intentionally deferred"
+  },
+  "sub_batches": [
+    {"order": 1, "sub_batch": "T011-01", "records": [{"concurso_id": 17, "run_id": "tp-tcj-8ab7bff262fa52d4a80aa00058905974-1", "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f", "idempotency_key": "t011-17-tp-tcj-8ab7bff262fa52d4a80aa00058905974-1-6caf7901", "http_payload": {"run_id": "tp-tcj-8ab7bff262fa52d4a80aa00058905974-1", "concurso_id": 17}, "checked_fields": ["identity", "cidade_uf", "cargos", "vagas", "carga_horaria", "remuneracao_brl_unidade_temporal_nao_especificada", "requisitos", "taxas_brl", "inscricao", "prova_data"], "pending_fields": []}]},
+    {"order": 2, "sub_batch": "T011-02", "records": [{"concurso_id": 18, "run_id": "tp-tcj-0d43415604dd529fb88764b330b70894-2", "artifact_sha256": "5f245894ba03dca5352a79fc991880b95e3fcf907fa38a1218ed2c4a373f0ab3", "idempotency_key": "t011-18-tp-tcj-0d43415604dd529fb88764b330b70894-2-5f245894", "http_payload": {"run_id": "tp-tcj-0d43415604dd529fb88764b330b70894-2", "concurso_id": 18}, "checked_fields": ["identity", "cidade_uf", "cargos_totais_impressos", "requisitos", "remuneracao_brl_unidade_temporal_nao_especificada"], "pending_fields": ["taxa", "prova_data", "transcricao_cargo_a_cargo"]}]},
+    {"order": 3, "sub_batch": "T011-03", "records": [{"concurso_id": 20, "run_id": "tp-tcj-fcb88161aca85300b7577a2c9bb3ca8d-1", "artifact_sha256": "774a05bbd92b0505628a8c18f1d272b4297118b4dc1c63ecd4c8c334fe8ed7ce", "idempotency_key": "t011-20-tp-tcj-fcb88161aca85300b7577a2c9bb3ca8d-1-774a05bb", "http_payload": {"run_id": "tp-tcj-fcb88161aca85300b7577a2c9bb3ca8d-1", "concurso_id": 20}, "checked_fields": ["identity", "cidade_uf", "prova_data_2026_03_08", "cargos_exemplos_vagas", "carga_horaria", "remuneracao_brl_unidade_temporal_nao_especificada"], "pending_fields": ["taxa", "quadro_completo", "requisitos_completos"]}]},
+    {"order": 4, "sub_batch": "T011-04", "records": [{"concurso_id": 21, "run_id": "tp-tcj-d0d2a0870efb5314aaaf97079b11ced0-1", "artifact_sha256": "2a074dea76bf860a8500f5c8de564f746ac8c3555592c961b87fab1fcee8241a", "idempotency_key": "t011-21-tp-tcj-d0d2a0870efb5314aaaf97079b11ced0-1-2a074dea", "http_payload": {"run_id": "tp-tcj-d0d2a0870efb5314aaaf97079b11ced0-1", "concurso_id": 21}, "checked_fields": ["identity", "cidade_uf", "etapas_objetiva_titulos_professores", "anexo_I_existe"], "pending_fields": ["cargos", "vagas", "remuneracoes_unidade", "requisitos", "taxa", "prova_data", "local_prova"], "dispatch_disposition": "DO_NOT_RETRY", "blocked_reason": "HTTP 409 semantic conflict: catalog document_review.pending=true; see diagnostico-id21-409-20260912.json"}]},
+    {"order": 5, "sub_batch": "T011-05", "records": [{"concurso_id": 22, "run_id": "tp-tcj-78d603004e005e7889bbab3e41ebb061-1", "artifact_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca", "idempotency_key": "t011-22-tp-tcj-78d603004e005e7889bbab3e41ebb061-1-8e296b41", "http_payload": {"run_id": "tp-tcj-78d603004e005e7889bbab3e41ebb061-1", "concurso_id": 22}, "checked_fields": ["identity", "cidade_uf", "retificacoes_2026_07_31_08_14_31", "validade_2_anos_pos_homologacao"], "pending_fields": ["cargos", "vagas", "remuneracoes_unidade", "requisitos", "taxa", "prova_data", "cronograma"]}]},
+    {"order": 6, "sub_batch": "T011-06", "records": [{"concurso_id": 23, "run_id": "tp-tcj-9ba68e23375a5ff7a0fef6e8ea7bbbc5-1", "artifact_sha256": "6086daa5015ef0052e2cc3b35b81e5de7344d19312726f9594c9e44e4e98681a", "idempotency_key": "t011-23-tp-tcj-9ba68e23375a5ff7a0fef6e8ea7bbbc5-1-6086daa5", "http_payload": {"run_id": "tp-tcj-9ba68e23375a5ff7a0fef6e8ea7bbbc5-1", "concurso_id": 23}, "checked_fields": ["identity", "cidade_uf", "vagas_agregadas_191", "etapas_objetiva_titulos_nivel_superior"], "pending_fields": ["cargos", "remuneracoes_unidade", "requisitos", "taxa", "prova_data", "cidade_data_detalhadas"]}]},
+    {"order": 7, "sub_batch": "T011-07", "records": [{"concurso_id": 24, "run_id": "tp-tcj-52dedb38da915f1899046496075c743c-2", "artifact_sha256": "c9e43c7a9e5ed7b13bde0310a4c5dfc935febc3ce992024029ef72db9aced5c3", "idempotency_key": "t011-24-tp-tcj-52dedb38da915f1899046496075c743c-2-c9e43c7a", "http_payload": {"run_id": "tp-tcj-52dedb38da915f1899046496075c743c-2", "concurso_id": 24}, "checked_fields": ["identity", "cidade_uf", "carga_minima_40h_semana", "taxa_nivel_medio_brl_100", "taxa_nivel_superior_brl_150_sem_associacao", "assistente_legislativo_contabilidade_1_vaga_brl_5311", "tecnico_legislativo_brl_5940_53", "requisitos_nivel_medio"], "pending_fields": ["demais_cargos_vagas", "associacao_taxa_cargo", "prova_data", "cronograma", "unidade_temporal_remuneracoes"]}]},
+    {"order": 8, "sub_batch": "T011-08", "records": [{"concurso_id": 25, "run_id": "tp-tcj-e34b795398cb56cc8260c5df21b3e3e4-1", "artifact_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221", "idempotency_key": "t011-25-tp-tcj-e34b795398cb56cc8260c5df21b3e3e4-1-d049b759", "http_payload": {"run_id": "tp-tcj-e34b795398cb56cc8260c5df21b3e3e4-1", "concurso_id": 25}, "checked_fields": ["identity", "cidade_uf", "vagas_agregadas_432", "inscricao_2026_08_24_a_10_01", "cargos_nominais_inicio_quadro"], "pending_fields": ["taxa", "prova_data", "local_prova", "quadro_completo", "unidade_temporal_remuneracoes"]}]}
+  ]
+}

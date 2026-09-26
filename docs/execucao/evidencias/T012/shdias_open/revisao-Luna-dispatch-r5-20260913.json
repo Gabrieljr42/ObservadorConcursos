@@ -1,0 +1,27 @@
+{
+  "schema": "t012.shdias_open.luna-dispatch-r5-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "SHDIAS_DISPATCH_R5_ACCEPT_FOR_DEPLOY",
+  "scope": [
+    "backend/app/tenderproof/fields.py:436-478",
+    "backend/app/tenderproof/shdias_hortolandia.py",
+    "backend/tests/test_t012_shdias_dispatch_r5.py",
+    "backend/tests/test_shdias_hortolandia_r4.py",
+    "docs/execucao/evidencias/T012/shdias_open/integration-r5.json"
+  ],
+  "checks": {
+    "strict_branch_precedence": "PASS: dispatch requires source=shdias_open and external_id=MTEw/MzA4, runs after generic extraction, and replaces only the reviewed field names; other source branches remain untouched.",
+    "type_compatibility": "PASS: parsed values are wrapped as ExtractedField with Evidence.model_validate, supported state, original_value and canonical field names consumed by fields/_revalidate.",
+    "pins_and_strong_binding": "PASS: parser pins process 00308, SHA F7DEAACF..., 697485 bytes, 44 pages and exact PDF literals; fresh orgao/edital are Municipio de Hortolândia/001/2026.",
+    "safe_storage_and_provenance": "PASS: relative storage paths resolve through artifact_dir using basename; parser replays canonical stored bytes and retains native evidence.",
+    "negative_and_side_effects": "PASS: source/external/SHA/U+FFFD drift fail closed; disposable _revalidate produced eligible fields without proposal/version/outbox/notification mutations.",
+    "other_sources": "PASS by branch inspection: no changes to generic fallback or unrelated source dispatches."
+  },
+  "tests": {
+    "dispatch_targeted": "6 passed (executor integration evidence; an independently rerun subset was 2 passed, 3 deselected).",
+    "parser_regression": "8 passed in 18.28s",
+    "compileall": "PASS: fields.py, shdias_hortolandia.py and both test modules",
+    "additional_warning": "Tests emit existing SQLAlchemy utcnow deprecation warnings only; no functional failures."
+  },
+  "gate": "Release for deploy is accepted. This is code/test acceptance only; no publication or live-pilot mutation was performed."
+}

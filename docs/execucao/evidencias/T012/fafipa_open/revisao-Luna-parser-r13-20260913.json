@@ -1,0 +1,33 @@
+{
+  "schema": "t012.fafipa.parser-r13.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "REJECT",
+  "gate": "FAFIPA_R13_PARSER",
+  "scope": "offline read-only; no API, Docker, live or central-document mutation",
+  "confirmed": {
+    "pins": "source fafipa_open/external 4208, PDF SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes/38 pages",
+    "guards": "strong_preflight pins bytes/pages/orgao/edital and rejects U+FFFD; source-specific dispatch and regressions remain present",
+    "shared_scope": "No shared module edit was required for this finding; fields.py branch is source/external-specific"
+  },
+  "blockers": [
+    {
+      "severity": "P1",
+      "finding": "fafipa_t012_r4.py defines extract_fields twice (line 63 and line 163). Python uses the later definition, so R13's 14 cargo-specific Evidence implementation is dead code.",
+      "reproduction": "Fresh pinned PDF plus storage_path produced seven fields whose evidence counts were [1,1,1,1,1,1,1]; cargos had 1 evidence and method_version fafipa-t012-r4, not 14 cargo snippets/method r13.",
+      "impact": "The claimed cargo evidence cardinality/reproducibility and _reproduced_evidence eligibility are not delivered by the deployed import path; envelope R9/R13 cannot be trusted for import/proposal.",
+      "required_action": "Remove/rename the stale second extract_fields and make the single active implementation emit exactly 7 fields and 14 individual cargo Evidence records; add a test invoking the deployed module/fields.py path that asserts len(cargos.evidence)==14 and literal page/snippet equality."
+    },
+    {
+      "severity": "P1",
+      "finding": "The run_id note is incorrect for this semantic change.",
+      "evidence": "reviewed_run_import.py _run_id excludes evidence_id/transport paths, but includes full semantic field/evidence data and reviewed page numbers; method_version/snippets/pages therefore affect the ID.",
+      "required_action": "Generate a new ReviewedRun/import after the active parser is fixed and revalidated. Do not replay or approve the stale live run/proposal; same-run replay is only valid for byte-for-byte identical semantic evidence."
+    }
+  ],
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa.py backend/tests/test_t012_fafipa_r4.py backend/tests/test_t012_fafipa_dispatch_r5.py",
+    "result": "13 passed (does not assert active parser cargo evidence cardinality)",
+    "compileall": "PASS"
+  },
+  "side_effects": {"live": false, "import": false, "proposal": false, "approve": false, "apply": false}
+}

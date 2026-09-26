@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult.proposal-422-diagnosis-r8.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "scope": "offline/read-only; no API, live, DB, Docker or mutation",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "evidence_receipt": "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r7-approve-proposal-receipt-20260913.json",
+  "observed_422": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+  "cause": "backend/app/tenderproof/publiconsult_t012.py::fields_for_run returns orgao and edital_numero only; shared proposal validation requires titulo too. The approved TAF document decision was no_field_change and must not be used to infer principal identity.",
+  "approved_principal_pin": {"sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25, "url_exact": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf"},
+  "strict_package": "docs/execucao/evidencias/T012/publiconsult_open/proposal-package-r8.json",
+  "strict_source_adapter": "docs/execucao/evidencias/T012/publiconsult_open/publiconsult_proposal_r8.py",
+  "omitted_as_unknown": ["cargos", "remuneracao", "taxa", "prova_data", "documentos"],
+  "documentary_taf_not_identity_source": {"sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "byte_len": 341466, "pages": 6, "role": "approved documentary review only"},
+  "tests": {"file": "docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_proposal_r8.py", "result": "5 passed", "negative_cases": ["wrong source", "wrong external_id", "URL query drift", "truncated/altered artifact"]},
+  "next_gate": "Backend reviewer must integrate/review the strict three-field extraction before any new proposal attempt; no retry is authorized by this package."
+}

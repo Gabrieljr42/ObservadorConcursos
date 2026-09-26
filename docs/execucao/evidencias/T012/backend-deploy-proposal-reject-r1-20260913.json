@@ -1,0 +1,33 @@
+{
+  "schema": "t012.backend-deploy-proposal-reject-r1.v1",
+  "recorded_at": "2026-09-13T13:12:14.4922670-03:00",
+  "scope": "api-worker-scheduler only; no live proposal rejection",
+  "backup": {
+    "bundle": "/backups/pilot-20260913T160539037Z-operational",
+    "postgres_dump": "/backups/pilot-20260913T160539037Z-postgres.dump",
+    "postgres_sha256": "06bae349bdf075f85722b0a4e7953c25422502237657fa640c1c4a74cbbb5da9",
+    "pg_restore_list_entries": 233,
+    "operational_files_verified": 17862
+  },
+  "image": {
+    "id": "sha256:3b9808ea1e75cd15704e14db526faf00a3ff085fbf7de4fdccc7759cbe6bffbe",
+    "services_recreated": ["api", "worker", "scheduler"],
+    "preserved": ["web", "postgres", "redis", "pilot_postgres", "pilot_redis", "pilot_tenderproof", "pilot_backups"]
+  },
+  "migration": {
+    "status": "PASS_IDEMPOTENT_TWICE",
+    "columns": ["rejected_at", "rejected_by", "rejection_reason"],
+    "initial_issue": "PostgreSQL rejects DATETIME; corrected to TIMESTAMP for PostgreSQL while retaining DATETIME for SQLite before final deploy"
+  },
+  "health_smoke": {
+    "health": 200,
+    "login": 200,
+    "checkpoint": {"contests": 34, "distinct_source_ids": 33},
+    "old_cpcon_proposal": {"id": "tpp-4d947337190bc96d5bdf1d6b30f992ab", "state": "proposed"},
+    "fixture_reject_route": {"status": 404, "detail": "TenderProof: proposta não encontrada", "live_mutation": false},
+    "focused_tests": "2 passed"
+  },
+  "counts": {"contests": 34, "sources_configured": 99, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1, "push_devices": 0, "push_deliveries": 0, "push_attempts": 0},
+  "live_data_mutation": false,
+  "result": "PROPOSAL_REJECT_R1_DEPLOYED_READY"
+}

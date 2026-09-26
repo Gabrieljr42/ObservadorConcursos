@@ -1,0 +1,24 @@
+{
+  "schema_version": "t012.avalia.receipt.v1",
+  "status": "PROPOSTA_PRONTA",
+  "source": "avalia_open",
+  "selection": "avalia_open-631",
+  "run_id": "tpr-8079a5856a43",
+  "proposal_key": "t012-avalia-open-631-55db4a53",
+  "artifact_sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+  "payload_sha256": "d9a3e2acd2e688e27ce0d34bb4d17132c9a5b741c3191af6a1f7ab020d417910",
+  "checked": {
+    "identity": true,
+    "source": true,
+    "document_selection": true,
+    "schema": true,
+    "duplicate_guard_defined": true,
+    "duplicate_query": false
+  },
+  "fields_in_payload": ["titulo", "orgao"],
+  "fields_excluded_as_unknown": ["edital_numero", "inscricao_inicio", "inscricao_fim", "remuneracao"],
+  "network": false,
+  "db_write": false,
+  "proposal_dispatch": false,
+  "next_gate": "integrator duplicate check and explicit proposal review"
+}

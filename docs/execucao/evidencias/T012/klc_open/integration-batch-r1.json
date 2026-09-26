@@ -1,0 +1,11 @@
+{
+  "schema": "t012.dispatch-batch2.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "klc_open",
+  "external_id": "632",
+  "artifact": {"sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "pages": 10, "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf"},
+  "strict_branch": "fields.py exact source/external; parser SHA/bytes/URL/pages fail-closed",
+  "tests": {"dispatch": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "dispatch_result": "11 passed", "parser_suite": "38 passed", "side_effects": "no proposal/version/outbox writes; offline only"},
+  "network": false,
+  "pilot_mutated": false
+}

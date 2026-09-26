@@ -1,0 +1,48 @@
+{
+  "schema": "t010.id14.final-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "LIBERA_IMPORT_PROPOSTA_ONLY",
+  "scope": "read-only; sem import real, approve/apply, deploy ou alteração de quadro",
+  "run": {
+    "run_id": "tp-reviewed-f3755a775f9b16a6a1ca2aeb5b0ea45c",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "source": "fapese_selection",
+    "concurso_id": 14,
+    "external_id": "007/2026",
+    "artifact_id": "art-2addf5fed2",
+    "artifact_path": "docs/execucao/evidencias/T010/id14.pdf",
+    "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+    "artifact_byte_len": 345974,
+    "sha_recomputed": true,
+    "candidate_doc_artifact_sha_bound": true
+  },
+  "envelope_checks": {
+    "fields_only": ["cargos"],
+    "cargo_count": 2,
+    "vagas_imediatas_all_null": true,
+    "cadastro_reserva_only_observation": true,
+    "remuneration_units": ["BRL/hour; not monthly", "BRL/stage-period limit; not monthly"],
+    "evidence_items": ["2.2.1", "2.2.2", "2.4.1", "2.4.2", "3.2.1", "3.2.2", "3.3"],
+    "no_monthly": true,
+    "no_employment_link_field": true,
+    "no_opportunity_quantity": true,
+    "roles": [
+      "Articulador(a) político-pedagógico",
+      "Técnico de apoio"
+    ]
+  },
+  "isolation": {
+    "derivations": 2,
+    "reviewed_run_model_validation": "passed",
+    "store_revalidate": "eligible exactly cargos",
+    "create_proposal": "proposed with cargos only",
+    "pilot_deploy_import_apply": false
+  },
+  "tests": {
+    "command": "pytest test_fapese_pronera_parser.py test_idib_reriutaba_jobs.py test_barra_longa_parser.py -q",
+    "result": "10 passed, 32 warnings"
+  },
+  "release_scope": "Liberar somente import único + criação de proposta canônica de cargos; manter approve/apply bloqueados até revisão pós-persistência."
+}

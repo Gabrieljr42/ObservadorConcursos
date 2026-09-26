@@ -1,0 +1,13 @@
+{
+  "schema": "t012.cpcon-live-proposal-receipt.v6",
+  "timestamp": "2026-09-13T13:39:00Z",
+  "status": "CPCON_LIVE_PROPOSAL_READY_FOR_REVIEW",
+  "source_id": 35,
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "artifact": {"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":13},
+  "allocation": {"envelope_concurso_id":35,"catalog_created":false,"source_number_not_used_as_target":true,"temporary_999_not_used":true},
+  "run": {"run_id":"tp-reviewed-aa65cdc64843b07126288df54c1329b7","dry_run":"validated","import":"imported","fields":["titulo","orgao","edital_numero","cargos"]},
+  "proposal": {"id":"tpp-4d947337190bc96d5bdf1d6b30f992ab","state":"proposed","action":"create","proposal_hash":"5292d0333ab6890bad82084f69c8f9d88927026332ccb84497da0ad6def1d772","concurso_id":null,"eligible_fields":["titulo","orgao","edital_numero","cargos"],"baseline_null":true},
+  "counts_before_after": {"contests":"34->34","sources_configured":"99->99","proposals":"97->98","versions":"92->92","outbox":"92->92","notifications":"91->91","canonical_published_cargos":182,"raw_run_cargos":196},
+  "approve":false,"apply":false,"next_gate":"independent review before approve/apply"
+}

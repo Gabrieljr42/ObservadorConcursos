@@ -1,0 +1,40 @@
+{
+  "schema": "t012.create-allocation-contract-diagnosis.v1",
+  "date": "2026-09-13",
+  "scope": "read-only; ReviewedRun v1 -> normal CREATE proposal",
+  "status": "CONTRACT_GAP_BLOCKED_UNTIL_CANONICAL_ALLOCATOR_OR_NULLABLE_V1",
+  "root_cause": {
+    "importer": "backend/app/tenderproof/reviewed_run_import.py:ReviewedRun.concurso_id is Field(gt=0), so an envelope with concurso_id=null is rejected before build_run/import.",
+    "proposal": "backend/app/tenderproof/publication_router.py:ProposalIn and create_proposal explicitly accept concurso_id=None; canonical.resolve treats no target as CREATE and apply_proposal allocates Concurso through the database primary-key sequence.",
+    "contradiction": "The normal CREATE path therefore has no valid ReviewedRun v1 input: importer requires an ID that CREATE is designed to allocate, while no authenticated canonical-ID reservation/create route was found.",
+    "not_an_allocator": "source_id/external_id are source identity, not local concursos.id; max(id)+1, 1/999, or SQL would be unsafe and are forbidden."
+  },
+  "evidence": {
+    "reviewed_run_schema": "backend/app/tenderproof/reviewed_run_import.py:43-59",
+    "proposal_route": "backend/app/tenderproof/publication_router.py:18-83",
+    "canonical_resolution": "backend/app/tenderproof/canonical.py:65-155",
+    "create_commit": "backend/app/tenderproof/publication.py:385-420 and 500-590",
+    "contest_constraints": "backend/app/models.py:41-61; unique source_id+external_id (known identity)",
+    "allocation_route_search": "No POST/create/reserve Concurso route exists; main.py exposes GET /concursos and deletion only."
+  },
+  "safe_current_procedure": [
+    "For an existing contest: import a schema-valid envelope with its real positive concurso_id, then owner-authenticated GET run -> POST proposal with the same target; approve/apply uses baseline and CAS.",
+    "For CREATE: do not import a null envelope or invent an ID. A formal allocator must first return a real Concurso identity, or ReviewedRun v1 must be versioned to allow concurso_id=null. Then import dry-run -> import persist -> owner GET -> POST proposal with concurso_id omitted/null and source_id equal to the existing Source.id (never source_id as contest ID).",
+    "At apply, canonical.resolve is re-run; creation locks the proposal, checks identity/metadata and unique source+external constraints, inserts Concurso, flushes the database-generated ID, binds CanonicalIdentity, creates one version/outbox, and commits via the document gate. IntegrityError/OperationalError maps to 409 and rollback."
+  ],
+  "concurrency_and_cas": {
+    "proposal_creation": "owner+run+target+proposal_hash lookup and deterministic proposal id; IntegrityError recovery rereads the existing proposal",
+    "apply": "approved->applying CAS plus applied_observation operation key; canonical revalidation and identity bind occur in the same transaction",
+    "baseline": "updates use revision/timestamp/source/external/detail URL and version CAS; CREATE still relies on unique source+external and identity bind",
+    "limitation": "No pre-import canonical allocation transaction/API exists, so CREATE cannot be safely staged under the current schema."
+  },
+  "shdias_comparison": "The successful SHDias delivery calls create_proposal with an already existing Concurso.id (update path); it does not demonstrate a ReviewedRun CREATE allocation.",
+  "required_decision": "Choose and version one contract: (A) add an authenticated, transactional canonical allocation operation returning a real Concurso.id before import, or (B) make ReviewedRun.concurso_id nullable for CREATE while retaining positive validation for update and preserving owner/source/identity/CAS guards. Do not use temporary IDs or ad-hoc SQL.",
+  "pilot_mutation": false,
+  "services_touched": false,
+  "tests": {
+    "existing": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_publication.py::test_real_jwt_authorization_and_owner_isolation",
+    "result": "PASS previously recorded: 6 passed; no live/pilot/database mutation",
+    "static": "compileall PASS previously recorded"
+  }
+}

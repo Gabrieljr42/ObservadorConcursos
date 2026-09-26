@@ -1,0 +1,25 @@
+{
+  "schema": "t012.apta.reviewed-run-r5-diagnosis.v1",
+  "decision": "APTA_R5_READY_FOR_REVIEW",
+  "root_cause_r4": "live-envelope-ready-r4.json was a handoff manifest, not a ReviewedRun import envelope: concurso_id was null; title/detail_url/observed_at were nested under identity; fields were names rather than ReviewedField objects; run_id/status/identity/handoff were forbidden extras.",
+  "r5_correction": "Full tenderproof.reviewed-run.v1 envelope with only the three accepted fields and owner 1.",
+  "schema_constraint": "ReviewedRun requires concurso_id > 0. The value 1 is used only in disposable isolated SQLite validation; no canonical contest allocation or pilot write was performed.",
+  "provenance": {
+    "source": "apta_open",
+    "external_id": "708",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+    "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "artifact_byte_len": 362093,
+    "artifact_pages": 20
+  },
+  "validation": {
+    "run_id": "tp-reviewed-8360804341f8c6db9b7640cd0b84a1a1",
+    "dry_run": "validated",
+    "isolated_import": "imported",
+    "same_owner_replay": "idempotent",
+    "owner_901_derivation": "distinct; no takeover",
+    "mutation": false,
+    "network": false
+  },
+  "next_gate": "Canonical allocation must supply the real positive concurso_id before any live import; do not send the disposable ID 1 to the pilot."
+}

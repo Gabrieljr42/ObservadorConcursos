@@ -1,0 +1,21 @@
+{
+  "schema": "t012.live-proposal-receipt.v1",
+  "recorded_at": "2026-09-13T12:59:34.6300292-03:00",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "preflight": {"health": 200, "login": 200, "checkpoint_contests": 34, "catalogue_match": []},
+  "envelope_sha256": "25490652d1d2fdda4e8f5b9c1d7bea3c48976249eb0e7b70e14dd13d3c163792",
+  "canonical_payload_sha256": "55af0a123106b5346744e2e5f12f482c0203ca9a235220e1c93a168dc7a61a0c",
+  "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+  "artifact_byte_len": 26619,
+  "dry_run": {"status": "validated", "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d"},
+  "import": {"status": "imported", "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d", "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"]},
+  "document_review": {"pending": false, "documents": []},
+  "proposal": {"status_code": 422, "body": {"detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"}, "created": false},
+  "effects": {"approve_called": false, "apply_called": false, "canonical_mutation": false, "expected_counts_unchanged": {"contests": 34, "catalogue_sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91}},
+  "result": "UFU_R10_BLOCKED_CREATE_PROPOSAL_422",
+  "stop_rule": "4xx; no retry"
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "t012.klc.luna-parser-r4-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "KLC_PARSER_R4_REJECT_FOR_INTEGRATION",
+  "checks": {
+    "pins": "PASS: source klc_open/external 632; PDF SHA 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4, 348300 bytes, 10 pages",
+    "formal_output": "PASS: parse returns list[ExtractedField] with Evidence and _reproduced_evidence test passes",
+    "guards": "PARTIAL: source/external/SHA, page count, truncation/errors and literal snippets are guarded, but full page text U+FFFD and per-page error flags are not rejected; only evidence snippets are checked",
+    "tests": "PASS: 4 focused tests passed; compileall passed",
+    "dispatch": "BLOCKED: source-specific parser remains under docs evidence and generic revalidate still reports strong binding blocked; no real adapter/fields dispatch hook is registered"
+  },
+  "required_corrections": [
+    "Reject U+FFFD anywhere in all page text and any PageText.error before returning fields.",
+    "Wire the parser through a real adapter/fields hook or explicit publication integration and rerun _revalidate/import dry-run with canonical target."
+  ],
+  "evidence": ["docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py","docs/execucao/evidencias/T012/klc_open/strong-preflight-r3.json","docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py"],
+  "safety": "No integration, dispatch, import or mutation performed."
+}

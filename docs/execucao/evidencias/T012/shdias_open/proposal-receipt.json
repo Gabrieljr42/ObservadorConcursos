@@ -1,0 +1,47 @@
+{
+  "schema": "t012.proposal-receipt.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "shdias_open",
+  "source_number": 51,
+  "candidate_external_id": "MTEw/MzA4",
+  "identity_confirmed": true,
+  "duplicate_check": {
+    "status": "passed_within_preserved_catalogue_and_fixtures",
+    "key": "shdias_open:MTEw/MzA4",
+    "process_id": "00308"
+  },
+  "scope": {
+    "public_employment_selection": true,
+    "not_funding_or_scholarship": true,
+    "selection_label": "Concurso Público 001/2026 - Guarda"
+  },
+  "proven_fields": [
+    "title",
+    "selection_type",
+    "detail_url",
+    "process_id",
+    "inscription_fee",
+    "exam_date",
+    "cargo_count",
+    "vacancy_count",
+    "cargos",
+    "opening_notice_url",
+    "field_evidence_snippets"
+  ],
+  "unknown_or_blocked": [
+    "inscription_start_end",
+    "canonical_concurso_id"
+  ],
+  "adapter": "SHDIASAdapter",
+  "evidence": [
+    "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-listing-d24cf41921.html",
+    "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-detail-e633962f88.html",
+    "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "docs/execucao/evidencias/T012/shdias_open/field-evidence.json"
+  ],
+  "catalogue_mutated": false,
+  "network": true,
+  "apply": false,
+  "review_required": true,
+  "handoff": "standard_reviewed_run_import"
+}

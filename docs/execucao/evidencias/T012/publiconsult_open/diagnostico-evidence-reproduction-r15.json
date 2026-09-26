@@ -1,0 +1,20 @@
+{
+  "schema": "t012.publiconsult.evidence-reproduction-r15.v1",
+  "status": "REPRODUCED_ROOT_CAUSE",
+  "scope": "offline/read-only; no API, Docker, live retry, DB or backend edit",
+  "receipt": "docs/execucao/evidencias/T012/publiconsult_open/live-proposal-receipt-r14-20260913.json",
+  "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a",
+  "identity": {"owner_user_id": 1, "source_id": 56, "source": "publiconsult_open", "external_id": "681", "concurso_id": null},
+  "root_cause": "Stored R12 evidence was produced by the preserved-pdf-review/t012-r12 path, but deployed revalidation uses publiconsult_t012.fields_for_run and emits publiconsult-source-parser/t012-publiconsult-r4 evidence. Values and artifact pins match; all three snippets differ. publication._reproduced_evidence compares snippet/page/artifact/SHA/URL (not method metadata), so the snippet mismatch alone blocks all three fields and causes 422; method provenance also drifts for audit.",
+  "classification": {"image_or_code_drift": "code/provenance drift, not image drift", "duplicate_parser": "no duplicate active parser found; publiconsult_t012.py R4 is active", "page_records": "PASS: 25 ordered pages, no flags/errors", "storage_path": "PASS: hash-addressed path loads exact bytes", "semantic_value_mismatch": "none"},
+  "field_comparison": [
+    {"field":"titulo","value":"equal","artifact_id":"equal","sha256":"equal","url":"equal","page":1,"snippet":"mismatch: stored combined title+marker; active first Processo Seletivo line","method":"mismatch: preserved-pdf-review vs publiconsult-source-parser","method_version":"mismatch: t012/r12 vs t012-publiconsult-r4"},
+    {"field":"orgao","value":"equal","artifact_id":"equal","sha256":"equal","url":"equal","page":1,"snippet":"mismatch: stored A Prefeitura... line; active first VOTUPORANGA title line","method":"mismatch: preserved-pdf-review vs publiconsult-source-parser","method_version":"mismatch: t012/r12 vs t012-publiconsult-r4"},
+    {"field":"edital_numero","value":"equal","artifact_id":"equal","sha256":"equal","url":"equal","page":1,"snippet":"mismatch: stored Processo Seletivo line; active first VOTUPORANGA title line","method":"mismatch: preserved-pdf-review vs publiconsult-source-parser","method_version":"mismatch: t012/r12 vs t012-publiconsult-r4"}
+  ],
+  "active_validation": {"status":"valid","fields":["titulo","orgao","edital_numero"],"sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","byte_len":720592,"pages":25},
+  "exact_correction": "R17 must choose one canonical path and make it round-trip: either regenerate the ReviewedRun evidence from the active R10/R4 parser output, persisting each exact returned snippet, or change the source parser selectors to emit the already-reviewed snippets. Then rerun _reproduced_evidence. Preserve source/external/URL/artifact SHA/bytes/page/values; do not normalize or concatenate snippets; align method=publiconsult-source-parser and method_version=t012-publiconsult-r4 for audit; never use the TAF as principal evidence.",
+  "new_review_required": true,
+  "test": {"path":"docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_r15_evidence_reproduction.py","result":"PASS; active fields valid and all three stored snippets/provenance mismatches reproduced"},
+  "handoff": "Backend bundle R17 must include the exact evidence regeneration/round-trip correction before any new proposal attempt. No retry authorized by this diagnostic."
+}

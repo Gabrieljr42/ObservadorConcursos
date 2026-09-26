@@ -1,0 +1,32 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "status": "PROPOSTA_PRONTA",
+  "supersedes": ["live-envelope-ready-r1.json", "live-envelope-ready-r2.json"],
+  "source": "apta_open",
+  "external_id": "708",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "reference_only": true,
+  "identity": {
+    "title": "Câmara Municipal de Aragarças",
+    "orgao": "Câmara Municipal de Aragarças",
+    "edital_numero": "01/2026",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708"
+  },
+  "artifact": {
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "content_type": "application/pdf",
+    "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "storage_path": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "fields": ["titulo", "orgao", "edital_numero"],
+  "reference_only_fields": ["cargos", "remuneracao", "taxa"],
+  "binding": "organization+edital fallback; exact source/external/detail/document pins",
+  "commit_contract": "save_artifact_file/commit_run_artifact writes this hash-addressed basename under TENDERPROOF_ARTIFACT_DIR",
+  "round_trip": "isolated SQLite pre-live; stale SHA/URL rejected; no historical run reused",
+  "side_effects": "zero live proposal/version/outbox"
+}

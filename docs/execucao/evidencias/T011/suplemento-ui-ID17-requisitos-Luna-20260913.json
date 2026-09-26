@@ -1,0 +1,33 @@
+{
+  "review": "suplemento independente de qualidade UI ID17",
+  "reviewer": "Luna",
+  "date": "2026-09-13",
+  "mode": "read_only",
+  "sources": {
+    "api": "GET http://127.0.0.1:18000/concursos/17",
+    "pdf": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "pdf_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "pdf_pages": "19-20"
+  },
+  "finding": "Os únicos artefatos intrapalavra reproduzíveis nos requisitos persistidos são T er, inicia l, atua r e ini cial. A inspeção das linhas correspondentes nas páginas 19-20 sustenta as correções abaixo.",
+  "artifacts": [
+    {"cargo_codigo":"10","current_value":"... em que atuar ...; T er concluído ... curso de formação inicial ...","artifact":"T er","correction":"Ter","evidence":"p.19, linha do ACS 01-MA20/UBS 1"},
+    {"cargo_codigo":"11","current_value":"... em que atuar ...; T er concluído ... curso de formação inicial ...","artifact":"T er","correction":"Ter","evidence":"p.19, linha do ACS 02-MA10/UBS 2"},
+    {"cargo_codigo":"12","current_value":"... em que atuar ...; T er concluído ... formação inicia l ...","artifact":"T er; inicia l","correction":"Ter; inicial","evidence":"p.19, linha do ACS 03-MA15/UBS 3"},
+    {"cargo_codigo":"13","current_value":"... em que atua r ...; T er concluído ... formação inicial ...","artifact":"atua r; T er","correction":"atuar; Ter","evidence":"p.19, linha do ACS 03-MA18/UBS 3"},
+    {"cargo_codigo":"14","current_value":"... em que atuar ...; T er concluído ... formação ini cial ...","artifact":"T er; ini cial","correction":"Ter; inicial","evidence":"p.19, linha do ACS 04-MA03/UBS 4"},
+    {"cargo_codigo":"15","current_value":"... em que atuar ...; T er concluído ... curso de formação inicial ...","artifact":"T er","correction":"Ter","evidence":"p.19, linha do ACS 04-MA04/UBS 4"}
+  ],
+  "not_artifacts": [
+    "e + COREN e registro + COREN (p.20: separadores/abreviações da fonte)",
+    "hífen, 40hrs, MA 03/MA 04, CRO e CREA (formatação/abreviações legítimas)",
+    "A exibição de U+FFFD no console PowerShell não é corrupção persistida; o envelope UTF-8 auditado tem U+FFFD=0."
+  ],
+  "normalization": {
+    "decision": "ACEITA com correção mínima recomendada",
+    "closed_map": {"T er":"Ter","inicia l":"inicial","ini cial":"inicial","atua r":"atuar"},
+    "guard": "Aplicar somente no campo requisitos dos cargos ACS 10-15, com correspondência exata ao snippet/página/PDF SHA do mesmo cargo; rejeitar tokens não mapeados e não fazer substituição global.",
+    "other_fields_corrupted": false
+  },
+  "mutation": "none"
+}

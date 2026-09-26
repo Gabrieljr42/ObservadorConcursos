@@ -1,0 +1,42 @@
+{
+  "schema": "independent-review.t010-t011.v1",
+  "reviewer": "Luna-independent",
+  "reviewed_at": "2026-09-12",
+  "scope": [
+    "docs/execucao/evidencias/T010/T010-pacotes-revisao.json",
+    "docs/execucao/evidencias/T011/pacotes-proposta-revisao.json",
+    "docs/execucao/tarefas/T004.md",
+    "docs/execucao/tarefas/T010.md",
+    "docs/execucao/tarefas/T011.md",
+    "docs/T004-DISTRIBUICAO-32-20260912.md"
+  ],
+  "independent_checks": {
+    "t010_local_pdf_sha256": {"records": [1, 5, 6, 7, 8, 14, 15, 16], "matched": 8, "total": 8},
+    "t011_packet_vs_t004_run_source_sha256": {"records": [17, 18, 20, 21, 22, 23, 24, 25], "matched": 8, "total": 8},
+    "t011_manifest_consistency": {"records": [17, 18, 20, 21, 22, 23, 24, 25], "matched": 8, "total": 8},
+    "id17_payload_internal": {"cargo_count": 27, "vacancies_sum": 79, "result": "matched"},
+    "provenance": "reference_only preserved; no application or new collection authorized",
+    "checked_pending": "checked fields are separated from pending fields; no pending field was promoted",
+    "types_units": "hour-aula, mensal, mensal_variavel, hora efetivamente prestada, por etapa and unspecified temporal units remain explicit",
+    "payload_scope": "T010 packets contain only checked fields; T011 packets contain only confirmed claims; ID17 detailed payload is internally consistent"
+  },
+  "records": [
+    {"id": 1, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; manter edital_url e prova_data_exata pendentes e reference_only=true."},
+    {"id": 5, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; não preencher cargos/requisitos/vagas/remuneração nem prova sem revisão linha a linha."},
+    {"id": 6, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; preservar 11 imediatas + cadastro de reserva, sem somar CR às vagas."},
+    {"id": 7, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; taxa e prova_data_exata permanecem pendentes."},
+    {"id": 8, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; não converter salário-mínimo + adicionais em valor fixo."},
+    {"id": 14, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; preservar prestação civil/cadastro reserva e não criar vagas ou salário mensal."},
+    {"id": 15, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; manter quantidade, taxa e funções restantes pendentes."},
+    {"id": 16, "task": "T010", "decision": "ACEITO", "correction": "Nenhuma; preservar período 2024/2025 e cargos em cadastro de reserva como pendentes."},
+    {"id": 17, "task": "T011", "decision": "ACEITO", "correction": "Antes de aplicar, manter unidade temporal não especificada (não inferir mensal) e confirmar referência_only; 27 cargos/79 vagas conferem."},
+    {"id": 18, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; taxa, prova_data e transcrição completa permanecem pendentes."},
+    {"id": 20, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; taxa e quadro completo permanecem pendentes; unidade temporal não especificada."},
+    {"id": 21, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; não preencher Anexo I sem transcrição conferida."},
+    {"id": 22, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; manter cargos, vagas, remuneração, taxa e cronograma ausentes."},
+    {"id": 23, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; manter 191 vagas agregadas sem inventar cargos ou remuneração."},
+    {"id": 24, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; não associar taxa/salário a cargos além do explicitamente conferido."},
+    {"id": 25, "task": "T011", "decision": "ACEITO", "correction": "Nenhuma; manter quadro completo, taxa e prova pendentes."}
+  ],
+  "gate": "Aceites documentais não liberam aplicação; T007/T008 continuam bloqueando publicação."
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "t012.publiconsult-live-envelope-luna-review-r1.v1",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "read-only pre-live envelope; no network/live API/pilot/data mutation",
+  "identity": {
+    "source": "publiconsult_open",
+    "source_number": 56,
+    "external_id": "681",
+    "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+    "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+    "concurso_id": null,
+    "allocation": "PASS: null is intentional pre-allocation; source_number 56 is not used as local concurso_id."
+  },
+  "currentness_and_artifact": {
+    "listing_detail": "PASS: preserved listing/detail HTTP 200 observations on 2026-09-08, completed/valid run, principal opening notice selected uniquely.",
+    "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "artifact_bytes": 720592,
+    "official_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "pins": "PASS: exact HTTPS host/path, requested/final URL equality, SHA/length, 25 non-empty pages and U+FFFD rejection."
+  },
+  "eligible": {
+    "orgao": "Prefeitura Municipal de Votuporanga/SP",
+    "edital_numero": "1/2026",
+    "evidence": "PASS: both values have literal page-1 snippets bound to artifact id/SHA/final URL; no other fields are promoted.",
+    "blocked": ["titulo", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa", "cargos"]
+  },
+  "negative_guards": "PASS: source/external mismatch, wrong title/document, foreign contest 682, URL host/path/query drift, byte/SHA drift, empty/challenge listing and ambiguous principal documents are fail-closed.",
+  "validation": {"parser_and_dispatch": "10 directed tests passed", "compile_or_mutation": "No mutation; no deploy/build performed"},
+  "integrator_next_step": "Allocate canonical concurso_id through the normal flow, inject it before ReviewedRun.model_validate/import dry-run, independently review, and do not reuse temporary ID 999999 or old run.",
+  "evidence_files": [
+    "docs/execucao/evidencias/T012/publiconsult_open/live-envelope-ready-r1.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/provenance-publiconsult-681.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/receipt-publiconsult-681.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/strong-preflight-r6.json"
+  ]
+}

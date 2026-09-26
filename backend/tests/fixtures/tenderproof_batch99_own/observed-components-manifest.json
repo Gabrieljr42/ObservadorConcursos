@@ -1,0 +1,980 @@
+{
+  "observed_at": "2026-09-08T14:52:34.344604+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "klc_open",
+      "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+      "kind": "tab1",
+      "observed_at": "2026-09-08T14:52:33.076221+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 75505,
+      "sha256": "e332c29476349dc735631a22a640fac0d92e0fa16136f7a82d4f06185ad19e19",
+      "file": "klc_open-tab1.html",
+      "encoding": "utf-8",
+      "title": "KLC Concursos e Consultoria em Gestão Pública",
+      "links": [
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Acesso ao Menu do Candidato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/visao/home.php",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=nos",
+          "title": "Nossa Empresa"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Inscrições"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=rec",
+          "title": "Recursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ctt",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=ES",
+          "title": "ES"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=GO",
+          "title": "GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MG",
+          "title": "MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MS",
+          "title": "MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MT",
+          "title": "MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=PR",
+          "title": "PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RJ",
+          "title": "RJ"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RS",
+          "title": "RS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SC",
+          "title": "SC"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SP",
+          "title": "SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Consulte sua Inscrição"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=1",
+          "title": "CONCURSOS ABERTOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "title": "CONCURSOS EM ANDAMENTO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=0",
+          "title": "CONCURSOS FUTUROS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=3",
+          "title": "CONCURSOS ENCERRADOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+          "title": "PROCESSO SELETIVO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=631",
+          "title": "CONCURSO PÚBLICO Nº 002-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=630",
+          "title": "PROCESSO SELETIVO Nº 001-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=629",
+          "title": "CONCURSO PÚBLICO Nº 001-2026 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=628",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2025 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=626",
+          "title": "CONCURSO PÚBLICO Nº 001-2025 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=625",
+          "title": "CONCURSO PÚBLICO Nº 001-2025 - PREFEITURA MUNICIPAL DE POÇO FUNDO - MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=624",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2025 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=623",
+          "title": "CONCURSO PÚBLICO Nº 001-2025 - CÂMARA MUNICIPAL DE NOVA INDEPENDÊNCIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=622",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2024 - PREFEITURA MUNICIPAL DE NOVA INDEPENDÊNCIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=621",
+          "title": "CONCURSO PÚBLICO Nº 002-2024 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=620",
+          "title": "PROCESSO SELETIVO Nº 002-2024 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=619",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - CÂMARA MUNICIPAL DE TIROS - MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=618",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2024 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=617",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=616",
+          "title": "CONCURSO PÚBLICO Nº 001-2024- PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=615",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=614",
+          "title": "PROCESSO SELETIVO Nº 001-2024 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=613",
+          "title": "PROCESSO SELETIVO Nº 02-2024 - PREFEITURA MUNICIPAL DE JAPURÁ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=612",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - CÂMARA MUNICIPAL DE BARRA DO TURVO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=611",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - PREFEITURA MUNICIPAL DE ARIPUANÃ - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=610",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - CÂMARA MUNICIPAL DE PARAGUAÇU - MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=609",
+          "title": "CONCURSO PÚBLICO Nº 001-2024 - PREFEITURA MUNICIPAL DE PACAEMBU - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=608",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO N° 002-2023 - PREFEITURA MUNICIPAL DE INDIANA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=607",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 007-2023 - PREFEITURA MUNICIPAL DE NOVA INDEPENDÊNCIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=606",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=605",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2023 - PREFEITURA MUNICIPAL DE NOVA LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=604",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE PARANHOS - MS - (EDUCAÇÃO INDÍGENA)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=603",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE PARANHOS - MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=602",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 004-2023 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=601",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE RONDON - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=600",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE COLNIZA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=599",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 033-2023 - PREFEITURA MUNICIPAL DE NOVA ANDRADINA - MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=598",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE PAULICEIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=597",
+          "title": "CONCURSO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE TARUMÃ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=596",
+          "title": "PROCESSO SELETIVO Nº 003-2023 - PREFEITURA MUNICIPAL DE TARUMÃ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=595",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE PONTES E LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=594",
+          "title": "CONCURSO PÚBLICO Nº 003-2023 - PREFEITURA DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=593",
+          "title": "CONCURSO PÚBLICO Nº 004-2023 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=592",
+          "title": "PROCESSO SELETIVO Nº 002-2023 - PREFEITURA MUNICIPAL MIRANTE DE PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=591",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE PARAGUAÇU PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=590",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE MIRASELVA - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=589",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE GUAPOREMA - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=588",
+          "title": "CONCURSO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=587",
+          "title": "PROCESSO SELETIVO Nº 002-2023 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=586",
+          "title": "CONCURSO PÚBLICO 002-2023 - PREFEITURA MUNICIPAL DE PARAGUAÇU PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=585",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=584",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE RIBEIRA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=583",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE SÃO TOMÉ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=582",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE LUPÉRCIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=581",
+          "title": "CONCURSO PÚBLICO Nº 003-2023 - PREFEITURA MUNICIPAL DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=580",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE ARCO-ÍRIS - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=579",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - CÂMARA MUNICIPAL DE PACAEMBU - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=578",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 005-2023- PREFEITURA MUNICIPAL DE LUIZIÂNIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=577",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE INDIANA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=576",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE INDIANA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=575",
+          "title": "CONCURSO PÚBLICO Nº 020-2023 - PREFEITURA MUNICIPAL DE BRASILÂNDIA DO SUL - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=574",
+          "title": "CONCURSO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE LUIZIÂNIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=573",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 004-2023 - PREFEITURA MUNICIPAL DE LUIZIÂNIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=572",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - CÂMARA MUNICIPAL DE CONCHAL - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=571",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE NOVA IGUAÇU DE GOIAS - GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=570",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE COSTA RICA - MS (DIRETOR ESCOLAR)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=569",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=568",
+          "title": "CONCURSO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=567",
+          "title": "CONCURSO PÚBLICO Nº 034-2023 - PREFEITURA MUNICIPAL DE MARILÂNDIA DO SUL - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=566",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2023 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=565",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE MARIPÁ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=564",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2023 - PREFEITURA MUNICIPAL DE FLÓRIDA PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=563",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE FLÓRIDA PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=562",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE FLÓRIDA PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=561",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE AVANHANDAVA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=560",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 01-2023 - PREFEITURA MUNICIPAL DE PONTES GESTAL - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=559",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE TARUMÃ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=558",
+          "title": "PROCESSO SELETIVO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE TARUMÃ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=557",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - SANTA CASA DE MISERICÓRDIA DE MIGUELÓPOLIS - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=556",
+          "title": "PROCESSO SELETIVO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE QUERÊNCIA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=555",
+          "title": "PROCESSO SELETIVO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE NOVA LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=554",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE NOVA LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=553",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE GAUCHA DO NORTE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=552",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=551",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE SÃO TOMÉ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=550",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE ITAGUAJÉ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=549",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE LAGOA SANTA - GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=548",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE CASSILÂNDIA - MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=547",
+          "title": "CONCURSO PÚBLICO Nº 009-2023 - PREFEITURA MUNICIPAL DE BRASILÂNDIA DO SUL - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=546",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=545",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO N 001-2023 - PREFEITURA MUNICIPAL DE IPIRANGA DO NORTE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=544",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE LUIZIÂNIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=543",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2023 - PREFEITURA MUNICIPAL DE LUIZIÂNIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=542",
+          "title": "TESTE SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE GUAPOREMA - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=541",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE CAMPO VERDE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=540",
+          "title": "PROCESSO SELETIVO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE CAMPO VERDE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=539",
+          "title": "EDITAL - SEMEC - PARANHOS - DIRETOR ESCOLAR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=538",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=537",
+          "title": "PROCESSO SELETIVO Nº 001-2023 -PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=536",
+          "title": "CONCURSO PÚBLICO Nº 002-2023 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=535",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE CAMPOS NOVOS PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=534",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE LUPÉRCIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=533",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE CAMPOS NOVOS PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=532",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE BOA ESPERANÇA - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=531",
+          "title": "PROCESSO SELETIVO Nº 001-2023 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=530",
+          "title": "CONCURSO PÚBLICO Nº 001-2023 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=529",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2023 - PREFEITURA MUNICIPAL DE FRANCISCO ALVES - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=528",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE JAPURÁ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=527",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE NOVA LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=526",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 004-2022 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=525",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE CHAPADÃO DO SUL - MS (MÚSICA)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=524",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE CHAPADÃO DO SUL - MS (SERVIDOR)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=523",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2022 - PREFEITURA MUNICIPAL DE CHAPADÃO DO SUL - MS (PROFESSOR)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=522",
+          "title": "PROCESSO SELETIVO Nº 001-2022 - PREFEITURA MUNICIPAL DE PONTES E LACERDA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=521",
+          "title": "CONCURSO PÚBLICO Nº 003-2022 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=520",
+          "title": "CONCURSO PÚBLICO Nº 002-2022 - PREFEITURA DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=519",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - CÂMARA MUNICIPAL DE CAIUÁ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=518",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE CAIUÁ - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=517",
+          "title": "CONCURSO PUBLICO Nº 007-2022 - PREFEITURA MUNICIPAL DE ALTO PARANÁ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=516",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE NOVA INDEPENDÊNCIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=515",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=514",
+          "title": "CONCURSO PÚBLICO Nº 002-2022 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=513",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE POÇO FUNDO - MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=512",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2022 - PREFEITURA MUNICIPAL DE ALTO PIQUIRI - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=511",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=510",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - CÂMARA MUNICIPAL DE UNIÃO DA VITÓRIA - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=509",
+          "title": "PROCESSO DE SELEÇÃO Nº 004-2022 - PREFEITURA MUNICIPAL DE JUARA - MT (DIRETOR)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=508",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE JUARA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=507",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - CÂMARA DE EUCLIDES DA CUNHA PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=506",
+          "title": "CONCURSO PÚBLICO Nº 010-2022 - PREFEITURA MUNICIPAL DE INDIANA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=505",
+          "title": "PROCESSO SELETIVO Nº 001-2022 - PREFEITURA MUNICIPAL DE TUPI PAULISTA- SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=504",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE TUPI PAULISTA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=503",
+          "title": "PROCESSO SELETIVO Nº 004-2022 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=502",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE TEODORO SAMPAIO - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=501",
+          "title": "PROCESSO SELETIVO Nº 003-2022 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=500",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE NOVA INDEPENDÊNCIA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=499",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2022 - SEMED - COSTA RICA - MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=498",
+          "title": "PROCESSO SELETIVO Nº 002-2022 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=497",
+          "title": "CONCURSO PÚBLICO Nº 002-2022 - PREFEITURA MUNICIPAL DE AMAPORÃ - PR (EMPREGO PÚBLICO)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=496",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE AMAPORÃ - PR (CARGO PÚBLICO)"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=495",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - CÂMARA MUNICIPAL DE PRIMAVERA DO LESTE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=494",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE SÃO CARLOS DO IVAÍ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=493",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE GAUCHA DO NORTE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=492",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE TARABAI - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=491",
+          "title": "PROCESSO SELETIVO Nº 001-2022 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=490",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE ALFREDO MARCONDES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=489",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE MACAUBAL - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=488",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE SÃO TOMÉ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=487",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE ÂNGULO - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=486",
+          "title": "PROCESSO SELETIVO  Nº 001-2022 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=485",
+          "title": "CONCURSO PÚBLICO Nº 003-2022 - PREFEITURA MUNICIPAL DE MIRANTE DO PARANAPANEMA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=484",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE ADRIANÓPOLIS - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=483",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE ARIPUANÃ - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=482",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 003-2022 - PREFEITURA MUNICIPAL DE COLNIZA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=481",
+          "title": "PROCESSO SELETIVO Nº 007-2022 - CEMMIL - MOGI MIRIM E MOGI GUAÇU - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=480",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 002-2022 - PREFEITURA MUNICIPAL DE NANTES - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=479",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE MAMBORÊ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=478",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE AMÉRICO BRASILIENSE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=477",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - CÂMARA MUNICIPAL DE PRIMEIRO DE MAIO - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=476",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2022 - PREFEITURA MUNICIPAL DE OURO VERDE - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=475",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE RIBEIRÃO DOS ÍNDIOS - SP"
+        }
+      ],
+      "scripts": [
+        "https://www.klcconcursos.com.br/js/estado_cidade.js",
+        "https://www.klcconcursos.com.br/js/javascript.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://code.jquery.com/jquery-2.0.0.js",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "klc_open",
+      "url": "https://www.klcconcursos.com.br?pag=&sub=3",
+      "kind": "tab2",
+      "observed_at": "2026-09-08T14:52:33.077225+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 19566,
+      "sha256": "095198c38122a508e2b31e2b9704fda14502a7d15b4e7da3fb4c5754e9ca4c90",
+      "file": "klc_open-tab2.html",
+      "encoding": "utf-8",
+      "title": "KLC Concursos e Consultoria em Gestão Pública",
+      "links": [
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Acesso ao Menu do Candidato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/visao/home.php",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=nos",
+          "title": "Nossa Empresa"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Inscrições"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=rec",
+          "title": "Recursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ctt",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=ES",
+          "title": "ES"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=GO",
+          "title": "GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MG",
+          "title": "MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MS",
+          "title": "MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MT",
+          "title": "MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=PR",
+          "title": "PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RJ",
+          "title": "RJ"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RS",
+          "title": "RS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SC",
+          "title": "SC"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SP",
+          "title": "SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Consulte sua Inscrição"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=1",
+          "title": "CONCURSOS ABERTOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "title": "CONCURSOS EM ANDAMENTO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=0",
+          "title": "CONCURSOS FUTUROS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=3",
+          "title": "CONCURSOS ENCERRADOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=627",
+          "title": "teste"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=472",
+          "title": "CONCURSO PÚBLICO Nº 002-2022 - PREFEITURA MUNICIPAL DE DRACENA - SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=471",
+          "title": "CONCURSO PÚBLICO Nº 001-2022 - PREFEITURA MUNICIPAL DE IPORÃ - PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=462",
+          "title": "EDITAL DE TESTE SELETIVO - VILA RICA - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=mco&id=431",
+          "title": "PROCESSO SELETIVO SIMPLIFICADO Nº 001-2022 - PREFEITURA MUNICIPAL DE GAÚCHA DO NORTE - MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=2",
+          "title": "Veja mais..."
+        }
+      ],
+      "scripts": [
+        "https://www.klcconcursos.com.br/js/estado_cidade.js",
+        "https://www.klcconcursos.com.br/js/javascript.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://code.jquery.com/jquery-2.0.0.js",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "fepese_open",
+      "url": "https://2026pseducasj.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "kind": "document-tab0",
+      "observed_at": "2026-09-08T14:52:33.077225+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 5876,
+      "sha256": "d4d565c459a0a22d809f5583138469bbb7d728c8b6f79e5250822e63a7ca364e",
+      "file": "fepese_open-document-tab0.html",
+      "encoding": "windows-1252",
+      "title": "2026 - Município de São José",
+      "links": [
+        {
+          "url": "https://2026pseducasj.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": "Principal"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": "Edital"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": "Perguntas"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": "Cronograma"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br/inscricao/#!/edital/39693d61db1f8c777c9c7e4b7cc49bbc",
+          "title": "Inscrição"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": "Contato"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=download&arquivo=TR01_2026_001_PS_Sao_Jose_Educa.pdf&inline=1",
+          "title": "Termo de Retificação nº 1"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br?go=download&arquivo=2026_001_PS_Sao_Jose_Educa_TR01.pdf&inline=1",
+          "title": "Edital 005/2026"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://2026pseducasj.fepese.org.br/class/funcoes.js"
+      ]
+    },
+    {
+      "source": "nossorumo_open",
+      "url": "https://nossorumo.org.br/Views/Home/Index.cshtml.min.js?v=PG2LKSW7xn5SLHn5cuFgBUQBLlq1QOnsTQiwhd9d2BM",
+      "kind": "component0",
+      "observed_at": "2026-09-08T14:52:33.077225+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 3355,
+      "sha256": "3c6d8b2925bbc67e522c79f972e1600544012e5ab540e9ec4d08b085df5dd813",
+      "file": "nossorumo_open-component0.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "nossorumo_open",
+      "url": "https://nossorumo.org.br/Views/Modais/_PublicacoesModal.cshtml.min.js?v=8h3C80bjrLrOBibYtrpu9Icn51zZwM7wUPlYNHZuRZo",
+      "kind": "component1",
+      "observed_at": "2026-09-08T14:52:33.762937+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 12158,
+      "sha256": "f21dc2f346e3acbace0626d8b6ba6ef48727e75cd9c0cef050f95834766e459a",
+      "file": "nossorumo_open-component1.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

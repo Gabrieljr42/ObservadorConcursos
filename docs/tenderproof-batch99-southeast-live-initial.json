@@ -1,0 +1,119 @@
+{
+  "observed_at": "2026-09-08T14:58:19.061728+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+  "cycles": [
+    {
+      "source": "fapesp_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-b1101bfc615b",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesp.br/index.php/processoseletivo",
+          "file": "fapesp_selection-cycle1-listing-d7c477ceae.html",
+          "sha256": "0c258715d213cfbb8836442885cb6b92f40563d77f68508867e7be66cc48a605",
+          "bytes": 64341,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:58:19.753390+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-5e8de91b4296",
+          "candidate": {
+            "candidate_id": "fapesp_selection-4470",
+            "title_observed": "FAPESP - Concurso Público n o 01/2026",
+            "detail_url_observed": "https://fapesp.br/index.php/processoseletivo",
+            "external_id": "4470",
+            "observed_at": "2026-09-08T14:58:19.905038Z",
+            "source": "fapesp_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesp.br/index.php/processoseletivo",
+              "file": "fapesp_selection-cycle1-detail-507902ae49.html",
+              "sha256": "65273de91e8c55600af6c3a9c9f9dc33e7af5eb447dd4dd6730728fc2cb5aca9",
+              "bytes": 64341,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:58:20.556805+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesp_selection-98cd7443aaeb84b8",
+            "title": "Concurso Público n o 01/2026",
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Concurso Público n o 01/2026' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: Homologação do resultado final do concurso; Rerratificação do edital de divulgação de resultados; Resultado da análise dos recursos contra nota da prova objetiva e contra a classificação prévia, resultado da realização da nova inspeção (junta médica) e a classificação final; Edital de convocação para realização de junta médica; Retifica o Edital de resultado da perícia médica para os candidatos classificados e inscritos na condição de pessoa com deficiência para o cargo de Analista Administrativo)."
+          },
+          "artifact": {
+            "artifact_id": "art-c7dcec1108",
+            "sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+            "byte_len": 3980108,
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:58:21.492724Z",
+            "storage_path": "art-c7dcec1108-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf"
+          },
+          "total_pages": 58,
+          "processed_pages": 58,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=58/58",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 7.219
+    }
+  ]
+}

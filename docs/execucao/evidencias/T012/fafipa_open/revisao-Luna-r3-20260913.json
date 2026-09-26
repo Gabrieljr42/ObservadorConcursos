@@ -1,0 +1,37 @@
+{
+  "review": "Luna independent read-only review",
+  "date": "2026-09-13",
+  "verdict": "FAFIPA_PDF_R3_ACCEPT_FOR_IMPORT_PROPOSAL",
+  "scope": [
+    "T012-fafipa-open-reviewed-run-r3.json",
+    "T012-fafipa-open-pdf-r3-receipt.json",
+    "artifacts/fafipa-4208-edital.pdf",
+    "backend/tests/test_t012_fafipa_pdf_r3.py",
+    "backend/tests/test_t012_fafipa.py"
+  ],
+  "artifact": {
+    "source": "fafipa_open",
+    "external_id": "4208",
+    "identity": "Concurso Público do Município de Mirador - PR",
+    "sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "byte_len": 3630911,
+    "pages": 38,
+    "content_type": "application/pdf",
+    "mechanism": "BoundedHTTPDriver",
+    "allowlist_hosts": ["anexos-r2.selecao.net.br"],
+    "official_detail_url": "https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+    "url_final": "https://anexos-r2.selecao.net.br/uploads/281/concursos/4208/anexos/7c626742-c657-4e0c-b36c-7d59336ee942.pdf"
+  },
+  "checks": {
+    "identity_and_publicability": "PASS: Mirador/PR, external_id 4208 and official detail URL are consistently bound; no source-wide or duplicate identity was introduced.",
+    "field_coverage": "PASS: title, agency, edital 001/2026, registration dates, exam date and 14 cargo entries are present; cadastro-reserva remains explicit.",
+    "evidence_provenance": "PASS: every evidence item points to this artifact, exact SHA, URL, page and pdf_text method; snippets were reproduced from the local PDF by test.",
+    "schema_and_revalidation": "PASS: reviewed-run.v1 validates and importer dry-run returns status=validated with fields titulo/orgao/edital_numero/inscricao_inicio/inscricao_fim/prova_data/cargos; reference_only=true and not_applied are preserved.",
+    "side_effects": "PASS: review and dry-run performed without API, database, proposal approval or apply; prior HTML proposal receipt is superseded by this PDF run."
+  },
+  "tests": {
+    "command": "backend\\.venv\\Scripts\\python.exe -m pytest -q tests/test_t012_fafipa_pdf_r3.py tests/test_t012_fafipa.py",
+    "result": "4 passed in 3.62s"
+  },
+  "gate": "Accept import/proposal preparation only; normal live revalidation and explicit approval/apply gates remain required."
+}

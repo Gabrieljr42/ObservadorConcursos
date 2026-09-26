@@ -1,0 +1,12 @@
+{
+  "schema": "t005.concurso32.import-proposal.v1",
+  "timestamp": "2026-09-13T00:41:17.4476126-03:00",
+  "backup": "/backups/pilot-20260913T033543801Z",
+  "envelope": {"path": "docs/execucao/evidencias/T005/T005-concurso32-reviewed-run-owner1.json", "sha256": "731cf435170611e4fbf1ffbe53c5524dc280f578400fa28e41bcc8bae9c828f0", "bytes": 35767, "run_id": "tp-reviewed-9b6433a0bdb236a6f69bc4e5eaa17c64"},
+  "artifact": {"sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2", "bytes": 429261, "pages": 23},
+  "import": {"status": "imported", "fields": ["cargos", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa"]},
+  "proposal": {"id": "tpp-f1a450209aec0ad7af09922440daf557", "hash": "14367cf693d25da3da37c0352c928e8a656d02a39d4e1ad27929ad336613d610", "state": "proposed", "concurso_id": 32, "baseline_version": 81, "proposed_cargo_count": 1, "eligible_fields": [], "blocked_cargos": "valor não reproduzido pelo extrator sobre os bytes preservados", "status": "MISMATCH_REVIEW_REQUIRED"},
+  "counts_after_both": {"proposals": 89, "versions": 85, "outbox": 85, "notifications": 84},
+  "approve_apply": false,
+  "next_gate": "independent review must resolve cargos eligibility; no retry"
+}

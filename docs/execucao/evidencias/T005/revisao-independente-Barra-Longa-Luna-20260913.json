@@ -1,0 +1,73 @@
+{
+  "schema": "t005.independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "offline_read_only",
+  "decision": "DEVOLVIDO_GATE_IMPORT",
+  "scope": "concurso32/source47/elo_open/external129",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T005/artifacts/T005-concurso32-art-07b137af65.pdf",
+    "artifact_id": "art-07b137af65",
+    "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+    "byte_len": 429261,
+    "pages": 23,
+    "verified_against_parser": true
+  },
+  "identity": {
+    "source": "elo_open",
+    "source_id": 47,
+    "external_id": "129",
+    "concurso_id": 32,
+    "title": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+    "edital": "01/2026",
+    "evidence": "p.1 masthead: BARRA LONGA / MG; PROCESSO SELETIVO PÚBLICO - EDITAL Nº 01/2026"
+  },
+  "content_audit": {
+    "cargo_table": {
+      "page": 18,
+      "count": 7,
+      "names": [
+        "ACS - PSF 001 - MICRO AREA 03",
+        "ACS - PSF 001 - MICROAREA 04",
+        "ACS - PSF 001 - MICRO AREA 05",
+        "ACS - PSF 002 - MICRO AREA 07",
+        "ACS - PSF 002 - MICRO AREA 09",
+        "ACS - PSF 003 - MICRO AREA 12",
+        "ACS - PSF 003 - MICRO AREA 15"
+      ],
+      "each_row": "1 vaga ampla, PcD --; 40h; R$ 3.242,00; taxa R$ 162,10; requisitos: Ensino Médio, residência na comunidade, formação inicial >=40h; prova objetiva (20 questões/100 pontos/portões 08h)",
+      "totals": {"vagas": 7, "ampla": 7, "pcd": 0, "cr": null},
+      "snippet": "3.242,00 -- 01 ... Possuir Ensino Médio Completo ... 40h 162,10"
+    },
+    "schedule": {
+      "page": 23,
+      "registration": "18/08/2026 a 18/09/2026, 15h",
+      "exam": "18/10/2026",
+      "proof": "Realização das Provas: Objetiva de Múltipla Escolha e TAF",
+      "snippet": "18/10/2026 ... Realização das Provas: Objetiva de Múltipla Escolha e TAF"
+    },
+    "retificacoes_publicacoes": "Nenhuma comprovada no PDF; corretamente bloqueadas, não inferidas como ausência global.",
+    "u_fffd": 0,
+    "parser_tests": "backend/tests/test_barra_longa_parser.py: 3 passed",
+    "derivations": {"a_b_canonical_sha256": "32CD93D1567F836C18EC361B8DE791E620581B01BBB97998FCD6C498C54EB4D1", "equal": true},
+    "parser_guards": ["SHA/bytes/pages", "identity/edit", "seven unique rows", "required literals", "U+FFFD", "drift"]
+  },
+  "provenance_and_state": {
+    "owner_user_id": 1,
+    "reference_only": true,
+    "run_id": "tp-reviewed-c05f09933ff49862eed9b2a7ccb6206f",
+    "receipt": "preflight passed; derivations equal; proposal prepared_isolated_no_apply",
+    "dry_run": "validated; catalogue_mutated=false",
+    "isolated_proposal": "prepared; apply=false; no proposal_id/version/event",
+    "baseline_cargos": null,
+    "network": false,
+    "catalogue_mutated": false
+  },
+  "blocking_findings": [
+    "A extração específica barra_longa_parser.py ainda não está integrada ao caminho fields.py/service; não há gate que garanta promoção de cargos no fluxo normal.",
+    "TAF é sustentado por p.23, mas a evidência por cargo em cargos aponta somente p.18; anexar evidência p.23 ao campo provas antes de import/proposta normal.",
+    "Não liberar import/proposta normal até regenerar envelope após integração e repetir dry-run/isolated proposal com SHA idêntico."
+  ],
+  "next_gate": "Integrar branch SHA-pinned source=elo_open/external_id=129 em fields.py (fail-closed), adicionar evidência p.23 para TAF, executar testes + duas derivações + dry-run + proposta isolada; então nova revisão independente pré-import.",
+  "mutation": "none"
+}

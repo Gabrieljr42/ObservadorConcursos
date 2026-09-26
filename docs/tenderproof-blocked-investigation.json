@@ -1,0 +1,1277 @@
+{
+  "generated_at": "2026-09-07T23:49:02.711678+00:00",
+  "scope": "14 blocked sources, original URL rechecks and search-observed official alternatives; no adapter implementation or production activation",
+  "probe_policy": {
+    "concurrent_sources": 4,
+    "max_response_bytes": 1048576,
+    "request_timeout_seconds": 12,
+    "total_timeout_seconds_per_url": 25,
+    "max_redirects": 3,
+    "max_detail_pages_per_source": 1,
+    "tls_verified": true,
+    "credentials": false,
+    "allowed_destinations": "exact catalogue or explicitly reviewed redirect hosts, public DNS, HTTP(S), default ports",
+    "document_content_fetched": false,
+    "signed_link_query_values_retained": false
+  },
+  "search_note": "Primary-page search excerpts identify candidate URLs; index availability does not override local HTTP/TLS/DNS evidence. No authentication, paid browser, challenge bypass or disabled TLS. Non-HTML bytes not downloaded.",
+  "sources": [
+    {
+      "number": 3,
+      "source_type": "aocp_open",
+      "name": "Instituto AOCP - Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.institutoaocp.org.br",
+          "observed_at": "2026-09-07T23:36:30.727647+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.institutoaocp.org.br",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5564,
+          "sha256": "2aa7b7c920fc1b53979d069cc78b15793b99580077aa6206533df75fed951580",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        },
+        {
+          "requested_url": "https://www.institutoaocp.org.br/concursos.jsp",
+          "observed_at": "2026-09-07T23:36:30.879357+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.institutoaocp.org.br/concursos.jsp",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5624,
+          "sha256": "7db064147c95fbaef3b1bb8e7671fdf816a3cf1285a61112516ec032942c81f9",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.institutoaocp.org.br",
+          "observed_at": "2026-09-07T23:48:59.752524+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.institutoaocp.org.br",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5564,
+          "sha256": "191f18c52990043943fe8277be2bf690037599158875e8100d3eb4fb617454cd",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge"
+        },
+        {
+          "requested_url": "https://www.institutoaocp.org.br/concursos.jsp",
+          "observed_at": "2026-09-07T23:48:59.885458+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.institutoaocp.org.br/concursos.jsp",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5624,
+          "sha256": "8f4487bdc54c4506495ac1eee2cbdaae57146f49f62753c03c11ed325fb65925",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge"
+        },
+        {
+          "requested_url": "https://www.institutoaocp.org.br/concursos/status/em-andamento",
+          "observed_at": "2026-09-07T23:48:59.969595+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.institutoaocp.org.br/concursos/status/em-andamento",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5693,
+          "sha256": "2cf29cfabe0b45a009930593f31524f47f31b724be34dd3dc5816461426af494",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge"
+        }
+      ],
+      "alternative_url": "https://www.institutoaocp.org.br/concursos/status/em-andamento",
+      "investigation_note": "Página oficial indexada com filtro em andamento; não usar portal de notícias como substituto documental. Challenge local pode persistir; investigar renderização permitida e endpoints públicos observados.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Página oficial indexada com filtro em andamento; não usar portal de notícias como substituto documental. Challenge local pode persistir; investigar renderização permitida e endpoints públicos observados.",
+      "primary_search_evidence_urls": [
+        "https://www.institutoaocp.org.br/concursos/status/em-andamento",
+        "https://noticias.institutoaocp.org.br/blog/evite-fraudes-sites-falsos-se-passam-pelo-instituto-aocp/"
+      ]
+    },
+    {
+      "number": 8,
+      "source_type": "seprod_open",
+      "name": "SEPROD Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.seprod.com.br/concursos/?utm_refererencia=em_andamento",
+          "observed_at": "2026-09-07T23:36:31.798854+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.seprod.com.br/concursos/?utm_refererencia=em_andamento",
+          "observed_at": "2026-09-07T23:48:59.756551+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        },
+        {
+          "requested_url": "https://www.seprod.com.br/concursos/",
+          "observed_at": "2026-09-07T23:49:00.097420+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        }
+      ],
+      "alternative_url": "https://www.seprod.com.br/concursos/",
+      "investigation_note": "Rota oficial sem parâmetro indexada. Compartilha cadeia TLS; não remover validação. Exige correção da cadeia ou confiança pública verificável.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Rota oficial sem parâmetro indexada. Compartilha cadeia TLS; não remover validação. Exige correção da cadeia ou confiança pública verificável.",
+      "primary_search_evidence_urls": [
+        "https://www.seprod.com.br/concursos/"
+      ]
+    },
+    {
+      "number": 16,
+      "source_type": "fumarc_open",
+      "name": "FUMARC Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.fumarc.com.br/SitePages/Home.aspx",
+          "observed_at": "2026-09-07T23:36:33.160877+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.fumarc.com.br/SitePages/Home.aspx",
+          "observed_at": "2026-09-07T23:48:59.757542+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        },
+        {
+          "requested_url": "https://www.fumarc.com.br/conheca-a-fumarc",
+          "observed_at": "2026-09-07T23:48:59.829939+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        }
+      ],
+      "alternative_url": "https://www.fumarc.com.br/conheca-a-fumarc",
+      "investigation_note": "Página institucional oficial indexada; não substitui listagem. Resultados de detalhes antigos indicam erro de aplicativo SharePoint. TLS e aplicação são impedimentos separados.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Página institucional oficial indexada; não substitui listagem. Resultados de detalhes antigos indicam erro de aplicativo SharePoint. TLS e aplicação são impedimentos separados.",
+      "primary_search_evidence_urls": [
+        "https://www.fumarc.com.br/conheca-a-fumarc"
+      ]
+    },
+    {
+      "number": 23,
+      "source_type": "unifil_open",
+      "name": "Instituto UniFil",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://main.institutounifil.com.br",
+          "observed_at": "2026-09-07T23:36:35.348327+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://main.institutounifil.com.br",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5482,
+          "sha256": "91ed9912fde842cf3f0a52d67ca2a858954616f3fa126a4af1098f9b07081120",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://main.institutounifil.com.br",
+          "observed_at": "2026-09-07T23:48:59.758546+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://main.institutounifil.com.br",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5482,
+          "sha256": "120ccac7876bd0862c5758bde6fa05dd880117d453d653d7ef4e7e0f95296ba3",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge"
+        },
+        {
+          "requested_url": "https://main.institutounifil.com.br/inscricoes-abertas",
+          "observed_at": "2026-09-07T23:49:01.431205+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://main.institutounifil.com.br/inscricoes-abertas",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5557,
+          "sha256": "af0f34727cf6ec68c2020d6ba464cdc0962e92e09435809963e09e9bf1381ad1",
+          "title": "Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "sparse_html_requires_browser_or_api_investigation",
+          "state": "blocked_or_challenge"
+        }
+      ],
+      "alternative_url": "https://main.institutounifil.com.br/inscricoes-abertas",
+      "investigation_note": "Rota oficial indexada com contador e detalhes /concurso/193. Portal institucional www.institutounifil.com.br aponta plataforma; não comprova acesso do coletor nem cobertura.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Rota oficial indexada com contador e detalhes /concurso/193. Portal institucional www.institutounifil.com.br aponta plataforma; não comprova acesso do coletor nem cobertura.",
+      "primary_search_evidence_urls": [
+        "https://main.institutounifil.com.br/inscricoes-abertas"
+      ]
+    },
+    {
+      "number": 25,
+      "source_type": "leandroferreira_open",
+      "name": "Leandro Ferreira & Consultoria",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.leandroferreira.com.br",
+          "observed_at": "2026-09-07T23:36:35.826321+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.leandroferreira.com.br",
+          "observed_at": "2026-09-07T23:48:59.869943+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS"
+        }
+      ],
+      "alternative_url": null,
+      "investigation_note": "Busca retornou prefeitura e câmara do município de Leandro Ferreira, não a banca Leandro Ferreira & Consultoria. Sem vínculo oficial inequívoco; preservar ID e exigir documento de origem da entrada, sem substituir pela prefeitura homônima.",
+      "alternative_status": "not_found",
+      "adapter_activated": false,
+      "next_action": "Busca retornou prefeitura e câmara do município de Leandro Ferreira, não a banca Leandro Ferreira & Consultoria. Sem vínculo oficial inequívoco; preservar ID e exigir documento de origem da entrada, sem substituir pela prefeitura homônima.",
+      "primary_search_evidence_urls": [
+        "https://www.leandroferreira.mg.gov.br/",
+        "https://leandroferreira.cam.mg.gov.br/licitacoes"
+      ]
+    },
+    {
+      "number": 28,
+      "source_type": "iuds_open",
+      "name": "IUDS Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.iuds.org.br",
+          "observed_at": "2026-09-07T23:36:36.000475+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.iuds.org.br",
+          "observed_at": "2026-09-07T23:48:59.885458+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        },
+        {
+          "requested_url": "https://iuds.org.br/termos.pdf",
+          "observed_at": "2026-09-07T23:49:00.976176+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        }
+      ],
+      "alternative_url": "https://iuds.org.br/termos.pdf",
+      "investigation_note": "Documento de termos no domínio oficial cita Gestor Edital. Não é edital principal nem prova de listagem. PDFs históricos em cdn.iuds.org.br comprovam hipótese documental, não cobertura atual. TLS pendente no host listado.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Documento de termos no domínio oficial cita Gestor Edital. Não é edital principal nem prova de listagem. PDFs históricos em cdn.iuds.org.br comprovam hipótese documental, não cobertura atual. TLS pendente no host listado.",
+      "primary_search_evidence_urls": [
+        "https://iuds.org.br/termos.pdf",
+        "https://cdn.iuds.org.br/edital/1/97/71b34fb9c0fc17361f2ef6cc33e940e0.pdf"
+      ]
+    },
+    {
+      "number": 38,
+      "source_type": "institutoconsulplan_open",
+      "name": "Instituto Consulplan",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://institutoconsulplan.azurewebsites.net/Concursos",
+          "observed_at": "2026-09-07T23:36:37.569745+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://institutoconsulplan.azurewebsites.net/Concursos",
+          "content_type": "text/html",
+          "bytes": 1148,
+          "sha256": "4f9203db638e585baf38b7be11618ec2b6fd9a4aeb522803bfb17e6f39165608",
+          "title": "Web App - Unavailable",
+          "links_observed": 2,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://institutoconsulplan.azurewebsites.net/Concursos",
+          "observed_at": "2026-09-07T23:49:00.048886+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://institutoconsulplan.azurewebsites.net/Concursos",
+          "content_type": "text/html",
+          "bytes": 1148,
+          "sha256": "4f9203db638e585baf38b7be11618ec2b6fd9a4aeb522803bfb17e6f39165608",
+          "title": "Web App - Unavailable",
+          "links_observed": 2,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge"
+        },
+        {
+          "requested_url": "https://www.institutoconsulplan.org.br",
+          "observed_at": "2026-09-07T23:49:00.159719+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 200,
+          "final_url": "https://www.institutoconsulplan.org.br",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 30075,
+          "sha256": "6ab85c66e3566322ea81d98b50d9b7f35b77b5a4e95251aa3519d9f30a1d14ad",
+          "title": "Instituto Consulplan",
+          "links_observed": 33,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [
+              {
+                "label": "Concursos",
+                "url": "https://www.institutoconsulplan.org.br/Concursos",
+                "context": "Concursos",
+                "query_redacted": false
+              }
+            ],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_observed"
+        }
+      ],
+      "alternative_url": "https://www.institutoconsulplan.org.br",
+      "investigation_note": "Domínio oficial indicado em publicação hospedada em cdnsite.institutoconsulplan.org.br/concursos/1328/12_1253088.pdf. Investigar identidade/alias com outras entradas Consulplan; não fundir automaticamente o ID Azure.",
+      "alternative_status": "http_observed_not_homologated",
+      "adapter_activated": false,
+      "next_action": "Domínio oficial indicado em publicação hospedada em cdnsite.institutoconsulplan.org.br/concursos/1328/12_1253088.pdf. Investigar identidade/alias com outras entradas Consulplan; não fundir automaticamente o ID Azure.",
+      "primary_search_evidence_urls": [
+        "https://cdnsite.institutoconsulplan.org.br/concursos/1328/12_1253088.pdf"
+      ]
+    },
+    {
+      "number": 40,
+      "source_type": "ufu_selection",
+      "name": "UFU / DIRPS - Seleções e Concursos",
+      "category": "institutional_selection",
+      "original_observations": [
+        {
+          "requested_url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "observed_at": "2026-09-07T23:36:37.914931+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "http_status": 200,
+          "final_url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "content_type": "text/html; charset=UTF-8",
+          "state": "response_too_large",
+          "bytes": 1064960,
+          "reason": "resposta excede 1 MiB; corpo parcial descartado",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "observed_at": "2026-09-07T23:49:00.275709+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "http_status": 200,
+          "final_url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos",
+          "content_type": "text/html; charset=UTF-8",
+          "state": "response_too_large",
+          "bytes": 1064960,
+          "reason": "resposta excede 1 MiB; corpo parcial descartado"
+        },
+        {
+          "requested_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1828",
+          "observed_at": "2026-09-07T23:49:00.878390+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 200,
+          "final_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1828",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 44703,
+          "sha256": "215bec9a133f310d8eed91078ce3048dcb3ee0745bd0bc52965eba250782ce4e",
+          "title": "DIRPS - Portal de Seleção: Edital",
+          "links_observed": 45,
+          "document_links_observed": 3,
+          "document_samples": [
+            {
+              "label": "13/08/2026 09:36 Retificação do Edital de Condições Específicas",
+              "url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/e8196c340a699ae946898b4f1f315056",
+              "context": "13/08/2026 09:36 Retificação do Edital de Condições Específicas",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "27/07/2026 16:05 Edital de Condições Gerais",
+              "url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/7f11b15655b2342b01a2db7edb7961cd",
+              "context": "27/07/2026 16:05 Edital de Condições Gerais",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "27/07/2026 16:04 Edital de Condições Específicas",
+              "url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/22203ced961782af57ff7fc13e88a964",
+              "context": "27/07/2026 16:04 Edital de Condições Específicas",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            }
+          ],
+          "document_sample_role_counts": {
+            "contest_document_candidate": 3
+          },
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [
+              {
+                "label": "Contato",
+                "url": "https://www.portalselecao.ufu.br/servicos/HelpDesk/criar_solicitacao",
+                "context": "Contato",
+                "query_redacted": false
+              },
+              {
+                "label": "Minhas Solicitações.",
+                "url": "https://www.portalselecao.ufu.br/servicos/HelpDesk/minhas_solicitacoes",
+                "context": "Minhas Solicitações.",
+                "query_redacted": false
+              },
+              {
+                "label": "Licitações e contratos",
+                "url": "https://www.portalselecao.ufu.br/acesso-a-informacao/licitacoes-e-contratos",
+                "context": "Licitações e contratos",
+                "query_redacted": false
+              }
+            ],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_observed"
+        }
+      ],
+      "alternative_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1828",
+      "investigation_note": "Detalhe oficial indexado de concurso docente ICENP 123/2026. Listagem acima de1MiB é limitação operacional, não indisponibilidade. Planejar particionamento por URLs observadas ou limite específico medido; separar vestibulares. Documento específico não prova descoberta completa.",
+      "alternative_status": "http_observed_not_homologated",
+      "adapter_activated": false,
+      "next_action": "Detalhe oficial indexado de concurso docente ICENP 123/2026. Listagem acima de1MiB é limitação operacional, não indisponibilidade. Planejar particionamento por URLs observadas ou limite específico medido; separar vestibulares. Documento específico não prova descoberta completa.",
+      "primary_search_evidence_urls": [
+        "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1828"
+      ]
+    },
+    {
+      "number": 41,
+      "source_type": "idgran_open",
+      "name": "IDGRAN Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://idgran.com.br",
+          "observed_at": "2026-09-07T23:36:38.384625+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://idgran.com.br",
+          "observed_at": "2026-09-07T23:49:00.435070+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS"
+        }
+      ],
+      "alternative_url": null,
+      "investigation_note": "Busca literal não encontrou entidade organizadora oficial: resultados irrelevantes/homônimos. DNS continua pendente; exigir referência original/correção de identidade antes de escolher outro domínio.",
+      "alternative_status": "not_found",
+      "adapter_activated": false,
+      "next_action": "Busca literal não encontrou entidade organizadora oficial: resultados irrelevantes/homônimos. DNS continua pendente; exigir referência original/correção de identidade antes de escolher outro domínio.",
+      "primary_search_evidence_urls": []
+    },
+    {
+      "number": 51,
+      "source_type": "shdias_open",
+      "name": "SHDias Consultoria e Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.shdias.com.br/concursos/",
+          "observed_at": "2026-09-07T23:36:41.132170+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.shdias.com.br/concursos/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 1627,
+          "sha256": "d94b61f8a9df5fd716b133a7af166613de64a588b68260a1db9e84fa0608583f",
+          "title": null,
+          "links_observed": 4,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.shdias.com.br/concursos/",
+          "observed_at": "2026-09-07T23:49:00.439066+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.shdias.com.br/concursos/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 1627,
+          "sha256": "48b79d96ef9e7660f2b990d6c9ae5a2f73df65cb1077ca08ef4e971660a94c1e",
+          "title": null,
+          "links_observed": 4,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge"
+        },
+        {
+          "requested_url": "https://www.shdias.com.br/concursos/index/",
+          "observed_at": "2026-09-07T23:49:01.030773+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 200,
+          "final_url": "https://www.shdias.com.br/concursos/index/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 1627,
+          "sha256": "edbf58e9a99a2b6815fca2390c47b1d1a0b3c00c74528d7c76ad758f29241e99",
+          "title": null,
+          "links_observed": 4,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_observed"
+        }
+      ],
+      "alternative_url": "https://www.shdias.com.br/concursos/index/",
+      "investigation_note": "Rota oficial indexada com concursos e filtros. URL atual /concursos/ pode estar obsoleta; challenge deve ser confirmado na rota observada sem bypass. Residência médica exige triagem de escopo.",
+      "alternative_status": "http_observed_not_homologated",
+      "adapter_activated": false,
+      "next_action": "Rota oficial indexada com concursos e filtros. URL atual /concursos/ pode estar obsoleta; challenge deve ser confirmado na rota observada sem bypass. Residência médica exige triagem de escopo.",
+      "primary_search_evidence_urls": [
+        "https://www.shdias.com.br/concursos/index/"
+      ]
+    },
+    {
+      "number": 61,
+      "source_type": "oppus_open",
+      "name": "Oppus Concursos",
+      "category": "banca",
+      "original_observations": [
+        {
+          "requested_url": "https://www.oppusconcursos.com.br",
+          "observed_at": "2026-09-07T23:36:42.802546+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.oppusconcursos.com.br",
+          "content_type": "text/html",
+          "bytes": 6192,
+          "sha256": "fede7a249c4505a45d17c9bf3bc5f45d351314ee15ab49b5af3091e5ac1a3b3b",
+          "title": "Checking your browser before accessing. Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://www.oppusconcursos.com.br",
+          "observed_at": "2026-09-07T23:49:01.058774+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 403,
+          "final_url": "https://www.oppusconcursos.com.br",
+          "content_type": "text/html",
+          "bytes": 6192,
+          "sha256": "fede7a249c4505a45d17c9bf3bc5f45d351314ee15ab49b5af3091e5ac1a3b3b",
+          "title": "Checking your browser before accessing. Just a moment...",
+          "links_observed": 0,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "blocked_or_challenge"
+        }
+      ],
+      "alternative_url": null,
+      "investigation_note": "Edital municipal de Pontal2016 confirma organizadora e www.oppusconcursos.com.br. Nenhuma alternativa oficial atual demonstrada. Oppus.shop e autoridade de registro são homônimos e foram excluídos.",
+      "alternative_status": "not_found",
+      "adapter_activated": false,
+      "next_action": "Edital municipal de Pontal2016 confirma organizadora e www.oppusconcursos.com.br. Nenhuma alternativa oficial atual demonstrada. Oppus.shop e autoridade de registro são homônimos e foram excluídos.",
+      "primary_search_evidence_urls": [
+        "https://www.pontal.sp.gov.br/site/processo-seletivo/2016/processo-seletivo-02/edital_abertura.pdf"
+      ]
+    },
+    {
+      "number": 79,
+      "source_type": "fapece_selection",
+      "name": "FAPECE (Ceará) - Seleções",
+      "category": "institutional_selection",
+      "original_observations": [
+        {
+          "requested_url": "https://fapece.ce.gov.br",
+          "observed_at": "2026-09-07T23:36:46.291166+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://fapece.ce.gov.br",
+          "observed_at": "2026-09-07T23:49:01.128858+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "dns_resolution_failed",
+          "error_type": "gaierror",
+          "reason": "nome não resolvido neste ambiente; confirmar endereço e DNS"
+        },
+        {
+          "requested_url": "https://fapece.com.br/",
+          "observed_at": "2026-09-07T23:49:01.131958+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 200,
+          "final_url": "https://fapece.com.br/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 159754,
+          "sha256": "5465eea2840a2ace6e9e3c082c9b445c3607e1fea3071ff2d81a1f94a10b946d",
+          "title": "FAPECE – Fundação Assistencial e Previdenciária da EMATERCE",
+          "links_observed": 28,
+          "document_links_observed": 1,
+          "document_samples": [
+            {
+              "label": "RECADASTRAMENTO 2026",
+              "url": "https://fapece.com.br/wp-content/uploads/2026/06/Recadastramento-2026.pdf",
+              "context": "RECADASTRAMENTO 2026",
+              "query_redacted": false,
+              "document_role_hint": "unclassified_document"
+            }
+          ],
+          "document_sample_role_counts": {
+            "unclassified_document": 1
+          },
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [
+            {
+              "technology": "wordpress",
+              "basis": "HTML marker; reuse hypothesis, not adapter certification"
+            }
+          ],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [
+              {
+                "label": "TEMOS VAGA",
+                "url": "https://fapece.com.br/temos-vaga-2/",
+                "context": "TEMOS VAGA",
+                "query_redacted": false
+              }
+            ],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_observed"
+        }
+      ],
+      "alternative_url": "https://fapece.com.br/",
+      "investigation_note": "Página se identifica como Fundação Assistencial e Previdenciária da EMATERCE, entidade de previdência complementar. Não prova equivalência a fapece.ce.gov.br nem fundação de fomento. Não substituir pelo nome; eleições de conselhos/benefícios fora do escopo.",
+      "alternative_status": "accessible_homonym_identity_unresolved_not_replacement",
+      "adapter_activated": false,
+      "next_action": "Página se identifica como Fundação Assistencial e Previdenciária da EMATERCE, entidade de previdência complementar. Não prova equivalência a fapece.ce.gov.br nem fundação de fomento. Não substituir pelo nome; eleições de conselhos/benefícios fora do escopo.",
+      "primary_search_evidence_urls": [
+        "https://fapece.com.br/"
+      ]
+    },
+    {
+      "number": 80,
+      "source_type": "fapern_selection",
+      "name": "FAPERN (Rio Grande do Norte) - Seleções",
+      "category": "institutional_selection",
+      "original_observations": [
+        {
+          "requested_url": "https://fapern.rn.gov.br",
+          "observed_at": "2026-09-07T23:36:46.293170+00:00",
+          "redirects": [
+            {
+              "from": "https://fapern.rn.gov.br",
+              "to": "https://www.fapern.rn.gov.br/",
+              "status": 301
+            }
+          ],
+          "body_complete": true,
+          "http_status": 503,
+          "final_url": "https://www.fapern.rn.gov.br/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 3523,
+          "sha256": "2ac91c91cdca26d21aaf49d7e238928e585a33057db5f2b058a3ef6b36f5cfbf",
+          "title": "Site temporariamente suspenso — Período Eleitoral 2026",
+          "links_observed": 1,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [
+            {
+              "technology": "wordpress",
+              "basis": "HTML marker; reuse hypothesis, not adapter certification"
+            }
+          ],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_error",
+          "page_kind": "catalogue_listing",
+          "sample_classification_version": 2
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://fapern.rn.gov.br",
+          "observed_at": "2026-09-07T23:49:01.327501+00:00",
+          "redirects": [
+            {
+              "from": "https://fapern.rn.gov.br",
+              "to": "https://www.fapern.rn.gov.br/",
+              "status": 301
+            }
+          ],
+          "body_complete": true,
+          "http_status": 503,
+          "final_url": "https://www.fapern.rn.gov.br/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 3523,
+          "sha256": "2ac91c91cdca26d21aaf49d7e238928e585a33057db5f2b058a3ef6b36f5cfbf",
+          "title": "Site temporariamente suspenso — Período Eleitoral 2026",
+          "links_observed": 1,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [
+            {
+              "technology": "wordpress",
+              "basis": "HTML marker; reuse hypothesis, not adapter certification"
+            }
+          ],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_error"
+        },
+        {
+          "requested_url": "https://www.fapern.rn.gov.br/",
+          "observed_at": "2026-09-07T23:49:01.855177+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 503,
+          "final_url": "https://www.fapern.rn.gov.br/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 3523,
+          "sha256": "2ac91c91cdca26d21aaf49d7e238928e585a33057db5f2b058a3ef6b36f5cfbf",
+          "title": "Site temporariamente suspenso — Período Eleitoral 2026",
+          "links_observed": 1,
+          "document_links_observed": 0,
+          "document_samples": [],
+          "document_sample_role_counts": {},
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [
+            {
+              "technology": "wordpress",
+              "basis": "HTML marker; reuse hypothesis, not adapter certification"
+            }
+          ],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_error"
+        }
+      ],
+      "alternative_url": "https://www.fapern.rn.gov.br/",
+      "investigation_note": "Redirect oficial já observado. Portal suspenso por período eleitoral2026; não é lista vazia. Diário Oficial RN é evidência específica, não fonte substituta automaticamente. Excluir editais de fomento/bolsas sem contratação.",
+      "alternative_status": "not_verified_for_collection",
+      "adapter_activated": false,
+      "next_action": "Redirect oficial já observado. Portal suspenso por período eleitoral2026; não é lista vazia. Diário Oficial RN é evidência específica, não fonte substituta automaticamente. Excluir editais de fomento/bolsas sem contratação.",
+      "primary_search_evidence_urls": [
+        "https://www.cidadao.rn.gov.br/orgaos.html?tab=ipern"
+      ]
+    },
+    {
+      "number": 96,
+      "source_type": "fapeap_selection",
+      "name": "FAPEAP (Amapá) - Seleções",
+      "category": "institutional_selection",
+      "original_observations": [
+        {
+          "requested_url": "https://fapeap.ap.gov.br",
+          "observed_at": "2026-09-07T23:36:51.265716+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação",
+          "page_kind": "catalogue_listing"
+        }
+      ],
+      "recheck_observations": [
+        {
+          "requested_url": "https://fapeap.ap.gov.br",
+          "observed_at": "2026-09-07T23:49:01.336799+00:00",
+          "redirects": [],
+          "body_complete": false,
+          "state": "tls_verification_failed",
+          "error_type": "ConnectError",
+          "reason": "certificado TLS não pôde ser verificado; não houve tentativa sem verificação"
+        },
+        {
+          "requested_url": "https://fapeap.portal.ap.gov.br/publicacoes",
+          "observed_at": "2026-09-07T23:49:01.560967+00:00",
+          "redirects": [],
+          "body_complete": true,
+          "http_status": 200,
+          "final_url": "https://fapeap.portal.ap.gov.br/publicacoes",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 140247,
+          "sha256": "ea4d86e52293de5f4e6be69ed7878a33a4dbfe0a3ddf53920f6e19146f779808",
+          "title": "FAPEAP - Fundação de Amparo à Pesquisa do Amapá",
+          "links_observed": 39,
+          "document_links_observed": 10,
+          "document_samples": [
+            {
+              "label": "Baixar",
+              "url": "https://matrix.amapa.gov.br//storage/publications/66/122320-Portaria nº 0642026 – 1ª Retificação do Cronograma da Chamada Pública nº 0022026 – PROFIXAmapá.pdf",
+              "context": "Portaria 21/08/2026 Retificação Cronograma do PROFIX - Chamada nº 002/2026 - CNPq/CAPES/FAPEAP Baixar",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "Baixar",
+              "url": "https://matrix.amapa.gov.br//storage/publications/66/050013-PORTARIA_063_2026_CENTELHA_3_SUPLENTES_E_CONVOCACAO_54.docx (1).pdf",
+              "context": "Portaria 20/08/2026 Lista dos Projetos Suplentes Habilitados e Inabilitados à Contratação – Programa Centelha 3 ( Chamada Pública nº 007/2025) Baixar",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "Baixar",
+              "url": "https://matrix.amapa.gov.br//storage/publications/66/024402-_Portaria Nº62- Resultado da Análise Técnica (PDPG 2026) ASS.pdf",
+              "context": "Portaria 20/08/2026 Resultado da Análise Técnica – Rede de Pesquisa e Desenvolvimento da Amazônia Legal (Chamada Pública nº 003/2026) Baixar",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "Baixar",
+              "url": "https://matrix.amapa.gov.br//storage/publications/66/095101-_Portaria 059 de resultado final Desafio Startup 2026. ASS.pdf",
+              "context": "Portaria 15/08/2026 Resultado Final –  Programa Prêmio Desafio Startup Amapá 2026 resultado final da Chamada Pública Simplificada nº 004/2026 –  FAPEAP/SETEC, no âmbito do Programa Prêmio Desafio Startup Amapá 2026, nos termos dos  itens 13.3 e 13.4 da Chamada. Baixar",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            },
+            {
+              "label": "Baixar",
+              "url": "https://matrix.amapa.gov.br//storage/publications/66/071052-Portaria_0061_2026_FAPEAP_2_Retificacao_PDPG V.pdf",
+              "context": "Portaria 14/08/2026 2ª Retificação - REDE DE PESQUISA E DESENVOLVIMENTO DA AMAZÔNIA LEGAL Baixar",
+              "query_redacted": false,
+              "document_role_hint": "contest_document_candidate"
+            }
+          ],
+          "document_sample_role_counts": {
+            "contest_document_candidate": 5
+          },
+          "discarded_non_http_private_or_credential_links": 0,
+          "document_scope": "links observados nesta página; bytes, identidade, vigência e relevância dos documentos não validados",
+          "detail_links_observed": 0,
+          "detail_link_samples": [],
+          "pagination_samples": [],
+          "status_tab_samples": [],
+          "technology_hints": [],
+          "scope_signals": {
+            "personnel_or_contest_link_samples": [],
+            "possible_funding_or_scholarship_link_samples": [
+              {
+                "label": "Bolsa Produtividade",
+                "url": "https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade",
+                "context": "Bolsa Produtividade",
+                "query_redacted": false
+              }
+            ],
+            "basis": "triagem lexical; decisão de escopo exige leitura do edital"
+          },
+          "rendering_hint": "html_observed",
+          "state": "http_observed"
+        }
+      ],
+      "alternative_url": "https://fapeap.portal.ap.gov.br/publicacoes",
+      "investigation_note": "Portal estadual identifica FAPEAP e publicações; alternativa oficial observada. Amostra contém chamadas de startups, bolsas e pesquisa, fora do escopo de contratação. Acesso alternativo não homologa seleções de pessoas.",
+      "alternative_status": "http_observed_not_homologated",
+      "adapter_activated": false,
+      "next_action": "Portal estadual identifica FAPEAP e publicações; alternativa oficial observada. Amostra contém chamadas de startups, bolsas e pesquisa, fora do escopo de contratação. Acesso alternativo não homologa seleções de pessoas.",
+      "primary_search_evidence_urls": [
+        "https://fapeap.portal.ap.gov.br/publicacoes"
+      ]
+    }
+  ],
+  "environment_note": "First sandbox attempt produced transport_error; discarded as environment failure. Recorded results are bounded network-approved run with verified TLS, same code and limits."
+}

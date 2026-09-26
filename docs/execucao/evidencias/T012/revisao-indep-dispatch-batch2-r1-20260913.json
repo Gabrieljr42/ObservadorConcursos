@@ -1,0 +1,28 @@
+{
+  "schema": "t012.luna.dispatch-batch2-r1-review.v1",
+  "verdict": "CHANGES_REQUIRED",
+  "scope": {
+    "klc": "klc_open/632",
+    "epl": "epl_open/52",
+    "publiconsult": "publiconsult_open/681",
+    "avancasp": "avancasp_open/272",
+    "apta": "apta_open/708"
+  },
+  "findings": {
+    "strict_dispatch": "PASS: fields.py gates all five branches by exact source+external_id; wrong external_id becomes FAILED and does not fall through to generic output. Batch dispatch test passed 6/6.",
+    "pins_and_drift": "PASS: KLC/EPL/Publiconsult/Avança/APTA parser paths validate their pinned SHA/bytes (and URL/pages where applicable); parser tests passed for identity, U+FFFD, truncation and drift cases.",
+    "evidence": "PASS: source-specific parsers return repository ExtractedField/Evidence shapes and preserve literal PDF provenance; Publiconsult and Avança preserve exact official artifact identity.",
+    "apta_contract": "BLOCKER: current fields.py now routes apta_open/708, so the real revalidation test test_apta_real_revalidate_stops_at_missing_strong_binding still expects the old unintegrated 422 and fails (DID NOT RAISE). The APTA parser docstring and strong-preflight evidence also still state routing is absent. This is a contract/test/documentation mismatch that must be resolved explicitly before deploy.",
+    "fallback_risk": "No generic fallback was observed for wrong pins. APTA's current route relies on publication's exact orgao+edital strong-binding fallback; this must be documented/tested as intentional, or the route must be removed until an explicit identity resolver is supplied."
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "result": "6 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py docs/execucao/evidencias/T012/epl_open/test_strong_preflight_r3.py docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py backend/tests/test_t012_apta_strong_preflight.py", "result": "41 passed, 1 failed: stale APTA missing-binding expectation"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/fields.py backend/app/tenderproof/klc_t012.py backend/app/tenderproof/epl_t012.py backend/app/tenderproof/publiconsult_t012.py backend/app/tenderproof/avancasp_t012.py backend/app/tenderproof/apta_aragarcas_parser.py", "result": "PASS"}
+  ],
+  "required_before_deploy": [
+    "Decide and document whether APTA/708 is intentionally integrated via exact orgao+edital fallback; do not leave the old parser/evidence contract claiming no route.",
+    "Update the APTA real-revalidation test to the chosen contract (including zero-side-effect assertions), then rerun the complete batch2 parser/dispatch suite."
+  ],
+  "network_or_pilot": "not used"
+}

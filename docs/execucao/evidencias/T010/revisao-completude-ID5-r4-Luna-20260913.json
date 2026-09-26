@@ -1,0 +1,31 @@
+{
+  "schema": "t010.id5.luna-completeness-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ID5_COMPLETENESS_R4_REJECT",
+  "ready_for_import": false,
+  "scope": "read-only; no network, proposal, approval, apply or pilot/quadro mutation",
+  "evidence": {
+    "pdf_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+    "pdf_bytes": 565628,
+    "pages_total": 31,
+    "envelope": "docs/execucao/evidencias/T010/T010-reviewed-run-id5-r4.json",
+    "envelope_sha256": "b9ad59ba3889654f561b65cec56fcfcb72d09160c8c1f3ee28c4d3f488ae920e",
+    "run_id": "tp-reviewed-374bfb111a85ef1c478668da5e8c948c",
+    "completeness": "PASS: p1 tem exatamente 3 marcadores; rows Systems/Consultor Jurídico/Contador; terminadores NOTAS EXPLICATIVAS, 1.1.1 e 1.1.2; p2 inicia 1.2 O Regime Jurídico Funcional e não tem marcador; páginas não truncadas",
+    "tests": "3 passed; dry-run/isolated validation pass; supplement de prova separado"
+  },
+  "findings": [
+    {
+      "severity": "blocker",
+      "finding": "Envelope e todas as evidências r4 declaram method_version consulplan-unai-2026/4, mas backend/app/tenderproof/consulplan_unai_jobs.py mantém VERSION=consulplan-unai-2026/1 (PROVA_VERSION=/2). A derivação reproduzível do r4 não está vinculada ao código atualmente executável.",
+      "required_correction": "Bump/versionar o parser para /4 (ou regenerar envelope/receipt com a versão real), recalcular envelope_sha256/run_id e repetir testes, dry-run e isolated validation antes do import."
+    },
+    {
+      "severity": "warning",
+      "finding": "O parser exige NOTAS EXPLICATIVAS/1.1.1/1.1.2 e cardinalidade 3, mas não afirma explicitamente o terminador I - DAS VAGAS; a evidência r4 o registra.",
+      "required_correction": "Adicionar assertion fail-closed de I - DAS VAGAS ou documentar formalmente por que os três terminadores atuais são suficientes."
+    }
+  ],
+  "conclusion": "A completude cargo-a-cargo está provada no PDF r4, e a prova continua corretamente separada; contudo, READY_FOR_IMPORT é recusado até alinhar a versão do parser e a proveniência do envelope."
+}

@@ -1,0 +1,229 @@
+{
+  "observed_at": "2026-09-08T14:33:32.021556+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60elo",
+  "cycles": [
+    {
+      "source": "elo_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-fb010a34fd75",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "elo_open-cycle1-listing-ec5a43b532.html",
+          "sha256": "87629edd7908df8d8ba1a31bb6080e976c3a2278030bc5d084eee590a09886e1",
+          "bytes": 6530,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T14:33:32.963328+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-7f5f40fd0a5e",
+          "candidate": {
+            "candidate_id": "elo_open-137",
+            "title_observed": "CIMAG",
+            "detail_url_observed": "https://novo.eloassessoriaeservicos.com.br/concurso/137",
+            "external_id": "137",
+            "observed_at": "2026-09-08T14:33:32.963328Z",
+            "source": "elo_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.eloassessoriaeservicos.com.br/concurso/137",
+              "file": "elo_open-cycle1-detail-3749ebef01.html",
+              "sha256": "983e52c0423810177ca7f1c4f3673be175ff59a7c72ab910ac8bc3f31932d1b4",
+              "bytes": 22192,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:33:34.301784+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "elo_open-doc-82cd3feadf185911",
+            "title": "EDITAL",
+            "url_requested": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-b3cd09bb2c",
+            "sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+            "byte_len": 386847,
+            "url_requested": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T14:33:35.420774Z",
+            "storage_path": "art-b3cd09bb2c-9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf.pdf"
+          },
+          "total_pages": 23,
+          "processed_pages": 23,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=23/23",
+              "titulo_corroborado=1/1"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.407
+    },
+    {
+      "source": "elo_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-5408a085e0cc",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "elo_open-cycle2-listing-ec5a43b532.html",
+          "sha256": "87629edd7908df8d8ba1a31bb6080e976c3a2278030bc5d084eee590a09886e1",
+          "bytes": 6530,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T14:33:37.215198+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-385952345efa",
+          "candidate": {
+            "candidate_id": "elo_open-137",
+            "title_observed": "CIMAG",
+            "detail_url_observed": "https://novo.eloassessoriaeservicos.com.br/concurso/137",
+            "external_id": "137",
+            "observed_at": "2026-09-08T14:33:37.216199Z",
+            "source": "elo_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.eloassessoriaeservicos.com.br/concurso/137",
+              "file": "elo_open-cycle2-detail-3749ebef01.html",
+              "sha256": "983e52c0423810177ca7f1c4f3673be175ff59a7c72ab910ac8bc3f31932d1b4",
+              "bytes": 22192,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:33:38.360744+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "elo_open-doc-82cd3feadf185911",
+            "title": "EDITAL",
+            "url_requested": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-ada63b963c",
+            "sha256": "9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf",
+            "byte_len": 386847,
+            "url_requested": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/cimag/1/1-2026/anexos/edital.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T14:33:39.403781Z",
+            "storage_path": "art-ada63b963c-9b87303f2fa50b0d367b473a1f9494e9b166e5c34c40893804471eb76fa250bf.pdf"
+          },
+          "total_pages": 23,
+          "processed_pages": 23,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=23/23",
+              "titulo_corroborado=1/1"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.0
+    }
+  ]
+}

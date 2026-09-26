@@ -1,0 +1,309 @@
+{
+  "observed_at": "2026-09-08T14:28:17.714256+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60cpcon",
+  "cycles": [
+    {
+      "source": "cpcon_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-0b51ec903d76",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://cpcon.uepb.edu.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://cpcon.uepb.edu.br",
+          "file": "cpcon_open-cycle1-listing-eebfa561c8.html",
+          "sha256": "db998b90a4efd9a00db38131087d7ab8d510c88cf3decaad516e886ad034f4f4",
+          "bytes": 523003,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:28:19.190323+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-27f3b2cfbde5",
+          "candidate": {
+            "candidate_id": "cpcon_open-uepb-002-2026",
+            "title_observed": "Concurso Público da Universidade Estadual da Paraíba 2026 – Edital 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+            "external_id": "uepb-002-2026",
+            "observed_at": "2026-09-08T14:28:20.212777Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+              "file": "cpcon_open-cycle1-detail-7768229e89.html",
+              "sha256": "1cc09af87018b00d7f1918ac3192d0ce15bc9200387b84eb0db8c59725d393fe",
+              "bytes": 84255,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:28:21.092659+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-a2b0f1aee91f",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-002-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+            "external_id": "processo-seletivo-simplificado-no-002-2026",
+            "observed_at": "2026-09-08T14:28:20.212777Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+              "file": "cpcon_open-cycle1-detail-3c4741f17e.html",
+              "sha256": "edee6780992619ec6a10acad656ae0d5e483beb65e76f555046ed8ba421a2633",
+              "bytes": 80762,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:28:22.194473+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-660a8f78e8d36dfc",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: RESULTADO FINAL; RESULTADO PÓS-RECURSOS DA PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA PRÁTICA; EDITAL DE CONVOCAÇÃO PARA A PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA OBJETIVA)."
+          },
+          "artifact": {
+            "artifact_id": "art-46d2f9fe5e",
+            "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+            "byte_len": 498894,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:28:22.681364Z",
+            "storage_path": "art-46d2f9fe5e-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 9.203
+    },
+    {
+      "source": "cpcon_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-4631dc7c6de2",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://cpcon.uepb.edu.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://cpcon.uepb.edu.br",
+          "file": "cpcon_open-cycle2-listing-c0ae768daf.html",
+          "sha256": "ceba014e3fe7c6fbf71772c47089ea4a3b0a50b3649db4df6af18c76c735beec",
+          "bytes": 523003,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:28:27.997026+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-52aa9c756ff9",
+          "candidate": {
+            "candidate_id": "cpcon_open-uepb-002-2026",
+            "title_observed": "Concurso Público da Universidade Estadual da Paraíba 2026 – Edital 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+            "external_id": "uepb-002-2026",
+            "observed_at": "2026-09-08T14:28:28.911970Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+              "file": "cpcon_open-cycle2-detail-bbed2a7c2a.html",
+              "sha256": "b8df84e8913aba5a4403ce323946a675fcaf4f31e96feacef5631332a9a1b062",
+              "bytes": 84255,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:28:29.776815+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-fffbf9b390f7",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-002-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+            "external_id": "processo-seletivo-simplificado-no-002-2026",
+            "observed_at": "2026-09-08T14:28:28.912965Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+              "file": "cpcon_open-cycle2-detail-b4e956482a.html",
+              "sha256": "041d83ec698772d312dc75c4151bd09b457470b00b07b49b57f0bac0008b7643",
+              "bytes": 80762,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:28:30.697447+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-660a8f78e8d36dfc",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b997fc311788877721",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b997fc311788877721",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: RESULTADO FINAL; RESULTADO PÓS-RECURSOS DA PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA PRÁTICA; EDITAL DE CONVOCAÇÃO PARA A PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA OBJETIVA)."
+          },
+          "artifact": {
+            "artifact_id": "art-f0392320c2",
+            "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+            "byte_len": 498894,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b997fc311788877721",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b997fc311788877721",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:28:31.106979Z",
+            "storage_path": "art-f0392320c2-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 7.516
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 6,
+    "all_clients_closed": true
+  }
+}

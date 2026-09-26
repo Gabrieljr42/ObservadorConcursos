@@ -1,0 +1,13 @@
+{
+  "schema": "t012.apta.parser-r7-receipt.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "proposal": "apta_aragarcas_parser_r7_proposed.py",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/apta_open/test_apta_parser_r7_proposed.py",
+    "result": "8 passed",
+    "coverage": ["three supported fields", "SHA", "byte length", "20 pages/order", "source", "external_id", "document URL", "page drift"]
+  },
+  "live": false,
+  "network": false,
+  "next_gate": "t007_backend must integrate the proposed function into the exact apta_open/708 dispatch and rerun shared regressions before deploy"
+}

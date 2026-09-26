@@ -1,0 +1,272 @@
+{
+  "schema": "t012.cpcon.ui-validation-r13.v1",
+  "mode": "headless_playwright_real_ui",
+  "mutations": false,
+  "errors": [],
+  "screenshots": [],
+  "expected_source": 35,
+  "expected_external_id": "processo-seletivo-simplificado-no-002-2026",
+  "login": [
+    {
+      "url": "http://localhost:13000/inicio",
+      "mutations": false
+    },
+    {
+      "url": "http://localhost:13000/inicio",
+      "mutations": false
+    }
+  ],
+  "inicio": {
+    "url": "http://localhost:13000/inicio",
+    "text_excerpt": "\nRadarConcursos\n\n9+\nOlá, concurseiro!\nMantenha o foco. Sua aprovação está mais próxima hoje.\nDados locais atualizados em 13/09/2026, 13:39:10\n\nATUALIZADO\n35\nCONCURSOS LISTADOS\nÚltimas atualizações\nVer todas\n\nNOVO CONCURSO\n13/09/2026\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\nCPCon / UEPB Concursos\n\nConcurso cadastrado pela primeira vez.\n\nNOVO CONCURSO\n13/09/2026\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\nSHDias Consultoria e Concursos\n\nConcurso cadastrado pela primeira vez.\n\nPRAZO ALTERADO\n13/09/2026\nConcurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\nOMNI Concursos Públicos\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados. Data da prova alterada de não informado para 12/01/2025.\n\nATUALIZAÇÃO\n13/09/2026\nFAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\nFAPESE - Fundação de Apoio à Extensão e Pesquisa\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados.\n\nATUALIZAÇÃO\n13/09/2026\nPREFEITURA MUNICIPAL DE BARRA LONGA\nElo Assessoria e Serviços\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados.\nRecomendados para você\nVer todos\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\nUniversidade Estadual da Paraíba\nBANCA\nCPCon / UEPB Concursos\nVAGAS NOS CARGOS CADASTRADOS\n7\nLOCAL\nN/I\nNÃO INFORMADO\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\nMunicípio de Hortolândia\nBANCA\nSHDias Consultoria e Concursos\nVAGAS NOS CARGOS CADASTRADOS\n40\nLOCAL\nN/I\nENCERRADO\nConcurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\nPrefeitura Municipal De Osvaldo Cruz- Sp\nBANCA\nOMNI Concursos Públicos\nVAGAS NOS CARGOS CADASTRADOS\n10 + CR\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nFAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\nFUNDAÇÃO DE APOIO À PESQUISA E EXTENSÃO DE SERGIPE (FAPESE)\nBANCA\nFAPESE - Fundação de Apoio à Extensão e Pesquisa\nVAGAS NOS CARGOS CADASTRADOS\nQuantidade de vagas imediatas: ainda não confirmada\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nPREFEITURA MUNICIPAL DE BARRA LONGA\nPrefeitura Municipal De Barra Longa\nBANCA\nElo Assessoria e Serviços\nVAGAS NOS CARGOS CADASTRADOS\n7\nLOCAL\nN/I\n\n\nINÍCIO\n\n\nBUSCAR\n\n\nALERTAS\n\n\nSALVOS\n\n\nPERFIL",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-inicio.png",
+    "contains_cpcon": true,
+    "contains_uepb": true
+  },
+  "listagem": {
+    "url": "http://localhost:13000/listagem",
+    "text_excerpt": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-listagem.png",
+    "contains_cpcon": false
+  },
+  "busca": {
+    "url": "http://localhost:13000/busca",
+    "text_excerpt": "\nAbertas\nFGV\nAnalista\nMG\n\nFiltros\nRESULTADOS ENCONTRADOS\n35 Seleções\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\nUniversidade Estadual da Paraíba\nBANCA\nCPCon / UEPB Concursos\nVAGAS NOS CARGOS CADASTRADOS\n7\nLOCAL\nN/I\nNÃO INFORMADO\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\nMunicípio de Hortolândia\nBANCA\nSHDias Consultoria e Concursos\nVAGAS NOS CARGOS CADASTRADOS\n40\nLOCAL\nN/I\nENCERRADO\nConcurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\nPrefeitura Municipal De Osvaldo Cruz- Sp\nBANCA\nOMNI Concursos Públicos\nVAGAS NOS CARGOS CADASTRADOS\n10 + CR\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nFAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\nFUNDAÇÃO DE APOIO À PESQUISA E EXTENSÃO DE SERGIPE (FAPESE)\nBANCA\nFAPESE - Fundação de Apoio à Extensão e Pesquisa\nVAGAS NOS CARGOS CADASTRADOS\nQuantidade de vagas imediatas: ainda não confirmada\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nPREFEITURA MUNICIPAL DE BARRA LONGA\nPrefeitura Municipal De Barra Longa\nBANCA\nElo Assessoria e Serviços\nVAGAS NOS CARGOS CADASTRADOS\n7\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nCONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.\nPrefeitura Municipal De Reriutaba\nBANCA\nInstituto IDIB\nVAGAS NOS CARGOS CADASTRADOS\n9\nLOCAL\nN/I\nENCERRADO\nPREFEITURA MUNICIPAL DE CUBATI-PB\nPrefeitura Municipal De Cubati\nBANCA\nCONTEMAX Consultoria\nVAGAS NOS CARGOS CADASTRADOS\n79\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nConcurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP\nCâmara Municipal De Garça\nBANCA\nABCP Concursos\nVAGAS NOS CARGOS CADASTRADOS\n1 + CR\nLOCAL\nN/I\nINSCRIÇÕES EM BREVE\nProcesso Seletivo Público - 001/2026 Prefeitura Municipal de Berizal/MG\nPrefeitura Municipal De Berizal\nBANCA\nIMESO - Concursos e Seletivos\nVAGAS NOS CARGOS CADASTRADOS\n11 + CR\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nPrefeitura Municipal de Birigui/SP\nPrefeitura Municipal De Birigui-Sp\nBANCA\nInstituto ACCESS\nVAGAS NOS CARGOS CADASTRADOS\n10\nLOCAL\nN/I\nENCERRADO\nMunicípio de Garibaldi\nPrefeitura Municipal De Garibaldi\nBANCA\nLegalle Concursos\nVAGAS NOS CARGOS CADASTRADOS\n0 + CR\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nMunicípio de Caruaru/PE - 01/2026\nMunicípio De Caruaru\nBANCA\nIBAM Concursos\nVAGAS NOS CARGOS CADASTRADOS\n20\nLOCAL\nN/I\nENCERRADO\nPROCESSO SELETIVO SIMPLIFICADO - SEBASTIÃO LEAL - PI\nPrefeitura Municipal De Sebastião Leal\nBANCA\nCONSEP - Consultoria e Estudos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nCâmara Municipal de Itacarambi/MG\nCâmara Municipal De Itacarambi\nBANCA\nCOTEC / FADENOR Concursos\nVAGAS NOS CARGOS CADASTRADOS\n5 + CR\nLOCAL\nN/I\nENCERRADO\nPrefeitura de Francisco Morato - Concurso Público 01/2026\nPrefeitura Municipal De Francisco Morato\nBANCA\nInstituto Mais de Gestão e Concursos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nWESTFÁLIA/RS - Município - Concurso Público 01/2026\nMunicípio De Westfália\nBANCA\nOBJETIVA Concursos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nP.M. de Lagoa da Prata - Processo de Certificação Ocupacional para a Função de Diretor Escolar\nPrefeitura Municipal De Lagoa Da Prata\nBANCA\nExame Consultores e Auditores\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nPrefeitura de Floresta/PE – 2026\nPrefeitura Municipal De Floresta\nBANCA\nFACET Concursos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nCâmara Municipal de Presidente Prudente\nCâmara Municipal De Presidente Prudente\nBANCA\nFundação Carlos Chagas - FCC\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nConcurso Público para a Prefeitura de Macaé\nPrefeitura Municipal De Macaé\nBANCA\nFGV Conhecimento Concursos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nConcurso Público Lagoa de Pedras/RN\nPrefeitura Municipal De Lagoa De Pedras\nBANCA\nFUNCERN Concursos e Seleções\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\nENCERRADO\nPREFEITURA MUNICIPAL DE CAJUEIRO – AL\nPrefeitura Municipal De Cajueiro\nBANCA\nFUNVAPI Concursos\nVAGAS NOS CARGOS CADASTRADOS\nPendente de conferência\nLOCAL\nN/I\n\n\nINÍCIO\n\n\nBUSCAR\n\n\nALERTAS\n\n\nSALVOS\n\n\nPERFIL",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-busca.png",
+    "contains_cpcon": true
+  },
+  "concurso_35": {
+    "url": "http://localhost:13000/concurso/35",
+    "text_excerpt": "\nDetalhe\n\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\n Universidade Estadual da Paraíba\nCARGO\nTécnico em Laboratório (Esterilização), Técnico em Laboratório (Microbiologia de Alimentos), Técnico em Laboratório (Eletrotécnica), Técnico em Laboratório (Química), Técnico em Laboratório (Química e Fertilidade do Solo), Técnico em Laboratório (Histopatologia Oral)\nCIDADE\nN/I\nBANCA\nCPCon / UEPB Concursos\nCargos e requisitos\nTécnico em Laboratório (Esterilização)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Microbiologia de Alimentos)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Eletrotécnica)\n2 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 2\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química e Fertilidade do Solo)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Histopatologia Oral)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nPágina oficial\n\nAbrir edital\n\n\nSALVAR\n\nALERTAR\n\nCronograma\nINSCRIÇÕES\nData não informada a Data não informada\nDATA DA PROVA\nPendente de conferência\n\nPublicações e documentos\nNenhuma publicação estruturada encontrada ainda.\n\nHistórico de alterações\n13/09/2026\n\nNOVO CONCURSO\nConcurso cadastrado pela primeira vez.\ntitulo\nNão informado → PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\norgao\nNão informado → Universidade Estadual da Paraíba\nCargos e condições\nNão informado → Valor estruturado atualizado\nedital_numero\nNão informado → 002/2026\nLink do edital\nNão informado → https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712\nConteúdo publicado\nNão informado → 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-detail35.png",
+    "reload": {
+      "no_undefined": true,
+      "no_nan": true,
+      "stable": true,
+      "text_excerpt": "\nDetalhe\n\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\n Universidade Estadual da Paraíba\nCARGO\nTécnico em Laboratório (Esterilização), Técnico em Laboratório (Microbiologia de Alimentos), Técnico em Laboratório (Eletrotécnica), Técnico em Laboratório (Química), Técnico em Laboratório (Química e Fertilidade do Solo), Técnico em Laboratório (Histopatologia Oral)\nCIDADE\nN/I\nBANCA\nCPCon / UEPB Concursos\nCargos e requisitos\nTécnico em Laboratório (Esterilização)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Microbiologia de Alimentos)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Eletrotécnica)\n2 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 2\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química e Fertilidade do Solo)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Histopatologia Oral)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nPágina oficial\n\nAbrir edital\n\n\nSALVAR\n\nALERTAR\n\nCronograma\nINSCRIÇÕES\nData não informada a Data não informada\nDATA DA PROVA\nPendente de conferência\n\nPublicações e documentos\nNenhuma publicação estruturada encontrada ainda.\n\nHistórico de alterações\n13/09/2026\n\nNOVO CONCURSO\nConcurso cadastrado pela primeira vez.\ntitulo\nNão informado → PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\norgao\nNão informado → Universidade Estadual da Paraíba\nCargos e condições\nNão informado → Valor estruturado atualizado\nedital_numero\nNão informado → 002/2026\nLink do edital\nNão informado → https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712\nConteúdo publicado\nNão informado → 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "identity": {
+      "title": true,
+      "orgao": true,
+      "edital": true,
+      "source_or_external": true
+    },
+    "cargos": [
+      {
+        "nome": "Técnico em Laboratório (Esterilização)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Microbiologia de Alimentos)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Eletrotécnica)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Química)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Química e Fertilidade do Solo)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Histopatologia Oral)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      }
+    ],
+    "cargo_count_text": 18,
+    "remuneracao_expected": true,
+    "dates": {
+      "has_unsubstantiated_prova": false,
+      "has_absence_marker": true
+    }
+  },
+  "detail": {
+    "url": "http://localhost:13000/concurso/35",
+    "text_excerpt": "\nDetalhe\n\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\n Universidade Estadual da Paraíba\nCARGO\nTécnico em Laboratório (Esterilização), Técnico em Laboratório (Microbiologia de Alimentos), Técnico em Laboratório (Eletrotécnica), Técnico em Laboratório (Química), Técnico em Laboratório (Química e Fertilidade do Solo), Técnico em Laboratório (Histopatologia Oral)\nCIDADE\nN/I\nBANCA\nCPCon / UEPB Concursos\nCargos e requisitos\nTécnico em Laboratório (Esterilização)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Microbiologia de Alimentos)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Eletrotécnica)\n2 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 2\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química e Fertilidade do Solo)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Histopatologia Oral)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nPágina oficial\n\nAbrir edital\n\n\nSALVAR\n\nALERTAR\n\nCronograma\nINSCRIÇÕES\nData não informada a Data não informada\nDATA DA PROVA\nPendente de conferência\n\nPublicações e documentos\nNenhuma publicação estruturada encontrada ainda.\n\nHistórico de alterações\n13/09/2026\n\nNOVO CONCURSO\nConcurso cadastrado pela primeira vez.\ntitulo\nNão informado → PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\norgao\nNão informado → Universidade Estadual da Paraíba\nCargos e condições\nNão informado → Valor estruturado atualizado\nedital_numero\nNão informado → 002/2026\nLink do edital\nNão informado → https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712\nConteúdo publicado\nNão informado → 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-detail35.png",
+    "reload": {
+      "no_undefined": true,
+      "no_nan": true,
+      "stable": true,
+      "text_excerpt": "\nDetalhe\n\nNÃO INFORMADO\nPROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\n Universidade Estadual da Paraíba\nCARGO\nTécnico em Laboratório (Esterilização), Técnico em Laboratório (Microbiologia de Alimentos), Técnico em Laboratório (Eletrotécnica), Técnico em Laboratório (Química), Técnico em Laboratório (Química e Fertilidade do Solo), Técnico em Laboratório (Histopatologia Oral)\nCIDADE\nN/I\nBANCA\nCPCon / UEPB Concursos\nCargos e requisitos\nTécnico em Laboratório (Esterilização)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Microbiologia de Alimentos)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Eletrotécnica)\n2 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 2\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Química e Fertilidade do Solo)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nTécnico em Laboratório (Histopatologia Oral)\n1 vaga(s) imediata(s)\nDistribuição das vagas imediatas: Ampla concorrência: 1\nRemuneração: R$ 3.768,36\nvencimento básico; unidade temporal não explicitada no edital\nJornada: 40h\nRequisitos: Ensino Médio Completo + Curso Técnico em Laboratório na área Objeto da Seleção + Registro no Respectivo Conselho Profissional, caso Exigido por Lei\nTaxa de inscrição: valor ainda não confirmado\nPágina oficial\n\nAbrir edital\n\n\nSALVAR\n\nALERTAR\n\nCronograma\nINSCRIÇÕES\nData não informada a Data não informada\nDATA DA PROVA\nPendente de conferência\n\nPublicações e documentos\nNenhuma publicação estruturada encontrada ainda.\n\nHistórico de alterações\n13/09/2026\n\nNOVO CONCURSO\nConcurso cadastrado pela primeira vez.\ntitulo\nNão informado → PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\norgao\nNão informado → Universidade Estadual da Paraíba\nCargos e condições\nNão informado → Valor estruturado atualizado\nedital_numero\nNão informado → 002/2026\nLink do edital\nNão informado → https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01b90f3b551788877712\nConteúdo publicado\nNão informado → 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "identity": {
+      "title": true,
+      "orgao": true,
+      "edital": true,
+      "source_or_external": true
+    },
+    "cargos": [
+      {
+        "nome": "Técnico em Laboratório (Esterilização)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Microbiologia de Alimentos)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Eletrotécnica)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Química)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Química e Fertilidade do Solo)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      },
+      {
+        "nome": "Técnico em Laboratório (Histopatologia Oral)",
+        "nome_visivel": true,
+        "vagas_visiveis": true,
+        "remuneracao_visivel": true
+      }
+    ],
+    "cargo_count_text": 18,
+    "remuneracao_expected": true,
+    "dates": {
+      "has_unsubstantiated_prova": false,
+      "has_absence_marker": true
+    }
+  },
+  "salvos": {
+    "url": "http://localhost:13000/salvos",
+    "text_excerpt": "Salvos\n0 itens salvos\nGerencie suas oportunidades favoritas e acompanhe prazos de inscrição.\n\nQuer ver mais?\nContinue explorando novas vagas que combinam com seu perfil.\nExplorar Oportunidades\n\n\n\nINÍCIO\n\n\nBUSCAR\n\n\nALERTAS\n\n\nSALVOS\n\n\nPERFIL",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-salvos.png",
+    "zero": true
+  },
+  "notificacoes": {
+    "url": "http://localhost:13000/notificacoes",
+    "text_excerpt": "\nNotificações\n\nLidas\n\nSincronizar tudo\n\nAtivar push\nNovo concurso compatível: PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026\n13/09/2026\nALERT MATCH\nO alerta \"Concursos revisados do piloto\" encontrou um concurso da banca CPCon / UEPB Concursos.\nNovo concurso compatível: CONCURSO PÚBLICO CPMH 001/2026 - Guarda\n13/09/2026\nALERT MATCH\nO alerta \"Concursos revisados do piloto\" encontrou um concurso da banca SHDias Consultoria e Concursos.\nAtualização em concurso: Concurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\n13/09/2026\nVERSION UPDATE_91\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados. Data da prova alterada de não informado para 12/01/2025.\nAtualização em concurso: FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\n13/09/2026\nVERSION UPDATE_90\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: PREFEITURA MUNICIPAL DE BARRA LONGA\n13/09/2026\nVERSION UPDATE_89\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.\n13/09/2026\nVERSION UPDATE_88\nAlerta \"Concursos revisados do piloto\": Data da prova alterada de não informado para 06/12/2026.\nAtualização em concurso: CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.\n13/09/2026\nVERSION UPDATE_87\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: PREFEITURA MUNICIPAL DE CUBATI-PB\n13/09/2026\nVERSION UPDATE_86\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: PREFEITURA MUNICIPAL DE CUBATI-PB\n13/09/2026\nVERSION UPDATE_85\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP\n13/09/2026\nVERSION UPDATE_84\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: Processo Seletivo Público - 001/2026 Prefeitura Municipal de Berizal/MG\n13/09/2026\nVERSION UPDATE_83\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nAtualização em concurso: Prefeitura Municipal de Birigui/SP\n12/09/2026\nVERSION UPDATE_82\nAlerta \"Concursos revisados do piloto\": Vagas, remuneração, jornada e requisitos por cargo foram atualizados.\nNova publicação: PREFEITURA MUNICIPAL DE BARRA LONGA\n12/09/2026\nDOCUMENT ADDED_81\nAlerta \"Concursos revisados do piloto\": 2 novas publicações adicionadas ao concurso.\nNova publicação: PROCESSO SELETIVO SIMPLIFICADO - SEBASTIÃO LEAL - PI\n12/09/2026\nDOCUMENT ADDED_80\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 001/2026.\nNova publicação: Município de Caruaru/PE - 01/2026\n12/09/2026\nDOCUMENT ADDED_79\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: Prefeitura de Francisco Morato - Concurso Público 01/2026\n12/09/2026\nDOCUMENT ADDED_78\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: WESTFÁLIA/RS - Município - Concurso Público 01/2026\n12/09/2026\nDOCUMENT ADDED_77\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 013/2026.\nNova publicação: Câmara Municipal de Itacarambi/MG\n12/09/2026\nDOCUMENT ADDED_76\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: P.M. de Lagoa da Prata - Processo de Certificação Ocupacional para a Função de Diretor Escolar\n12/09/2026\nDOCUMENT ADDED_75\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: Prefeitura de Floresta/PE – 2026\n12/09/2026\nDOCUMENT ADDED_74\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: Câmara Municipal de Presidente Prudente\n12/09/2026\nDOCUMENT ADDED_73\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: Concurso Público para a Prefeitura de Macaé\n12/09/2026\nDOCUMENT ADDED_72\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: Concurso Público Lagoa de Pedras/RN\n12/09/2026\nDOCUMENT ADDED_71\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova publicação: PREFEITURA MUNICIPAL DE CAJUEIRO – AL\n12/09/2026\nDOCUMENT ADDED_70\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 001/2026.\nNova publicação: MUNICÍPIO DE DOMINGOS MOURÃO - PI\n12/09/2026\nDOCUMENT ADDED_69\nAlerta \"Concursos revisados do piloto\": Nova publicação adicionada: 01/2026.\nNova pub",
+    "no_undefined": true,
+    "no_nan": true,
+    "no_raw_html": true,
+    "screenshot": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\cpcon_open\\ui-validation-r13-notificacoes.png",
+    "cpcon_visible": true,
+    "original_alert_visible": true
+  },
+  "checkpoint": [
+    {
+      "status": 200,
+      "keys": [
+        "alerts",
+        "concursos",
+        "favorites",
+        "generated_at",
+        "my_updates",
+        "notifications",
+        "preferences",
+        "publications",
+        "recent_updates",
+        "user",
+        "versions"
+      ],
+      "concursos": 35
+    },
+    {
+      "status": 200,
+      "keys": [
+        "alerts",
+        "concursos",
+        "favorites",
+        "generated_at",
+        "my_updates",
+        "notifications",
+        "preferences",
+        "publications",
+        "recent_updates",
+        "user",
+        "versions"
+      ],
+      "concursos": 35
+    },
+    {
+      "status": 200,
+      "keys": [
+        "alerts",
+        "concursos",
+        "favorites",
+        "generated_at",
+        "my_updates",
+        "notifications",
+        "preferences",
+        "publications",
+        "recent_updates",
+        "user",
+        "versions"
+      ],
+      "concursos": 35
+    },
+    {
+      "status": 200,
+      "keys": [
+        "alerts",
+        "concursos",
+        "favorites",
+        "generated_at",
+        "my_updates",
+        "notifications",
+        "preferences",
+        "publications",
+        "recent_updates",
+        "user",
+        "versions"
+      ],
+      "concursos": 35
+    }
+  ],
+  "new_session": {
+    "url": "http://localhost:13000/concurso/35",
+    "title": true,
+    "six_cargos": true,
+    "no_undefined": true,
+    "no_nan": true
+  },
+  "result": "PASS_UI_SYNC"
+}

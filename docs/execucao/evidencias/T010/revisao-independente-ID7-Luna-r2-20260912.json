@@ -1,0 +1,68 @@
+{
+  "schema": "t010.id7.independent-preimport-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "scope": "Libera somente backup fresco verificado, deploy do parser se necessário, import único e criação de proposta; approve/apply permanecem bloqueados até revisão pós-import.",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id7.pdf",
+    "pages": 19,
+    "byte_len": 791715,
+    "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+    "recomputed_match": true
+  },
+  "identity": {
+    "source": "abcp_open",
+    "external_id": "2868",
+    "concurso_id": 7,
+    "title": "Câmara Municipal de Garça/SP",
+    "detail_url": "https://abcp.selecao.net.br/informacoes/2868/",
+    "owner_user_id": 1,
+    "parser_pin": "abcp_open/2868/SHA+791715 bytes; page 1; fail-closed"
+  },
+  "run": {
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "receipt_and_preflight_match": true,
+    "pending_fields": [],
+    "field_names": ["cargos"],
+    "baseline_cargos": null,
+    "persisted_run": false,
+    "persisted_proposal": false
+  },
+  "independent_parser": {
+    "state": "supported",
+    "rows": 1,
+    "value_equal": true,
+    "units_equal": true,
+    "evidence_equal_core": [true, true],
+    "evidence_count": 2,
+    "evidence_pages": [1, 1],
+    "evidence_sha_url_method_match": true,
+    "fields": {
+      "nome": "Técnico Legislativo",
+      "vagas_imediatas": 1,
+      "cadastro_reserva": true,
+      "vagas_ampla_concorrencia": 1,
+      "vagas_pcd": 0,
+      "remuneracao": "3378.77 BRL/mês",
+      "jornada": "35 horas semanais",
+      "requisitos": "Ensino Médio completo",
+      "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"],
+      "taxa": "ausente/pending",
+      "prova_data": "ausente/pending"
+    },
+    "replacement_character_scan": {"envelope": false, "receipt": false, "preflight": false, "snippets": false, "units": false}
+  },
+  "guards_and_validation": {
+    "sha_drift_fail_closed": true,
+    "pages_extracted": "19/19",
+    "import_dry_run": {"status": "validated", "persisted": false},
+    "parser_and_import_tests": "6 passed (ABCP/parser + reviewed_run_import)",
+    "isolated_create_proposal_contract": "1 passed (test_jobs_review_apply_repeat_and_rollback_preserve_other_fields; isolated SQLite)",
+    "network": false,
+    "pilot_db": false
+  },
+  "gate_conclusion": "ACEITA: executar backup verificado, deploy do parser se necessário, import único do run acima e criação de proposta. Exigir GET/revisão independente pós-import antes de qualquer approve/apply."
+}

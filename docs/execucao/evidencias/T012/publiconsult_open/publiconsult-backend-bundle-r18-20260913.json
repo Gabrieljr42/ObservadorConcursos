@@ -1,0 +1,45 @@
+{
+  "schema": "t012.publiconsult-backend-bundle-r18.v1",
+  "status": "READY_FOR_INDEPENDENT_BUNDLE_REVIEW",
+  "scope": "offline backend bundle only; no Docker/API/live/deploy",
+  "root_cause_fixed": "R12 stored preserved-pdf-review snippets did not equal active parser output; the active parser selected a shared header line for orgao/edital and emitted a concatenated title provenance.",
+  "correction": {
+    "path": "backend/app/tenderproof/publiconsult_t012.py",
+    "sha256": "9b3e62af3e02aa9ed45ab593dcd34fc88104ade94b1d594591a8e72f7f7f537b",
+    "method_version": "t012-publiconsult-r4",
+    "canonical_selectors": {
+      "titulo": "header line containing Prefeitura Municipal de VOTUPORANGA + Processo Seletivo + 1/2026",
+      "orgao": "body line beginning A Prefeitura Municipal de VOTUPORANGA and containing torna público",
+      "edital_numero": "body line beginning Processo Seletivo and containing 1/2026"
+    },
+    "contract": "exact verbatim snippets; no normalization/concatenation; TAF excluded"
+  },
+  "pins": {
+    "source": "publiconsult_open",
+    "external_id": "681",
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "fields": ["titulo", "orgao", "edital_numero"]
+  },
+  "tests": {
+    "publiconsult_direct_exported_parser_and_reproduced_evidence": "8 passed",
+    "combined_fafipa_publiconsult_batch2_apta_avancasp_identity_canonical": "89 passed",
+    "compileall": "PASS"
+  },
+  "operational": {
+    "new_reviewed_run_required": true,
+    "reason": "R12 retains stale snippets/provenance and must not be retried or replayed",
+    "procedure": "regenerate envelope from active fields_for_run, import as a new owner-scoped ReviewedRun, then revalidate; no live retry in this bundle",
+    "side_effects": "none"
+  },
+  "preserved_bundle_items": {
+    "fafipa_cargo_evidence": 14,
+    "apta_r16_preserved": true,
+    "avancasp_pins_preserved": [
+      "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd"
+    ]
+  },
+  "not_applied": true
+}

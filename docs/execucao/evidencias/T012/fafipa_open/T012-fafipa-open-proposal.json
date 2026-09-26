@@ -1,0 +1,12 @@
+{
+  "proposal_state": "PROPOSTA_PRONTA",
+  "source": "fafipa_open",
+  "external_id": "4208",
+  "run_id": "tp-reviewed-80178cee43defc8dae09b4918c3ee547",
+  "reference_only": true,
+  "eligible_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+  "excluded_unproven": ["remuneracao", "taxa", "requisitos", "retificacoes"],
+  "artifact_sha256": "a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c",
+  "not_applied": true,
+  "requires": "reviewer approval and normal proposal endpoint; no pilot or live mutation performed"
+}

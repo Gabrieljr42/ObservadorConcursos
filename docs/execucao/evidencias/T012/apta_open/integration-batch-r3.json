@@ -1,0 +1,14 @@
+{
+  "schema": "t012.dispatch-batch2.v3",
+  "status": "READY_FOR_FINAL_REVIEW",
+  "source": "apta_open",
+  "external_id": "708",
+  "contract": "fields.py exact route; APTA parser pins SHA/bytes/pages/currentness and detail/document URLs; publication binds exact orgao+edital",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_t012_apta_strong_preflight.py",
+    "result": "14 passed",
+    "compileall": "PASS"
+  },
+  "network": false,
+  "pilot_mutated": false
+}

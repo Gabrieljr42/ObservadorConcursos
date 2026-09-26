@@ -1,0 +1,30 @@
+{
+  "schema": "t012.cpcon-live-proposal-luna-review-r6.v1",
+  "verdict": "BLOCKER",
+  "scope": "revisao read-only; nao aprovar/aplicar",
+  "proposal": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+  "proposal_hash": "5292d0333ab6890bad82084f69c8f9d88927026332ccb84497da0ad6def1d772",
+  "checks": {
+    "identity": "PASS: source_id 35/cpcon_open e external_id processo-seletivo-simplificado-no-002-2026 correspondem ao parser; nao ha mistura com outro source.",
+    "artifact": "PASS: SHA 6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05, 498894 bytes, 13 paginas e URL oficial correspondem ao envelope/parser.",
+    "fields": "PASS: proposta declara somente titulo, orgao, edital_numero e cargos; baseline null; seis cargos com valores e seis evidencias individuais coerentes com cpcon_t012.py; nenhum taxa/prova indevido.",
+    "state": "PASS parcial: state proposed, action create e contagem proposals 97->98; nenhuma versao/outbox/notificacao foi criada e approve/apply permanecem false.",
+    "allocation": "FAIL BLOQUEANTE: receipt registra allocation.envelope_concurso_id=35. O 35 e source number, nao alocacao canonica, e a propria envelope R6 exige concurso_id=null. O proposal registra concurso_id=null; portanto allocation, run importado e proposta nao formam um alvo canonico positivo consistente. Nao pode usar 34, 35 ou 999.",
+    "run_link": "FAIL: envelope R6 nao possui run_id deterministico (receipt dizia que ele so surgiria apos alocacao), enquanto a proposta usa tp-reviewed-aa65cdc64843b07126288df54c1329b7; falta handoff verificavel que vincule esse run novo ao envelope e ao alvo alocado.",
+    "owner_authorization": "INCOMPLETO: owner_user_id=1 existe no envelope, mas o receipt da proposta nao registra owner/autorizacao do operador nem prova de que o run importado pertence ao mesmo owner; nao liberar approve/apply por inferencia.",
+    "duplicate": "PASS apenas no snapshot declarado: source/external ausente antes; nao compensa o alvo canonico invalido."
+  },
+  "required_before_approve_apply": [
+    "Alocar um novo concurso_id positivo e distinto de 34, 35 e 999 pelo fluxo normal, preservando source/external duplicate-safe.",
+    "Gerar/importar novo run deterministico explicitamente vinculado ao envelope R6, ao owner 1 e ao alvo; rerodar dry-run e revalidacao.",
+    "Recriar a proposta com concurso_id positivo, baseline null, os quatro fields/6 cargos e evidencias SHA-bound; registrar owner/autorizacao e confirmar zero efeitos alem da proposal.",
+    "Somente depois, approve/apply esperado: uma nova selecao/catalogo para CPCON e exatamente uma versao, outbox e notificacao; sem sobrescrever existentes."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/cpcon_open/live-proposal-receipt-20260913-r6.json",
+    "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6.json",
+    "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6-receipt.json",
+    "docs/execucao/evidencias/T012/cpcon_open/integration-r5.json",
+    "backend/app/tenderproof/cpcon_t012.py"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "authoritative": false,
+  "source_count": 99,
+  "candidate_status_counts": {
+    "parcial": 90,
+    "bloqueada_externamente": 7,
+    "internal_pending_external_probe": 1,
+    "dependencia_humana": 1
+  },
+  "candidate_status_sum": 99,
+  "historical_status_counts_preserved": {
+    "parcial": 90,
+    "bloqueada_externamente": 8,
+    "dependencia_humana": 1
+  },
+  "historical_status_sum": 99,
+  "fapemat": {
+    "source": "fapemat_selection",
+    "candidate_status": "internal_pending_external_probe",
+    "reason": "connection reset remains unexplained; preserved aliases failed before content"
+  },
+  "evidence": "T005-matriz-candidata-20260912.json"
+}

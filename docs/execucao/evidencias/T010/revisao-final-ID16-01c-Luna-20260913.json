@@ -1,0 +1,53 @@
+{
+  "schema": "t010.id16.final-rerun-gate.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_IMPORT_AND_CREATE_ID16_RERUN",
+  "scope": "somente importação única + criação de proposta; approve/apply bloqueados",
+  "run": {
+    "run_id": "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+    "derivations": ["tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7", "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7"],
+    "deterministic": true,
+    "envelope_sha256": "110e1b6df31f20c4b631b3ff11d33f8c3fb6b5ca8e0c7ec28261101f53475cb2",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "source": "omni_open",
+    "concurso_id": 16,
+    "external_id": "246"
+  },
+  "artifact": {
+    "artifact_id": "art-0a483f2ba1",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "bytes": 396219,
+    "pages": 23,
+    "matches_official_pinned_pdf": true
+  },
+  "material_reconciliation": {
+    "prior_run": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+    "cargo_values_equal": true,
+    "prova_data_equal": true,
+    "cargo_count": 18,
+    "immediate": 10,
+    "cadastro_reserva": 8,
+    "prova_data": "2025-01-12",
+    "typo_preserved": "Médio Ginecologista",
+    "identity_and_inscriptions_eligible": false,
+    "supported_fields": ["cargos", "prova_data"]
+  },
+  "evidence": {
+    "cargo_count": 18,
+    "prova_count": 1,
+    "total": 19,
+    "all_unique": true,
+    "artifact_sha_url_page_bound": true,
+    "isolated_extract_compare": "18/18 cargo snippets exact; pages/SHA/URL exact; no U+FFFD",
+    "prova_snippet_exact": true
+  },
+  "checks": {
+    "receipt_disposable_revalidate": "eligible exactly cargos + prova_data",
+    "tests": "tests/test_omni_osvaldo_cruz_integration.py: 3 passed",
+    "previous_proposal": "tpp-bdb86b21341b923ed50b5346fcc3ddb6 remains NEVER_APPROVE/NEVER_APPLY",
+    "mutations": false
+  },
+  "release": "Executar somente import do run 01c65 e criação da nova proposta; verificar POST resultante antes de qualquer aprovação."
+}

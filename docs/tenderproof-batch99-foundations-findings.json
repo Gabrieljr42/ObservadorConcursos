@@ -1,0 +1,523 @@
+{
+  "scope": "Eight personnel foundations; sample acceptance is not exhaustive coverage or production deployment",
+  "limits": {
+    "html_bytes": 2097152,
+    "deadline_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60,
+    "browser": 0,
+    "tls_verified": true
+  },
+  "sources": [
+    {
+      "source": "funpec_selection",
+      "state": "two_real_cycles_valid_sample",
+      "findings": [
+        "WordPress pessoal; seleção 10/2026 VALID duas vezes. Seleção12/2026 aponta edital13/2026: contradição preservada e recusada antes do PDF em dois ciclos."
+      ],
+      "captures": [
+        {
+          "url": "https://funpec.br/processos-seletivos/",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:10.139612+00:00",
+          "status": 200,
+          "bytes": 70462,
+          "sha256": "39fd47acac1260463ef85c4f918bd67c27bcadbbcf49f34133772d51da99ea23",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\funpec_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://funpec.br/processo-seletivo/processo-seletivo-12-2026-cuidador-em-saude-nei-cadastro-de-reserva/",
+          "kind": "detail0",
+          "observed_at": "2026-09-08T14:50:14.650587+00:00",
+          "status": 200,
+          "bytes": 59535,
+          "sha256": "77a7df9863e4992f5792cd3ec39f384b9ac1b611e5d03b4e6390c32ae862ae0d",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\funpec_selection-detail0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase2-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://funpec.br/processo-seletivo/processo-seletivo-10-2026-analista-em-seguranca-da-informacao-cadastro-de-reserva/",
+          "kind": "detail1",
+          "observed_at": "2026-09-08T14:50:14.650587+00:00",
+          "status": 200,
+          "bytes": 60028,
+          "sha256": "b862f2e7b4a3e3f74e4fb4c17d400d06ef1ec662f15b75de3093ff571f8ab457",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\funpec_selection-detail1.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase2-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://funpec.br/processo-seletivo/processo-seletivo-11-2026-jornalista-cadastro-de-reserva/",
+          "kind": "detail2",
+          "observed_at": "2026-09-08T14:50:14.651583+00:00",
+          "status": 200,
+          "bytes": 59642,
+          "sha256": "9e3dac8738f2efbd6f2043f31d56ec01a7059602aa086e6ce6cf6663cbf19e08",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\funpec_selection-detail2.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase2-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "attempts": [
+            {
+              "run_id": "tpr-9a84d36d71cd",
+              "execution_status": "failed",
+              "validation_status": "pending"
+            },
+            {
+              "run_id": "tpr-562b7ee9520c",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        },
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "attempts": [
+            {
+              "run_id": "tpr-60617ea4bd93",
+              "execution_status": "failed",
+              "validation_status": "pending"
+            },
+            {
+              "run_id": "tpr-9a38abd5ef7b",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        }
+      ],
+      "coverage_complete": false
+    },
+    {
+      "source": "fade_selection",
+      "state": "two_real_cycles_valid_sample",
+      "findings": [
+        "Cadastro reserva; estágio remunerado é pessoal autorizado. Dois ciclos VALID em fisioterapia092/2026; bolsas acadêmicas excluídas."
+      ],
+      "captures": [
+        {
+          "url": "https://fade.org.br",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:10.140611+00:00",
+          "status": 200,
+          "bytes": 115885,
+          "sha256": "3a4464fba4f54479f4a7608d00b5166b5cd6a908dea9d4c0836eaafa095e4a24",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fade_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fade.org.br/servicos-gerais-cadastro-reserva-edital-090-2026-fade-ufpe/",
+          "kind": "detail0",
+          "observed_at": "2026-09-08T14:50:14.651583+00:00",
+          "status": 200,
+          "bytes": 92488,
+          "sha256": "8de5117c0d83e6f4a16f7d014dbaff2029466c5227d08a9de00a81a41a871f61",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fade_selection-detail0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase2-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "attempts": [
+            {
+              "run_id": "tpr-554475d8bd2a",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        },
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "attempts": [
+            {
+              "run_id": "tpr-b51a026901e9",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        }
+      ],
+      "coverage_complete": false
+    },
+    {
+      "source": "fapex_selection",
+      "state": "two_real_cycles_valid_sample",
+      "findings": [
+        "PortalRH CPF/senha não usado. Alternativa pública observada no menu oficial /Fapex/Site/Principal/Edital/index. nr2O estágio Nubank/UFBA/IFBA VALID em dois ciclos executados pelo root. Mestrado profissional, bolsas/fomento excluídos."
+      ],
+      "captures": [
+        {
+          "url": "https://master.fapex.org.br/portalrh/",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:10.141617+00:00",
+          "status": 200,
+          "bytes": 37119,
+          "sha256": "1d2046e35f1ccaf26303ffee9fc00ffc60012b553e1f20ae10c9afe211beb656",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fapex.org.br",
+          "kind": "official-home",
+          "observed_at": "2026-09-08T15:23:02.794488+00:00",
+          "status": 200,
+          "bytes": 124478,
+          "sha256": "f1989d13baa3aa27e21c8222dfaa3938f9fa2d0ca2907bcce18312d160b8808c",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-official-home.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase5-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/index",
+          "kind": "public-0",
+          "observed_at": "2026-09-08T15:24:33.349315+00:00",
+          "status": 200,
+          "bytes": 307478,
+          "sha256": "5e1b47152a4ec462a26a16ce33c7aaef901fd88bcc6c37937a707ee722893993",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-public-0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase6-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P",
+          "kind": "public-1",
+          "observed_at": "2026-09-08T15:24:33.349315+00:00",
+          "status": 200,
+          "bytes": 37172,
+          "sha256": "7c5e0275df734f898d9990f950b53eebecba286aca91c098f0795217bd08a2ca",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-public-1.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase6-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O",
+          "kind": "public-2",
+          "observed_at": "2026-09-08T15:24:33.350314+00:00",
+          "status": 200,
+          "bytes": 39685,
+          "sha256": "b60c2b85a3d2d6c4db932d4a995bbd7e3cf9af1df69d5e6c7ce2c87f5c9d1573",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-public-2.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase6-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N",
+          "kind": "public-3",
+          "observed_at": "2026-09-08T15:24:33.350314+00:00",
+          "status": 200,
+          "bytes": 38116,
+          "sha256": "cb714474430e6a6ab8603cfa1368f633004682d1abc61548edced7f25f4d66ee",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapex_selection-public-3.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase6-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [
+        {
+          "report": "docs/tenderproof-batch99-fapex-live.json",
+          "cycle": 1,
+          "attempts": [
+            {
+              "run_id": "tpr-c7d538908d3e",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        },
+        {
+          "report": "docs/tenderproof-batch99-fapex-live.json",
+          "cycle": 2,
+          "attempts": [
+            {
+              "run_id": "tpr-0184a5362f76",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        }
+      ],
+      "coverage_complete": false
+    },
+    {
+      "source": "fatec_selection",
+      "state": "adapter_verified_real_cycles_pending",
+      "findings": [
+        "Tabela oficial expõe 12 seleções pessoais, número do processo, função e PDF por linha. Mesma URL real com IDs distintos. Fixtures e publicação sintética aprovadas; aguardam ativação central e dois ciclos reais."
+      ],
+      "captures": [
+        {
+          "url": "https://www.fatecsm.org.br/processos-seletivos/",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:10.141617+00:00",
+          "status": 200,
+          "bytes": 92888,
+          "sha256": "346dee89a3bfdc24f2e89ef9347082c86875431bf868e120bd17870df664954a",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fatec_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [],
+      "coverage_complete": false
+    },
+    {
+      "source": "faped_selection",
+      "state": "blocked_http_406",
+      "findings": [
+        "HTTP406 em duas capturas independentes da página configurada. Corpo preservado; sem contrato comprovado e sem adaptador."
+      ],
+      "captures": [
+        {
+          "url": "https://faped.org.br",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:10.991066+00:00",
+          "status": 406,
+          "bytes": 226,
+          "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\faped_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://faped.org.br",
+          "kind": "listing-cycle2",
+          "observed_at": "2026-09-08T15:23:02.795490+00:00",
+          "status": 406,
+          "bytes": 226,
+          "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\faped_selection-listing-cycle2.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase5-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [],
+      "coverage_complete": false
+    },
+    {
+      "source": "fapese_selection",
+      "state": "two_real_cycles_valid_sample",
+      "findings": [
+        "Contrato implementado e registrado, limitado aos cartões pessoais de PRONERA na URL oficial observada.",
+        "Edital007/2026 contratação civil de profissionais/pessoa física: objeto e perfis confirmados no PDF17p, duas aquisições VALID com mesmoSHA.",
+        "PPE/PQD permanecem fora do contrato; nenhuma cobertura integral declarada."
+      ],
+      "captures": [
+        {
+          "url": "https://www.fapese.org.br/",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:11.288372+00:00",
+          "status": 200,
+          "bytes": 104414,
+          "sha256": "8c6c5f4986ec4141e3757623b8e9e2bb90ac0b2c718fd9cc907265c3c9f12e92",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "kind": "opportunities",
+          "observed_at": "2026-09-08T14:51:29.237575+00:00",
+          "status": 200,
+          "bytes": 71535,
+          "sha256": "234866195b377f26b9aa6eabf9c5e826037307b74f741e70e9516787a2f0bb3a",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-opportunities.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase3-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "kind": "notices",
+          "observed_at": "2026-09-08T14:51:29.238104+00:00",
+          "status": 200,
+          "bytes": 76045,
+          "sha256": "36dde17c34b725eadad7812407711926c30ab50d3bce3d219938cb9de5df2044",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-notices.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase3-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/",
+          "kind": "detail0",
+          "observed_at": "2026-09-08T14:52:22.586758+00:00",
+          "status": 200,
+          "bytes": 79325,
+          "sha256": "d560c30a208eeb30c57e751748903f2c179094032b000d09544a471a9a185ab4",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-detail0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase4-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+          "kind": "detail1",
+          "observed_at": "2026-09-08T14:52:22.587757+00:00",
+          "status": 200,
+          "bytes": 124224,
+          "sha256": "c54df0b180f27f0a6c36d1a427b4f8e3e8d9172806e63430d759300149f6a5bc",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-detail1.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase4-manifest.json",
+          "preserved_hash_verified": true
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+          "kind": "detail2",
+          "observed_at": "2026-09-08T14:52:22.587757+00:00",
+          "status": 200,
+          "bytes": 108226,
+          "sha256": "b6d3b9089d15d3e417c13895a6741cdd97cfc78a51aec80cbbab9fbb8eaf3ccc",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapese_selection-detail2.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\phase4-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [
+        {
+          "report": "docs\\tenderproof-batch99-fapese-live.json",
+          "cycle": 1,
+          "attempts": [
+            {
+              "run_id": "tpr-cdf554911a02",
+              "validation_status": "valid",
+              "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+              "total_pages": 17,
+              "durable_hash_verified": true
+            }
+          ]
+        },
+        {
+          "report": "docs\\tenderproof-batch99-fapese-live.json",
+          "cycle": 2,
+          "attempts": [
+            {
+              "run_id": "tpr-0c24bbb074ec",
+              "validation_status": "valid",
+              "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+              "total_pages": 17,
+              "durable_hash_verified": true
+            }
+          ]
+        }
+      ],
+      "coverage_complete": false,
+      "validation_report": "docs/tenderproof-batch99-fapese-validation.json"
+    },
+    {
+      "source": "fappr_selection",
+      "state": "adapter_verified_real_cycles_pending",
+      "findings": [
+        "Página oficial com24 seções pessoais observadas, incluindo estágio remunerado; exclui fomento/eleições. IDs número/ano e PDFs exclusivos por seção, mesma URL real. Fixtures/publicação sintética comprovadas; ciclos reais ainda pendentes nesta entrega."
+      ],
+      "captures": [
+        {
+          "url": "https://www.fappr.pr.gov.br/Pagina/Processos-Seletivos",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:11.415124+00:00",
+          "status": 200,
+          "bytes": 240062,
+          "sha256": "bd749d6cfddf2511c7104890471a31ec7d25c90f324f694da5437f8d80ae9d1c",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fappr_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [],
+      "coverage_complete": false
+    },
+    {
+      "source": "fapergs_selection",
+      "state": "two_real_cycles_valid_sample",
+      "findings": [
+        "Contrato limitado à rota selecao-2025 e principal contratação temporária; dois ciclos VALID. Não generaliza chamadas de fomento."
+      ],
+      "captures": [
+        {
+          "url": "https://fapergs.rs.gov.br/selecao-2025",
+          "kind": "listing0",
+          "observed_at": "2026-09-08T14:49:11.580427+00:00",
+          "status": 200,
+          "bytes": 91440,
+          "sha256": "f57b7c1fe7bf9ceb7782dce033f638aa5b09558387359d1cc7cb1515a9b45459",
+          "encoding": "utf-8",
+          "file": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\fapergs_selection-listing0.html",
+          "manifest": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\tests\\fixtures\\tenderproof_batch99_foundations\\initial-manifest.json",
+          "preserved_hash_verified": true
+        }
+      ],
+      "cycles": [
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 1,
+          "attempts": [
+            {
+              "run_id": "tpr-005a5ef2d90f",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        },
+        {
+          "report": "docs/tenderproof-batch99-foundations-live.json",
+          "cycle": 2,
+          "attempts": [
+            {
+              "run_id": "tpr-b20c4ae7df2e",
+              "execution_status": "completed",
+              "validation_status": "valid",
+              "durable_hash_verified": true
+            }
+          ]
+        }
+      ],
+      "coverage_complete": false
+    }
+  ],
+  "identity_dependency": {
+    "state": "corrected_verified_sqlite_postgresql",
+    "report": "docs/tenderproof-batch99-identity-review.json",
+    "existing_database_requires_explicit_migration": true
+  },
+  "processes_active_by_this_agent": 0
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "t012.avancasp.pin-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "REJECT",
+  "reason": "R3 evidence-only pin is directionally correct but is not ready for backend integration.",
+  "confirmed": {
+    "source_external": "avancasp_open/272",
+    "staged_artifact_id": "avancasp-open-edital-272-bbc8f6fc",
+    "staged_sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+    "staged_bytes": 750381,
+    "staged_pages": 48,
+    "staged_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+    "staged_title": "EDITAL COMPLETO 04/09/2026",
+    "old_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "old_bytes": 742298,
+    "old_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "content_distinct": true,
+    "staging_sha_recomputed": true,
+    "staging_page_extraction": "48 pages, ordered 1..48"
+  },
+  "blockers": [
+    {
+      "file": "docs/execucao/evidencias/T012/avancasp_open/avancasp_parser_r3_pin.py",
+      "issue": "EXPECTED_PAGES=48 is declared but preflight() never checks page count/order/text errors; source/external are constants and validate_document_binding does not receive or validate candidate source/external.",
+      "required_fix": "Use the real page extraction/identity path and reject count/order, error/truncated/empty/U+FFFD, source, external_id, URL, SHA and byte-length drift; add negative tests for each guard."
+    },
+    {
+      "file": "backend/app/tenderproof/avancasp_t012.py",
+      "issue": "Production-routed module remains pinned to old aa3e/b0ba/742298 artifact.",
+      "required_fix": "Integrate the bbc8/c60/750381 pin only after the full guard and evidence tests pass; do not infer revision order or merge old/new bytes."
+    },
+    {
+      "file": "backend/app/tenderproof/fields.py",
+      "issue": "Dispatch still routes avancasp_open/272 to the stale production parser.",
+      "required_fix": "Wire the corrected parser through the exact source+external branch and verify URL/detail identity; no live dispatch before that regression gate."
+    }
+  ],
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/avancasp_open/test_document_review_live_r2_r3.py",
+    "result": "4 passed",
+    "interpretation": "passes prove staged hash/basename and old-pin rejection, but do not cover the missing R3 page/source/external guards or production wiring"
+  },
+  "side_effects": {"network": false, "backend_edited": false, "live_mutation": false},
+  "release": "Do not integrate/deploy until production pins and complete fail-closed guards are corrected and tested."
+}

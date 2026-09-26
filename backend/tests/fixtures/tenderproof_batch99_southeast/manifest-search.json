@@ -1,0 +1,15 @@
+[
+  {
+    "name": "faperj-search",
+    "url": "https://faperj.br/busca/?q=Diretor%20de%20Tecnologia",
+    "observed_at": "2026-09-08T14:54:02.314212+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 16625,
+    "original_sha256": "9f1345215a6611116c2e203c6cdfec1d8821bda22149b5f5b7cba57e8e5f2121",
+    "fixture_sha256": "bc41c5593822e25028fc10c5a94fffc1bb440325605c88a21c1c073ff35e66ee",
+    "file": "faperj-search.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

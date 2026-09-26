@@ -1,0 +1,14 @@
+{
+  "schema": "t012.klc-create-envelope-handoff.v3",
+  "status": "READY_FOR_REVIEW",
+  "source_number": 57,
+  "source": "klc_open",
+  "external_id": "632",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "formal_envelope": "docs/execucao/evidencias/T012/klc_open/klc-632-reviewed-run-r3.json",
+  "derived_run_id": "tp-reviewed-600b17424a6e39e5c30c73f152fb0caf",
+  "proposal_target": null,
+  "canonical_target": "deferred; no synthetic concurso_id or run_id serialized in formal envelope",
+  "next_step": "Allocate canonical concurso_id through the normal route, then replay the exact formal envelope under owner 1; no live action performed."
+}

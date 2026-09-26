@@ -1,0 +1,42 @@
+{
+  "schema": "t012.publiconsult.document-review-r14-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "READY_FOR_SINGLE_PROPOSAL",
+  "scope": "read-only offline review; no API, Docker, live retry, approval, apply, DB or central edits",
+  "receipt": {
+    "path": "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-receipt-r13-20260913.json",
+    "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a",
+    "owner_user_id": 1,
+    "source_id": 56,
+    "external_id": "681",
+    "principal_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "principal_byte_len": 720592,
+    "principal_pages": 25,
+    "preflight_pending": false,
+    "preflight_documents": 0,
+    "prepare_http": 409,
+    "prepare_reason": "Não há pendências documentais para esta observação"
+  },
+  "semantic_gate": {
+    "principal_document": "The edital PDF is already the ReviewedRun artifact/field evidence; the document-review queue is driven by pending supplementary or changed manifest documents, not by every principal artifact.",
+    "no_pending_case": "PASS; continuous_store.review_for_run returns pending=false/documents=[] when pending_documents is empty; review_cases.prepare explicitly fails closed with the recorded 409.",
+    "manifest_omission": "NOT_FOUND; no mandatory principal-document case/manifest is required by the implementation or offline gate tests.",
+    "fields": ["titulo", "orgao", "edital_numero"],
+    "field_scope": "PASS; only the three identity fields are reproducible/publicable from the principal PDF.",
+    "pins": "PASS; source/external/detail URL/SHA/720592 bytes/25 pages remain pinned to the receipt.",
+    "taf": "PASS; the separate TAF artifact remains provenance-only and is not promoted or treated as a pending principal document."
+  },
+  "implementation_hashes": {
+    "backend/app/tenderproof/review_cases.py": "36171f06ca4a81d29ec0435097368f752fbc7a0a71f5c2858d345e577c252534",
+    "backend/app/tenderproof/continuous_store.py": "3b2ddcce9aaa9d564c963a43227da18a7c110f527a62080969962cb7bb75f0cd",
+    "backend/tests/test_tenderproof_document_review_gate.py": "cb92a63bf835b1d86011d06ea015e94074a0e4fea5db6c1f0022cee62fe4969f",
+    "backend/tests/test_catalogue_review_status.py": "b07b986fbd9dfc11f87771359d308d416d01e089be0633109a42327a4df3c976"
+  },
+  "tests": {
+    "publiconsult_proposal": "15 passed",
+    "publiconsult_parser_regression": "5 passed",
+    "document_review_and_catalogue_gate": "passed offline"
+  },
+  "release": "Permit exactly one normal proposal creation from this reviewed run; do not retry document-review prepare, use prepare-preserved, approve, or apply on this gate."
+}

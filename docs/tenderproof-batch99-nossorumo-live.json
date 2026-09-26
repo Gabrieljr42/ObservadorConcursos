@@ -1,0 +1,283 @@
+{
+  "observed_at": "2026-09-08T15:04:19.855577+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99nosso",
+  "cycles": [
+    {
+      "source": "nossorumo_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-de6b7733c5a5",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://nossorumo.org.br/",
+          "file": "nossorumo_open-cycle1-listing-a78285a376.html",
+          "sha256": "b973f4365ec02651e687bbd19192a3dfcb176986c5705dae46de8946a065c298",
+          "bytes": 506799,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:04:20.550737+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c82c3c28ca34",
+          "candidate": {
+            "candidate_id": "nossorumo_open-608",
+            "title_observed": "CONCURSO PÚBLICO - PREFEITURA MUNICIPAL DA ESTÂNCIA BALNEÁRIA DE ITANHAÉM/SP - 03/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=608",
+            "external_id": "608",
+            "observed_at": "2026-09-08T15:04:21.280421Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/608-3788-639238739834481180.pdf'\nFor more information check: https://develop",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=608",
+              "file": "nossorumo_open-cycle1-detail-ca050d5ac4.html",
+              "sha256": "b9e333e98b93b2a1768e578134fda37509ce1122fcaebb4b6b85c6a18ed9ae00",
+              "bytes": 276,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:21.715048+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-76fe4d97f9f3",
+          "candidate": {
+            "candidate_id": "nossorumo_open-607",
+            "title_observed": "CONCURSO PÚBLICO - CONSELHO REGIONAL DE MEDICINA DO PARANÁ- CRM/PR - 01/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=607",
+            "external_id": "607",
+            "observed_at": "2026-09-08T15:04:21.280421Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=607",
+              "file": "nossorumo_open-cycle1-detail-283ed811b3.html",
+              "sha256": "268392bf897b4e7227052557782d71586f7e2589ec6bba07d23bde755ebfef27",
+              "bytes": 436,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:22.091257+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-4e576b7aa948",
+          "candidate": {
+            "candidate_id": "nossorumo_open-606",
+            "title_observed": "CONCURSO PÚBLICO - PREFEITURA MUNICIPAL DA ESTÂNCIA BALNEÁRIA DE ITANHAÉM/SP - 02/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=606",
+            "external_id": "606",
+            "observed_at": "2026-09-08T15:04:21.280421Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/606-3778-639234474420153791.pdf'\nFor more information check: https://develop",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=606",
+              "file": "nossorumo_open-cycle1-detail-290792b9b1.html",
+              "sha256": "12b1e95e2f28edd1bcc5b3a184df91934e5cd56437ed6dcacf0cd6ff5895d32b",
+              "bytes": 276,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:22.484368+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.656
+    },
+    {
+      "source": "nossorumo_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-6dd2a4a0fe71",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://nossorumo.org.br/",
+          "file": "nossorumo_open-cycle2-listing-a78285a376.html",
+          "sha256": "b973f4365ec02651e687bbd19192a3dfcb176986c5705dae46de8946a065c298",
+          "bytes": 506799,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:04:23.190646+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-117e713305c0",
+          "candidate": {
+            "candidate_id": "nossorumo_open-608",
+            "title_observed": "CONCURSO PÚBLICO - PREFEITURA MUNICIPAL DA ESTÂNCIA BALNEÁRIA DE ITANHAÉM/SP - 03/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=608",
+            "external_id": "608",
+            "observed_at": "2026-09-08T15:04:23.921238Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/608-3788-639238739834481180.pdf'\nFor more information check: https://develop",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=608",
+              "file": "nossorumo_open-cycle2-detail-ca050d5ac4.html",
+              "sha256": "b9e333e98b93b2a1768e578134fda37509ce1122fcaebb4b6b85c6a18ed9ae00",
+              "bytes": 276,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:24.357154+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-9fb775f16481",
+          "candidate": {
+            "candidate_id": "nossorumo_open-607",
+            "title_observed": "CONCURSO PÚBLICO - CONSELHO REGIONAL DE MEDICINA DO PARANÁ- CRM/PR - 01/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=607",
+            "external_id": "607",
+            "observed_at": "2026-09-08T15:04:23.921238Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=607",
+              "file": "nossorumo_open-cycle2-detail-283ed811b3.html",
+              "sha256": "268392bf897b4e7227052557782d71586f7e2589ec6bba07d23bde755ebfef27",
+              "bytes": 436,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:25.672959+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-f1ad5cbc9aad",
+          "candidate": {
+            "candidate_id": "nossorumo_open-606",
+            "title_observed": "CONCURSO PÚBLICO - PREFEITURA MUNICIPAL DA ESTÂNCIA BALNEÁRIA DE ITANHAÉM/SP - 02/2026",
+            "detail_url_observed": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=606",
+            "external_id": "606",
+            "observed_at": "2026-09-08T15:04:23.921238Z",
+            "source": "nossorumo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '401 Unauthorized' for url 'https://nossorumo.org.br/Arquivos/Projetos/606-3778-639234474420153791.pdf'\nFor more information check: https://develop",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://nossorumo.org.br/Home/GetPublicacoes?idProjeto=606",
+              "file": "nossorumo_open-cycle2-detail-290792b9b1.html",
+              "sha256": "12b1e95e2f28edd1bcc5b3a184df91934e5cd56437ed6dcacf0cd6ff5895d32b",
+              "bytes": 276,
+              "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+              "observed_at": "2026-09-08T15:04:26.037904+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.562
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "validated_at": "2026-09-08T13:53:53.409130+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r30mix",
+  "passed": false,
+  "scope": "offline mixed20-source queue; two processes; first round exceeded worker290s budget; second round not executed",
+  "command": [
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+    "scripts/tenderproof_batch30_mixed_validation.py"
+  ],
+  "worker_timeout_s": 290,
+  "round_timeout_s": 300,
+  "initial_backlog": 40,
+  "remaining_backlog": 13,
+  "job_states": {
+    "failed": 1,
+    "retry": 13,
+    "succeeded": 26
+  },
+  "acquisition_busy_deferred_jobs": 13,
+  "sources": [
+    {
+      "source": "admtec_open",
+      "status": "active",
+      "cycle_id": "tcc-05c50d9971d24e829e959d1815a6be2a",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "aguia_open",
+      "status": "partial",
+      "cycle_id": "tcc-7b891d5fce8b4eca910332b545436cb7",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "consulpam_open",
+      "status": "partial",
+      "cycle_id": "tcc-edaa9ef757864a19b2196192e62ed48c",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "cotec_open",
+      "status": "partial",
+      "cycle_id": "tcc-38938d5ea72f47dea488e221c25e105f",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "exame_open",
+      "status": "partial",
+      "cycle_id": "tcc-b6c509904a6b4e05963c9b34355c2143",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "fafipa_open",
+      "status": "partial",
+      "cycle_id": "tcc-ea1712d7f74343b3b70ab81967558f86",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "ibfc_open",
+      "status": "partial",
+      "cycle_id": "tcc-fc9dd6708be64fc8a651fca95bb40b17",
+      "observations": 1,
+      "valid_observations": 0
+    },
+    {
+      "source": "idcap_open",
+      "status": "partial",
+      "cycle_id": "tcc-66ef71bddca9426cb38447c9aa0c5e61",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "idecan_open",
+      "status": "active",
+      "cycle_id": "tcc-68225c42dda14298a31804a40fe47693",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "institutomais_open",
+      "status": "partial",
+      "cycle_id": "tcc-9c1141496f13450d963f28c1540b2e2e",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "objetiva_open",
+      "status": "partial",
+      "cycle_id": "tcc-d5b8e5032ddf4f32941d567bd16b2d02",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "omni_open",
+      "status": "partial",
+      "cycle_id": "tcc-7851cbe660e5495abda8719c1bce7836",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "publiconsult_open",
+      "status": "partial",
+      "cycle_id": "tcc-578eead655124e6e9b867bec0da7ce7f",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "quadrix_open",
+      "status": "active",
+      "cycle_id": "tcc-133a5c4dba6a4da48c7da6b7cdacd6db",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "rbo_open",
+      "status": "active",
+      "cycle_id": "tcc-118c27fee7184adab2de3449455e295f",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "reisesreis_open",
+      "status": "completed",
+      "cycle_id": "tcc-86207a68a89a4763b674ddc97115ec16",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "sigma_open",
+      "status": "active",
+      "cycle_id": "tcc-c2d80ccf7caa48d0b2a4279120fd9781",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "ufu_selection",
+      "status": "active",
+      "cycle_id": "tcc-9112c4b4b8c240b7915914edccdedd07",
+      "observations": 1,
+      "valid_observations": 1
+    },
+    {
+      "source": "uniselva_selection",
+      "status": "active",
+      "cycle_id": "tcc-8af279789cd34707bc7d9eb95442b898",
+      "observations": 0,
+      "valid_observations": 0
+    },
+    {
+      "source": "w2_open",
+      "status": "active",
+      "cycle_id": "tcc-c7e67f9ad1014a819231d4d7240c3f38",
+      "observations": 0,
+      "valid_observations": 0
+    }
+  ],
+  "metrics": {
+    "measured_at": 1788875633.4111168,
+    "jobs_by_status": {
+      "failed": 1,
+      "retry": 13,
+      "succeeded": 26
+    },
+    "retry_attempts": 0,
+    "oldest_ready_delay_seconds": 51.890599966049194,
+    "completed_cycles_by_source": [
+      {
+        "source": "aguia_open",
+        "cycles": 1,
+        "mean_seconds": 4.915626049041748,
+        "max_seconds": 4.915626049041748
+      },
+      {
+        "source": "consulpam_open",
+        "cycles": 1,
+        "mean_seconds": 186.60933780670166,
+        "max_seconds": 186.60933780670166
+      },
+      {
+        "source": "cotec_open",
+        "cycles": 1,
+        "mean_seconds": 64.56062698364258,
+        "max_seconds": 64.56062698364258
+      },
+      {
+        "source": "exame_open",
+        "cycles": 1,
+        "mean_seconds": 97.99214100837708,
+        "max_seconds": 97.99214100837708
+      },
+      {
+        "source": "fafipa_open",
+        "cycles": 1,
+        "mean_seconds": 127.66114139556885,
+        "max_seconds": 127.66114139556885
+      },
+      {
+        "source": "ibfc_open",
+        "cycles": 1,
+        "mean_seconds": 36.29748320579529,
+        "max_seconds": 36.29748320579529
+      },
+      {
+        "source": "idcap_open",
+        "cycles": 1,
+        "mean_seconds": 187.04917454719543,
+        "max_seconds": 187.04917454719543
+      },
+      {
+        "source": "institutomais_open",
+        "cycles": 1,
+        "mean_seconds": 186.31570053100586,
+        "max_seconds": 186.31570053100586
+      },
+      {
+        "source": "objetiva_open",
+        "cycles": 1,
+        "mean_seconds": 216.99242568016052,
+        "max_seconds": 216.99242568016052
+      },
+      {
+        "source": "omni_open",
+        "cycles": 1,
+        "mean_seconds": 248.056471824646,
+        "max_seconds": 248.056471824646
+      },
+      {
+        "source": "publiconsult_open",
+        "cycles": 1,
+        "mean_seconds": 277.56622982025146,
+        "max_seconds": 277.56622982025146
+      },
+      {
+        "source": "reisesreis_open",
+        "cycles": 1,
+        "mean_seconds": 66.4352240562439,
+        "max_seconds": 66.4352240562439
+      }
+    ],
+    "snapshot_pages": 27,
+    "snapshot_html_bytes": 1351464,
+    "unconfirmed_browser_attempts": 0,
+    "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+  },
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "workers_terminal": true,
+  "termination_evidence": "Parent process finally block polled both workers, kills/waits any live worker, then asserted worker failure; both retained logs end with worker290s TimeoutError. Parent command observed terminal exit1.",
+  "worker_exitcodes": null,
+  "exitcode_limitation": "Original harness did not persist individual worker exitcodes or PIDs on failure; future script version does.",
+  "worker_logs": [
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r30mix\\worker-1-0.log",
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r30mix\\worker-1-1.log"
+  ],
+  "explanation": "Global acquisition lease contention deferred jobs with acquisition_busy and retry_base_s30. Workers polled other ready jobs after0.05s. Remaining retry jobs show contention, not source unavailability.",
+  "limitations": [
+    "Not a Celery/Redis worker proof; custom consumers using unmodified ContinuousEngine.",
+    "No two-round deduplication claim: second round did not execute.",
+    "Workers imported core before concurrent document-change code update; this is evidence for that loaded revision only.",
+    "Root contains interrupted bounded experiment; no original evidence modified."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "tenderproof.t010.id16-extraction-gate.v1",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id16.pdf",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "byte_len": 396219,
+    "pages": 23
+  },
+  "local_tool_audit": {
+    "pypdf": "installed; native extraction returns replacement glyphs and page-2 split row",
+    "pdfplumber": "not installed",
+    "pymupdf_fitz": "not installed",
+    "pdfminer": "not installed",
+    "tesseract": "not installed/on PATH",
+    "pdftoppm_pdftotext_mutool_qpdf_ocrmypdf": "not installed/on PATH",
+    "repository_policy": "backend README explicitly says native pypdf only and OCR is future work"
+  },
+  "reusable_preserved_extraction": {
+    "path": "docs/execucao/evidencias/T010/T010-extracao.json",
+    "record_id": 16,
+    "artifact_sha256_match": true,
+    "pages_present": [1, 2],
+    "replacement_characters": 0,
+    "pages_1_2_hits_sha256": "8219f59e46fc0019c9d5918b94517f674d0cd8240efd1b6c9d60241708fe1c70",
+    "limitation": "This file preserves bounded hit snippets, not complete page text; its page-2 snippet still says 'Médio Ginecologista', and page-1 snippets truncate before the full Médico Geriatra label."
+  },
+  "decision": "blocked_precise",
+  "reason": "No installed deterministic extractor can produce a fresh complete page-1/page-2 text layer. The existing sidecar is SHA-linked and U+FFFD-free but incomplete for exact per-row evidence; correcting the split label would require inference rather than geometry-verifiable reconstruction.",
+  "not_performed": ["parser", "reviewed_run_envelope", "dry_run_import", "disposable_store_revalidate_create_proposal", "pilot", "deploy", "import", "apply"],
+  "minimum_next_step": "Provide/install an approved local OCR/text extraction layer or preserve complete page-1/page-2 extraction output tied to this SHA; then rerun the 18-row parser and proposal revalidation. Do not publish the current six-row/sidecar-only evidence."
+}

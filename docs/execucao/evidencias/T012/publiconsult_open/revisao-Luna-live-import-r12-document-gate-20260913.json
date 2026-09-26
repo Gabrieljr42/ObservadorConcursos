@@ -1,0 +1,31 @@
+{
+  "review": "Luna Publiconsult R12 document-review anomaly",
+  "date": "2026-09-13",
+  "verdict": "BLOCKED_WITH_EXACT_FIX",
+  "scope": "offline read-only; no API, Docker, live, proposal or apply",
+  "run": {
+    "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a",
+    "owner_user_id": 1,
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "concurso_id": null,
+    "principal_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "principal_bytes": 720592,
+    "fields": ["titulo", "orgao", "edital_numero"]
+  },
+  "finding": {
+    "principal": "The main PDF is correctly hash/byte pinned and supplies exactly three supported fields; no cargos, remuneration, fee, prova_data or TAF value is promoted.",
+    "taf": "The TAF is a distinct six-page documentary artifact (SHA d358bb8a..., 341466 bytes) and is legitimately outside the ReviewedRun identity/fields because the package declares provenance-only. It must not be silently inherited from the previous run/case.",
+    "anomaly": "pending=false/documents=0 means no R12 document-review case was prepared; it is not evidence that the required R12 document review was approved. The R12 package explicitly requires principal-edital review/approval on the new run and separately states TAF review only if attached.",
+    "prior_case": "No prior run/case/approval may be inherited; the old bea209... case is reference-only."
+  },
+  "exact_fix": {
+    "no_new_envelope_import": "The R12 envelope/import is internally valid; do not regenerate it merely to repair the gate.",
+    "principal": "On the authenticated owner-1 run tp-reviewed-6d188a567582fae5ac3e8c82df38e75a, run the normal document-review prepare path and approve the principal edital case with only the exact principal SHA/URL/page evidence and no field_changes; verify current/pending state and then rerun proposal dry-run.",
+    "taf": "Do not include TAF in the principal proposal. If documentary attachment is required, prepare a separate owner/run-bound case using its exact preserved SHA/bytes/pages and approve it independently; otherwise leave it provenance-only.",
+    "proposal": "Only after the new R12 review gate is explicitly approved, create one normal proposal for target null with exactly the three eligible fields; stop before approve/apply."
+  },
+  "tests": "28 passed: Publiconsult parser/proposal and ReviewedRun import suites; one Pydantic schema warning.",
+  "side_effects": "Receipt confirms no proposal/version/outbox/notification mutation in R12; this review performed none."
+}

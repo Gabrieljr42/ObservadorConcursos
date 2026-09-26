@@ -1,0 +1,48 @@
+{
+  "schema": "t012.avancasp-proposal-receipt.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "avancasp_open",
+  "source_number": 54,
+  "selection": {
+    "external_id": "272",
+    "candidate_id": "avancasp_open-272",
+    "title": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+    "personnel_recruitment": true,
+    "publicable": true,
+    "out_of_scope_check": "title and preserved detail do not identify vestibular, bolsa, auxílio, or training"
+  },
+  "reviewed_envelope": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/reviewed-envelope.json",
+    "run_id": "tp-reviewed-9edb46567e9d34e12c488cdcefb53f19",
+    "artifact_id": "avancasp-open-detail-272-html-8f84661e",
+    "artifact_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3",
+    "artifact_bytes": 37232,
+    "reference_only": true,
+    "pending_fields": [],
+    "fields": ["cargos"]
+  },
+  "preserved_listing": {
+    "path": "backend/tests/fixtures/tenderproof_pilot/avancasp_open-listing.html",
+    "sha256": "d04a91da70d0f3dfa40ce1b216e594508ed03f5c8bbfebbc2284035aaa27cbf2",
+    "bytes": 47635
+  },
+  "document_observed": {
+    "kind": "edital",
+    "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "note": "URL e vínculo foram preservados no HTML; o PDF não foi baixado nesta etapa e nenhum SHA de PDF foi inventado."
+  },
+  "deduplication": {
+    "key": "avancasp_open:272",
+    "listing_external_ids_unique": true,
+    "detail_identity_confirmed": true,
+    "duplicate_selection_found": false
+  },
+  "validation": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py",
+    "result": "7 passed, 1 warning",
+    "network_called": false,
+    "pilot_called": false,
+    "catalogue_mutated": false
+  }
+}

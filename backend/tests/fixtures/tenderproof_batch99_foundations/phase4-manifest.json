@@ -1,0 +1,993 @@
+{
+  "limits": "2MiB/25s, TLS verified, redirects recorded only, no PDF/browser",
+  "pages": [
+    {
+      "source": "fapese_selection",
+      "url": "https://www.fapese.org.br/pronera/",
+      "kind": "detail0",
+      "observed_at": "2026-09-08T14:52:22.586758+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 79325,
+      "sha256": "d560c30a208eeb30c57e751748903f2c179094032b000d09544a471a9a185ab4",
+      "file": "fapese_selection-detail0.html",
+      "encoding": "utf-8",
+      "title": "Pronera - Fapese",
+      "links": [
+        {
+          "url": "https://www.fapese.org.br/pronera/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/#elementor-action%3Aaction%3Doff_canvas%3Aclose%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6ImNsb3NlIn0%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+          "title": "03/09/2026 - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA"
+        },
+        {
+          "url": "http://instagram.com/fapese_oficial/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/company/fapese/",
+          "title": "Linkedin"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.0",
+        "https://www.fapese.org.br/wp-content/themes/fapese-theme/js/main.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/frontend-handlers/frontend-handlers.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/alpinejs/alpinejs.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/tabs-handler.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/lib/motion/motion.min.js?ver=11.13.5",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions-shared-utils.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+        "https://www.fapese.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=4.1.0"
+      ]
+    },
+    {
+      "source": "fapese_selection",
+      "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+      "kind": "detail1",
+      "observed_at": "2026-09-08T14:52:22.587757+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 124224,
+      "sha256": "c54df0b180f27f0a6c36d1a427b4f8e3e8d9172806e63430d759300149f6a5bc",
+      "file": "fapese_selection-detail1.html",
+      "encoding": "utf-8",
+      "title": "Programa Primeiro Emprego - Fapese",
+      "links": [
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/#elementor-action%3Aaction%3Doff_canvas%3Aclose%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6ImNsb3NlIn0%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital_Convocacao_04-2026-PPE-SE_Sul_Sergipano_03-09-2026-Para-publicacao.pdf",
+          "title": "05/09/2026 - Edital de Convocação Nº 04/2026 - Sul Sergipano"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital_Convocacao_03-2026-PPE-SE_Centro_Sul_03-09-2026-Para-Publicacao.pdf",
+          "title": "05/09/2026 - Edital de Convocação Nº 03/2026 - Centro Sul Sergipano"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital_Convocacao_02-2026-PPE-SE_Agreste_Central_03-09-2026-Para-Publicacao.pdf",
+          "title": "05/09/2026 - Edital de Convocação Nº 02/2026 - Agreste Central Sergipano"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital_Convocacao_01-2026-PPE-SE_Gerenciamento_de_Projetos_03-09-2026_29-Para-publicacao.pdf",
+          "title": "03/09/2026 -  Edital de Convocação  Nº 01/2026 - Gerenciamento de Projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/08/CLASSIFICACAO-GERAL-DO-BANCO-DE-PROFESSORES-INSTRUTORES-DO-PPE-Para-publicacao.pdf",
+          "title": "03/08/2026 - Classificação Geral Consolidada do Banco de Professores/Instrutores"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/CLASSIFICACAO-FINAL-EDITAL-02.2026-Para-publicacao-1.pdf",
+          "title": "27/07/2026 - Edital Nº 02 - Resultado Final - Classificação Geral Pós-recurso"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/RESULTADO-FINAL-EDITALbCOMPLEMENTAR-06.2026-Para-publicacao.pdf",
+          "title": "23/07/2026 - Edital Complementar Nº 06 - Resultado Final das Inscrições"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/RESULTADO-PRELIMINAR-EDITAL-COMPLEMENTAR-06.2026-Para-publicaA§Ao.pdf",
+          "title": "21/07/2026 - Edital Complementar Nº 06 - Resultado Preliminar das Inscrições"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Retificacao_01_Edital_Complementar_06_2026_FAPESE_Versao_final_assinado-1.pdf",
+          "title": "03/07/2026 - Retificação N. 01 do Edital Complementar Nº 06/2026 Chamada Pública Complementar para Formação de Banco de Professores/Instrutores"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/06/EDITAL_COMPLEMENTAR_-_PPE_-_FAPESE_assinado_assinado.pdf",
+          "title": "22/06/2026 - Chamada Pública Complementar para Formação de Banco de Professores/Instrutores"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/04/RESULTADO_FINAL_-_PONTUACAO_-_Pos_Recursos_-_1_assinado_assinado.pdf",
+          "title": "28/04/2026 - Retificação do Resultado Final Pós-Recursos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/04/RESULTADO_FINAL_-_PONTUACAO_-_Pos_Recursos_assinado_assinado_assinado.pdf",
+          "title": "20/04/2026 - Resultado Final Pós-Recursos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/04/Retificacao-Edital-PPE-1.pdf",
+          "title": "15/04/2026 - Retificação do Edital e Prorrogação do Cronograma"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/04/EditalRetificaCronograma_assinado1004_assinado.pdf",
+          "title": "10/04/2026 - Retificação do Edital e Prorrogação do Cronograma"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/04/RESULTADO_FINAL_DA_HOMOLOGACAO_DAS_INSCRICOES_-_31.03.26_assinado_assinado__281_29_assinado.pdf",
+          "title": "01/04/2026 - Edital Nº02/2026: Resultado Final da Homologação das Inscrições"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/03/RETIFICACAO_3_DA_CHAMADA_PUBLICA_PARA_FORMACAO_DE_BANCO_DE_PROFESSORES_assinado_assinado.pdf",
+          "title": "30/03/2026 - Edital Nº02/2026: Retificação Nº 03 / Prorrogação do Prazo de Inscrições e Alteração do Cronograma"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/03/Resultado-homologacao-primeiro-emprego.pdf",
+          "title": "28/03/2026 - Homologação das Inscrições - Resultado Preliminar"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/03/RETIFICACAO_2_DA_CHAMADA_PUBLICA_PARA_FORMACAO_DE_BANCO_DE_PROFESSORES_assinado_assinado.pdf",
+          "title": "18/03/2026 - Edital Nº 02/2026: Retificação Nº 02/Prorrogação do Prazo de Inscrições e Alteração do Cronograma"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/03/Retificacao_1003_assinado2.pdf",
+          "title": "13/03/2026 - Edital Nº 02/2026: Retificação Nº 01 da Chamada Pública para Formação de Banco de Professores/Instrutores do Programa Primeiro Emprego"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/03/Minuta-CHAMADA-PUBLICA-PROFS_PrimeiroEmprego-02-03-26.pdf",
+          "title": "10/03/2026 - Edital Nº 02/2026: Chamada Pública para Formação de Banco de Professores/Instrutores do Programa Primeiro Emprego"
+        },
+        {
+          "url": "http://instagram.com/fapese_oficial/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/company/fapese/",
+          "title": "Linkedin"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.0",
+        "https://www.fapese.org.br/wp-content/themes/fapese-theme/js/main.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/frontend-handlers/frontend-handlers.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/alpinejs/alpinejs.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/tabs-handler.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/lib/motion/motion.min.js?ver=11.13.5",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions-shared-utils.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+        "https://www.fapese.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=4.1.0"
+      ]
+    },
+    {
+      "source": "fapese_selection",
+      "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+      "kind": "detail2",
+      "observed_at": "2026-09-08T14:52:22.587757+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 108226,
+      "sha256": "b6d3b9089d15d3e417c13895a6741cdd97cfc78a51aec80cbbab9fbb8eaf3ccc",
+      "file": "fapese_selection-detail2.html",
+      "encoding": "utf-8",
+      "title": "Programa de Qualificação de Docentes (PQD) - Fapese",
+      "links": [
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/#elementor-action%3Aaction%3Doff_canvas%3Aclose%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6ImNsb3NlIn0%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/08/Resultado_Final_-_Retificado_em_17.08.26_assinado_assinado.pdf",
+          "title": "19/08/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Resultado Final Retificado da Chamada Pública para Composição do Banco de Mediadores Pedagógicos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/08/Resultado_Final_-_Retificado_em_04.08.26_assinado_assinado.pdf",
+          "title": "04/08/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Resultado Final Retificado da Chamada Pública para Composição do Banco de Mediadores pedagógicos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Resultado_Final_-_Edital_de_mediadores_assinado_assinado-1.pdf",
+          "title": "31/07/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Resultado Final da Chamada Pública para Composição do Banco de Mediadores pedagógicos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Resultado_Preliminar_-_Mediadores_com_pontuacao_assinado_1_assinado.pdf",
+          "title": "22/07/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Resultado Preliminar da Pontuação Obtida pelos Candidatos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Homologacao_Mediadores_29_assinado_assinado-1.pdf",
+          "title": "14/07/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Resultado Final das Homologações para a Formação do Banco de Mediadores Pedagógicos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Homologacao_Mediadores_28preliminar29_assinado_28229_assinado_assinado.pdf",
+          "title": "14/07/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Inscrições Homologadas para a Formação do Banco de Mediadores Pedagógicos"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Edital-Mediador-PQD-4-2026-2.pdf",
+          "title": "01/07/2026 - Edital Nº06/2026/Fapese/UFS/PQD-4: Chamada Pública para Composição do Banco de Mediadores Pedagógicos para os Cursos de Formação Continuada do PQD-4"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/07/Convocacao_Formadores_PQD4_Formar-Se.pdf",
+          "title": "01/07/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Convocação N°01/2026"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/06/RESULTADO_FINAL_-_2026-06-23_assinado__281_29_3_assinado.pdf",
+          "title": "23/06/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Resultado Final"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/06/RESULTADO_PRELIMINAR_-_2026-06-17_101600_ass_assinado.pdf",
+          "title": "17/06/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Resultado Preliminar"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/06/HOMOLOGACAO_FINAL_assinado.pdf",
+          "title": "15/06/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Homologação Final das Inscrições para Composição de Banco de Formadores para os cursos de Formação Continuada"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/06/HOMOLOGACAO_PRELIMINAR_ass-1_assinado.pdf",
+          "title": "09/06/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Homologação Preliminar das Inscrições para Composição de Banco de Formadores para os cursos de Formação Continuada"
+        },
+        {
+          "url": "https://www.fapese.org.br/wp-content/uploads/2026/05/CHAMADA_PUBLICA_PQD4_-_BANCO_DE_FORMADORES_assinado.pdf",
+          "title": "29/05/2026 - Edital Nº03/2026/Fapese/UFS/PQD-4: Chamada Pública para Composição de Banco de Formadores para os cursos de Formação Continuada"
+        },
+        {
+          "url": "http://instagram.com/fapese_oficial/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/company/fapese/",
+          "title": "Linkedin"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.0",
+        "https://www.fapese.org.br/wp-content/themes/fapese-theme/js/main.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/frontend-handlers/frontend-handlers.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/packages/alpinejs/alpinejs.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/tabs-handler.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/lib/motion/motion.min.js?ver=11.13.5",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions-shared-utils.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/interactions.min.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+        "https://www.fapese.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=4.1.0"
+      ]
+    }
+  ]
+}

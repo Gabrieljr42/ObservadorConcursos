@@ -1,0 +1,15 @@
+{
+  "schema": "t012.publiconsult-backend-bundle-r20-delta.v1",
+  "status": "READY_FOR_DELTA_REVIEW",
+  "scope": "single P2 smoke assertion; offline only",
+  "file": "backend/app/tenderproof/publiconsult_t012.py",
+  "change": "__main__ smoke assertion updated from len(fields)==2 to the current 3-field identity contract",
+  "sha256": "a54389e5907b69d8b0c41d3f3adb470e0c96f0ef8d75c179bdef950d548f35c7",
+  "tests": {
+    "python_module_smoke": "PASS: PUBLICONSULT_R4_PARSER_PASS",
+    "target": "8 passed",
+    "compileall": "PASS"
+  },
+  "runtime_behavior_changed": false,
+  "live_or_deploy": false
+}

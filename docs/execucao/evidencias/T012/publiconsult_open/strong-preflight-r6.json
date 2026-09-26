@@ -1,0 +1,13 @@
+{
+  "schema": "t012.publiconsult-strong-preflight-r6.v1",
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "artifact_byte_len": 720592,
+  "official_document_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+  "pins": ["scheme=https", "host=gsistbucket.s3.amazonaws.com", "exact path", "requested/final URL exact", "constant byte length", "SHA exact"],
+  "tests": {"path": "test_publiconsult_parser_r3.py", "result": "5 passed", "coverage": ["real _revalidate dispatch via controlled monkeypatch", "candidate selection independent of candidates[0]", "host drift rejected", "path drift rejected", "length drift rejected", "side effects zero"]},
+  "integration_status": "READY_FOR_INTEGRATION",
+  "wiring_note": "Monkeypatch proves the real contract/dispatch boundary only; registering source-specific wiring into shared extractor/revalidate is a separate integrator step.",
+  "handoff": "PUBLICONSULT_PARSER_R6_READY"
+}

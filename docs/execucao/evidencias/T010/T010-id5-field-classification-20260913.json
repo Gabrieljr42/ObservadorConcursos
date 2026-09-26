@@ -1,0 +1,20 @@
+{
+  "schema": "t010.id5.local-field-audit.v1",
+  "record_id": 5,
+  "source": "institutoconsulplan_open",
+  "external_id": "unai2026",
+  "artifact": {"path":"docs/execucao/evidencias/T010/id5.pdf","sha256":"9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32","byte_len":565628,"pages":31},
+  "fields": {
+    "titulo": {"classification":"comprovável","page":1,"snippet":"CÂMARA MUNICIPAL DE UNAÍ/MG VIII CONCURSO PÚBLICO EDITAL Nº 1, DE 26 DE AGOSTO DE 2026"},
+    "orgao_localidade": {"classification":"comprovável","page":1,"snippet":"A CÂMARA MUNICIPAL DE UNAÍ/MG, Estado de Minas Gerais"},
+    "edital_numero": {"classification":"comprovável","page":1,"snippet":"EDITAL Nº 1, DE 26 DE AGOSTO DE 2026"},
+    "cargos_vagas_requisitos_remuneracao_jornada": {"classification":"comprovável","page":1,"snippet":"Cargo Requisitos AC PcD TOTAL GERAL CH/S VENCIMENTO BÁSICO (R$) ADICIONAIS/GRATIFICAÇÕES; três linhas do quadro preservadas e reproduzidas pelo parser pinado", "details":["Analista de Sistemas: 1 AC + CR, 30 horas, R$ 9.193,89, Computação/TIC","Consultor Jurídico: CR, 30 horas, R$ 9.193,89, Direito + OAB","Contador: 1 AC + CR, 30 horas, R$ 9.193,89, Ciências Contábeis + CRC"]},
+    "beneficios": {"classification":"comprovável","page":1,"snippet":"Auxílio alimentação de R$ 1.200,00 e outros (vide subitem 1.1.2)","qualification":"outros benefícios são detalhados no subitem 1.1.2; não foram expandidos no envelope"},
+    "taxa": {"classification":"comprovável","page":3,"snippet":"O valor da taxa de inscrição será de R$ 80,00 (oitenta reais) para todos os cargos."},
+    "inscricoes": {"classification":"comprovável","page":3,"snippet":"das 16h00min do dia 30 de outubro de 2026 às 16h00min do dia 1º de dezembro de 2026"},
+    "prova_data": {"classification":"lacuna_de_extrator_adaptador","page":31,"snippet":"Realização da Prova Objetiva e Discursiva 10/1/2027","detail":"O documento comprova 2027-01-10; extract_fields genérico retornou unknown e o envelope não promoveu este campo."},
+    "campos_ausentes_no_documento": {"classification":"ausente_no_documento","fields":["quantidade adicional além do CR estimado","valor individual de outros benefícios"],"detail":"O quadro informa CR estimado, não quantidade fixa; subitem 1.1.2 lista regras sem valor individual para todos os benefícios."}
+  },
+  "parser": {"path":"backend/app/tenderproof/consulplan_unai_jobs.py","version":"consulplan-unai-2026/1","sha_pin":true,"fail_closed":true,"test":"backend/tests/test_consulplan_unai_jobs.py","result":"2 passed"},
+  "status":"ID5_READY_FOR_REVIEW"
+}

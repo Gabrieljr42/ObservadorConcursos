@@ -1,0 +1,9 @@
+{
+  "schema": "pilot-validation.t010-id6.v1",
+  "decision": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "ui": {"origin": "http://localhost:13000/concurso/6", "attribution": "coordinator_cua_observation", "independent": false, "observed": true, "reload_stable": true, "all_11_microareas_visible": true, "all_approved_values_visible": true, "publication_001_2026_visible": true, "prova_data_pending": true, "history_version": 83, "notifications_route_version_83_visible": true, "push_button_available": true, "push_web_action_dialog_visible": false, "push_post_proven": false, "opfs_smoke": "same-origin tab B failed while A held handle; after closing A, 2s wait and retry recovered without clearing data; reload stable", "origin_127_lock": "transient external OPFS handle; do not clear storage"},
+  "api_read_only": {"login_http": 200, "detail_http": 200, "versions_http": 200, "publications_http": 200, "id": 6, "title": "Processo Seletivo Público - 001/2026 Prefeitura Municipal de Berizal/MG", "edital": "001/2026", "roles": 11, "roles_matching_all_checked_fields": 11, "checked_fields": ["1 vaga imediata + cadastro de reserva por microárea", "AC 1", "PcD 0", "R$ 3.242,00 por mês", "40h semanais", "requisito: residir na área + Ensino Médio Completo", "taxa R$ 120,00"], "prova_data": null, "publication_title": "001/2026", "latest_version": 83, "latest_version_captured_at": "2026-09-13T00:53:14", "latest_version_summary": "Vagas, remuneração, jornada e requisitos por cargo foram atualizados."},
+  "limits": ["captura UI é observação do coordenador, não revisão independente", "web Ativar push não mostrou diálogo nem POST comprovado; permanece comportamento web apenas", "127.0.0.1 lock OPFS é condição ambiental transitória; não limpar dados"],
+  "linked_review": "docs/execucao/tarefas/revisao-independente-T008-opfs-r5-operacional-20260912-01.md",
+  "next_gate": "nenhum novo gate de conteúdo ID6; manter push nativo/POST como checagem separada"
+}

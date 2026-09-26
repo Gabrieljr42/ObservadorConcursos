@@ -1,0 +1,35 @@
+{
+  "scope": "Observed official CPCON and Gualimp contracts; no publication or coverage acceptance",
+  "contract_tests": {
+    "passed": 13,
+    "file": "backend/tests/test_tenderproof_batch60_extended.py"
+  },
+  "sources": {
+    "cpcon_open": {
+      "listing": "https://cpcon.uepb.edu.br",
+      "strategy": "Observed WordPress grid anchors and data-downloadurl attributes; title/canonical identity; public WPDM query preserved",
+      "limits": [
+        "UEPB 002/2026 preserved detail contains only amended notices and stays blocked",
+        "refresh token ignored in doc_id only; original request URL preserved; operational manifest normalization requires separate real-byte evidence",
+        "No full historical coverage proof; generic empty page is inconclusive"
+      ],
+      "current_result": "Two completed/valid PSS002/2026 acquisitions, 13 pages each; retification-only UEPB002/2026 remains blocked"
+    },
+    "gualimp_open": {
+      "listing": "https://www.gualimp.com.br/concursos/",
+      "detail_host": "gualimpconsultoria.com.br",
+      "strategy": "Observed public AJAX load_ps and load_publicacoes, both tied to exact original detail query ID; original JSON bodies preserved in inert composite evidence",
+      "limits": [
+        "Server JSON identity lacks explicit id_concurso; identity rests on two exact request URLs plus listing/detail title corroboration and PDF revalidation",
+        "No guessing of other AJAX functions or routes; malformed/empty resource fails whole detail",
+        "No full historical coverage proof"
+      ],
+      "current_result": "Initial official HTML and JSON captures succeeded, but subsequent bounded driver acquisitions received browser challenge HTTP403 for 3 candidates in each of 2 cycles. No valid live PDF; partial/blocked status required."
+    }
+  },
+  "live_evidence": {
+    "cpcon": "docs/tenderproof-batch60-cpcon-valid-live.json",
+    "gualimp": "docs/tenderproof-batch60-extended-verified-live.json",
+    "refresh": "docs/tenderproof-batch60-cpcon-refresh-proof.json"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "t012.runtime-revalidation-422-r1.v1",
+  "recorded_at": "2026-09-13T15:47:47.4963555Z",
+  "scope": "read-only runtime diagnosis inside image 9dfcaad; no import/proposal/prepare/approve/apply",
+  "runtime": {
+    "image": "sha256:9dfcaadfe6ec3f929e591c8f8ede2a8c407fd4ee51ed645645f597f80aa05935",
+    "artifact_dir": "/var/lib/observador/tenderproof/artifacts",
+    "containers_checked": ["observador-pilot-api-1", "observador-pilot-worker-1"]
+  },
+  "common_finding": "Neither failure is a volatile path or missing blob. Both artifact files are readable in API and worker with declared SHA/byte length. The guards fail on the persisted reviewed-run envelope/evidence contract during fresh revalidation.",
+  "cases": {
+    "ufu": {
+      "run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+      "owner": 1,
+      "source_id": 40,
+      "source": "ufu_selection",
+      "external_id": "1843",
+      "artifact": {
+        "artifact_id": "ufu-selection-1843-detail-2026",
+        "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+        "byte_len": 26619,
+        "storage_path": "ufu-selection-1843-detail-2026-72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf.pdf",
+        "path_exists_api": true,
+        "path_exists_worker": true
+      },
+      "persisted_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+      "persisted_evidence_source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+      "fresh_evidence_source_url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+      "fresh_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+      "revalidate": {
+        "runtime_status": "returned eligible={} and blocked all persisted fields",
+        "blocked_reason": "trecho, página, origem ou vínculo documental inválido",
+        "canonical_create_result": "HTTP 422: criação exige título, órgão e número do edital com evidência reproduzida"
+      },
+      "root_cause": "_reproduced_evidence requires evidence.source_url to equal the artifact URL used by the fresh extraction. The reviewed envelope recorded the candidate detail URL instead of the pinned document URL; bytes/path are valid."
+    },
+    "publiconsult": {
+      "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+      "owner": 1,
+      "source_id": 56,
+      "source": "publiconsult_open",
+      "external_id": "681",
+      "artifact": {
+        "artifact_id": "art-74ea1bc8f9",
+        "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+        "byte_len": 720592,
+        "storage_path": "art-74ea1bc8f9-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf",
+        "path_exists_api": true,
+        "path_exists_worker": true
+      },
+      "persisted_fields": ["orgao", "edital_numero"],
+      "fresh_fields": ["titulo", "orgao", "edital_numero"],
+      "revalidate": {
+        "runtime_status": "eligible orgao+edital; titulo absent from persisted run",
+        "blocked_fields": ["titulo", "inscricao_inicio", "inscricao_fim", "prova_data", "taxa", "cargos"],
+        "canonical_create_result": "HTTP 422: criação exige título, órgão e número do edital com evidência reproduzida"
+      },
+      "root_cause": "The legacy owner1 run envelope persisted no titulo field/evidence although the current source-specific extractor reproduces a supported title. This is an incomplete legacy envelope, not a storage/path or page-record failure."
+    }
+  },
+  "page_state": "Both runs have processed_pages/total_pages null and empty page_errors; fresh extraction succeeds. This metadata absence did not cause the observed 422; the evidence URL mismatch (UFU) and omitted title (Publiconsult) did.",
+  "logs": {
+    "api": "One sanitized POST /tenderproof/publications/proposals 422 was present after UFU retry; no stack trace or secret.",
+    "worker": "Recent logs contain generic retry_or_failed ValueError jobs and unrelated acquisition URLs; no source-correlated 422 detail."
+  },
+  "result": "DIAGNOSED_NO_RETRY",
+  "next_step": "Regenerate source-specific reviewed envelopes/evidence with canonical document URL for UFU and title evidence for Publiconsult, obtain independent review, then retry only with explicit authorization."
+}

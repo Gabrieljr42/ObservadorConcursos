@@ -1,0 +1,47 @@
+{
+  "schema": "t012.ufu.integration-r8-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only review; no edits, live/API/DB mutation",
+  "diagnosis": "The R11 correction separates the administrative artifact DOCUMENT_URL from the candidate DETAIL_URL before invoking the strict parser.",
+  "pins": {
+    "source": "ufu_selection",
+    "source_id": 40,
+    "external_id": "1843",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "pages": 1,
+    "document_url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+    "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843"
+  },
+  "dispatch": {
+    "artifact_urls_checked_against": "DOCUMENT_URL",
+    "candidate_detail_checked_against": "DETAIL_URL",
+    "arbitrary_url_relaxation": false,
+    "parser_route": "exact source ufu_selection + external 1843",
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "prova_data": "not promoted",
+    "reference_only": ["taxa", "cargos", "remuneracao", "linked_documents"]
+  },
+  "revalidate": {
+    "result": "zero proposal/version/outbox/notification effects in disposable SQLite tests",
+    "catalog_mutation": false,
+    "owner": 1
+  },
+  "tests": {
+    "UFU": "15 passed",
+    "batch2_dispatch": "11 passed",
+    "compileall": "PASS",
+    "commands": [
+      "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py backend/tests/test_tenderproof_ufu_observed_contract.py",
+      "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py",
+      "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof backend/tests"
+    ]
+  },
+  "hashes": {
+    "backend/app/tenderproof/fields.py": "10388ce71a2f697b7dcb6296da2cf53e9bcda7450eb3afbd5e83d3cd91a6d065",
+    "backend/app/tenderproof/ufu_selection_parser.py": "0fb03e9f950de4969d9737a33cc960b36883e185e379f11c8e1f467175fb6a6f"
+  },
+  "release": "Deploy permitted; keep live retry gated by the normal final proposal/document checks."
+}

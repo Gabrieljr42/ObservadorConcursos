@@ -1,0 +1,639 @@
+/*!
+ * Para gerar o min.js use a extensão:
+ * https://marketplace.visualstudio.com/items?itemName=Failwyn.BundlerMinifier64
+ */
+var running_session=false;var ___requests___=[];var __options_system__={};const zoom=parseFloat($("body").css("zoom"))||1;const originalGetBoundingClientRect=Element.prototype.getBoundingClientRect;Element.prototype.getBoundingClientRect=function(){const rect=originalGetBoundingClientRect.apply(this);return{...rect,top:rect.top/zoom,left:rect.left/zoom,bottom:rect.bottom/zoom,right:rect.right/zoom,width:rect.width/zoom,height:rect.height/zoom,x:rect.x/zoom,y:rect.y/zoom,toJSON:()=>{}}};$(function(){
+// Javascript method's body can be found in assets/js/demos.js
+//demo.initDashboardPageCharts();
+__options_system__.has_request=false;setInterval(function(){if(!__options_system__.has_request)__options_system__.has_request=___requests___.length;___requests___=___requests___.map(function(x){return{...x,tempo_ok:!!x.fim?((new Date).getTime()-x.fim.getTime())/1e3:0}}).filter(x=>x.tempo_ok<.6);if(!___requests___.length&&document.readyState=="complete"&&jQuery.active==0&&__options_system__.has_request){__options_system__.has_request=false;Loading(false)}},50);if(!Promise.allSettled){Promise.allSettled=function(promises){return Promise.all(promises.map(p=>Promise.resolve(p).then(value=>({status:"fulfilled",value:value})).catch(reason=>({status:"rejected",reason:reason}))))}}$.fn.serializeObject=function(){var o={};var $f=$(this);var a=this.serializeArray();var regArray=/^([^\[\]]+)\[(\d+)\]$/;$.each(a,function(i){var name=this.name;var value=this.value;
+// pega o input real
+var $el=$f.find('[name="'+name+'"]');
+// detecta datepicker MDB ou <input type="date">
+var isDate=$el.is('[type="date"]')||$el.closest("[data-mdb-datepicker-init]").length>0;if(isDate&&value){
+// tenta converter para ISO (YYYY-MM-DD)
+var m=moment(value,["DD/MM/YYYY","DD-MM-YYYY","YYYY-MM-DD","YYYY/MM/DD"],true);if(m.isValid())value=m.format("YYYY-MM-DD")}var props=name.split(".");var position=o;while(props.length){var key=props.shift();var matches;if(matches=regArray.exec(key)){var p=matches[1];var n=matches[2];if(!position[p])position[p]=[];if(!position[p][n])position[p][n]={};position=position[p][n]}else{if(!props.length){if(!position[key])position[key]=value||"";else if(position[key]){if(!position[key].push)position[key]=[position[key]];position[key].push(value||"")}}else{if(!position[key])position[key]={};position=position[key]}}}});return o};$.fn.insertAt=function(index,element){var lastIndex=this.children().length;if(index<0){index=Math.max(0,lastIndex+1+index)}this.append(element);if(index<lastIndex){this.children().eq(index).before(this.children().last())}return this};$.fn.clearValidation=function(){var v=$(this).validate();$("[name]",this).each(function(){v.successList.push(this);v.showErrors()});v.resetForm();v.reset();$(this).find(".input-validation-error").removeClass("input-validation-error")};$.fn.eachAsync=async function(callback){let index=0,items=this,num=items.length;const run=async()=>{if(index<num){await callback(index,items[index]);index++;
+//await delay(50);
+await run()}};await run()};$.fn.enterKey=function(fnc){return this.each(function(){$(this).keypress(function(ev){var keycode=ev.keyCode?ev.keyCode:ev.which;if(keycode=="13"){fnc.call(this,ev)}})})}
+//$('[data-bs-toggle="tooltip"]').on('click', function () {
+//  $(this).tooltip('dispose');
+//});
+$('.list-group-item[data-bs-toggle="collapse"]').on("click",function(el){el=$(el.currentTarget);var aberto=el.attr("aria-expanded")=="false";if(aberto){var anterior=$('.list-group-item[data-bs-toggle="collapse"][aria-expanded=true]');if(anterior.length>0){anterior.attr("aria-expanded","false");anterior.removeClass("collapsed");
+//anterior.parent('li').find('div.show').removeClass('show');
+anterior.click()}}});$("[data-val-maxlength]").each(function(i,el){el=$(el);el.get(0).dataset.valMaxlength=el.data("val-maxlength").replace("The field","O campo").replace("must be a string or array type with a maximum length of","deve ter um comprimento máximo de").replace("'.","' caracteres.")});$("[data-val-minlength]").each(function(i,el){el=$(el);el.get(0).dataset.valMinlength=el.data("val-minlength").replace("The field","O campo").replace("must be a string or array type with a minimum length of","deve ter um comprimento mínimo de").replace("'.","' caracteres.")});
+//para resolver bug do sroll quando fecha um modal e outro modal aberto
+$(document).on("hidden.bs.modal",".modal",function(){if($(".modal:visible").length){$("body").addClass("modal-open")}});
+//para resolver bug dos backdrops (fundo preto) quando tem mais de 1 modal
+$(document).on("shown.bs.modal",".modal",function(){const $this=$(this);const $backdrop=$(".modal-backdrop:last");const idx=parseInt($this.css("z-index"))+$(".modal-backdrop").length+1;$backdrop.css("z-index",idx);$this.css("z-index",idx+1)});window.mobileCheck=function(){let check=false;(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check=true})(navigator.userAgent||navigator.vendor||window.opera);return check};
+// Bloqueia só anchors com hash dentro do jConfirm (não mexe em <button>)
+document.addEventListener("click",function(e){const inConfirm=e.target.closest(".jconfirm");if(!inConfirm)return;
+// se for clique em botões do jConfirm, deixa passar
+if(e.target.closest(".jconfirm-buttons"))return;const a=e.target.closest("a[href]");if(!a)return;const href=a.getAttribute("href")||"";if(href==="#"||href.startsWith("#")){e.preventDefault();// não navega/rola
+e.stopPropagation();// não deixa handlers globais pegarem
+}},true);
+//document.querySelectorAll('[data-bs-toggle="tooltip"], [title][data-bs-toggle="tab"]').forEach(el => {
+//    const tooltip = new bootstrap.Tooltip(el, {
+//        trigger: window.mobileCheck() ? 'click' : 'hover',
+//        container: 'body', // evita que o tooltip herde o contexto de pai com position/overflow
+//        placement: 'auto' // ou 'top', 'bottom', etc
+//    });
+//    // ⚠️ força recálculo depois que o layout estiver montado
+//    setTimeout(() => {
+//        if (tooltip._popper) tooltip._popper.update();
+//    }, 300);
+//});
+//$('[data-bs-toggle="tooltip"], [title][data-bs-toggle="tab"]').each(function () {
+//    const $el = $(this);
+//    // Dispose de qualquer tooltip antigo
+//    const inst = mdb.Tooltip.getInstance(this);
+//    if (inst) inst.dispose();
+//    // Cria novo tooltip com MDB
+//    new mdb.Tooltip(this, {
+//        container: 'body',
+//        placement: 'auto',
+//        trigger: 'hover'
+//    });
+//    // Remove ao sair
+//    $el.on('mouseleave', function () {
+//        const inst = mdb.Tooltip.getInstance(this);
+//        if (inst) inst.dispose();
+//    });
+//});
+// === Máscara de data (DD/MM/YYYY) compatível com MDB Datepicker ===
+window.applyDateMask=function(root){root=root||document;
+// evita quebrar os inputs internos do MDB (usa apenas o input real)
+$(root).find("[data-mdb-datepicker-init] input").not("[readonly]").each(function(){const $el=$(this);
+// Evita aplicar mais de uma vez
+if($el.data("mask-applied"))return;$el.data("mask-applied",true);
+// Aplica a máscara
+$el.mask("00/00/0000");
+// Validação rápida: impede datas inválidas tipo 32/15/9999
+$el.on("blur",function(){const val=$(this).val();if(!val)return;const parts=val.split("/");const d=parseInt(parts[0],10);const m=parseInt(parts[1],10);const y=parseInt(parts[2],10);const isValid=!isNaN(d)&&!isNaN(m)&&!isNaN(y)&&d>0&&d<=31&&m>0&&m<=12&&y>1900;if(!isValid)$(this).val("")})})};
+// === Datepicker pt-BR global ===
+(function(){const PTBR={title:"Selecione uma data",format:"dd/mm/yyyy",
+// 0 = Domingo, 1 = Segunda (troque se quiser)
+startDay:0,monthsFull:["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],monthsShort:["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],weekdaysFull:["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"],weekdaysShort:["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"],weekdaysNarrow:["D","S","T","Q","Q","S","S"],okBtnText:"Ok",clearBtnText:"Limpar",cancelBtnText:"Cancelar"};
+// Inicializa/atualiza todos os datepickers dentro de um root (document por padrão)
+window.applyPtBrDatepickers=function(root){root=root||document;const nodes=root.querySelectorAll("[data-mdb-datepicker-init]");nodes.forEach(function(el){
+// Tenta pegar instância já criada pelo autoinit do MDB
+let instance=null;try{
+// BaseComponent do MDB expõe getInstance
+instance=mdb.Datepicker.getInstance?mdb.Datepicker.getInstance(el):null}catch(_){/* ignora */}if(instance&&typeof instance.update==="function"){
+// Já existe: só atualiza para pt-BR
+instance.update(PTBR)}else{
+// Não existe (ou não achou): cria controlando duplicidade
+// Evita reinicializar se já marcado como inicializado
+const already=el.getAttribute("data-mdb-datepicker-initialized")==="true";if(!already){try{new mdb.Datepicker(el,PTBR)}catch(_){
+// Em alguns cenários o autoinit já rodou; tenta atualizar de novo
+try{instance=mdb.Datepicker.getInstance?mdb.Datepicker.getInstance(el):null;if(instance&&instance.update)instance.update(PTBR)}catch(_){/* ignora */}}}else{
+// Se já estava inicializado, tenta obter e atualizar
+try{instance=mdb.Datepicker.getInstance?mdb.Datepicker.getInstance(el):null;if(instance&&instance.update)instance.update(PTBR)}catch(_){/* ignora */}}}});
+// aplica máscara após o init
+applyDateMask(root)}})();
+// Guard global, mas POR INSTÂNCIA (não por app inteiro)
+window.__mdbChangeGuard=window.__mdbChangeGuard||new WeakSet;
+// Atualiza SetValue do MDB Select (bug da versão 8.2.0)
+(function(){if(!window.mdb||!mdb.Select)return;const proto=mdb.Select.prototype;const _setValue=proto.setValue;proto.setValue=function(value){_setValue.call(this,value);
+// garantir que o “input” visual reflita o novo valor
+try{this._updateInputValue()}catch{}try{this._updateFakeLabelPosition()}catch{}try{this._updateLabelPosition()}catch{}try{this._updateClearButtonVisibility()}catch{}try{this._updateOutlineInput()}catch{}const guard=window.__mdbChangeGuard;
+// só emite change nativo se ESTA instância NÃO estiver silenciada
+if(!guard||!guard.has(this)){try{this._emitNativeChangeEvent?.()}catch{}}}})();iniciarObservers();window.applyPtBrDatepickers(document)});
+// OBSERVADORES
+function iniciarObservers(){corrigirTooltipZoom();traduzirMdbSelect();ajustarLarguraSelectDropdown();// Primeira chamada manual (caso já esteja renderizado)
+// O balão de tooltip não recebe o mouseleave quando um modal abre por cima dele
+// (o backdrop cobre o elemento sem disparar o evento), então fica "preso" na tela.
+document.addEventListener("show.bs.modal",escondaTooltipsAtivos);const observerZoom=new MutationObserver(()=>corrigirTooltipZoom());observerZoom.observe(document.body,{childList:true,subtree:true});const observerTraducao=new MutationObserver(()=>traduzirMdbSelect());observerTraducao.observe(document.body,{childList:true,subtree:true});let larguraTimeout;const observerDropdownLargura=new MutationObserver(()=>{clearTimeout(larguraTimeout);larguraTimeout=setTimeout(()=>{ajustarLarguraSelectDropdown()},50);// Espera para não reentrar várias vezes
+});observerDropdownLargura.observe(document.body,{childList:true,subtree:true});document.querySelectorAll(".carousel").forEach(carousel=>{carousel.addEventListener("slid.bs.carousel",()=>corrigirTooltipZoom())})}function ajustarLarguraSelectDropdown(){document.querySelectorAll(".select-dropdown-container .select-dropdown.open").forEach(dropdown=>{const container=dropdown.closest(".select-dropdown-container");if(!container)return;
+// Acha o campo de origem (input ou select)
+let campoOrigem=container.closest(".form-outline, .select-wrapper")?.querySelector("select, input")||document.querySelector(`[aria-controls="${container.id}"]`);// fallback
+if(!campoOrigem)return;const larguraCampo=campoOrigem.offsetWidth||300;container.style.setProperty("min-width",`${larguraCampo}px`,"important");container.style.setProperty("width","auto","important")})}function traduzirMdbSelect(){document.querySelectorAll(".select-filter-input").forEach(el=>{if(el.placeholder==="Search..."){el.placeholder="Pesquisar..."}});document.querySelectorAll(".select-no-results").forEach(el=>{if(el.textContent.trim()==="No results"){el.textContent="Nenhum resultado encontrado"}})}function escondaTooltipsAtivos(){document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el=>{const instance=mdb.Tooltip.getInstance(el)||bootstrap.Tooltip?.getInstance(el);instance?.hide()})}function corrigirTooltipZoom(){document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el=>{
+// Verifica se o tooltip MDB já existe
+const existingMDB=mdb.Tooltip.getInstance(el);if(existingMDB)return;const existingBootstrap=bootstrap.Tooltip?.getInstance(el);// opcional
+if(existingBootstrap)existingBootstrap.dispose();
+// Remove tooltip DOM órfão (se existir)
+if(el.hasAttribute("aria-describedby")){const orphan=document.getElementById(el.getAttribute("aria-describedby"));if(orphan)orphan.remove();el.removeAttribute("aria-describedby")}const $el=$(el);
+// CASO ESPECÍFICO: tooltip dentro da comissão
+const ehTooltipComissao=el.hasAttribute("data-informativo");
+// Define o container de forma segura (evita bug de translate/transform)
+let container;if(ehTooltipComissao){
+// coloca o tooltip dentro do bloco de comissão correspondente
+container=el.parentElement?.closest("div")||"body"}else if($el.hasClass("badge")){container=el.closest(".modal-body")||"body"}else if(el.closest("a.texto-perfil")){container="body"}else{
+// Usa o parentElement como ponto de partida: se o próprio "el" já for uma <div>
+// (caso comum, ex.: ".wrap[data-bs-toggle=tooltip]"), closest() casava com ele
+// mesmo, o balão virava filho do próprio gatilho e o mouse nunca "saía" dele
+// (mouseenter/mouseleave não disparam entre elemento e descendente) — o balão
+// ficava preso na tela ao passar o mouse por cima dele.
+container=el.parentElement?.closest(".col-lg-3, .col-12, div")||"body"}
+// CASO ESPECÍFICO: cards do Portfólio (carrossel e o modal "Ver mais", mesmo HTML)
+// têm o gatilho dentro do rodapé ".apply-button", bem coladinho embaixo da imagem —
+// pouco espaço de sobra na linha do carrossel comparado à largura disponível pros
+// lados. Com "placement: auto" o Popper media mais espaço pro lado e escolhia lá,
+// mesmo cabendo em cima. Forçar "top" resolve sozinho, sem tocar em container nem
+// boundary (chegar a mexer nisso só distorcia o cálculo e fazia o balão nascer
+// longe do lugar certo). Validado ao vivo (site rodando via IIS Express, com o
+// card mais à esquerda e o de texto mais longo).
+const ehCardPortfolio=!!el.closest(".apply-button");
+// Recria tooltip MDB
+new mdb.Tooltip(el,{placement:ehCardPortfolio?"top":"auto",container:container,trigger:window.mobileCheck?window.mobileCheck()?"click":"hover":"hover",html:$el.data("bs-html")==true})})}function isJQuery(obj){return typeof window!=="undefined"&&!!window.jQuery&&obj instanceof window.jQuery}function registerValidatedSubmit(formSelector,callback){const form=isJQuery(formSelector)?formSelector[0]:document.querySelector(formSelector);if(!form)return;
+// Evita tooltips nativas do browser
+form.setAttribute("novalidate","novalidate");
+// Bloqueia a UI nativa para TODOS os campos (capture = true)
+form.addEventListener("invalid",e=>e.preventDefault(),true);
+// Ativa validação em blur (universal)
+inicializarValidadorDeCampos(form);form.addEventListener("submit",async function(event){
+// 1) Sempre impedir o submit nativo primeiro
+event.preventDefault();event.stopPropagation();
+// 2) Ajusta selects MDB com segurança (sem quebrar se mdb não estiver pronto)
+//validarMdbSelects(form); // Corrige visualmente os selects MDB antes
+// 3) Aplica classe visual e força exibição de mensagens
+//form.classList.add('was-validated');
+// 4) Se inválido, mostra mensagens e não prossegue
+//if (!form.checkValidity()) {
+//    const invalids = getInvalidFields(form);
+//    if (invalids?.length) {
+//        invalids.forEach((field) => {
+//            const customMessage = field.validationMessage;
+//            const feedbackDiv = field.closest('.form-outline')?.querySelector('.invalid-feedback');
+//            if (feedbackDiv)
+//                feedbackDiv.textContent = customMessage;
+//        });
+//        try {
+//            const first = invalids[0];
+//            first?.focus();
+//            first?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+//        }
+//        catch { }
+//        return false; // NÃO chamar reportValidity()
+//    }
+//}
+// 5) Tudo ok -> chama o callback do usuário
+if(runValidatedCheck(form))await callback.call(this,event);return false},{capture:true})}function runValidatedCheck(formSelector){let form=null;
+// Se for jQuery
+if(isJQuery(formSelector))form=formSelector[0];
+// Se for um elemento DOM (document.querySelector já retorna um elemento)
+else if(formSelector instanceof Element)form=formSelector;
+// Se for uma string (ex: "#meuForm")
+else if(typeof formSelector==="string")form=document.querySelector(formSelector);if(!form)return false;form.classList.add("was-validated");const invalids=getInvalidFields(form)||[];const camposInvalidos=new Set(invalids.map(x=>x.field));
+// Limpa a marcação dos campos que JÁ estão válidos.
+// Sem isto o vermelho e o texto escritos num submit anterior ficam presos no campo mesmo
+// depois de preenchido: quem apagaria é o listener instalado por inicializarValidadorDeCampos,
+// que não existe em campo criado dinamicamente (os accordions de cargo e de comissão).
+// O irmão validarCampos() já fazia esta limpeza; aqui faltava.
+for(const el of Array.from(form.elements)){if(!el||el.disabled||el.type==="hidden")continue;if(el.classList?.contains?.("select-input"))continue;// fake input do MDB Select
+if(camposInvalidos.has(el))continue;try{resetFieldValidation(el,true)}catch{}}if(invalids.length){invalids.forEach(({field:field,ui:ui,outline:outline,feedback:feedback})=>{const msg=field.validationMessage||field.getAttribute("data-mdb-invalid-feedback")||"Campo inválido.";if(feedback)feedback.textContent=msg;
+// estiliza visualmente o container mais relevante
+outline?.classList.add("is-invalid");ui?.classList?.add("is-invalid")});try{const first=invalids[0];first?.ui?.focus();
+//first?.ui?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+}catch{}return false}return true}function inicializarValidadorDeCampos(form){if(!form)return;const fields=form.querySelectorAll("input:not(.select-input), select, textarea");fields.forEach(field=>{
+// bloqueia tooltip nativa
+field.addEventListener("invalid",e=>e.preventDefault());
+// guarda valor original ao focar (para "dirty check" no blur)
+field.addEventListener("focusin",()=>{field.dataset._orig=field.value??""},true);
+// handler único: valida o REAL e estiliza o VISUAL
+const handle=e=>{const isSelect=field instanceof HTMLSelectElement;
+// Se veio de blur e NÃO mudou, não valida nada (evita cascata)
+const byBlur=e?.type==="blur";const dirty=(field.dataset._orig??"")!==(field.value??"");if(byBlur&&!dirty)return;let parts;if(isSelect){const{fakeInput:fakeInput,outlineForUI:outlineForUI,feedbackEl:feedbackEl}=mdbSelectParts(field);parts={ui:fakeInput||field,outline:outlineForUI,feedback:feedbackEl}}else{const outline=field.closest(".form-outline");parts={ui:field,outline:outline,feedback:outline?.querySelector(".invalid-feedback")}}const invalid=!field.checkValidity();if(invalid){
+// NÃO adicionar .was-validated aqui!
+parts.outline?.classList.add("is-invalid");parts.ui?.classList?.add("is-invalid");if(parts.feedback){const msg=field.getAttribute("data-mdb-invalid-feedback")||field.validationMessage||"Campo inválido.";parts.feedback.textContent=msg}}else{resetFieldValidation(field,true);parts.outline?.classList.remove("is-invalid");parts.ui?.classList?.remove("is-invalid");if(parts.feedback)parts.feedback.textContent=""}};
+// blur do próprio campo (só valida se "dirty")
+field.addEventListener("blur",handle,true);if(field instanceof HTMLSelectElement){
+// blur do FAKE do MDB select (também só valida se "dirty")
+const fake=mdbSelectParts(field).ui;if(fake&&fake!==field)fake.addEventListener("blur",handle,true);
+// change sempre valida (houve alteração real)
+field.addEventListener("change",handle)}else{
+// input/textarea: em alteração, validar
+field.addEventListener("input",handle);field.addEventListener("change",handle)}});hardenMdbSelectAutoFill(form)}function hardenMdbSelectAutoFill(form){if(!form)return;const selects=form.querySelectorAll("select[data-mdb-select-init], select.form-select");selects.forEach(sel=>{const{fakeInput:fakeInput,outlineForUI:outlineForUI}=mdbSelectParts(sel);if(!fakeInput)return;
+// Desarmar heurística de autofill no fake input
+fakeInput.setAttribute("autocomplete","off");fakeInput.setAttribute("autocapitalize","off");fakeInput.setAttribute("autocorrect","off");fakeInput.setAttribute("spellcheck","false");fakeInput.setAttribute("inputmode","none");// ajuda a sinalizar que não é campo de texto
+if(fakeInput.name){fakeInput.dataset._origName=fakeInput.name;fakeInput.removeAttribute("name");// evita autofill por "name match"
+}
+// Observa mutações impostas pelo autofill (valor mudando “do nada”)
+//const mo = new MutationObserver(() => syncOneMdbSelect(sel));
+//mo.observe(fakeInput, { attributes: true, attributeFilter: ['value', 'autocomplete'] });
+//// Sincroniza em momentos comuns
+//fakeInput.addEventListener('input', () => syncOneMdbSelect(sel));
+//fakeInput.addEventListener('change', () => syncOneMdbSelect(sel));
+//sel.addEventListener('change', () => syncOneMdbSelect(sel));
+});
+// Chrome aplica autofill após load → dar um “tick” depois:
+setTimeout(()=>syncAllMdbSelects(form),250);requestAnimationFrame(()=>syncAllMdbSelects(form))}
+// Valida 1..N campos específicos com regras opcionais por campo.
+// fields: string | Element | jQuery | Array desses
+// opts (aplica a todos os fields, mas você pode chamar a função 2x com opts diferentes):
+//   - require?: boolean            -> força required temporariamente
+//   - minSelected?: number         -> para select[multiple], mínimo de selecionados
+//   - focusFirst?: boolean         -> foca no primeiro inválido (default: true)
+//   - scrollFirst?: boolean        -> scroll até o primeiro inválido
+//   - showMessages?: boolean       -> mostra mensagens (default: true)
+//   - message?: string             -> mensagem customizada
+function validarCampos(fields,opts={}){const options={focusFirst:true,scrollFirst:false,showMessages:true,...opts};const toElements=f=>{if(!f)return[];if(Array.isArray(f))return f.flatMap(toElements);if(typeof f==="string")return Array.from(document.querySelectorAll(f));if(window.jQuery&&f instanceof window.jQuery)return Array.from(f.get());if(f instanceof Element)return[f];return[]};const elements=toElements(fields).filter(el=>el instanceof HTMLInputElement||el instanceof HTMLSelectElement||el instanceof HTMLTextAreaElement);if(!elements.length)return true;let firstInvalid=null;for(const field of elements){
+// ---- guarda estado original para restaurar
+const orig={required:field.required,validityMsg:""};try{orig.validityMsg=field.validationMessage}catch{}
+// ---- aplica regras temporárias
+if(options.require===true)field.required=true;
+// regra de mínimo para select multiple
+let customMsg=options.message||field.getAttribute("data-mdb-invalid-feedback")||"Campo inválido.";if(field instanceof HTMLSelectElement&&field.multiple&&options.minSelected!=null){const hasMin=(field.selectedOptions?.length??0)>=Number(options.minSelected);try{field.setCustomValidity(hasMin?"":customMsg)}catch{}}
+// calcula validade
+const invalid=!field.checkValidity();
+// peças visuais (MDB select vs normal)
+let ui=field,outline,feedback;if(field instanceof HTMLSelectElement&&(field.classList.contains("form-select")||field.hasAttribute("data-mdb-select-init"))){const{fakeInput:fakeInput,outlineForUI:outlineForUI,feedbackEl:feedbackEl}=mdbSelectParts(field);ui=fakeInput||field;outline=outlineForUI||field.closest(".form-outline");feedback=feedbackEl||outline?.querySelector(".invalid-feedback")}else{outline=field.closest(".form-outline");feedback=outline?.querySelector(".invalid-feedback")}
+// pinta ou limpa
+if(invalid){firstInvalid=firstInvalid||{field:field,ui:ui,outline:outline};outline?.classList.add("is-invalid");ui?.classList?.add("is-invalid");if(options.showMessages&&feedback){feedback.textContent=field.validationMessage||customMsg}}else{try{field.setCustomValidity("")}catch{}outline?.classList.remove("is-invalid");ui?.classList?.remove("is-invalid");if(options.showMessages&&feedback)feedback.textContent=""}
+// ---- RESTAURA estado original
+field.required=orig.required;
+// (não restauramos validationMessage diretamente; apenas limpamos acima)
+}if(firstInvalid){try{if(options.focusFirst)firstInvalid.ui?.focus();if(options.scrollFirst)firstInvalid.ui?.scrollIntoView({block:"center",behavior:"smooth"})}catch{}return false}return true}
+// localiza as partes do MDB Select dado o <select> real
+function mdbSelectParts(selectEl){const wrapper=selectEl.closest(".select-wrapper");const innerOutline=wrapper?.querySelector(":scope > .form-outline");// o que envolve o fake input
+const fakeInput=innerOutline?.querySelector(".select-input");const innerFeedback=innerOutline?.querySelector(".invalid-feedback");// preferencial
+const outerOutline=selectEl.closest(".form-outline");// container grande (fora do wrapper)
+const outerFeedback=outerOutline?.querySelector(":scope > .invalid-feedback");// fallback
+return{wrapper:wrapper,fakeInput:fakeInput,outlineForUI:innerOutline||outerOutline||selectEl.closest(".form-outline"),feedbackEl:innerFeedback||outerFeedback}}function getInvalidFields(form){const els=Array.from(form.elements);const invalid=[];for(const el of els){if(!el||el.disabled||el.type==="hidden")continue;const isNative=el instanceof HTMLInputElement||el instanceof HTMLSelectElement||el instanceof HTMLTextAreaElement;if(!isNative)continue;if(el.classList.contains("select-input"))continue;// nunca validar o fake input
+// mapeia UI quando for MDB Select
+let ui=el;let outline=el.closest(".form-outline");let feedback=outline?.querySelector(".invalid-feedback");if(el instanceof HTMLSelectElement&&(el.classList.contains("form-select")||el.hasAttribute("data-mdb-select-init"))){const parts=mdbSelectParts(el);if(parts.fakeInput)ui=parts.fakeInput;if(parts.outlineForUI)outline=parts.outlineForUI;if(parts.feedbackEl)feedback=parts.feedbackEl}try{if(el.willValidate&&!el.checkValidity()){invalid.push({field:el,ui:ui,outline:outline,feedback:feedback})}}catch{}}return invalid}function formataCpfCnpj(cpf_cnpj){var doc=cpf_cnpj?.replace(/[^\d]/g,"")||"";if(doc.length<=11)doc=doc.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,"$1.$2.$3-$4");else doc=doc.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,"$1.$2.$3/$4-$5");return doc}function compareValues(key,order){if(!order)order="asc";return function innerSort(a,b){if(!a.hasOwnProperty(key)||!b.hasOwnProperty(key)){
+// property doesn't exist on either object
+return 0}const varA=typeof a[key]==="string"?a[key].toUpperCase():a[key];const varB=typeof b[key]==="string"?b[key].toUpperCase():b[key];let comparison=0;if(varA>varB){comparison=1}else if(varA<varB){comparison=-1}return order==="desc"?comparison*-1:comparison}}function compareValues2(key,key2,order){if(!order)order="asc";return function innerSort(a,b){if(!a.hasOwnProperty(key)||!b.hasOwnProperty(key)){
+// property doesn't exist on either object
+return 0}var varA=typeof a[key][key2]==="string"?a[key][key2].toUpperCase():a[key][key2];var varB=typeof b[key][key2]==="string"?b[key][key2].toUpperCase():b[key][key2];var comparison=0;if(varA>varB){comparison=1}else if(varA<varB){comparison=-1}return order==="desc"?comparison*-1:comparison}}async function Request(options,funcSuccess,funcError){if(!options.timeout)options.timeout=12e4;if(!options.contentType&&options.isFormData!=true)options.contentType="application/json; charset=utf-8";else options.contentType=false;if(!options.dataType)options.dataType="JSON";if(!options.method)options.method="GET";if(options.async!=true&&options.async!=false)options.async=true;if(!options.ignoreAlertTimeout)options.ignoreAlertTimeout=false;if(options._asyncSuccess!=true&&options.async!=false)options._asyncSuccess=false;if(options.crossDomain==undefined)options.crossDomain=true;if(options.ignoreError==undefined)options.ignoreError=false;if(!options.header)options.header=[];if(options.data&&typeof options.data==="object"){const regex_url=/\{(.*?)\}/g;let parametros_url=options.url.match(regex_url);if(parametros_url?.length){for(let parametro of parametros_url){let key=parametro.replace("{","").replace("}","");let val=options.data[key];options.url=options.url.split(parametro).join(val);options.data[key]=undefined}}}if(options.isFormData!=true&&options.method!="GET")options.data=JSON.stringify(options.data);return new Promise(async function(resolve,reject){$.ajax({async:options.async,crossDomain:options.crossDomain,url:options.url,data:options.data,method:options.method,contentType:options.contentType,dataType:options.dataType,processData:options.isFormData==true?false:true,timeout:options.timeout,beforeSend:function(request,settings){if(options.token){request.setRequestHeader("Authorization",options.token)}if(options.header.length>0){for(var item of options.header){request.setRequestHeader(item[0],item[1])}}request.uniqueID=Math.floor(Math.random()*99999999+1);if(options.NotCloseLoading!=true)___requests___.push({id:request.uniqueID,url:options.url,inicio:new Date});if($("#modalLoading").length==0&&options.NotOpenLoading!=true){Loading(true)}},complete:function(jqXHR,textStatus){
+//if (options.NotCloseLoading != true) {
+//    setTimeout(function () {
+//        Loading(false);
+//    }, 200);
+//}
+},success:async function(data,textStatus,jqXHR){if(options.fixJson)data=fixJsonMess(data);if(typeof funcSuccess=="function")await new Promise(async _resolve=>{await funcSuccess(data);await delay();_resolve()});let request=___requests___.find(x=>x.id===jqXHR.uniqueID);if(request){request.fim=new Date;request.tempo=(request.fim.getTime()-request.inicio.getTime())/1e3}resolve(data)},error:async function(response,textStatus){const{statusText:statusText,status:status,responseText:responseText,responseJSON:responseJSON}=response;let request=___requests___.find(x=>x.id===response.uniqueID);
+// reauth
+if(status===401&&responseJSON?.error?.reauth===true){if(request){request.fim=new Date;request.tempo=(request.fim.getTime()-request.inicio.getTime())/1e3}if($("#modalLoading").length>0)Loading(false);
+// evita abrir dois modais se várias reqs falharem
+if(!window.__reauth_opening__){window.__reauth_opening__=true;Alerta("Sua sessão expirou. Faça login novamente.");try{await scriptsLogin.abrirLoginModal()}finally{
+// libera depois de um tempinho (pra não abrir 2 seguidos)
+setTimeout(()=>window.__reauth_opening__=false,1500)}}reject(response);return}let data=status==201?status:responseText;const ok=[200,201].includes(status),message=responseJSON?.message||null,timeout=statusText=="timeout",hasAlertTimeout=$('.jconfirm-content div:contains("Tempo expirado, tente novamente.")').length>0;if(timeout&&!hasAlertTimeout&&!options.ignoreAlertTimeout)Alerta("Tempo expirado, tente novamente.");else if(ok){if(options.fixJson)data=fixJsonMess(data);if(typeof funcSuccess=="function")await new Promise(async _resolve=>{await funcSuccess(data);await delay();_resolve()})}else if(!timeout&&typeof funcError=="function"&&!message)await new Promise(async _resolve=>{await funcError(response,textStatus);await delay();_resolve()});if(request){request.fim=new Date;request.tempo=(request.fim.getTime()-request.inicio.getTime())/1e3}if(!ok&&!timeout&&message&&!options.ignoreError)Alerta(message);if(!ok&&$("#modalLoading").length>0)Loading(false);if(ok)resolve(data);else reject(response)}})})}async function RequestWithRetry(options,funcSuccess,funcError,tentativas=3,delayMs=1e3){let ultimaErro;while(tentativas-- >0){try{return await Request(options,funcSuccess,funcError)}catch(err){ultimaErro=err;if(tentativas>0){console.warn(`Tentativa falhou, tentando novamente em ${delayMs}ms...`);await new Promise(r=>setTimeout(r,delayMs))}}}throw ultimaErro;// se todas as tentativas falharem, lança o último erro
+}function Filtrar(id,table,tipo,col,ativo="Ativo",inativo="Inativo"){$("#"+id+" .activeBrx").removeClass("activeBrx");$("#"+id+' [data-tipo="'+tipo+'"]').addClass("activeBrx");var filtro="";if(tipo==2)filtro=ativo;else if(tipo==3)filtro=inativo;table.column(col).search(filtro,true,true,false).draw()}function hasAnyOverlayOpen(){
+// Bootstrap: modais/backdrops e a classe modal-open no body
+const bootstrapOpen=document.body.classList.contains("modal-open")||$('.modal.show, .modal[style*="display: block"]').length>0||$(".modal-backdrop.show, .modal-backdrop").length>0;
+// jQuery Confirm: caixas visíveis
+const jconfirmOpen=$(".jconfirm").filter(function(){return $(this).is(":visible")}).length>0;return bootstrapOpen}function syncBodyScroll(){
+// Aplica/retira overflow conforme a situação REAL agora
+document.body.style.overflow=hasAnyOverlayOpen()?"hidden":""}
+// mantém o estado certo quando outros modais abrirem/fecharem
+$(document).on("shown.bs.modal hidden.bs.modal",function(){
+// dá um tick pro backdrop/classe aplicarem
+setTimeout(syncBodyScroll,0)});
+// === Alerta robusto ===
+function Alerta(content,title){content=content||"Falha na conexão...<br />Por favor, tente novamente.";title=title||"Alerta!";
+// Ao abrir o alerta, garantimos travar o scroll
+document.body.style.overflow="hidden";$.alert({title:title,content:content,columnClass:"col-md-6 col-md-offset-4",buttons:{ok:{text:"ok",btnClass:"btn-default",action:function(){
+// Deixa o plugin fechar e só então sincroniza (próximo tick)
+setTimeout(syncBodyScroll,0)}}},onClose:function(){
+// Fechou por X/ESC/clique fora → sincroniza com o que sobrou aberto
+setTimeout(syncBodyScroll,0)}})}function notificacao(message,title="",type="success"){if(type=="success")toastr.success(title,message,{showMethod:"slideDown",hideMethod:"slideUp",timeOut:1e4,newestOnTop:false,closeButton:true});else if(type=="error")toastr.error(title,message,{showMethod:"slideDown",hideMethod:"slideUp",timeOut:1e4,newestOnTop:false,closeButton:true});else if(type=="info")toastr.info(title,message,{showMethod:"slideDown",hideMethod:"slideUp",timeOut:1e4,newestOnTop:false,closeButton:true});else if(type=="warning")toastr.warning(title,message,{showMethod:"slideDown",hideMethod:"slideUp",timeOut:1e4,newestOnTop:false,closeButton:true})}async function confirmacao(content,funcOk,funcCancel,title,cancelar,funCancelar,textOk="Sim",textCancel="Não"){
+// Captura o estado atual ANTES de travar
+const oldOverflow=document.body.style.overflow;document.body.style.overflow="hidden";
+// Helper: restaura overflow
+const restore=()=>{document.body.style.overflow=oldOverflow||""};
+// Helper: embrulha a action para restaurar no momento certo
+const wrapAction=fn=>function(){
+// Executa a função original (se existir)
+const result=typeof fn==="function"?fn.call(this):true;
+// Se a action retornar uma Promise, restaura quando resolver (fechando o modal)
+if(result&&typeof result.then==="function"){return result.then(val=>{
+// Se a promise resolveu e não foi um "false" explícito, restaura
+if(val!==false)restore();return val}).catch(err=>{
+// Rejeição mantém o modal aberto → não restaura
+throw err})}
+// Se retornar false, o jConfirm mantém o modal aberto → não restaurar
+if(result!==false)restore();return result};
+// Define os botões usando as actions embrulhadas
+const buttons={ok:{text:textOk||"Sim",btnClass:"btn-primary",keys:["enter"],action:wrapAction(funcOk)},cancel:{text:textCancel||"Não",action:wrapAction(funcCancel)}};if(cancelar){buttons.cancelar={text:cancelar,action:wrapAction(funCancelar)}}
+// Fallback: se fechar por X/ESC/etc., restaura também
+return $.confirm({title:!title?"Alerta!":title,content:content,buttons:buttons,onClose:function(){restore()}})}function Loading(open){const loading=$("[data-loading].loading"),modal=$('<div id="modalLoading" class="modalLoading"></div>'),body=$("body");if(open&&(loading[0].style.display=="none"||loading[0].style.display=="")){const img=loading.find("img");img.attr("src",img.attr("src"));loading.fadeIn();body.append(modal);const top=Math.max($(window).height()/(+body.css("zoom")||1)/2-loading[0].offsetHeight/2,0);const left=Math.max($(window).width()/(+body.css("zoom")||1)/2-loading[0].offsetWidth/2,0);loading.css({top:top,left:left})}else if(!open&&loading[0].style.display=="block"){$("#modalLoading").remove();loading.fadeOut()}}function DataTable(options,funcComplete){if(!options.aaSorting)options.aaSorting=[];if(!options.columnDefs)options.columnDefs=[];if(!options.buttons)options.buttons=[];if(!options.serverSide)options.serverSide=false;if(!options.processing)options.processing=false;if(!options.searchDelay)options.searchDelay=null;if(!options.bStateSave)options.bStateSave=undefined;if(!options.lengthMenu)options.lengthMenu=[[5,10,25,-1],["05",10,25,"Todos"]];if(!options.iDisplayLength)options.iDisplayLength=10;if(options.autoWidth!==true&&options.autoWidth!==false)options.autoWidth=true;if(!options.sDom)options.sDom="<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>"+"<'row'<'col-sm-12'tr>>"+"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";if(options.ajax&&options.ajax.url){if(!options.ajax.type)options.ajax.type="GET";if(options.ajax.url=="blank")options.ajax.url=null;return $("#"+options.id).DataTable({language:getTraducaoDataTables(),ajax:options.ajax,sDom:options.sDom,columns:options.columns,serverSide:options.serverSide,processing:options.processing,searchDelay:options.searchDelay,bStateSave:options.bStateSave,columnDefs:options.columnDefs,autoWidth:options.autoWidth,pagingType:"full_numbers",aaSorting:options.aaSorting,buttons:options.buttons,iDisplayLength:options.iDisplayLength,lengthMenu:options.lengthMenu,initComplete:function(settings,json){if(funcComplete)funcComplete(settings,json,this)},createdRow:function(row,data,dataIndex){if(options.createdRow)options.createdRow(row,data,dataIndex,this)}})}else{return $("#"+options.id).DataTable({language:getTraducaoDataTables(),columns:options.columns,iDisplayLength:options.iDisplayLength,sDom:options.sDom,columnDefs:options.columnDefs,autoWidth:options.autoWidth,pagingType:"full_numbers",buttons:options.buttons,aaSorting:options.aaSorting,lengthMenu:options.lengthMenu})}}function secondsToTime(e){var h=Math.floor(e/3600).toString().padStart(2,"0"),m=Math.floor(e%3600/60).toString().padStart(2,"0"),s=Math.floor(e%60).toString().padStart(2,"0");return h+":"+m;//+ ':' + s;
+//return `${h}:${m}:${s}`;
+}function getTraducaoDataTables(){return{sEmptyTable:"Nenhum registro encontrado",sInfo:"Mostrando de _START_ até _END_ de _TOTAL_ registros",sInfoEmpty:"Mostrando 0 até 0 de 0 registros",sInfoFiltered:"(Filtrados de _MAX_ registros)",sInfoPostFix:"",sInfoThousands:".",sLengthMenu:"Mostrar: _MENU_ registros",sLoadingRecords:"Carregando...",sProcessing:"Processando...",sZeroRecords:"Nenhum registro encontrado",sSearch:"",
+//sSearch: 'Buscar',
+sSearchPlaceholder:"Buscar",oPaginate:{sNext:"Próximo",sPrevious:"Anterior",sFirst:'<span class="mdi mdi-page-first"></span>',sLast:'<span class="mdi mdi-page-last"></span>'},oAria:{sSortAscending:": Ordenar colunas de forma ascendente",sSortDescending:": Ordenar colunas de forma descendente"}}}function abrirModal(id,destruct=false,title=undefined){id=id.charAt(0)=="#"?id:"#"+id;if(title!=undefined)$(id+"Titulo").text(title);if(destruct==true)$(id).off("hidden.bs.modal").on("hidden.bs.modal",function(){$(this).remove()}),reloadInputs();const modal=new bootstrap.Modal(document.querySelector(id),{backdrop:"static",keyboard:false});modal.show()}function fecharModal(id){id=id.charAt(0)=="#"?id:"#"+id;const el=document.querySelector(id);const modal=bootstrap.Modal.getInstance(el)||new bootstrap.Modal(el);modal.hide()}function toDateTime(data,locale){return!locale||locale=="en"?moment(data,"DD/MM/YYYY HH:mm").format("YYYY-MM-DD HH:mm"):moment(data).format("DD/MM/YYYY HH:mm")}function toDate(data){return moment(data,"DD/MM/YYYY HH:mm").format("YYYY-MM-DD")}function iCheck(id){$(id?id:'[type="checkbox"]').not(".js-switch").iCheck({checkboxClass:"icheckbox_square-red",radioClass:"iradio_square-red"})}function iRadio(id){$(id?id:'[type="radio"]').iCheck({radioClass:"iradio_square-red",increaseArea:"20%"})}function getBytes(file){return new Promise((resolve,reject)=>{var fileByteArray=[];var reader=new FileReader;reader.readAsArrayBuffer(file);reader.onloadend=function(evt){if(evt.target.readyState==FileReader.DONE){var arrayBuffer=evt.target.result,array=new Uint8Array(arrayBuffer);for(var i=0;i<array.length;i++){fileByteArray.push(array[i])}resolve(fileByteArray)}};reader.onerror=error=>reject(error)})}function base64ToArrayBuffer(base64){var binaryString=window.atob(base64);var binaryLen=binaryString.length;var bytes=new Uint8Array(binaryLen);for(var i=0;i<binaryLen;i++){var ascii=binaryString.charCodeAt(i);bytes[i]=ascii}return bytes}function saveBytes(name,type,byte){var byteArray=new Uint8Array(byte);var blob=new Blob([byteArray],{type:type});var link=document.createElement("a");link.href=window.URL.createObjectURL(blob);link.download=name;link.click()}function downloadFile(name,url){var link=document.createElement("a");link.href=url;link.download=name;link.click()}var listaExtensoes=[{extensao:".323",type:"text/h323"},{extensao:".3g2",type:"video/3gpp2"},{extensao:".3gp",type:"video/3gpp"},{extensao:".3gp2",type:"video/3gpp2"},{extensao:".3gpp",type:"video/3gpp"},{extensao:".7z",type:"application/x-7z-compressed"},{extensao:".aa",type:"audio/audible"},{extensao:".AAC",type:"audio/aac"},{extensao:".aaf",type:"application/octet-stream"},{extensao:".aax",type:"audio/vnd.audible.aax"},{extensao:".ac3",type:"audio/ac3"},{extensao:".aca",type:"application/octet-stream"},{extensao:".accda",type:"application/msaccess.addin"},{extensao:".accdb",type:"application/msaccess"},{extensao:".accdc",type:"application/msaccess.cab"},{extensao:".accde",type:"application/msaccess"},{extensao:".accdr",type:"application/msaccess.runtime"},{extensao:".accdt",type:"application/msaccess"},{extensao:".accdw",type:"application/msaccess.webapplication"},{extensao:".accft",type:"application/msaccess.ftemplate"},{extensao:".acx",type:"application/internet-property-stream"},{extensao:".xml",type:"text/xml"},{extensao:".ade",type:"application/msaccess"},{extensao:".adobebridge",type:"application/x-bridge-url"},{extensao:".adp",type:"application/msaccess"},{extensao:".ADT",type:"audio/vnd.dlna.adts"},{extensao:".ADTS",type:"audio/aac"},{extensao:".afm",type:"application/octet-stream"},{extensao:".ai",type:"application/postscript"},{extensao:".aif",type:"audio/x-aiff"},{extensao:".aifc",type:"audio/aiff"},{extensao:".aiff",type:"audio/aiff"},{extensao:".air",type:"application/vnd.adobe.air-application-installer-package+zip"},{extensao:".amc",type:"application/x-mpeg"},{extensao:".application",type:"application/x-ms-application"},{extensao:".art",type:"image/x-jg"},{extensao:".asa",type:"application/xml"},{extensao:".asax",type:"application/xml"},{extensao:".ascx",type:"application/xml"},{extensao:".asd",type:"application/octet-stream"},{extensao:".asf",type:"video/x-ms-asf"},{extensao:".ashx",type:"application/xml"},{extensao:".asi",type:"application/octet-stream"},{extensao:".asm",type:"text/plain"},{extensao:".asmx",type:"application/xml"},{extensao:".aspx",type:"application/xml"},{extensao:".asr",type:"video/x-ms-asf"},{extensao:".asx",type:"video/x-ms-asf"},{extensao:".atom",type:"application/atom+xml"},{extensao:".au",type:"audio/basic"},{extensao:".avi",type:"video/x-msvideo"},{extensao:".axs",type:"application/olescript"},{extensao:".bas",type:"text/plain"},{extensao:".bcpio",type:"application/x-bcpio"},{extensao:".bin",type:"application/octet-stream"},{extensao:".bmp",type:"image/bmp"},{extensao:".c",type:"text/plain"},{extensao:".cab",type:"application/octet-stream"},{extensao:".caf",type:"audio/x-caf"},{extensao:".calx",type:"application/vnd.ms-office.calx"},{extensao:".cat",type:"application/vnd.ms-pki.seccat"},{extensao:".cc",type:"text/plain"},{extensao:".cd",type:"text/plain"},{extensao:".cdda",type:"audio/aiff"},{extensao:".cdf",type:"application/x-cdf"},{extensao:".cer",type:"application/x-x509-ca-cert"},{extensao:".chm",type:"application/octet-stream"},{extensao:".class",type:"application/x-java-applet"},{extensao:".clp",type:"application/x-msclip"},{extensao:".cmx",type:"image/x-cmx"},{extensao:".cnf",type:"text/plain"},{extensao:".cod",type:"image/cis-cod"},{extensao:".config",type:"application/xml"},{extensao:".contact",type:"text/x-ms-contact"},{extensao:".coverage",type:"application/xml"},{extensao:".cpio",type:"application/x-cpio"},{extensao:".cpp",type:"text/plain"},{extensao:".crd",type:"application/x-mscardfile"},{extensao:".crl",type:"application/pkix-crl"},{extensao:".crt",type:"application/x-x509-ca-cert"},{extensao:".cs",type:"text/plain"},{extensao:".csdproj",type:"text/plain"},{extensao:".csh",type:"application/x-csh"},{extensao:".csproj",type:"text/plain"},{extensao:".css",type:"text/css"},{extensao:".csv",type:"text/csv"},{extensao:".cur",type:"application/octet-stream"},{extensao:".cxx",type:"text/plain"},{extensao:".dat",type:"application/octet-stream"},{extensao:".datasource",type:"application/xml"},{extensao:".dbproj",type:"text/plain"},{extensao:".dcr",type:"application/x-director"},{extensao:".def",type:"text/plain"},{extensao:".deploy",type:"application/octet-stream"},{extensao:".der",type:"application/x-x509-ca-cert"},{extensao:".dgml",type:"application/xml"},{extensao:".dib",type:"image/bmp"},{extensao:".dif",type:"video/x-dv"},{extensao:".dir",type:"application/x-director"},{extensao:".disco",type:"text/xml"},{extensao:".dll",type:"application/x-msdownload"},{extensao:".dll.config",type:"text/xml"},{extensao:".dlm",type:"text/dlm"},{extensao:".doc",type:"application/msword"},{extensao:".docm",type:"application/vnd.ms-word.document.macroEnabled.12"},{extensao:".docx",type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{extensao:".dot",type:"application/msword"},{extensao:".dotm",type:"application/vnd.ms-word.template.macroEnabled.12"},{extensao:".dotx",type:"application/vnd.openxmlformats-officedocument.wordprocessingml.template"},{extensao:".dsp",type:"application/octet-stream"},{extensao:".dsw",type:"text/plain"},{extensao:".dtd",type:"text/xml"},{extensao:".dtsConfig",type:"text/xml"},{extensao:".dv",type:"video/x-dv"},{extensao:".dvi",type:"application/x-dvi"},{extensao:".dwf",type:"drawing/x-dwf"},{extensao:".dwp",type:"application/octet-stream"},{extensao:".dxr",type:"application/x-director"},{extensao:".eml",type:"message/rfc822"},{extensao:".emz",type:"application/octet-stream"},{extensao:".eot",type:"application/octet-stream"},{extensao:".eps",type:"application/postscript"},{extensao:".etl",type:"application/etl"},{extensao:".etx",type:"text/x-setext"},{extensao:".evy",type:"application/envoy"},{extensao:".exe",type:"application/octet-stream"},{extensao:".exe.config",type:"text/xml"},{extensao:".fdf",type:"application/vnd.fdf"},{extensao:".fif",type:"application/fractals"},{extensao:".filters",type:"Application/xml"},{extensao:".fla",type:"application/octet-stream"},{extensao:".flr",type:"x-world/x-vrml"},{extensao:".flv",type:"video/x-flv"},{extensao:".fsscript",type:"application/fsharp-script"},{extensao:".fsx",type:"application/fsharp-script"},{extensao:".generictest",type:"application/xml"},{extensao:".gif",type:"image/gif"},{extensao:".group",type:"text/x-ms-group"},{extensao:".gsm",type:"audio/x-gsm"},{extensao:".gtar",type:"application/x-gtar"},{extensao:".gz",type:"application/x-gzip"},{extensao:".h",type:"text/plain"},{extensao:".hdf",type:"application/x-hdf"},{extensao:".hdml",type:"text/x-hdml"},{extensao:".hhc",type:"application/x-oleobject"},{extensao:".hhk",type:"application/octet-stream"},{extensao:".hhp",type:"application/octet-stream"},{extensao:".hlp",type:"application/winhlp"},{extensao:".hpp",type:"text/plain"},{extensao:".hqx",type:"application/mac-binhex40"},{extensao:".hta",type:"application/hta"},{extensao:".htc",type:"text/x-component"},{extensao:".htm",type:"text/html"},{extensao:".html",type:"text/html"},{extensao:".htt",type:"text/webviewhtml"},{extensao:".hxa",type:"application/xml"},{extensao:".hxc",type:"application/xml"},{extensao:".hxd",type:"application/octet-stream"},{extensao:".hxe",type:"application/xml"},{extensao:".hxf",type:"application/xml"},{extensao:".hxh",type:"application/octet-stream"},{extensao:".hxi",type:"application/octet-stream"},{extensao:".hxk",type:"application/xml"},{extensao:".hxq",type:"application/octet-stream"},{extensao:".hxr",type:"application/octet-stream"},{extensao:".hxs",type:"application/octet-stream"},{extensao:".hxt",type:"text/html"},{extensao:".hxv",type:"application/xml"},{extensao:".hxw",type:"application/octet-stream"},{extensao:".hxx",type:"text/plain"},{extensao:".i",type:"text/plain"},{extensao:".ico",type:"image/x-icon"},{extensao:".ics",type:"application/octet-stream"},{extensao:".idl",type:"text/plain"},{extensao:".ief",type:"image/ief"},{extensao:".iii",type:"application/x-iphone"},{extensao:".inc",type:"text/plain"},{extensao:".inf",type:"application/octet-stream"},{extensao:".inl",type:"text/plain"},{extensao:".ins",type:"application/x-internet-signup"},{extensao:".ipa",type:"application/x-itunes-ipa"},{extensao:".ipg",type:"application/x-itunes-ipg"},{extensao:".ipproj",type:"text/plain"},{extensao:".ipsw",type:"application/x-itunes-ipsw"},{extensao:".iqy",type:"text/x-ms-iqy"},{extensao:".isp",type:"application/x-internet-signup"},{extensao:".ite",type:"application/x-itunes-ite"},{extensao:".itlp",type:"application/x-itunes-itlp"},{extensao:".itms",type:"application/x-itunes-itms"},{extensao:".itpc",type:"application/x-itunes-itpc"},{extensao:".IVF",type:"video/x-ivf"},{extensao:".jar",type:"application/java-archive"},{extensao:".java",type:"application/octet-stream"},{extensao:".jck",type:"application/liquidmotion"},{extensao:".jcz",type:"application/liquidmotion"},{extensao:".jfif",type:"image/pjpeg"},{extensao:".jnlp",type:"application/x-java-jnlp-file"},{extensao:".jpb",type:"application/octet-stream"},{extensao:".jpg",type:"image/jpeg"},{extensao:".js",type:"application/x-javascript"},{extensao:".jsx",type:"text/jscript"},{extensao:".jsxbin",type:"text/plain"},{extensao:".latex",type:"application/x-latex"},{extensao:".library-ms",type:"application/windows-library+xml"},{extensao:".lit",type:"application/x-ms-reader"},{extensao:".loadtest",type:"application/xml"},{extensao:".lpk",type:"application/octet-stream"},{extensao:".lsf",type:"video/x-la-asf"},{extensao:".lst",type:"text/plain"},{extensao:".lsx",type:"video/x-la-asf"},{extensao:".lzh",type:"application/octet-stream"},{extensao:".m13",type:"application/x-msmediaview"},{extensao:".m14",type:"application/x-msmediaview"},{extensao:".m1v",type:"video/mpeg"},{extensao:".m2t",type:"video/vnd.dlna.mpeg-tts"},{extensao:".m2ts",type:"video/vnd.dlna.mpeg-tts"},{extensao:".m2v",type:"video/mpeg"},{extensao:".m3u",type:"audio/x-mpegurl"},{extensao:".m3u8",type:"audio/x-mpegurl"},{extensao:".m4a",type:"audio/m4a"},{extensao:".m4b",type:"audio/m4b"},{extensao:".m4p",type:"audio/m4p"},{extensao:".m4r",type:"audio/x-m4r"},{extensao:".m4v",type:"video/x-m4v"},{extensao:".mac",type:"image/x-macpaint"},{extensao:".mak",type:"text/plain"},{extensao:".man",type:"application/x-troff-man"},{extensao:".manifest",type:"application/x-ms-manifest"},{extensao:".map",type:"text/plain"},{extensao:".master",type:"application/xml"},{extensao:".mda",type:"application/msaccess"},{extensao:".mdb",type:"application/x-msaccess"},{extensao:".mde",type:"application/msaccess"},{extensao:".mdp",type:"application/octet-stream"},{extensao:".me",type:"application/x-troff-me"},{extensao:".mfp",type:"application/x-shockwave-flash"},{extensao:".mht",type:"message/rfc822"},{extensao:".mhtml",type:"message/rfc822"},{extensao:".mid",type:"audio/mid"},{extensao:".midi",type:"audio/mid"},{extensao:".mix",type:"application/octet-stream"},{extensao:".mk",type:"text/plain"},{extensao:".mmf",type:"application/x-smaf"},{extensao:".mno",type:"text/xml"},{extensao:".mny",type:"application/x-msmoney"},{extensao:".mod",type:"video/mpeg"},{extensao:".mov",type:"video/quicktime"},{extensao:".movie",type:"video/x-sgi-movie"},{extensao:".mp2",type:"video/mpeg"},{extensao:".mp2v",type:"video/mpeg"},{extensao:".mp3",type:"audio/mpeg"},{extensao:".mp4",type:"video/mp4"},{extensao:".mp4v",type:"video/mp4"},{extensao:".mpa",type:"video/mpeg"},{extensao:".mpe",type:"video/mpeg"},{extensao:".mpeg",type:"video/mpeg"},{extensao:".mpf",type:"application/vnd.ms-mediapackage"},{extensao:".mpg",type:"video/mpeg"},{extensao:".mpp",type:"application/vnd.ms-project"},{extensao:".mpv2",type:"video/mpeg"},{extensao:".mqv",type:"video/quicktime"},{extensao:".ms",type:"application/x-troff-ms"},{extensao:".msi",type:"application/octet-stream"},{extensao:".mso",type:"application/octet-stream"},{extensao:".mts",type:"video/vnd.dlna.mpeg-tts"},{extensao:".mtx",type:"application/xml"},{extensao:".mvb",type:"application/x-msmediaview"},{extensao:".mvc",type:"application/x-miva-compiled"},{extensao:".mxp",type:"application/x-mmxp"},{extensao:".nc",type:"application/x-netcdf"},{extensao:".nsc",type:"video/x-ms-asf"},{extensao:".nws",type:"message/rfc822"},{extensao:".ocx",type:"application/octet-stream"},{extensao:".oda",type:"application/oda"},{extensao:".odc",type:"text/x-ms-odc"},{extensao:".odh",type:"text/plain"},{extensao:".odl",type:"text/plain"},{extensao:".odp",type:"application/vnd.oasis.opendocument.presentation"},{extensao:".ods",type:"application/oleobject"},{extensao:".odt",type:"application/vnd.oasis.opendocument.text"},{extensao:".one",type:"application/onenote"},{extensao:".onea",type:"application/onenote"},{extensao:".onepkg",type:"application/onenote"},{extensao:".onetmp",type:"application/onenote"},{extensao:".onetoc",type:"application/onenote"},{extensao:".onetoc2",type:"application/onenote"},{extensao:".orderedtest",type:"application/xml"},{extensao:".osdx",type:"application/opensearchdescription+xml"},{extensao:".p10",type:"application/pkcs10"},{extensao:".p12",type:"application/x-pkcs12"},{extensao:".p7b",type:"application/x-pkcs7-certificates"},{extensao:".p7c",type:"application/pkcs7-mime"},{extensao:".p7m",type:"application/pkcs7-mime"},{extensao:".p7r",type:"application/x-pkcs7-certreqresp"},{extensao:".p7s",type:"application/pkcs7-signature"},{extensao:".pbm",type:"image/x-portable-bitmap"},{extensao:".pcast",type:"application/x-podcast"},{extensao:".pct",type:"image/pict"},{extensao:".pcx",type:"application/octet-stream"},{extensao:".pcz",type:"application/octet-stream"},{extensao:".pdf",type:"application/pdf"},{extensao:".pfb",type:"application/octet-stream"},{extensao:".pfm",type:"application/octet-stream"},{extensao:".pfx",type:"application/x-pkcs12"},{extensao:".pgm",type:"image/x-portable-graymap"},{extensao:".pkgdef",type:"text/plain"},{extensao:".pkgundef",type:"text/plain"},{extensao:".pko",type:"application/vnd.ms-pki.pko"},{extensao:".pls",type:"audio/scpls"},{extensao:".pma",type:"application/x-perfmon"},{extensao:".pmc",type:"application/x-perfmon"},{extensao:".pml",type:"application/x-perfmon"},{extensao:".pmr",type:"application/x-perfmon"},{extensao:".pmw",type:"application/x-perfmon"},{extensao:".png",type:"image/png"},{extensao:".pnm",type:"image/x-portable-anymap"},{extensao:".pnt",type:"image/x-macpaint"},{extensao:".pntg",type:"image/x-macpaint"},{extensao:".pot",type:"application/vnd.ms-powerpoint"},{extensao:".potm",type:"application/vnd.ms-powerpoint.template.macroEnabled.12"},{extensao:".potx",type:"application/vnd.openxmlformats-officedocument.presentationml.template"},{extensao:".ppa",type:"application/vnd.ms-powerpoint"},{extensao:".ppam",type:"application/vnd.ms-powerpoint.addin.macroEnabled.12"},{extensao:".ppm",type:"image/x-portable-pixmap"},{extensao:".pps",type:"application/vnd.ms-powerpoint"},{extensao:".ppsm",type:"application/vnd.ms-powerpoint.slideshow.macroEnabled.12"},{extensao:".ppsx",type:"application/vnd.openxmlformats-officedocument.presentationml.slideshow"},{extensao:".ppt",type:"application/vnd.ms-powerpoint"},{extensao:".pptm",type:"application/vnd.ms-powerpoint.presentation.macroEnabled.12"},{extensao:".pptx",type:"application/vnd.openxmlformats-officedocument.presentationml.presentation"},{extensao:".prf",type:"application/pics-rules"},{extensao:".prm",type:"application/octet-stream"},{extensao:".prx",type:"application/octet-stream"},{extensao:".ps",type:"application/postscript"},{extensao:".psc1",type:"application/PowerShell"},{extensao:".psd",type:"application/octet-stream"},{extensao:".psess",type:"application/xml"},{extensao:".psm",type:"application/octet-stream"},{extensao:".psp",type:"application/octet-stream"},{extensao:".pub",type:"application/x-mspublisher"},{extensao:".pwz",type:"application/vnd.ms-powerpoint"},{extensao:".qht",type:"text/x-html-insertion"},{extensao:".qhtm",type:"text/x-html-insertion"},{extensao:".qt",type:"video/quicktime"},{extensao:".qti",type:"image/x-quicktime"},{extensao:".qtif",type:"image/x-quicktime"},{extensao:".qtl",type:"application/x-quicktimeplayer"},{extensao:".qxd",type:"application/octet-stream"},{extensao:".ra",type:"audio/x-pn-realaudio"},{extensao:".ram",type:"audio/x-pn-realaudio"},{extensao:".rar",type:"application/octet-stream"},{extensao:".ras",type:"image/x-cmu-raster"},{extensao:".rat",type:"application/rat-file"},{extensao:".rc",type:"text/plain"},{extensao:".rc2",type:"text/plain"},{extensao:".rct",type:"text/plain"},{extensao:".rdlc",type:"application/xml"},{extensao:".resx",type:"application/xml"},{extensao:".rf",type:"image/vnd.rn-realflash"},{extensao:".rgb",type:"image/x-rgb"},{extensao:".rgs",type:"text/plain"},{extensao:".rm",type:"application/vnd.rn-realmedia"},{extensao:".rmi",type:"audio/mid"},{extensao:".rmp",type:"application/vnd.rn-rn_music_package"},{extensao:".roff",type:"application/x-troff"},{extensao:".rpm",type:"audio/x-pn-realaudio-plugin"},{extensao:".rqy",type:"text/x-ms-rqy"},{extensao:".rtf",type:"application/rtf"},{extensao:".rtx",type:"text/richtext"},{extensao:".ruleset",type:"application/xml"},{extensao:".s",type:"text/plain"},{extensao:".safariextz",type:"application/x-safari-safariextz"},{extensao:".scd",type:"application/x-msschedule"},{extensao:".sct",type:"text/scriptlet"},{extensao:".sd2",type:"audio/x-sd2"},{extensao:".sdp",type:"application/sdp"},{extensao:".sea",type:"application/octet-stream"},{extensao:".searchConnector-ms",type:"application/windows-search-connector+xml"},{extensao:".setpay",type:"application/set-payment-initiation"},{extensao:".setreg",type:"application/set-registration-initiation"},{extensao:".settings",type:"application/xml"},{extensao:".sgimb",type:"application/x-sgimb"},{extensao:".sgml",type:"text/sgml"},{extensao:".sh",type:"application/x-sh"},{extensao:".shar",type:"application/x-shar"},{extensao:".shtml",type:"text/html"},{extensao:".sit",type:"application/x-stuffit"},{extensao:".sitemap",type:"application/xml"},{extensao:".skin",type:"application/xml"},{extensao:".sldm",type:"application/vnd.ms-powerpoint.slide.macroEnabled.12"},{extensao:".sldx",type:"application/vnd.openxmlformats-officedocument.presentationml.slide"},{extensao:".slk",type:"application/vnd.ms-excel"},{extensao:".sln",type:"text/plain"},{extensao:".slupkg-ms",type:"application/x-ms-license"},{extensao:".smd",type:"audio/x-smd"},{extensao:".smi",type:"application/octet-stream"},{extensao:".smx",type:"audio/x-smd"},{extensao:".smz",type:"audio/x-smd"},{extensao:".snd",type:"audio/basic"},{extensao:".snippet",type:"application/xml"},{extensao:".snp",type:"application/octet-stream"},{extensao:".sol",type:"text/plain"},{extensao:".sor",type:"text/plain"},{extensao:".spc",type:"application/x-pkcs7-certificates"},{extensao:".spl",type:"application/futuresplash"},{extensao:".src",type:"application/x-wais-source"},{extensao:".srf",type:"text/plain"},{extensao:".SSISDeploymentManifest",type:"text/xml"},{extensao:".ssm",type:"application/streamingmedia"},{extensao:".sst",type:"application/vnd.ms-pki.certstore"},{extensao:".stl",type:"application/vnd.ms-pki.stl"},{extensao:".sv4cpio",type:"application/x-sv4cpio"},{extensao:".sv4crc",type:"application/x-sv4crc"},{extensao:".svc",type:"application/xml"},{extensao:".swf",type:"application/x-shockwave-flash"},{extensao:".t",type:"application/x-troff"},{extensao:".tar",type:"application/x-tar"},{extensao:".tcl",type:"application/x-tcl"},{extensao:".testrunconfig",type:"application/xml"},{extensao:".testsettings",type:"application/xml"},{extensao:".tex",type:"application/x-tex"},{extensao:".texi",type:"application/x-texinfo"},{extensao:".texinfo",type:"application/x-texinfo"},{extensao:".tgz",type:"application/x-compressed"},{extensao:".thmx",type:"application/vnd.ms-officetheme"},{extensao:".thn",type:"application/octet-stream"},{extensao:".tif",type:"image/tiff"},{extensao:".tiff",type:"image/tiff"},{extensao:".tlh",type:"text/plain"},{extensao:".tli",type:"text/plain"},{extensao:".toc",type:"application/octet-stream"},{extensao:".tr",type:"application/x-troff"},{extensao:".trm",type:"application/x-msterminal"},{extensao:".trx",type:"application/xml"},{extensao:".ts",type:"video/vnd.dlna.mpeg-tts"},{extensao:".tsv",type:"text/tab-separated-values"},{extensao:".ttf",type:"application/octet-stream"},{extensao:".tts",type:"video/vnd.dlna.mpeg-tts"},{extensao:".txt",type:"text/plain"},{extensao:".u32",type:"application/octet-stream"},{extensao:".uls",type:"text/iuls"},{extensao:".user",type:"text/plain"},{extensao:".ustar",type:"application/x-ustar"},{extensao:".vb",type:"text/plain"},{extensao:".vbdproj",type:"text/plain"},{extensao:".vbk",type:"video/mpeg"},{extensao:".vbproj",type:"text/plain"},{extensao:".vbs",type:"text/vbscript"},{extensao:".vcf",type:"text/x-vcard"},{extensao:".vcproj",type:"Application/xml"},{extensao:".vcs",type:"text/plain"},{extensao:".vcxproj",type:"Application/xml"},{extensao:".vddproj",type:"text/plain"},{extensao:".vdp",type:"text/plain"},{extensao:".vdproj",type:"text/plain"},{extensao:".vdx",type:"application/vnd.ms-visio.viewer"},{extensao:".vml",type:"text/xml"},{extensao:".vscontent",type:"application/xml"},{extensao:".vsct",type:"text/xml"},{extensao:".vsd",type:"application/vnd.visio"},{extensao:".vsi",type:"application/ms-vsi"},{extensao:".vsix",type:"application/vsix"},{extensao:".vsixlangpack",type:"text/xml"},{extensao:".vsixmanifest",type:"text/xml"},{extensao:".vsmdi",type:"application/xml"},{extensao:".vspscc",type:"text/plain"},{extensao:".vss",type:"application/vnd.visio"},{extensao:".vsscc",type:"text/plain"},{extensao:".vssettings",type:"text/xml"},{extensao:".vssscc",type:"text/plain"},{extensao:".vst",type:"application/vnd.visio"},{extensao:".vstemplate",type:"text/xml"},{extensao:".vsto",type:"application/x-ms-vsto"},{extensao:".vsw",type:"application/vnd.visio"},{extensao:".vsx",type:"application/vnd.visio"},{extensao:".vtx",type:"application/vnd.visio"},{extensao:".wav",type:"audio/wav"},{extensao:".wave",type:"audio/wav"},{extensao:".wax",type:"audio/x-ms-wax"},{extensao:".wbk",type:"application/msword"},{extensao:".wbmp",type:"image/vnd.wap.wbmp"},{extensao:".wcm",type:"application/vnd.ms-works"},{extensao:".wdb",type:"application/vnd.ms-works"},{extensao:".wdp",type:"image/vnd.ms-photo"},{extensao:".webarchive",type:"application/x-safari-webarchive"},{extensao:".webtest",type:"application/xml"},{extensao:".wiq",type:"application/xml"},{extensao:".wiz",type:"application/msword"},{extensao:".wks",type:"application/vnd.ms-works"},{extensao:".WLMP",type:"application/wlmoviemaker"},{extensao:".wlpginstall",type:"application/x-wlpg-detect"},{extensao:".wlpginstall3",type:"application/x-wlpg3-detect"},{extensao:".wm",type:"video/x-ms-wm"},{extensao:".wma",type:"audio/x-ms-wma"},{extensao:".wmd",type:"application/x-ms-wmd"},{extensao:".wmf",type:"application/x-msmetafile"},{extensao:".wml",type:"text/vnd.wap.wml"},{extensao:".wmlc",type:"application/vnd.wap.wmlc"},{extensao:".wmls",type:"text/vnd.wap.wmlscript"},{extensao:".wmlsc",type:"application/vnd.wap.wmlscriptc"},{extensao:".wmp",type:"video/x-ms-wmp"},{extensao:".wmv",type:"video/x-ms-wmv"},{extensao:".wmx",type:"video/x-ms-wmx"},{extensao:".wmz",type:"application/x-ms-wmz"},{extensao:".wpl",type:"application/vnd.ms-wpl"},{extensao:".wps",type:"application/vnd.ms-works"},{extensao:".wri",type:"application/x-mswrite"},{extensao:".wrl",type:"x-world/x-vrml"},{extensao:".wrz",type:"x-world/x-vrml"},{extensao:".wsc",type:"text/scriptlet"},{extensao:".wsdl",type:"text/xml"},{extensao:".wvx",type:"video/x-ms-wvx"},{extensao:".x",type:"application/directx"},{extensao:".xaf",type:"x-world/x-vrml"},{extensao:".xaml",type:"application/xaml+xml"},{extensao:".xap",type:"application/x-silverlight-app"},{extensao:".xbap",type:"application/x-ms-xbap"},{extensao:".xbm",type:"image/x-xbitmap"},{extensao:".xdr",type:"text/plain"},{extensao:".xht",type:"application/xhtml+xml"},{extensao:".xhtml",type:"application/xhtml+xml"},{extensao:".xla",type:"application/vnd.ms-excel"},{extensao:".xlam",type:"application/vnd.ms-excel.addin.macroEnabled.12"},{extensao:".xlc",type:"application/vnd.ms-excel"},{extensao:".xld",type:"application/vnd.ms-excel"},{extensao:".xlk",type:"application/vnd.ms-excel"},{extensao:".xll",type:"application/vnd.ms-excel"},{extensao:".xlm",type:"application/vnd.ms-excel"},{extensao:".xls",type:"application/vnd.ms-excel"},{extensao:".xlsb",type:"application/vnd.ms-excel.sheet.binary.macroEnabled.12"},{extensao:".xlsm",type:"application/vnd.ms-excel.sheet.macroEnabled.12"},{extensao:".xlsx",type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},{extensao:".xlt",type:"application/vnd.ms-excel"},{extensao:".xltm",type:"application/vnd.ms-excel.template.macroEnabled.12"},{extensao:".xltx",type:"application/vnd.openxmlformats-officedocument.spreadsheetml.template"},{extensao:".xlw",type:"application/vnd.ms-excel"},{extensao:".xml",type:"text/xml"},{extensao:".xmta",type:"application/xml"},{extensao:".xof",type:"x-world/x-vrml"},{extensao:".XOML",type:"text/plain"},{extensao:".xpm",type:"image/x-xpixmap"},{extensao:".xps",type:"application/vnd.ms-xpsdocument"},{extensao:".xrm-ms",type:"text/xml"},{extensao:".xsc",type:"application/xml"},{extensao:".xsd",type:"text/xml"},{extensao:".xsf",type:"text/xml"},{extensao:".xsl",type:"text/xml"},{extensao:".xslt",type:"text/xml"},{extensao:".xsn",type:"application/octet-stream"},{extensao:".xss",type:"application/xml"},{extensao:".xtp",type:"application/octet-stream"},{extensao:".xwd",type:"image/x-xwindowdump"},{extensao:".z",type:"application/x-compress"},{extensao:".zip",type:"application/x-zip-compressed"}];function arrayBufferToBase64(buffer){var binary="";var bytes=new Uint8Array(buffer);var len=bytes.byteLength;for(var i=0;i<len;i++){binary+=String.fromCharCode(bytes[i])}return window.btoa(binary)}function toNull(val){return!!val?val:null}function validaCpfCnpj(val){if(!val)val="";else val=val+"";if(val.length==14){var cpf=val.trim();cpf=cpf.replace(/\./g,"");cpf=cpf.replace("-","");cpf=cpf.split("");var v1=0;var v2=0;var aux=false;for(var i=1;cpf.length>i;i++){if(cpf[i-1]!=cpf[i]){aux=true}}if(aux==false){return false}for(var i=0,p=10;cpf.length-2>i;i++,p--){v1+=cpf[i]*p}v1=v1*10%11;if(v1==10){v1=0}if(v1!=cpf[9]){return false}for(var i=0,p=11;cpf.length-1>i;i++,p--){v2+=cpf[i]*p}v2=v2*10%11;if(v2==10){v2=0}if(v2!=cpf[10]){return false}else{return true}}else if(val.length==18){var cnpj=val.trim();cnpj=cnpj.replace(/\./g,"");cnpj=cnpj.replace("-","");cnpj=cnpj.replace("/","");cnpj=cnpj.split("");var v1=0;var v2=0;var aux=false;for(var i=1;cnpj.length>i;i++){if(cnpj[i-1]!=cnpj[i]){aux=true}}if(aux==false){return false}for(var i=0,p1=5,p2=13;cnpj.length-2>i;i++,p1--,p2--){if(p1>=2){v1+=cnpj[i]*p1}else{v1+=cnpj[i]*p2}}v1=v1%11;if(v1<2){v1=0}else{v1=11-v1}if(v1!=cnpj[12]){return false}for(var i=0,p1=6,p2=14;cnpj.length-1>i;i++,p1--,p2--){if(p1>=2){v2+=cnpj[i]*p1}else{v2+=cnpj[i]*p2}}v2=v2%11;if(v2<2){v2=0}else{v2=11-v2}if(v2!=cnpj[13]){return false}else{return true}}else{return false}}async function delay(timeout=200){return new Promise(resolve=>setTimeout(resolve,timeout))}function mascaraValorNegativo(){return{reverse:true,maxlength:false,placeholder:"0,00",byPassKeys:[9,16,17,18,35,36,37,38,39,40,46,91],eventNeedChanged:false,onKeyPress:function(v,ev,curField,opts){var mask=curField.data("mask").mask;var decimalSep=/0(.)00/gi.exec(mask)[1]||",";opts.prefixMoney=typeof opts.prefixMoney!="undefined"?opts.prefixMoney:"";if(curField.data("mask-isZero")&&curField.data("mask-keycode")==8)$(curField).val("");else if(v){var key=curField.data("mask-key");var minus=typeof curField.data("mask-minus-signal")=="undefined"?false:curField.data("mask-minus-signal");if(["-","+"].indexOf(key)>=0){curField.val(opts.prefixMoney+(key=="-"?key+v:v.replace(/^-?/,"")));curField.data("mask-minus-signal",key=="-");return}
+// remove previously added stuff at start of string
+v=v.replace(new RegExp("^-?"),"");v=v.replace(new RegExp("^0*\\"+decimalSep+"?0*"),"");//v = v.replace(/^0*,?0*/, '');
+v=v.length==0?"0"+decimalSep+"00":v.length==1?"0"+decimalSep+"0"+v:v.length==2?"0"+decimalSep+v:v;curField.val(opts.prefixMoney+(minus?"-":"")+v).data("mask-isZero",v=="0"+decimalSep+"00")}}}}async function handlePrint(e,el,timeout=350){e.preventDefault();const $clone=$(el).clone();if(mobileCheck())$clone.find(".d-none-mob").remove();else $clone.find(".d-none-desktop").remove();$("print-view").html($("<div />").append($clone).html());$("body").addClass("printing");await delay(timeout);printpage();await delay(300);$("body").removeClass("printing");$("print-view").html("");await delay(100);$('[type="checkbox"][checked], [type="radio"][checked]').prop("checked",true)}const toJsonMess=function(val){try{if(!val)return null;var json=JSON.stringify(val).toggleCase().reverseChars();json=json.padStart(json.length+3-json.length%3," ");return btoa(unescape(encodeURIComponent(json))).reverseChars().toggleCase()}catch(e){return null}};const fixJsonMess=function(val){try{if(!val)return null;var json=decodeURIComponent(escape(atob(val.reverseChars().toggleCase())));return JSON.parse(json.trimEnd().reverseChars().toggleCase())}catch(e){return null}};String.prototype.toggleCase=function(){const upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";const lower="abcdefghijklmnopqrstuvwxyz9876543210";return[...this].map(x=>upper.includes(x)?lower[upper.indexOf(x)]:lower.includes(x)?upper[lower.indexOf(x)]:x).join("")};String.prototype.reverseChars=function(){return[...this].reverse().join("")};Array.prototype.insert=function(index,...items){this.splice(index,0,...items)};function getStorage(Id){return localStorage.getItem(Id)}function setStorage(Id,Value){if(Value!=null&&Value!=undefined)localStorage.setItem(Id,Value);else localStorage.removeItem(Id)}function getSiteUrl(path="."){return new URL(path,location.href).href}function assign(obj,keyPath,value,is_obj=true){lastKeyIndex=keyPath.length-1;for(var i=0;i<lastKeyIndex;++i){key=keyPath[i];if(!(key in obj)){if(is_obj)obj[key]={};else obj[key]=[]}obj=obj[key]}obj[keyPath[lastKeyIndex]]=value}function toTitleCase(phrase){return phrase.toLowerCase().split(" ").map(word=>word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()).join(" ")}function generateUUID(){// Public Domain/MIT
+var d=(new Date).getTime();//Timestamp
+var d2=typeof performance!=="undefined"&&performance.now&&performance.now()*1e3||0;//Time in microseconds since page-load or 0 if unsupported
+return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(c){var r=Math.random()*16;//random number between 0 and 16
+if(d>0){//Use timestamp until depleted
+r=(d+r)%16|0;d=Math.floor(d/16)}else{//Use microseconds since page-load if supported
+r=(d2+r)%16|0;d2=Math.floor(d2/16)}return(c==="x"?r:r&3|8).toString(16)})}function capitalizeFirstLetter(string){string=string?.trim();return string?.charAt(0)?.toUpperCase()+string?.slice(1)?.toLowerCase()}function getQueryString(){return location.search.slice(1).split("&").map(x=>{let query=x.split("=");let key=query.shift();return{key:key,value:query.join("=")}})}function abrirPdf(url,fileName,base64){const viewerConfig={embedMode:"LIGHT_BOX",defaultViewMode:"FIT_PAGE",showPrintPDF:true,showDownloadPDF:true};const adobeDCView=new AdobeDC.View({clientId:_ADOBE_API_KEY_,//Variável criada no _Layout.cshtml
+locale:"pt-BR"});return adobeDCView.previewFile({content:{location:url?{url:url}:undefined,promise:base64?Promise.resolve(base64ToArrayBuffer(base64)):undefined},metaData:{fileName:fileName}},viewerConfig)}function embedPdf(id,url,fileName,base64){const viewerConfig={embedMode:"IN_LINE",defaultViewMode:"FIT_PAGE",showPrintPDF:true,showDownloadPDF:true};var adobeDCView=new AdobeDC.View({clientId:_ADOBE_API_KEY_,//Variável criada no _Layout.cshtml
+locale:"pt-BR",divId:id});adobeDCView.previewFile({content:{location:url?{url:url}:undefined,promise:base64?Promise.resolve(base64ToArrayBuffer(base64)):undefined},metaData:{fileName:fileName}},viewerConfig)}function replacer(matched){let withProtocol=matched;if(!withProtocol.startsWith("http")){withProtocol="http://"+matched}const newStr=`<a\n    class="text-link"\n    target="_blank"\n    href="${withProtocol}"\n  >\n    ${matched}\n  </a>`;return newStr}function linkToHtml(text){return text?.replace(/(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/g,replacer)}const delayFn=function(){var timer=0;return function(callback,ms){clearTimeout(timer);timer=setTimeout(callback,ms)}}();function resizeImage(base64,maxWidth,maxHeight,mimetype="image/png"){return new Promise((resolve,reject)=>{const img=new Image;img.src=base64;img.onload=function(){const canvas=document.createElement("canvas");let width=img.width;let height=img.height;if(width>maxWidth){height*=maxWidth/width;width=maxWidth}if(height>maxHeight){width*=maxHeight/height;height=maxHeight}canvas.width=width;canvas.height=height;const ctx=canvas.getContext("2d");ctx.drawImage(img,0,0,width,height);const resizedBase64=canvas.toDataURL(mimetype,.8);// Ajuste o formato e qualidade conforme necessário
+resolve(resizedBase64)};img.onerror=reject})}
+/**
+ * Descobre o tipo REAL de um arquivo pelos primeiros bytes (magic number), a partir do inicio do
+ * base64 de um dataURL. Nao usar file.type nem a extensao: o navegador preenche os dois errado com
+ * frequencia (arquivo vindo da galeria/nuvem costuma chegar com type vazio).
+ *
+ * Motivo: candidato manda PDF, .docx e ate .exe no lugar da foto (49 casos de 15 candidatos no
+ * LOG_SITE entre 02/07 e 07/08/2026). Antes isso so estourava no fim do formulario, com "Ocorreu um
+ * erro ao tentar concluir sua inscricao". Agora e recusado no proprio anexo, dizendo o que houve.
+ *
+ * HEIC e AVIF (formato de fabrica das cameras Samsung/Xiaomi/iPhone) sao ACEITOS: o canvas do
+ * navegador nao abre, entao o arquivo vai original pra API, que converte com o Magick.NET
+ * (NossoRumo.Site.Api/Servicos/ArquivoImagem.cs).
+ *
+ * Devolve: 'jpeg' | 'png' | 'gif' | 'bmp' | 'webp' | 'tiff' | 'heic' | 'avif' | 'pdf' | 'zip' |
+ *          'executavel' | 'desconhecido'
+ */function identificarTipoArquivoBase64(base64){let b;try{const binario=atob((base64||"").substring(0,32));b=Array.from(binario,c=>c.charCodeAt(0))}catch(e){return"desconhecido"}if(b.length<12)return"desconhecido";const texto=(offset,esperado)=>esperado.split("").every((c,i)=>b[offset+i]===c.charCodeAt(0));if(b[0]===255&&b[1]===216&&b[2]===255)return"jpeg";if(b[0]===137&&b[1]===80&&b[2]===78&&b[3]===71)return"png";if(texto(0,"GIF8"))return"gif";if(b[0]===66&&b[1]===77)return"bmp";
+// TIFF little-endian (II*\0) e big-endian (MM\0*)
+if(b[0]===73&&b[1]===73&&b[2]===42&&b[3]===0||b[0]===77&&b[1]===77&&b[2]===0&&b[3]===42)return"tiff";if(texto(0,"RIFF")&&texto(8,"WEBP"))return"webp";
+// Container ISO-BMFF: 4 bytes de tamanho, "ftyp" e a marca do formato
+if(texto(4,"ftyp")){const marca=String.fromCharCode(b[8],b[9],b[10],b[11]).toLowerCase();if(["heic","heix","heim","heis","hevc","hevx","hevm","hevs","mif1","msf1"].includes(marca))return"heic";if(["avif","avis"].includes(marca))return"avif";return"desconhecido"}if(texto(0,"%PDF"))return"pdf";if(b[0]===80&&b[1]===75&&[3,5,7].includes(b[2]))return"zip";if(b[0]===77&&b[1]===90)return"executavel";return"desconhecido"}
+/** Formatos que a API consegue gravar (os dois ultimos via conversao no servidor). */function ehImagemAceita(tipo){return["jpeg","png","gif","bmp","webp","tiff","heic","avif"].includes(tipo)}
+/**
+ * Le a foto escolhida e devolve base64 PURO (sem o prefixo "data:"), que e o formato esperado por
+ * SalvarFoto na API (Convert.FromBase64String). Usada na Inscricao e nas duas telas de "Alterar foto
+ * de perfil" (Painel do candidato e do contratante) — as tres chamam o MESMO SalvarFoto no servidor,
+ * entao a leitura tambem precisa ser a mesma.
+ *
+ * Fotos de celular chegam com 5-15 MB. O caminho antigo (getBytes + arrayBufferToBase64) montava um
+ * Array JS byte a byte e concatenava string com String.fromCharCode: numa foto de 48 MP dava 358 MB
+ * de heap no aparelho e 46 MB de base64 no POST. Aqui usamos readAsDataURL (nativo) e reduzimos a
+ * imagem antes de enviar — a mesma foto sai em 0,58 MB. Reduzir no cliente nao perde qualidade
+ * final: a API reencoda tudo em WebP 80% e gera o thumb 500x500.
+ *
+ * Rejeita com `erro.mensagem_candidato` quando o arquivo nao e imagem, pra tela mostrar no anexo em
+ * vez de deixar o candidato descobrir no fim.
+ */function lerFotoPerfil(file){return new Promise((resolve,reject)=>{const reader=new FileReader;reader.onerror=()=>reject(erroLeituraFoto(reader.error));reader.onabort=()=>reject(new Error("Leitura da foto cancelada"));reader.onload=async()=>{try{const data_url=reader.result;if(!data_url)return reject(new Error("Arquivo de foto vazio"));
+// Confere pela assinatura do arquivo se isso e mesmo uma imagem. Candidato manda PDF,
+// .docx e ate .exe no lugar da foto. HEIC/AVIF passam: o canvas nao abre, mas a API
+// converte com o Magick.NET.
+const tipo_arquivo=identificarTipoArquivoBase64(data_url.split("base64,")[1]);if(!ehImagemAceita(tipo_arquivo)){const erro_tipo=new Error(mensagemArquivoNaoImagem(tipo_arquivo));erro_tipo.mensagem_candidato=erro_tipo.message;erro_tipo.tipo_arquivo=tipo_arquivo;return reject(erro_tipo)}
+// Reduz a maior dimensao pra 1600px. O canvas do Chrome ja aplica a orientacao EXIF
+// ao desenhar, entao a foto nao chega deitada na API.
+// Se o navegador nao decodificar a imagem (HEIC), segue com o arquivo original: a API
+// da conta do formato que o canvas nao abre.
+let redimensionada=null;try{redimensionada=await resizeImage(data_url,1600,1600,"image/jpeg")}catch(erro_resize){redimensionada=null}const base64=(redimensionada||data_url).split("base64,");resolve(base64.length==2?base64[1]:base64[0])}catch(erro){reject(erro)}};reader.readAsDataURL(file)})}
+/**
+ * Falha do NAVEGADOR ao LER o arquivo escolhido (nao e recusa por formato — o formato so e checado
+ * depois, quando os bytes ja foram lidos). E o erro mais frequente da tela de foto: 36 ocorrencias
+ * de 07 a 17/08/2026, a maioria em Android/Chrome.
+ *
+ * O DOMException traz a causa em `name` e uma mensagem em INGLES em `message`. A mensagem original
+ * continua indo pro log (e o que permite separar um caso do outro); o candidato ve o texto daqui,
+ * que diz o que fazer em vez de mandar "escolha outra imagem" pra quem escolheu a imagem certa.
+ *
+ * NotReadableError e o caso tipico da foto que esta no Google Fotos/iCloud e nao no aparelho, ou do
+ * arquivo que o app moveu entre a escolha e a leitura.
+ */function erroLeituraFoto(erro_original){const nome=erro_original?.name||"Error";const erro=new Error(erro_original?.message||"Falha ao ler o arquivo da foto");erro.name=nome;erro.error=erro_original;// serializeError le daqui pra gravar arquivo_erro_nome/mensagem
+erro.mensagem_candidato=mensagemFalhaLeituraFoto(nome);return erro}
+/** Texto que o candidato ve quando o aparelho nao consegue abrir a foto escolhida. */function mensagemFalhaLeituraFoto(nome){switch(nome){case"NotReadableError":return"O aparelho não conseguiu abrir a foto escolhida. Isso costuma acontecer quando a imagem está guardada na nuvem (Google Fotos, iCloud) e não no próprio aparelho. Baixe a foto para o aparelho, ou tire uma foto nova pela câmera, e envie de novo.";case"NotFoundError":return"A foto escolhida não foi encontrada no aparelho — ela pode ter sido movida ou apagada depois de você selecionar. Escolha a imagem de novo.";case"SecurityError":return"O aparelho não liberou o acesso à foto escolhida. Verifique a permissão de acesso às fotos e tente de novo, ou tire uma foto nova pela câmera.";default:return"Não foi possível ler a foto selecionada. Escolha outra imagem ou tire uma foto nova pelo aparelho."}}
+/** Mensagem pro candidato quando o arquivo nao e foto. Espelha ArquivoImagem.Mensagem na API. */function mensagemArquivoNaoImagem(tipo){switch(tipo){case"pdf":return"O arquivo enviado é um PDF, não uma foto. Envie uma imagem em JPG ou PNG.";case"zip":return"O arquivo enviado é um documento compactado, não uma foto. Envie uma imagem em JPG ou PNG.";case"executavel":return"O arquivo enviado não é uma foto. Envie uma imagem em JPG ou PNG.";default:return"Não foi possível reconhecer o arquivo como uma foto. Envie uma imagem em JPG ou PNG."}}function joinComE(itens,{oxford:oxford=false}={}){const a=(itens||[]).filter(Boolean);const n=a.length;if(!n)return null;if(n===1)return a[0];if(n===2)return`${a[0]} e ${a[1]}`;return`${a.slice(0,-1).join(", ")}${oxford?",":""} e ${a[n-1]}`}const isValidPIS=pis=>{if(!pis)return false;pis=pis.replace(/\D/g,"");// remove não numéricos
+if(pis.length!==11)return false;if(/^(\d)\1{10}$/.test(pis))return false;// rejeita repetições 00000000000, 11111111111...
+const pesos=[3,2,9,8,7,6,5,4,3,2];let soma=0;for(let i=0;i<10;i++)soma+=parseInt(pis[i])*pesos[i];let dv=11-soma%11;if(dv===10||dv===11)dv=0;return dv===parseInt(pis[10])};
+// chame após injetar html dinâmico; dá pra passar um root opcional
+function reloadInputs(root=document){const $root=$(root);
+// --- INPUTS ---
+const inputSel="[data-mdb-input-init].form-outline";$root.find(inputSel).addBack(inputSel).filter(":not([data-mdb-input-initialized])").each(function(_,el){const inst=mdb.Input.getInstance?.(el);if(inst){inst.update?.();return}try{new mdb.Input(el)}catch(e){console.warn("Input init fail",el,e)}});
+// --- SELECTS ---
+const selectSel="select[data-mdb-select-init]";$root.find(selectSel).addBack(selectSel).each(function(_,el){const hasWrapper=!!$(el).closest(".select-wrapper").length;if(hasWrapper)return;// já está ok
+// se vier "carimbado", tira o flag pra não bloquear init
+if(el.hasAttribute("data-mdb-select-initialized"))el.removeAttribute("data-mdb-select-initialized");const inst=mdb.Select.getInstance?.(el);if(inst){inst.update?.();return}try{const options=buildMdbSelectOptionsFromData(el);new mdb.Select(el,options)}catch(e){console.warn("Select init fail",el,e)}});
+// --- DATEPICKERS ---
+const dpSel="[data-mdb-datepicker-init]";$root.find(dpSel).addBack(dpSel).each(function(_,wrapper){const inst=mdb.Datepicker.getInstance?.(wrapper);if(inst){inst.update?.();return}try{const options=buildMdbDatepickerOptionsFromData(wrapper);new mdb.Datepicker(wrapper,options)}catch(e){console.warn("Datepicker init fail",wrapper,e)}});
+// garante pt-BR também nos dinamicamente criados
+try{window.applyPtBrDatepickers(root)}catch{}}function buildMdbSelectOptionsFromData(el){const opts={};const ds=el.dataset;// mapeia data-*
+// nativos do MDB que você já usa
+if("mdbFilter"in ds)opts.filter=parseDataBool(el,"mdb-filter",false);if("mdbContainer"in ds)opts.container=parseDataStr(el,"mdb-container");// ex.: "body"
+if("mdbVisibleOptions"in ds)opts.visibleOptions=parseDataInt(el,"mdb-visible-options");if("mdbClearButton"in ds)opts.clearButton=parseDataBool(el,"mdb-clear-button",false);
+// validação (presentes no seu HTML)
+if("mdbValidation"in ds)opts.validation=parseDataBool(el,"mdb-validation",false);if("mdbInvalidFeedback"in ds)opts.invalidFeedback=parseDataStr(el,"mdb-invalid-feedback");
+// validação (presentes no seu HTML)
+if("mdbSelectAll"in ds)opts.selectAll=parseDataBool(el,"mdb-select-all",false);if("mdbSelectAllLabel"in ds)opts.selectAllLabel=parseDataStr(el,"mdb-select-all-label");if("mdbOptionsSelectedLabel"in ds)opts.optionsSelectedLabel=parseDataStr(el,"mdb-options-selected-label");
+// opcional: refletir required (não é opção do MDB, mas útil pra sua lógica)
+//if (el.hasAttribute('required')) opts.required = true;
+return opts}function buildMdbDatepickerOptionsFromData(el){const opts={};const ds=el.dataset;// lê data-*
+// o que você pediu
+if("mdbInline"in ds)opts.inline=parseDataBool(el,"mdb-inline",false);
+// úteis comuns (se você usar)
+if("mdbFormat"in ds)opts.format=parseDataStr(el,"mdb-format");// ex.: 'dd/mm/yyyy'
+if("mdbLocale"in ds)opts.locale=parseDataStr(el,"mdb-locale");// ex.: 'pt-BR'
+if("mdbDisablePast"in ds)opts.disablePast=parseDataBool(el,"mdb-disable-past",false);if("mdbDisableFuture"in ds)opts.disableFuture=parseDataBool(el,"mdb-disable-future",false);if("mdbMin"in ds)opts.min=parseDataStr(el,"mdb-min");// ex.: '2025-01-01'
+if("mdbMax"in ds)opts.max=parseDataStr(el,"mdb-max");// ex.: '2025-12-31'
+if("mdbContainer"in ds)opts.container=parseDataStr(el,"mdb-container");// ex.: 'body'
+return opts}function parseDataBool(el,key,def=false){const v=el.getAttribute(`data-${key}`);if(v===null)return def;return v===""||v==="true"||v==="1"}function parseDataStr(el,key,def=undefined){const v=el.getAttribute(`data-${key}`);return v===null?def:v}function parseDataInt(el,key,def=undefined){const v=el.getAttribute(`data-${key}`);if(v===null)return def;const n=Number(v);return Number.isFinite(n)?n:def}function limparSelect($el,options){const cfg=Object.assign({silent:false},options||{});const $sel=$el&&$el.jquery?$el:$($el);if(!$sel.length)return;const el=$sel[0];const wrap=el.closest(".select-wrapper");const inst=mdb.Select.getInstance(el);
+// 1) limpa o <select> nativo
+if(el.multiple){
+// multiple: zera todas
+Array.from(el.options).forEach(o=>o.selected=false);el.value=null}else{
+// single: tenta selecionar a option vazia; senão, limpa direto
+const hasEmpty=Array.from(el.options).some(o=>o.value==="");if(hasEmpty){el.value=""}else{
+// força sem valor mesmo que não exista option vazia
+el.selectedIndex=-1;el.value=""}}if(!cfg.silent){el.dispatchEvent(new Event("change",{bubbles:true}))}
+// 2) manda a instância do MDB refletir o vazio
+if(inst?.setValue){inst.setValue(el.multiple?[]:"")}else{
+// fallback defensivo se não houver instância
+try{new mdb.Select(el).setValue(el.multiple?[]:"")}catch{}}
+// 3) reseta o proxy gerado pelo MDB
+if(wrap){const input=wrap.querySelector(".select-input");const fake=wrap.querySelector(".select-fake-value");const list=document.getElementById("select-dropdown-container-"+el.id);if(input){input.value="";input.setAttribute("aria-activedescendant","");input.setAttribute("aria-expanded","false");if(!cfg.silent)input.dispatchEvent(new Event("input",{bubbles:true}))}if(fake)fake.textContent="";
+// remove marcações no dropdown
+if(list){list.querySelectorAll(".selected").forEach(li=>li.classList.remove("selected"));list.querySelectorAll(".active").forEach(li=>li.classList.remove("active"));
+// limpa o campo de busca (quando data-mdb-filter="true")
+const search=list.querySelector('.form-outline input[type="text"]');if(search){search.value="";if(!cfg.silent)search.dispatchEvent(new Event("input",{bubbles:true}))}}
+// 4) atualiza notch/label
+const outline=wrap.querySelector(".form-outline")||wrap;const inp=mdb.Input.getInstance(outline);inp?.update?.();const selInst=mdb.Select.getInstance(el);selInst?._updateOutlineInput?.()}}function setValueMdb(id_el,value,trigger){let $el;try{
+// Se for jQuery
+if(isJQuery(id_el))$el=id_el;
+// Se for um elemento DOM (document.querySelector já retorna um elemento)
+else if(id_el instanceof Element)$el=$(id_el);
+// Se for uma string (ex: "#meuForm")
+else if(typeof id_el==="string")$el=$(id_el);if(!$el?.length)return;
+// modo "silent" (não disparar change nem native change do MDB)
+const silent=typeof trigger==="string"&&trigger.split(" ").some(e=>e.trim()==="silent");if(typeof value==="string")value=value.trim();const $outline=$el.closest(".form-outline");
+// Detecta se é campo de data (pelo tipo ou pela classe do MDB)
+const isDate=$el.is("[data-mdb-datepicker-init]")||$el.attr("type")==="date"||$el.closest(".form-outline").data("mdb-datepicker-init")!==undefined;if(isDate&&value){
+// Converte automaticamente pra formato brasileiro se for ISO ou Date
+const data=moment(value,["YYYY-MM-DD","YYYY-MM-DDTHH:mm:ss","YYYY/MM/DD","DD/MM/YYYY","DD-MM-YYYY"],true);if(data.isValid())value=data.format("DD/MM/YYYY")}
+// Aplica o valor no input
+$el.val(value);if(trigger){const events=trigger.split(" ").map(e=>e.trim()).filter(Boolean).filter(e=>!(silent&&e==="change"));for(const evt of events)$el.trigger(evt)}const el=$el[0];const outline=$outline?.get(0)||el.closest?.(".form-outline")||el;
+// Quando valor fica vazio, alguns estados visuais precisam ser limpos manualmente
+const empty=value===""||value==null;if(empty){
+// limpa estados de validação
+$el.removeClass("is-valid is-invalid");$outline?.removeClass("is-valid is-invalid");
+// força label a descer
+el.classList?.remove("active");
+// reseta notch (o update geralmente faz isso, mas garantimos)
+const notchMid=outline?.querySelector?.(".form-notch-middle");const notchLead=outline?.querySelector?.(".form-notch-leading");notchMid&&(notchMid.style.width="");notchLead&&(notchLead.style.width="");
+// aciona eventos que o MDB observa
+//$el.trigger('input').trigger('change');
+}
+// Input/textarea
+const inp=mdb.Input.getInstance(outline);inp?.update?.();
+// Select
+if(el.tagName==="SELECT"){const sel=mdb.Select.getInstance(el);const wrap=el.closest(".select-wrapper");const isEmpty=value===""||value==null||Array.isArray(value)&&value.length===0;if(isEmpty){
+// --- nativo ---
+if(el.multiple){Array.from(el.options).forEach(o=>o.selected=false);el.value=null}else{const hasEmpty=Array.from(el.options).some(o=>o.value==="");if(hasEmpty){el.value=""}else{el.selectedIndex=-1;el.value=""}}
+// --- MDB: setValue em branco ---
+if(sel?.setValue){const guard=window.__mdbChangeGuard;let guarded=false;if(silent&&guard&&!guard.has(sel)){guard.add(sel);guarded=true}try{sel.setValue(el.multiple?[]:"")}finally{if(guarded)guard.delete(sel)}}if(sel?._input?.value)sel._input.value="";
+// --- Proxy visual do MDB ---
+if(wrap){const input=wrap.querySelector(".select-input");const fake=wrap.querySelector(".select-fake-value");const list=document.getElementById("select-dropdown-container-"+el.id);if(input){input.value="";input.setAttribute("aria-activedescendant","");input.setAttribute("aria-expanded","false")}if(fake)fake.textContent="";if(list){list.querySelectorAll(".selected").forEach(li=>li.classList.remove("selected"));list.querySelectorAll(".active").forEach(li=>li.classList.remove("active"));const search=list.querySelector('.form-outline input[type="text"]');if(search){search.value="";search.dispatchEvent(new Event("input",{bubbles:true}))}}}}else{
+// valor "normal" -> segue fluxo padrão
+const guard=window.__mdbChangeGuard;let guarded=false;if(silent&&guard&&sel&&!guard.has(sel)){guard.add(sel);guarded=true}try{if(sel?.multiple){const arr=Array.isArray(value)?value:value==null||value==undefined?[]:[String(value)];sel?.setValue?.(arr)}else{sel?.setValue?.(value==null||value==undefined?"":String(value))}}finally{if(guarded)guard.delete(sel)}}}}catch(e){console.error(e);console.log(id_el,value,trigger)}return $el}function RebuildSelectsMdb($combo,preserve=true,suppressChange=true){if(!$combo?.length)return;
+// tudo o que já tinha fica dentro dessa função
+const work=()=>{const el=$combo[0];const inst=mdb.Select.getInstance(el)||(el.dataset.mdbSelectInit?new mdb.Select(el):null);if(!inst)return;
+// 1) Recoleta opções do DOM (inclui optgroup)
+const optsToRender=inst._getOptionsToRender(el);inst._optionsToRender=optsToRender;inst._plainOptions=inst._getPlainOptions(optsToRender);
+// 2) (Re)monta a lista do dropdown
+inst._updateOptionsListTemplate(optsToRender);
+// 3) Preserva/define seleção e sincroniza UI
+const prev=preserve?$combo.val():null;if(!el.multiple)inst.setValue(prev??"");// aqui o guard precisa estar ativo
+else inst.setValue(prev??[]);// aqui também
+inst._updateSelections?.();inst._updateInputValue?.();
+// 4) Ajusta label/notch/largura após estar visível
+inst._updateOutlineInput?.();inst._updateLabelPosition?.();inst._updateDropdownWidth?.();
+// 5) Reseta validação
+resetFieldValidation(el);
+// ---------- NOVO: se estiver vazio, limpa UI fake ----------
+const val=$combo.val();const isEmpty=Array.isArray(val)?val.length===0:val===""||val==null;if(isEmpty){clearMdbSelectUI(el)}
+// -----------------------------------------------------------
+};
+// Se quiser sempre mudo, deixa suppressChange = true (padrão)
+if(suppressChange){return suppressMdbChange($combo,work)}else{
+// comportamento antigo (sem suprimir o change)
+return work()}}function resetMdbValidation($form){const form=$form.jquery?$form[0]:document.querySelector($form);if(!form)return;
+// remove classes padrão do Bootstrap/MDB
+form.classList.remove("was-validated");$(form).find(".is-valid, .is-invalid").removeClass("is-valid is-invalid");$(form).find(".valid-feedback, .invalid-feedback").each(function(){
+// se você insere texto de erro dinâmico, pode limpar também:
+if(!$(this).attr("data-static"))$(this).text("")});
+// campos MDB: input, textarea, select
+$(form).find("input, textarea, select").each(function(){const el=this;
+// reset visual de Selects
+if(el.tagName==="SELECT"){const selInst=mdb.Select.getInstance(el);selInst?._updateOutlineInput?.()}
+// atualiza outline/label do MDB Input
+const outline=el.closest(".form-outline")||el;const inpInst=mdb.Input.getInstance(outline);inpInst?.update?.()})}
+// mantém o estado do <select> real e do proxy do MDB alinhados
+// mantém o estado do <select> real, do proxy do MDB e do "fake value" alinhados
+function syncMdbSelectDisabled($scope){const $root=$scope&&$scope.jquery?$scope:$($scope);const $targets=$root.is("select")?$root:$root.find("select");$targets.each(function(){const sel=this;const $sel=$(sel);if(!window.mdb||!mdb.Select)return;let inst=mdb.Select.getInstance?mdb.Select.getInstance(sel):null;if(!inst&&(sel.hasAttribute("data-mdb-select-init")||sel.hasAttribute("data-mdb-select-initialized"))){try{inst=new mdb.Select(sel)}catch{}}const isDisabled=$sel.is(":disabled")||$sel.hasClass("disabled");const val=$sel.val();const isEmpty=Array.isArray(val)?val.length===0:val===""||val==null;const $wrapper=$sel.closest(".select-wrapper");const $innerFO=$wrapper.find("> .form-outline").first();const $proxy=$wrapper.find(".select-input").first();const $arrow=$wrapper.find(".select-arrow").first();const $fake=$wrapper.find(".select-fake-value").first();
+// ------------------------------------------------------------------
+// 1) Se NÃO tem valor → limpa completamente o fake e o input visual
+//    (independente de estar disabled ou não)
+// ------------------------------------------------------------------
+if(isEmpty){clearMdbSelectUI(sel);// já cuida de input, fake, lista, etc.
+}else{
+// ------------------------------------------------------------------
+// 2) Tem valor → garante que o fake mostre o texto correto
+// ------------------------------------------------------------------
+const opt=sel.selectedIndex>=0?sel.options[sel.selectedIndex]:null;const label=opt?(opt.textContent||opt.innerText||"").trim():"";if($proxy.length){$proxy.val(label);$proxy.toggleClass("active",!!label);$proxy.removeClass("is-valid is-invalid");$proxy.attr("aria-activedescendant","")}if($fake.length){$fake.text(label)}if($innerFO.length){$innerFO.removeClass("is-valid is-invalid")}}
+// ------------------------------------------------------------------
+// 3) Estado de disabled → só cuida de acessibilidade e pointer-events
+// ------------------------------------------------------------------
+if(isDisabled){try{inst?.disable?.()}catch{}$proxy.addClass("disabled").attr({disabled:true,"aria-disabled":"true"}).prop("readonly",true).attr("tabindex","-1");$arrow.css("pointer-events","none");$wrapper.attr("aria-disabled","true")}else{try{inst?.enable?.()}catch{}$proxy.removeClass("disabled").removeAttr("disabled").attr("aria-disabled","false").prop("readonly",true).removeAttr("tabindex");$arrow.css("pointer-events","");$wrapper.attr("aria-disabled","false")}})}function clearMdbSelectUI(sel){if(!sel)return;const wrap=sel.closest(".select-wrapper");if(!wrap)return;const input=wrap.querySelector(".select-input");const fake=wrap.querySelector(".select-fake-value");const list=document.getElementById("select-dropdown-container-"+sel.id);const outline=wrap.querySelector(".form-outline");
+// Limpa texto e estados visuais
+if(input){input.value="";input.classList.remove("active","is-valid","is-invalid");input.setAttribute("aria-activedescendant","");input.setAttribute("aria-expanded","false")}if(fake){fake.textContent=""}if(outline){outline.classList.remove("is-valid","is-invalid")}
+// Limpa seleção na lista do dropdown
+if(list){list.querySelectorAll(".selected").forEach(li=>li.classList.remove("selected"));list.querySelectorAll(".active").forEach(li=>li.classList.remove("active"));
+// Zera o campo de busca, se existir
+const search=list.querySelector('.form-outline input[type="text"]');if(search){search.value="";search.dispatchEvent(new Event("input",{bubbles:true}))}}}
+// Sincroniza TODOS os <select data-mdb-select-init> dentro do escopo
+// - (re)inicializa se precisar
+// - alinha estado de disabled no proxy
+// - atualiza texto do fake input e outline
+function syncAllMdbSelects(scope){const $scope=scope?window.jQuery&&scope.jquery?scope:$(scope):$(document);if(!window.mdb||!mdb.Select)return;$scope.find("select[data-mdb-select-init], select[data-mdb-select-initialized], select.form-select").each(function(){const sel=this;const $sel=$(sel);
+// 1) pegar/criar instância
+let inst=mdb.Select.getInstance?mdb.Select.getInstance(sel):null;if(!inst){try{
+// se você usa opções via data-attributes:
+const opts=buildMdbSelectOptionsFromData?buildMdbSelectOptionsFromData(sel):{};inst=new mdb.Select(sel,opts);inst.init?.()}catch{/* ignore */}}
+// 2) sincronizar disabled no proxy
+const isDisabled=$sel.is(":disabled")||$sel.hasClass("disabled")||sel.disabled;try{isDisabled?inst?.disable?.():inst?.enable?.()}catch{/* ignore */}
+// 3) atualizar UI (label/valor/outline) para refletir o valor atual
+try{
+// para versões que expõem helpers internos
+inst?._updateInputValue?.();inst?._updateFakeLabelPosition?.();inst?._updateLabelPosition?.();inst?._updateOutlineInput?.();inst?._updateClearButtonVisibility?.()}catch{/* ignore */}
+// 4) fallback visual caso os helpers acima não existam
+const wrapper=$sel.closest(".select-wrapper")[0];const innerFo=wrapper?.querySelector(":scope > .form-outline");const fakeInput=innerFo?.querySelector(".select-input");const fakeText=innerFo?.querySelector(".select-fake-value");if(fakeInput){const opt=sel.selectedIndex>=0?sel.options[sel.selectedIndex]:null;const label=opt?(opt.textContent||opt.innerText||"").trim():"";fakeInput.value=label;fakeInput.classList.toggle("active",!!label);innerFo?.classList.remove("is-invalid","is-valid");if(fakeText)fakeText.textContent=label}})}function resetFieldValidation(el,keepValid=false){if(!el)return;try{el.setCustomValidity("")}catch{}
+// Se for MDB Select
+if(el instanceof HTMLSelectElement){const{fakeInput:fakeInput,outlineForUI:outlineForUI,feedbackEl:feedbackEl}=mdbSelectParts(el);
+// limpa mensagem e invalid
+outlineForUI?.classList.remove("is-invalid");fakeInput?.classList?.remove("is-invalid");if(!keepValid){outlineForUI?.classList.remove("is-valid");fakeInput?.classList?.remove("is-valid")}if(feedbackEl)feedbackEl.textContent="";
+// reforça acessibilidade
+fakeInput?.setAttribute?.("aria-invalid","false")}else{const outline=el.closest(".form-outline");const feedback=outline?.querySelector(":scope > .invalid-feedback");
+// limpa estados de erro
+outline?.classList.remove("is-invalid");el.classList.remove("is-invalid");if(!keepValid){outline?.classList.remove("is-valid");el.classList.remove("is-valid")}if(feedback)feedback.textContent=""}}
+// HELPER: clona INPUT/TEXTAREA dentro de uma .form-outline limpa e reinit MDB Input
+function clonarInputOutline($inputOrig,novoId,novoName,index,valorInicial=""){const $hostCol=$inputOrig.closest(".form-outline").parent();// mesma coluna
+const $fo=$('<div class="form-outline mt-4" data-mdb-input-init></div>');const $inp=$inputOrig.clone(false,false).removeAttr("data-mdb-input-initialized").attr({id:novoId,name:novoName,"data-index-certame":index}).val(valorInicial);
+// label normal (não .select-label)
+const $labelOrig=$inputOrig.closest(".form-outline").find("label.form-label").not(".select-label").first();const $label=$labelOrig.length?$labelOrig.clone(false,false).attr("for",novoId):$(`<label class="form-label" for="${novoId}"></label>`);const $fb=$('<div class="invalid-feedback"></div>');$fo.append($inp,$label,$fb);$hostCol.append($fo);reloadInputs($fo[0]);return $inp}
+// (garante select “virgem” pra reinit do MDB)
+function clonarMdbSelect($selectOrig,novoId,novoName,index,valorInicial=""){const $hostCol=$selectOrig.closest(".form-outline").parent();
+// 1) form-outline EXTERNO limpo (sem data-mdb-input-init)
+const $outerFO=$('<div class="form-outline"></div>');// sem mt-4 p/ ficar igual ao exemplo
+const $invalid=$('<div class="invalid-feedback"></div>');$hostCol.append($outerFO);
+// 2) select “virgem”
+const $sel=$selectOrig.clone(false,false).removeAttr("data-mdb-select-initialized data-mdb-input-init data-mdb-input-initialized").removeClass("select-initialized").attr({id:novoId,name:novoName,"data-index-certame":index});
+// garante atributo de init do MDB Select
+if(!$sel.is("[data-mdb-select-init]"))$sel.attr("data-mdb-select-init","");
+// 3) injeta o select no form-outline externo (o MDB vai wrappar)
+$outerFO.append($sel);
+// 4) label (texto do original)
+const labelText=$selectOrig.closest(".select-wrapper").find("label.select-label").text().trim()||$selectOrig.closest(".form-outline").find("label.select-label").text().trim()||"Selecione";
+// 5) inicializa MDB Select
+mdb.Select.getInstance?.($sel[0])?.dispose?.();const opts=typeof buildMdbSelectOptionsFromData==="function"?buildMdbSelectOptionsFromData($sel[0]):undefined;new mdb.Select($sel[0],opts);
+// 6) pega o select-wrapper GERADO, realoca para dentro do outer form-outline e ajusta id
+const $wrapper=$sel.closest(".select-wrapper");$wrapper.attr("id",`select-wrapper-${novoId}`);
+// se o wrapper ficou como irmão do outer, move pra dentro; se já estiver dentro, mantém
+if($wrapper.parent()[0]!==$outerFO[0]){$wrapper.appendTo($outerFO)}
+// 7) coloca/garante label correto e ORDEM: input fake ANTES do label (como no exemplo)
+const $innerFO=$wrapper.find("> .form-outline").first();const $fakeInput=$innerFO.find("input.select-input").first();let $label=$innerFO.find("label.select-label").first();if(!$label.length){$label=$(`<label class="form-label select-label" for="${novoId}"></label>`).text(labelText);$innerFO.prepend($label)}else{$label.attr("for",novoId).text(labelText)}
+// garante input antes do label
+if($fakeInput.length&&$label.length&&$fakeInput.index()>$label.index()){$label.insertAfter($fakeInput);// move label para depois do input
+}
+// 8) limpa flags indevidas no outer (não queremos data-mdb-input-init no outer)
+$outerFO.removeAttr("data-mdb-input-init data-mdb-input-initialized");
+// 9) aplica valor e sincroniza UI
+if(valorInicial!=null&&valorInicial!=="")$sel.val(valorInicial);$sel.trigger("change");
+// 10) ARIA e atributos extra como no exemplo
+$fakeInput.attr({autocomplete:"off",autocapitalize:"off",autocorrect:"off",spellcheck:"false",inputmode:"none","aria-controls":`select-dropdown-container-${novoId}`,"aria-labelledby":novoId}).css({"pointer-events":"none","caret-color":"transparent"});
+// 11) anexa invalid-feedback como irmão dentro do outer (igual ao esperado)
+$outerFO.append($invalid);return $sel}
+// Executa um bloco suprimindo o change nativo de UM select MDB específico
+function suppressMdbChange($selectOrEl,fn){const $el=$selectOrEl.jquery?$selectOrEl:$($selectOrEl);if(!$el.length||typeof fn!=="function")return;const el=$el[0];const inst=mdb.Select.getInstance(el);if(!inst){
+// se não tiver instância, executa normal
+return fn()}const guard=window.__mdbChangeGuard||(window.__mdbChangeGuard=new WeakSet);guard.add(inst);try{return fn()}finally{guard.delete(inst)}}function ensureTurnstileLoaded(){return new Promise(resolve=>{if(window.turnstile)return resolve();const existing=document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]');if(existing){const t=setInterval(()=>{if(window.turnstile){clearInterval(t);resolve()}},50);return}const script=document.createElement("script");script.src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";script.async=true;script.defer=true;script.onload=()=>resolve();document.head.appendChild(script)})}
+/**
+ * Renderiza o Turnstile DENTRO do root informado (modal/página) e guarda o widgetId/token ali.
+ */async function renderTurnstileIn($root){await ensureTurnstileLoaded();const el=$root.find(".cf-turnstile")[0];if(!el)return;
+// Remove widget antigo desse root (evita duplicar)
+const oldId=$root.data("turnstileWidgetId");if(oldId!==undefined){try{turnstile.remove(oldId)}catch{}$root.removeData("turnstileWidgetId");$root.removeData("turnstileToken")}
+// Render manual: garante que o token fica associado a ESTE root/form
+const widgetId=turnstile.render(el,{sitekey:el.getAttribute("data-sitekey"),theme:el.getAttribute("data-theme")||"light",size:el.getAttribute("data-size")||"flexible",callback:token=>$root.data("turnstileToken",token),"expired-callback":()=>$root.data("turnstileToken",null),"error-callback":()=>$root.data("turnstileToken",null)});$root.data("turnstileWidgetId",widgetId)}
+/**
+ * Serializa qualquer coisa lançada num catch (Error, DOMException, Event, jqXHR, string) num objeto
+ * plano que sobrevive ao JSON.stringify.
+ *
+ * Motivo: Object.getOwnPropertyNames() num Event do DOM devolve APENAS { isTrusted } — tudo que
+ * interessa (type, name, message) mora no prototype. Era por isso que erro de leitura de arquivo
+ * chegava no LOG_SITE como {"isTrusted":true}, sem nenhuma pista do que aconteceu.
+ */function serializeError(erro){if(erro===undefined)return{tipo:"undefined"};if(erro===null)return{tipo:"null"};if(typeof erro!=="object")return{tipo:typeof erro,valor:String(erro)};const destino={tipo:erro.constructor?.name||Object.prototype.toString.call(erro)};
+// Propriedades proprias (o que o serializador antigo ja pegava)
+for(const chave of Object.getOwnPropertyNames(erro)){const valor=erro[chave];if(typeof valor!=="function"&&typeof valor!=="object")destino[chave]=valor}
+// Propriedades do prototype que o getOwnPropertyNames nao enxerga
+["name","message","code","type","reason","status","statusText"].forEach(chave=>{try{if(destino[chave]===undefined&&erro[chave]!==undefined&&erro[chave]!==null)destino[chave]=erro[chave]}catch(e){/* getter que lança - ignora */}});
+// FileReader / upload: o motivo real (NotReadableError, NotFoundError) fica em target.error
+try{const erro_arquivo=erro.target?.error||erro.error;if(erro_arquivo&&typeof erro_arquivo==="object"){destino.arquivo_erro_nome=erro_arquivo.name;destino.arquivo_erro_mensagem=erro_arquivo.message}}catch(e){/* ignora */}
+// jqXHR: resposta do servidor, quando houver
+try{if(erro.responseJSON)destino.responseJSON=JSON.stringify(erro.responseJSON).substring(0,1e3);else if(typeof erro.responseText==="string")destino.responseText=erro.responseText.substring(0,1e3)}catch(e){/* ignora */}
+// Causa encadeada (Error.cause)
+try{if(erro.cause)destino.causa=typeof erro.cause==="object"?(erro.cause.name||"")+": "+(erro.cause.message||""):String(erro.cause)}catch(e){/* ignora */}return destino}
+/**
+ * Envia um erro pro LOG_SITE. Use em qualquer tela — hoje só a Inscrição loga, o resto do site
+ * falha em silêncio.
+ *
+ * Nunca lança: se o proprio log falhar, engole. Log quebrando fluxo de candidato é pior que
+ * ficar sem log.
+ *
+ * @param {string} contexto  Onde ocorreu. Padrao: "acao - Tela" (ex.: "onSubmit - Inscrição Candidato")
+ * @param {any}    erro      O que caiu no catch
+ * @param {object} dados     Contexto extra. NUNCA passe base64/arquivo aqui - ver truncamento abaixo.
+ */async function LogErro(contexto,erro,dados){try{
+// Limites das colunas de LOG_SITE. O SqlParameter nao declara tamanho, entao o SQL Server
+// trunca calado no parametro da proc - melhor cortar aqui, de forma explicita e visivel.
+const corta=(valor,max)=>{if(valor===undefined||valor===null)return"";const texto=String(valor);return texto.length>max?texto.substring(0,max-3)+"...":texto};
+// Blinda contra base64 de arquivo indo parar no log (JSON_DADOS ja passou de 10 MB numa linha).
+const semBinario=obj=>{try{return JSON.parse(JSON.stringify(obj??null,(chave,valor)=>typeof valor==="string"&&valor.length>2048?`[texto omitido: ${valor.length} chars]`:valor))}catch(e){return{_erro_serializacao:String(e)}}};await Request({url:"/Home/PostLog",method:"POST",ignoreError:true,ignoreAlertTimeout:true,
+// Log e background: nao pode abrir o spinner. O beforeSend do Request abre o Loading
+// quando nao existe #modalLoading, e o handler de complete que o fecharia esta
+// comentado - sem estas duas flags o spinner fica preso na tela depois de logar um erro.
+NotOpenLoading:true,NotCloseLoading:true,data:{message:corta(erro?.message||erro?.name||"Erro desconhecido",255),stack:corta(erro?.stack,500),erro:JSON.stringify(serializeError(erro)),data_hora:moment().format("YYYY-MM-DDTHH:mm:ss.SSS"),contexto:corta(contexto,500),navegador:navigator.userAgent,url:corta(window.location.href,500),dados:JSON.stringify(semBinario(dados))}})}catch(falha_no_log){console.error("Falha ao registrar log:",falha_no_log)}}function formatarNota(valor){if(valor===undefined||valor===null||valor==="")return"0";let num=parseFloat(valor);if(isNaN(num))return"0";return num.toLocaleString("pt-BR",{minimumFractionDigits:0,maximumFractionDigits:2})}

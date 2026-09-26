@@ -1,0 +1,53 @@
+{
+  "schema": "t011.id17.gate-preflight.v1",
+  "record_id": 17,
+  "timestamp": "2026-09-12T23:38:28.1443871-03:00",
+  "decision": "BLOCKED_BEFORE_IMPORT",
+  "preflight": {
+    "new_run_label_absent": "t011-reviewed-17-6caf7901",
+    "legacy_run": "tp-tcj-8ab7bff262fa52d4a80aa00058905974-1",
+    "legacy_proposal": "tpp-02c29e4baa1b036eab1d02de59a65c74",
+    "legacy_state": "no_change",
+    "legacy_mutated": false,
+    "new_proposal_absent": true,
+    "source_id": 34,
+    "health_before": 200
+  },
+  "backup": {
+    "path": "/backups/pilot-20260913T023156478Z",
+    "operational_files": 13760,
+    "verified": true,
+    "restore_database": "id17_restore_20260912",
+    "restore_counts": {
+      "concursos": 33,
+      "publications": 34,
+      "versions": 84,
+      "outbox": 84,
+      "proposals": 86
+    }
+  },
+  "artifact": {
+    "path": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "owner_user_id": 1,
+    "reference_only": true,
+    "rows": 27,
+    "vagas_total": 79,
+    "ac": 74,
+    "pcd": 5,
+    "cadastro_reserva": null
+  },
+  "build": {
+    "tests": "backend/.venv: 9 passed",
+    "api_image": "sha256:7efa6e5b24f15330a54fc2998c93be2bd2f06574008a75717ce06834baa63544",
+    "health_after": 200,
+    "scope": "API only; volumes preserved; web/PostgreSQL/Redis/worker/scheduler not redeployed"
+  },
+  "dry_run": {
+    "status": "validated",
+    "derived_run_id": "tp-reviewed-e3bd05e59ca40b87f992fb3d78cca8bf",
+    "fields": ["titulo", "orgao", "edital_numero", "cargos"]
+  },
+  "blocker": "The normal reviewed-run importer deterministically derives tp-reviewed-e3bd05e59ca40b87f992fb3d78cca8bf from the corrected envelope; it cannot persist the documentary label t011-reviewed-17-6caf7901 (extra run_id is rejected). Per gate instruction, stopped before apply/import and proposal creation."
+}

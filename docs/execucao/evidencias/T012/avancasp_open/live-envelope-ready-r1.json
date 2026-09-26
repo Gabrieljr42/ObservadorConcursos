@@ -1,0 +1,555 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "avancasp_open",
+  "concurso_id": 272,
+  "external_id": "272",
+  "title": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+  "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+  "observed_at": "2026-09-13T00:00:00Z",
+  "reference_only": true,
+  "pending_fields": [],
+  "owner_user_id": 1,
+  "artifact": {
+    "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "byte_len": 742298,
+    "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-13T00:00:00Z",
+    "content_path": "../docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf"
+  },
+  "fields": [
+    {
+      "field_name": "titulo",
+      "value": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+      "original_value": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-f12d2ffe1b",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 1,
+          "snippet": "PREFEITURA MUNICIPAL DE CABREÚVA\nCONCURSO PÚBLICO 01/2026\nPágina 1 de 48\nEDITAL DE ABERTURA DE INSCRIÇÕES PARA CONCURSO PÚBLICO\nPREFEITURA MUNICIPAL DE CABREÚVA/SP - CONCURSO PÚBLICO 01/2026\nA Prefeitura Municipal de Cabreúva , Estad",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "orgao",
+      "value": "Prefeitura Municipal De Cabreúva",
+      "original_value": "PREFEITURA MUNICIPAL DE CABREÚVA",
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-6e81d3b0bc",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 1,
+          "snippet": "PREFEITURA MUNICIPAL DE CABREÚVA\nCONCURSO PÚBLICO 01/2026\nPágina 1 de 48\nEDITAL DE ABERTURA DE INSCRIÇÕES PARA CONCURSO PÚBLICO\nPREFEITURA MUNICIPAL DE CABREÚVA/SP - CONCURSO PÚBLICO 01/2026\nA Prefeitura Municipal de Cabreúva , Estado de São Paulo, no ",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "inscricao_inicio",
+      "value": "2026-09-04",
+      "original_value": null,
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-c99c7bc6e6",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 48,
+          "snippet": "Período de Inscrições “on-line” - internet. 04/09 a 05/10/2026",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "inscricao_fim",
+      "value": "2026-10-05",
+      "original_value": "05/10/2026",
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-5ae7968814",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 48,
+          "snippet": "Período de Inscrições “on-line” - internet. 04/09 a 05/10/2026",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "prova_data",
+      "value": "2026-12-11",
+      "original_value": "11/12/2026",
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-0c356ef81a",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 48,
+          "snippet": "11/12/2026\nRealização da Prova Objetiva",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "edital_numero",
+      "value": "01/2026",
+      "original_value": null,
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-b86bcc6e5d",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 1,
+          "snippet": "CONCURSO PÚBLICO 01/2026",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "cargos",
+      "value": [
+        {
+          "nome": "Auxiliar de Serviços",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "2204.14",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Fundamental Completo",
+          "taxa_inscricao": "55.00"
+        },
+        {
+          "nome": "Motorista",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "2711.76",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Fundamental Completo",
+          "taxa_inscricao": "55.00"
+        },
+        {
+          "nome": "Operador de Máquinas",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "3473.20",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Fundamental Incompleto",
+          "taxa_inscricao": "55.00"
+        },
+        {
+          "nome": "Servente de Limpeza",
+          "vagas_imediatas": 0,
+          "cadastro_reserva": true,
+          "vagas_observadas": "CR",
+          "remuneracao": "2204.14",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Fundamental Completo",
+          "taxa_inscricao": "55.00"
+        },
+        {
+          "nome": "Agente de Fiscalização Ambiental",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "3473.20",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Médio + Técnico",
+          "taxa_inscricao": "74.00"
+        },
+        {
+          "nome": "Agente de Trânsito",
+          "vagas_imediatas": 0,
+          "cadastro_reserva": true,
+          "vagas_observadas": "CR",
+          "remuneracao": "2473.98",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Médio",
+          "taxa_inscricao": "74.00"
+        },
+        {
+          "nome": "Agente Fiscal de Obras",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "3473.20",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Médio + Técnico",
+          "taxa_inscricao": "74.00"
+        },
+        {
+          "nome": "Agrimensor",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "3713.64",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Técnico",
+          "taxa_inscricao": "74.00"
+        },
+        {
+          "nome": "Técnico em Edificações",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "3713.64",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Médio + Técnico",
+          "taxa_inscricao": "74.00"
+        },
+        {
+          "nome": "Arquiteto - A",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "11735.45",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Superior",
+          "taxa_inscricao": "92.00"
+        },
+        {
+          "nome": "Biólogo",
+          "vagas_imediatas": 1,
+          "cadastro_reserva": true,
+          "vagas_observadas": "1 + CR",
+          "remuneracao": "4889.21",
+          "moeda": "BRL",
+          "jornada": "30h",
+          "requisitos": "Superior",
+          "taxa_inscricao": "92.00"
+        },
+        {
+          "nome": "Engenheiro Civil - A",
+          "vagas_imediatas": 0,
+          "cadastro_reserva": true,
+          "vagas_observadas": "CR",
+          "remuneracao": "11735.45",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Superior",
+          "taxa_inscricao": "92.00"
+        },
+        {
+          "nome": "Professor de Educação Básica II - PEB II - Artes",
+          "vagas_imediatas": 0,
+          "cadastro_reserva": true,
+          "vagas_observadas": "CR",
+          "remuneracao": "4942.63",
+          "moeda": "BRL",
+          "jornada": "36h",
+          "requisitos": "Superior",
+          "taxa_inscricao": "92.00"
+        },
+        {
+          "nome": "Psicólogo - A",
+          "vagas_imediatas": 0,
+          "cadastro_reserva": true,
+          "vagas_observadas": "CR",
+          "remuneracao": "8202.12",
+          "moeda": "BRL",
+          "jornada": "40h",
+          "requisitos": "Superior",
+          "taxa_inscricao": "92.00"
+        }
+      ],
+      "original_value": null,
+      "units": null,
+      "evidence": [
+        {
+          "evidence_id": "ev-44ca62423c",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 1,
+          "snippet": "Auxiliar de Serviços 01 + CR R$ 2.204,14 40 h* Ensino Fundamental Básico I",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-637400a774",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 1,
+          "snippet": "Motorista 01 + CR R$ 2.711,76 40 h*",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-21b7959f27",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Operador de Máquinas 01 + CR R$ 3.473,20 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-1b2208333c",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Servente de Limpeza CR R$ 2.204,14 40 h Ensino Fundamental Básico I",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-5a269589f9",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Agente de Fiscalização",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-631e842231",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Agente de Trânsito CR R$ 2.473,98 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-000a053270",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Agente Fiscal de Obras 01 + CR R$ 3.473,20 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-67ee29bbbd",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Agrimensor 01 + CR R$ 3.713,64 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-a74679f2ea",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 2,
+          "snippet": "Técnico em Edificações 01 + CR R$ 3.713,64 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-2a911f3fe1",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 3,
+          "snippet": "Arquiteto – A 01 + CR R$ 11.735,45 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-55e9094905",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 3,
+          "snippet": "Biólogo 01 + CR R$ 4.889,21 30 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-5d37d67ffc",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 3,
+          "snippet": "Engenheiro Civil – A CR R$ 11.735,45 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-2bd1ad8ad3",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 3,
+          "snippet": "Professor de Educação Básica",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        },
+        {
+          "evidence_id": "ev-dde2be7fd7",
+          "artifact_id": "avancasp-open-edital-272-pdf-b0ba7e15",
+          "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+          "source_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+          "page_number": 3,
+          "snippet": "Psicólogo – A CR R$ 8.202,12 40 h",
+          "json_path": null,
+          "method": "deterministic-regex",
+          "method_version": "tenderproof-fields/1.21",
+          "validation": {
+            "ok": true,
+            "code": null,
+            "message": null
+          }
+        }
+      ]
+    }
+  ]
+}

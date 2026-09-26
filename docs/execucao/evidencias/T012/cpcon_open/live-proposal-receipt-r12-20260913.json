@@ -1,0 +1,16 @@
+{
+  "schema": "t012.cpcon.live-proposal-receipt-r12.v1",
+  "recorded_at": "2026-09-13T13:19:30.0746835-03:00",
+  "source_id": 35,
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "owner_user_id": 1,
+  "health_login_checkpoint": {"health": 200, "login": 200, "checkpoint_contests": 34, "catalogue_match": []},
+  "run": {"run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "owner_user_id": 1, "target_concurso_id": null, "validation_status": "valid", "fields": ["titulo", "orgao", "edital_numero", "cargos"], "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05", "artifact_byte_len": 498894, "document_review_pending": false},
+  "old_proposal": {"id": "tpp-4d947337190bc96d5bdf1d6b30f992ab", "state_before": "proposed", "state_after": "rejected", "rejected_by": 1, "rejected_at": "2026-09-13T16:18:32.726177Z", "reason": "superseded: invalid create allocation handoff; source_id was not a canonical concurso_id", "concurso_id": null, "approve_or_apply": false},
+  "old_replay": {"status": "rejected", "same_reason_preserved": true, "new_effect": false},
+  "new_proposal": {"id": "tpp-69bef8bb342812dbf19e216853063d2b", "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "state": "proposed", "proposal_hash": "494bf663092068e6d65f74dd24cc45f8dfa4c30ad6a134ea59ab13a59fed4b4b", "concurso_id": null, "source_id": 35, "approve_or_apply": false},
+  "counts_after": {"concursos": 34, "proposals": 99, "versions": 92, "outbox": 92, "notifications": 91},
+  "canonical_effects": {"new_concurso": false, "new_version": false, "new_outbox": false, "new_notification": false},
+  "result": "CPCON_R12_PROPOSAL_PENDING_REVIEW"
+}

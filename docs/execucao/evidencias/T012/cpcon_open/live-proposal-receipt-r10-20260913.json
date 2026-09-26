@@ -1,0 +1,18 @@
+{
+  "schema": "t012.cpcon_open.live-proposal-receipt-r10.v1",
+  "timestamp": "2026-09-13T15:17:27.0406747Z",
+  "source": "cpcon_open",
+  "source_id": 35,
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "preflight": {"health": 200, "login": 200, "checkpoint": 200, "catalog_match": false, "contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1, "old_proposal_get": 200, "old_proposal_id": "tpp-4d947337190bc96d5bdf1d6b30f992ab", "old_proposal_state": "proposed"},
+  "envelope": {"path": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r9.json", "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05", "artifact_byte_len": 498894, "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+  "dry_run": {"status": "validated", "returned_run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4", "expected_run_id_from_r10_review": "tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76", "run_id_equal": false, "writes": false},
+  "import": {"performed": false},
+  "old_proposal_rejection": {"performed": false, "reason": "stopped before mutation on run-id drift"},
+  "proposal": {"performed": false},
+  "after": {"contests": 34, "sources": 33, "canonical_cargos": 182, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1},
+  "gate": "BLOCKED_CPCON_RUN_ID_DRIFT",
+  "next_step": "Reconcile the R10 expected run identity with the exact envelope/importer output. Do not import, reject, or create a proposal until the owner/run handoff is corrected."
+}

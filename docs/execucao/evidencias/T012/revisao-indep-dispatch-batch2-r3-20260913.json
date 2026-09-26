@@ -1,0 +1,14 @@
+{
+  "schema": "t012.luna.dispatch-batch2-r3-review.v1",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "final limited gate: APTA contract/documentation and prior batch2 acceptance",
+  "apta": {
+    "docstring": "PASS: parser now explicitly states integration through the exact source/external route and the proven orgao+edital fallback.",
+    "receipt": "PASS: integration-batch-r3.json records exact route, SHA/bytes/pages/currentness, detail/document URL pins, fallback contract, 14-pass gate and no pilot mutation.",
+    "tests": "PASS: directed batch2 dispatch plus APTA revalidation run passed 9 selected tests (5 deselected); no side effects."
+  },
+  "prior_acceptance": "KLC/632, EPL/52, Publiconsult/681 and AvançaSP/272 remain accepted from R2; no new evidence reopens them.",
+  "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_t012_apta_strong_preflight.py -k 'dispatch_extracts or source_branch_rejects or apta_'",
+  "result": "9 passed, 5 deselected",
+  "constraints": "Read-only; no Docker, pilot, deploy or data mutation."
+}

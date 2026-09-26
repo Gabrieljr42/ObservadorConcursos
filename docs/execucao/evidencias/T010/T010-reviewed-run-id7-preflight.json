@@ -1,0 +1,13 @@
+{
+  "schema": "tenderproof.t010.reviewed-run-preflight.v1",
+  "record_id": 7,
+  "reviewed_run": "docs/execucao/evidencias/T010/T010-reviewed-run-id7.json",
+  "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+  "owner_user_id": 1,
+  "identity": {"source": "abcp_open", "concurso_id": 7, "external_id": "2868", "detail_url": "https://abcp.selecao.net.br/informacoes/2868/"},
+  "baseline_catalog": {"cargos": null, "source": "T010-rastreio-campos-pos-dispatch.json; API detail baseline preserved"},
+  "expected_material_diff": {"cargos": {"add": ["Técnico Legislativo"], "vagas": "1 AC + CR; no immediate PcD", "remuneracao": "3378.77 BRL/mês", "jornada": "35 horas semanais", "requisitos": "Ensino Médio completo", "beneficios": ["auxílio alimentação R$ 680,00", "vale-transporte"]}},
+  "provenance": {"artifact_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a", "pages": [1], "method": "abcp-garca-2868/1"},
+  "utf8_validation": {"u_fffd_count": 0, "evidence_literal_match": true, "units_match_parser": true},
+  "gate": "READY_FOR_INDEPENDENT_REVIEW_R2; no import/proposal/pilot"
+}

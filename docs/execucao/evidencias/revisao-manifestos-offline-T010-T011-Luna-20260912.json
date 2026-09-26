@@ -1,0 +1,18 @@
+{
+  "schema": "independent-review.offline-manifests.v1",
+  "reviewer": "Luna-independent",
+  "scope": ["T010-manifesto-propostas-offline.json", "T010-manifesto-propostas-offline-receipt.json", "T011/manifesto-propostas-offline.json"],
+  "checks": {
+    "endpoint": "POST /tenderproof/publications/proposals",
+    "proposal_in": "backend/app/tenderproof/publication_router.py:15-20; extra=forbid; run_id/concurso_id/source_id/authorization only",
+    "network_or_db_write": "none performed",
+    "idempotency": {"T010": "8 unique; deterministic-looking", "T011": "8 unique and deterministic from concurso_id/run_id/SHA prefix"},
+    "order": {"T010": [1,5,6,7,8,14,15,16], "T011": [17,18,20,21,22,23,24,25]},
+    "package_reference": "not explicit in either manifest; task requires reference to previously accepted packages"
+  },
+  "sublots": [
+    {"manifest": "T010", "sublots": ["t010-b01", "t010-b02", "t010-b03", "t010-b04"], "decision": "DEVOLVIDO", "correction": "Add explicit accepted-package ref and build an actual ProposalIn/http_payload containing run_id plus concurso_id (or documented source_id). Current records put checked data under payload and id under id; passing the record to ProposalIn violates extra=forbid and omits concurso_id."},
+    {"manifest": "T011", "sublots": ["T011-01", "T011-02", "T011-03", "T011-04", "T011-05", "T011-06", "T011-07", "T011-08"], "decision": "DEVOLVIDO", "correction": "HTTP payload shape is compatible with ProposalIn and keys/order pass, but add explicit reference to previously accepted pacotes-proposta-revisao.json before dispatch; retain checked/pending metadata outside HTTP payload."}
+  ],
+  "gate": "No dispatch, creation, approval, application, synchronization, network call, or database write performed."
+}

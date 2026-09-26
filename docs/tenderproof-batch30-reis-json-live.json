@@ -1,0 +1,229 @@
+{
+  "observed_at": "2026-09-08T13:07:32.949090+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-reis-json-live-20260908",
+  "cycles": [
+    {
+      "source": "reisesreis_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-2804ea9ff68f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "reisesreis_open-cycle1-listing-8a4e44924d.html",
+          "sha256": "bab481507ce92b5042574468086abdccb995012c7d9341677895dbb726846df8",
+          "bytes": 1223,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T13:07:35.647310+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-fae4ba454c07",
+          "candidate": {
+            "candidate_id": "reisesreis_open-70",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "detail_url_observed": "https://novo.reisauditores.com.br/editais/70",
+            "external_id": "70",
+            "observed_at": "2026-09-08T13:07:35.647310Z",
+            "source": "reisesreis_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.reisauditores.com.br/editais/70",
+              "file": "reisesreis_open-cycle1-detail-a12030fdee.html",
+              "sha256": "b4340a5c4152c64c9f97f759d058a833fce4885e6b7bf9e6568f6a0d77f71ac3",
+              "bytes": 44204,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:07:37.906410+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "reisesreis_open-doc-cc6119842d55ee0e",
+            "title": "EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: ANEXOS - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO DE CANCELAMENTO DE CONCURSO PÚBLICO - EDITAL 01/2024; 1ª RETIFICAÇÃO  - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO: ALTERAÇÃO DA DATA PARA EMISSÃO DO BOLETO BANCÁRIO; LISTAGEM DOS PEDIDOS DE ISENÇÃO DA TAXA DE INSCRIÇÃO DEFERIDOS E INDEFERIDOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-f45a33cbf6",
+            "sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+            "byte_len": 1697568,
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T13:07:39.352883Z",
+            "storage_path": "art-f45a33cbf6-9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5.pdf"
+          },
+          "total_pages": 24,
+          "processed_pages": 24,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=24/24",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 7.922
+    },
+    {
+      "source": "reisesreis_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-d178f7c8f7d6",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "reisesreis_open-cycle2-listing-8a4e44924d.html",
+          "sha256": "bab481507ce92b5042574468086abdccb995012c7d9341677895dbb726846df8",
+          "bytes": 1223,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T13:07:41.647470+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-7daa2dd53ec6",
+          "candidate": {
+            "candidate_id": "reisesreis_open-70",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "detail_url_observed": "https://novo.reisauditores.com.br/editais/70",
+            "external_id": "70",
+            "observed_at": "2026-09-08T13:07:41.648493Z",
+            "source": "reisesreis_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.reisauditores.com.br/editais/70",
+              "file": "reisesreis_open-cycle2-detail-2b3b1b7488.html",
+              "sha256": "bdfee7819b569bf42851d2d8aaae2e6424ebad49c934654a33a629731e4c988f",
+              "bytes": 44203,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:07:43.621319+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "reisesreis_open-doc-cc6119842d55ee0e",
+            "title": "EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: ANEXOS - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO DE CANCELAMENTO DE CONCURSO PÚBLICO - EDITAL 01/2024; 1ª RETIFICAÇÃO  - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO: ALTERAÇÃO DA DATA PARA EMISSÃO DO BOLETO BANCÁRIO; LISTAGEM DOS PEDIDOS DE ISENÇÃO DA TAXA DE INSCRIÇÃO DEFERIDOS E INDEFERIDOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-05ad1633a2",
+            "sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+            "byte_len": 1697568,
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T13:07:44.949300Z",
+            "storage_path": "art-05ad1633a2-9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5.pdf"
+          },
+          "total_pages": 24,
+          "processed_pages": 24,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=24/24",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.563
+    }
+  ]
+}

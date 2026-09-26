@@ -1,0 +1,26 @@
+{
+  "schema": "t012.shdias-dispatch-integration-r5.v1",
+  "status": "SHDIAS_DISPATCH_R5_READY_FOR_REVIEW",
+  "scope": "only source=shdias_open, external_id=MTEw/MzA4, process=00308",
+  "changes": [
+    "backend/app/tenderproof/fields.py routes this identity to shdias_hortolandia.parse",
+    "pinned parser revalidates SHA/byte length/44 pages/literals and provides fresh orgao+edital identity",
+    "parser evidence is retained verbatim from the native pinned replay; other source branches unchanged",
+    "canonical taxa scalar is routed as reviewed field and publication PUBLISHABLE/CAS now includes taxa"
+  ],
+  "revalidate": {
+    "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+    "artifact_bytes": 697485,
+    "fresh_identity": {"orgao": "Município de Hortolândia", "edital_numero": "001/2026"},
+    "eligible": ["titulo", "orgao", "edital_numero", "prova_data", "taxa", "cargos"],
+    "taxa": "63.25",
+    "publication_side_effects": {"proposal": 0, "version": 0, "outbox": 0, "notification": 0}
+  },
+  "fail_closed": ["source drift", "external_id drift", "SHA drift", "U+FFFD extraction"],
+  "tests": [
+    {"command": ".venv/Scripts/python.exe -m pytest -q tests/test_t012_shdias_dispatch_r5.py tests/test_tenderproof_publication.py -k 'shdias or access_birigui'", "result": "6 passed, 29 deselected"},
+    {"command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_shdias_hortolandia_r4.py backend/tests/test_t012_shdias_dispatch_r5.py", "result": "13 passed"},
+    {"command": ".venv/Scripts/python.exe -m compileall -q app/tenderproof/fields.py app/tenderproof/shdias_hortolandia.py tests/test_t012_shdias_dispatch_r5.py tests/test_shdias_hortolandia_r4.py", "result": "PASS"}
+  ],
+  "network_or_pilot": "not used"
+}

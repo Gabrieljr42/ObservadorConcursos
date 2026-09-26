@@ -1,0 +1,689 @@
+{
+  "observed_at": "2026-09-08T14:23:48.067500+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60ext",
+  "cycles": [
+    {
+      "source": "cpcon_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-8a0b5ea977fb",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://cpcon.uepb.edu.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://cpcon.uepb.edu.br",
+          "file": "cpcon_open-cycle1-listing-60e8634924.html",
+          "sha256": "9513b51594b4a14b8ffbda623342525328115c1f1a742f24173d8646b29bdb42",
+          "bytes": 523003,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:23:49.471827+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-4f2685fdc6f7",
+          "candidate": {
+            "candidate_id": "cpcon_open-uepb-002-2026",
+            "title_observed": "Concurso Público da Universidade Estadual da Paraíba 2026 – Edital 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+            "external_id": "uepb-002-2026",
+            "observed_at": "2026-09-08T14:23:50.469069Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+              "file": "cpcon_open-cycle1-detail-b57f521109.html",
+              "sha256": "8b634f0834cdc27950d4dffc8273b625638666b2548a989c7fc668aa8f1068dc",
+              "bytes": 84255,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:23:51.331862+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-53aaa8886b7e",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-002-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+            "external_id": "processo-seletivo-simplificado-no-002-2026",
+            "observed_at": "2026-09-08T14:23:50.469069Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "wrong_contest",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+              "file": "cpcon_open-cycle1-detail-2f074cac30.html",
+              "sha256": "4e8fc04c3d64421be7c73413fa679ed133832a8e6f7edd294aca3d51ff8ecfe4",
+              "bytes": 80762,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:23:52.236423+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-660a8f78e8d36dfc",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a830f50b1788877443",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a830f50b1788877443",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: RESULTADO FINAL; RESULTADO PÓS-RECURSOS DA PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA PRÁTICA; EDITAL DE CONVOCAÇÃO PARA A PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA OBJETIVA)."
+          },
+          "artifact": {
+            "artifact_id": "art-fbdfd30357",
+            "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+            "byte_len": 498894,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a830f50b1788877443",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a830f50b1788877443",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:52.644612Z",
+            "storage_path": "art-fbdfd30357-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "wrong_contest",
+            "errors": [
+              "documento cita outro concurso (cod ['11', '12', 'progep']), esperado cod=processo-seletivo-simplificado-no-002-2026"
+            ],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-796187b5c977",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-001-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+            "external_id": "processo-seletivo-simplificado-no-001-2026",
+            "observed_at": "2026-09-08T14:23:50.469069Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "wrong_contest",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+              "file": "cpcon_open-cycle1-detail-4c0db986b1.html",
+              "sha256": "5760dff0048c7c68921a500256beab84e5be3ff1c4385e6db559eb9a75a217f8",
+              "bytes": 85669,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:23:56.930078+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-704998dad4ac6b95",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a87b923a1788877447",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a87b923a1788877447",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026 UEPB' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: RESULTADO FINAL (RETIFICADO); RESULTADO FINAL; Concorrência Retificada (atualização da concorrência Auxiliar de Biblioteca Campus VII (Patos) considerando o quadro de vagas atualizado em 30 de junho de 2026); Edital Normativo Retificado (informa o horário das provas para as funções de Nível Médio); CONCORRÊNCIA)."
+          },
+          "artifact": {
+            "artifact_id": "art-e4d0482c33",
+            "sha256": "c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e",
+            "byte_len": 478028,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a87b923a1788877447",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a87b923a1788877447",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:57.340101Z",
+            "storage_path": "art-e4d0482c33-c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "wrong_contest",
+            "errors": [
+              "documento cita outro concurso (cod ['11', '12', 'progep']), esperado cod=processo-seletivo-simplificado-no-001-2026"
+            ],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.36
+    },
+    {
+      "source": "gualimp_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-2639dce20676",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gualimp.com.br/concursos/",
+          "file": "gualimp_open-cycle1-listing-d6c50441cf.html",
+          "sha256": "c025983ac87989737b354c75c31ed0c39408130852c12d7fa08fcc29276a78c4",
+          "bytes": 66213,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:24:01.719237+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-2f740b3327b2",
+          "candidate": {
+            "candidate_id": "gualimp_open-135",
+            "title_observed": "PREFEITURA MUNICIPAL DE PORCIÚNCULA/RJ- CONCURSO PÚBLICO Nº 002/2019",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135",
+            "external_id": "135",
+            "observed_at": "2026-09-08T14:24:01.884699Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-8cd792462ceb",
+          "candidate": {
+            "candidate_id": "gualimp_open-134",
+            "title_observed": "PREFEITURA MUNICIPAL DE ALFREDO CHAVES/ES - CONCURSO PÚBLICO Nº 001/2023",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=134",
+            "external_id": "134",
+            "observed_at": "2026-09-08T14:24:01.884699Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=134'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-d88c1a4823e2",
+          "candidate": {
+            "candidate_id": "gualimp_open-132",
+            "title_observed": "PREFEITURA MUNICIPAL DE MUQUI/ES - PROCESSO SELETIVO Nº 001/2023 PERíODO DE INSCRIçõES: 12 A 21/07/2023.",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=132",
+            "external_id": "132",
+            "observed_at": "2026-09-08T14:24:01.884699Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=132'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.64
+    },
+    {
+      "source": "cpcon_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-eb16fd0f7269",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://cpcon.uepb.edu.br/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://cpcon.uepb.edu.br",
+          "file": "cpcon_open-cycle2-listing-09111a5ab4.html",
+          "sha256": "e7d0eb89166e3aaf40b3dba8c0e1e60d163a4ea0474f0326bfd3ed4fc22894f1",
+          "bytes": 523003,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:24:04.232837+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-55a698a1b1f1",
+          "candidate": {
+            "candidate_id": "cpcon_open-uepb-002-2026",
+            "title_observed": "Concurso Público da Universidade Estadual da Paraíba 2026 – Edital 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+            "external_id": "uepb-002-2026",
+            "observed_at": "2026-09-08T14:24:05.095093Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/uepb-002-2026/",
+              "file": "cpcon_open-cycle2-detail-ea98613623.html",
+              "sha256": "ac2e67335c9e45642081b8cae9114aef1217742293c8a22e9f2eb8ec725433b2",
+              "bytes": 84255,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:24:05.918429+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c9527936ce58",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-002-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+            "external_id": "processo-seletivo-simplificado-no-002-2026",
+            "observed_at": "2026-09-08T14:24:05.095093Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "wrong_contest",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-002-2026/",
+              "file": "cpcon_open-cycle2-detail-3a528d9bfa.html",
+              "sha256": "058c8e06ecde95fadbc8899af4f95300f90c135de18a33ccd62c11587599bdb5",
+              "bytes": 80762,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:24:06.812132+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-660a8f78e8d36dfc",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a919c46b1788877457",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a919c46b1788877457",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026 UEPB' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: RESULTADO FINAL; RESULTADO PÓS-RECURSOS DA PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA PRÁTICA; EDITAL DE CONVOCAÇÃO PARA A PROVA PRÁTICA; RESULTADO PRELIMINAR DA PROVA OBJETIVA)."
+          },
+          "artifact": {
+            "artifact_id": "art-efd3e8ad83",
+            "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+            "byte_len": 498894,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a919c46b1788877457",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01a919c46b1788877457",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:24:07.208385Z",
+            "storage_path": "art-efd3e8ad83-6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "wrong_contest",
+            "errors": [
+              "documento cita outro concurso (cod ['11', '12', 'progep']), esperado cod=processo-seletivo-simplificado-no-002-2026"
+            ],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-6972dcb48f81",
+          "candidate": {
+            "candidate_id": "cpcon_open-processo-seletivo-simplificado-no-001-2026",
+            "title_observed": "PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026",
+            "detail_url_observed": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+            "external_id": "processo-seletivo-simplificado-no-001-2026",
+            "observed_at": "2026-09-08T14:24:05.095093Z",
+            "source": "cpcon_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "wrong_contest",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://cpcon.uepb.edu.br/processo-seletivo-simplificado-no-001-2026/",
+              "file": "cpcon_open-cycle2-detail-b6bcf76e98.html",
+              "sha256": "cabe2ca232cf3c85e9558b450f69a6f77a71e9875d8203d36f5c1826f084fd56",
+              "bytes": 85669,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T14:24:11.611751+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cpcon-doc-704998dad4ac6b95",
+            "title": "EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026 UEPB",
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a966afe41788877462",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a966afe41788877462",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL PROCESSO SELETIVO SIMPLIFICADO Nº 001/2026 UEPB' por conter 'edital' no título/URL; 23 documento(s) ignorado(s) (ex.: RESULTADO FINAL (RETIFICADO); RESULTADO FINAL; Concorrência Retificada (atualização da concorrência Auxiliar de Biblioteca Campus VII (Patos) considerando o quadro de vagas atualizado em 30 de junho de 2026); Edital Normativo Retificado (informa o horário das provas para as funções de Nível Médio); CONCORRÊNCIA)."
+          },
+          "artifact": {
+            "artifact_id": "art-ea24b77cdc",
+            "sha256": "c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e",
+            "byte_len": 478028,
+            "url_requested": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a966afe41788877462",
+            "url_final": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01a966afe41788877462",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:24:12.023481Z",
+            "storage_path": "art-ea24b77cdc-c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e.pdf"
+          },
+          "total_pages": 13,
+          "processed_pages": 13,
+          "validation": {
+            "status": "wrong_contest",
+            "errors": [
+              "documento cita outro concurso (cod ['11', '12', 'progep']), esperado cod=processo-seletivo-simplificado-no-001-2026"
+            ],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=13/13"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.391
+    },
+    {
+      "source": "gualimp_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-a5b3240c9864",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gualimp.com.br/concursos/",
+          "file": "gualimp_open-cycle2-listing-d6c50441cf.html",
+          "sha256": "c025983ac87989737b354c75c31ed0c39408130852c12d7fa08fcc29276a78c4",
+          "bytes": 66213,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T14:24:16.385642+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-9fd12429195d",
+          "candidate": {
+            "candidate_id": "gualimp_open-135",
+            "title_observed": "PREFEITURA MUNICIPAL DE PORCIÚNCULA/RJ- CONCURSO PÚBLICO Nº 002/2019",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135",
+            "external_id": "135",
+            "observed_at": "2026-09-08T14:24:16.582689Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-f6cec9f3fa46",
+          "candidate": {
+            "candidate_id": "gualimp_open-134",
+            "title_observed": "PREFEITURA MUNICIPAL DE ALFREDO CHAVES/ES - CONCURSO PÚBLICO Nº 001/2023",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=134",
+            "external_id": "134",
+            "observed_at": "2026-09-08T14:24:16.582689Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=134'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c53d0b4e23f5",
+          "candidate": {
+            "candidate_id": "gualimp_open-132",
+            "title_observed": "PREFEITURA MUNICIPAL DE MUQUI/ES - PROCESSO SELETIVO Nº 001/2023 PERíODO DE INSCRIçõES: 12 A 21/07/2023.",
+            "detail_url_observed": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=132",
+            "external_id": "132",
+            "observed_at": "2026-09-08T14:24:16.582689Z",
+            "source": "gualimp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=132'\nFor more information check: https://developer.m",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.328
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 16,
+    "all_clients_closed": true
+  }
+}

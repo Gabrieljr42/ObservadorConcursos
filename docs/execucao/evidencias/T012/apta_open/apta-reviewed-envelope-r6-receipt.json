@@ -1,0 +1,43 @@
+{
+  "schema": "t012.apta.reviewed-run-r6-receipt.v1",
+  "status": "READY_FOR_REVIEW",
+  "envelope": "apta-reviewed-envelope-r6.json",
+  "staging_package": "staging-package-r6.json",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "run_id": "tp-reviewed-8819b2699ed9842b37c374f774d7d085",
+  "fields": ["titulo", "orgao", "edital_numero"],
+  "artifact": {
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "storage_basename": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "checks": {
+    "schema": "PASS",
+    "dry_run": "validated",
+    "isolated_import": "imported",
+    "same_owner_replay": "idempotent",
+    "owner_distinct_id": "PASS",
+    "bad_path": "REJECTED",
+    "bad_sha": "REJECTED",
+    "pages": "20 extracted in order 1..20; metadata mismatch is rejected by staging gate",
+    "source_external": "R6 staging identity gate rejects alternate apta_open/708 values; importer itself remains intentionally generic",
+    "synthetic_id": "not used; concurso_id remains null"
+  },
+  "negative_tests": {
+    "null_content_path": "REJECTED",
+    "wrong_sha": "REJECTED",
+    "wrong_page_count": "REJECTED by staging metadata gate",
+    "wrong_source": "REJECTED by R6 staging identity gate",
+    "wrong_external_id": "REJECTED by R6 staging identity gate",
+    "synthetic_concurso_id": "not introduced"
+  },
+  "regression_note": "The directed combined suite had 11 passed and 1 existing APTA extraction failure: title/orgao/edital fields returned failed in test_t012_apta_open_selection.py; no R6 envelope/import failure.",
+  "network": false,
+  "live_mutation": false
+}

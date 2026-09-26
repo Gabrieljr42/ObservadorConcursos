@@ -1,0 +1,33 @@
+{
+  "schema": "t012.avancasp.backend-deploy-reconciliation-r6.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "NEEDS_BACKEND_DEPLOY",
+  "scope": "read-only offline reconciliation; no API/Docker/live/code/docs-central edits",
+  "identity": {"source":"avancasp_open","external_id":"272","detail_url":"https://avancasp.selecao.net.br/informacoes/272/"},
+  "new_pins": [
+    {"sha256":"c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637","byte_len":750381,"pages":48,"url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf"},
+    {"sha256":"49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd","byte_len":749582,"pages":49,"url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf"}
+  ],
+  "code_reconciliation": {
+    "module": "backend/app/tenderproof/avancasp_t012.py",
+    "pin_map": "PASS: ARTIFACT_PINS contains both exact SHA/byte_len/pages/URL tuples",
+    "dispatcher": "PASS: backend/app/tenderproof/fields.py exact source/external branch imports avancasp_t012 and calls extract_fields",
+    "guards": "PASS: source/external/detail URL, SHA/bytes/URL, page order/count, empty/error/truncated/U+FFFD and identity markers are fail-closed",
+    "legacy": "Old aa3e/b0ba/742298 pin remains separate for legacy runs and does not authorize either new R2 PDF",
+    "local_status": "READY_FOR_PREPARE after deployment"
+  },
+  "image_reconciliation": {
+    "image": "sha256:3b9808ea1e75cd15704e14db526faf00a3ff085fbf7de4fdccc7759cbe6bffbe",
+    "receipt": "docs/execucao/evidencias/T012/backend-deploy-proposal-reject-r1-20260913.json",
+    "receipt_proves": "API/worker/scheduler rebuild/recreate, health/login smoke, migration and counts",
+    "parser_provenance": "UNPROVEN: receipt contains no source-tree commit, module digest, or runtime check for the Avança pin map",
+    "live_current_contains_new_pins": "NOT_ESTABLISHED",
+    "safe_conclusion": "Do not run operational prepare until a backend deploy receipt binds this image (or a newer image) to the current avancasp_t012.py pin map."
+  },
+  "offline_tests": [
+    {"command":"$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_avancasp_r4_dispatch.py","result":"11 passed"},
+    {"command":"$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py","result":"3 passed"},
+    {"command":"backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/avancasp_t012.py backend/app/tenderproof/fields.py backend/tests/test_avancasp_r4_dispatch.py","result":"PASS"}
+  ],
+  "required_next_receipt": "Record image digest plus exact source/module pin-map provenance and runtime/offline equivalent test result; then classify READY_FOR_PREPARE."
+}

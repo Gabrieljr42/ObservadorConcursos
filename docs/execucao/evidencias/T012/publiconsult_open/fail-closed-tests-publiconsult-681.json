@@ -1,0 +1,17 @@
+{
+  "schema": "t012.fail-closed-tests.v1",
+  "source": "publiconsult_open",
+  "adapter": "PubliconsultAdapter",
+  "run_scope": "fixture-only replay; no network/API/Docker/pilot",
+  "tests": [
+    {"name": "official_identity_and_document_labels", "result": "passed", "assertions": ["listing has 13 candidates", "candidate external_id=681", "detail identity corroborated", "15 documents observed", "exactly one principal edital chosen"]},
+    {"name": "capture_hashes_and_no_lossy_decoding", "result": "passed", "assertions": ["fixture hashes match manifest", "no U+FFFD", "signed query values are redacted"]},
+    {"name": "blank_listing_not_legitimate_empty", "result": "passed", "assertion": "synthetic blank/challenge does not become empty evidence"},
+    {"name": "cross_contest_and_wrong_title_rejected", "result": "passed", "assertions": ["wrong external_id rejected", "wrong title rejected", "foreign document contest 682 rejected", "off-host/private/query-mutated document rejected"]},
+    {"name": "ambiguous_or_nonprincipal_document_rejected", "result": "passed", "assertions": ["no-edital selection rejected", "duplicate principal selection rejected"]},
+    {"name": "hidden_tabs_require_observed_initialization", "result": "passed", "assertion": "listing without observed tabs initialization yields no candidates and no empty claim"}
+  ],
+  "summary": {"passed": 6, "failed": 0, "fail_closed": true, "pytest_command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_batch30_institutional.py", "pytest_result": "6 passed in 1.05s"},
+  "post_normalization_validation": {"result": "partial_pass", "checks": ["JSON parse passed", "all 7 ReviewedField models validated", "external_id=681 and evidence are lists", "observed_at matches preserved run"], "expected_gate": "ReviewedRun.model_validate remains blocked solely by concurso_id=null; integrator must allocate the local ID through the normal route before model_validate/dry-run"},
+  "proposal_guard": ["no approval", "no application", "no synchronization", "no database/service mutation"]
+}

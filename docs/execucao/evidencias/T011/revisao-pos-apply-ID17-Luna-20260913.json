@@ -1,0 +1,67 @@
+{
+  "schema": "t011.independent-post-apply-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "target": "T011/ID17",
+  "decision": "ACEITO",
+  "read_only": true,
+  "mutations": [],
+  "evidence": [
+    "docs/execucao/evidencias/T011/gate-ID17-pos-apply-idempotencia-20260913.json",
+    "GET http://127.0.0.1:18000/concursos?limit=200",
+    "GET http://127.0.0.1:18000/concursos/17/versions?limit=10"
+  ],
+  "proposal": {
+    "id": "tpp-83d38414eccb6f38e1b1c3d7ab31b291",
+    "hash": "ffa5910d25c23192835d6d3c6f4956f388c2e60078a813958bcce59b146b157a",
+    "state": "applied",
+    "approved_fields": ["cargos"],
+    "version_id": 85,
+    "diff_fields": ["cargos"],
+    "old_cargos": null,
+    "owner_user_id": 1,
+    "target_concurso_id": 17,
+    "source_id": 34
+  },
+  "current_api_get": {
+    "health_http": 200,
+    "contest_list_http": 200,
+    "contest_id": 17,
+    "cargo_count": 27,
+    "vagas_total": 79,
+    "ac": 74,
+    "pcd": 5,
+    "cadastro_reserva_nonnull": 0,
+    "empty_requirements": 0,
+    "replacement_characters": 0,
+    "requirements_clean": true,
+    "remuneration_units": "BRL; unidade temporal não especificada",
+    "jornada": "40h",
+    "reference_only_provenance": true,
+    "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f"
+  },
+  "version_outbox_notification": {
+    "version_id": 85,
+    "version_changed_fields": ["cargos"],
+    "version_old_cargos": null,
+    "outbox_id": 85,
+    "outbox_state": "delivered",
+    "outbox_attempts": 1,
+    "notification_id": 84,
+    "notification_type": "version_update_85"
+  },
+  "counts": {
+    "proposals": 87,
+    "versions": 85,
+    "outbox": 85,
+    "notifications": 84,
+    "global_cargo_count_current_api": 152,
+    "global_cargo_reconciliation": "baseline real pré-ID17=125; 125+27=152; stale historical 124 is rejected"
+  },
+  "replays": {
+    "same_proposal_apply": "version 85, no new version/outbox/notification",
+    "same_run_reimport": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc status=idempotent",
+    "legacy": "tpp-02c29e4baa1b036eab1d02de59a65c74 remains no_change"
+  },
+  "release": "ACEITO; liberar validação UI. Não repetir approve/apply fora do replay idempotente já comprovado."
+}

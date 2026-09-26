@@ -1,0 +1,13 @@
+{
+  "gate": "T012-UFU-DISPATCH-R1",
+  "result": "PASS",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "pins": {"sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "byte_len": 26619, "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843"},
+  "dispatch": "fields.py invokes the pinned UTF-8 HTML parser and publishes identity/timeline only",
+  "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data"],
+  "reference_only": ["taxa", "cargos", "remuneracao", "linked_documents"],
+  "tests": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py; compileall backend/app/tenderproof backend/tests",
+  "observed": "6 passed; compileall PASS; proposal/version/outbox remain zero"
+}

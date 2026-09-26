@@ -1,0 +1,57 @@
+{
+  "scope": "Actual preserved original PDFs and exact observed request URLs; PDF validation issue unrelated to transport hash is recorded separately",
+  "rows": [
+    {
+      "cycle": 1,
+      "candidate_id": "processo-seletivo-simplificado-no-002-2026",
+      "wpdmdl": [
+        "9836"
+      ],
+      "refresh": [
+        "6aa01ae49c5291788877540"
+      ],
+      "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+      "durable_hash_verified": true,
+      "url": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01ae49c5291788877540"
+    },
+    {
+      "cycle": 1,
+      "candidate_id": "processo-seletivo-simplificado-no-001-2026",
+      "wpdmdl": [
+        "9830"
+      ],
+      "refresh": [
+        "6aa01ae908b191788877545"
+      ],
+      "sha256": "c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e",
+      "durable_hash_verified": true,
+      "url": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01ae908b191788877545"
+    },
+    {
+      "cycle": 2,
+      "candidate_id": "processo-seletivo-simplificado-no-002-2026",
+      "wpdmdl": [
+        "9836"
+      ],
+      "refresh": [
+        "6aa01af25d4b21788877554"
+      ],
+      "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+      "durable_hash_verified": true,
+      "url": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-002-2026-uepb/?wpdmdl=9836&refresh=6aa01af25d4b21788877554"
+    },
+    {
+      "cycle": 2,
+      "candidate_id": "processo-seletivo-simplificado-no-001-2026",
+      "wpdmdl": [
+        "9830"
+      ],
+      "refresh": [
+        "6aa01af704f061788877559"
+      ],
+      "sha256": "c1438f6d5ce0835db0458d9493db60e7612c2aaf579bc8323a06df75f9a8c76e",
+      "durable_hash_verified": true,
+      "url": "https://cpcon.uepb.edu.br/download/edital-processo-seletivo-simplificado-no-001-2026-uepb/?wpdmdl=9830&refresh=6aa01af704f061788877559"
+    }
+  ]
+}

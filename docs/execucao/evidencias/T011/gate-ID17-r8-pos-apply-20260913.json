@@ -1,0 +1,37 @@
+{
+  "schema": "observador.t011.id17.pos_apply.v1",
+  "recorded_at": "2026-09-13T00:48:38.3975634-03:00",
+  "scope": "ID17 only; ID8 and T005 untouched",
+  "proposal": {
+    "id": "tpp-c52d279519f1596ed57ab9a1976775b8",
+    "run_id": "tp-reviewed-b64ff5228138c8157f8c5e4960046c79",
+    "proposal_hash": "17748a23820576e34905312c9df3aefd2a3414f54fbf2a75af234e1884c006d2",
+    "contest_id": 17,
+    "cas_before": {"state": "proposed", "baseline_version": 85, "baseline_cargos_present": true},
+    "approved_fields": ["cargos"],
+    "final_state": "applied",
+    "version_id": 86
+  },
+  "apply": {
+    "first": {"http": 200, "version_id": 86, "idempotent_replay": false},
+    "replay": {"http": 200, "same_proposal": true, "same_version_id": 86, "new_version": false, "new_outbox": false, "new_notification": false}
+  },
+  "counts": {
+    "before": {"proposals": 90, "versions": 85, "outbox": 85, "notifications": 84},
+    "after": {"proposals": 90, "versions": 86, "outbox": 86, "notifications": 85}
+  },
+  "receipts": {
+    "outbox": {"id": 86, "version_id": 86, "proposal_id": "tpp-c52d279519f1596ed57ab9a1976775b8", "state": "delivered", "attempts": 1},
+    "notification": {"id": 85, "concurso_id": 17, "notification_type": "version_update_86"}
+  },
+  "contest17_api": {
+    "cargo_count": 27,
+    "vagas_imediatas": 79,
+    "vagas_ampla_concorrencia": 74,
+    "vagas_pcd": 5,
+    "cadastro_reserva_nonnull": 0,
+    "corrupted_requirement_tokens": [],
+    "health": 200
+  },
+  "gate": "PASS; aguardando validação UI/revisão final"
+}

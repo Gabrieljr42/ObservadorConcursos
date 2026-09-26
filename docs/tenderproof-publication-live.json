@@ -1,0 +1,1237 @@
+{
+  "generated_at": "2026-09-07T23:49:23.269740+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\pilot-live-20260907\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tpr-c7bea44ba4a4",
+      "source": "access_open",
+      "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Birigui/SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Birigui-Sp",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "179/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 1,
+      "proposal_id": "tpp-1c083ec7fff06bac4884ca249ccfea23",
+      "version_id": 1,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Prefeitura Municipal de Birigui/SP"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Birigui-Sp"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "179/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-e1cfc6e6bea5",
+      "source": "abcp_open",
+      "document_sha256": "f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2026 - PREFEITURA MUNICIPAL DE CONCHAL - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Conchal",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1773.40"
+            ],
+            "escopo": "ipo de provas são os estabelecidos na tabela que segue: CÓD CARGOS VAGAS REQUISITOS JORNADA SEMANAL REMUNERAÇÃO TIPOS DE PROVAS AP PcD TOTAL NÍVE",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-a404a9332afc",
+      "source": "abcp_open",
+      "document_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Garça",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 2,
+      "proposal_id": "tpp-c6968cb192e39a040eec4eb2df139f76",
+      "version_id": 2,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Garça"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "001/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-448646d850c9",
+      "source": "abcp_open",
+      "document_sha256": "ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Ibiúna",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "002/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1638.45"
+            ],
+            "escopo": "pos de provas são os estabelecidos na tabela que segue: CÓD EMPREGOS VAGAS REQUISITOS JORNADA REMUNERAÇÃO TIPOS DE PROVAS AP PcD TOTAL NÍVEL FUNDAM",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 3,
+      "proposal_id": "tpp-787ddd2f21d4450973aa6bc8eb96ef2f",
+      "version_id": 3,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Município De Ibiúna"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "002/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-f11951bf65d7",
+      "source": "avancasp_open",
+      "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Cabreúva",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-4ad8997bee09",
+      "source": "fenix_open",
+      "document_sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Pedrinhas Paulista",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 4,
+      "proposal_id": "tpp-a9d9250d12dfe1ecad215e7d4538d2f3",
+      "version_id": 4,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Pedrinhas Paulista"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-7c02a5dee628",
+      "source": "fenix_open",
+      "document_sha256": "8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9",
+      "fields": {
+        "titulo": {
+          "value": "CÂMARA MUNICIPAL DE MONÇÕES",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Monções",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 5,
+      "proposal_id": "tpp-e00d2471c28febd0bcd5bd6a991358ef",
+      "version_id": 5,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "CÂMARA MUNICIPAL DE MONÇÕES"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Monções"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-ccc7e3b187b5",
+      "source": "fenix_open",
+      "document_sha256": "e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE GLICÉRIO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Glicério",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 6,
+      "proposal_id": "tpp-3419c8642d1557aceb40907bfbed01f7",
+      "version_id": 6,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "PREFEITURA MUNICIPAL DE GLICÉRIO"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Glicério"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-57c6ce88ec81",
+      "source": "legalle_open",
+      "document_sha256": "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+      "fields": {
+        "titulo": {
+          "value": "Município de Relvado",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Relvado Concurso Público",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3397.47",
+              "8297.67"
+            ],
+            "escopo": "ÚBLICO • 01/2026 www.legalleconcursos.com.br Página 3 de 32 Cargos Vaga(s) Carga horária Vencimento básico Formação exigida AC PcD Auxiliar Admin",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-04ca91b17c2d",
+      "source": "legalle_open",
+      "document_sha256": "62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4",
+      "fields": {
+        "titulo": {
+          "value": "Município de Francisco Alves",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Francisco Alves Concurso Público",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "4134.40"
+            ],
+            "escopo": "01/2026 www.legalleconcursos.com.br Página 3 de 30 Tabela 1 Cargos, vagas, carga horária, vencimento básico e formação exigida Cargos Vaga(s) Car",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-261952347382",
+      "source": "fgv_open",
+      "document_sha256": "34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público para o Tribunal de Justiça do Estado do Rio Grande do Sul - Juiz Substituto",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "0031/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "30505.36"
+            ],
+            "escopo": "ão deste Edital. 3. DOS REQUISITOS BÁSICOS À INVESTIDURA DO CARGO 3.1 São requisitos para ingresso no cargo de Juiz de Direito Substituto: a) ser",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tpr-c58565d38bcf",
+      "source": "access_open",
+      "document_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Birigui/SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Birigui-Sp",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "179/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 1,
+      "proposal_id": "tpp-4613e181905d5bfc7efcd3c403187a31",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-ef6802476bfa",
+      "source": "abcp_open",
+      "document_sha256": "f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2026 - PREFEITURA MUNICIPAL DE CONCHAL - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Conchal",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1773.40"
+            ],
+            "escopo": "ipo de provas são os estabelecidos na tabela que segue: CÓD CARGOS VAGAS REQUISITOS JORNADA SEMANAL REMUNERAÇÃO TIPOS DE PROVAS AP PcD TOTAL NÍVE",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-3d2b7d37074b",
+      "source": "abcp_open",
+      "document_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Garça",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 2,
+      "proposal_id": "tpp-8de726b8d68d820803d09140a86c345d",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-f4203357896b",
+      "source": "abcp_open",
+      "document_sha256": "ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De Ibiúna",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "002/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1638.45"
+            ],
+            "escopo": "pos de provas são os estabelecidos na tabela que segue: CÓD EMPREGOS VAGAS REQUISITOS JORNADA REMUNERAÇÃO TIPOS DE PROVAS AP PcD TOTAL NÍVEL FUNDAM",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 3,
+      "proposal_id": "tpp-5def8a535ec1c090b47f73be538823cd",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-fb7de49df241",
+      "source": "avancasp_open",
+      "document_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Cabreúva",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-5856e7627762",
+      "source": "fenix_open",
+      "document_sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Pedrinhas Paulista",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 4,
+      "proposal_id": "tpp-9a98073839d20c77cce7e8f304b2075b",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-e0b274669845",
+      "source": "fenix_open",
+      "document_sha256": "8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9",
+      "fields": {
+        "titulo": {
+          "value": "CÂMARA MUNICIPAL DE MONÇÕES",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Monções",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 5,
+      "proposal_id": "tpp-0eae176e38518de6a4a512ab9b6f9e26",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-6e41bb90878a",
+      "source": "fenix_open",
+      "document_sha256": "e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE GLICÉRIO",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Glicério",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 6,
+      "proposal_id": "tpp-615421ff86638956b53f65f686854cb1",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tpr-86048cfe6f00",
+      "source": "legalle_open",
+      "document_sha256": "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+      "fields": {
+        "titulo": {
+          "value": "Município de Relvado",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Relvado Concurso Público",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3397.47",
+              "8297.67"
+            ],
+            "escopo": "ÚBLICO • 01/2026 www.legalleconcursos.com.br Página 3 de 32 Cargos Vaga(s) Carga horária Vencimento básico Formação exigida AC PcD Auxiliar Admin",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-240eac118702",
+      "source": "legalle_open",
+      "document_sha256": "62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4",
+      "fields": {
+        "titulo": {
+          "value": "Município de Francisco Alves",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Francisco Alves Concurso Público",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "4134.40"
+            ],
+            "escopo": "01/2026 www.legalleconcursos.com.br Página 3 de 30 Tabela 1 Cargos, vagas, carga horária, vencimento básico e formação exigida Cargos Vaga(s) Car",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-55bd867485a2",
+      "source": "fgv_open",
+      "document_sha256": "34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público para o Tribunal de Justiça do Estado do Rio Grande do Sul - Juiz Substituto",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "0031/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "30505.36"
+            ],
+            "escopo": "ão deste Edital. 3. DOS REQUISITOS BÁSICOS À INVESTIDURA DO CARGO 3.1 São requisitos para ingresso no cargo de Juiz de Direito Substituto: a) ser",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tpr-432e90ce4b9a",
+      "source": "ibade_open",
+      "document_sha256": "e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c",
+      "fields": {
+        "titulo": {
+          "value": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-e3e8d250b37c",
+      "source": "ibade_open",
+      "document_sha256": "e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c",
+      "fields": {
+        "titulo": {
+          "value": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tpr-831aba3f31cc",
+      "source": "funcern_selection",
+      "document_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público Lagoa de Pedras/RN",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Lagoa De Pedras",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "1621.00",
+              "1800.00",
+              "2000.00",
+              "2500.00",
+              "4500.00"
+            ],
+            "escopo": "DOS CARGOS, COM FULCRO NA RESPECTIVA LEGISLAÇÃO MUNICIPAL. Cargo 1: AUXILIAR ADMINISTRATI",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: processamento documental falhou ou excedeu limites"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "counts": {
+    "concursos": 6,
+    "versions": 6,
+    "outbox": 6,
+    "notifications": 0
+  },
+  "states": {
+    "applied": 6,
+    "blocked": 13,
+    "no_change": 6
+  },
+  "sources_with_creation": [
+    "abcp_open",
+    "access_open",
+    "fenix_open"
+  ],
+  "temporary_database_removed": true
+}

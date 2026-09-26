@@ -1,0 +1,21 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fapeg_selection",
+      "url": "https://selecao.go.gov.br/assets/externo/js/js-file-downloader.min.js",
+      "basis": "literal source script in detail",
+      "observed_at": "2026-09-08T15:06:59.035732+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 16569,
+      "sha256": "c11d0cdcaf68934da92697a7ddbf93152806ef902521d809227e374808a225a0",
+      "file": "fapeg_selection-467ad92a-c11d0cdcaf.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

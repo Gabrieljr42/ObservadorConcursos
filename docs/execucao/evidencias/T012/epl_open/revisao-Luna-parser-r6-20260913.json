@@ -1,0 +1,19 @@
+{
+  "schema": "t012.epl_open.luna-parser-r6-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "EPL_PARSER_R6_ACCEPT_FOR_INTEGRATION",
+  "scope": "read-only parser/contract review; wiring remains separate",
+  "checks": {
+    "artifact_contract": "PASS: source epl_open, external_id 52, SHA b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f, 784614 bytes, exact requested/final official URLs and 43 pages.",
+    "page_guards": "PASS: _text requires 43 non-empty pages, each 43-page footer marker and no U+FFFD; extract_identity additionally requires PageText artifact_id, ordered page_number, error/truncated clear, text completeness and markers.",
+    "typed_contract": "PASS: extract_identity returns typed ExtractedField with failed state on drift or supported orgao/edital fields with artifact/SHA/URL/page/verbatim evidence; validation_result is VALID/UNREADABLE.",
+    "identity": "PASS: exact FHSTE and edital 01/2023 literals are required; source/external/detail/document substitutions fail closed.",
+    "revalidate_safety": "PASS: isolated _revalidate consumed the typed dispatch and produced no proposal/version/outbox/notification side effects; canonical target remains unallocated."
+  },
+  "tests": {
+    "parser_contract": "15 passed (14 non-DB contract tests in 28.90s plus shared revalidate test 1 passed in 10.50s; 16 warnings).",
+    "adapter_regression": "16 passed in 8.07s: backend/tests/test_tenderproof_batch60_recovered.py",
+    "compileall": "PASS: epl_parser_r3.py"
+  },
+  "integration_boundary": "Accepted as parser ready for a future EPL-specific adapter/fields wiring. Do not interpret as production dispatch registration, canonical allocation, proposal approval or apply."
+}

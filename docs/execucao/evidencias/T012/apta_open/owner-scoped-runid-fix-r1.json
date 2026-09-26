@@ -1,0 +1,15 @@
+{
+  "schema": "t012.owner-scoped-runid-fix.v1",
+  "result": "READY_FOR_REVIEW",
+  "change": "reviewed_run_import._run_id now includes owner_user_id in semantic identity",
+  "compatibility": "existing persisted runs remain readable by stored run_id; new imports never take over an old owner-scoped record",
+  "invariants": ["same semantic envelope + same owner is idempotent", "same content + different owners derives distinct run_ids", "artifact_id/SHA conflict remains strong", "owner-bound GET remains 404 for divergent owner"],
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_publication.py::test_real_jwt_authorization_and_owner_isolation",
+    "result": "6 passed",
+    "compileall": "PASS"
+  },
+  "known_fixture_skips": "older T010/T011 parser tests were not runnable in this checkout because referenced preserved PDFs are absent; no code failure inferred",
+  "live": false,
+  "migration": "none"
+}

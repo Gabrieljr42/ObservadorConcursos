@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-13T07:15:06-03:00",
+  "operation": "copy_from_canonical_tenderproof_volume",
+  "network_used": false,
+  "mutated_canonical_volume": false,
+  "artifacts": [
+    {"id":"garibaldi-33-base","file":"garibaldi/garibaldi-base-art-62154e5e60.pdf","sha256":"344f65e6c8256872a637ae1ba2ce0af8c0e25fae3b1b672a7cfc76db2f240129","bytes":453306,"match":true},
+    {"id":"garibaldi-33-classificacao","file":"garibaldi/garibaldi-retificacao-classificacao.pdf","sha256":"d7d2967a1612ccc5abcb3fad52022bf140017486ca0f555bfb535ea2a6aacab6","bytes":1745112,"match":true},
+    {"id":"garibaldi-33-cronograma","file":"garibaldi/garibaldi-retificacao-cronograma.pdf","sha256":"ab68844c2bbed8a92a1652228903ee6f0b581faac54d4d3ab5a7a147ad0d85ec","bytes":149618,"match":true},
+    {"id":"garibaldi-33-retificacao","file":"garibaldi/garibaldi-retificacao.pdf","sha256":"f98866f076889f4dd32a049603ea4098120d193dbfd76f4c81f367f60ec3b3cc","bytes":201681,"match":true},
+    {"id":"T011-18","file":"../T011/artifacts-20260913/T011-ID18-art-d12f25c6ad.pdf","sha256":"5f245894ba03dca5352a79fc991880b95e3fcf907fa38a1218ed2c4a373f0ab3","bytes":747601,"match":true},
+    {"id":"T011-20","file":"../T011/artifacts-20260913/T011-ID20-art-674e6a26bb.pdf","sha256":"774a05bbd92b0505628a8c18f1d272b4297118b4dc1c63ecd4c8c334fe8ed7ce","bytes":599893,"match":true},
+    {"id":"T011-22","file":"../T011/artifacts-20260913/T011-ID22-art-973e5a960d.pdf","sha256":"8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca","bytes":786327,"match":true},
+    {"id":"T011-23","file":"../T011/artifacts-20260913/T011-ID23-art-4a3913b548.pdf","sha256":"6086daa5015ef0052e2cc3b35b81e5de7344d19312726f9594c9e44e4e98681a","bytes":1042315,"match":true},
+    {"id":"T011-24","file":"../T011/artifacts-20260913/T011-ID24-art-378e5c9cd5.pdf","sha256":"c9e43c7a9e5ed7b13bde0310a4c5dfc935febc3ce992024029ef72db9aced5c3","bytes":1239004,"match":true},
+    {"id":"T011-25","file":"../T011/artifacts-20260913/T011-ID25-art-42a610198e.pdf","sha256":"d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221","bytes":1274606,"match":true}
+  ],
+  "blockers": []
+}

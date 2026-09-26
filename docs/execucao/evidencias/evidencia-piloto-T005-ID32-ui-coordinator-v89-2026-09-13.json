@@ -1,0 +1,37 @@
+{
+  "evidence_id": "T005-ID32-ui-coordinator-v89-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/32",
+  "build_context": "pós-versão 89",
+  "reload_observed": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "observed": {
+    "acs_microarea_cards": 7,
+    "per_card": {
+      "ampla_concorrencia": 1,
+      "pcd": "omitido; 0",
+      "cadastro_reserva": "ainda não confirmado",
+      "remuneracao": "R$ 3.242/mês",
+      "jornada": "40h",
+      "requisitos": "presentes",
+      "taxa": "R$ 162,10"
+    },
+    "prova_data": "18/10/2026",
+    "history": "cargos atualizado",
+    "values_persisted_after_reload": true
+  },
+  "stage_rectification": {
+    "previous": "Objetiva ... e TAF",
+    "current": "Objetiva ... e Títulos",
+    "taf_current": false
+  },
+  "limits": [
+    "Não alegar TAF como etapa vigente.",
+    "Evidência atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado e nenhum piloto foi operado nesta revisão."
+  ]
+}

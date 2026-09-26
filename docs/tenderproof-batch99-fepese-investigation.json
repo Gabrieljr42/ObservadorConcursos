@@ -1,0 +1,223 @@
+{
+  "source": "fepese_open",
+  "adapter_implemented": true,
+  "source_homologated": false,
+  "scope": "Only three inspected official contest subdomains; no invented download URL or retification promotion",
+  "observed_listing_hosts": [
+    "2026cpadmitajai.fepese.org.br",
+    "2026cpbrusque.fepese.org.br",
+    "2026cpcelesc.fepese.org.br",
+    "2026cpcisgranfpolis.fepese.org.br",
+    "2026cpcunhapora.fepese.org.br",
+    "2026cpjuritajai.fepese.org.br",
+    "2026cpsapesc.fepese.org.br",
+    "2026gmitajai.fepese.org.br",
+    "2026pschapecoprof.fepese.org.br",
+    "2026psconcordiasaude.fepese.org.br",
+    "2026pscunhapora.fepese.org.br",
+    "2026pseducasj.fepese.org.br",
+    "2026seletivocomcap.fepese.org.br"
+  ],
+  "inspected_hosts": [
+    "2026pseducasj.fepese.org.br",
+    "2026seletivocomcap.fepese.org.br",
+    "2026cpcelesc.fepese.org.br"
+  ],
+  "listing_coverage": "partial, other hosts not covered by this contract",
+  "candidates": [
+    {
+      "candidate": {
+        "candidate_id": "fepese_open-2026pseducasj",
+        "title_observed": "2026 - Prefeitura Municipal de São José",
+        "detail_url_observed": "https://2026pseducasj.fepese.org.br",
+        "external_id": "2026pseducasj",
+        "observed_at": "2026-09-08T15:35:48.522332Z",
+        "source": "fepese_open"
+      },
+      "resource_url": "https://2026pseducasj.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "documents": [
+        {
+          "doc_id": "fepese_open-eb40518e38be83e2",
+          "title": "Termo de Retificação nº 1",
+          "url_requested": "https://2026pseducasj.fepese.org.br?go=download&arquivo=TR01_2026_001_PS_Sao_Jose_Educa.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        },
+        {
+          "doc_id": "fepese_open-cd5af7bb87c9afc8",
+          "title": "Edital 005/2026",
+          "url_requested": "https://2026pseducasj.fepese.org.br?go=download&arquivo=2026_001_PS_Sao_Jose_Educa_TR01.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        }
+      ],
+      "original_selection_blocked": true
+    },
+    {
+      "candidate": {
+        "candidate_id": "fepese_open-2026seletivocomcap",
+        "title_observed": "2026 - Prefeitura Municipal de Florianópolis - Autarquia de Melhoramentos da Capital (COMCAP)",
+        "detail_url_observed": "https://2026seletivocomcap.fepese.org.br",
+        "external_id": "2026seletivocomcap",
+        "observed_at": "2026-09-08T15:35:48.523338Z",
+        "source": "fepese_open"
+      },
+      "resource_url": "https://2026seletivocomcap.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "documents": [
+        {
+          "doc_id": "fepese_open-e72dbf12fceaaed4",
+          "title": "Termo de Retificação nº 1",
+          "url_requested": "https://2026seletivocomcap.fepese.org.br?go=download&arquivo=TR01_2026_001_PS_COMCAP.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        },
+        {
+          "doc_id": "fepese_open-f801511dfd909a30",
+          "title": "Edital 001/2026",
+          "url_requested": "https://2026seletivocomcap.fepese.org.br?go=download&arquivo=2026_001_PS_COMCAP_TR01.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        }
+      ],
+      "original_selection_blocked": true
+    },
+    {
+      "candidate": {
+        "candidate_id": "fepese_open-2026cpcelesc",
+        "title_observed": "2026 - Celesc Distribuição S.A",
+        "detail_url_observed": "https://2026cpcelesc.fepese.org.br",
+        "external_id": "2026cpcelesc",
+        "observed_at": "2026-09-08T15:35:48.523338Z",
+        "source": "fepese_open"
+      },
+      "resource_url": "https://2026cpcelesc.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "documents": [
+        {
+          "doc_id": "fepese_open-35c2d8007a9cf4a2",
+          "title": "Errata do Termo de Retificação nº 1",
+          "url_requested": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=TR01_2026_001_CP_CELESC_Errata.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        },
+        {
+          "doc_id": "fepese_open-4ee06303a7133c7f",
+          "title": "Termo de Retificação nº 1",
+          "url_requested": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=TR01_2026_001_CP_CELESC.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        },
+        {
+          "doc_id": "fepese_open-b6ed36187a193ace",
+          "title": "Edital 001/2026",
+          "url_requested": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=2026_001_CP_CELESC_TR01.pdf&inline=1",
+          "url_final": null,
+          "kind": "outro",
+          "reason_chosen": "",
+          "acquisition_request": null
+        }
+      ],
+      "original_selection_blocked": true
+    }
+  ],
+  "captures": [
+    {
+      "url": "https://fepese.org.br/concursos/",
+      "status": 200,
+      "bytes": 56295,
+      "sha256": "f66b69a77f1f054a30d4d5a94161686574b1a5bbac75d32c44cb2f813968858d",
+      "file": "fepese_open-listing0.html"
+    },
+    {
+      "url": "https://2026pseducasj.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "status": 200,
+      "bytes": 5876,
+      "sha256": "d4d565c459a0a22d809f5583138469bbb7d728c8b6f79e5250822e63a7ca364e",
+      "file": "fepese_open-document-tab0.html"
+    },
+    {
+      "url": "https://2026pseducasj.fepese.org.br",
+      "status": 200,
+      "bytes": 8987,
+      "sha256": "6c97fe9c3a065c3f8f6cae58afd8057e6c48543981ae7bd7f4de4fc66ff31dfc",
+      "file": "fepese_open-detail0.html"
+    },
+    {
+      "url": "https://2026seletivocomcap.fepese.org.br",
+      "status": 200,
+      "bytes": 9457,
+      "sha256": "d61571671fc929d1362a5032c10417891cdffff6dbd2e22b166e95e78fe9639c",
+      "file": "fepese_open-detail1.html"
+    },
+    {
+      "url": "https://2026seletivocomcap.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "status": 200,
+      "bytes": 5866,
+      "sha256": "cff0f4108f660783d2a3c206328f92f571f7222e7b0db9caa1a76a180e550c36",
+      "file": "fepese_open-db491631-cff0f4108f.html"
+    },
+    {
+      "url": "https://2026cpcelesc.fepese.org.br",
+      "status": 200,
+      "bytes": 9543,
+      "sha256": "ffeb422d7247489e245c170bb67d44827f66c345775e501cc3471777a5f5319c",
+      "file": "fepese_open-4f7e7256-ffeb422d72.html"
+    },
+    {
+      "url": "https://2026cpcelesc.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "status": 200,
+      "bytes": 6086,
+      "sha256": "beeb9784046da5a0c7bd391fdd95c51c669bdd106029c65591192daf09f32a56",
+      "file": "fepese_open-6a0b95a7-beeb978404.html"
+    }
+  ],
+  "sha_errors": [],
+  "tests": "tests/test_tenderproof_batch99_fepese.py:3passed",
+  "live_report": "docs/tenderproof-batch99-fepese-live.json if executed after central integration",
+  "limitations": [
+    "All3 visible principal labels point to_TR01.pdf amendments",
+    "No original filename is guessed by deleting_TR01",
+    "No validPDFsample or fullcoverage is claimed",
+    "No changes to FAPESC adapter or central registry"
+  ],
+  "live": {
+    "cycles": 2,
+    "attempts": 6,
+    "valid_samples": 0,
+    "all_original_selections_blocked": true,
+    "driver_cleanup": {
+      "instances": 8,
+      "all_clients_closed": true
+    },
+    "downloaded_artifacts": 0,
+    "listing_coverage": [
+      {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      }
+    ]
+  }
+}

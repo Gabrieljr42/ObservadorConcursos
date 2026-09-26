@@ -1,0 +1,29 @@
+{
+  "schema": "t012.epl_open.luna-parser-r3-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "requested_gate": "EPL_PARSER_R3_ACCEPT_FOR_INTEGRATION",
+  "findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/epl_open/epl_parser_r3.py:49-53",
+      "finding": "Returned evidence snippets contain literal U+FFFD replacement characters, but are not verbatim substrings of the fresh pypdf extraction. The pinned PDF extraction contains the encoded accent bytes while the returned snippets replace them with U+FFFD.",
+      "reproduction": "revalidate(pinned_pdf) succeeds; [e['snippet'] in _text(pinned_pdf) for e in result['evidence']] == [False, False]. Returned snippets contain codepoint 65533.",
+      "required_fix": "Generate evidence from the exact extracted text (or a deterministic, explicitly recorded normalization whose output is checked against source text); never fabricate replacement-glyph snippets. Add containment/evidence equality tests."
+    },
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/epl_open/epl_parser_r3.py:27-29",
+      "finding": "_text does not pin or validate the expected 43-page PDF, empty pages, extraction errors, or truncation. SHA/byte pinning catches ordinary byte mutation, but the parser contract itself lacks the declared page/extraction guard.",
+      "required_fix": "Assert exactly 43 pages and reject unreadable/empty/incomplete extraction before identity promotion; add drift/truncation tests."
+    }
+  ],
+  "positive_checks": {
+    "pins": "PASS: source epl_open, external_id 52, SHA b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f, 784614 bytes, official detail/document URLs.",
+    "identity": "PASS on clean extraction: Fundação Hospitalar Santa Terezinha de Erechim and Concurso Público 01/2023 are required.",
+    "substitution_drift": "PASS: source/external/detail/document substitutions and byte mutation raise EPLParserError.",
+    "real_revalidation": "PASS as fail-closed safety test: shared _revalidate returns 422 before parser wiring; no publication side effects.",
+    "tests": "11 passed, 17 warnings in 12.34s; compileall PASS."
+  },
+  "gate": "Do not release R3 for fields/validation integration until evidence is verbatim-bound and the 43-page/empty/truncation guards are implemented and tested."
+}

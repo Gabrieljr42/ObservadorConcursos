@@ -1,0 +1,16 @@
+{
+  "schema": "t012.avancasp.document-review-operational-receipt.v5",
+  "status": "READY_FOR_OPERATIONAL_REVIEW",
+  "result": "PROCEDURE_PROVEN_BLOCKED_UNTIL_PARSER_DEPLOYMENT",
+  "source": "avancasp_open",
+  "external_id": "272",
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "old_case": "drc-preserved-1d4a34207027a52670a51a736a125257",
+  "old_case_action": "retain audit row; do not approve/delete/invalidate through an undocumented operation",
+  "reprocess_action": "normal prepare after corrected parser integration; one operation must include both pending PDFs",
+  "prepare_preserved": "must not be used to append/reparse; exact single-document reuse or 409",
+  "expected_replacement": {"documents":2,"sha256":["c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637","49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd"]},
+  "parser_gap": "backend/app/tenderproof/avancasp_t012.py still pins aa3e927b/b0ba7e...; evidence R3 pin is bbc8f6fc/c60fcc...",
+  "tests": {"path":"docs/execucao/evidencias/T012/avancasp_open/test_document_review_operational_r5.py","command":"from backend: .venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/avancasp_open/test_document_review_operational_r5.py","result":"5 passed"},
+  "side_effects": {"api":false,"live":false,"docker":false,"backend_edits":false,"approve":false,"proposal":false}
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "t012.publiconsult.document-review-decision-r3-exact.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "offline reconciliation only; no prepare/approve/apply/API/DB mutation",
+  "verdict": "PUBLICONSULT_EXACT_TITLE_READY_FOR_REVIEW",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "candidate_key": "681",
+  "selection_identity": {
+    "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+    "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H"
+  },
+  "manifest_identity_exact": {
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "semantic_kind_decision": "convocacao_taf",
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf"
+  },
+  "artifact": {
+    "artifact_id": "publiconsult-open-taf-681-r2",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "content_type": "application/pdf",
+    "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+    "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+    "preserved_path": "docs/execucao/evidencias/T012/publiconsult_open/document-taf-681.pdf",
+    "pages_receipt": "docs/execucao/evidencias/T012/publiconsult_open/document-taf-pages-r2.json"
+  },
+  "prepare_preserved_request": {
+    "endpoint": "POST /tenderproof/document-review/tp-reviewed-bea209a94599014adb6a275693a9e107/prepare-preserved",
+    "owner_run_binding": {"owner_user_id": 1, "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "candidate_key": "681"},
+    "document": {
+      "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+      "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+      "kind": "outro",
+      "file_format": "pdf"
+    },
+    "artifact": {
+      "artifact_id": "publiconsult-open-taf-681-r2",
+      "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+      "byte_len": 341466,
+      "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+      "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+      "content_type": "application/pdf",
+      "storage_path": "publiconsult-open-taf-681-r2.pdf",
+      "downloaded_at": "2026-09-13T13:48:30Z"
+    },
+    "expected_page_count": 6
+  },
+  "409_cause": "R2 decision title abbreviated with '- TAF'; manifest requires the exact cargo-qualified title. document_identity compares title, URL and kind; kind must remain 'outro' in the request.",
+  "next_gate": "Register/preserve the acquired PDF under the configured TenderProof artifact store with the stated hash, then use this exact owner/run-bound payload through normal review; do not call it approval or retry proposal until review is accepted.",
+  "tests": {"path": "docs/execucao/evidencias/T012/publiconsult_open/test_document_review_r3_exact.py", "result": "1 passed"},
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r2-receipt-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-acquisition-r2.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-pages-r2.json",
+    "backend/app/tenderproof/document_identity.py",
+    "backend/app/tenderproof/review_cases.py:221-337"
+  ]
+}

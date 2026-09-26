@@ -1,0 +1,51 @@
+{
+  "schema": "t012.avancasp272.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_IMPORT_PROPOSAL",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "avancasp_open",
+    "external_id": "272",
+    "title": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+    "selection_scope": "municipal public employment; not vestibular/bolsa/auxílio/treinamento",
+    "duplicate_key": "avancasp_open:272",
+    "duplicate_check": "listing external IDs unique; detail identity and tenant/document binding confirmed"
+  },
+  "envelope": {
+    "schema": "tenderproof.reviewed-run.v1",
+    "run_id": "tp-reviewed-9edb46567e9d34e12c488cdcefb53f19",
+    "reference_only": true,
+    "pending_fields": [],
+    "promoted_fields": ["cargos"],
+    "cargo_count": 14,
+    "canonical_concurso_id": 272
+  },
+  "artifact_receipt": {
+    "path": "backend/tests/fixtures/tenderproof_pilot/avancasp_open-detail.html",
+    "content_type": "text/html",
+    "byte_len": 37232,
+    "sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3",
+    "local_bytes_verified": true,
+    "receipt_linked_to_envelope": true,
+    "opening_pdf": "referenced only; no PDF SHA/bytes invented and no PDF fields promoted"
+  },
+  "provenance": {
+    "listing_sha256": "d04a91da70d0f3dfa40ce1b216e594508ed03f5c8bbfebbc2284035aaa27cbf2",
+    "listing_bytes": 47635,
+    "evidence": ["identity/title", "inscription schedule", "planned exam", "cargo table"],
+    "all_values_unproven": "No extra fields beyond cargos are promoted; PDF-only facts remain absent."
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py -q",
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "dry_run": "validated; run_id matches receipt"
+  },
+  "limits": [
+    "No apply or catalogue mutation was performed.",
+    "The linked opening PDF remains a reference and must not be treated as downloaded content."
+  ]
+}

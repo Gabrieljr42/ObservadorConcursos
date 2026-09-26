@@ -1,0 +1,33 @@
+{
+  "schema": "t012.apta.live-envelope.luna-review-r1.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "CHANGES_REQUIRED",
+  "scope": "read_only; no live import/proposal/API/DB mutation",
+  "pins": {
+    "source": "apta_open",
+    "external_id": "708",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708",
+    "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "status": "PASS in envelope/parser"
+  },
+  "scope_checks": {
+    "currentness": "PASS: 17/08/2026–20/09/2026 window contains 13/09/2026",
+    "fallback": "PASS in parser: exact organization plus edital 01/2026; reference-only cargo/remuneration/taxa are not promoted by envelope",
+    "evidence": "PASS for literal PDF identity evidence and artifact pins in the accepted handoff"
+  },
+  "blocking_finding": {
+    "severity": "P1",
+    "path": "backend/app/tenderproof/fields.py:440-488; backend/tests/test_t012_apta_open_selection.py:_case",
+    "finding": "The live-envelope artifact has preserved_path but the fields dispatcher requires artifact.storage_path. Running the directed APTA selection suite produced 1 failure: title (and all fields) became FAILED with Permission denied on backend/.tenderproof/artifacts. The live envelope therefore cannot currently round-trip through the real dispatch as claimed.",
+    "reproduction": "pytest -q backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_apta_open_selection.py => 1 failed, 5 passed; error reason: [Errno 13] Permission denied: backend/.tenderproof/artifacts",
+    "required_fix": "Bind the live envelope's preserved_path to Artifact.storage_path (or make dispatch resolve the recorded preserved artifact path deterministically) and rerun the exact suite; then confirm eligible title/orgao/edital only and zero writes. Do not import/propose before that."
+  },
+  "tests": {
+    "batch2_apta_filter": "1 passed, 10 deselected (uses an artifact with storage_path)",
+    "live_gate": "BLOCKED by the dedicated selection regression above"
+  },
+  "decision": "Do not release ACCEPT_FOR_LIVE_IMPORT_PROPOSAL until path binding is corrected and the previously expected supported title/orgao/remuneracao behavior is reconciled with the new restricted-field envelope."
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "t012.fafipa-envelope-diagnosis-r8.v1",
+  "result": "FAFIPA_ENVELOPE_DIAGNOSIS_READY",
+  "scope": "independent offline reproduction only; no proposal/live/API/Docker/shared mutation",
+  "artifact": {"source": "fafipa_open", "external_id": "4208", "sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f", "byte_len": 3630911, "pages": 38},
+  "parser": "backend/app/tenderproof/fafipa_t012_r4.py (vigente; fresh extract_pages_isolated)",
+  "field_reproduction": [
+    {"field": "titulo", "fresh_value": "Concurso Público do Município de Mirador - PR", "fresh_snippet": "realização do Concurso Público", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "orgao", "fresh_value": "Município de Mirador - PR", "fresh_snippet": "Município de Mirador, Estado do Paraná", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "edital_numero", "fresh_value": "001/2026", "fresh_snippet": "01.001/2026", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "inscricao_inicio", "fresh_value": "2026-09-02", "fresh_snippet": "Período para solicitação de inscrição", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "inscricao_fim", "fresh_value": "2026-10-07", "fresh_snippet": "Período para solicitação de inscrição", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "prova_data", "fresh_value": "2026-11-01", "fresh_snippet": "Aplicação da prova objetiva | discursiva", "r7_value_equal": true, "r7_evidence_equal": false},
+    {"field": "cargos", "fresh_value": "14 cargos; cada item contém apenas nome + vagas/CR", "fresh_snippet": "QUADRO DE VAGAS", "r7_value_equal": false, "r7_evidence_equal": false, "reason": "R7 adicionou remuneração por cargo; o parser vigente não emite remuneração."}
+  ],
+  "cargo_comparison": {"count": 14, "name_and_vagas_or_cr_equal": true, "remuneracao": "absent_from_fresh_parser_for_all_14; must be removed, not inferred", "r7_remuneration_values_not_reproducible": true},
+  "revalidate_round_trip": {"mode": "fresh parser fields + ephemeral SQLite + normal publication._revalidate", "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"], "blocked": {"remuneracao": "escopo observado não equivale à faixa salarial canônica; merge não suportado", "taxa": "campo não extraído; preservar baseline"}, "result": "eligible_set_reproduced_without_remuneration"},
+  "negative_or_safety": {"catalog_mutation": false, "proposal_created": false, "versions_created": false, "outbox_created": false, "notifications_created": false},
+  "conclusion": "Use the seven-field eligible set above only after regenerating literal evidence from the current parser. Remove remuneration from any envelope; do not infer or carry R7 salary values."
+}

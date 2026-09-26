@@ -1,0 +1,32 @@
+{
+  "schema": "t012.cpcon_open.operational-review-r6-r2.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "BLOCKER",
+  "scope": "read-only reconciliation; approve/apply not authorized",
+  "proposal": {
+    "id": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "hash": "5292d0333ab6890bad82084f69c8f9d88927026332ccb84497da0ad6def1d772",
+    "state": "proposed",
+    "action": "create",
+    "concurso_id": null,
+    "run_id": "tp-reviewed-aa65cdc64843b07126288df54c1329b7",
+    "owner_evidence": "not present in the proposal receipt/GET evidence"
+  },
+  "checks": {
+    "null_target_contract": "PASS: publication.create_proposal passes concurso_id=None to canonical.resolve; absent contest produces action=create and proposal.concurso_id=None.",
+    "source_target_separation": "FAIL: receipt allocation.envelope_concurso_id=35, while source_id=35 and the R6 envelope requires concurso_id=null; the unchanged 34 contests show no canonical target 35 was allocated.",
+    "target_35_valid_reservation": false,
+    "owner_authorization": "INCOMPLETE: envelope/older preserved run identify owner_user_id=1, but this run/proposal receipt does not prove current run ownership or operator authorization.",
+    "run_handoff": "INCOMPLETE: current run_id is not present in the R6 envelope or an allocation handoff record.",
+    "side_effects": "PASS: proposals 97->98 only; contests, versions, outbox and notifications unchanged; approve/apply false"
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/cpcon_open/live-proposal-receipt-20260913-r6.json",
+    "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6.json",
+    "backend/app/tenderproof/publication.py:create_proposal",
+    "backend/app/tenderproof/publication_router.py:create"
+  ],
+  "required_non_destructive_action": "Do not approve/apply or create a duplicate. Reconcile the existing proposal/run through the normal owner-authenticated read path, prove the run belongs to owner 1, and allocate a fresh positive canonical target distinct from 34, 35 and 999 only through the normal duplicate-safe flow; then recreate/review the proposal with that target and a verifiable handoff.",
+  "mutations_performed": false
+}

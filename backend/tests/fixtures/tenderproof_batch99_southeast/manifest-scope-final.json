@@ -1,0 +1,41 @@
+[
+  {
+    "name": "fapeal-editais",
+    "url": "https://www.fapeal.br/pesquisador/editais/",
+    "observed_at": "2026-09-08T15:05:35.345393+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 125240,
+    "original_sha256": "5d257a7d9618e1bd9b0a5624c07d29f3b4c3b80af75fcb9c46585db0773b01db",
+    "fixture_sha256": "5ebe2013ab275aae9700560945a376fa5d347fd7b1dc5cbd65eee7c9fc5c333d",
+    "file": "fapeal-editais.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesq-58",
+    "url": "https://fapesq.rpp.br/editais/2026/edital-no-58-2026-2013-processo-seletivo-para-contratacao-de-coordenadores-audiovisuais-equipe-tecnica-e-cadastro-de-reserva-cr-dos-nucleos-de-inovacao-estadual-da-paraiba-nie-pb",
+    "observed_at": "2026-09-08T15:05:35.346388+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 75802,
+    "original_sha256": "4290b069cd1feaa4f06e78246b86d54e8ff76e4bbe299b603254eb9ff02459a4",
+    "fixture_sha256": "560ca2b68af37129fc2a223dcabbfb5f1f8da3e992d9f711ce4f1ef3c073d1ae",
+    "file": "fapesq-58.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesq-57",
+    "url": "https://fapesq.rpp.br/editais/2026/edital-no-57-2026-2013-selecao-de-oficineiros-avaliadores-para-o-festival-de-arte-e-cultura-na-escola-2013-arte-em-cena-2026",
+    "observed_at": "2026-09-08T15:05:35.346388+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 76341,
+    "original_sha256": "7e91edab1c980fa59897a7de7024001cd3ef1905152118c89ef099b19ea63291",
+    "fixture_sha256": "10cc2460fcdbfa125c92ee6287f57592cdf11e31d8d28ab911a42a70dc12d48b",
+    "file": "fapesq-57.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

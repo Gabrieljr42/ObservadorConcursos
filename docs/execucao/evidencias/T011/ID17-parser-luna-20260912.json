@@ -1,0 +1,66 @@
+{
+  "schema": "t011.id17.targeted-parser.v2",
+  "status": "READY_FOR_REVIEW",
+  "owner_user_id": 1,
+  "source": "contemax_open",
+  "external_id": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+  "concurso_id": 17,
+  "run_id_derivation": "official reviewed_run_import._run_id; human label t011-reviewed-17-6caf7901 is rejected; canonical envelope receipt is r5 below",
+  "r6_envelope": {
+    "path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json",
+    "sha256": "60afc4ad5b0f8eba96def9817e04f994b9abafad3819815fd8ee392ce3182174",
+    "byte_len": 43388,
+    "derived_run_id": "tp-reviewed-b64ff5228138c8157f8c5e4960046c79",
+    "two_processes_same_id": true,
+    "dry_run": "accepted; fields titulo/orgao/edital_numero/cargos",
+    "canonical_import": false
+  },
+  "title": "Concurso Público n.º 001/2024 — Prefeitura Municipal de Cubati/PB",
+  "artifact": {
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "pages": 50,
+    "storage_path": "/var/lib/observador/tenderproof/artifacts/art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f.pdf",
+    "reference_only": true
+  },
+  "reviewed_run_preflight": {
+    "schema": "tenderproof.reviewed-run.v1",
+    "fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "pending_fields": [],
+    "cargos": 27,
+    "vagas_total": 79,
+    "vagas_distribuicao": {"ampla_concorrencia": 74, "pcd": 5, "cadastro_reserva": 0},
+    "subtotal_impresso_discrepante": "p.19 imprime 33/03/35; linhas físicas somam 32/03/35 nessa página; não é usado",
+    "remuneracao": "BRL; unidade temporal não especificada",
+    "jornada": "40h",
+    "taxas": "preservadas no pacote, não promovidas neste envelope"
+  },
+  "dry_run": {
+    "result": "validated_then_imported_to_isolated_store",
+    "create_proposal": "isolated_proposal_state=proposed; eligible=cargos",
+    "writes": "isolated temporary store only",
+    "network": false,
+    "pilot_touched": false
+  },
+  "primary_pdf_validation": {
+    "path": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "pages_checked": [1, 8, 9, 16, 19, 20],
+    "table_pages": [19, 20],
+    "table_rows": 27,
+    "vagas_total": 79,
+    "distribution": {"ac": 74, "pcd": 5, "cadastro_reserva": 0},
+    "remuneracao": ["1412.00", "2640.00"],
+    "jornada": "40hrs",
+    "inscricoes": "05/07/2024 a 14/08/2024",
+    "prova_data": {"fundamental": "20/10/2024", "medio_tecnico_superior": "27/10/2024"},
+    "taxas_brl": {"fundamental": 40.0, "medio_tecnico": 50.0, "superior": 65.0},
+    "reference_only": true
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_contemax_cubati_jobs.py",
+    "result": "6 passed; publication regression 30 passed; compileall PASS",
+    "regression_command": "backend/.venv/Scripts/python.exe -m pytest -q tests/test_tenderproof_publication.py",
+    "fail_closed": ["wrong source", "wrong SHA", "wrong byte length", "missing/drifted row", "U+FFFD", "page error/truncation"]
+  }
+}

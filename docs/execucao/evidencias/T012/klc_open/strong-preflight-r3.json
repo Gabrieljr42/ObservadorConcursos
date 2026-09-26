@@ -1,0 +1,19 @@
+{
+  "status": "KLC_PARSER_R8_READY",
+  "source": "klc_open",
+  "source_number": 57,
+  "external_id": "632",
+  "ephemeral_concurso_id": 991,
+  "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+  "document_identity_ids": [],
+  "generic_revalidate": "BLOCKED_STRONG_BINDING",
+  "generic_observed": {"orgao": "unknown", "edital_numero": "unknown", "inscricao_inicio": "unknown", "inscricao_fim": "unknown"},
+  "reason": "KLC PDF does not contain the detail URL pattern klcconcursos.com.br/?pag=mco&id=632; generic extractor consequently cannot satisfy strong binding from explicit ID or fresh orgao+edital.",
+  "parser_module": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py",
+  "parser_contract": "list[ExtractedField] with Evidence bound to artifact_id/SHA/URL/page/snippet/json_path/method",
+  "guards": ["U+FFFD always fail-closed with no bypass", "exact SHA/byte length 348300", "exact artifact requested/final URL", "per-page truncated/error/processing_error", "missing/extra pages", "processing errors", "source/external/SHA substitution"],
+  "tests": {"path":"docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py","passed":12,"includes":["typed dispatch boundary","_reproduced_evidence","artifact metadata drift","requested/final URL drift","PageText.truncated","U+FFFD direct guard"]},
+  "integration_status": "READY_FOR_INTEGRATION",
+  "scope": "offline disposable preflight; no pilot, DB persistence, SQL, shared fields or deployment",
+  "next_step": "review source-specific parser output, then adapt only the normal reviewed-run envelope after canonical target allocation"
+}

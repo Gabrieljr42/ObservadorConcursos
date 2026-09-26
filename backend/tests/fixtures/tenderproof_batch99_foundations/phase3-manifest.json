@@ -1,0 +1,589 @@
+{
+  "limits": "2MiB/25s, TLS verified, redirects recorded only, no PDF/browser",
+  "pages": [
+    {
+      "source": "fapese_selection",
+      "url": "https://www.fapese.org.br/oportunidades/",
+      "kind": "opportunities",
+      "observed_at": "2026-09-08T14:51:29.237575+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 71535,
+      "sha256": "234866195b377f26b9aa6eabf9c5e826037307b74f741e70e9516787a2f0bb3a",
+      "file": "fapese_selection-opportunities.html",
+      "encoding": "utf-8",
+      "title": "Oportunidades - Fapese",
+      "links": [
+        {
+          "url": "https://www.fapese.org.br/oportunidades/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/#elementor-action%3Aaction%3Doff_canvas%3Aclose%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6ImNsb3NlIn0%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/",
+          "title": "Compras e Licitações"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Seja um Fornecedor"
+        },
+        {
+          "url": "http://instagram.com/fapese_oficial/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/company/fapese/",
+          "title": "Linkedin"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.0",
+        "https://www.fapese.org.br/wp-content/themes/fapese-theme/js/main.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+        "https://www.fapese.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=4.1.0"
+      ]
+    },
+    {
+      "source": "fapese_selection",
+      "url": "https://www.fapese.org.br/editais/",
+      "kind": "notices",
+      "observed_at": "2026-09-08T14:51:29.238104+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 76045,
+      "sha256": "36dde17c34b725eadad7812407711926c30ab50d3bce3d219938cb9de5df2044",
+      "file": "fapese_selection-notices.html",
+      "encoding": "utf-8",
+      "title": "Editais - Fapese",
+      "links": [
+        {
+          "url": "https://www.fapese.org.br/editais/#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/#elementor-action%3Aaction%3Doff_canvas%3Aclose%26settings%3DeyJpZCI6IjRmNTQ5MTciLCJkaXNwbGF5TW9kZSI6ImNsb3NlIn0%3D",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapese.org.br/a-fapese/",
+          "title": "A Fapese"
+        },
+        {
+          "url": "https://www.fapese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://www.fapese.org.br/servicos/",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.fapese.org.br/gestao-e-apoio-a-projetos/",
+          "title": "Gestão e apoio a projetos"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#estatuto",
+          "title": "Estatuto e ato de nomeação"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#resolucoes",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#relatorios",
+          "title": "Relatórios"
+        },
+        {
+          "url": "https://www.fapese.org.br/transparencia/#portarias",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/portaltransparencia/#processocompra",
+          "title": "Portal da transparência"
+        },
+        {
+          "url": "https://www.fapese.org.br/oportunidades/",
+          "title": "Oportunidades"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Fornecedor/Login.aspx",
+          "title": "Compras e licitações"
+        },
+        {
+          "url": "https://www.fapese.org.br/seja-um-fornecedor/",
+          "title": "Seja um fornecedor"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais/",
+          "title": "Mais"
+        },
+        {
+          "url": "http://estagio.fapese.org.br/manager/relatoriorendimentos",
+          "title": "Relatório de Rendimentos 2025"
+        },
+        {
+          "url": "https://fapese.conveniar.com.br/Coordenador/Login.aspx?ReturnUrl=%2fcoordenador",
+          "title": "Conveniar"
+        },
+        {
+          "url": "https://www.fapese.org.br/contato/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.fapese.org.br/pronera/",
+          "title": "Pronera Edital Nº 007/2026"
+        },
+        {
+          "url": "https://www.fapese.org.br/editais-de-apoio/",
+          "title": "Editais de Apoio"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-primeiro-emprego/",
+          "title": "Programa Primeiro Emprego"
+        },
+        {
+          "url": "https://www.fapese.org.br/programa-de-qualificacao-de-docentes-pqd/",
+          "title": "Programa de Qualificação de Docentes (PQD)"
+        },
+        {
+          "url": "http://instagram.com/fapese_oficial/",
+          "title": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/company/fapese/",
+          "title": "Linkedin"
+        },
+        {
+          "url": "https://www.fapese.org.br",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapese.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.0",
+        "https://www.fapese.org.br/wp-content/themes/fapese-theme/js/main.js?ver=1.0.0",
+        "https://www.fapese.org.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+        "https://www.fapese.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+        "https://www.fapese.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=4.1.0",
+        "https://www.fapese.org.br/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=4.1.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "t012.shdias.review.r3.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "SHDIAS_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "shdias_open",
+    "source_number": 51,
+    "external_id": "MTEw/MzA4",
+    "process_id": "00308",
+    "title": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+    "selection_type": "Concurso Público 001/2026 - Guarda",
+    "duplicate_key": "shdias_open:MTEw/MzA4",
+    "duplicate_check": "passed within preserved catalogue and fixtures"
+  },
+  "artifact": {
+    "path": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "bytes": 697485,
+    "pages": 44,
+    "sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "content_receipt_verified": true
+  },
+  "field_evidence": {
+    "manifest": "docs/execucao/evidencias/T012/shdias_open/field-evidence.json",
+    "field_count": 6,
+    "fields": ["titulo", "taxa_inscricao", "prova_data", "cargos", "vagas_total", "remuneracao"],
+    "binding": "Every evidence has artifact_id, PDF SHA, source URL, physical page, literal snippet, json_path and method/method_version; all snippets reproduce from the PDF without U+FFFD.",
+    "cargos": [
+      {"json_path": "cargos[0]", "codigo": "301", "vagas": 12, "remuneracao": "3971.37"},
+      {"json_path": "cargos[1]", "codigo": "302", "vagas": 28, "remuneracao": "3971.37"}
+    ],
+    "vagas_derivation": "12 + 28 = 40, with both source snippets retained"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/shdias_open/test_proposal_fail_closed.py",
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "json_manifest_fields": 6
+  },
+  "handoff": {
+    "schema": "t012.source-proposal.v1 -> standard_reviewed_run_import",
+    "reference_only": true,
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "apply": false,
+    "next_step": "allocate canonical IDs and perform normal human review before catalogue mutation"
+  },
+  "decision": "Accept for conditional canonical allocation/import/proposal. Do not mutate catalogue until canonical allocation and the standard import/proposal gate pass."
+}

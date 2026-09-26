@@ -1,0 +1,17 @@
+{
+  "schema":"t012.avancasp-live-proposal-receipt.v1",
+  "timestamp":"2026-09-13T13:55:00Z",
+  "status":"BLOCKED_DOCUMENT_REVIEW",
+  "source_id":54,
+  "source":"avancasp_open",
+  "external_id":"272",
+  "health":"200",
+  "artifact":{"path":"docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf","sha256":"b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a","byte_len":742298,"pages":48,"html_rejected":"8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3"},
+  "allocation":{"materialized_review_envelope_id":35,"catalog_created":false,"temporary_999_not_used":true},
+  "run":{"run_id":"tp-reviewed-d3f322671865f3ceea32af3be85ede50","dry_run":"validated","import":"imported","fields":["titulo","orgao","inscricao_inicio","inscricao_fim","prova_data","edital_numero","cargos"]},
+  "duplicate_cas":{"source_id":54,"external_id":"272","catalog_match":false,"proposal_match":false},
+  "proposal_attempt":{"http":409,"retry":false,"approve":false,"apply":false,"reason":"document-review pendente para candidato 272; duas publicações edital aguardam decisão"},
+  "pending_documents":[{"kind":"edital","title":"EDITAL COMPLETO 04/09/2026","url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf"},{"kind":"edital","title":"EDITAL COMPLETO 04/09/2026","url":"https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf"}],
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"independent document-review resolution; no proposal retry until pending documents are resolved"
+}

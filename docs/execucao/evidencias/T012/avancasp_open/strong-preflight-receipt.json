@@ -1,0 +1,46 @@
+{
+  "schema": "t012.avancasp-strong-preflight.v1",
+  "state": "AVANCASP_STRONG_PREFLIGHT_PASS",
+  "source": "avancasp_open",
+  "external_id": "272",
+  "selection": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+  "ephemeral_sqlite": true,
+  "ephemeral_owner_user_id": 1,
+  "ephemeral_concurso_id_positive": true,
+  "official_pdf": {
+    "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf",
+    "bytes": 742298,
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "content_type": "application/pdf",
+    "acquisition": "BoundedHTTPDriver/TLS verified; one allowlisted URL; no redirect; no credentials"
+  },
+  "fresh_identity": {
+    "orgao": "Prefeitura Municipal De Cabreúva",
+    "edital_numero": "01/2026",
+    "identity_ids": ["272"],
+    "document_title": "EDITAL COMPLETO 04/09/2026",
+    "identity_status": "valid",
+    "strong_binding": "orgao+edital_numero and explicit source-specific identity id"
+  },
+  "parser": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/avancasp_parser.py",
+    "pinned_source": "avancasp_open",
+    "pinned_external_id": "272",
+    "pinned_sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "shared_files_changed": false
+  },
+  "revalidate": {
+    "method": "app.tenderproof.publication._revalidate",
+    "result": "PASS",
+    "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "expected_blocked": {"remuneracao": "generic field outside canonical publishable range"}
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py",
+    "result": "10 passed, 29 warnings",
+    "pilot_called": false,
+    "catalogue_mutated": false
+  }
+}

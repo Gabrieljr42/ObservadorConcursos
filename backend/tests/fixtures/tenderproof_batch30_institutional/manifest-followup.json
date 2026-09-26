@@ -1,0 +1,49 @@
+{
+  "provenance": "live public HTTP capture; sanitized hidden values and public signed URL queries; no browsers or credential use;2MiB/page20s",
+  "pages": [
+    {
+      "name": "uniselva-modern-listing",
+      "url": "https://inscricao.fundacaouniselva.org.br/selecoes",
+      "observed_at": "2026-09-08T00:07:19.882668+00:00",
+      "status": 200,
+      "bytes": 8407,
+      "original_sha256": "c6819adfb3ff5347672248ec661025da48e943e8066eac4fa7607d03f8445a79",
+      "fixture_sha256": "7cfc21de43daa75f62eac1210cd0456a327dd0a2a4909bc6baeccd4303f81ab7",
+      "redacted_signed_links": 0,
+      "file": "uniselva-modern-listing.html"
+    },
+    {
+      "name": "uniselva-modern-detail",
+      "url": "https://inscricao.fundacaouniselva.org.br/selecoes/1261",
+      "observed_at": "2026-09-08T00:07:20.310424+00:00",
+      "status": 200,
+      "bytes": 8407,
+      "original_sha256": "bf2825a33282f88f1534bc5a8fabf272b4a6a582147aa30daf43daba650f9d8a",
+      "fixture_sha256": "7d85ed1493dba3fe7b33eca77022d5f9bd77445d642e825664391a79fe392f52",
+      "redacted_signed_links": 0,
+      "file": "uniselva-modern-detail.html"
+    },
+    {
+      "name": "ufu-ta-listing",
+      "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concurso_ta",
+      "observed_at": "2026-09-08T00:07:20.375928+00:00",
+      "status": 200,
+      "bytes": 71973,
+      "original_sha256": "9284b5426b971aaeb5de300252d8f909a8f9e3e2df1be2842ef06aa308b3234e",
+      "fixture_sha256": "3c35bfee3d0556cc0bde2a893b3381735c58ad02a988e5720bb7d3af1ce4e593",
+      "redacted_signed_links": 0,
+      "file": "ufu-ta-listing.html"
+    },
+    {
+      "name": "ufu-ta-detail",
+      "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1781",
+      "observed_at": "2026-09-08T00:07:20.719192+00:00",
+      "status": 200,
+      "bytes": 81439,
+      "original_sha256": "35fe02a4807ede404972eefaf46db8ada57558521b52054298081ecf9ad1d7ec",
+      "fixture_sha256": "42c1192cc9a517c62a35fec269a3ccc4f01e952f4c6e2ea182927a0b9f274829",
+      "redacted_signed_links": 0,
+      "file": "ufu-ta-detail.html"
+    }
+  ]
+}

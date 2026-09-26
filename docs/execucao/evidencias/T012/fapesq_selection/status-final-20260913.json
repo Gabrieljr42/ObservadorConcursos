@@ -1,0 +1,75 @@
+{
+  "schema": "t012.fapesq-selection.status.v1",
+  "recorded_at": "2026-09-13",
+  "source": {
+    "source_id": 67,
+    "name": "fapesq_selection",
+    "organization": "FAPESQ/PB (Fundação de Apoio à Pesquisa do Estado da Paraíba), em parceria com SEE/PB",
+    "official_detail": "https://fapesq.rpp.br/editais/2026/edital-no-58-2026-2013-processo-seletivo-para-contratacao-de-coordenadores-audiovisuais-equipe-tecnica-e-cadastro-de-reserva-cr-dos-nucleos-de-inovacao-estadual-da-paraiba-nie-pb",
+    "source_adapter": "backend/app/tenderproof/fapesq_adapter.py:FapesqAdapter"
+  },
+  "decision": "NOT_PUBLISHABLE_DO_NOT_PROMOTE",
+  "selected_process": {
+    "external_id": "2026/edital-no-58-2026-2013-processo-seletivo-para-contratacao-de-coordenadores-audiovisuais-equipe-tecnica-e-cadastro-de-reserva-cr-dos-nucleos-de-inovacao-estadual-da-paraiba-nie-pb",
+    "title": "EDITAL Nº 58/2026 – SELEÇÃO DE EQUIPE TÉCNICA E FORMAÇÃO DE CADASTRO DE RESERVA (CR) PARA OS NÚCLEOS DE INOVAÇÃO ESTADUAL DA PARAÍBA (NIE-PB)",
+    "observed_at": "2026-09-09T12:17:54.244302+00:00",
+    "operational_status_on_2026_09_13": "CURRENT_OPERATIONAL_PHASE",
+    "currency_evidence": [
+      {"page": 3, "snippet": "01 a 18/09/2026 Período de Assinatura dos Termos de Outorga"},
+      {"page": 3, "snippet": "01/10/2026 Início das Atividades"},
+      {"page": 34, "snippet": "As bolsas terão vigência de 06 (seis) meses"}
+    ]
+  },
+  "classification_blocker": {
+    "kind": "SCHOLARSHIP_NOT_EMPLOYMENT",
+    "publishability": "blocked_for_employment_catalogue",
+    "reason": "Although the selection remains in its term-signature phase on 2026-09-13, the preserved original defines a scholarship regime, not employment or salary. Do not convert the monthly scholarship value into salary/remuneration and do not publish it as a job vacancy.",
+    "evidence": [
+      {"page": 22, "item": "12.1", "snippet": "Os candidatos aprovados e classificados receberão bolsas pela Fundação de Apoio à Pesquisa do Estado da Paraíba (FAPESQ/PB)"},
+      {"page": 22, "item": "12.4", "snippet": "O valor mensal da bolsa para os candidatos aprovados para as funções será de acordo com o Quadro do Item 4.2."},
+      {"page": 22, "item": "12.5-12.6", "snippet": "As bolsas terão vigência de 06 (seis) meses... O regime de bolsas não constitui vínculo empregatício e não segue as regras da Consolidação das Leis do Trabalho (CLT)."},
+      {"page": 23, "item": "12.14", "snippet": "As atividades ... não caracterizam vínculo empregatício ... e os valores recebidos a título de bolsa não se incorporam ... ao vencimento, ao salário, à remuneração ou aos proventos recebidos."}
+    ]
+  },
+  "artifact": {
+    "path": "backend/.tenderproof/r99scope/fapesq-58.pdf",
+    "url": "https://fapesq.rpp.br/editais/editais-2026/03_07_26-edital-58-2026-see-fapesq-pb-selecao-de-equipe-tecnica-e-formacao-de-cadastro-de-reserva-cr-para-os-nucleos-de-inovacao-estadual-da-paraiba-nie-pb.pdf",
+    "sha256": "62dcf0984b94204c02e1b0340209a148fc3d29796f541b238106f5a72a6cfaea",
+    "bytes": 414406,
+    "pages": 34,
+    "text_path": "backend/.tenderproof/r99scope/fapesq-58.txt",
+    "detail_manifest": "backend/.tenderproof/product-completion/fapesq/detail-58-manifest.json",
+    "verification": "backend/.tenderproof/product-completion/fapesq/notice-58-verification.json",
+    "scope_record": "docs/tenderproof-batch99-southeast-scope-pdfs.json"
+  },
+  "extracted_fields": {
+    "functions": [
+      {"title": "Coordenador audiovisual", "immediate_vacancies": 2, "reserve_registration": true, "amount": 2500.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Operador de Câmera", "immediate_vacancies": 3, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Operador de Som", "immediate_vacancies": 3, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Editor de Som e Imagem", "immediate_vacancies": 5, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Apoio Geral de Estudio", "immediate_vacancies": 2, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Designer Gráfico", "immediate_vacancies": 4, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Motion Designer", "immediate_vacancies": 4, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Técnico de TI", "immediate_vacancies": 4, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"},
+      {"title": "Tradutor de Libras", "immediate_vacancies": 6, "reserve_registration": true, "amount": 1000.0, "amount_unit": "monthly_scholarship"}
+    ],
+    "field_evidence": {"source": "fapesq-58.txt", "pages": [5, 6], "items": ["4.1", "4.2", "4.3"]},
+    "salary_or_employment_inference": false
+  },
+  "gates": {
+    "source_identity": "PASS_OFFLINE",
+    "artifact_pin": "PASS_OFFLINE",
+    "currency_review": "PASS_OPERATIONAL_BUT_NOT_PUBLISHABLE",
+    "source_specific_parser": "NOT_RUN_AFTER_CLASSIFICATION_BLOCK",
+    "strong_preflight_revalidate_sqlite": "NOT_RUN_AFTER_CLASSIFICATION_BLOCK",
+    "reviewed_run": false,
+    "import": false,
+    "proposal": false,
+    "publish": false,
+    "apply": false,
+    "network": false,
+    "db_mutation": false
+  },
+  "resume_condition": "Only reconsider if the product explicitly admits scholarship/term-of-grant opportunities as a separate non-employment category; otherwise choose another source with a documented employment/contract selection. Do not reinterpret the monthly scholarship as salary."
+}

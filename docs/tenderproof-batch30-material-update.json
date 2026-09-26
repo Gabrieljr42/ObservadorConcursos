@@ -1,0 +1,161 @@
+{
+  "validated_at": "2026-09-08T13:47:50.062248+00:00",
+  "scope": "real preserved EXAME observation; synthetic canonical baseline only",
+  "command": "python scripts/tenderproof_batch30_material_update.py --postgres",
+  "source": "exame_open",
+  "candidate": "544",
+  "run_id": "tp-tcj-7b150c97b6b5582daf436d4818280203-1",
+  "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+  "original_run_payload_sha256": "380426917470e2d6eccfee67361ec6003e7ce5e42e3b34f4e0804afeb8496efe",
+  "preserved_root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-continuous-replay-verified-20260908",
+  "network_requests": 0,
+  "production_writes": 0,
+  "observation_modified": false,
+  "baseline_synthetic": true,
+  "executions": [
+    {
+      "database": "sqlite",
+      "passed": true,
+      "proposal_id": "tpp-643c35a55ce5e4ac197bc0fbe558e919",
+      "real_supported_update": {
+        "titulo": {
+          "label": "título",
+          "old": "Título anterior controlado para prova de atualização",
+          "new": "P.M. de Santana de Pirapama - Concurso Público"
+        }
+      },
+      "evidence": {
+        "value": "P.M. de Santana de Pirapama - Concurso Público",
+        "state": "supported",
+        "reason": null,
+        "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+        "items": [
+          {
+            "evidence_id": "ev-87505cd083",
+            "artifact_id": "art-e1e81cf578",
+            "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+            "source_url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf",
+            "page_number": 1,
+            "snippet": "PREFEITURA MUNICIPAL DE SANTANA DE PIRAPAMA\nESTADO DE MINAS GERAIS\nEdital de abertura de Concurso Público nº 01/2026\nOrganização:\nPágina 1 de 46\nO Prefeito do MUNICÍPIO DE SANTANA DE\nPIRAPAMA, no uso de suas atribuições lega",
+            "json_path": null,
+            "method": "deterministic-regex",
+            "method_version": "tenderproof-fields/1.2",
+            "validation": {
+              "ok": true,
+              "code": null,
+              "message": null
+            }
+          }
+        ]
+      },
+      "unknown_field": {
+        "name": "inscricao_fim",
+        "state": "unknown",
+        "value": null,
+        "reason": "período direto de inscrição não identificado; datas de outras etapas não são inscrições"
+      },
+      "unknown_approval_rejected": true,
+      "preserved_controlled_values": {
+        "inscricao_inicio": "2026-04-01",
+        "inscricao_fim": "2026-04-19",
+        "salario_min": 3500,
+        "salario_max": 4000
+      },
+      "proposal_creation_request_idempotent": true,
+      "application_idempotent": true,
+      "after_apply": {
+        "contests": 1,
+        "versions": 1,
+        "outbox": 1,
+        "notifications": 0
+      },
+      "rollback_restores_baseline": true,
+      "rollback_idempotent": true,
+      "after_rollback": {
+        "contests": 1,
+        "versions": 2,
+        "outbox": 2,
+        "notifications": 0
+      }
+    },
+    {
+      "database": "postgresql",
+      "passed": true,
+      "proposal_id": "tpp-a13040544752b4f1f4e8fd16a68762aa",
+      "real_supported_update": {
+        "titulo": {
+          "label": "título",
+          "old": "Título anterior controlado para prova de atualização",
+          "new": "P.M. de Santana de Pirapama - Concurso Público"
+        }
+      },
+      "evidence": {
+        "value": "P.M. de Santana de Pirapama - Concurso Público",
+        "state": "supported",
+        "reason": null,
+        "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+        "items": [
+          {
+            "evidence_id": "ev-87505cd083",
+            "artifact_id": "art-e1e81cf578",
+            "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+            "source_url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf",
+            "page_number": 1,
+            "snippet": "PREFEITURA MUNICIPAL DE SANTANA DE PIRAPAMA\nESTADO DE MINAS GERAIS\nEdital de abertura de Concurso Público nº 01/2026\nOrganização:\nPágina 1 de 46\nO Prefeito do MUNICÍPIO DE SANTANA DE\nPIRAPAMA, no uso de suas atribuições lega",
+            "json_path": null,
+            "method": "deterministic-regex",
+            "method_version": "tenderproof-fields/1.2",
+            "validation": {
+              "ok": true,
+              "code": null,
+              "message": null
+            }
+          }
+        ]
+      },
+      "unknown_field": {
+        "name": "inscricao_fim",
+        "state": "unknown",
+        "value": null,
+        "reason": "período direto de inscrição não identificado; datas de outras etapas não são inscrições"
+      },
+      "unknown_approval_rejected": true,
+      "preserved_controlled_values": {
+        "inscricao_inicio": "2026-04-01",
+        "inscricao_fim": "2026-04-19",
+        "salario_min": 3500,
+        "salario_max": 4000
+      },
+      "proposal_creation_request_idempotent": true,
+      "application_idempotent": true,
+      "after_apply": {
+        "contests": 1,
+        "versions": 1,
+        "outbox": 1,
+        "notifications": 0
+      },
+      "rollback_restores_baseline": true,
+      "rollback_idempotent": true,
+      "after_rollback": {
+        "contests": 1,
+        "versions": 2,
+        "outbox": 2,
+        "notifications": 0
+      }
+    }
+  ],
+  "limitations": [
+    "The prior canonical title, dates and salary are controlled test values, not historical EXAME data.",
+    "Unknown dates are observed in the real PDF extraction; no conflicting field was fabricated.",
+    "This proves title update, not a real change between two editions of the source.",
+    "Outbox is recorded but no notifications are delivered."
+  ],
+  "temporary_volume_removed": true,
+  "passed": true,
+  "postgres_container_cleanup": {
+    "removed": true,
+    "absence_confirmed": true,
+    "image": "postgres:17-alpine",
+    "loopback_only": true
+  }
+}

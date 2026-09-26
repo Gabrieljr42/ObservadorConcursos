@@ -1,0 +1,31 @@
+{
+  "schema": "t012.avancasp.backend-pin-r4-independent-review.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only backend integration review; no live, pilot, DB, or source edits",
+  "identity": {
+    "source": "avancasp_open",
+    "external_id": "272",
+    "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+    "accepted_revisions": [
+      {"sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "bytes": 750381, "pages": 48},
+      {"sha256": "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd", "bytes": 749582, "pages": 49}
+    ],
+    "legacy": {"sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a", "bytes": 742298, "pages": 48}
+  },
+  "checks": {
+    "pins": "PASS: each new PDF uses its own exact SHA/bytes/pages/URL tuple; legacy pin remains separate",
+    "identity": "PASS: source, external_id, detail URL, page order, literal CONCURSO PÚBLICO 01/2026 and Cabreúva markers are bound",
+    "guards": "PASS: empty/error/truncated/U+FFFD, SHA/bytes/URL, source/external drift and page count/order fail closed or produce no supported promotion",
+    "fields": "PASS: 14 cargos are produced per accepted revision with fresh literal evidence; no ordering/recency inference is added",
+    "dispatch": "PASS: fields.py exact source/external branch calls the pinned parser; CREATE/KLC paths remain untouched",
+    "side_effects": "PASS: offline artifacts only; no proposal/apply/catalog effects"
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_avancasp_r4_dispatch.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py backend/tests/test_reviewed_run_import.py", "result": "20 passed"},
+    {"command": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/avancasp_t012.py backend/app/tenderproof/fields.py backend/tests/test_avancasp_r4_dispatch.py", "result": "PASS"},
+    {"command": "shared fields dispatcher with source drift", "result": "no supported Avança promotion"}
+  ],
+  "warnings": ["The module docstring says inert/not imported by shared extractor, but fields.py now explicitly dispatches to it; documentation wording is stale, not a runtime defect."],
+  "live_mutation": false
+}

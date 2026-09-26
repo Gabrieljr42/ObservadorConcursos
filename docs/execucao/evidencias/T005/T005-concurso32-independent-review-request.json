@@ -1,0 +1,17 @@
+{
+  "schema": "t005.independent-review-request.v1",
+  "scope": "concurso32/source47/elo_open/external129",
+  "artifact_id": "art-07b137af65",
+  "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+  "parser": "backend/app/tenderproof/barra_longa_parser.py",
+  "review_targets": [
+    "sete cargos/microáreas e contagem de vagas ampla/PcD",
+    "remuneração, unidade, jornada, requisitos, taxa e prova/TAF",
+    "datas de inscrição/prova e ausência de retificações/publicações não comprovadas",
+    "fail-closed de identidade, SHA/bytes, drift e U+FFFD",
+    "ReviewedRun owner_user_id=1, dry-run e proposta isolada sem importação"
+  ],
+  "status": "requested",
+  "catalogue_mutated": false,
+  "network": false
+}

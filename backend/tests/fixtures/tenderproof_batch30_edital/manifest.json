@@ -1,0 +1,581 @@
+{
+  "provenance": "official bounded HTTP capture; no PDF bytes or complete coverage validated",
+  "pages": [
+    {
+      "source": "idecan_open",
+      "url": "https://portal.concursos.idecan.org.br/edital/index/abertos",
+      "observed_at": "2026-09-08T00:01:32.908719+00:00",
+      "kind": "listing",
+      "file": "idecan_open-0.html",
+      "bytes": 20920,
+      "sha256": "be76a1a680a14205bca7a0af3736579d3acd30ef4d6a75740a8e42db7761d8a1",
+      "status": 200,
+      "observed_tabs": [
+        {
+          "label": "Política de Privacidade",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos"
+        },
+        {
+          "label": "Aceitar",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos"
+        },
+        {
+          "label": "Concursos e seletivos",
+          "url": "https://portal.concursos.idecan.org.br/edital"
+        },
+        {
+          "label": "",
+          "url": "https://portal.concursos.idecan.org.br/edital"
+        },
+        {
+          "label": "Futuros",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos#futuros"
+        },
+        {
+          "label": "INSCRIÇÕES ABERTAS",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos#abertos"
+        },
+        {
+          "label": "Em andamento",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos#andamento"
+        },
+        {
+          "label": "Finalizados",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos#encerrados"
+        },
+        {
+          "label": "SUSPENSOS E CANCELADOS",
+          "url": "https://portal.concursos.idecan.org.br/edital/index/abertos#suspensos"
+        }
+      ],
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://concursos.idecan.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://concursos.idecan.org.br/politicas.pdf"
+        }
+      ]
+    },
+    {
+      "source": "idecan_open",
+      "url": "https://portal.concursos.idecan.org.br/edital/ver/24",
+      "observed_at": "2026-09-08T00:01:33.336607+00:00",
+      "kind": "detail",
+      "file": "idecan_open-1.html",
+      "bytes": 19020,
+      "sha256": "cc6cf4c4d594f07079bea15889f4637cb2206f95a1d12a95cb8e45bcca84a8bb",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://concursos.idecan.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://concursos.idecan.org.br/politicas.pdf"
+        }
+      ]
+    },
+    {
+      "source": "idecan_open",
+      "url": "https://portal.concursos.idecan.org.br/edital/ver/8",
+      "observed_at": "2026-09-08T00:01:33.493031+00:00",
+      "kind": "detail",
+      "file": "idecan_open-2.html",
+      "bytes": 25838,
+      "sha256": "822032cda5fb8d2beea0e703ff1d850da93e268a97d42cb5d294f7578c71fac4",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://concursos.idecan.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://concursos.idecan.org.br/politicas.pdf"
+        }
+      ]
+    },
+    {
+      "source": "idecan_open",
+      "url": "https://portal.concursos.idecan.org.br/edital/ver/6",
+      "observed_at": "2026-09-08T00:01:33.603038+00:00",
+      "kind": "detail",
+      "file": "idecan_open-3.html",
+      "bytes": 17767,
+      "sha256": "f8d1b07c93642f63c02c2475a9b9e93f7c3dd4f52350546ce961c6e8e52fe867",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://concursos.idecan.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://concursos.idecan.org.br/politicas.pdf"
+        }
+      ]
+    },
+    {
+      "source": "aguia_open",
+      "url": "https://portal.institutoaguia.org.br/edital",
+      "observed_at": "2026-09-08T00:01:33.704882+00:00",
+      "kind": "listing",
+      "file": "aguia_open-0.html",
+      "bytes": 47434,
+      "sha256": "f0b4e47e5b7fa24db8579e44ad77c76353596bbfca7e765a77c813aecb21228a",
+      "status": 200,
+      "observed_tabs": [
+        {
+          "label": "Política de Privacidade",
+          "url": "https://portal.institutoaguia.org.br/edital"
+        },
+        {
+          "label": "Aceitar",
+          "url": "https://portal.institutoaguia.org.br/edital"
+        },
+        {
+          "label": "Concursos e seletivos",
+          "url": "https://portal.institutoaguia.org.br/edital"
+        },
+        {
+          "label": "",
+          "url": "https://portal.institutoaguia.org.br/edital"
+        },
+        {
+          "label": "Futuros",
+          "url": "https://portal.institutoaguia.org.br/edital#futuros"
+        },
+        {
+          "label": "INSCRIÇÕES ABERTAS",
+          "url": "https://portal.institutoaguia.org.br/edital#abertos"
+        },
+        {
+          "label": "Em andamento",
+          "url": "https://portal.institutoaguia.org.br/edital#andamento"
+        },
+        {
+          "label": "Finalizados",
+          "url": "https://portal.institutoaguia.org.br/edital#encerrados"
+        },
+        {
+          "label": "SUSPENSOS E CANCELADOS",
+          "url": "https://portal.institutoaguia.org.br/edital#suspensos"
+        }
+      ],
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        }
+      ]
+    },
+    {
+      "source": "aguia_open",
+      "url": "https://portal.institutoaguia.org.br/edital/ver/43",
+      "observed_at": "2026-09-08T00:01:34.079252+00:00",
+      "kind": "detail",
+      "file": "aguia_open-1.html",
+      "bytes": 62352,
+      "sha256": "639d7e9fd5b59c2e37edcd55b44ee2c8b58bf5db0b28400ae8c3ac9a613d8c76",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/70ba6b68d6abdb6b86e48a1c12bd0308.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/5feee260049149cf0d0e8e39597cef02.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/228c02a487dd55f5b8aba6f6cea980ad.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/cccae94ab0326304cdfba4281b213a03.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/f062559f7569bfbd131f3045a122071e.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/abefa7fcded03448a96f7696f48db67e.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/415dde7873acd71504ea34916cc6a107.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/05bd0926f2bfcac351c5e3a28e115092.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/b982ade6f7f3e88b2aabb986b38364ea.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/b366b41aa6fba21a64cf46486b294ca7.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/ea071b1d2fd9a1192c21c55d81637e68.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/0a93abb93355e42ce18768f9f59c0867.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/89834aae1e0cd5c2e5aa0706fe7bf13b.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/ad1f24c2ff74fd37c9da72f6e08b664b.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/d297355e0927bcae44f7a7651f4492b7.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/5230faa5c372c15dfbb34c89b8412eb2.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/0b78a63cf3af226081330ff4c5ef23f1.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/4993a708428b8b7c268205136a123a82.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/734c75d468ff6eeac724aaffec432f27.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/99570a8366d7764052628d8733d63a70.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/4d2a6ef5018bfeb205d28fec8761623e.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf"
+        }
+      ]
+    },
+    {
+      "source": "aguia_open",
+      "url": "https://portal.institutoaguia.org.br/edital/ver/42",
+      "observed_at": "2026-09-08T00:01:34.296474+00:00",
+      "kind": "detail",
+      "file": "aguia_open-2.html",
+      "bytes": 50154,
+      "sha256": "e898d73b549557bdf369d4fce310bd3944e4f376a30dca4f0f634eef8facf88c",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/7aef769b3d47f18e513fe47ed4fd792d.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/7e693e006124028a5b719f032391d6f4.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/55a2f328f5549d29d49e24a1651534ab.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/3b6983ea37c725078447885604d1d7c1.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/43b84dc4b27642d7006809056cf3c513.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/ac438c6186c364a3a85b3a8653fc791c.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/55ec526ff04620a900d0fdac06fc1271.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/92dd78a6be0ccb7eb81541f8f66bb2e5.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/6c73174996833b35b2247806b2d4030a.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/81e48a0794ac84de251f943c9d8cb60c.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/fef9362efae6ea6431c0b21fca820570.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/83b2c98bdb0f73ff993a2e67b20d8eb6.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/f1e576749057fc5f10f17e85337081e6.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/2e783b3883d2af68353136d16d34026e.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/dacf45d4357aaaa2d0f883a37ed458cc.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/37000e78bf5b7fa2eb16084bf4aac620.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/17958a0f5dedcc7a5eeb6149010fea67.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/8d987126b42168979a55967147de593a.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/42/52c9825ce2640927288bd56b546dc94a.pdf"
+        }
+      ]
+    },
+    {
+      "source": "aguia_open",
+      "url": "https://portal.institutoaguia.org.br/edital/ver/40",
+      "observed_at": "2026-09-08T00:01:34.494672+00:00",
+      "kind": "detail",
+      "file": "aguia_open-3.html",
+      "bytes": 75724,
+      "sha256": "f35db30bb03132195667e7e88db77a418efb9b7de50b43c8d4895aa3aefc0d35",
+      "status": 200,
+      "documents": [
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "Termos de uso",
+          "url": "https://institutoaguia.org.br/termos.pdf"
+        },
+        {
+          "label": "Privacidade",
+          "url": "https://institutoaguia.org.br/politicas.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/b49ad1a1954c343d49ce5a976bc30450.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/92ffb9bea3fbf432f6062b86319859e2.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/0d78fc409a64f6abca2b141a3f11339c.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/6263fadaab7f5094b2424f776b79d040.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/24c08828483209dee4701145f7170d88.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/5510be79fc2a245f286179cc211dc98b.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/79763d0823b9878da25e414aa6d8e952.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/6d2149983e3332e2ee16aa0b997a9253.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/0f76feb7a0b99064b570b803106b3011.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/5eb581acb9fac7740f5b6409fdf941d8.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/7e387ef03fcb54b609a25af3db2822fd.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/e23ac30089514a688886361a62168d08.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/3bf3d326ffe79903cc66ecc811da2978.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/77f2c3e4ba90d03871269ff169831f95.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/c7b374bb700adde9358dafd970e68948.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/93bf2bd66e09aa82caa013023269a1d9.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/34387241e8b90a12c132b89076b5ff93.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/93f88f9478118cb48b123fac1de02cd7.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/748557a8cb7f0f8070202c36f32edc6b.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/58f1cfaab07b748dafa29895104decef.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/320fca95b259e032e4afe1503fd5bcd4.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/b4bde798f4ca5bf4d395a20b22f99aaa.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/d94442c9828f2db739155a316b5b0310.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/b8fb29eb769169a1cad05f03b341e1dc.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/043601e2fdbf5f798e9b903d07e61382.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/b12f49aee8b33e0f3aef68636b4a11a3.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/a0c5e69eab3d9fe98a5692e72f598170.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/8195d7318de3ed0ef71be0ffffebe02c.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/f808a0f121fd2f9a93a97fc632d4de7b.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/f5d1dd3fe430fda4572374c31171312f.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/de1a6652a8b47fb6e8b1392921f62a39.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/e910fb93ca260176eb0463291b52dcd3.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/0e5a8a5df04177e8e9c3cfdacd01dc5f.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/bacb84e43ce3732cdc7e4fd4861214e9.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/c71cee80b3231f266309b0dd1a31af1f.pdf"
+        },
+        {
+          "label": "DOWNLOAD",
+          "url": "https://cdn.institutoaguia.org.br/edital/1/40/6fe64fa899edd5ca3526d96136ce0daa.pdf"
+        }
+      ]
+    }
+  ]
+}

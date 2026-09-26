@@ -1,0 +1,31 @@
+{
+  "schema": "t012.cpcon_open.live-eligible-empty-r4.v1",
+  "status": "BLOCKED",
+  "run_id": "tp-reviewed-d5a97b3c28480927445e02c413470637",
+  "run_reuse": "forbidden; stale run is diagnostic only",
+  "artifact": {
+    "sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "byte_len": 498894,
+    "pages": 13
+  },
+  "reproduction": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_cpcon_t012.py -k stale_r2_evidence",
+    "result": "PASS: stale title evidence is rejected; fresh extraction has no cargos field",
+    "path": "extract_pages_isolated -> fields.extract_fields -> publication._revalidate"
+  },
+  "cause": {
+    "title": "live envelope evidence was manually/previously normalized and does not equal current fresh title evidence",
+    "identity": "orgao/edital can reproduce only when envelope uses current cpcon_t012 evidence; older long/manual snippets fail exact evidence matching",
+    "cargos": "current integrated parser dispatches CPCON identity only; generic extractor emits no cargos field, so reviewed cargo evidence cannot be reproduced",
+    "eligible": "empty is correct fail-closed behavior, not a PDF SHA failure"
+  },
+  "safe_new_envelope": {
+    "never_reuse_run_id": true,
+    "regenerate_from": "same preserved PDF bytes and SHA above",
+    "fields": "only fresh extract_fields-supported title/orgao/edital_numero with exact evidence objects; omit cargos until a source-specific cargo parser is integrated",
+    "target": "require a newly allocated positive canonical concurso_id; do not reserve or infer one",
+    "checks": ["ReviewedRun schema", "artifact SHA/byte length", "_revalidate exact evidence", "dry-run only"]
+  },
+  "mutations": {"proposal": false, "apply": false, "db": false, "network": false},
+  "next_gate": "integrator creates a new SHA-bound envelope from fresh parser output and separately reviews cargo-parser integration"
+}

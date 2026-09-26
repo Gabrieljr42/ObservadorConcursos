@@ -1,0 +1,67 @@
+{
+  "schema": "t010.id7.independent-preimport-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "DEVOLVE",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id7.pdf",
+    "pages_recomputed": 19,
+    "bytes_recomputed": 791715,
+    "sha256_recomputed": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+    "envelope_match": true
+  },
+  "identity": {
+    "source": "abcp_open",
+    "external_id": "2868",
+    "concurso_id": 7,
+    "title": "Câmara Municipal de Garça/SP",
+    "detail_url": "https://abcp.selecao.net.br/informacoes/2868/",
+    "artifact_url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+    "owner_user_id": 1,
+    "identity_match": true
+  },
+  "parser_check": {
+    "implementation": "backend/app/tenderproof/abcp_garca_jobs.py",
+    "pin": "abcp_open/2868/SHA 00dc6e...f497b2a/791715 bytes",
+    "page": 1,
+    "state": "supported",
+    "value_equal": true,
+    "units_equal": false,
+    "parser_units": {"remuneracao": "BRL/mês", "jornada": "horas semanais"},
+    "envelope_units": {"remuneracao": "BRL/m�s", "jornada": "horas semanais"},
+    "rows": 1,
+    "cargo": "Técnico Legislativo; 1 AC + CR; AC 1/PcD 0; R$3378.77/mês; 35 horas; Ensino Médio completo; benefícios R$680,00 e vale-transporte",
+    "taxa_and_prova": "ausentes/pending; não promovidos"
+  },
+  "evidence_check": {
+    "count": 2,
+    "pages": [1, 1],
+    "sha_and_url": "match",
+    "method": "deterministic-regex/tenderproof-fields/1.21",
+    "literal_verbatim": false,
+    "failure": "os dois snippets do envelope têm U+FFFD (�) no lugar de acentos; parser independente produz TÉCNICO/Ensino médio/BENEFÍCIOS e o benefício 'Além/salário/Câmara/Garça/benefício/Auxílio/alimentação' com caracteres literais",
+    "units_failure": "BRL/m�s contém U+FFFD; não é unidade canônica"
+  },
+  "run_id": {
+    "receipt_current": "tp-reviewed-dbfa3a208cd257800069d95f695481bf",
+    "recomputed_current": "tp-reviewed-dbfa3a208cd257800069d95f695481bf",
+    "recomputed_after_canonical_parser_units_and_evidence": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "finding": "Correção de units/snippets altera a identidade semântica; não pode reutilizar dbfa3a..."
+  },
+  "validation": {
+    "dry_run_current": "validated",
+    "isolated_parser_tests": "5 passed (including SHA fail-closed)",
+    "baseline": "preflight preserva cargos=null; diff material esperado apenas cargos",
+    "network": false,
+    "pilot_db": false,
+    "proposal_created": false
+  },
+  "required_corrections": [
+    "Regenerar o envelope integralmente em UTF-8, substituindo U+FFFD por texto literal do parser nas duas Evidence e em units BRL/mês.",
+    "Recalcular ReviewedRun/receipt/preflight e usar o novo run_id tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e.",
+    "Reexecutar dry-run e revisão independente antes de backup/import/proposta."
+  ],
+  "gate_conclusion": "DEVOLVE: parser e valores materiais estão corretos, mas o envelope atual não tem units/evidências canônicas; liberar backup/import/proposta somente após regeneração e novo aceite."
+}

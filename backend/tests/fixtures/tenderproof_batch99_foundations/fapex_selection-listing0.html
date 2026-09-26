@@ -1,0 +1,578 @@
+ 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head><link rel="shortcut icon" href="/Imagens/favicon.png" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="Imagens/favicon.png" rel="Shortcut Icon" /><link href="Estilos/Login.css" rel="stylesheet" type="text/css" /><link href="Estilos/Geral.css" rel="stylesheet" type="text/css" /><link href="Bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" /><link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="Scripts/sweetalert2.js" type="text/javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeP71csAAAAALkPbZmen8rAke7rLmaxcpbqFJWL" type="text/javascript"></script>
+    <title>
+	LOGIN - PORTAL RH FAPEX
+</title>
+    <script type="text/javascript">
+        function pageLoad(sender, args) {
+
+            var txtMdCadastroCPF = document.getElementById('txtMdCadastroCPF');
+            $(txtMdCadastroCPF).mask('999.999.999-99');
+
+            var txtCPF = document.getElementById('txtCPF');
+            $(txtCPF).mask('999.999.999-99');
+
+            var txtMdSenhaCPF = document.getElementById('txtMdSenhaCPF');
+            $(txtMdSenhaCPF).mask('999.999.999-99');
+
+            var txtMdCadastroDataNascimento = document.getElementById('txtMdCadastroDataNascimento');
+            $(txtMdCadastroDataNascimento).mask('99/99/9999');
+
+            var txtMdAtivacaoCPF = document.getElementById('txtMdAtivacaoCPF');
+            $(txtMdAtivacaoCPF).mask('999.999.999-99');
+
+            var txtMdAtivacaoDataNascimento = document.getElementById('txtMdAtivacaoDataNascimento');
+            $(txtMdAtivacaoDataNascimento).mask('99/99/9999');
+
+            var RTCPeerConnection = /*window.RTCPeerConnection ||*/ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+
+            if (RTCPeerConnection) (function () {
+                var rtc = new RTCPeerConnection({
+                    iceServers: []
+                });
+                if (1 || window.mozRTCPeerConnection) {
+                    rtc.createDataChannel('', {
+                        reliable: false
+                    });
+                };
+                rtc.onicecandidate = function (evt) {
+                    if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);
+                };
+                rtc.createOffer(function (offerDesc) {
+                    grepSDP(offerDesc.sdp);
+                    rtc.setLocalDescription(offerDesc);
+                }, function (e) {
+                    console.warn("offer failed", e);
+                });
+                var addrs = Object.create(null);
+                addrs["0.0.0.0"] = false;
+
+                function updateDisplay(newAddr) {
+                    if (newAddr in addrs) return;
+                    else addrs[newAddr] = true;
+                    var displayAddrs = Object.keys(addrs).filter(function (k) {
+                        return addrs[k];
+                    });
+
+                    document.getElementById('hdfLocalIP').value = displayAddrs.join(" or perhaps ") || "n/a";
+                }
+
+                function grepSDP(sdp) {
+                    var hosts = [];
+                    sdp.split('\r\n').forEach(function (line) {
+                        if (~line.indexOf("a=candidate")) {
+                            var parts = line.split(' '),
+                                addr = parts[4],
+                                type = parts[7];
+                            if (type === 'host') updateDisplay(addr);
+                        } else if (~line.indexOf("c=")) {
+                            var parts = line.split(' '),
+                                addr = parts[2];
+                            updateDisplay(addr);
+                        }
+                    });
+                }
+            })();
+        }
+
+        // PREVENÇÃO DO MALDITO BACKSPACE.
+        $(document).unbind('keydown').bind('keydown', function (event) {
+            var doPrevent = false;
+            if (event.keyCode === 8) {
+                var d = event.srcElement || event.target;
+                if ((d.tagName.toUpperCase() === 'INPUT' && (d.type.toUpperCase() === 'TEXT' ||
+                    d.type.toUpperCase() === 'PASSWORD' || d.type.toUpperCase() === 'FILE' || d.type.toUpperCase() === 'EMAIL'))
+                    || d.tagName.toUpperCase() === 'TEXTAREA') {
+                    doPrevent = d.readOnly || d.disabled;
+                }
+                else {
+                    doPrevent = true;
+                }
+            }
+
+            if (doPrevent) {
+                event.preventDefault();
+            }
+        });
+
+        function GetReCATPCHAToken(buttonUniqueID, action) {
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6LeP71csAAAAALkPbZmen8rAke7rLmaxcpbqFJWL', { action: action }).then(function (token) {
+
+                    document.getElementById('hdfReCAPTCHAToken').value = token;
+                    console.log("novo token: " + token);
+                    console.log(buttonUniqueID);
+                    __doPostBack(buttonUniqueID, '')
+
+                });
+            });
+
+            return false;
+        }
+
+        function ConfirmarComRecaptcha(title, message, buttonName, action) {
+            Swal.fire({
+                title: title,
+                text: message,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Confirmar',
+                cancelButtonText: 'Cancelar',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    GetReCATPCHAToken(buttonName, action);
+                }
+            });
+
+            return false;
+        }
+
+        function InformarPontoDigital() {
+            Swal.fire({
+                title: 'Deseja registrar seu Ponto Digital?',
+                text: 'Basta clicar no botão abaixo para ser direcionado até a tela de registro do ponto!',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Registrar Ponto',
+                cancelButtonText: 'Acessar o Portal',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href ='/portalrh/PontoDigital/Default.aspx';
+                }
+            });
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="./" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="_TSM_HiddenField_" id="_TSM_HiddenField_" value="w06tO1fS9B_G3s68aUZFuxlXBY4KMfmwWX00MKHWX0k1" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2vDBKI0NhqCw4QN+SkUhn6embzMoX8bjEiFGhPhs3v1ZXHiaynZR+BzW8XhHR+FltliZXFtL13hFD3O3vpcYrph1MxzFkZzUI8qovCh8NXY=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/portalrh/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZGBhQ00ctPgneqchahV7ibciGgncx0V0DGnQOuoCoX6UIaFI8hTpUpbx-EKivBgvNg2&amp;t=639190736600000000" type="text/javascript"></script>
+
+
+<script src="/portalrh/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1OLVls5ygyid9WB0i37UWHdHv_GZ2g6fG51rDj-MKYg7tML7s8YBpNBl4OksH4EV_R7mJi1yy4K9tnxa9Gd9miaWAxV4rwSPVs1ehgh23XDRgc9nTTHX1vYuBrEHK07cnw2&amp;t=ffffffff9fe38677" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"pt-BR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"R$","NaNSymbol":"NaN","CurrencyNegativePattern":9,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":2,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135586000000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy HH:mm:ss","LongDatePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d \u0027de\u0027 MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom","seg","ter","qua","qui","sex","sáb"],"ShortestDayNames":["D","S","T","Q","Q","S","S"],"DayNames":["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"],"AbbreviatedMonthNames":["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez",""],"MonthNames":["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",""],"IsReadOnly":true,"NativeCalendarName":"Calendário gregoriano","AbbreviatedMonthGenitiveNames":["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez",""],"MonthGenitiveNames":["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="/portalrh/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LQv999tqq7f9WAAn7nHnTWzG9gM2YgeYk7-VVuGULlNNX3zNeZ-ZaXy3lsjo8ky_T2w4TUVILHEY0lPqzoKEl-7Ioaoqm_L853aIsagBjwMZ0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/portalrh/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScGRYjBqmdOvdtgf1THvz-RFBnRxogpE3mrbAmNdEw6z-Fgw21TN7SOAB8olx_CGqDytZ8Y24RpCOj2x3q8gk0R6fo_txu5j0VOX9PrHviiue0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/portalrh/default.aspx?_TSM_CombinedScripts_=True&amp;v=w06tO1fS9B_G3s68aUZFuxlXBY4KMfmwWX00MKHWX0k1&amp;_TSM_Bundles_=&amp;cdn=False" type="text/javascript"></script>
+<script src="/portalrh/ScriptResource.axd?d=XGoPW3Unw0ILT0eb9sSUa6iBnYEiPaXdPhUWafd7nrll2ySMNzf9dePIcSo3LBahynUdeL2rKX8jYKTqMiImcVqVax3ufX2u5NgckgXJkw4fH03fBB8QQei7h_1QtU-oCQShQGXGP0qu8xIGOXYOwg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/portalrh/ScriptResource.axd?d=uvA9ANM76Fbpm1FfUlagnQVEBcPhXzoyrelyycP-mZLjPG7SVg5G2TMhZxqKxgqE9ojfdUxSAi_NsCR1zrZh0Cm2bzmIRQG66ml4O4V4MqqOIZ_Kk4iHxn2Xt6KZ1qP0vhB9PY-fZ-LLy8xCvtLGSQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1DEED4E5" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="30vDxHz6Q3avHX5UehFs+JCEPlchNe7ZA9KHxzjYcxTA3WNwfmAN91cDPfsvLvks4tW40bHuV8b4VS1Yz4AoF5wHRbfidnMFlvgdGUDHyo3NBYStyPsbNemF2BHGpYyMPwI0geO7Z764wz9m8Y7qehNhdroM7vfN3aJnmawS4Ck6AzVu/Ryig6p/iGuffpkelKPqkSDJ+aTmvm3coHfOSCxzt5mdC2PlB8Qj83pRmJV+UXLyN1XVGPoDVNYAtdlk8LNeK9zJat/EcQUbH8+hpG8kX7kTEWE4gh9aJARIkGvw0xC2aK8ctVGqlloY0pFQ/v2E9FUOM98gUNlOlNGuqfWlxauQf7WCcZdm6EOmmJZy6/ow/POYxNkaN6VcQh7tQ8ktBicMcAZYnnDJZRa0tHtPZFGnWUb2T+Je1KOYpM3hhUl1c5G5bcfMi74entruLQv8dO7yGeviumtza99St8SvJKsH5sjuZmPIgvkJRSMsWiXgkbVTm5yIDFsNRd+PLQcmWvOSTu8KZ8FVnQgfBdAjFfugqKFEO4K1P63/1aB0XLLIQ0Wx6FaiACzTCWND" />
+</div>
+        <div class="hide">
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ToolkitScriptManager1', 'form1', ['tupnLogin','upnLogin','tupnCadastro','upnCadastro','tupnLembrarSenha','upnLembrarSenha','tupnAtivacao','upnAtivacao'], [], [], 90, '');
+//]]>
+</script>
+
+            <script type="text/javascript">
+                Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+                Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+                function BeginRequestHandler(sender, args) {
+                    var elem = args.get_postBackElement();
+                    ActivateAlertDiv('block', 'ProgressPostBack');
+                    elem.disabled = true;
+                    elem.value = "Processando...";
+
+                }
+                function EndRequestHandler(sender, args) {
+                    ActivateAlertDiv('none', 'ProgressPostBack');
+                }
+
+                function ActivateAlertDiv(visstring, elem) {
+                    var adiv = $get(elem);
+                    adiv.style.display = visstring;
+                }
+            </script>
+        </div>
+        <div id="upnLogin">
+	
+                <div class="hide">
+                    <input type="hidden" name="hdfLocalIP" id="hdfLocalIP" />
+                    <input type="hidden" name="hdfReCAPTCHAToken" id="hdfReCAPTCHAToken" />
+                </div>
+                <div class="form-signin">
+                    <center>
+                        <img id="ImgLogoRH" title="PORTAL RH FAPEX" src="Imagens/logo_portal_rh_medium.png" />
+                        <h4 class="text-info space-20">Login</h4>
+                    </center>
+                    <div class="form-inline transparent-fix">
+                        <div class="form-signin-control">
+                            <table cellpadding="4" style="margin: auto; width: 254px;">
+                                <tr>
+                                    <td align="right"><strong>CPF:</strong></td>
+                                    <td>
+                                        <input name="txtCPF" type="text" id="txtCPF" style="width:150px;" /></td>
+                                    <td>
+                                        <span id="RequiredFieldValidator1" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image1" src="Imagens/required.png" /></span></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><strong>Senha:</strong></td>
+                                    <td>
+                                        <input name="txtHash" type="password" id="txtHash" style="width:150px;" /></td>
+                                    <td>
+                                        <span id="RequiredFieldValidator2" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image2" src="Imagens/required.png" /></span></td>
+                                </tr>
+                            </table>
+                            <center class="space-10">
+                                <input type="submit" name="btnLogin" value="Entrar" onclick="return GetReCATPCHAToken(this.name, &#39;login&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnLogin&quot;, &quot;&quot;, true, &quot;login&quot;, &quot;&quot;, false, false))" id="btnLogin" class="btn btn-info" />
+                            </center>
+                        </div>
+                        <center class="space-20">
+                            <span>Não tem cadastro? Clique <a href="#md-cadastro" role="button" data-toggle="modal">aqui</a> e preencha o formulário</span>
+                        </center>
+                        <center>
+                            <span>Esqueceu a senha? Clique <a href="#md-lembrar-senha" role="button" data-toggle="modal">aqui</a> para gerar uma nova</span>
+                        </center>
+                    </div>
+                </div>
+                <div class="alert hide" id="msg-login" style="width: 400px; margin: 10px auto 0 auto;">
+                    <button type="button" class="close" data-dismiss="alert">
+                        &times;</button>
+                    <h4>
+                        <span id="lblTituloMsg"></span></h4>
+                    
+                </div>
+            
+</div>
+        <div id="md-cadastro" role="dialog" style="width: 550px; margin-left: -275px;"
+            aria-labelledby="md-cadastro-header" aria-hidden="true" class="modal fade hide">
+            <div id="upnCadastro">
+	
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="md-cadastro-header">Solicitação de Cadastro</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-inline">
+                            <div class="control-group">
+                                <label class="label label-info">Dados Pessoais</label>
+                            </div>
+                            <div class="control-group">
+                                <strong>CPF:</strong>
+                                <input name="txtMdCadastroCPF" type="text" id="txtMdCadastroCPF" onblur="javascript:__doPostBack(&#39;txtMdCadastroCPF&#39;, &#39;TextChanged&#39;);" style="width:110px;" />
+                                <span id="RequiredFieldValidator3" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image3" src="Imagens/required.png" /></span>
+                                
+                            </div>
+                            <div class="control-group">
+                                <strong>Nome Completo:</strong>
+                                <input name="txtMdCadastroNome" type="text" maxlength="150" id="txtMdCadastroNome" style="width:350px;" />
+                                <span id="RequiredFieldValidator4" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image4" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Email:</strong>
+                                <input name="txtMdCadastroEmail" type="text" maxlength="100" id="txtMdCadastroEmail" style="width:350px;" />
+                                <span id="RequiredFieldValidator5" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image5" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Data de Nascimento:</strong>
+                                <input name="txtMdCadastroDataNascimento" type="text" id="txtMdCadastroDataNascimento" style="width:110px;" />
+                                <span id="RequiredFieldValidator6" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image6" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <label class="label label-info">Dados para Acesso</label>
+                            </div>
+                            <div class="control-group">
+                                <strong>Senha:</strong>
+                                <input name="txtMdCadastroHash" type="password" id="txtMdCadastroHash" style="width:150px;" />
+                                <span id="RequiredFieldValidator8" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image8" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Confirmação de Senha:</strong>
+                                <input name="txtMdCadastroConfirmaHash" type="password" id="txtMdCadastroConfirmaHash" style="width:150px;" />
+                                <span id="CompareValidator1" style="color:Red;visibility:hidden;">Senhas Diferentes!!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="btnMdCadastroSolicitar" value="Solicitar" onclick="return ConfirmarComRecaptcha(&#39;Solicitação de Cadastro&#39;, &#39;Confirma os dados digitados para criação do cadastro?&#39;, this.name, &#39;signup&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnMdCadastroSolicitar&quot;, &quot;&quot;, true, &quot;cadastro&quot;, &quot;&quot;, false, false))" id="btnMdCadastroSolicitar" class="btn btn-info" />
+                        <input type="submit" name="btnMdCadastroCancelar" value="Cancelar" id="btnMdCadastroCancelar" class="btn" />
+                    </div>
+                
+</div>
+        </div>
+        <div id="md-lembrar-senha" role="dialog" style="width: 550px; margin-left: -275px;"
+            aria-labelledby="md-lembrar-senha-header" aria-hidden="true" class="modal fade hide">
+            <div id="upnLembrarSenha">
+	
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="md-lembrar-senha-header">Gerar Nova Senha</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert">
+                            <i class="icon-circle-arrow-right"></i>
+                            Digite seu CPF e Email cadastrado anteriormente para que sua senha seja gerada com sucesso.
+                        </div>
+                        <div class="form-inline">
+                            <div class="control-group">
+                                <strong>CPF:</strong>
+                                <input name="txtMdSenhaCPF" type="text" id="txtMdSenhaCPF" style="width:110px;" />
+                                <span id="RequiredFieldValidator9" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image9" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Email:</strong>
+                                <input name="txtMdSenhaEmail" type="text" maxlength="100" id="txtMdSenhaEmail" style="width:350px;" />
+                                <span id="RequiredFieldValidator10" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image10" src="Imagens/required.png" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="btnMdSenhaSolicitar" value="Solicitar" onclick="return ConfirmarComRecaptcha(&#39;Redefinir Senha&#39;, &#39;Confirma os dados digitados para reenvio da senha?&#39;, this.name, &#39;password_reset&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnMdSenhaSolicitar&quot;, &quot;&quot;, true, &quot;senha&quot;, &quot;&quot;, false, false))" id="btnMdSenhaSolicitar" class="btn btn-info" />
+                        <input type="submit" name="btnMdSenhaCancelar" value="Cancelar" id="btnMdSenhaCancelar" class="btn" />
+                    </div>
+                
+</div>
+        </div>
+        <div id="md-ativacao" role="dialog" style="width: 500px; margin-left: -250px;"
+            aria-labelledby="md-ativacao-header" aria-hidden="true" class="modal fade hide">
+            <div id="upnAtivacao">
+	
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="md-ativacao-header">Gerar Email de Ativação</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert">
+                            <i class="icon-circle-arrow-right"></i>
+                            Confirme seus dados cadastrados anteriormente para que um novo link de ativação seja enviado para o email digitado.
+                        </div>
+                        <div class="form-inline">
+                            <div class="control-group">
+                                <strong>CPF:</strong>
+                                <input name="txtMdAtivacaoCPF" type="text" id="txtMdAtivacaoCPF" style="width:110px;" />
+                                <span id="RequiredFieldValidator13" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image13" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Email:</strong>
+                                <input name="txtMdAtivacaoEmail" type="text" maxlength="100" id="txtMdAtivacaoEmail" style="width:350px;" />
+                                <span id="RequiredFieldValidator14" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image14" src="Imagens/required.png" /></span>
+                            </div>
+                            <div class="control-group">
+                                <strong>Data de Nascimento:</strong>
+                                <input name="txtMdAtivacaoDataNascimento" type="text" id="txtMdAtivacaoDataNascimento" style="width:110px;" />
+                                <span id="RequiredFieldValidator11" title="Campo Obrigatório" style="visibility:hidden;"><img id="Image11" src="Imagens/required.png" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="btnMdAtivacaoSolicitar" value="Solicitar" onclick="return ConfirmarComRecaptcha(&#39;Ativação de Usuário&#39;, &#39;Confirma os dados digitados para envio do email de ativação?&#39;, this.name, &#39;signup&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnMdAtivacaoSolicitar&quot;, &quot;&quot;, true, &quot;ativacao&quot;, &quot;&quot;, false, false))" id="btnMdAtivacaoSolicitar" class="btn btn-info" />
+                        
+                        <input type="submit" name="btnMdAtivacaoCancelar" value="Cancelar" id="btnMdAtivacaoCancelar" class="btn" />
+                    </div>
+                
+</div>
+        </div>
+        <div id="ProgressPostBack" class="update-progess alert alert-danger">
+            <img id="ImgLoading" src="Imagens/ajax-loader.gif" />
+            <strong><small>Processando Informação...</small></strong>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"), document.getElementById("RequiredFieldValidator2"), document.getElementById("RequiredFieldValidator3"), document.getElementById("RequiredFieldValidator4"), document.getElementById("RequiredFieldValidator5"), document.getElementById("RequiredFieldValidator6"), document.getElementById("RequiredFieldValidator8"), document.getElementById("CompareValidator1"), document.getElementById("RequiredFieldValidator9"), document.getElementById("RequiredFieldValidator10"), document.getElementById("RequiredFieldValidator13"), document.getElementById("RequiredFieldValidator14"), document.getElementById("RequiredFieldValidator11"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "txtCPF";
+RequiredFieldValidator1.validationGroup = "login";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "txtHash";
+RequiredFieldValidator2.validationGroup = "login";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var RequiredFieldValidator3 = document.all ? document.all["RequiredFieldValidator3"] : document.getElementById("RequiredFieldValidator3");
+RequiredFieldValidator3.controltovalidate = "txtMdCadastroCPF";
+RequiredFieldValidator3.validationGroup = "cadastro";
+RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator3.initialvalue = "";
+var RequiredFieldValidator4 = document.all ? document.all["RequiredFieldValidator4"] : document.getElementById("RequiredFieldValidator4");
+RequiredFieldValidator4.controltovalidate = "txtMdCadastroNome";
+RequiredFieldValidator4.validationGroup = "cadastro";
+RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator4.initialvalue = "";
+var RequiredFieldValidator5 = document.all ? document.all["RequiredFieldValidator5"] : document.getElementById("RequiredFieldValidator5");
+RequiredFieldValidator5.controltovalidate = "txtMdCadastroEmail";
+RequiredFieldValidator5.validationGroup = "cadastro";
+RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator5.initialvalue = "";
+var RequiredFieldValidator6 = document.all ? document.all["RequiredFieldValidator6"] : document.getElementById("RequiredFieldValidator6");
+RequiredFieldValidator6.controltovalidate = "txtMdCadastroDataNascimento";
+RequiredFieldValidator6.validationGroup = "cadastro";
+RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator6.initialvalue = "";
+var RequiredFieldValidator8 = document.all ? document.all["RequiredFieldValidator8"] : document.getElementById("RequiredFieldValidator8");
+RequiredFieldValidator8.controltovalidate = "txtMdCadastroHash";
+RequiredFieldValidator8.validationGroup = "cadastro";
+RequiredFieldValidator8.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator8.initialvalue = "";
+var CompareValidator1 = document.all ? document.all["CompareValidator1"] : document.getElementById("CompareValidator1");
+CompareValidator1.controltovalidate = "txtMdCadastroConfirmaHash";
+CompareValidator1.errormessage = "Senhas Diferentes!!";
+CompareValidator1.validationGroup = "cadastro";
+CompareValidator1.evaluationfunction = "CompareValidatorEvaluateIsValid";
+CompareValidator1.controltocompare = "txtMdCadastroHash";
+CompareValidator1.controlhookup = "txtMdCadastroHash";
+var RequiredFieldValidator9 = document.all ? document.all["RequiredFieldValidator9"] : document.getElementById("RequiredFieldValidator9");
+RequiredFieldValidator9.controltovalidate = "txtMdSenhaCPF";
+RequiredFieldValidator9.validationGroup = "senha";
+RequiredFieldValidator9.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator9.initialvalue = "";
+var RequiredFieldValidator10 = document.all ? document.all["RequiredFieldValidator10"] : document.getElementById("RequiredFieldValidator10");
+RequiredFieldValidator10.controltovalidate = "txtMdSenhaEmail";
+RequiredFieldValidator10.validationGroup = "senha";
+RequiredFieldValidator10.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator10.initialvalue = "";
+var RequiredFieldValidator13 = document.all ? document.all["RequiredFieldValidator13"] : document.getElementById("RequiredFieldValidator13");
+RequiredFieldValidator13.controltovalidate = "txtMdAtivacaoCPF";
+RequiredFieldValidator13.validationGroup = "ativacao";
+RequiredFieldValidator13.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator13.initialvalue = "";
+var RequiredFieldValidator14 = document.all ? document.all["RequiredFieldValidator14"] : document.getElementById("RequiredFieldValidator14");
+RequiredFieldValidator14.controltovalidate = "txtMdAtivacaoEmail";
+RequiredFieldValidator14.validationGroup = "ativacao";
+RequiredFieldValidator14.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator14.initialvalue = "";
+var RequiredFieldValidator11 = document.all ? document.all["RequiredFieldValidator11"] : document.getElementById("RequiredFieldValidator11");
+RequiredFieldValidator11.controltovalidate = "txtMdAtivacaoDataNascimento";
+RequiredFieldValidator11.validationGroup = "ativacao";
+RequiredFieldValidator11.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator11.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+javascript:InformarPontoDigital();
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator1'));
+}
+
+document.getElementById('RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator2'));
+}
+
+document.getElementById('RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator3'));
+}
+
+document.getElementById('RequiredFieldValidator4').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator4'));
+}
+
+document.getElementById('RequiredFieldValidator5').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator5'));
+}
+
+document.getElementById('RequiredFieldValidator6').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator6'));
+}
+
+document.getElementById('RequiredFieldValidator8').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator8'));
+}
+
+document.getElementById('CompareValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('CompareValidator1'));
+}
+
+document.getElementById('RequiredFieldValidator9').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator9'));
+}
+
+document.getElementById('RequiredFieldValidator10').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator10'));
+}
+
+document.getElementById('RequiredFieldValidator13').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator13'));
+}
+
+document.getElementById('RequiredFieldValidator14').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator14'));
+}
+
+document.getElementById('RequiredFieldValidator11').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator11'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ConfirmButtonBehavior, {"ConfirmText":"CONFIRMA OS DADOS DIGITADOS PARA ENVIO DO EMAIL DE ATIVAÇÃO?!","id":"btnMdAtivacaoSolicitar_ConfirmButtonExtender"}, null, null, $get("btnMdAtivacaoSolicitar"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

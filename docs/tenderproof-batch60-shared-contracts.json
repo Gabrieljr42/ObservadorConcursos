@@ -1,0 +1,74 @@
+{
+  "observed_date": "2026-09-08",
+  "scope": "bounded official HTTP captures; contracts are not complete-coverage homologation",
+  "implemented_export": "app.tenderproof.batch60_shared_adapters.BATCH60_SHARED_ADAPTERS",
+  "sources": [
+    {
+      "source": "fundep_open",
+      "implementation_state": "implemented",
+      "listing": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+      "detail_host": "fundep.selecao.net.br",
+      "document_tenant": "590",
+      "document_hosts": [
+        "anexos-r2.selecao.net.br"
+      ],
+      "scope_limit": "three visible personnel candidates; Ver Mais AJAX expansion remains unacquired; specialist certification excluded",
+      "validation": "Two original live cycles acquired147page principal72; explicit local160page recovery of each cycle now completed/valid with durable originalSHA256.63/65 consolidated blocked; default60 unchanged.",
+      "page_recovery_report": "tenderproof-batch60-shared-page-recovery.json"
+    },
+    {
+      "source": "facet_open",
+      "implementation_state": "implemented",
+      "listing": "https://concursos.facetconcursos.com.br/",
+      "document_tenant": "781",
+      "document_hosts": [
+        "anexos-r2.selecao.net.br",
+        "anexos.cdn.selecao.net.br"
+      ],
+      "scope_limit": "seven visible candidates and observed status tabs; no historical completeness claim",
+      "validation": "Live42 and39 valid. Principal44 acquired in both cycles has83pages; explicit local120page recovery of both cycles completed/valid with originalSHA256 and final header/encoding guards. Default60 unchanged.",
+      "page_recovery_report": "tenderproof-batch60-shared-page-recovery.json"
+    },
+    {
+      "source": "educapb_open",
+      "implementation_state": "implemented",
+      "listing": "https://ps-adm-871.selecao.net.br/",
+      "document_tenant": "871",
+      "document_hosts": [
+        "anexos-r2.selecao.net.br"
+      ],
+      "scope_limit": "five visible candidates with observed status tabs; historical WordPress notices not traversed",
+      "validation": "selection7 completed valid in two public HTTP cycles; selection6 ambiguous principal documents blocked"
+    },
+    {
+      "source": "idib_open",
+      "implementation_state": "pending",
+      "observed": [
+        "https://concurso.idib.org.br/",
+        "https://idibconcursos.com/concursos/"
+      ],
+      "blocker": "first observed official link is frameset pointing to SITE/CandidatoLogin.aspx?AcessoInicial=1, no public contest links; second official alternative fails TLS handshake SSLV3_ALERT_HANDSHAKE_FAILURE",
+      "validation": "no credential entry or TLS weakening; no detail/document contract claimed"
+    },
+    {
+      "source": "jcm_open",
+      "implementation_state": "pending",
+      "observed": [
+        "https://eventos.concursosjcm.com.br/index/1/",
+        "https://eventos.concursosjcm.com.br/index/3/",
+        "https://eventos.concursosjcm.com.br/conteudo/102/"
+      ],
+      "blocker": "status tabs expose Nenhum item cadastrado. but no candidate/detail/document link was observed; platform label alone cannot prove tenant and document contract",
+      "validation": "explicit empty applies only to captured tabs; no whole-source absence or adapter completion claim"
+    }
+  ],
+  "captures": "backend/tests/fixtures/tenderproof_batch60_shared; individual JSON metadata with URL/time/raw and normalizedSHA256",
+  "limits": {
+    "capture_timeout_seconds": 25,
+    "capture_max_bytes": 2097152,
+    "pdf_max_pages": 60,
+    "browsers": 0,
+    "canonical_publication": false
+  },
+  "tests_passed": 15
+}

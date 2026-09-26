@@ -1,0 +1,14 @@
+{
+  "schema": "t012.klc-strong-identity-integration.v1",
+  "result": "READY_FOR_REVIEW",
+  "source": "klc_open",
+  "source_id": 57,
+  "external_id": "632",
+  "artifact": {"sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "pages": 10, "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf"},
+  "diff": ["klc_t012.document_identity_ids added strict source/external + Teodoro Sampaio + edital 002/2026 + no-error/no-U+FFFD marker resolver", "validation.py dispatches only klc_open to that resolver"],
+  "safety": "No órgão/edital invented; values are already parser-proven literals. SHA/bytes/URL remain enforced by dispatch before fields publication.",
+  "tests": {"command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py backend/tests/test_t012_batch2_dispatch.py -k 'klc or dispatch'", "result": "24 passed after strict-negative correction; compileall PASS"},
+  "negative": ["external 631 returns empty identity", "Teodoro marker substitution returns empty identity", "existing SHA/bytes/URL/page/U+FFFD guards unchanged"],
+  "network": false,
+  "live_or_proposal": false
+}

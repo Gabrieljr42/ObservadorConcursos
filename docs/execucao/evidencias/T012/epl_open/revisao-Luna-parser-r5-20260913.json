@@ -1,0 +1,34 @@
+{
+  "schema": "t012.epl_open.luna-parser-r5-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "EPL_PARSER_R5_REJECT_FOR_INTEGRATION",
+  "scope": "read_only; wiring absence treated as pending integration, not itself a rejection",
+  "checks": {
+    "contract": "PASS: revalidate returns list[ExtractedField]; extract_identity accepts Artifact plus pages and returns typed fields; validation_result returns ValidationResult",
+    "evidence": "PASS for artifact_id, document_sha256, source_url, page_number, verbatim snippet, method/version; two identity snippets are checked against page 1",
+    "pins_and_guards": "PASS in revalidate/_contract: source/external/detail/document URL, SHA/byte length, exactly 43 pages, non-empty text, U+FFFD and page markers",
+    "tests": "8 parser tests, 4 proposal tests, and 16 recovered regression tests are declared/preserved; local execution was not reproducible because Python/pytest is unavailable",
+    "wiring": "PENDING only: preflight uses monkeypatched extract_fields; no requirement to reject this module solely for not yet being wired"
+  },
+  "blocking_findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/epl_open/epl_parser_r3.py:78-100",
+      "finding": "The integration-facing extract_identity accepts PageText but checks only text length/content. It does not reject PageText.error/processing_error/truncated or enforce page_number order/43 page markers; a caller can therefore bypass the guards that revalidate applies through _text.",
+      "required_fix": "Validate PageText page numbers/order, error and truncated flags, and the per-page 43 footer markers inside extract_identity (or expose only a guarded page type/path), with regression tests."
+    },
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/epl_open/epl_parser_r3.py:78-84",
+      "finding": "extract_identity verifies artifact SHA and byte_len but not artifact URL binding or artifact_id/content relationship; direct integration can attach the fields to an artifact with a different URL.",
+      "required_fix": "Require artifact.url_requested/url_final == DOCUMENT_URL (and explicit artifact identity policy) before emitting evidence, and test URL substitution through the typed helper."
+    }
+  ],
+  "conditional_gate": "Do not promote until the two helper-path guards are fixed; after that, the typed module is otherwise ready to be wired through the source-specific dispatch and normal dry-run.",
+  "evidence_files": [
+    "docs/execucao/evidencias/T012/epl_open/epl_parser_r3.py",
+    "docs/execucao/evidencias/T012/epl_open/test_strong_preflight_r3.py",
+    "docs/execucao/evidencias/T012/epl_open/test_proposal_fail_closed.py",
+    "docs/execucao/evidencias/T012/epl_open/strong-preflight-r3.json"
+  ]
+}

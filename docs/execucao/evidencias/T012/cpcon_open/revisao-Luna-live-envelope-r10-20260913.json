@@ -1,0 +1,17 @@
+{
+  "schema": "t012.cpcon_open.luna-envelope-r10-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "R10 receipt/handoff delta only; no live operation",
+  "checks": {
+    "derived_run": "PASS: current importer derives tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76 in two independent Python processes.",
+    "old_run_rejected": "PASS: superseded 07cdb2ac5f0e960d05dc6a5b300fd7db is not the current importer identity.",
+    "proposal_handoff": "PASS: receipt binds run_id above with owner_user_id=1, source_id=35 and concurso_id=null; this is the normal CREATE handoff.",
+    "envelope_consistency": "PASS by prior R9 review: same pinned envelope/artifact and no live effects.",
+    "old_proposal": "Remains blocked/superseded; do not approve or apply it. Any rejection/retirement must precede the R10 live preflight and must not create a duplicate."
+  },
+  "evidence": ["docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r10-receipt.json", "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r9.json"],
+  "decision_condition": "Proceed only with the normal owner-authenticated import/proposal preflight using the R10 run ID; no approval/apply is granted by this review.",
+  "mutations_performed": false
+}

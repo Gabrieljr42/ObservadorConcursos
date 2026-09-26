@@ -1,0 +1,14 @@
+{
+  "package": "ufu-selection-r10",
+  "envelope": "reviewed-run-r10.json",
+  "receipt": "reviewed-run-r10-receipt.json",
+  "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+  "proposal_target": null,
+  "owner_user_id": 1,
+  "source_id": 40,
+  "external_id": "1843",
+  "exact_field_names": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+  "omitted": ["prova_data", "cronograma_proximo", "taxa", "cargos", "remuneracao", "docs"],
+  "replay": "import/replay idempotent; alternate artifact path does not change run; owner/drift negatives covered",
+  "status": "READY_FOR_REVIEW"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "t012.publiconsult.backend-integration-r10-independent-review.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only backend integration review; no live, pilot, Docker, or source mutation",
+  "identity": {
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf"
+  },
+  "checks": {
+    "wiring": "PASS: fields.py exact publiconsult_open/681 branch reads preserved bytes and passes real PageText page_records",
+    "principal_pins": "PASS: exact URL/SHA/bytes, 25 non-empty ordered pages and PDF processing contract",
+    "identity": "PASS: Votuporanga + Processo Seletivo 1/2026 + edital-abertura markers and validation.py strict identity route",
+    "guards": "PASS: source/external/URL drift, page order/count, error/truncated/processing_error, empty text and U+FFFD fail closed",
+    "output": "PASS: exactly titulo/orgao/edital_numero with reproducible evidence; cargos/remuneracao/taxa/prova_data and TAF/documents excluded",
+    "regressions": "PASS: create-contract, path-independent run IDs, KLC, Avança and APTA directed regressions"
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_publiconsult_r10_dispatch.py docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_proposal_r8.py docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py backend/tests/test_t012_batch2_dispatch.py -k 'publiconsult or dispatch'", "result": "38 passed"},
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_canonical.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_batch2_dispatch.py -k 'create or update or apta or klc or avancasp or dispatch'", "result": "17 passed, 16 deselected"},
+    {"command": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/publiconsult_t012.py backend/app/tenderproof/fields.py backend/app/tenderproof/validation.py backend/tests/test_publiconsult_r10_dispatch.py", "result": "PASS"}
+  ],
+  "warning": "No live/API/pilot effects; the TAF remains separate documentary provenance and is not promoted by this dispatch.",
+  "live_mutation": false
+}

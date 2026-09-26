@@ -1,0 +1,10 @@
+{
+  "schema": "observador.t010.id8.prova_data.import_proposal.v1",
+  "recorded_at": "2026-09-13T01:19:32.3012386-03:00",
+  "run_id": "tp-reviewed-ea4b278d48957c543fed74edd6b8222b",
+  "import": {"dry_run": "validated", "apply": "imported", "fields": ["prova_data"]},
+  "proposal": {"id": "tpp-ffd987976e8d77b201715ea32de19073", "hash": "7fe791958baf85c5b4c39309aba07f78b1155728464a481820266dbdf4ffe26e", "state": "proposed", "contest_id": 8, "eligible_fields": ["prova_data"], "baseline_version": 87, "baseline_prova_data": null, "proposed_prova_data": "2026-12-06", "proposed_cargos_present": false},
+  "counts_after": {"proposals": 92, "versions": 87, "outbox": 87, "notifications": 86},
+  "approve_apply": false,
+  "gate": "PASS; aguardando revisão independente pós-import"
+}

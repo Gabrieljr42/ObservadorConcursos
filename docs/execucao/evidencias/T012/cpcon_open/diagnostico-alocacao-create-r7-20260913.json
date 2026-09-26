@@ -1,0 +1,25 @@
+{
+  "schema": "t012.cpcon_open.allocation-create-diagnosis-r7.v1",
+  "verdict": "READY_FOR_OWNER_AUTHENTICATED_RECONCILIATION",
+  "scope": "read-only; no proposal/apply/DB/live mutation",
+  "identity": {"source": "cpcon_open", "source_id": 35, "external_id": "processo-seletivo-simplificado-no-002-2026", "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05"},
+  "allocation": {
+    "concurso_id_35": "not proven and must not be inferred: current catalog snapshot has 34 contests; 35 is the source_id, not a reserved contest target",
+    "reviewed_run_concurso_id": null,
+    "action": "create",
+    "safe_rule": "create_proposal passes concurso_id=None; canonical.resolve creates a proxy and returns action=create. Never use source_id=35 as concurso_id."
+  },
+  "owner_handoff": {
+    "required": ["owner_user_id=1 on the newly imported run", "normal owner-authenticated GET/prepare response proving run_id", "authorization for user 1", "fresh current SHA/evidence revalidation"],
+    "not_proven_in_old_receipt": ["current run ownership", "run_id handoff", "target allocation"],
+    "run_reuse": "forbidden; regenerate/import the reviewed run and retain its deterministic run_id"
+  },
+  "procedure": [
+    "Preflight the fresh owner-1 run through normal GET/prepare; do not edit SQL or reuse the blocked proposal.",
+    "Use create proposal with concurso_id omitted/null and source_id=35; canonical.resolve must choose action=create and validate exact source/external/detail URL.",
+    "If a real existing contest is intentionally selected, pass its actual positive Concurso.id only after owner review; it must match source_id 35, external ID and detail URL, otherwise 422/409.",
+    "Approve/apply only after GET proves proposal owner/run and revalidation eligible fields; cargos remain tied to the newly created contest via the normal create transaction, not source_id arithmetic."
+  ],
+  "evidence": ["revisao-operacional-proposal-r6-r2-20260913.json", "live-proposal-receipt-20260913-blocker.json", "backend/app/tenderproof/canonical.py:context/resolve", "backend/app/tenderproof/publication.py:create_proposal"],
+  "mutations": {"proposal": false, "apply": false, "catalog": false, "network": false}
+}

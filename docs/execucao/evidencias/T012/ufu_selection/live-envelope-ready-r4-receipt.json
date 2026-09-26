@@ -1,0 +1,20 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "reviewed_run_id": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+  "run_id_derivation": "ReviewedRun v1 canonical serialization; repeated in-process and fresh-process derivation matched",
+  "proposal": {
+    "target_concurso_id": null,
+    "owner_user_id": 1,
+    "source": "ufu_selection",
+    "external_id": "1843",
+    "run_id": "tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c",
+    "field_names": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"]
+  },
+  "negative_run_id": "tp-reviewed-00000000000000000000000000000000",
+  "network": false
+}

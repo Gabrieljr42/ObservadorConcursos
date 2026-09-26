@@ -1,0 +1,1151 @@
+{
+  "observed_at": "2026-09-08T12:54:49.395830+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-own-live-20260908",
+  "cycles": [
+    {
+      "source": "ibfc_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-d177a14c98a9",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.ibfc.org.br/index/abertos/",
+          "https://concursos.ibfc.org.br/index/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.ibfc.org.br/index/1/",
+          "file": "ibfc_open-cycle1-listing-822e0b4c54.html",
+          "sha256": "ccacab979def0b5dc163cdaa58efaf4a2821b756931b616c988b171454af0c0f",
+          "bytes": 18285,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:54:50.421809+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b87fc8933e6c",
+          "candidate": {
+            "candidate_id": "ibfc_open-496",
+            "title_observed": "Instituto Brasileiro de Geografia e Estatística - IBGE",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/496/",
+            "external_id": "496",
+            "observed_at": "2026-09-08T12:54:50.468094Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/496/",
+              "file": "ibfc_open-cycle1-detail-59a096579c.html",
+              "sha256": "004e4a6d6e971171644f87c3a71e68beb83e97ace5884752eb8bf704be9c0b9d",
+              "bytes": 25296,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:51.302661+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ffae4e6ff90a",
+          "candidate": {
+            "candidate_id": "ibfc_open-494",
+            "title_observed": "IBFC - Instituto Brasileiro de Formação e Capacitação - Jovem Aprendiz 2º Semestre 2026",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/494/",
+            "external_id": "494",
+            "observed_at": "2026-09-08T12:54:50.468094Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/494/",
+              "file": "ibfc_open-cycle1-detail-a7e1781567.html",
+              "sha256": "13f2db5324deeb879efc0d3cb6675d9ead4f4dd902881d0455ef81d77a0f2dc6",
+              "bytes": 29740,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:52.128735+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c8adfeced3ab",
+          "candidate": {
+            "candidate_id": "ibfc_open-490",
+            "title_observed": "Secretaria da Educação do Estado da Bahia Nível Médio, Superior e Professor Orientador de Estágio em Saúde",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/490/",
+            "external_id": "490",
+            "observed_at": "2026-09-08T12:54:50.468094Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/490/",
+              "file": "ibfc_open-cycle1-detail-e7c27c7e94.html",
+              "sha256": "0a0309a12cd94f8048ebe5bd95a7bed7b80d3b444099e73c3ba924e2306d230e",
+              "bytes": 49354,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:52.979171+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.625
+    },
+    {
+      "source": "admtec_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-96b6d574ea45",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 4,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://admtec.org.br/",
+          "file": "admtec_open-cycle1-listing-0647e241c0.html",
+          "sha256": "0cdfc457ca6473b11a677a4aecb79f6ccaeccf847d495865695ad9eb180f42b1",
+          "bytes": 28899,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:54:54.048187+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-365088f9e24c",
+          "candidate": {
+            "candidate_id": "admtec_open-MTEz/MTIx",
+            "title_observed": "PREFEITURA MUNICIPAL DE PIRANHAS",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx",
+            "external_id": "MTEz/MTIx",
+            "observed_at": "2026-09-08T12:54:54.108065Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx",
+              "file": "admtec_open-cycle1-detail-04a9c9c96e.html",
+              "sha256": "c4cb53aa819388fe6a8d9f7a5701e96fd6b14919e051fe342f0e6f7e44582f56",
+              "bytes": 37011,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:54.943339+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-2a46bafd8ba1",
+          "candidate": {
+            "candidate_id": "admtec_open-MTA4/MTE2",
+            "title_observed": "PREFEITURA MUNICIPAL DE JOÃO ALFREDO",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTA4/MTE2",
+            "external_id": "MTA4/MTE2",
+            "observed_at": "2026-09-08T12:54:54.109067Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: documento ADMTEC de outro processo ou diretório",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTA4/MTE2",
+              "file": "admtec_open-cycle1-detail-3a0cdfb75e.html",
+              "sha256": "f8d7c387deafcfbfb9bffd81fb62f7359960338280f5f8023f67fda599c20083",
+              "bytes": 606370,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:56.201745+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ddbcf890af7e",
+          "candidate": {
+            "candidate_id": "admtec_open-MTA1/MTEz",
+            "title_observed": "PREFEITURA MUNICIPAL DE IGUARACY",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTA1/MTEz",
+            "external_id": "MTA1/MTEz",
+            "observed_at": "2026-09-08T12:54:54.109067Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: documento ADMTEC de outro processo ou diretório",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTA1/MTEz",
+              "file": "admtec_open-cycle1-detail-19e545060c.html",
+              "sha256": "d9bf783ccb40b21b0b823d17621c9fd227e89e70a560bad7f72918dba996d3fa",
+              "bytes": 193640,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:54:58.699022+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 5.969
+    },
+    {
+      "source": "institutomais_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-f39bbd63e404",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.institutomais.org.br/Concursos/ConcursosEncerrados"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.institutomais.org.br/Concursos/ConcursosAbertos",
+          "file": "institutomais_open-cycle1-listing-215c80ca04.html",
+          "sha256": "980070f47edcb015dd14f65e0254cb4c4114fec737325743f11c900e517b2967",
+          "bytes": 11964,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:54:59.697578+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f33fb30b9af4",
+          "candidate": {
+            "candidate_id": "institutomais_open-10648",
+            "title_observed": "Prefeitura Municipal de Santa Gertrudes / SP - Processo Seletivo Simplificado - Edital nº 01/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10648",
+            "external_id": "10648",
+            "observed_at": "2026-09-08T12:54:59.773587Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10648",
+              "file": "institutomais_open-cycle1-detail-480c5cc7eb.html",
+              "sha256": "4d254bda600538682b5f09cf183363b575efd41f113070370d0a8ac36a68a2a2",
+              "bytes": 10444,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:00.421044+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-e0e8c8e3f8b2",
+          "candidate": {
+            "candidate_id": "institutomais_open-10649",
+            "title_observed": "Prefeitura Municipal de Itapira / SP - Concurso Público - Edital nº 02/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10649",
+            "external_id": "10649",
+            "observed_at": "2026-09-08T12:54:59.773587Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: detalhe sem documento oficial associado",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10649",
+              "file": "institutomais_open-cycle1-detail-ab31f7d212.html",
+              "sha256": "d02f5659649986b9042e7f3f6b7614b3216d0d833510926136900f43a490f5bd",
+              "bytes": 10181,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:01.016238+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ea5684a076d1",
+          "candidate": {
+            "candidate_id": "institutomais_open-10645",
+            "title_observed": "São Sebastião PREV / SP - Concurso Público – Edital Nº 01/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10645",
+            "external_id": "10645",
+            "observed_at": "2026-09-08T12:54:59.773587Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10645",
+              "file": "institutomais_open-cycle1-detail-9c666bfc5f.html",
+              "sha256": "2120b2e460ce28e5d4167a6fdd76124f276b87105c6bb134059470433a124183",
+              "bytes": 16313,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:01.508165+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "institutomais_open-doc-48a0a0756c207a05",
+            "title": "EDITAL DO CONCURSO PÚBLICO - Nº 01/2026 – ATUALIZADO",
+            "url_requested": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "url_final": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DO CONCURSO PÚBLICO - Nº 01/2026 – ATUALIZADO' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: RETIFICAÇÃO Nº 02; RETIFICAÇÃO Nº 01; ANEXO III - REQUERIMENTO DE CONDIÇÃO ESPECIAL; ANEXO IV - REQUERIMENTO DE INCLUSÃO E USO DE NOME SOCIAL; ANEXO V - AUTODECLARAÇÃO PARA PESSOA NEGRA OU PARDA)."
+          },
+          "artifact": {
+            "artifact_id": "art-c78275956f",
+            "sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+            "byte_len": 660321,
+            "url_requested": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "url_final": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T12:55:01.748389Z",
+            "storage_path": "art-c78275956f-aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34.pdf"
+          },
+          "total_pages": 36,
+          "processed_pages": 36,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=36/36",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.672
+    },
+    {
+      "source": "reisesreis_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-b8f44ff1fca8",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "reisesreis_open-cycle1-listing-96d24d56f4.html",
+          "sha256": "1a3e7928f8a0ca6b5a008ae90fd1a645ad16330a6982cf999647c4b55dfd8e57",
+          "bytes": 1165,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:55:07.665779+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0d7f15bb7994",
+          "candidate": {
+            "candidate_id": "reisesreis_open-70",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "detail_url_observed": "https://novo.reisauditores.com.br/editais/70",
+            "external_id": "70",
+            "observed_at": "2026-09-08T12:55:07.665779Z",
+            "source": "reisesreis_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.reisauditores.com.br/editais/70",
+              "file": "reisesreis_open-cycle1-detail-c01bb4bbec.html",
+              "sha256": "3c6449ea7085a505dba27a2f2c56d961396fd9ff084acfb818318eb895b75721",
+              "bytes": 44204,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:10.181335+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "reisesreis_open-doc-cc6119842d55ee0e",
+            "title": "EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: ANEXOS - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO DE CANCELAMENTO DE CONCURSO PÚBLICO - EDITAL 01/2024; 1ª RETIFICAÇÃO  - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO: ALTERAÇÃO DA DATA PARA EMISSÃO DO BOLETO BANCÁRIO; LISTAGEM DOS PEDIDOS DE ISENÇÃO DA TAXA DE INSCRIÇÃO DEFERIDOS E INDEFERIDOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-6f58d072e7",
+            "sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+            "byte_len": 1697568,
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T12:55:11.647855Z",
+            "storage_path": "art-6f58d072e7-9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5.pdf"
+          },
+          "total_pages": 24,
+          "processed_pages": 24,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=24/24",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 8.609
+    },
+    {
+      "source": "ibfc_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-a59661886bd4",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.ibfc.org.br/index/abertos/",
+          "https://concursos.ibfc.org.br/index/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.ibfc.org.br/index/1/",
+          "file": "ibfc_open-cycle2-listing-822e0b4c54.html",
+          "sha256": "ccacab979def0b5dc163cdaa58efaf4a2821b756931b616c988b171454af0c0f",
+          "bytes": 18285,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:55:13.985063+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c419c4ed8574",
+          "candidate": {
+            "candidate_id": "ibfc_open-496",
+            "title_observed": "Instituto Brasileiro de Geografia e Estatística - IBGE",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/496/",
+            "external_id": "496",
+            "observed_at": "2026-09-08T12:55:14.026131Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/496/",
+              "file": "ibfc_open-cycle2-detail-623f91c4f0.html",
+              "sha256": "2e8c059b04071067061b911b840b2da976fd70a3f5d94e7fc6ab8e3de842d18b",
+              "bytes": 25296,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:14.755825+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-29621147d8f3",
+          "candidate": {
+            "candidate_id": "ibfc_open-494",
+            "title_observed": "IBFC - Instituto Brasileiro de Formação e Capacitação - Jovem Aprendiz 2º Semestre 2026",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/494/",
+            "external_id": "494",
+            "observed_at": "2026-09-08T12:55:14.026131Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/494/",
+              "file": "ibfc_open-cycle2-detail-ad5c2b729c.html",
+              "sha256": "62824a6dc6589d6211a3ddac8888a8019e153b80d73c76bade6297f521616e19",
+              "bytes": 29740,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:15.526282+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-7d0e1c118635",
+          "candidate": {
+            "candidate_id": "ibfc_open-490",
+            "title_observed": "Secretaria da Educação do Estado da Bahia Nível Médio, Superior e Professor Orientador de Estágio em Saúde",
+            "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/490/",
+            "external_id": "490",
+            "observed_at": "2026-09-08T12:55:14.027130Z",
+            "source": "ibfc_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.ibfc.org.br/informacoes/490/",
+              "file": "ibfc_open-cycle2-detail-d36953a59d.html",
+              "sha256": "2d1cb66a9f17c86dd3459832ceeb2b9775366c58097d506f82bdbf4c5acf8387",
+              "bytes": 49354,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:16.273293+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.032
+    },
+    {
+      "source": "admtec_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-b4c6bbe8c93a",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 4,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://admtec.org.br/",
+          "file": "admtec_open-cycle2-listing-4e49e70d87.html",
+          "sha256": "0f95833ea5e1b597327df36259643acb2e6216b662580ce77ab0d5d2adaf224f",
+          "bytes": 28899,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:55:16.974056+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-410ab042c82d",
+          "candidate": {
+            "candidate_id": "admtec_open-MTEz/MTIx",
+            "title_observed": "PREFEITURA MUNICIPAL DE PIRANHAS",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx",
+            "external_id": "MTEz/MTIx",
+            "observed_at": "2026-09-08T12:55:17.089329Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx",
+              "file": "admtec_open-cycle2-detail-ac0500c806.html",
+              "sha256": "b963c0d6e67df01721a4f53b36ac1a32bd7902c94388c51e809de4d354dc19c9",
+              "bytes": 37011,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:17.859425+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-f48100c02eba",
+          "candidate": {
+            "candidate_id": "admtec_open-MTA4/MTE2",
+            "title_observed": "PREFEITURA MUNICIPAL DE JOÃO ALFREDO",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTA4/MTE2",
+            "external_id": "MTA4/MTE2",
+            "observed_at": "2026-09-08T12:55:17.089329Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: documento ADMTEC de outro processo ou diretório",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTA4/MTE2",
+              "file": "admtec_open-cycle2-detail-5016edefc8.html",
+              "sha256": "366998c2e6840709ed157ff92cc7757eac7bc15ed2810ed53d714a5f69b50811",
+              "bytes": 606370,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:19.129455+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-29869eb2d725",
+          "candidate": {
+            "candidate_id": "admtec_open-MTA1/MTEz",
+            "title_observed": "PREFEITURA MUNICIPAL DE IGUARACY",
+            "detail_url_observed": "https://admtec.org.br/concursos/publicacoes/MTA1/MTEz",
+            "external_id": "MTA1/MTEz",
+            "observed_at": "2026-09-08T12:55:17.089329Z",
+            "source": "admtec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: documento ADMTEC de outro processo ou diretório",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://admtec.org.br/concursos/publicacoes/MTA1/MTEz",
+              "file": "admtec_open-cycle2-detail-123979718c.html",
+              "sha256": "e3abd1988aaaf0469fc6c3f840a0f3ebfad42e0f43144ec08ef7278e0c6625f7",
+              "bytes": 193640,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:21.096664+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 5.156
+    },
+    {
+      "source": "institutomais_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-9e5ed47ecd8c",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.institutomais.org.br/Concursos/ConcursosEncerrados"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.institutomais.org.br/Concursos/ConcursosAbertos",
+          "file": "institutomais_open-cycle2-listing-215c80ca04.html",
+          "sha256": "980070f47edcb015dd14f65e0254cb4c4114fec737325743f11c900e517b2967",
+          "bytes": 11964,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:55:21.991193+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c37ef959084a",
+          "candidate": {
+            "candidate_id": "institutomais_open-10648",
+            "title_observed": "Prefeitura Municipal de Santa Gertrudes / SP - Processo Seletivo Simplificado - Edital nº 01/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10648",
+            "external_id": "10648",
+            "observed_at": "2026-09-08T12:55:22.036199Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: título do concurso incompatível com detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10648",
+              "file": "institutomais_open-cycle2-detail-480c5cc7eb.html",
+              "sha256": "4d254bda600538682b5f09cf183363b575efd41f113070370d0a8ac36a68a2a2",
+              "bytes": 10444,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:23.242396+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-232b24bc7827",
+          "candidate": {
+            "candidate_id": "institutomais_open-10649",
+            "title_observed": "Prefeitura Municipal de Itapira / SP - Concurso Público - Edital nº 02/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10649",
+            "external_id": "10649",
+            "observed_at": "2026-09-08T12:55:22.036199Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: detalhe sem documento oficial associado",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10649",
+              "file": "institutomais_open-cycle2-detail-ab31f7d212.html",
+              "sha256": "d02f5659649986b9042e7f3f6b7614b3216d0d833510926136900f43a490f5bd",
+              "bytes": 10181,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:23.683896+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-f1b7f7d687c2",
+          "candidate": {
+            "candidate_id": "institutomais_open-10645",
+            "title_observed": "São Sebastião PREV / SP - Concurso Público – Edital Nº 01/2026",
+            "detail_url_observed": "https://www.institutomais.org.br/Concursos/Detalhe/10645",
+            "external_id": "10645",
+            "observed_at": "2026-09-08T12:55:22.036199Z",
+            "source": "institutomais_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.institutomais.org.br/Concursos/Detalhe/10645",
+              "file": "institutomais_open-cycle2-detail-9c666bfc5f.html",
+              "sha256": "2120b2e460ce28e5d4167a6fdd76124f276b87105c6bb134059470433a124183",
+              "bytes": 16313,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:24.397175+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "institutomais_open-doc-48a0a0756c207a05",
+            "title": "EDITAL DO CONCURSO PÚBLICO - Nº 01/2026 – ATUALIZADO",
+            "url_requested": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "url_final": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DO CONCURSO PÚBLICO - Nº 01/2026 – ATUALIZADO' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: RETIFICAÇÃO Nº 02; RETIFICAÇÃO Nº 01; ANEXO III - REQUERIMENTO DE CONDIÇÃO ESPECIAL; ANEXO IV - REQUERIMENTO DE INCLUSÃO E USO DE NOME SOCIAL; ANEXO V - AUTODECLARAÇÃO PARA PESSOA NEGRA OU PARDA)."
+          },
+          "artifact": {
+            "artifact_id": "art-e2996f6fe6",
+            "sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+            "byte_len": 660321,
+            "url_requested": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "url_final": "https://www.institutomais.org.br/ckfinder/userfiles/files/EDITAL%20001-2026%20-%20%20ATUALIZADO.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T12:55:25.369902Z",
+            "storage_path": "art-e2996f6fe6-aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34.pdf"
+          },
+          "total_pages": 36,
+          "processed_pages": 36,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=36/36",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.062
+    },
+    {
+      "source": "reisesreis_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-906e102444b9",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": "API pública Reis: last=true com totais consistentes",
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+          "file": "reisesreis_open-cycle2-listing-96d24d56f4.html",
+          "sha256": "1a3e7928f8a0ca6b5a008ae90fd1a645ad16330a6982cf999647c4b55dfd8e57",
+          "bytes": 1165,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:55:28.328768+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d084f8c2ca53",
+          "candidate": {
+            "candidate_id": "reisesreis_open-70",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "detail_url_observed": "https://novo.reisauditores.com.br/editais/70",
+            "external_id": "70",
+            "observed_at": "2026-09-08T12:55:28.328768Z",
+            "source": "reisesreis_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://novo.reisauditores.com.br/editais/70",
+              "file": "reisesreis_open-cycle2-detail-d335985d6b.html",
+              "sha256": "34612e01df6be6041bc3205c6b49e19b4626504628b4c5a62fc04003891f5593",
+              "bytes": 44204,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:55:30.092134+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "reisesreis_open-doc-cc6119842d55ee0e",
+            "title": "EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA",
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: ANEXOS - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO DE CANCELAMENTO DE CONCURSO PÚBLICO - EDITAL 01/2024; 1ª RETIFICAÇÃO  - EDITAL CONCURSO PÚBLICO 001/2025 - PREFEITURA MUNICIPAL DE ITABIRINHA; COMUNICADO: ALTERAÇÃO DA DATA PARA EMISSÃO DO BOLETO BANCÁRIO; LISTAGEM DOS PEDIDOS DE ISENÇÃO DA TAXA DE INSCRIÇÃO DEFERIDOS E INDEFERIDOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-7e50a8cef9",
+            "sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+            "byte_len": 1697568,
+            "url_requested": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "url_final": "https://s3.amazonaws.com/sgs.reisauditores.com.br/prefeitura-municipal-de-itabirinha/1/1-2025/anexos/edital-concurso-pÚblico-001-2025--prefeitura-municipal-de-itabirinha.pdf",
+            "content_type": "application/octet-stream",
+            "downloaded_at": "2026-09-08T12:55:31.459526Z",
+            "storage_path": "art-7e50a8cef9-9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5.pdf"
+          },
+          "total_pages": 24,
+          "processed_pages": 24,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=24/24",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.813
+    }
+  ]
+}

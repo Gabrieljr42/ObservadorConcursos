@@ -1,0 +1,33 @@
+{
+  "schema": "observador.t010.id16.regenerated.determinism.v1",
+  "run_ids": [
+    "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+    "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7"
+  ],
+  "equal": true,
+  "envelope_sha256": "110e1b6df31f20c4b631b3ff11d33f8c3fb6b5ca8e0c7ec28261101f53475cb2",
+  "artifact_sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+  "evidence_ids": [
+    "ev-82a528c696",
+    "ev-f0bf7b6dfa",
+    "ev-bf2cd17f1c",
+    "ev-13fbaace68",
+    "ev-53330afb83",
+    "ev-a309ee68bf",
+    "ev-cfa82d94e2",
+    "ev-b2e4e710bd",
+    "ev-d1bcb5b238",
+    "ev-3119d9cbfa",
+    "ev-c3247bf1f9",
+    "ev-0223aef677",
+    "ev-971fb4ef34",
+    "ev-0c1ffbca33",
+    "ev-dcde265556",
+    "ev-f98f0fe9ff",
+    "ev-e5e439442f",
+    "ev-c42fafd652",
+    "ev-31f01aa063"
+  ],
+  "snippet_method": "extract_pages_isolated -> extract_fields",
+  "validated_json": true
+}

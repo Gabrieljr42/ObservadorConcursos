@@ -1,0 +1,35 @@
+{
+  "source": "contemax_open",
+  "adapter": "ContemaxAdapter",
+  "implementation_state": "implemented",
+  "coverage": "partial",
+  "acquisition_status": "document_https_connection_blocked",
+  "validated_samples": 0,
+  "listing_verified_https": true,
+  "detail_verified_https": true,
+  "candidate": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+  "selected_title": "EDITAL REGULAMENTADOR",
+  "selected_url": "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf",
+  "document_bytes_acquired": false,
+  "pdf_limits": {
+    "max_bytes": 31457280,
+    "max_pages": 60
+  },
+  "html_limits": {
+    "max_bytes": 2097152,
+    "timeout_s": 25
+  },
+  "tls_disabled": false,
+  "http_fallback": false,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "tests": {
+    "passed": 14,
+    "junit": "backend/.tenderproof/batch60-contemax-contracts.xml"
+  },
+  "evidence": [
+    "backend/tests/fixtures/tenderproof_batch60_contemax/manifest-https.json",
+    "docs/tenderproof-batch60-contemax-pdf-probe.json",
+    "docs/tenderproof-batch60-contemax-contract.md"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "t010.id1.operational-gate.v1",
+  "recorded_at": "2026-09-12T20:20:41-03:00",
+  "operator": "Luna integrador/T001",
+  "mutations": {
+    "backup": {
+      "path": "/backups/pilot-20260912T231649719Z",
+      "files": 12343,
+      "canonical_database_included": false,
+      "postgres_dump_verified": true,
+      "operational_verify": true
+    },
+    "reviewed_run_import": {
+      "envelope": "docs/execucao/evidencias/T010/T010-reviewed-run-id1.json",
+      "artifact": "docs/execucao/evidencias/T010/id1.pdf",
+      "dry_run": {
+        "status": "validated",
+        "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+        "fields": ["cargos"]
+      },
+      "apply": {
+        "status": "imported",
+        "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+        "executed_once": true
+      }
+    }
+  },
+  "persisted_run_read_only": {
+    "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "owner_user_id": 1,
+    "source": "access_open",
+    "external_id": "183",
+    "detail_url": "https://access.selecao.net.br/informacoes/183/",
+    "artifact_id": "art-5c4c41a458",
+    "artifact_sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "fields_only": ["cargos"],
+    "cargo": {
+      "nome": "Professor Auxiliar",
+      "vagas_imediatas": 10,
+      "vagas_ampla_concorrencia": 9,
+      "vagas_pcd": 1,
+      "remuneracao": "30.53",
+      "moeda": "BRL",
+      "jornada": "até 40 horas semanais"
+    }
+  },
+  "proposal": {
+    "http_create": 201,
+    "proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+    "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb",
+    "concurso_id": 1,
+    "source_id": 19,
+    "proposal_hash": "85093932c509a665b879f5a0b08f7e51b06977011d59692b1290bef727f8bbb2",
+    "state": "proposed",
+    "eligible_fields": ["cargos"],
+    "material_diff": true,
+    "approved_fields": [],
+    "approved_at": null,
+    "version_id": null,
+    "result": null,
+    "get_confirmed": true
+  },
+  "post_create_read_only": {
+    "health": {"status": "ok", "env": "local-pilot"},
+    "checkpoint_before_application": {"publications": 34, "versions": 81, "notifications": 80, "alerts": 1, "favorites": 0, "concursos": 33}
+  },
+  "application_gate": {
+    "revalidated_hash": "85093932c509a665b879f5a0b08f7e51b06977011d59692b1290bef727f8bbb2",
+    "revalidated_state": "proposed",
+    "revalidated_baseline_cargos": null,
+    "approve_http": 200,
+    "approved_fields": ["cargos"],
+    "approved_by": 1,
+    "apply_http": 200,
+    "state": "applied",
+    "version_id": 82,
+    "diff": {
+      "cargos": {
+        "old": null,
+        "new": [{"nome": "Professor Auxiliar", "vagas_imediatas": 10, "cadastro_reserva": null, "vagas_ampla_concorrencia": 9, "vagas_pcd": 1, "remuneracao": "30.53", "moeda": "BRL", "remuneracao_observacao": "por hora-aula", "jornada": "até 40 horas semanais", "requisitos": "Licenciatura Plena em Pedagogia ou Normal Superior, ambas com habilitação na Educação Infantil e nos anos iniciais do Ensino Fundamental", "taxa_inscricao": null}]
+      }
+    },
+    "database_read_only": {"matching_concurso_versions": 1, "matching_outbox": 1, "version_id": 82, "outbox_state": "delivered", "total_versions": 82, "total_outbox": 82},
+    "checkpoint_after_application": {"publications": 34, "versions": 82, "notifications": 81, "alerts": 1, "favorites": 0, "concursos": 33},
+    "health": {"status": "ok", "env": "local-pilot"},
+    "concurso_1_cargos_confirmed": true,
+    "idempotent_repeat_executed": false
+  },
+  "idempotency_gate": {
+    "recorded_at": "2026-09-12T20:32:49-03:00",
+    "checkpoint_before": {"publications": 34, "versions": 82, "notifications": 81, "alerts": 1, "favorites": 0, "concursos": 33},
+    "concurso_1_before": {"cargos": [{"nome": "Professor Auxiliar", "vagas_imediatas": 10, "vagas_ampla_concorrencia": 9, "vagas_pcd": 1, "remuneracao": "30.53", "moeda": "BRL", "jornada": "até 40 horas semanais"}]},
+    "import_apply_repeat": {"status": "idempotent", "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb"},
+    "second_proposal": {
+      "http_create": 201,
+      "proposal_id": "tpp-273377777279a608bb4ce91107fae9bc",
+      "proposal_hash": "544ce52650a49fb2da29cffecdaca13c76f393d73a36f7e57dab912b834073d9",
+      "state": "proposed",
+      "concurso_id": 1,
+      "source_id": 19,
+      "baseline_cargos": "semantic-equal-to-proposed",
+      "proposed_cargos": "semantic-equal-to-baseline",
+      "eligible_fields": ["cargos"],
+      "material_diff": "empty/equivalent; no result persisted",
+      "approved_fields": [],
+      "version_id": null,
+      "approve_called": false,
+      "apply_called": false
+    },
+    "database_after": {"proposals": 84, "versions": 82, "outbox": 82, "notifications": 81, "applied_proposal_version_id": 82, "second_proposal_version_id": null},
+    "checkpoint_after": {"publications": 34, "versions": 82, "notifications": 81, "alerts": 1, "favorites": 0, "concursos": 33},
+    "health": {"status": "ok", "env": "local-pilot"},
+    "second_apply_attempt": {
+      "review_revalidated": true,
+      "approve_http": 200,
+      "approved_fields": ["cargos"],
+      "apply_http": 409,
+      "error": "TenderProof: observação já aplicada; consulte a proposta original",
+      "final_state": "approved",
+      "final_version_id": null,
+      "retry_executed": false,
+      "read_only_after": {"versions": 82, "outbox": 82, "notifications": 81, "health": 200, "concurso_1_cargo_count": 1}
+    }
+  },
+  "replay_r2": {
+    "recorded_at": "2026-09-12T20:46:44-03:00",
+    "review": "docs/execucao/tarefas/revisao-independente-T010-ID1-replay-r2-20260912-01.md",
+    "backend_rebuild": "observador-product:local rebuilt; only observador-pilot-api-1 recreated; volumes preserved",
+    "health": {"status": "ok", "http": 200},
+    "smoke": {"test": "tests/test_tenderproof_publication.py -k semantic_replay", "passed": 2, "deselected": 28},
+    "before": {"publications": 34, "versions": 82, "outbox": 82, "notifications": 81},
+    "apply_http": 200,
+    "response": {
+      "id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+      "idempotent_replay": true,
+      "original_proposal_id": "tpp-32d777ecadaaad5a790f95d7d4dd0e05",
+      "requested_proposal_id": "tpp-273377777279a608bb4ce91107fae9bc",
+      "version_id": 82,
+      "state": "applied"
+    },
+    "after": {"publications": 34, "versions": 82, "outbox": 82, "notifications": 81, "health": 200, "concurso_1_cargo_count": 1},
+    "db_read_only": {"versions": 82, "outbox": 82, "notifications": 81, "requested_state": "approved", "requested_version_id": null},
+    "other_records_touched": false
+  },
+  "next_gate": "triagem read-only do próximo lote pequeno; nenhum novo import/proposal/apply"
+}

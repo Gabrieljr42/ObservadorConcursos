@@ -1,0 +1,18 @@
+{
+  "schema":"t012.cpcon_open.owner-run-handoff-r7.v1",
+  "status":"CPCON_OWNER_RUN_HANDOFF_R7_READY_FOR_REVIEW",
+  "run_id":"tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2",
+  "owner_user_id":1,
+  "source_id":35,
+  "source":"cpcon_open",
+  "external_id":"processo-seletivo-simplificado-no-002-2026",
+  "concurso_id":null,
+  "reviewed_run_path":"docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6.json",
+  "reviewed_run_contract":"tenderproof.reviewed-run.v1; target intentionally unallocated",
+  "fields":["titulo","orgao","edital_numero","cargos"],
+  "artifact_sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+  "target_policy":{"positive_id":"harness-only; never an allocation","production_payload":{"source_id":35,"concurso_id":null,"run_id":"tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2"}},
+  "round_trip":{"reviewed_run":"R6 validated with ephemeral concurso_id=999 only","dry_run":"PASS","revalidate":"PASS for four fields against preserved bytes","persistent_write":false},
+  "superseded":{"r6":"blocked handoff; do not reuse as live proposal","current_proposal":"blocked by unallocated canonical target"},
+  "guards":["no API/DB/Docker/pilot","omit concurso_id until integrator allocates canonical target","do not infer target from source_id"]
+}

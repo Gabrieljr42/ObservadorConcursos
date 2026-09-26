@@ -1,0 +1,8 @@
+{
+  "schema":"t010.id5.reviewed-run-r2.receipt.v1","record_id":5,"status":"ID5_R2_READY_FOR_REVIEW",
+  "supersedes":"docs/execucao/evidencias/T010/T010-reviewed-run-id5.json","superseded_run_id":"tp-reviewed-a2c424da86d00219b4709266d52a25fe",
+  "envelope":"docs/execucao/evidencias/T010/T010-reviewed-run-id5-r2.json","envelope_sha256":"1ecd820c813974cf0fb060c22fa51ac8bdfab359a772e2f4604232fdf54c69b4","run_id":"tp-reviewed-1e82ffa7d41472d79cc8b2d4ff265766",
+  "change":"taxa_inscricao=80.00 adicionada aos três cargos; evidência p3 uniforme para todos os cargos",
+  "validation":{"reviewed_run_model":"pass","import_dry_run":"validated","tests":"3 passed","network":false,"proposal":false,"apply":false},
+  "gate":"independent review r2; r1 permanece preservado e superseded"
+}

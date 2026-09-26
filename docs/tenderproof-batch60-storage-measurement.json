@@ -1,0 +1,30 @@
+{
+  "measured_at": "2026-09-08T14:41:34.025082+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60replay",
+  "scope": "Completed19-source two-cycle offline replay on one local shared volume; not production growth forecast.",
+  "source_entries": 19,
+  "pdf_files": 38,
+  "unique_pdf_hashes": 18,
+  "physical_artifact_bytes": 38935372,
+  "unique_pdf_bytes": 18902058,
+  "all_volume_files": 121,
+  "all_volume_bytes": 92494822,
+  "sqlite_files": [
+    {
+      "file": "continuous.sqlite3",
+      "bytes": 6717440
+    },
+    {
+      "file": "operational.sqlite3",
+      "bytes": 446464
+    },
+    {
+      "file": "processing/jobs.sqlite3",
+      "bytes": 53248
+    }
+  ],
+  "retention_deletion_performed": false,
+  "network_requests": 0,
+  "passed": true,
+  "note": "Evidence retained. Two Consulplan source IDs may share a PDF hash; sources are not distinct documents."
+}

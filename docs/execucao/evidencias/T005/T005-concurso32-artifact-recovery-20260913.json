@@ -1,0 +1,26 @@
+{
+  "schema": "t005.runtime-artifact-recovery.v1",
+  "timestamp": "2026-09-13T00:08:13.1891835-03:00",
+  "contest_id": 32,
+  "source_id": 47,
+  "source": "elo_open",
+  "runtime_path": "/var/lib/observador/tenderproof/artifacts/art-07b137af65-a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2.pdf",
+  "local_path": "docs/execucao/evidencias/T005/artifacts/T005-concurso32-art-07b137af65.pdf",
+  "artifact_id": "art-07b137af65",
+  "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+  "byte_len": 429261,
+  "pages": 23,
+  "sha_match_declared": true,
+  "copied_intact": true,
+  "network": false,
+  "catalog_mutated": false
+  ,"baseline": {
+    "catalogue_id": 32,
+    "source_id": 47,
+    "external_id": "129",
+    "title": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+    "detail_url": "https://novo.eloassessoriaeservicos.com.br/concurso/129",
+    "catalog_pdf_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf",
+    "content_hash": "aa87d1b65911f8c72c33ca83823777dfd53d2373985fedb52e7d174ec680bf40"
+  }
+}

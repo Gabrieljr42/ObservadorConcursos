@@ -1,0 +1,30 @@
+{
+  "schema": "t010.field-trace-post-dispatch.v1",
+  "read_only": true,
+  "sources": [
+    "docs/execucao/evidencias/T010/T010-pacotes-revisao.json",
+    "docs/execucao/evidencias/T010/T010-manifesto-propostas-offline.json",
+    "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md",
+    "backend/.tenderproof/product-completion/delivery-current-20260912T195125613173Z.json",
+    "docs/execucao/evidencias/matriz-validacao-ui-T010-T011-2026-09-12.json"
+  ],
+  "root_diagnosis": {
+    "documentary_checked_not_http_payload": true,
+    "http_payload_fields": ["run_id", "concurso_id", "source_id", "authorization"],
+    "server_behavior": "create_normal_proposal deriva campos canônicos do TenderProofRun; não injeta checked do pacote nem atualiza structured_jobs/cargos automaticamente",
+    "no_change_meaning": "diff vazio/version_id nulo: campos canônicos derivados (identidade/inscrições) já coincidiam com o baseline",
+    "ui_pending_meaning": "cargos null no catálogo/sem run de jobs T010; não contradiz a conferência documental",
+    "safe_correction": "não há payload/run corrigível sem novo TenderProofRun com evidência estruturada para cargos; não promover manualmente"
+  },
+  "records": [
+    {"id": 1, "proposal": "tpp-5867ec21d73ac4fe89418eb466fa0464", "result": "no_change", "version_id": null, "checked_documentary": ["role", "requirements", "workload", "remuneration(hora-aula)", "vacancies", "fee"], "run_or_proposal_scope": ["titulo", "orgao", "edital_numero"], "api_catalogue_cargos": null, "gap": "checked não pertenceu ao run canônico; requer novo run de jobs"},
+    {"id": 5, "proposal": "tpp-d5cbe751714efdcd6782b45548d59fca", "result": "no_change", "version_id": null, "checked_documentary": ["cargo_table", "fee", "registration_window"], "run_or_proposal_scope": ["titulo", "orgao", "edital_numero", "inscricoes"], "api_catalogue_cargos": null, "gap": "quadro por cargo ficou documental; além disso, detalhamento linha a linha pendente"},
+    {"id": 6, "proposal": "tpp-69cc831d24aafc69f0aed3b8ba1dc750", "result": "no_change", "version_id": null, "checked_documentary": ["role", "requirements", "workload", "remuneration(mensal)", "vacancies(imediatas+CR)", "fee"], "run_or_proposal_scope": ["titulo", "orgao", "edital_numero", "inscricoes"], "api_catalogue_cargos": null, "gap": "vagas/CR e remuneração não foram campos do run"},
+    {"id": 7, "proposal": "tpp-ed6ee1dcd07ee846ba1f24abd4d9201d", "result": "no_change", "version_id": null, "checked_documentary": ["role", "requirements", "workload", "remuneration(mensal+beneficios)", "vacancies"], "run_or_proposal_scope": ["titulo", "orgao", "edital_numero"], "api_catalogue_cargos": null, "gap": "cargo e remuneração permaneceram somente documentais; taxa continua pendente"},
+    {"id": 8, "proposal": "tpp-057a831228de8b054c3726529e7038e4", "result": "no_change", "version_id": null, "checked_documentary": ["role", "requirements", "workload", "remuneration(mensal_variavel)", "vacancies(imediatas+CR)", "fee"], "run_or_proposal_scope": ["titulo", "orgao", "edital_numero", "inscricoes"], "api_catalogue_cargos": null, "gap": "remuneração variável e vagas não foram promovidas ao catálogo"},
+    {"id": 14, "proposal": "tpp-8bbd941a2970275e237e8fbe522783ec", "result": "no_change", "version_id": null, "checked_documentary": ["roles", "requirements", "remuneration(hora/etapa)", "employment_type"], "run_or_proposal_scope": ["titulo", "edital_numero"], "api_catalogue_cargos": null, "gap": "prestação PF/cadastro reserva não é cargo/emprego canônico; permaneceu documental"},
+    {"id": 15, "proposal": null, "result": "422_do_not_dispatch", "checked_documentary": ["roles", "remuneration", "selection", "employment_type"], "run_or_proposal_scope": [], "api_catalogue_cargos": null, "gap": "PDF 010/2025 não vincula ao alvo catálogo 005/2025; sem payload seguro"},
+    {"id": 16, "proposal": "tpp-9ea32737dd8f9112a06ced5bb707a36c", "result": "existing_applied", "version_id": 24, "checked_documentary": ["roles", "workload", "remuneration(mensal)", "fee", "exam_date", "document_period"], "run_or_proposal_scope": ["identidade", "inscricoes"], "api_catalogue_cargos": null, "gap": "v24 é idempotente e não contém jobs; não duplicar/retryar"}
+  ],
+  "next_gate": "novo TenderProofRun estruturado por registro, com evidência reproduzível de cargos, antes de qualquer promoção; T010 não autoriza mutação"
+}

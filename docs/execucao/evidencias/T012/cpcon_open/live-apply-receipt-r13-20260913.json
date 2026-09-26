@@ -1,0 +1,71 @@
+{
+  "schema": "t012.cpcon.live-apply-receipt-r13.v1",
+  "recorded_at": "2026-09-13T13:34:26.6349735-03:00",
+  "scope": "single_source_approve_apply",
+  "source_id": 35,
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "run_id": "tp-reviewed-bb5b719fbff8a7324460de2318814ab4",
+  "proposal_id": "tpp-69bef8bb342812dbf19e216853063d2b",
+  "owner_user_id": 1,
+  "proposal_hash": "494bf663092068e6d65f74dd24cc45f8dfa4c30ad6a134ea59ab13a59fed4b4b",
+  "backup": {
+    "bundle": "/backups/pilot-20260913T162731102Z",
+    "postgres_dump": "/backups/pilot-20260913T162731102Z-postgres.dump",
+    "postgres_sha256": "0765231711891e08cddb148ae64bc0ee5f5c5dd53193c9a342bd373c384afe64",
+    "pg_restore_list_entries": 233,
+    "operational_verified": true,
+    "writers_stopped": true,
+    "volumes_preserved": true
+  },
+  "preconditions": {
+    "health": 200,
+    "login_user": 1,
+    "proposal_state": "proposed",
+    "action": "create",
+    "target_concurso_id": null,
+    "source_id": 35,
+    "proposal_hash_match": true,
+    "document_review_pending": false,
+    "eligible_fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "baseline_fields_null": true,
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_byte_len": 498894
+  },
+  "operations": {
+    "approve": {"http": 200, "fields": ["titulo", "orgao", "edital_numero", "cargos"], "state_after": "approved"},
+    "apply": {"http": 200, "state_after": "applied", "result": "outbox_pending", "version_id": 93, "concurso_id": 35},
+    "apply_replay": "not attempted; no retry"
+  },
+  "post_validation": {
+    "health": 200,
+    "checkpoint": {
+      "contests": 35,
+      "distinct_source_ids": 34,
+      "canonical_cargos": 188,
+      "proposals": 99,
+      "versions": 93,
+      "outbox": 93,
+      "notifications": 92,
+      "favorites": 0,
+      "alerts": 1,
+      "push_devices": 0
+    },
+    "detail": {
+      "concurso_id": 35,
+      "source_id": 35,
+      "external_id": "processo-seletivo-simplificado-no-002-2026",
+      "titulo": "PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026",
+      "orgao": "Universidade Estadual da Paraíba",
+      "edital_numero": "002/2026",
+      "cargo_count": 6,
+      "identity_duplicate": false
+    },
+    "notification_delivery": {"worker_status": "completed", "delivered": 1, "failed": 0}
+  },
+  "safety": {
+    "other_sources_touched": false,
+    "rollback": false,
+    "sql_ad_hoc": false,
+    "status": "CPCON_APPLIED_API_VALIDATED"
+  }
+}

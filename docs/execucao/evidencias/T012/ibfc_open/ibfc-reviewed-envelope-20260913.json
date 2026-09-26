@@ -1,0 +1,53 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "status": "blocked_fail_closed",
+  "source": "ibfc_open",
+  "owner_user_id": 901,
+  "candidate": {
+    "candidate_id": "ibfc_open-496",
+    "external_id": "496",
+    "title_observed": "Instituto Brasileiro de Geografia e Estatística - IBGE",
+    "detail_url_observed": "https://concursos.ibfc.org.br/informacoes/496/",
+    "listing_url": "https://concursos.ibfc.org.br/index/1/",
+    "detail_fixture": {
+      "file": "backend/tests/fixtures/tenderproof_batch30_own/ibfc_open-cycle1-detail-59a096579c.html",
+      "sha256": "004e4a6d6e971171644f87c3a71e68beb83e97ace5884752eb8bf704be9c0b9d",
+      "byte_len": 25296
+    },
+    "listing_fixture": {
+      "file": "backend/tests/fixtures/tenderproof_batch30_own/ibfc_open-cycle1-listing-822e0b4c54.html",
+      "sha256": "ccacab979def0b5dc163cdaa58efaf4a2821b756931b616c988b171454af0c0f",
+      "byte_len": 18285
+    }
+  },
+  "runs_reused": [
+    "tpr-b87fc8933e6c",
+    "tpr-c419c4ed8574"
+  ],
+  "document_review": {
+    "candidate_identity_validated": true,
+    "documents_observed": 10,
+    "selected_document": {
+      "title": "Edital de Abertura nº 01/2026 - Retificado 12/06/2026",
+      "url": "https://servidor-arquivos.ibfc.org.br/arquivos-publicos/edital-01.2026-ibge-retificado-19.08.pdf",
+      "kind": "edital_principal_candidate",
+      "sha256": null,
+      "byte_len": null,
+      "artifact_id": null
+    },
+    "retificacoes_observed": [
+      "https://servidor-arquivos.ibfc.org.br/arquivos-publicos/retificacao-n.-02.pdf",
+      "https://servidor-arquivos.ibfc.org.br/arquivos-publicos/pagina-356-do-diario-oficial-da-uniao-secao-3-numero-123-de-03-07-2026-imprensa-nacional.pdf"
+    ]
+  },
+  "fields": [],
+  "provenance": [],
+  "gate": {
+    "proposal_status": "not_ready",
+    "reason": "Os runs preservados são pending_review e não têm artifact/content_hash/byte_len do PDF. O IBFCAdapter rejeita o detalhe como nenhum edital principal inequívoco; anexos/retificações exigem revisão. Sem bytes não há extração verificável nem _revalidate/create_proposal seguro.",
+    "canonical_write": false,
+    "pilot_or_service_touched": false,
+    "resume_when": "fornecer o PDF preservado do edital principal (e, se usado, retificações), SHA-256/byte_len/receipt vinculados ao mesmo run/candidato; então revisar campos com snippets literais e gerar novo envelope.",
+    "fail_closed": true
+  }
+}

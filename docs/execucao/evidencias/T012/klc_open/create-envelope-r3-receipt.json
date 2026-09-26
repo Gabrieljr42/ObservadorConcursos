@@ -1,0 +1,18 @@
+{
+  "schema": "t012.klc-create-envelope-receipt.v3",
+  "status": "READY_FOR_REVIEW",
+  "source_number": 57,
+  "source": "klc_open",
+  "external_id": "632",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "formal_schema": "tenderproof.reviewed-run.v1",
+  "formal_envelope": "docs/execucao/evidencias/T012/klc_open/klc-632-reviewed-run-r3.json",
+  "handoff": "docs/execucao/evidencias/T012/klc_open/create-envelope-r3-handoff.json",
+  "artifact": {"sha256":"84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4","byte_len":348300,"pages":10},
+  "fields": ["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","cargos"],
+  "dry_run": {"validated": true, "derived_run_id": "tp-reviewed-600b17424a6e39e5c30c73f152fb0caf", "persistent_commit": false},
+  "negative_cases": ["extra source_number/run_id/proposal_target/operation/status rejected by formal schema", "wrong source/external/URL/SHA/marker rejected by parser"],
+  "side_effects": {"api":false,"database":false,"proposal":false,"pilot":false,"shared_docs":false},
+  "tests": {"path":"docs/execucao/evidencias/T012/klc_open/test_create_envelope_r3.py","command":"from backend: .venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/klc_open/test_create_envelope_r3.py","result":"8 passed"}
+}

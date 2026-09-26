@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-07T23:55:08.172051+00:00",
+  "total_registered": 10,
+  "new_registered": 8,
+  "new_sources_observed_live": 8,
+  "new_sources_with_live_acquisition_and_processing_valid": 7,
+  "new_sources_with_official_download_and_valid_local_recovery": 1,
+  "new_distinct_valid_pdfs": 13,
+  "new_browser_sessions": 0,
+  "scope": "bounded pilot; operational collection and publication remain disabled",
+  "sources": [
+    {
+      "source_type": "ibgp_open",
+      "name": "IBGP - Inscrições Abertas",
+      "category": "banca",
+      "listing_urls": [
+        "https://novo.ibgpconcursos.com.br/inscricoes_abertas.jsp"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "previous source adapter regression",
+      "live_observation": "prior stage evidence, no new paid browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": null,
+      "latest_evidence": [
+        "tenderproof-expansion-validation.json"
+      ],
+      "valid_live_document_sha256": [],
+      "valid_live_sample_external_ids": [],
+      "browser_dependency": "IBGP HTML shell requires explicitly enabled browser",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "imeso_open",
+      "name": "IMESO - Concursos e Seletivos",
+      "category": "banca",
+      "listing_urls": [
+        "https://portal.imeso.com.br/edital"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "previous source adapter regression",
+      "live_observation": "prior stage evidence, no new paid browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": null,
+      "latest_evidence": [
+        "tenderproof-expansion-validation.json"
+      ],
+      "valid_live_document_sha256": [],
+      "valid_live_sample_external_ids": [],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "access_open",
+      "name": "Instituto ACCESS",
+      "category": "banca",
+      "listing_urls": [
+        "https://access.selecao.net.br/index/abertos/"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 3,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087"
+      ],
+      "valid_live_sample_external_ids": [
+        "183"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "ValueError: links de edital ambíguos; seleção documental explícita necessária"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "abcp_open",
+      "name": "ABCP Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://abcp.selecao.net.br/index/abertos/"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 5,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+        "ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72",
+        "f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194"
+      ],
+      "valid_live_sample_external_ids": [
+        "2869",
+        "2868",
+        "2867"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "avancasp_open",
+      "name": "Avança SP Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://avancasp.selecao.net.br/index/abertos/"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 9,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a"
+      ],
+      "valid_live_sample_external_ids": [
+        "272"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "ProcessingError: page_limit"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "ibade_open",
+      "name": "IBADE Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://portal.ibade.selecao.site/edital"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 104,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c"
+      ],
+      "valid_live_sample_external_ids": [
+        "127"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "fenix_open",
+      "name": "Fênix Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://portal.fenix.selecao.site/edital"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 128,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9",
+        "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+        "e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194"
+      ],
+      "valid_live_sample_external_ids": [
+        "129",
+        "128",
+        "127"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "legalle_open",
+      "name": "Legalle Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://portal.editais.legalleconcursos.com.br/edital"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 144,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+        "62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4"
+      ],
+      "valid_live_sample_external_ids": [
+        "2557",
+        "2556"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "ValueError: links de edital ambíguos; seleção documental explícita necessária"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "fgv_open",
+      "name": "FGV Conhecimento Concursos",
+      "category": "banca",
+      "listing_urls": [
+        "https://conhecimento.fgv.br/concursos"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two bounded HTTP cycles, no browser",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 33,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [
+        "34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0"
+      ],
+      "valid_live_sample_external_ids": [
+        "tjrsjuiz26"
+      ],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "ProcessingError: page_limit",
+        "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false
+    },
+    {
+      "source_type": "funcern_selection",
+      "name": "FUNCERN Concursos e Seleções",
+      "category": "institutional_selection",
+      "listing_urls": [
+        "https://funcern.br/concursos/"
+      ],
+      "implementation": "registered_adapter",
+      "offline_validation": "79 parameterized pilot cases plus 18 existing source regressions",
+      "live_observation": "two acquisitions of official PDF62p; processing limit60 honored; local recovery limit80 valid",
+      "homologation_scope": "bounded observed sample and conservative contract; never whole-source completeness",
+      "scope_status": "sample_validated_coverage_partial",
+      "first_listing_visible_eligible_candidates": 2,
+      "latest_evidence": [
+        "tenderproof-pilot-live.json",
+        "tenderproof-pilot-live-redirect-validation.json",
+        "tenderproof-pilot-continuous-replay.json"
+      ],
+      "valid_live_document_sha256": [],
+      "valid_live_sample_external_ids": [],
+      "browser_dependency": "HTTP sufficient in observed sample",
+      "coverage": "partial; missing explicit end markers and bounded pages/candidates",
+      "observed_sample_impediments": [
+        "DestinationBlocked: host fora da allowlist: nyc3.digitaloceanspaces.com",
+        "ProcessingError: page_limit",
+        "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão"
+      ],
+      "next_action": "validate remaining observed tabs/pages and document variants before wider coverage claims",
+      "production_enabled_by_pilot": false,
+      "local_recovery": {
+        "observed_at": "2026-09-07T23:48:59.894471+00:00",
+        "scope": "offline recovery of official acquired document; no new HTTP or browser",
+        "original_run": "tpr-0fda8a7cdf55",
+        "original_page_limit": 60,
+        "revised_explicit_page_limit": 80,
+        "bytes_hash_verified": true,
+        "run_id": "tpr-831aba3f31cc",
+        "source": "funcern_selection",
+        "execution_status": "completed",
+        "validation_status": "valid",
+        "pages": 62,
+        "error": null,
+        "artifact": {
+          "artifact_id": "art-cd2ec959d8",
+          "sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+          "byte_len": 786327,
+          "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+          "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+          "content_type": "application/pdf",
+          "downloaded_at": "2026-09-07T23:48:55.447364Z",
+          "storage_path": "art-cd2ec959d8-8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca.pdf"
+        },
+        "validation": {
+          "status": "valid",
+          "errors": [],
+          "warnings": [],
+          "checks": [
+            "paginas_com_texto=62/62",
+            "titulo_corroborado=4/4"
+          ]
+        }
+      }
+    }
+  ],
+  "tests": {
+    "pilot_and_existing_sources": {
+      "passed": 97,
+      "command": "python -m pytest tests/test_tenderproof_pilot.py tests/test_tenderproof_sources.py -q"
+    },
+    "note": "controlled negative/crash/repetition fixtures are distinct from real HTTP evidence",
+    "existing_adapters_inventory": {
+      "passed": 35,
+      "command": "python -m pytest tests/test_tenderproof_source_adapters.py tests/test_tenderproof_inventory.py -q"
+    },
+    "last_document_guard_regression": {
+      "passed": 16,
+      "command": "python -m pytest tests/test_tenderproof_pilot.py -q -k \"wrong_and_ambiguous or official_capture\""
+    }
+  }
+}

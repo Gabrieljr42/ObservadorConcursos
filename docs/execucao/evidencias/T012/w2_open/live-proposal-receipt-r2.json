@@ -1,0 +1,15 @@
+{
+  "schema":"t012.live-proposal-receipt-r2.v1",
+  "state":"W2_STRONG_BINDING_R2_READY_FOR_REVIEW",
+  "source":"w2_open",
+  "source_number":59,
+  "external_id":"105",
+  "prior_live_blocker":"publication._revalidate: vínculo documental forte ausente",
+  "binding_fix":"promoted orgao + edital_numero fields now carry exact preserved-PDF linkage and content receipt; no forced concurso_id",
+  "artifact":{"artifact_id":"art-8947229bb9","sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd","byte_len":700244,"mime":"application/pdf","pages":40,"url":"https://anexos.cdn.selecao.net.br/uploads/41/concursos/105/anexos/0d32376b9337f9a0604cfa5df04d59ee.pdf","content_receipt":"cr-w2-105-pdf-r2"},
+  "promoted_fields":["titulo","orgao","edital_numero","cargos"],
+  "evidence_requirements_met":["artifact_id","document_sha256","source_url","byte_len","mime","page_number","snippet","json_path","content_receipt"],
+  "allocation":{"source_number":59,"canonical_concurso_id":null,"rule":"never infer canonical id from source number"},
+  "proposal":{"status":"READY_FOR_REVIEW_AFTER_REVALIDATE","proposal_id":null,"approve":false,"apply":false},
+  "handoff":"Use w2-reviewed-run-r2.json to construct formal tenderproof.reviewed-run.v1 after canonical allocation; execute standard _revalidate then create_proposal. This receipt is not an import/apply authorization."
+}

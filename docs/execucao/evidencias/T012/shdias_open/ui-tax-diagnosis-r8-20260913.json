@@ -1,0 +1,31 @@
+{
+  "schema": "t012.shdias.ui-tax-diagnosis.v1",
+  "state": "UI_FIX_READY_FOR_REVIEW",
+  "scope": "mobile-only; no backend/data/deploy mutation",
+  "evidence": {
+    "contest_id": 34,
+    "api_or_apply_contract": "docs/execucao/evidencias/T012/shdias_open/apply-live-r6-20260913.json",
+    "observed_top_level_fee": {"field": "taxa", "value": "63.25"},
+    "history_label": "Taxa de inscrição → 63.25",
+    "cargo_payload": "cargos[] carries codigo/vagas/remuneracao but no per-cargo taxa_inscricao",
+    "ui_before_fix": "Taxa de inscrição: valor ainda não confirmado"
+  },
+  "diagnosis": {
+    "layer": "mobile mapping",
+    "cause": "Concurso type/normalizer only recognized taxa_inscricao; real canonical API payload uses top-level taxa",
+    "backend_contract_fix_required": false
+  },
+  "fix": {
+    "files": ["mobile/src/types/concurso.ts", "mobile/src/db/repositories.ts"],
+    "change": "accept taxa alias and propagate it to cargos missing taxa_inscricao",
+    "generic": true,
+    "hardcoded_contest_values": false
+  },
+  "validation": {
+    "typecheck": "npx tsc --noEmit passed",
+    "cargo_tests": "9 passed",
+    "build_deploy": false,
+    "mutations": false
+  },
+  "next_gate": "independent live reload of /concurso/34 confirming R$ 63,25"
+}

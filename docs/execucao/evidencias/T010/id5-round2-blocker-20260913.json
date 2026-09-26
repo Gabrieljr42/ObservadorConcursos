@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-13T07:19:43-03:00",
+  "scope": "T004 artifact recovery and T010 ID5 pre-import",
+  "artifact_recovery": {
+    "status": "PASS",
+    "receipt": "../T004/artifacts-20260913/recovery-receipt.json",
+    "matched": 10,
+    "missing": 0,
+    "canonical_mutation": false
+  },
+  "id5": {
+    "status": "BLOCKED_BEFORE_BACKUP",
+    "backup_command": "scripts/observador-pilot.ps1 -Action Backup",
+    "backup_result": "docker unexpected EOF; process interrupted after no progress; daemon then stopped answering docker version/compose ps",
+    "backup_path": null,
+    "imported_runs": [],
+    "proposals_created": [],
+    "approve_or_apply": false,
+    "canonical_mutation": false
+  },
+  "recovery_action": "Docker Desktop relaunched hidden once; bounded read-only poll did not restore daemon response",
+  "next_gate": "wait for daemon recovery; then fresh official backup and only thereafter canonical ID5 import/proposal flow",
+  "blocked_ids": [5],
+  "not_touched": [33,18,20,22,23,24,25]
+}

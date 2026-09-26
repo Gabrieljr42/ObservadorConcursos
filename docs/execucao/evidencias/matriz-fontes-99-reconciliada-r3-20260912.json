@@ -1,0 +1,14 @@
+{
+  "schema_version": "coverage-matrix-reconciliation.r3",
+  "generated_at": "2026-09-12",
+  "authoritative": false,
+  "source_id_definition": "numero is the source identifier; concurso IDs are explicit overlays only",
+  "baselines": {"csv": "docs/entrega-fontes-atual.csv", "product_status": "docs/tenderproof-product-status.json", "candidate_matrix": "docs/execucao/tarefas/T005-matriz-candidata-20260912.json"},
+  "current_reconciled_csv": "docs/execucao/evidencias/matriz-fontes-99-reconciliada-r3-20260912.csv",
+  "snapshot": {"concursos": 33, "fontes": 32, "cargos_arrays": 124, "publications": 34, "versions": 84, "outbox": 84, "notifications": 83, "proposals": 86, "interpretation": "current post-ID7 checkpoint; counts are not source-wide integration certification"},
+  "validation": {"rows": 99, "unique_numero": 99, "unique_fonte": 99, "status_objetivo_enum": ["parcial", "bloqueada_externamente", "dependencia_humana"], "implementation_enum": ["implemented", "partial", "pending"], "cycle_enum": ["active", "completed", "partial", "unspecified"]},
+  "overlays": {"source_19_to_concurso_1": {"state": "T010_APPLIED_UI", "version_id": 82}, "source_17_to_concurso_6": {"state": "T010_APPLIED_UI", "version_id": 83}, "source_22_to_concurso_7": {"state": "T010_APPLIED_UI", "version_id": 84}, "source_34_to_concurso_17": {"state": "T011_DEVOLVIDO_R2", "next": "novo reviewed-run/parser e novo aceite; não promover"}, "t010_insufficient": {"concurso_ids": [5, 8, 14, 16], "source_numbers": [38, 45, 76, 18]}, "t010_mismatch": {"concurso_id": 15, "source_number": 6, "next": "preservar bloqueio de identidade; não aplicar"}, "t011_other": {"insufficient_evidence": [18, 20, 22, 23, 24, 25], "do_not_retry": [21]}},
+  "coverage_dimensions": {"inventory_config_enabled": "source rows and enabled snapshot only", "adapter": "historical/current adapter fields only; adapter is not parser or integration proof", "historical_detail": "preserved historical evidence only; never current completeness", "publication_reference_only": "only explicit T007/T010/T011 receipts; no source-wide promotion", "parser_targeted": "only explicit targeted parser/reviewed-run receipts", "reviewed_run_applied": "only explicit applied/UI receipt; no_change/proposed are not applied", "app_validation": "only explicit API/UI receipt; absent receipt remains unverified"},
+  "required_preservations": ["Do not alter baseline CSV or product-status JSON.", "Do not promote source integration from an applied contest overlay.", "Keep T011 ID17 returned for r2 correction until new acceptance.", "Keep T010 contest 15 as identity mismatch and 5/8/14/16 insufficient evidence."],
+  "next_step": "Request independent review r3; after approval, update only with a new bounded receipt or reviewed-run artifact."
+}

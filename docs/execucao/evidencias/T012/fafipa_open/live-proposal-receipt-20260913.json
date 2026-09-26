@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-09-13T07:56:19-03:00",
+  "source": "fafipa_open",
+  "source_id": 69,
+  "external_id": "4208",
+  "artifact_sha256": "a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c",
+  "artifact_bytes": 33162,
+  "artifact_content_type": "text/html; charset=UTF-8",
+  "backup": {
+    "status": "REUSED_PASS",
+    "bundle": "/backups/pilot-20260913T103843603Z-operational",
+    "mechanism": "scripts/observador-pilot.ps1 -Action Backup"
+  },
+  "preflight": {
+    "health": 200,
+    "duplicate_count_before": 0,
+    "canonical_source_count_before": 99,
+    "canonical_contest_count_before": 33
+  },
+  "import": {
+    "status": "PASS",
+    "run_id": "tp-reviewed-80178cee43defc8dae09b4918c3ee547",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "sha_revalidated": true,
+    "normal_flow": "TenderProofStore.commit_run_artifact"
+  },
+  "proposal": {
+    "status": "BLOCKED_BEFORE_PROPOSAL",
+    "proposal_id": null,
+    "approve": false,
+    "apply": false,
+    "http_status": 422,
+    "detail": "TenderProof: origem documental ou identidade fora do contrato da fonte"
+  },
+  "blocker": {
+    "stage": "publication._revalidate",
+    "cause": "normal revalidation path requires supported document processing/identity contract; preserved artifact is HTML detail, not PDF",
+    "forced_conversion": false,
+    "excluded_fields_added": false
+  },
+  "after": {
+    "canonical_contest_count": 33,
+    "canonical_source_count": 99,
+    "proposals": 95,
+    "versions": 91,
+    "outbox": 91,
+    "notifications": 90,
+    "fafipa_external_match_count": 0
+  },
+  "next_gate": "source-specific reviewed HTML revalidation contract or accepted artifact-stage review; do not force PDF conversion",
+  "other_sources_touched": false
+}

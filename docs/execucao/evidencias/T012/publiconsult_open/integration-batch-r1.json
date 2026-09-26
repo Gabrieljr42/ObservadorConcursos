@@ -1,0 +1,11 @@
+{
+  "schema": "t012.dispatch-batch2.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "artifact": {"sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25},
+  "strict_branch": "fields.py exact source/external; parser SHA/bytes/URL/pages fail-closed",
+  "tests": {"dispatch": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "dispatch_result": "11 passed", "parser_suite": "38 passed", "side_effects": "no proposal/version/outbox writes; offline only"},
+  "network": false,
+  "pilot_mutated": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "t012.publiconsult.reviewed-run-receipt-r12.v1",
+  "timestamp": "2026-09-13T12:26:26.5990588-03:00",
+  "status": "READY_FOR_REVIEW",
+  "scope": "offline only; no API, DB, Docker, proposal, approve or apply",
+  "envelope": "docs/execucao/evidencias/T012/publiconsult_open/reviewed-run-r12.json",
+  "package": "docs/execucao/evidencias/T012/publiconsult_open/reviewed-run-package-r12.json",
+  "identity": {"owner_user_id": 1, "source": "publiconsult_open", "source_id": 56, "external_id": "681", "concurso_id": null},
+  "derived_run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a",
+  "run_id_policy": "Derived only for this receipt/handoff; envelope contains no run_id extra key.",
+  "checks": {
+    "schema_validate": "PASS: ReviewedRun.model_validate; concurso_id=null accepted; pending_fields=[]; reference_only=true",
+    "import_dry_run": "PASS: import_reviewed_run dry_run validated three fields; local runtime supplied absent optional content_base64=None without changing backend",
+    "build_and_sha_revalidation": "PASS: build_run verified 720592 bytes and SHA 7e3bc6...9917f",
+    "real_source_revalidation": "PASS: fields_for_run returned titulo/orgao/edital_numero and VALID against 25-page principal PDF",
+    "replay": "PASS: repeated deterministic _run_id identical",
+    "owner_isolation": "PASS: owner_user_id 901 derives a different run id",
+    "negatives": "PASS: run_id extra, pending_fields, reference_only=false, source/external/page/url drift covered by schema/parser tests",
+    "effects": "PASS: no persistence, network, proposal or catalog mutation"
+  },
+  "document_reviews_required_for_new_run": [
+    "new independent review/approval of principal edital bound to derived R12 run",
+    "new independent TAF documentary review bound to derived R12 run if attached",
+    "do not reuse prior run/case/revision approval silently"
+  ],
+  "next_gate": "Independent review of R12 envelope, then canonical target allocation and normal proposal gate; no dispatch authorized by this receipt."
+}

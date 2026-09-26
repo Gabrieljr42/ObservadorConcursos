@@ -1,0 +1,88 @@
+{
+  "schema_version": "t012.avalia.reviewed-proposal.v1",
+  "status": "PROPOSTA_PRONTA",
+  "scope": "one preserved real Avalia selection; proposal only; no DB/service write",
+  "source": "avalia_open",
+  "selection": {
+    "candidate_id": "avalia_open-631",
+    "external_id": "631",
+    "detail_url": "https://www2.avalia.org.br/concurso.jsp?id=631",
+    "title_observed": "Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO",
+    "identity": {
+      "status": "validated",
+      "organization": "Prefeitura Municipal De Caldas Novas",
+      "source_label": "Instituto Avalia",
+      "evidence": "docs/tenderproof-batch60-major-live.json run tpr-8079a5856a43; fixture detail and adapter confirm_identity"
+    }
+  },
+  "reviewed_run": {
+    "run_id": "tpr-8079a5856a43",
+    "owner_user_id": null,
+    "source": "avalia_open",
+    "mode": "real",
+    "sample_note": "Selection 631 only; not the full Avalia catalogue.",
+    "execution_status": "completed",
+    "validation_status": "valid",
+    "comparison_status": "pending",
+    "selected_candidate_id": "avalia_open-631",
+    "document": {
+      "doc_id": "avalia_open-doc-1fe85bfc6222054c",
+      "title": "Edital de Abertura - Concurso Público nº 001/2026",
+      "url_requested": "https://arquivos-site.avalia.org.br/publicacoes/2248395b-73c0-4e27-ab61-f7689387804c.pdf",
+      "url_final": "https://arquivos-site.avalia.org.br/publicacoes/2248395b-73c0-4e27-ab61-f7689387804c.pdf",
+      "kind": "edital",
+      "reason_chosen": "Preserved AvaliaAdapter selection: opening edital chosen; Annex I/II/III retained as supplementary documents, not merged.",
+      "file_format": "pdf"
+    },
+    "artifact": {
+      "artifact_id": "art-d08aaf24b2",
+      "sha256": "55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98",
+      "byte_len": 628134,
+      "url_requested": "https://arquivos-site.avalia.org.br/publicacoes/2248395b-73c0-4e27-ab61-f7689387804c.pdf",
+      "url_final": "https://arquivos-site.avalia.org.br/publicacoes/2248395b-73c0-4e27-ab61-f7689387804c.pdf",
+      "content_type": "application/pdf",
+      "downloaded_at": "2026-09-08T14:11:42.650002Z",
+      "storage_path": "art-d08aaf24b2-55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98.pdf"
+    },
+    "total_pages": 22,
+    "processed_pages": 22,
+    "fields": [
+      {
+        "field_name": "titulo",
+        "state": "supported",
+        "value": "Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO",
+        "evidence": [{"evidence_id":"t012-avalia-631-title","document_sha256":"55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98","source_url":"https://www2.avalia.org.br/concurso.jsp?id=631","snippet":"Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO","method":"preserved_run_review","method_version":"T012-20260913"}]
+      },
+      {
+        "field_name": "orgao",
+        "state": "supported",
+        "value": "Prefeitura Municipal De Caldas Novas",
+        "evidence": [{"evidence_id":"t012-avalia-631-orgao","document_sha256":"55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98","source_url":"https://www2.avalia.org.br/concurso.jsp?id=631","snippet":"Prefeitura Municipal De Caldas Novas","method":"preserved_run_review","method_version":"T012-20260913"}]
+      }
+    ],
+    "validation": {
+      "status": "valid",
+      "errors": [],
+      "warnings": ["edital_numero, inscrições e remuneração permanecem unknown e não entram no payload"],
+      "checks": ["AvaliaAdapter confirm_identity", "opening edital selected deterministically", "artifact SHA/bytes match preserved run", "only supported fields included", "supplementary annexes not merged"]
+    },
+    "is_synthetic_sample": false,
+    "diagnostics": ["reused preserved run tpr-8079a5856a43", "fixture replay is local-only"]
+  },
+  "proposal": {
+    "proposal_key": "t012-avalia-open-631-55db4a53",
+    "action": "create_or_review_only",
+    "payload_fields": {"titulo":"Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO","orgao":"Prefeitura Municipal De Caldas Novas"},
+    "unknown_excluded": ["edital_numero","inscricao_inicio","inscricao_fim","remuneracao"],
+    "idempotency_key": "t012-avalia-open-631-55db4a53",
+    "duplicate_guard": {"keys":["source=avalia_open","external_id=631","artifact_sha256=55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98"],"required_before_dispatch": true,"result":"not queried; no DB/service access"}
+  },
+  "provenance": {
+    "preserved_run": "docs/tenderproof-batch60-major-live.json#run_id=tpr-8079a5856a43",
+    "detail_fixture": "backend/tests/fixtures/tenderproof_batch60_major/avalia_open-cycle1-detail-d735621a3d.html",
+    "listing_fixture": "backend/tests/fixtures/tenderproof_batch60_major/avalia.html",
+    "adapter": "backend/app/tenderproof/batch60_major_adapters.py:AvaliaAdapter",
+    "reference_only": true
+  },
+  "dispatch": {"authorized": false, "next_gate": "integrator duplicate check and explicit proposal review"}
+}

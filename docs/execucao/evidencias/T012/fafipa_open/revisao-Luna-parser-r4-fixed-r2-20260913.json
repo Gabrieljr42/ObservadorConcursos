@@ -1,0 +1,23 @@
+{
+  "schema": "t012.fafipa.luna-parser-r4-fixed-r2-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "FAFIPA_PARSER_R4_ACCEPT_FOR_INTEGRATION_FINAL",
+  "scope": "read-only; integration gate only; no dispatch/import/proposal/apply",
+  "checks": {
+    "pins": "PASS: parser SHA 50619d6c67165e71d46ae47cccafb3a071ce756772ac85545a3ee986345929d3; PDF SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes, 38 pages",
+    "receipt": "PASS: receipt now states replacement_characters_absent=true and replacement_characters_present_in_extracted_text=false, matching fresh extraction and parser guard",
+    "identity_fallback": "PASS: source fafipa_open/external 4208; real adapter/validation contract accepts empty explicit IDs only with exact Município de Mirador - PR + edital 001/2026; ephemeral SQLite contract test passes",
+    "fail_closed": "PASS: byte drift and U+FFFD fail closed; no generic empty-ID acceptance",
+    "tests": "PASS: focused R4 + PDF/R3 + FAFIPA tests 8 passed; compileall passed",
+    "regression": "PASS: existing reviewed-run evidence/pins unchanged; no network, DB, pilot or proposal mutation"
+  },
+  "release_scope": "Integration may proceed through the real adapter/validation path, preserving source/external/SHA/bytes/orgao/edital constraints. Import/proposal and approve/apply require their own later gates.",
+  "evidence": [
+    "backend/app/tenderproof/fafipa_t012_r4.py",
+    "docs/execucao/evidencias/T012/fafipa_open/parser-r4/T012-fafipa-open-strong-binding-preflight.json",
+    "docs/execucao/evidencias/T012/fafipa_open/T012-fafipa-open-pdf-r3-receipt.json",
+    "backend/tests/test_t012_fafipa_r4.py"
+  ],
+  "safety": "No integration write, import, proposal, API/DB operation or apply was performed."
+}

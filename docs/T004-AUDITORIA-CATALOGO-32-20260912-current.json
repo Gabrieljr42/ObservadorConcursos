@@ -1,0 +1,1518 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-12T20:28:41.039736+00:00",
+  "input": "backend\\.tenderproof\\product-completion\\delivery-api-current-20260912T195115192916Z.json",
+  "input_at": "2026-09-12T19:51:13.042322+00:00",
+  "records": [
+    {
+      "concurso_id": 30,
+      "title": "Município de Caruaru/PE - 01/2026",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 6,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 32,
+      "title": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": [
+          {
+            "proposal_id": "tpa-663ecb1ce990af4cc1c784310cf8b78b",
+            "proposal_hash": "663ecb1ce990af4cc1c784310cf8b78b7ba3f5a9766ba97e73208c470b36a3d8",
+            "base_document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+            "amendment_document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+            "base_document": {
+              "sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+              "url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf",
+              "title": "Edital nº 01/2026",
+              "kind": "edital",
+              "identity": {
+                "source_id": 47,
+                "external_id": "129",
+                "edital_numero": "01/2026"
+              }
+            },
+            "amendment_document": {
+              "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+              "url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+              "title": "Retificação",
+              "kind": "retificacao",
+              "identity": {
+                "source_id": 47,
+                "external_id": "129",
+                "edital_numero": "01/2026"
+              }
+            },
+            "changes": {
+              "etapas_prova": {
+                "field_name": "etapas_prova",
+                "previous": "Objetiva de Múltipla Escolha e TAF",
+                "new": "Objetiva de Múltipla Escolha e Títulos",
+                "label": "etapas da prova",
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 1,
+                    "snippet": "8.1 O Processo Seletivo Público constará de prova Objetiva de Múltipla Escolha e Títulos.",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ],
+                "reason": "A retificação ELO comprova a alteração deste efeito documental."
+              },
+              "resultado_final_prazo": {
+                "field_name": "resultado_final_prazo",
+                "previous": "2026-11-17",
+                "new": "2026-11-30",
+                "label": "prazo do resultado final",
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 5,
+                    "snippet": "Até 30/11/2026 Até as 23h59\nDivulgação do Resultado Final (em ordem de classificação, contemplando\nsomente os candidatos classificados e excedentes), depois de decorrido\no prazo recursal e emitidos os respectivos pareceres,\nNos termos do item 1.6 deste Edital. ",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ],
+                "reason": "A retificação ELO comprova a alteração deste efeito documental."
+              },
+              "entrega_titulos_prazo": {
+                "field_name": "entrega_titulos_prazo",
+                "previous": null,
+                "new": "2026-11-13",
+                "label": "prazo da entrega de títulos",
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 5,
+                    "snippet": "Até 13/11/2026 Até as 23h59 Entrega dos títulos para os candidatos aprovados na Prova Objetiva de\nMúltipla Escolha.\nAtravés do e-mail\nconcurso@eloassessoriaeservicos.com.br\n",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ],
+                "reason": "A retificação ELO comprova a alteração deste efeito documental."
+              }
+            },
+            "reason": "Publicação inicial composta pelo edital-base e pela retificação ELO de Barra Longa.",
+            "periods": null,
+            "events": [
+              {
+                "name": "Etapas da prova",
+                "value": "Objetiva de Múltipla Escolha e Títulos",
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 1,
+                    "snippet": "8.1 O Processo Seletivo Público constará de prova Objetiva de Múltipla Escolha e Títulos.",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ]
+              },
+              {
+                "name": "Resultado final",
+                "date": "2026-11-30",
+                "end_time": "23:59",
+                "precision": "local_time",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 5,
+                    "snippet": "Até 30/11/2026 Até as 23h59\nDivulgação do Resultado Final (em ordem de classificação, contemplando\nsomente os candidatos classificados e excedentes), depois de decorrido\no prazo recursal e emitidos os respectivos pareceres,\nNos termos do item 1.6 deste Edital. ",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ]
+              },
+              {
+                "name": "Entrega dos títulos",
+                "date": "2026-11-13",
+                "end_time": "23:59",
+                "precision": "local_time",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "document_sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a",
+                    "page": 5,
+                    "snippet": "Até 13/11/2026 Até as 23h59 Entrega dos títulos para os candidatos aprovados na Prova Objetiva de\nMúltipla Escolha.\nAtravés do e-mail\nconcurso@eloassessoriaeservicos.com.br\n",
+                    "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/retificacao.pdf",
+                    "sha256": "5780db65b9a5c7fd1aa63336be35d7763fd271710144a0b8c409c4da90fa201a"
+                  }
+                ]
+              }
+            ],
+            "authorization": {
+              "actor_kind": "delegated_automation",
+              "human_read": false,
+              "delegation_reference": "user-attachment:6b86284b-154e-4ef6-88a1-6318513307e3/pasted-text-1.txt",
+              "delegation_sha256": "a8d5f58a652eaed76d186385e12dadf9cbc4acf71cca71d5535a1797aca059f6"
+            },
+            "applied_at": "2026-09-09T23:30:01.309285+00:00"
+          }
+        ]
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 31,
+      "title": "PROCESSO SELETIVO SIMPLIFICADO - SEBASTIÃO LEAL - PI",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 27,
+      "title": "Câmara Municipal de Itacarambi/MG",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 7,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 29,
+      "title": "Prefeitura de Francisco Morato - Concurso Público 01/2026",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 28,
+      "title": "WESTFÁLIA/RS - Município - Concurso Público 01/2026",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 26,
+      "title": "P.M. de Lagoa da Prata - Processo de Certificação Ocupacional para a Função de Diretor Escolar",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 25,
+      "title": "Prefeitura de Floresta/PE – 2026",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 24,
+      "title": "Câmara Municipal de Presidente Prudente",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 23,
+      "title": "Concurso Público para a Prefeitura de Macaé",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 22,
+      "title": "Concurso Público Lagoa de Pedras/RN",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 21,
+      "title": "PREFEITURA MUNICIPAL DE CAJUEIRO – AL",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": true,
+        "documents": [
+          {
+            "kind": "retificacao",
+            "title": "EDITAL DE RETIFICAÇÃO Nº01/2026",
+            "url": "https://funvapi.com.br/wp-content/uploads/2026/05/EDITAL-DE-RETIFICACAO-01-CAJUEIRO.pdf"
+          },
+          {
+            "kind": "retificacao",
+            "title": "EDITAL DE RETIFICAÇÃO Nº02/2026",
+            "url": "https://funvapi.com.br/wp-content/uploads/2026/06/EDITAL-DE-RETIFICACAO-02-CAJUEIRO.pdf"
+          },
+          {
+            "kind": "retificacao",
+            "title": "EDITAL DE RETIFICAÇÃO Nº03/2026",
+            "url": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-RETIFICACAO-03-CAJUEIRO.pdf"
+          },
+          {
+            "kind": "retificacao",
+            "title": "EDITAL DE RETIFICAÇÃO Nº04/2026",
+            "url": "https://funvapi.com.br/wp-content/uploads/2026/09/EDITAL-DE-RETIFICACAO-04-CAJUEIRO.pdf"
+          }
+        ],
+        "reason": "Há documentos novos aguardando conferência. As datas abaixo são da última versão aprovada e podem ter mudado.",
+        "evidence": "document_review"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 20,
+      "title": "MUNICÍPIO DE DOMINGOS MOURÃO - PI",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 19,
+      "title": "Concurso Público | CONCURSO PÚBLICO - CONSÓRCIO REGIONAL INTERMUNICIPAL DE SAÚDE (CRIS) - CUIDADOR E MÉDICO PSF - EDITAL  N.º 02/2026",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 2,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 18,
+      "title": "Secretaria Municipal de Educação - Prefeitura Municipal de Cristalina de Goiás",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 17,
+      "title": "PREFEITURA MUNICIPAL DE CUBATI-PB",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 14,
+      "title": "FAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 11,
+      "title": "PREFEITURA MUNICIPAL DE MARANGUAPE-CE(EDITAL 003/2025-ACE E ACS-CONCURSO PÚBLICO)",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 43,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 16,
+      "title": "Concurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": true,
+        "documents": [
+          {
+            "kind": "retificacao",
+            "title": "Edital 002/2024 - Retificação 01",
+            "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/246/anexos/245c22cb-a262-48d9-8091-f198385143f1.pdf"
+          }
+        ],
+        "reason": "Há documentos novos aguardando conferência. As datas abaixo são da última versão aprovada e podem ter mudado.",
+        "evidence": "document_review"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 15,
+      "title": "PREFEITURA DE FLORIANÓPOLIS/SC",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 13,
+      "title": "Concurso Público CREA - MG",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 7,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 12,
+      "title": "EDITAL DE PROCESSO SELETIVO SIMPLIFICADO Nº. 001/2025",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 1,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 10,
+      "title": "2026 – Prefeitura Municipal de Caxambu do Sul",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 20,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 9,
+      "title": "CAMARA MUNICIPAL PONTA PORA MS 26",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 7,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 4,
+      "title": "Carmo da Cachoeira-MG - Processo Seletivo Público 001/2026 - Prefeitura Municipal",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 5,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 3,
+      "title": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": [
+          {
+            "proposal_id": "tpa-f08e7dff7a6df27a7c442a063f1ad154",
+            "proposal_hash": "f08e7dff7a6df27a7c442a063f1ad154beae57880f0e6dc06800f2cffa8cf735",
+            "base_document_sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+            "amendment_document_sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+            "base_document": {
+              "sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+              "url": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+              "title": "EDITAL DE ABERTURA",
+              "kind": "edital",
+              "identity": {
+                "source_id": 60,
+                "external_id": "129",
+                "edital_numero": "01/2026"
+              }
+            },
+            "amendment_document": {
+              "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+              "url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf",
+              "title": "EDITAL DE PRORROGAÇÃO DAS INCRIÇÕES E ALTERAÇÃO DA DATA DA PROVA",
+              "kind": "prorrogacao",
+              "identity": {
+                "source_id": 60,
+                "external_id": "129",
+                "edital_numero": "01/2026"
+              }
+            },
+            "reason": "Edital de 08/09/2026 reabre inscrições de Pedrinhas Paulista e altera a data da prova objetiva.",
+            "periods": {
+              "original": {
+                "start": "2026-08-21",
+                "end": "2026-09-04",
+                "precision": "day",
+                "timezone": null
+              },
+              "current": {
+                "start": "2026-09-09T10:00:00-03:00",
+                "end": "2026-09-11T10:00:00-03:00",
+                "precision": "instant",
+                "timezone": "America/Sao_Paulo",
+                "provenance": [
+                  {
+                    "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                    "page": 1,
+                    "snippet": "Art.01º- COMUNICAR a prorrogação das inscrições 10h00min do dia 09 de setembro de 2026 até as\n10h00min do dia 11 de setembro de 2026, observando o horário de Brasília-DF.",
+                    "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                  }
+                ]
+              },
+              "reopenings": [
+                {
+                  "start": "2026-09-09T10:00:00-03:00",
+                  "end": "2026-09-11T10:00:00-03:00",
+                  "precision": "instant",
+                  "timezone": "America/Sao_Paulo",
+                  "provenance": [
+                    {
+                      "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                      "page": 1,
+                      "snippet": "Art.01º- COMUNICAR a prorrogação das inscrições 10h00min do dia 09 de setembro de 2026 até as\n10h00min do dia 11 de setembro de 2026, observando o horário de Brasília-DF.",
+                      "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                    }
+                  ]
+                }
+              ]
+            },
+            "events": [
+              {
+                "name": "Pagamento da inscrição",
+                "date": "2026-09-11",
+                "precision": "day",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                    "page": 1,
+                    "snippet": "Art.02º- O pagamento referente ao valor de inscrição poderá ser efetuado até o dia 11 de setembro de\n2026.",
+                    "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                  }
+                ]
+              },
+              {
+                "name": "Homologação das inscrições",
+                "date": "2026-09-18",
+                "precision": "day",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                    "page": 1,
+                    "snippet": "Art.03°- A homologação das inscrições será divulgada no endereço eletrônico\nhttps://portal.fenix.selecao.site/ no dia 18 de setembro de 2026, que também estará afixado no Quadro de\nAvisos da Prefeitura Municipal de PedrinhasPaulista, localizado na Rua Pietro Maschietto, 125, Centro ,\nPedrinhas Paulista, Estado de São Paulo.",
+                    "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                  }
+                ]
+              },
+              {
+                "name": "Prova objetiva",
+                "date": "2026-09-27",
+                "start_time": "08:00",
+                "end_time": "11:00",
+                "precision": "local_time",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                    "page": 1,
+                    "snippet": "Art.04º - A prova objetiva para o cargo público municipal será aplicada no dia 27 de setembro de 2026 ,\ncom início às 08h00 e término às 11h00 , sendo que do iníci o não será permitida, sob qualquer\nargumento, a entrada de candidatos atrasados.",
+                    "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                  }
+                ]
+              },
+              {
+                "name": "Gabarito",
+                "date": "2026-09-28",
+                "start_time": "18:00",
+                "time_qualifier": "a partir de",
+                "precision": "local_time",
+                "timezone": null,
+                "provenance": [
+                  {
+                    "sha256": "abf214200dfba8427d9597ac905e5b1b6a3e7920f03b642dcdcbbd22060c0bbd",
+                    "page": 1,
+                    "snippet": "Art.05º- O Gabarito será publicado no dia 2 8 de setembro o de 2026 no endereço eletrônico\nhttps://portal.fenix.selecao.site/ e https://www.pedrinhaspaulista.sp.gov.br/ a partir das 18h00min.",
+                    "source_url": "https://cdn-fenix.selecao.site/edital/1/129/08d76dcea494860bd7181d1f6b79d884.pdf"
+                  }
+                ]
+              }
+            ],
+            "authorization": {
+              "actor_kind": "delegated_automation",
+              "human_read": false,
+              "delegation_reference": "user-attachment:6b86284b-154e-4ef6-88a1-6318513307e3/pasted-text-1.txt",
+              "delegation_sha256": "a8d5f58a652eaed76d186385e12dadf9cbc4acf71cca71d5535a1797aca059f6"
+            },
+            "applied_at": "2026-09-09T21:00:16.318810+00:00"
+          }
+        ]
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "present_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "present_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": 1,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 8,
+      "title": "CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 7,
+      "title": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 6,
+      "title": "Processo Seletivo Público - 001/2026 Prefeitura Municipal de Berizal/MG",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 5,
+      "title": "Câmara Municipal de Unaí/MG",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 2,
+      "title": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": true,
+        "documents": [
+          {
+            "kind": "outro",
+            "title": "LISTA PROVISÓRIA DE INSCRIÇÕES DEFERIDAS 09/09/2026",
+            "url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/c99be3f3-74d0-42fa-88dc-0aaf0b3b46d5.pdf"
+          },
+          {
+            "kind": "outro",
+            "title": "LISTA PROVISÓRIA DE INSCRIÇÕES DEFERIDAS E INDEFERIDAS - PcD 09/09/2026",
+            "url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/1fb4b5f1-4e55-447f-a883-9eddb32e1105.pdf"
+          },
+          {
+            "kind": "outro",
+            "title": "LISTA DE SOLICITAÇÕES DE CONDIÇÕES ESPECIAIS PARA REALIZAÇÃO DE PROVA 09/09/2026",
+            "url": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/194440b3-fb5b-4d54-80e2-916c97d752f7.pdf"
+          }
+        ],
+        "reason": "Há documentos novos aguardando conferência. As datas abaixo são da última versão aprovada e podem ter mudado.",
+        "evidence": "document_review"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    },
+    {
+      "concurso_id": 1,
+      "title": "Prefeitura Municipal de Birigui/SP",
+      "source_origin": "unknown_in_api",
+      "detail_http": 200,
+      "document_review": {
+        "pending": false,
+        "documents": [],
+        "reason": "",
+        "evidence": "known_candidate"
+      },
+      "history": {
+        "amendments": []
+      },
+      "field_states": {
+        "titulo": "present_in_api",
+        "orgao": "absent_in_api",
+        "cidade": "absent_in_api",
+        "uf": "absent_in_api",
+        "modalidade": "absent_in_api",
+        "status": "absent_in_api",
+        "edital_numero": "absent_in_api",
+        "edital_data": "absent_in_api",
+        "inscricao_inicio": "present_in_api",
+        "inscricao_fim": "present_in_api",
+        "prova_data": "absent_in_api",
+        "vagas": "absent_in_api",
+        "salario_min": "absent_in_api",
+        "salario_max": "absent_in_api",
+        "taxa": "absent_in_api",
+        "escolaridade": "absent_in_api",
+        "cargos": "absent_in_api",
+        "publications": "absent_in_api"
+      },
+      "cargos_count": null,
+      "classification_note": "API snapshot only; absent_in_api is not source absence and may be extraction failure."
+    }
+  ],
+  "counts": {
+    "records": 32,
+    "with_cargos": 10,
+    "without_cargos_in_api": 22,
+    "pending_document_review": 3
+  },
+  "interpretation": {
+    "absent_in_api": "campo não retornado pelo snapshot API; não prova ausência na fonte",
+    "extraction_failure_or_untyped": "payload incompatível com estrutura esperada; investigar extração",
+    "present_in_api": "valor retornado; requer evidência documental antes de publicação"
+  }
+}

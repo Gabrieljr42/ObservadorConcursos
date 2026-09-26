@@ -1,0 +1,47 @@
+{
+  "review": "Luna UFU ReviewedRun R10",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "evidence": [
+    "reviewed-run-r10.json",
+    "reviewed-run-r10-receipt.json",
+    "reviewed-run-r10-package.json"
+  ],
+  "envelope_sha256": "25490652d1d2fdda4e8f5b9c1d7bea3c48976249eb0e7b70e14dd13d3c163792",
+  "canonical_payload_sha256": "55af0a123106b5346744e2e5f12f482c0203ca9a235220e1c93a168dc7a61a0c",
+  "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+  "previous_run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+  "identity": {
+    "owner_user_id": 1,
+    "source": "ufu_selection",
+    "source_id": 40,
+    "external_id": "1843",
+    "concurso_id": null,
+    "proposal_target": null
+  },
+  "artifact": {
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "url_requested_and_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+    "detail_url_separate": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843"
+  },
+  "fields": {
+    "exact": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "count": 5,
+    "all_evidence_source_url_is_document_url": true,
+    "blocked_baseline_only": ["taxa", "cargos", "prova_data"],
+    "cargo_count": 0
+  },
+  "checks": {
+    "schema_import_dry_run": "PASS",
+    "replay_idempotence": "PASS per R10 package/receipt and directed suite",
+    "alternate_artifact_path_same_run": "PASS",
+    "owner_and_identity_negatives": "PASS in test_ufu_selection_preflight.py",
+    "drift_and_url_negatives": "PASS in test_ufu_selection_preflight.py",
+    "real_revalidation_fail_closed_without_publication": "PASS",
+    "directed_tests": "24 passed (test_ufu_selection_preflight.py, test_tenderproof_ufu_observed_contract.py, test_reviewed_run_import.py)",
+    "network": false
+  },
+  "operational_instruction": "If live work is authorized, import and propose only tp-reviewed-fda366b2fc4f331f6704f8672be2a50d, preserving owner 1/source 40/external 1843/target null. Do not reuse f3e9 or prior runs; stop for normal authenticated proposal preflight before apply.",
+  "mutations_by_review": false
+}

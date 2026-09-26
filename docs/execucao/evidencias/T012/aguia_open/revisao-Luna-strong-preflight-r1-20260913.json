@@ -1,0 +1,31 @@
+{
+  "schema": "t012.aguia.luna-strong-preflight-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "NOT_CURRENT_DO_NOT_PUBLISH",
+  "scope": "read_only; no network, API, DB, catalogue mutation, or publication",
+  "identity_and_pins": {
+    "source": "aguia_open",
+    "source_id": 27,
+    "external_id": "43",
+    "edital": "01/2025",
+    "artifact_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+    "byte_len": 501543,
+    "pages": 18,
+    "urls": "detail/document URLs match the parser pins",
+    "status": "PASS"
+  },
+  "parser_checks": {
+    "guards": "PASS: source/external, SHA/bytes, 18 pages, empty pages, U+FFFD, PDF errors and literal identity/fee/registration/exam/cargo markers",
+    "evidence": "PASS: evidence is page/SHA/URL bound and snippets are required literals",
+    "fields": "PASS for proven 4 cargos, 30h, R$3445.71, R$65 fee and dates; no inferred fields",
+    "side_effects": "PASS: SQLite revalidate stayed fail-closed with zero proposal/version/outbox rows"
+  },
+  "temporal_gate": {
+    "review_date": "2026-09-13",
+    "registration_window": "2025-12-05 through 2025-12-16",
+    "exam_date": "2026-01-25",
+    "current": false,
+    "decision": "The selection and its objective exam are concluded before the review date; do not publish merely to increase catalogue counts."
+  },
+  "required_condition_for_reopen": "Human/product policy must explicitly authorize historical/archive publication and label it non-current; absent that policy, keep reference_only and unpublished."
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="IESES Concursos - Projetos e Concursos Públicos">
+        <title>IESES Concursos - Últimos Projetos</title>
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        
+        <link rel="stylesheet" href="/static/css/fontawesome.css">
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        
+        <link rel="stylesheet" href="/static/css/design-tokens.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/projetos-static/projetos-ieses.css">
+
+    </head>
+
+    <body>
+        
+        <header class="header-ieses" role="banner">
+            <div class="text-center mb-0">
+                <img src="./static/images/LogoIESES.svg" alt="IESES Concursos" class="img-fluid">
+            </div>
+        </header>
+
+        
+        <main class="main-content" role="main">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-11">
+
+                        
+                        <section class="projetos-section" aria-labelledby="titulo-projetos">
+
+                            
+                            <div class="section-header">
+                                <h1 id="titulo-projetos" class="section-title">Últimos Projetos</h1>
+
+                                
+                                <div class="search-container">
+                                    <label for="busca-projetos" class="visually-hidden">Buscar projetos</label>
+                                    <input type="search" id="busca-projetos" class="search-input"
+                                        placeholder="Buscar projeto ou entidade"
+                                        aria-label="Buscar projetos por nome ou entidade">
+                                    <span class="search-icon" aria-hidden="true">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <div id="lista-projetos" class="projetos-grid" role="list">
+                                
+                            </div>
+
+                            
+                            <div class="carregar-mais-container">
+                                <button id="carregar-mais" class="btn-carregar-mais" type="button"
+                                    aria-label="Carregar mais projetos">
+                                    Carregar mais projetos
+                                </button>
+                            </div>
+
+                        </section>
+
+                        
+                        <section id="noticias" class="noticias-section" aria-labelledby="titulo-noticias">
+                            <h2 id="titulo-noticias" class="noticias-title">Últimas Notícias</h2>
+                            <div id="lista-noticias" class="noticias-grid" role="list">
+                                
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+        <footer class="footer-ieses" role="contentinfo">
+            <div class="container">
+                <p class="footer-text">
+                    1996-2025 IESES - Instituto de Estudos Superiores do Extremo Sul - IESES ®
+                </p>
+                <p class="small text-center mt-4" style="color: rgba(255, 255, 255, 0.7); margin: 0;">
+                    Desenvolvido por GPG Processamento de Dados ©
+                </p>
+            </div>
+        </footer>
+
+        
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/logger.js"></script>
+        <script src="/static/js/recaptchaConfig.js"></script>
+        <script src="/static/js/googleRecaptcha.js"></script>
+        <script src="/static/js/format.js"></script>
+        <script nonce="uvwd7Dp04DiogdhXiak50w==">window.IS_LOGGED_IN = false;</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="/projetos-static/projetos.js"></script>
+        <script nonce="uvwd7Dp04DiogdhXiak50w==">if (typeof RecaptchaConfig !== 'undefined') RecaptchaConfig.loadScript();</script>
+    </body>
+
+</html>

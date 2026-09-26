@@ -1,0 +1,47 @@
+{
+  "schema": "t005.r2-block-diagnosis.v1",
+  "proposal_id": "tpp-f1a450209aec0ad7af09922440daf557",
+  "old_run_id": "tp-reviewed-9b6433a0bdb236a6f69bc4e5eaa17c64",
+  "new_run_id": "tp-reviewed-afd39853a7417003f25581a72b853cbe",
+  "artifact_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+  "artifact_bytes": 429261,
+  "causes": [
+    {
+      "kind": "envelope-shape-divergence",
+      "observed": "ReviewedRun cargos rows used parser-internal keys (vagas, vagas_ampla, taxa, unidade_remuneracao, plus nested provas/evidence).",
+      "integrated_extractor": "fields.py pinned route emits canonical keys vagas_imediatas, vagas_ampla_concorrencia, taxa_inscricao, moeda, remuneracao_observacao and no nested evidence.",
+      "effect": "fresh_field.value != run_field.value; publication blocked cargos with valor não reproduzido pelo extrator.",
+      "correction": "build_reviewed_payload now canonicalizes rows before envelope construction; field-level evidence uses the same representative p.18 plus p.23 snippets emitted by the integrated extractor, while per-row provenance remains in derivations."
+    },
+    {
+      "kind": "artifact-path-resolution",
+      "observed": "Integrated fields route used Path(artifact.storage_path).read_bytes(), while TenderProofStore persists storage_path as a basename under artifact_dir().",
+      "effect": "in proposal revalidation, relative blob path can be missing from process CWD, causing pinned parser failure and eligible_fields empty.",
+      "correction_owner": "backend owner; minimal fields.py/store-byte resolution patch required; intentionally not changed in this T005 patch."
+    }
+  ],
+  "baseline_reproduction": {
+    "catalogue_id": 32,
+    "source_id": 47,
+    "external_id": "129",
+    "titulo": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+    "orgao": "Prefeitura Municipal De Barra Longa",
+    "edital_numero": "01/2026",
+    "inscricao_inicio": "2026-08-18 18:00:00+00:00",
+    "inscricao_fim": "2026-09-18 18:00:00+00:00",
+    "cargos": null,
+    "reproduction": "parser fresh dates are 15:00-03:00, same instant; prova_data is not a canonical catalogue field; taxa is not publishable. Envelope therefore contains only cargos.",
+    "expected_proposed_fields": ["cargos"],
+    "disposable_reproduction": "_revalidate returned eligible={cargos} and no cargos block using basename materialized under artifact_dir; no proposal commit/apply was performed."
+  },
+  "validation": {
+    "preflight": "passed",
+    "derivations": "equal",
+    "dry_run": "validated_fields_cargos_only",
+    "isolated_proposal": "prepared_no_apply",
+    "tests": "4 passed",
+    "network": false,
+    "catalogue_mutated": false
+  },
+  "status": "READY_FOR_OWNER_PATH_FIX_AND_REVIEW"
+}

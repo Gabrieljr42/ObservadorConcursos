@@ -1,0 +1,20 @@
+{
+  "schema":"t012.apta-owner1-r4-receipt.v1",
+  "timestamp":"2026-09-13T14:22:00Z",
+  "status":"BLOCKED_DETERMINISTIC_RUN_CONFLICT",
+  "source_id":48,
+  "source":"apta_open",
+  "external_id":"708",
+  "owner_user_id":1,
+  "requested_run_id":"tp-reviewed-apta-708-owner1-r4",
+  "active_envelope":"docs/execucao/evidencias/T012/apta_open/live-envelope-ready-r4.json",
+  "artifact":{"sha256":"db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c","byte_len":362093,"pages":20},
+  "dry_run":{"status":"error","detail":"conflito forte: run_id determinístico já aponta para outro conteúdo","mutation":false},
+  "cause":"normal reviewed_run importer derives identity without owner_user_id; same source/external/artifact/fields collide with prior owner901 run tp-reviewed-29cef0e686375ff7492478042aa6162f",
+  "retry":false,
+  "proposal":false,
+  "approve":false,
+  "apply":false,
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"resolve owner-isolated deterministic run conflict before any new import or proposal"
+}

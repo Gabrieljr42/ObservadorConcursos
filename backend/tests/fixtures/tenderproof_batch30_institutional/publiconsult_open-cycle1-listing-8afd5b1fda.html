@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PUBLICONSULT</title>
+<link href="/Content/Site.css" rel="stylesheet"/>
+<link href="/Content/Bootstrap/bootstrap.css" rel="stylesheet"/>
+<link href="/Template/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/Content/camera.css" rel="stylesheet"/>
+<link href="/Content/style.css" rel="stylesheet"/>
+<script src="/Scripts/Bootstrap/jquery.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+
+
+
+    </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/Content/Gsist/Gsist.less" rel="stylesheet"/>
+<link href="/Content/ProgressStep.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header" id="Gheader">
+<div class="container gConteiner">
+<nav class="navbar navbar-inverse gnavbar-inverse">
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="logo">
+<a class="GLogoSite" href="/">
+<img alt="Logo Publiconsult" src="/Content/images/img_logo.png"/></a>
+<a class="gMenuAtalho" href="/Boleto/SegundaVia">&amp;nbsp<i class="fa fa-barcode fa-2x"></i>&amp;nbsp 2ª via de boleto</a>
+<a class="gMenuAtalho" href="/">&amp;nbsp<i class="fa fa-home fa-2x"></i>&amp;nbsp Home</a>
+</div>
+</div>
+<div aria-expanded="false" class="navbar-collapse collapse" id="navbar" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/Sobre">Quem Somos</a></li>
+<li><a href="/Concurso">Concursos</a></li>
+<li><a href="/Noticias?pArea=T">Treinamentos</a></li>
+<li><a href="/Noticias">Notícias</a></li>
+<li><a href="/Noticias?pArea=L">Legislação</a></li>
+<li><a href="/Noticias?pArea=A">Artigos e Boletins</a></li>
+<li class="dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Fale Conosco<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/Candidato">Suporte ao Candidato</a></li>
+<li><a href="/Atendimento">Atendimento</a></li>
+</ul>
+</li>
+<li><a href="/Candidato">Painel do candidato</a></li>
+</ul>
+</div>
+<!--/.nav-collapse -->
+</nav>
+</div>
+<div class="clearfix"></div>
+</div>
+<link href="/Content/select2.css" rel="stylesheet"/>
+<link href="/Content/Bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+<hr style="    margin-top: 2px;    margin-bottom: 2px;"/>
+<div class="content">
+<div class="container">
+<div class="row">
+<div class="grid_12" style="padding-top: 10px;">
+<script src="/Scripts/jquery-ui.js"></script>
+<link href="/Content/jquery-ui.css" rel="stylesheet"/>
+<script>
+        $(document).ready(function () {
+            $('#imgLoading').show();
+        });
+
+        function trocaDescricao(){
+            $('#tabs').on('tabsactivate', function (event, ui) {
+                AtualizaHeader();
+                $('.alert.alert-danger').hide();
+            });
+        }
+
+        function AtualizaHeader() {
+            var div = document.getElementById("bDescricao");
+            var vTexto = "";
+            var active = $("#tabs").tabs("option", "active");
+            vTexto = $("#tabs ul>li a").eq(active).html();
+            div.innerHTML = "  Concursos - " + vTexto;
+        }
+
+        $(function () {
+            $("#tabs").tabs();
+            AtualizaHeader();
+            $('#imgLoading').hide();
+            $('#tabs').show();
+            trocaDescricao();
+            var indexJs = -2;
+            if(indexJs >= 0)
+            {
+                $('#tabs').tabs("option", "active", indexJs);
+            }
+        });
+    </script>
+<span>
+<i class="fa fa_cor fa-info-circle fa-2x"></i>
+<b id="bDescricao" style="font-size: x-large">Concursos </b>
+</span>
+<br/>
+<div id="imgLoading" style="text-align: center">
+<img src="/Content/images/ajax-loader.gif"/>
+</div>
+<div id="tabs" style="margin-bottom: 60px; display: none">
+<ul>
+<li><a href="#tabs-3">Em Andamento</a></li>
+<li><a href="#tabs-4">Homologados</a></li>
+<li><a href="#tabs-5">Suspensos</a></li>
+</ul>
+<div id="tabs-3">
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_117" id="Concurso_681" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/117_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  07/08/2026 09:00:00
+                                        <br/>
+                                        Fim:    17/08/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/681?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Sarapuí - Concurso Público - Nº 04/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_69" id="Concurso_676" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/69_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  30/06/2026 00:00:01
+                                        <br/>
+                                        Fim:    07/08/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/676?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Sarapuí - Concurso Público - Nº 03/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_69" id="Concurso_675" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/69_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  30/06/2026 00:00:01
+                                        <br/>
+                                        Fim:    31/07/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/675?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Sarapuí - Concurso Público - Nº 05/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_69" id="Concurso_677" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/69_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  30/06/2026 00:00:01
+                                        <br/>
+                                        Fim:    31/07/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/677?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Bom Sucesso de Itararé - Concurso Público - Nº 1/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_63" id="Concurso_672" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/63_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  28/05/2026 00:00:01
+                                        <br/>
+                                        Fim:    26/06/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/672?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Mombuca - Concurso Público - GCM - Nº 4/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_129" id="Concurso_664" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/129_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  11/03/2026 00:00:01
+                                        <br/>
+                                        Fim:    10/04/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/664?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabs-4">
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Itararé - Concurso Público - Nº 2/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_66" id="Concurso_678" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/66_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  07/07/2026 00:00:01
+                                        <br/>
+                                        Fim:    20/07/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/678?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Sarapuí - Concurso Público - Nº 02/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_69" id="Concurso_673" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/69_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  16/06/2026 00:00:01
+                                        <br/>
+                                        Fim:    30/06/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/673?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Itararé - Concurso Público - Nº 1/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_66" id="Concurso_670" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/66_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  05/05/2026 17:30:00
+                                        <br/>
+                                        Fim:    29/05/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/670?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Itararé - Processo Seletivo - Nº 1/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_66" id="Concurso_671" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/66_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  05/05/2026 17:30:00
+                                        <br/>
+                                        Fim:    29/05/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/671?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Palmital - Concurso Público - Nº 1/2026</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_153" id="Concurso_667" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/153_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  16/04/2026 00:00:01
+                                        <br/>
+                                        Fim:    13/05/2026 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/667?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-large btn-primary" href="/Concurso/IndexTodosHomologados" style="padding:5px 19px;color:#fff; text-decoration: none">Visualizar todos</a>
+</div>
+<div id="tabs-5">
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>SAMAE – Serviço Autônomo Municipal de Água e Esgoto de MOGI GUAÇU - Concurso Público  - Nº 1/2025</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_151" id="Concurso_645" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/151_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  09/12/2025 00:00:01
+                                        <br/>
+                                        Fim:    19/12/2025 11:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/645?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default" style="margin-top: 0px; margin-left: 0px;">
+<div class="panel-heading">
+<i></i>
+<p>Prefeitura Municipal de Porto Feliz - Concurso Público  - Nº 004/2023</p>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="row feature">
+<div class="col-sm-2 col-xs-12">
+<div class="imgBrasao">
+<img class="Cliente_60" id="Concurso_539" src="https://gsistbucket.s3.amazonaws.com/publiconsult/Images/ImagensCliente/60_1.jpg" style="width:auto;height:80px;"/>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12">
+                                        Início:  09/11/2023 18:00:00
+                                        <br/>
+                                        Fim:    14/11/2023 21:00:00
+                                        <br/>
+<br/>
+<a class="btn-large btn-primary" href="/Concurso/Detail/539?origem=H" style="padding:5px 19px;color:#fff; text-decoration: none">+ Informações...</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<script src="/Scripts/Mascaras/jquery.mask.min.js"></script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="/Scripts/modernizr-2.6.2.js"></script>
+<script src="/Scripts/knockout-2.2.0.js"></script>
+<script src="/Scripts/select2.js"></script>
+<script src="/Scripts/Mascaras/jquery.mask.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script src="/Scripts/Bootstrap/bootstrap-datetimepicker.pt-BR.js"></script>
+<div class="GFooter footer_bottom" id="GFooter">
+<div class="divPanel">
+<div class="container">
+<div class="row text-center">
+<div class="col-md-4 Gfeature_gridFooter">
+<p>
+<img alt="Logo Publiconsult" src="/Content/images/img_logo_rodape.png"/>
+</p>
+</div>
+<div class="col-md-4 Gfeature_gridFooter">
+<p><span>Rua Milton Monzoni Wagner, n.º 193, Térreo: DF 23, Parque Campolim</span></p>
+<p><span>Sorocaba / SP - CEP 18047-634</span></p>
+</div>
+<div class="col-md-4 Gfeature_gridFooter">
+<div class="span12">
+<p class="copyright">
+                                2026  © Publiconsult - Todos os direitos reservados.
+                            </p>
+</div>
+<div>
+<a class="a_linkGsist" href="http://www.gsist.com.br" style="font-size: smaller" target="_blank">Gsist - Gestão de Sistemas Cloud</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function () {
+                    return $('#popover-content').html();
+                }
+            });
+        });
+    </script>
+<span class="hidden" id="top-link-block">
+<a class="well well-sm GTopo" href="#Gheader" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+<i class="fa fa-chevron-up fa_cor"></i>
+</a>
+</span>
+<script type="text/javascript">
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function () {
+                    return $('#popover-content').html();
+                }
+            });
+        });
+    </script>
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+<script type="text/javascript">
+        if (($(window).height() + 100) < $(document).height()) {
+            $('#top-link-block').removeClass('hidden').affix({
+                // how far to scroll down before link "slides" into view
+                offset: { top: 100 }
+            });
+        }
+    </script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</body>
+</html>

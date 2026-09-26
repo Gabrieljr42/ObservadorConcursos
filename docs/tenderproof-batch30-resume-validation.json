@@ -1,0 +1,593 @@
+{
+  "observed_at": "2026-09-08T12:53:15.800594+00:00",
+  "tests": {
+    "passed": 106,
+    "failed": 0,
+    "junit": "backend/.tenderproof/batch30-resume-tests.xml",
+    "command": "python -m pytest tests/test_tenderproof_batch30_shared.py tests/test_tenderproof_batch30_edital.py tests/test_tenderproof_batch30_own_adapters.py tests/test_tenderproof_batch30_institutional.py tests/test_tenderproof_rollout_operations.py -q --disable-warnings --junitxml=.tenderproof/batch30-resume-tests.xml"
+  },
+  "batch_gate": "not_accepted",
+  "sources": [
+    {
+      "source": "exame_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "544",
+          "cycle": 1,
+          "run_id": "tpr-808e203c2032",
+          "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "544",
+          "cycle": 2,
+          "run_id": "tpr-a343487b9ac0",
+          "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "objetiva_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "2617",
+          "cycle": 1,
+          "run_id": "tpr-dd5f71a9a764",
+          "document_sha256": "7c42b44a0226d52297842252924f97a5ae07d4c92706a5f576e960769e8be463",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "2617",
+          "cycle": 2,
+          "run_id": "tpr-009c9fac5d2d",
+          "document_sha256": "7c42b44a0226d52297842252924f97a5ae07d4c92706a5f576e960769e8be463",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "cotec_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json",
+        "tenderproof-batch30-shared-alternate-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "32",
+          "cycle": 1,
+          "run_id": "tpr-83e4a986f95f",
+          "document_sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+          "evidence": "tenderproof-batch30-shared-alternate-live.json"
+        },
+        {
+          "external_id": "32",
+          "cycle": 2,
+          "run_id": "tpr-f0492b1c53a4",
+          "document_sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+          "evidence": "tenderproof-batch30-shared-alternate-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "quadrix_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json",
+        "tenderproof-batch30-shared-alternate-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "3073",
+          "cycle": 2,
+          "run_id": "tpr-cea6029ee5f5",
+          "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "3073",
+          "cycle": 1,
+          "run_id": "tpr-66da424d2087",
+          "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+          "evidence": "tenderproof-batch30-shared-alternate-live.json"
+        },
+        {
+          "external_id": "3073",
+          "cycle": 2,
+          "run_id": "tpr-da1e2f6e5909",
+          "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+          "evidence": "tenderproof-batch30-shared-alternate-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "rbo_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_document_blocked",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json",
+        "tenderproof-batch30-shared-alternate-live.json"
+      ],
+      "samples": [],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": "Sampled details lacked an unambiguous original notice; preserve review requirement.",
+      "next_action": "Investigate official original documents and validate complete flow."
+    },
+    {
+      "source": "sigma_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "264",
+          "cycle": 1,
+          "run_id": "tpr-9a8780d8a030",
+          "document_sha256": "b2c123149dd32405293d380f3e9848bc6e31632ca741c7af37b623ba723a962b",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "264",
+          "cycle": 2,
+          "run_id": "tpr-1ab7abad8baa",
+          "document_sha256": "b2c123149dd32405293d380f3e9848bc6e31632ca741c7af37b623ba723a962b",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "fafipa_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "4208",
+          "cycle": 1,
+          "run_id": "tpr-0458a043e522",
+          "document_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "4208",
+          "cycle": 2,
+          "run_id": "tpr-b91b2c444bd1",
+          "document_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "omni_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "239",
+          "cycle": 1,
+          "run_id": "tpr-070ee2116643",
+          "document_sha256": "8a0b4dfc5371f779f15175201a0fdb871faee4aaf710e840ecc6c6e0d9ce1f28",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "239",
+          "cycle": 2,
+          "run_id": "tpr-0277930f92d9",
+          "document_sha256": "8a0b4dfc5371f779f15175201a0fdb871faee4aaf710e840ecc6c6e0d9ce1f28",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "w2_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "105",
+          "cycle": 1,
+          "run_id": "tpr-5aef37ae639a",
+          "document_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "105",
+          "cycle": 2,
+          "run_id": "tpr-2c59396bb3ab",
+          "document_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "consulpam_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "879",
+          "cycle": 1,
+          "run_id": "tpr-69a513263da7",
+          "document_sha256": "649269876c1a1cd6aa94a80f721fb9553859f771503de159949f07f7677e0d3a",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "879",
+          "cycle": 2,
+          "run_id": "tpr-e1b9b62a4b07",
+          "document_sha256": "649269876c1a1cd6aa94a80f721fb9553859f771503de159949f07f7677e0d3a",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "idcap_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-shared-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "252",
+          "cycle": 1,
+          "run_id": "tpr-3aa15ff59c85",
+          "document_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        },
+        {
+          "external_id": "252",
+          "cycle": 2,
+          "run_id": "tpr-aff7d0d4e62c",
+          "document_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+          "evidence": "tenderproof-batch30-shared-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "aguia_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-edital-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "43",
+          "cycle": 1,
+          "run_id": "tpr-0a44ec02e09f",
+          "document_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+          "evidence": "tenderproof-batch30-edital-live.json"
+        },
+        {
+          "external_id": "43",
+          "cycle": 2,
+          "run_id": "tpr-6aa940489564",
+          "document_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+          "evidence": "tenderproof-batch30-edital-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    },
+    {
+      "source": "idecan_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_document_blocked",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-edital-live.json"
+      ],
+      "samples": [],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": "Sampled details lacked an unambiguous original notice; preserve review requirement.",
+      "next_action": "Investigate official original documents and validate complete flow."
+    },
+    {
+      "source": "ibfc_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_document_blocked",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:58:18.255240+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-own-live.json"
+      ],
+      "samples": [],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": "IBFC: retified notice or detail title structure not covered by heading parser.",
+      "next_action": "Investigate official document links/layout without weakening identity or destination checks."
+    },
+    {
+      "source": "admtec_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_document_blocked",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:58:18.255240+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-own-live.json"
+      ],
+      "samples": [],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": "ADMTEC: retified notice and malformed official PDF links with literal question marks in filename; destination guard retained.",
+      "next_action": "Investigate official document links/layout without weakening identity or destination checks."
+    },
+    {
+      "source": "institutomais_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:58:18.255240+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-own-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "10645",
+          "cycle": 1,
+          "run_id": "tpr-ea5684a076d1",
+          "document_sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+          "evidence": "tenderproof-batch30-own-live.json"
+        },
+        {
+          "external_id": "10645",
+          "cycle": 2,
+          "run_id": "tpr-f1b7f7d687c2",
+          "document_sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+          "evidence": "tenderproof-batch30-own-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous replay/recovery and canonical review for this batch."
+    },
+    {
+      "source": "reisesreis_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:58:18.255240+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-own-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "70",
+          "cycle": 1,
+          "run_id": "tpr-0d7f15bb7994",
+          "document_sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+          "evidence": "tenderproof-batch30-own-live.json"
+        },
+        {
+          "external_id": "70",
+          "cycle": 2,
+          "run_id": "tpr-d084f8c2ca53",
+          "document_sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+          "evidence": "tenderproof-batch30-own-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance.",
+        "Initial live JSON capture was transformed as HTML by fixture writer; corrected writer preserves JSON. Obtain fresh JSON capture before replay; live acquisition used original response."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous replay/recovery and canonical review for this batch."
+    },
+    {
+      "source": "publiconsult_open",
+      "offline_validation": "tested",
+      "live_adapter_observation": "observed_valid_sample",
+      "homologation_state": "pending",
+      "homologation_scope": "No batch30 acceptance yet; bounded samples and contract tests only. Continuous replay, recovery and publication gate remain pending.",
+      "last_validation": "2026-09-08T12:53:15.800594+00:00",
+      "evidence": [
+        "tenderproof-batch30-resume-validation.json",
+        "tenderproof-batch30-institutional-live.json"
+      ],
+      "samples": [
+        {
+          "external_id": "681",
+          "cycle": 1,
+          "run_id": "tpr-d2bc11468688",
+          "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+          "evidence": "tenderproof-batch30-institutional-live.json"
+        },
+        {
+          "external_id": "681",
+          "cycle": 2,
+          "run_id": "tpr-4c4fe4030c27",
+          "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+          "evidence": "tenderproof-batch30-institutional-live.json"
+        }
+      ],
+      "coverage": "partial",
+      "browser_dependency": "HTTP samples; zero browser sessions",
+      "limitations": [
+        "No whole-source completeness claim. No batch30 continuous replay or canonical publication acceptance."
+      ],
+      "blocker": null,
+      "next_action": "Complete continuous repeat/recovery and canonical review proofs for this batch."
+    }
+  ]
+}

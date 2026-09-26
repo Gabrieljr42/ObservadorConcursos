@@ -1,0 +1,41 @@
+{
+  "schema": "t012.shdias-parser-evidence.v1",
+  "state": "SHDIAS_R4_REVIEW_READY",
+  "module": "backend/app/tenderproof/shdias_hortolandia.py",
+  "tests": "backend/tests/test_shdias_hortolandia_r4.py",
+  "pinned_identity": {
+    "source": "shdias_open",
+    "source_id": 51,
+    "external_id": "MTEw/MzA4",
+    "process_id": "00308",
+    "artifact_id": "shdias-open-00308-edital-2026",
+    "sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "bytes": 697485,
+    "pages": 44
+  },
+  "extracted_identity": {
+    "orgao": "Município de Hortolândia",
+    "edital_numero": "001/2026",
+    "title": "CONCURSO PÚBLICO CPMH 001/2026 - Guarda"
+  },
+  "r3_fields_revalidated": {
+    "taxa_inscricao": "63.25",
+    "prova_data": "2026-09-27",
+    "cargos": [
+      {"codigo": "301", "vagas": 12, "remuneracao": "3971.37"},
+      {"codigo": "302", "vagas": 28, "remuneracao": "3971.37"}
+    ],
+    "vagas_total": 40
+  },
+  "fail_closed_guards": [
+    "source, external_id and process_id pinning",
+    "exact byte length and SHA-256",
+    "exact 44-page extraction",
+    "empty-page and U+FFFD rejection",
+    "literal title, fee, exam, cargo and remuneration markers"
+  ],
+  "integration_note": "Generic fields.py/dispatch remains unchanged; a controlled integration must call this parser for source shdias_open external MTEw/MzA4 before canonical allocation.",
+  "network": false,
+  "catalogue_mutated": false,
+  "apply": false
+}

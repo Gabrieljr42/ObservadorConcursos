@@ -1,0 +1,21 @@
+{
+  "schema": "t012.publiconsult.bundle-r21.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "ACCEPT_DEPLOY_FINAL",
+  "scope": "offline read-only; no Docker/API/live/deploy or central-document mutation",
+  "delta": {
+    "file": "backend/app/tenderproof/publiconsult_t012.py",
+    "change": "__main__ smoke assertion only: len(fields) 2 -> 3",
+    "sha256": "a54389e5907b69d8b0c41d3f3adb470e0c96f0ef8d75c179bdef950d548f35c7",
+    "prior_r18_sha256": "9b3e62af3e02aa9ed45ab593dcd34fc88104ade94b1d594591a8e72f7f7f537b",
+    "runtime_behavior_changed": false
+  },
+  "validation": {
+    "module_smoke": "PUBLICONSULT_R4_PARSER_PASS",
+    "tests": "9 passed",
+    "compileall": "PASS",
+    "runtime_parser": "unchanged; three identity fields, canonical snippets, TAF excluded, strict pins retained"
+  },
+  "operational": "R18 requirement for a new owner-scoped run after stale R12 provenance remains; this delta does not authorize replay/live mutation.",
+  "side_effects": {"live": false, "deploy": false, "proposal": 0, "version": 0, "outbox": 0, "notification": 0}
+}

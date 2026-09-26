@@ -1,0 +1,65 @@
+{
+  "revision": "concurso-section-identity-001",
+  "state": "implemented_and_tested_disposable_only",
+  "trigger": {
+    "source_types": [
+      "fatec_selection",
+      "fappr_selection"
+    ],
+    "failure": "UNIQUE(source_id, link_pagina) rejected second distinct observed external ID on same actual URL",
+    "canonical_resolver": "already separated source/external IDs; no change to canonical.py/publication.py needed"
+  },
+  "schema": {
+    "known": "unique(source_id,external_id) WHERE external_id IS NOT NULL AND trim(external_id) <> empty",
+    "legacy": "unique(source_id,link_pagina) WHERE external_id IS NULL OR trim(external_id) = empty"
+  },
+  "migration": {
+    "module": "app.concurso_identity_migration",
+    "automatic_boot_migration": false,
+    "production_applied": false,
+    "upgrade_conflicts": "abort on duplicate source/external IDs or duplicate legacy source/URLs; no merge",
+    "downgrade_conflicts": "abort if any source/URL pair repeats; no deletion or invented URL",
+    "sqlite": "transactional table rebuild preserves values, IDs, auxiliary indexes, triggers and child references; foreign_key_check before commit",
+    "postgresql": "transaction and ACCESS EXCLUSIVE table lock"
+  },
+  "validation": {
+    "sqlite_regression": {
+      "passed": 82,
+      "skipped_postgres": 7,
+      "duration_s": 56.36
+    },
+    "foundation_final": {
+      "passed": 31,
+      "duration_s": 14.31
+    },
+    "legacy_id_preservation_added": {
+      "passed_sqlite": 1,
+      "skipped_postgres": 1
+    },
+    "postgresql_reports": [
+      "tenderproof-batch99-identity-postgres.json",
+      "tenderproof-batch99-identity-publication-postgres.json"
+    ],
+    "full_publication_same_url": {
+      "sources": 2,
+      "synthetic_pdf_bytes_revalidated": true,
+      "revalidation_stub": false,
+      "distinct_created_contests_per_source": 2,
+      "repeat_apply_idempotent": true,
+      "rollback_preserves_identity_keys_and_contests": true
+    }
+  },
+  "collector_guards": [
+    "known IDs preferred",
+    "contradictory known IDs cannot merge by URL",
+    "ambiguous URL-only match raises AmbiguousContestIdentity",
+    "missing incoming ID cannot erase existing reviewed ID"
+  ],
+  "files_sha256": {
+    "backend/app/models.py": "b40df48e85c6685bf149ba7021e23df7388e02f70f3f8eb0954302ae793ee28c",
+    "backend/app/services.py": "846e15c360f19086297c467fb7da75ea38eed622b858615c27310c6944389c45",
+    "backend/app/concurso_identity_migration.py": "c703cccccc63d728daa6e7913bd63df17c17ba6d745822553d47df4187f961bb",
+    "backend/tests/test_concurso_identity_migration.py": "ea928c4fe7a21267ccc46899126a1c3556ce2d6380ca901fa55b67c89d2c4927",
+    "backend/tests/test_tenderproof_batch99_foundations.py": "a512c961f2797341c7e72598343d4d9b6410246104050cd1a68a2819fa86432b"
+  }
+}

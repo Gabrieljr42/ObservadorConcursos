@@ -1,0 +1,382 @@
+{
+  "generated_at": "2026-09-08T15:57:33.121406+00:00",
+  "delivery_scope": "Etapas11–13 entregues com aceite por amostras e impedimentos explícitos; não significa99adaptadores ou99fontes homologadas.",
+  "stages": {
+    "11": {
+      "state": "accepted_bounded_partial_scope",
+      "pilot_sources": 10,
+      "evidence": "tenderproof-rollout-acceptance.json",
+      "whole_source_coverage": false
+    },
+    "12": {
+      "state": "implemented_and_validated_in_isolation",
+      "behavior": [
+        "Criação e atualização com revisão e evidência",
+        "Identidade explícita, aliases e concorrência sem fusão textual",
+        "Preservação de desconhecidos e conflitos",
+        "Versões, outbox transacional, idempotência e rollback",
+        "Autenticação e isolamento entre usuários",
+        "Link autenticado de documento POST e página oficial",
+        "Migração explícita para concursos distintos na mesma URL"
+      ],
+      "production_enabled": false
+    },
+    "13": {
+      "state": "all99_investigated_bounded_gates_accepted_with_exclusions",
+      "cumulative_gates": [
+        10,
+        30,
+        60,
+        99
+      ],
+      "full99_integration_claimed": false
+    }
+  },
+  "counts": {
+    "inventory_sources": 99,
+    "implemented_adapters_including_partial": 70,
+    "fully_implemented_contracts": 69,
+    "partial_implementations": 1,
+    "without_adapter": 29,
+    "sources_with_live_adapter_evidence": 70,
+    "homologated_for_partial_scope": 61,
+    "without_homologation": 38,
+    "whole_source_coverage_certified": 0
+  },
+  "tests": {
+    "integrated": {
+      "tests": 1082,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 32,
+      "passed": 1050
+    },
+    "final_postgresql": {
+      "tests": 89,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 89
+    },
+    "note": "Suítes focais e PostgreSQL se sobrepõem; não somar como testes únicos. Alterações posteriores de FAPESE/codificação têm provas focais próprias."
+  },
+  "batch99": {
+    "sources_with_two_valid_live_cycles": 16,
+    "real_process_crash_recovery_sources": 16,
+    "canonical_creation_sources": [
+      "legatus_open"
+    ],
+    "canonical_review_blocked_sources": [
+      "fade_selection",
+      "fapeg_selection",
+      "fapergs_selection",
+      "faperj_selection",
+      "fapesb_selection",
+      "fapese_selection",
+      "fapesp_selection",
+      "fapespa_selection",
+      "fapex_selection",
+      "fappr_selection",
+      "fatec_selection",
+      "funpec_selection",
+      "ieses_open",
+      "klc_open",
+      "verbena_selection"
+    ],
+    "publication_evidence": "tenderproof-batch99-publication-live.json",
+    "material_update_evidence": "tenderproof-batch99-material-update.json",
+    "new_document_review": "Novos manifestos e identidade da requisição entram em revisão; retificações não são aplicadas automaticamente."
+  },
+  "production": {
+    "collection_activated": false,
+    "publication_activated": false,
+    "real_notifications_sent": 0,
+    "production_database_migrated": false,
+    "activation_requirements": [
+      "Backup e migração explícita no banco alvo, com reconciliação manual se houver conflitos",
+      "Configuração deliberada de operador, fontes e limites",
+      "Aceitação das restrições por fonte antes de qualquer ativação"
+    ]
+  },
+  "remaining_sources": [
+    {
+      "source": "ibfc_open",
+      "name": "IBFC - Inscrições Abertas",
+      "adapter": "IBFCAdapter",
+      "reason": "Sample496 only retified; sample490 has three distinct original notices requiring explicit review.",
+      "next_action": "Resolve documented official-document impediment before homologation."
+    },
+    {
+      "source": "idecan_open",
+      "name": "IDECAN - Concursos",
+      "adapter": "IdecanAdapter",
+      "reason": "No contest files in sampled portal; official alternate portal returned403.",
+      "next_action": "Resolve documented official-document impediment before homologation."
+    },
+    {
+      "source": "aocp_open",
+      "name": "Instituto AOCP - Concursos",
+      "adapter": null,
+      "reason": "Cloudflare HTTP 403. Search observes official /concursos/index.html, but no acquisition contract validated. Selection.net search result contains explicit test contest and cannot substitute production catalogue.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "seprod_open",
+      "name": "SEPROD Concursos",
+      "adapter": null,
+      "reason": "TLS certificate expired; no insecure fallback.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "fumarc_open",
+      "name": "FUMARC Concursos",
+      "adapter": null,
+      "reason": "TLS certificate chain cannot be validated with current verified HTTP transport. Search confirms same host official site; no trusted alternate chain established.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "unifil_open",
+      "name": "Instituto UniFil",
+      "adapter": null,
+      "reason": "Cloudflare HTTP 403 at official main portal. Search corroborates same host, no safe verified alternative.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "leandroferreira_open",
+      "name": "Leandro Ferreira & Consultoria",
+      "adapter": null,
+      "reason": "Catalogue host DNS resolution failed. Search results for municipality do not establish identity of named consultancy; cannot silently replace source with municipality.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "iuds_open",
+      "name": "IUDS Concursos",
+      "adapter": null,
+      "reason": "TLS certificate expired; no insecure fallback.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "admtec_open",
+      "name": "Instituto ADM&TEC",
+      "adapter": "ADMTECAdapter",
+      "reason": "Sample121 only retified; other samples contain malformed official URLs with literal question marks in filenames.",
+      "next_action": "Resolve documented official-document impediment before homologation."
+    },
+    {
+      "source": "contemax_open",
+      "name": "CONTEMAX Consultoria",
+      "adapter": "ContemaxAdapter",
+      "reason": "Observed official principal HTTPS connection failed; no PDF bytes or insecure fallback.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "idgran_open",
+      "name": "IDGRAN Concursos",
+      "adapter": null,
+      "reason": "Catalogue host DNS resolution failed. No authoritative alternative domain observed in bounded search.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "gualimp_open",
+      "name": "Gualimp Assessoria e Consultoria",
+      "adapter": "GualimpAdapter",
+      "reason": "Official initial detail/JSON captures succeeded, but subsequent two-cycle acquisition received browser challenge HTTP403; no valid PDF.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "idib_open",
+      "name": "Instituto IDIB",
+      "adapter": null,
+      "reason": "No implemented adapter or validated PDF evidence in this batch.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "jcm_open",
+      "name": "JCM Consultoria Municipal",
+      "adapter": null,
+      "reason": "No implemented adapter or validated PDF evidence in this batch.",
+      "next_action": "Resolve documented impediment and validate official original PDF."
+    },
+    {
+      "source": "rbo_open",
+      "name": "RBO Concursos e Assessoria",
+      "adapter": "ObservedNetAdapter",
+      "reason": "Sampled details have a retified notice or no PDF; no unambiguous original acquired.",
+      "next_action": "Resolve documented official-document impediment before homologation."
+    },
+    {
+      "source": "nossorumo_open",
+      "name": "Instituto Nosso Rumo",
+      "adapter": "NossoRumoAdapter",
+      "reason": "API pública verificada; dois ciclos receberam401 nos PDFs originais. Necessário acesso público funcional ao documento oficial.",
+      "next_action": "API pública verificada; dois ciclos receberam401 nos PDFs originais. Necessário acesso público funcional ao documento oficial."
+    },
+    {
+      "source": "oppus_open",
+      "name": "Oppus Concursos",
+      "adapter": null,
+      "reason": "Domínio oficial redireciona para conteúdo de cassino; nenhuma cadeia atual de concursos verificada. Identificar portal oficial funcional.",
+      "next_action": "Domínio oficial redireciona para conteúdo de cassino; nenhuma cadeia atual de concursos verificada. Identificar portal oficial funcional."
+    },
+    {
+      "source": "fepese_open",
+      "name": "Fundação FEPESE",
+      "adapter": "FepeseAdapter",
+      "reason": "Três subdomínios inspecionados exibem somente versõesTR01, mesmo sob rótuloEdital. Aguardar original oficial ou revisão explícita dos efeitos, sem promoção automática.",
+      "next_action": "Três subdomínios inspecionados exibem somente versõesTR01, mesmo sob rótuloEdital. Aguardar original oficial ou revisão explícita dos efeitos, sem promoção automática."
+    },
+    {
+      "source": "fapemig_selection",
+      "name": "FAPEMIG - Seleções de Pessoal e Editais",
+      "adapter": null,
+      "reason": "Legacy /pt/editais/ redirects to root. Current public Nuxt/WordPress home concerns funding, proposals and scholarships; no bounded personnel notice/document chain established. This is not proof of no personnel selections.",
+      "next_action": "Legacy /pt/editais/ redirects to root. Current public Nuxt/WordPress home concerns funding, proposals and scholarships; no bounded personnel notice/document chain established. This is not proof of no personnel selections."
+    },
+    {
+      "source": "fapes_selection",
+      "name": "FAPES (Espírito Santo) - Seleções",
+      "adapter": null,
+      "reason": "Official concursoPublico page links a declaration of no public contests from2023 through2026. Only this dated HTML declaration was observed; PDF bytes were not acquired and no universal empty adapter was invented.",
+      "next_action": "Official concursoPublico page links a declaration of no public contests from2023 through2026. Only this dated HTML declaration was observed; PDF bytes were not acquired and no universal empty adapter was invented."
+    },
+    {
+      "source": "fapesq_selection",
+      "name": "FAPESQ (Paraíba) - Seleções",
+      "adapter": null,
+      "reason": "Legacy /editais/ redirects to login, not followed. Public root menu /editais-1 redirects to public2026 listing. Notices58/2026 and57/2026 sound like hiring but preserved original PDFs explicitly establish scholarship regimes without employment relationship (12.1/12.6 and13.1/13.6). No personnel adapter created from these samples.",
+      "next_action": "Legacy /editais/ redirects to login, not followed. Public root menu /editais-1 redirects to public2026 listing. Notices58/2026 and57/2026 sound like hiring but preserved original PDFs explicitly establish scholarship regimes without employment relationship (12.1/12.6 and13.1/13.6). No personnel adapter created from these samples."
+    },
+    {
+      "source": "faped_selection",
+      "name": "FAPED - Fundação de Apoio",
+      "adapter": null,
+      "reason": "HTTP406 em duas capturas independentes da página configurada. Corpo preservado; sem contrato comprovado e sem adaptador.",
+      "next_action": "HTTP406 em duas capturas independentes da página configurada. Corpo preservado; sem contrato comprovado e sem adaptador."
+    },
+    {
+      "source": "fapepi_selection",
+      "name": "FAPEPI (Piauí) - Seleções",
+      "adapter": null,
+      "reason": "Official edital listing and TECNOVA3 detail refer to company/project submissions and innovation funding. No bounded eligible personnel contract observed; lexical public selection is insufficient.",
+      "next_action": "Official edital listing and TECNOVA3 detail refer to company/project submissions and innovation funding. No bounded eligible personnel contract observed; lexical public selection is insufficient."
+    },
+    {
+      "source": "fapema_selection",
+      "name": "FAPEMA (Maranhão) - Seleções",
+      "adapter": null,
+      "reason": "Homepage has a trainee recruitment news link. Its current public route returns generic service/navigation content without the article body; no document or employment-versus-scholarship confirmation. Do not classify the whole source as funding-only.",
+      "next_action": "Homepage has a trainee recruitment news link. Its current public route returns generic service/navigation content without the article body; no document or employment-versus-scholarship confirmation. Do not classify the whole source as funding-only."
+    },
+    {
+      "source": "fapece_selection",
+      "name": "FAPECE (Ceará) - Seleções",
+      "adapter": null,
+      "reason": "Catalogue fapece.ce.gov.br fails DNS. An alternative FAPECE site identifies itself as Fundacao Assistencial e Previdenciaria da EMATERCE; official EMATERCE search evidence corroborates this entity name. fapece.com.br has TEMOS VAGA dated2026 as JPEG only, no PDF/text notice. Catalogue identity and image-based acquisition remain pending; no silent switch to FUNCAP or alternative host.",
+      "next_action": "Catalogue fapece.ce.gov.br fails DNS. An alternative FAPECE site identifies itself as Fundacao Assistencial e Previdenciaria da EMATERCE; official EMATERCE search evidence corroborates this entity name. fapece.com.br has TEMOS VAGA dated2026 as JPEG only, no PDF/text notice. Catalogue identity and image-based acquisition remain pending; no silent switch to FUNCAP or alternative host."
+    },
+    {
+      "source": "fapern_selection",
+      "name": "FAPERN (Rio Grande do Norte) - Seleções",
+      "adapter": null,
+      "reason": "Official root redirects to www.fapern.rn.gov.br and returns503. No challenge bypass, browser, or TLS change attempted.",
+      "next_action": "Official root redirects to www.fapern.rn.gov.br and returns503. No challenge bypass, browser, or TLS change attempted."
+    },
+    {
+      "source": "fapeal_selection",
+      "name": "FAPEAL (Alagoas) - Seleções",
+      "adapter": null,
+      "reason": "Official www redirect and pesquisador/editais public listing observed. Bounded material is researcher/funding oriented; no personnel notice/document chain established. No full-source absence claim.",
+      "next_action": "Official www redirect and pesquisador/editais public listing observed. Bounded material is researcher/funding oriented; no personnel notice/document chain established. No full-source absence claim."
+    },
+    {
+      "source": "facepe_selection",
+      "name": "FACEPE (Pernambuco) - Seleções",
+      "adapter": null,
+      "reason": "Official editais/todos public list exposes research funding, scholarships and project programmes. No eligible personnel original established within observed sample; no empty/full-coverage claim.",
+      "next_action": "Official editais/todos public list exposes research funding, scholarships and project programmes. No eligible personnel original established within observed sample; no empty/full-coverage claim."
+    },
+    {
+      "source": "fapesc_selection",
+      "name": "FAPESC (Santa Catarina) - Seleções",
+      "adapter": "FapescSelectionAdapter",
+      "reason": "Official delegated archive2022; original001/2022 and two amendments observed. PDF has two leading LF bytes; exact transport preserved, transport signature accepts bounded prefix but production strict parser rejects; two failed offline cycles preserved. No byte repair or certification.",
+      "next_action": "Official delegated archive2022; original001/2022 and two amendments observed. PDF has two leading LF bytes; exact transport preserved, transport signature accepts bounded prefix but production strict parser rejects; two failed offline cycles preserved. No byte repair or certification."
+    },
+    {
+      "source": "fundect_selection",
+      "name": "FUNDECT (Mato Grosso do Sul) - Seleções",
+      "adapter": null,
+      "reason": "Observed consultations page contains research funding/productivity, PICTEC and event programmes. No scoped personnel notice proved in bounded sample; not certified empty.",
+      "next_action": "Observed consultations page contains research funding/productivity, PICTEC and event programmes. No scoped personnel notice proved in bounded sample; not certified empty."
+    },
+    {
+      "source": "fapemat_selection",
+      "name": "FAPEMAT (Mato Grosso) - Seleções",
+      "adapter": null,
+      "reason": "Observed official www.fapemat.mt.gov.br redirect and editais_1. No scoped personnel sample. Shared host /web/secitec content belongs to SECITEC and cannot prove FAPEMAT selection.",
+      "next_action": "Observed official www.fapemat.mt.gov.br redirect and editais_1. No scoped personnel sample. Shared host /web/secitec content belongs to SECITEC and cannot prove FAPEMAT selection."
+    },
+    {
+      "source": "fapdf_selection",
+      "name": "FAPDF (Distrito Federal) - Seleções",
+      "adapter": null,
+      "reason": "Observed current editais-fapdf-20261 lists science and innovation funding. No scoped personnel sample proved; not certified empty.",
+      "next_action": "Observed current editais-fapdf-20261 lists science and innovation funding. No scoped personnel sample proved; not certified empty."
+    },
+    {
+      "source": "fapt_selection",
+      "name": "FAPT (Tocantins) - Seleções",
+      "adapter": null,
+      "reason": "Official /fapt/editais/31uugl1y7as4 resolves to public programme listing. No scoped personnel sample proved. FAPTO is a different foundation and not substituted.",
+      "next_action": "Official /fapt/editais/31uugl1y7as4 resolves to public programme listing. No scoped personnel sample proved. FAPTO is a different foundation and not substituted."
+    },
+    {
+      "source": "fapeam_selection",
+      "name": "FAPEAM (Amazonas) - Seleções",
+      "adapter": null,
+      "reason": "Official editais/?aba=editais-abertos contains funding programmes. Scientific/logo competitions and bursary selection are outside personnel scope.",
+      "next_action": "Official editais/?aba=editais-abertos contains funding programmes. Scientific/logo competitions and bursary selection are outside personnel scope."
+    },
+    {
+      "source": "fapeap_selection",
+      "name": "FAPEAP (Amapá) - Seleções",
+      "adapter": null,
+      "reason": "Old fapeap.ap.gov.br has verified TLS hostname mismatch. Legitimate official fapeap.portal.ap.gov.br and /publicacoes both200. Current Centelha/PROFIX/research/startup programmes are out of personnel scope. Old TLS failure is not attributed to new portal.",
+      "next_action": "Old fapeap.ap.gov.br has verified TLS hostname mismatch. Legitimate official fapeap.portal.ap.gov.br and /publicacoes both200. Current Centelha/PROFIX/research/startup programmes are out of personnel scope. Old TLS failure is not attributed to new portal."
+    },
+    {
+      "source": "faperr_selection",
+      "name": "FAPERR (Roraima) - Seleções",
+      "adapter": null,
+      "reason": "Observed current homepage/public calls do not prove personnel selection. No reliable empty marker or broad coverage conclusion.",
+      "next_action": "Observed current homepage/public calls do not prove personnel selection. No reliable empty marker or broad coverage conclusion."
+    },
+    {
+      "source": "fapero_selection",
+      "name": "FAPERO (Rondônia) - Seleções",
+      "adapter": null,
+      "reason": "Official category concursos-e-convocacoes/?e=2503 contains selections of OTHER agencies including SEDAM/IDEP despite FAPERO breadcrumb. Cannot bind those to FAPERO. Institutional publications include procurement/material acquisition. No personnel sample proved; no fake empty contract.",
+      "next_action": "Official category concursos-e-convocacoes/?e=2503 contains selections of OTHER agencies including SEDAM/IDEP despite FAPERO breadcrumb. Cannot bind those to FAPERO. Institutional publications include procurement/material acquisition. No personnel sample proved; no fake empty contract."
+    },
+    {
+      "source": "fapac_selection",
+      "name": "FAPAC (Acre) - Seleções",
+      "adapter": null,
+      "reason": "Official /98-2/ lists OSC institutional calls, scientific bursaries Maes da Ciencia and Mentes Azuis. Those are outside personnel scope; no scoped sample proved.",
+      "next_action": "Official /98-2/ lists OSC institutional calls, scientific bursaries Maes da Ciencia and Mentes Azuis. Those are outside personnel scope; no scoped sample proved."
+    }
+  ],
+  "operational_evidence": "tenderproof-batch99-operations-review.json",
+  "main_reports": [
+    "tenderproof-rollout-matrix.json",
+    "tenderproof-rollout-matrix.md",
+    "tenderproof-rollout-plan.json",
+    "tenderproof-rollout-acceptance.json",
+    "tenderproof-batch99-gate-validation.json",
+    "tenderproof-batch99-current-validation.json",
+    "tenderproof-batch99-post-review.json",
+    "tenderproof-batch99-identity-migration.md",
+    "tenderproof-batch99-final-review.json",
+    "tenderproof-ui-validation.json"
+  ]
+}

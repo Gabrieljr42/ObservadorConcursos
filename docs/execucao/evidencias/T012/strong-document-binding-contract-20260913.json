@@ -1,0 +1,43 @@
+{
+  "schema": "t012.strong-document-binding-diagnosis.v1",
+  "date": "2026-09-13",
+  "status": "STRONG_BINDING_ROOT_CAUSE",
+  "implementation": {
+    "file": "backend/app/tenderproof/publication.py",
+    "fresh_bytes_required": true,
+    "review_manifest_clear_required": true,
+    "identity_predicate": [
+      "source == run.source == candidate.source",
+      "candidate.external_id == contest.external_id",
+      "candidate.detail_url_observed == contest.link_pagina (canonical URL)",
+      "adapter validates detail and document/artifact URLs",
+      "document kind edital or consolidado; selected URL == artifact URL",
+      "stored bytes SHA256 and byte_len equal artifact",
+      "complete extraction and validate_identity(status=valid)",
+      "explicit PDF external ID equals candidate ID OR fresh supported orgao+edital equals canonical contest"
+    ],
+    "source_lines": {"review_gate": 81, "identity_and_urls": "88-117", "bytes": "124-157", "strong_binding": "172-191"}
+  },
+  "replays": [
+    {
+      "source": "w2_open",
+      "external_id": "105",
+      "artifact_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+      "fresh_states": {"titulo": "supported", "orgao": "supported", "edital_numero": "conflict"},
+      "explicit_document_ids": [],
+      "result": "fails_strong_binding"
+    },
+    {
+      "source": "shdias_open",
+      "external_id": "MTEw/MzA4",
+      "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+      "fresh_states": {"titulo": "supported", "orgao": "supported", "edital_numero": "unknown"},
+      "explicit_document_ids": [],
+      "result": "fails_strong_binding"
+    }
+  ],
+  "manual_envelope_is_not_sufficient": true,
+  "document_review_dispatch": "required only to clear pending manifest; does not replace fresh strong binding",
+  "safe_fix": "source-specific fail-closed parser/normalization yielding fresh orgao+edital or explicit PDF ID, then normal allocation/import/revalidate/proposal",
+  "pilot_or_production_touched": false
+}

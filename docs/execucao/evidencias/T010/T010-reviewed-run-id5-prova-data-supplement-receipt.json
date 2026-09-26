@@ -1,0 +1,7 @@
+{
+  "schema":"t010.id5.prova-data-supplement.receipt.v1","record_id":5,"status":"ID5_R2_READY_FOR_REVIEW",
+  "envelope":"docs/execucao/evidencias/T010/T010-reviewed-run-id5-prova-data-supplement.json","envelope_sha256":"7150323d72e2a6f7a3d275702f27bf6cf49c9753b4d40f488648d96136dac8a5","run_id":"tp-reviewed-1edc6badadc7a40c9fa6a0b2b220bf3a",
+  "field":"prova_data","value":"2027-01-10","source_page":31,"snippet":"Realização da Prova Objetiva e Discursiva 10/1/2027","artifact_sha256":"9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+  "validation":{"reviewed_run_model":"pass","import_dry_run":"validated","tests":"3 passed (including page/date drift rejection)","network":false,"proposal":false,"apply":false},
+  "gate":"independent review; normal proposal only after acceptance"
+}

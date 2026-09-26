@@ -1,0 +1,371 @@
+{
+  "observed_at": "2026-09-08T14:16:52.117497+00:00",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\b60pages",
+  "origin_report": "..\\docs\\tenderproof-batch60-shared-fixed-live.json",
+  "scope": "offline recovery of two preserved live cycles per source; original60page failure preserved; explicit local page limits only",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "original_page_limit": 60,
+  "cycles": [
+    {
+      "source": "fundep_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-e8b84824f14d",
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle1-listing-bd4d8b4c23.html",
+          "sha256": "74b428ce9ffaf31d63dde74c4d7b4a238e5480edc15cdc8e4cbd6f7ff83a55f2",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:42.356401+00:00"
+        }
+      ],
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "attempts": [
+        {
+          "run_id": "tpr-e8b84824f14d",
+          "original_run_id": "tpr-c929a836a302",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso Público - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:16:52.437827Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "measured_pages": 147,
+          "explicit_page_limit": 160,
+          "artifact": {
+            "artifact_id": "art-3abc5a2fa9",
+            "sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+            "byte_len": 6958484,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:16:52.571122Z",
+            "storage_path": "art-3abc5a2fa9-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf"
+          },
+          "document": {
+            "doc_id": "fundep_open-doc-fcff851fccf14acc",
+            "title": "Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=147/147",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "total_pages": 147,
+          "processed_pages": 147,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle1-detail-9f8492ebf7.html",
+              "sha256": "41159ec7095d739d01b5aa9b6a7a4693ec5e567428aa2a04801358b99474e191",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:43.249703+00:00"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ]
+    },
+    {
+      "source": "facet_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-9fbc9f39f268",
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle1-listing-c884746ea7.html",
+          "sha256": "79f7257fc75eeeeb5975944942fa9b5467af09a26470c9acfab176e82e55dc63",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:46.010996+00:00"
+        }
+      ],
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "attempts": [
+        {
+          "run_id": "tpr-9fbc9f39f268",
+          "original_run_id": "tpr-93e10f1f2fbd",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:17:07.974949Z",
+            "source": "facet_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "measured_pages": 83,
+          "explicit_page_limit": 120,
+          "artifact": {
+            "artifact_id": "art-3b8123882b",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:17:08.154774Z",
+            "storage_path": "art-3b8123882b-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=83/83",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "total_pages": 83,
+          "processed_pages": 83,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle1-detail-252bec7fe8.html",
+              "sha256": "3756afd7665bebd9f9326524f2ee313546d41a77d3877ef2417281ce78aeb65e",
+              "bytes": 115999,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:46.925111+00:00"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fundep_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-7dfd98cb96f6",
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle2-listing-c5cca08cc6.html",
+          "sha256": "de3511460c93f10f6d5fc984b8252038fcb14a16a2e23bd6f14ee9a534cd74c4",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:51.855451+00:00"
+        }
+      ],
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "attempts": [
+        {
+          "run_id": "tpr-7dfd98cb96f6",
+          "original_run_id": "tpr-0259caaedafb",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso Público - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:17:15.984629Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "measured_pages": 147,
+          "explicit_page_limit": 160,
+          "artifact": {
+            "artifact_id": "art-d6063af848",
+            "sha256": "851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19",
+            "byte_len": 6958484,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:17:16.064667Z",
+            "storage_path": "art-d6063af848-851da989af757847a858582489a931a7ca3ec78dcaddb497f9844decc1386a19.pdf"
+          },
+          "document": {
+            "doc_id": "fundep_open-doc-fcff851fccf14acc",
+            "title": "Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/590/concursos/72/anexos/3d865bb2-0455-447d-b254-bf958d7f46ed.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026 da Fundação Municipal de Ensino Profissionalizante de Sete Lagoas - FUMEP 17/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=147/147",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "total_pages": 147,
+          "processed_pages": 147,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle2-detail-778761b101.html",
+              "sha256": "4efe9731ba738c0e96c3e1f8be465c4033b9e0b0b02d91dd49e82cb091822791",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:52.583218+00:00"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ]
+    },
+    {
+      "source": "facet_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-2597b95c8cd4",
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle2-listing-172e8cb5cd.html",
+          "sha256": "bd4042340f47386b90f0892a7c639cb1cfd96a86001eec098b9103070af3ab05",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:13:55.321708+00:00"
+        }
+      ],
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "attempts": [
+        {
+          "run_id": "tpr-2597b95c8cd4",
+          "original_run_id": "tpr-8a906cd82ade",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:17:30.927399Z",
+            "source": "facet_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "measured_pages": 83,
+          "explicit_page_limit": 120,
+          "artifact": {
+            "artifact_id": "art-7170601a67",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:17:31.214850Z",
+            "storage_path": "art-7170601a67-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÃBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÃBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=83/83",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "total_pages": 83,
+          "processed_pages": 83,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle2-detail-c142bf07d9.html",
+              "sha256": "d09bcd9da63cf76cf8814173d08047183c9669b1eb6f8e6d2fae6e7eaeb86049",
+              "bytes": 116475,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:13:56.104038+00:00"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

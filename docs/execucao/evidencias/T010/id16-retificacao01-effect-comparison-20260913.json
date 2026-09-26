@@ -1,0 +1,18 @@
+{
+  "schema": "tenderproof.t010.id16.retificacao-effect-comparison.v1",
+  "mode": "offline_read_only",
+  "base": {"run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc", "pdf": "docs/execucao/evidencias/T010/id16.pdf", "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb", "bytes": 396219, "pages": 23},
+  "retificacao": {"title": "Edital 002/2024 - Retificação 01", "pdf": "docs/execucao/evidencias/T010/artifacts/id16-retificacao01.pdf", "url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/246/anexos/245c22cb-a262-48d9-8091-f198385143f1.pdf", "sha256": "e5d57b83713d09e9095a23fd7767f3ab8f9c109cad8aa1636cb4f1bd13b38f05", "bytes": 397534, "pages": 23, "text_chars": 101509, "u_fffd": 0},
+  "field_effects": {
+    "cargos": {"base": 18, "retificacao": 18, "changed": false, "evidence_pages": [1, 2], "canonical_rows_sha256": "d7b54a5cf936d87ce559024b07576285aa4b28debfc5047430c511d5e3fc6b35"},
+    "vagas": {"base": "10 imediatas + 8 CR", "retificacao": "10 imediatas + 8 CR", "changed": false},
+    "remuneracao": {"base": "18 valores por cargo", "retificacao": "mesmos 18 valores por cargo", "changed": false},
+    "jornada": {"base": ["10h", "20h", "40h"], "retificacao": ["10h", "20h", "40h"], "changed": false},
+    "requisitos": {"base": "18 requisitos por linha", "retificacao": "mesmos requisitos por linha", "changed": false},
+    "taxa": {"base": ["10.00", "12.00", "13.00", "15.00"], "retificacao": ["10.00", "12.00", "13.00", "15.00"], "changed": false},
+    "prova_data": {"base": "2025-01-12", "retificacao": "2025-01-12", "changed": false, "evidence_pages": [22, 23]},
+    "inscricoes": {"base": ["2024-11-27", "2024-12-29"], "retificacao": ["2024-11-27", "2024-12-29"], "changed": false, "evidence_pages": [22, 23]}
+  },
+  "non_catalogue_changes": {"changed": true, "evidence_pages": [1, 5, 6, 7, 8, 9, 10, 11, 12], "summary": "Retificação no título da abertura e alterações textuais/estruturais nas regras e critérios das provas objetiva/prática; nenhuma alteração nos campos catalogáveis acima."},
+  "decision": "Document-review may accept no catalogue-field delta, preserving the retification and its non-catalogue exam-rule effects as documentary metadata. Do not create cargo/prova/inscription updates from this retification."
+}

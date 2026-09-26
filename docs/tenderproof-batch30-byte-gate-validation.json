@@ -1,0 +1,42 @@
+{
+  "validated_at": "2026-09-08T13:58:26.666391+00:00",
+  "passed": true,
+  "tests": {
+    "regression": {
+      "tests": 732,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 14,
+      "passed": 718,
+      "duration_s": 173.416,
+      "junit": "backend/.tenderproof/batch30-byte-gate-regression.xml"
+    },
+    "publication_suite_with_postgres": {
+      "tests": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 41,
+      "duration_s": 71.868,
+      "junit": "backend/.tenderproof/batch30-byte-gate-postgres.xml"
+    },
+    "focal": {
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 44,
+      "duration_s": 18.446,
+      "junit": "backend/.tenderproof/document-byte-review-focal.xml"
+    }
+  },
+  "postgres_container_removed_and_absence_confirmed": true,
+  "ui": {
+    "typescript": "passed",
+    "component_interactions": "passed; new and changed-byte holds block old approved proposal"
+  },
+  "scope": "Changed acquired bytes at same URL; synthetic checkpoint changes, preserved artifacts and canonical guards. Complementary bytes not acquired remain outside monitoring.",
+  "production_enabled": false,
+  "documentation": "TENDERPROOF-DOCUMENT-BYTE-REVIEW.md",
+  "mixed_queue": "tenderproof-batch30-mixed-retry1-validation.json"
+}

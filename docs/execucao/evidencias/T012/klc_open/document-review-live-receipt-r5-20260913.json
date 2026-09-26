@@ -1,0 +1,15 @@
+{
+  "schema": "t012.klc.document-review-live-receipt-r5.v1",
+  "recorded_at": "2026-09-13T13:53:27.1756864-03:00",
+  "source_id": 57,
+  "external_id": "632",
+  "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+  "owner_user_id": 1,
+  "manifest": {"title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP", "kind": "edital", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf", "artifact_id": "art-96637dad76", "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "pages": 10},
+  "preflight": {"health": 200, "pending": true, "documents": 1, "case_id": null, "revision_hash": null},
+  "operation": {"endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare", "attempts": 1, "http": 409, "log": "POST .../prepare HTTP/1.1 409 Conflict", "response_body": "not captured: client response content was disposed; no retry", "approve": false, "proposal": false, "apply": false},
+  "post_state": {"pending": true, "documents": 1, "case_id": null, "revision_hash": null, "reason": "Documentos novos ou alterados foram observados. Seus efeitos precisam de revisão; os valores do catálogo permanecem preservados."},
+  "counts_unchanged": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "versions": 93, "outbox": 93, "notifications": 92, "favorites": 0, "alerts": 1},
+  "result": "KLC_DOCUMENT_PREPARE_BLOCKED_409",
+  "stop_rule": "Single normal prepare returned 409; no prepare-preserved fallback, retry, approval or proposal."
+}

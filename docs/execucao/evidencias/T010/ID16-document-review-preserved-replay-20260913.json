@@ -1,0 +1,29 @@
+{
+  "evidence_version": "t010-id16-document-review-replay.v1",
+  "scope": "bounded document-review prepare replay; no pilot, service, network, or canonical-data mutation",
+  "diagnosis": {
+    "cause": "prepare always reopened the live detail page and required the pending URL to remain in the current official listing; a previously captured, hash-verified review case was not consulted first",
+    "risk": "a disappeared official listing made an already preserved Retificação01 review irrecoverable, while an arbitrary URL must not become admissible"
+  },
+  "change": {
+    "file": "backend/app/tenderproof/review_cases.py",
+    "behavior": "reuse only the current owner/run/revision/method prepared case when it has documents whose exact URL equals artifact requested/final URL, host is the bound candidate or selected artifact host, bytes exist, byte_len matches, and SHA-256 matches; otherwise continue normal live validation",
+    "foreign_url": "not replayed; normal identity-bound path remains responsible for rejection",
+    "idempotence": "repeated prepare returns the same preserved case without driver/download or new case"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest tests/test_tenderproof_document_review_gate.py -q",
+    "result": "PASS: 62 passed, 879 warnings, 113.13s (four directed review suites)",
+    "coverage": [
+      "preserved case replays after live listing disappearance",
+      "foreign-host document is not replayed",
+      "same-host document URL differing from preserved artifact URL is not replayed",
+      "cross-identity payload is not replayed",
+      "document outside current pending manifest is not replayed",
+      "approved review no-op leaves proposal/version/outbox/notification counts at zero",
+      "existing document-review ownership/revision/approval gates remain green"
+    ],
+    "compileall": "PASS: backend/.venv/Scripts/python.exe -m compileall -q app/tenderproof"
+  },
+  "review_gate": "READY_FOR_REVIEW_R2"
+}

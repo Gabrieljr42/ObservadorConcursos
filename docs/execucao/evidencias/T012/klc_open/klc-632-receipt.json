@@ -1,0 +1,15 @@
+{
+  "status": "PROPOSTA_PRONTA",
+  "source": "klc_open",
+  "selection": {"concurso_id": null, "source_number": 57, "external_id": "632", "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632", "catalogue_absent": true},
+  "artifact": {"artifact_id":"art-96637dad76","sha256":"84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4","bytes":348300,"pages":10,"url":"https://www.klcconcursos.com.br/editais/4fe007a9f3f5afb03835272439f1812f.pdf"},
+  "promoted_fields": ["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","cargos"],
+  "cargo_count": 1,
+  "reviewed_run_id": null,
+  "dry_run_fields": [],
+  "review_status": "KLC_REVIEW_R2",
+  "dry_run_blocker": "ReviewedRun exige concurso_id inteiro positivo; alvo canônico ainda não alocado. source_number=57 é apenas proveniência e não pode ser usado como concurso_id.",
+  "proof_date": {"value_observed_by_alternate_pdf_text":"2026-05-10","promoted":false,"reason":"não havia literal correspondente na saída de extract_pages_isolated; fail-closed"},
+  "dry_run": {"validated":true,"repeat_deterministic":true},
+  "handoff": "Revisar o envelope e resolver o alvo de catálogo para source klc_open/external_id 632 pela rota normal; depois importar o ReviewedRun e criar proposta pela rota normal. Nenhuma operação de piloto, apply ou deploy foi feita."
+}

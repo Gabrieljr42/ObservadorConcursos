@@ -1,0 +1,20 @@
+{
+  "scope": "Public documents only, exact observed requests, TLS verified, no production",
+  "documents": [
+    {
+      "source": "fapesc_selection",
+      "url": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+      "basis": "literal original edital href in detail",
+      "observed_at": "2026-09-08T15:07:04.972981+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "content_type": "application/pdf",
+      "location": null,
+      "bytes": 715217,
+      "sha256": "92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae",
+      "file": "fapesc_selection-92564af99aebb458.response",
+      "error": "response not successful PDF",
+      "client_closed": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "t012.klc.backend-bundle-r25.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "ACCEPT_DEPLOY_FINAL_R24",
+  "scope": "offline read-only; no Docker/API/live/deploy or central-document mutation",
+  "delta_verified": {
+    "klc_parser_sha256": "42ead936eba65bde25b0862200d96a564a8088523a3aa423213c7e77d135d524",
+    "fields_sha256": "f1662ec98cda997eb080459966921a476bf52cff9332f70b30bf50f7a7af2629",
+    "review_cases_sha256": "90f6c14326e5f7f95be0e792e8d12ac4061572a5d650832838981962a1d95bb5",
+    "method_version": "tenderproof-fields/1.22",
+    "wiring": "document is propagated through review_fields and fields.extract_fields to the KLC retification parser"
+  },
+  "checks": {
+    "positive": "exact manifest returns only supported prova_data=2026-05-17",
+    "negatives": "missing manifest and wrong title/kind return failed prova_data; parser pins/SHA/URL/page/marker guards remain strict",
+    "recovery": "METHOD_VERSION current-case invalidation and new-case recomputation path preserved; prior case remains audit-only",
+    "cross_bundle": "FAFIPA, Publiconsult, APTA R16 and Avança pins unchanged from accepted R19 bundle"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_klc_retificacao_r22.py backend/tests/test_tenderproof_document_review_gate.py -k 'klc or prepare_preserved or current'",
+    "result": "14 passed, 21 deselected",
+    "direct_dispatch_positive_negative": "PASS",
+    "compileall": "PASS"
+  },
+  "side_effects": {"live": false, "proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

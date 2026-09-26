@@ -1,0 +1,451 @@
+{
+  "observed_at": "2026-09-08T14:59:23.561713+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+  "cycles": [
+    {
+      "source": "fapesp_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-8b117a855048",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesp.br/index.php/processoseletivo",
+          "file": "fapesp_selection-cycle1-listing-c8962b42b1.html",
+          "sha256": "9854f1b219d5a7e2372da3a5977fd048a7f82e7e470524b46a99fd2f2c754e3a",
+          "bytes": 64341,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:59:24.236512+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e2c3436a4dfa",
+          "candidate": {
+            "candidate_id": "fapesp_selection-4470",
+            "title_observed": "FAPESP - Concurso Público n o 01/2026",
+            "detail_url_observed": "https://fapesp.br/index.php/processoseletivo",
+            "external_id": "4470",
+            "observed_at": "2026-09-08T14:59:24.379842Z",
+            "source": "fapesp_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesp.br/index.php/processoseletivo",
+              "file": "fapesp_selection-cycle1-detail-6f2743ea33.html",
+              "sha256": "217468ce661bafdb1e82f0ff8a93616a106671b3d3aaf81fe812469b416a65ec",
+              "bytes": 64341,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:59:25.038922+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesp_selection-98cd7443aaeb84b8",
+            "title": "Concurso Público n o 01/2026",
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Concurso Público n o 01/2026' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: Homologação do resultado final do concurso; Rerratificação do edital de divulgação de resultados; Resultado da análise dos recursos contra nota da prova objetiva e contra a classificação prévia, resultado da realização da nova inspeção (junta médica) e a classificação final; Edital de convocação para realização de junta médica; Retifica o Edital de resultado da perícia médica para os candidatos classificados e inscritos na condição de pessoa com deficiência para o cargo de Analista Administrativo)."
+          },
+          "artifact": {
+            "artifact_id": "art-d8242ea634",
+            "sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+            "byte_len": 3980108,
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:59:25.960760Z",
+            "storage_path": "art-d8242ea634-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf"
+          },
+          "total_pages": 58,
+          "processed_pages": 58,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=58/58",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 7.188
+    },
+    {
+      "source": "faperj_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-d3f0c0ad8f73",
+      "listing_status": "failed",
+      "candidates_sampled": 0,
+      "coverage": {},
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://faperj.br/arquivo_noticias.phtml",
+          "file": "faperj_selection-cycle1-listing-80418a02d2.html",
+          "sha256": "fca77713efbdb59a046b34fd619f8778959d434fd99bb3c494ff01819f8ed636",
+          "bytes": 27842,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:59:31.115463+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0ca0871a7af1",
+          "candidate": {
+            "candidate_id": "faperj_selection-812.7.4",
+            "title_observed": "FAPERJ anuncia edital de chamamento público para o cargo de Diretor de Tecnologia",
+            "detail_url_observed": "https://faperj.br/?id=812.7.4",
+            "external_id": "812.7.4",
+            "observed_at": "2026-09-08T14:59:31.837875Z",
+            "source": "faperj_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "partial",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://faperj.br/?id=812.7.4",
+              "file": "faperj_selection-cycle1-detail-e70c5bb402.html",
+              "sha256": "3deb381fff821ffeaa6601414947ed89b8590ff35da0fd337e6fefaf6765a69a",
+              "bytes": 22505,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:59:32.227544+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "faperj_selection-0157ba7bf78586e5",
+            "title": "Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)",
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-d6413e006e",
+            "sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+            "byte_len": 80400,
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:59:32.404119Z",
+            "storage_path": "art-d6413e006e-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf"
+          },
+          "total_pages": 4,
+          "processed_pages": 4,
+          "validation": {
+            "status": "partial",
+            "errors": [],
+            "warnings": [
+              "título do candidato não localizado no texto do documento"
+            ],
+            "checks": [
+              "paginas_com_texto=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "unknown"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "selection_provenance": {
+        "kind": "explicitly followed official article outside current listing sample",
+        "url": "https://faperj.br/?id=812.7.4",
+        "fixture": "faperj-diretor.html",
+        "sha256": "6e7d85fd0c2a9377e89c20f47dc47f8c209381825be723359220592f78a97ff5",
+        "listing_discovery_claim": false
+      },
+      "duration_s": 2.25
+    },
+    {
+      "source": "fapesp_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-a750cd493387",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesp.br/index.php/processoseletivo",
+          "file": "fapesp_selection-cycle2-listing-ccc842637f.html",
+          "sha256": "7d99047035c66d89588994f1143d92dba46d7f771d79b13eed8ed3d1e74ed1e7",
+          "bytes": 64341,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:59:33.594507+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-81148fd02d65",
+          "candidate": {
+            "candidate_id": "fapesp_selection-4470",
+            "title_observed": "FAPESP - Concurso Público n o 01/2026",
+            "detail_url_observed": "https://fapesp.br/index.php/processoseletivo",
+            "external_id": "4470",
+            "observed_at": "2026-09-08T14:59:33.711655Z",
+            "source": "fapesp_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesp.br/index.php/processoseletivo",
+              "file": "fapesp_selection-cycle2-detail-bd3ceee4cf.html",
+              "sha256": "50288834010bfcf36e5a65e43771c572ae3f87754ac9124673bdedfdfd6ef26c",
+              "bytes": 64341,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:59:34.297342+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapesp_selection-98cd7443aaeb84b8",
+            "title": "Concurso Público n o 01/2026",
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Concurso Público n o 01/2026' por conter 'edital' no título/URL; 20 documento(s) ignorado(s) (ex.: Homologação do resultado final do concurso; Rerratificação do edital de divulgação de resultados; Resultado da análise dos recursos contra nota da prova objetiva e contra a classificação prévia, resultado da realização da nova inspeção (junta médica) e a classificação final; Edital de convocação para realização de junta médica; Retifica o Edital de resultado da perícia médica para os candidatos classificados e inscritos na condição de pessoa com deficiência para o cargo de Analista Administrativo)."
+          },
+          "artifact": {
+            "artifact_id": "art-60e6230750",
+            "sha256": "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9",
+            "byte_len": 3980108,
+            "url_requested": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "url_final": "https://fapesp.br/files/upload/4470/concurso0126.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:59:35.197567Z",
+            "storage_path": "art-60e6230750-bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9.pdf"
+          },
+          "total_pages": 58,
+          "processed_pages": 58,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=58/58",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.953
+    },
+    {
+      "source": "faperj_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-7ec3d9d05ab7",
+      "listing_status": "failed",
+      "candidates_sampled": 0,
+      "coverage": {},
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://faperj.br/arquivo_noticias.phtml",
+          "file": "faperj_selection-cycle2-listing-80418a02d2.html",
+          "sha256": "fca77713efbdb59a046b34fd619f8778959d434fd99bb3c494ff01819f8ed636",
+          "bytes": 27842,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:59:40.330102+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-1b13a010fa06",
+          "candidate": {
+            "candidate_id": "faperj_selection-812.7.4",
+            "title_observed": "FAPERJ anuncia edital de chamamento público para o cargo de Diretor de Tecnologia",
+            "detail_url_observed": "https://faperj.br/?id=812.7.4",
+            "external_id": "812.7.4",
+            "observed_at": "2026-09-08T14:59:40.441749Z",
+            "source": "faperj_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "partial",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://faperj.br/?id=812.7.4",
+              "file": "faperj_selection-cycle2-detail-e70c5bb402.html",
+              "sha256": "3deb381fff821ffeaa6601414947ed89b8590ff35da0fd337e6fefaf6765a69a",
+              "bytes": 22505,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:59:40.822908+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "faperj_selection-0157ba7bf78586e5",
+            "title": "Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)",
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Chamamento Público Nº 20/2025 – Seleção de Candidatos Para o Cargo de Diretor de Tecnologia (SEI –104462186)' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c2c0f42430",
+            "sha256": "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae",
+            "byte_len": 80400,
+            "url_requested": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "url_final": "https://faperj.br/rp/downloads/Edital_de_Chamamento_Público_Nº_20_2025_–_Seleção_de_Candidatos_Para_o_Cargo_de_Diretor_de_Tecnologia_(SEI_104462186).pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:59:40.969830Z",
+            "storage_path": "art-c2c0f42430-cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae.pdf"
+          },
+          "total_pages": 4,
+          "processed_pages": 4,
+          "validation": {
+            "status": "partial",
+            "errors": [],
+            "warnings": [
+              "título do candidato não localizado no texto do documento"
+            ],
+            "checks": [
+              "paginas_com_texto=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "unknown"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "selection_provenance": {
+        "kind": "explicitly followed official article outside current listing sample",
+        "url": "https://faperj.br/?id=812.7.4",
+        "fixture": "faperj-diretor.html",
+        "sha256": "6e7d85fd0c2a9377e89c20f47dc47f8c209381825be723359220592f78a97ff5",
+        "listing_discovery_claim": false
+      },
+      "duration_s": 1.609
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "t012.shdias_open.deploy-live-r5.v1",
+  "timestamp": "2026-09-13T08:36:47-03:00",
+  "scope": "somente SHDias source_id=51 external_id=MTEw/MzA4 process_id=00308",
+  "backup": {
+    "status": "REUSED_PASS",
+    "bundle": "/backups/pilot-20260913T103843603Z-operational"
+  },
+  "deploy": {
+    "docker_engine": "28.1.1",
+    "image": "sha256:231e2d5e75e9d919ad0781e83646ac9db71da26d79ace266c7580792616047b1",
+    "services_rebuilt_or_recreated": ["api", "worker", "scheduler"],
+    "services_not_recreated": ["postgres", "redis", "web"],
+    "volumes_preserved": true,
+    "health": {"status": "ok", "http": 200},
+    "containers": {"api": "running", "worker": "running", "scheduler": "running"}
+  },
+  "checkpoint_before": {
+    "concursos": 33,
+    "fontes_distintas": 32,
+    "cargos": 180,
+    "favorites": 0,
+    "alerts": 1
+  },
+  "duplicate_cas": {
+    "source_id": 51,
+    "external_id": "MTEw/MzA4",
+    "previous_live_match_count": 0,
+    "source": "live-proposal-receipt-20260913.json"
+  },
+  "artifact": {
+    "artifact_id": "shdias-open-00308-edital-2026",
+    "path": "/var/lib/observador/tenderproof/artifacts/shdias-open-00308-edital-2026-f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7.pdf",
+    "sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+    "bytes": 697485,
+    "pages": 44,
+    "fresh_identity": {"orgao": "Município de Hortolândia", "edital_numero": "001/2026"}
+  },
+  "import": {
+    "status": "imported",
+    "run_id": "tp-reviewed-ace20f036666fe22792a6d3852c239ca",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "fields": ["titulo", "orgao", "edital_numero", "prova_data", "cargos"]
+  },
+  "proposal": {
+    "status": "PENDING_REVIEW",
+    "proposal_id": "tpp-68684a6f8673f3f039323fd14b3daa80",
+    "proposal_hash": "8b6a6b664c0ae8238c0af03132efb011a10be9b5a81490f26871d4af6262dd49",
+    "state": "proposed",
+    "concurso_id": null,
+    "action": "create",
+    "eligible_fields": ["cargos", "edital_numero", "orgao", "prova_data", "titulo"],
+    "baseline_all_null": true,
+    "approve": false,
+    "apply": false
+  },
+  "counts_after": {
+    "concursos": 33,
+    "fontes_configuradas": 99,
+    "versions": 91,
+    "outbox": 91,
+    "notifications": 90,
+    "proposals": 96,
+    "push_devices": 0
+  },
+  "result": "SHDIAS_PROPOSAL_R5_REJECTED_AUDIT",
+  "final_review": {
+    "status": "rejected",
+    "review_reference": "docs/execucao/evidencias/T012/shdias_open/revisao-live-proposal-r5-20260913.json",
+    "reason": "taxa_inscricao comprovada (R$63,25) foi omitida do payload; não aprovar/aplicar sem parser/review R6",
+    "ledger_preserved": true,
+    "proposal_state": "rejected",
+    "approve": false,
+    "apply": false,
+    "counts_unchanged": {"versions": 91, "outbox": 91, "notifications": 90}
+  },
+  "notes": [
+    "Nenhuma tabela canônica de concursos/cargos foi alterada.",
+    "Nenhuma versão, outbox, notificação ou envio push foi criado.",
+    "Uma tentativa inicial com human_read=true foi rejeitada pelo contrato de automação antes da proposta; a criação final usou o fluxo normal sem essa alegação e gerou somente a proposta pendente.",
+    "Não processar outra fonte e não executar approve/apply sem nova revisão explícita."
+  ]
+}

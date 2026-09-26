@@ -1,0 +1,18 @@
+{
+  "schema":"t012.fafipa-reviewed-envelope-r10-receipt.v1",
+  "envelope":"reviewed-envelope-ready-r9.json",
+  "status":"READY_FOR_REVIEW",
+  "source":"fafipa_open",
+  "source_id":69,
+  "external_id":"4208",
+  "owner_user_id":1,
+  "concurso_id":null,
+  "concurso_id_contract":"valid pre-allocation state; normal route must allocate before model_validate/dry-run",
+  "canonical_derived_run_id":"tp-reviewed-fefe8924b68403d795a4d43b73e85e1c",
+  "proposal_target":{"concurso_id":null,"owner_user_id":1,"source_id":69,"created":false},
+  "recalculation": {"process_1":"artifact/hash/7-fields/14-cargos passed", "process_2":"same input replay passed", "replay":"deterministic", "owner_0":"rejected", "byte_drift":"rejected"},
+  "stale_runs": {"tp-reviewed-187a43fbfc355834ff54dbcb6adb4fc1":"stale/mismatch; do not reuse"},
+  "mutations":{"proposal":false,"version":false,"outbox":false,"notification":false,"live":false},
+  "next_owner":"integrador/revisor",
+  "next_action":"allocate concurso_id through the normal route, then import/dry-run canonical run fefe8924; do not approve/apply"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "t012.ufu-evidence-diff.v1",
+  "recorded_at": "2026-09-13T13:04:00.4117062-03:00",
+  "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+  "owner_user_id": 1,
+  "source": "ufu_selection",
+  "external_id": "1843",
+  "artifact": {
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "storage_path": "ufu-selection-1843-detail-2026-r10-72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf.pdf"
+  },
+  "hashes": {
+    "persisted_run_model_sha256": "61bacb791f7efc648718976bb5874663f065b38cbcf097c8ed42d9d56a00a84c",
+    "reproduced_fields_model_sha256": "17d701a14ec4f2949e86957e80b8c191f23c15288a652b0335bb2d114ed362b6"
+  },
+  "fields": {
+    "titulo": {"persisted_value": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "reproduced_value": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "value_equal": true, "reproduced_evidence": true, "metadata_difference": {"evidence_id": ["ufu-r10-titulo", "ufu-1843-titulo"], "method_version": ["ufu-selection-r8", "ufu-selection-r1"]}},
+    "orgao": {"persisted_value": "Universidade Federal de Uberlândia", "reproduced_value": "Universidade Federal de Uberlândia", "value_equal": true, "reproduced_evidence": true, "metadata_difference": {"evidence_id": ["ufu-r10-orgao", "ufu-1843-orgao"], "method_version": ["ufu-selection-r8", "ufu-selection-r1"], "original_value": [null, "Universidade Federal de Uberlândia"]}},
+    "edital_numero": {"persisted_value": "144/2026", "reproduced_value": "144/2026", "value_equal": true, "reproduced_evidence": true, "metadata_difference": {"evidence_id": ["ufu-r10-edital", "ufu-1843-edital"], "method_version": ["ufu-selection-r8", "ufu-selection-r1"]}}
+  },
+  "canonical_resolve_read_only": {
+    "status": "ok",
+    "eligible_required": {"titulo": true, "orgao": true, "edital_numero": true},
+    "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "blocked": {"cargos": "campo não extraído; preservar baseline", "prova_data": "campo não extraído; preservar baseline", "taxa": "campo não extraído; preservar baseline"}
+  },
+  "objective_cause": "Nenhuma diferença de valor, URL, SHA, página, snippet ou evidence identity usada por _reproduced_evidence foi encontrada; as diferenças são apenas evidence_id/method_version e orgao.original_value. O resolver canônico read-only retornou os três campos obrigatórios elegíveis. Portanto o HTTP 422 anterior não é reproduzido pelo runtime atual e aparenta divergência transitória de avaliação/worker, não dado faltante.",
+  "mutation": {"proposal": false, "import": false, "retry": false, "approve": false, "apply": false}
+}

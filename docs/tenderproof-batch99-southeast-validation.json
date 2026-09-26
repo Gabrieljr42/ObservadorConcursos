@@ -1,0 +1,515 @@
+{
+  "observed_at": "2026-09-08T15:14:15.105921+00:00",
+  "scope": "Twelve southeast/northeast institutional sources; personnel only, no funding or scholarship promotion",
+  "sources": [
+    {
+      "source": "fapemig_selection",
+      "implementation_state": "not_implemented",
+      "status": "no_personnel_sample",
+      "valid_personnel_samples": 0,
+      "note": "Legacy /pt/editais/ redirects to root. Current public Nuxt/WordPress home concerns funding, proposals and scholarships; no bounded personnel notice/document chain established. This is not proof of no personnel selections.",
+      "captures": [
+        {
+          "name": "fapemig_selection",
+          "url": "https://fapemig.br/pt/editais/",
+          "observed_at": "2026-09-08T14:49:10.539858+00:00",
+          "max_bytes": 2097152,
+          "status": 302,
+          "location": "/",
+          "bytes": 0,
+          "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fixture_sha256": "1df8639a53769df8d7c936f1247facdff4636e11b43d7b868f96709eb67235d5",
+          "file": "fapemig_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapemig-root",
+          "url": "https://fapemig.br/",
+          "observed_at": "2026-09-08T14:50:05.626965+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 493466,
+          "original_sha256": "d2ab063f7e9b09e09b614123b091ddc5d5cdd1d6ead31dd35612064c6201b2b4",
+          "fixture_sha256": "d2ce664fb426be7e09fbbf73a0a3835c1da1a1ae0c81380ff8e3afe46495e9fe",
+          "file": "fapemig-root.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        }
+      ]
+    },
+    {
+      "source": "fapes_selection",
+      "implementation_state": "not_implemented",
+      "status": "dated_negative_declaration",
+      "valid_personnel_samples": 0,
+      "note": "Official concursoPublico page links a declaration of no public contests from2023 through2026. Only this dated HTML declaration was observed; PDF bytes were not acquired and no universal empty adapter was invented.",
+      "captures": [
+        {
+          "name": "fapes_selection",
+          "url": "https://fapes.es.gov.br/editais",
+          "observed_at": "2026-09-08T14:49:10.539858+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 271339,
+          "original_sha256": "0aabf8da371afad6df2306ed403f2afebbd6e0cb5d23c14665e427f8f05d97b9",
+          "fixture_sha256": "415f795beb7232640f87fdf2b19435615ae7a47cc28efb2d3f350920e8568b9a",
+          "file": "fapes_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapes-concursos",
+          "url": "https://fapes.es.gov.br/concursoPublico",
+          "observed_at": "2026-09-08T14:50:05.626965+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 282618,
+          "original_sha256": "2bf1580bd5b27dcbcf254de273803e76103c055b6754fcce337f676d95f8266c",
+          "fixture_sha256": "6c6ee920a3d496c1b40b9460afe9bb54a36fd189c3ef86bcef047cddc9fafde2",
+          "file": "fapes-concursos.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        }
+      ]
+    },
+    {
+      "source": "fapesq_selection",
+      "implementation_state": "not_implemented",
+      "status": "observed_samples_excluded_scholarship",
+      "valid_personnel_samples": 0,
+      "note": "Legacy /editais/ redirects to login, not followed. Public root menu /editais-1 redirects to public2026 listing. Notices58/2026 and57/2026 sound like hiring but preserved original PDFs explicitly establish scholarship regimes without employment relationship (12.1/12.6 and13.1/13.6). No personnel adapter created from these samples.",
+      "captures": [
+        {
+          "name": "fapesq_selection",
+          "url": "https://fapesq.rpp.br/editais/",
+          "observed_at": "2026-09-08T14:49:10.540856+00:00",
+          "max_bytes": 2097152,
+          "status": 302,
+          "location": "https://fapesq.rpp.br/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//fapesq.rpp.br/editais/",
+          "bytes": 43466,
+          "original_sha256": "a9f69d79503863adde147ae59631e9ebf56bb3207e0706857314814f588b427f",
+          "fixture_sha256": "abcff798e47ed6b8718184ff67871a00dc22f949e5dcd576224df089c5d6ea29",
+          "file": "fapesq_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapesq-public-root",
+          "url": "https://fapesq.rpp.br/",
+          "observed_at": "2026-09-08T15:00:26.692033+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 99881,
+          "original_sha256": "efe96e5ee6e3abb44bef99c41d8bcc376faa01be98fd95b591ad1e4ff777ef78",
+          "fixture_sha256": "7956d03ae3525690d3810562192e02931655ff80fd1490c838557d430b223dd7",
+          "file": "fapesq-public-root.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope.json"
+        },
+        {
+          "name": "fapesq-editais-public",
+          "url": "https://fapesq.rpp.br/editais-1",
+          "observed_at": "2026-09-08T15:01:30.601312+00:00",
+          "max_bytes": 2097152,
+          "status": 302,
+          "location": "https://fapesq.rpp.br/editais/2026/editais-2026",
+          "bytes": 47,
+          "original_sha256": "a3bb80059cd155354ca422dc2a37e05c4b9f531ec69bf4064c48afecca44dfc0",
+          "fixture_sha256": "a3bb80059cd155354ca422dc2a37e05c4b9f531ec69bf4064c48afecca44dfc0",
+          "file": "fapesq-editais-public.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-personnel.json"
+        },
+        {
+          "name": "fapesq-2026",
+          "url": "https://fapesq.rpp.br/editais/2026/editais-2026",
+          "observed_at": "2026-09-08T15:02:23.657985+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 80483,
+          "original_sha256": "986f8add194024d5ec87c01e61e56e1ac8558a7d203e5f946bad2ad8eff6372d",
+          "fixture_sha256": "dbc6dd067988492e42ec011667b0a6aa850e28c7d245460de507bffac80844fe",
+          "file": "fapesq-2026.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-fapesq-year.json"
+        },
+        {
+          "name": "fapesq-58",
+          "url": "https://fapesq.rpp.br/editais/2026/edital-no-58-2026-2013-processo-seletivo-para-contratacao-de-coordenadores-audiovisuais-equipe-tecnica-e-cadastro-de-reserva-cr-dos-nucleos-de-inovacao-estadual-da-paraiba-nie-pb",
+          "observed_at": "2026-09-08T15:05:35.346388+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 75802,
+          "original_sha256": "4290b069cd1feaa4f06e78246b86d54e8ff76e4bbe299b603254eb9ff02459a4",
+          "fixture_sha256": "560ca2b68af37129fc2a223dcabbfb5f1f8da3e992d9f711ce4f1ef3c073d1ae",
+          "file": "fapesq-58.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope-final.json"
+        },
+        {
+          "name": "fapesq-57",
+          "url": "https://fapesq.rpp.br/editais/2026/edital-no-57-2026-2013-selecao-de-oficineiros-avaliadores-para-o-festival-de-arte-e-cultura-na-escola-2013-arte-em-cena-2026",
+          "observed_at": "2026-09-08T15:05:35.346388+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 76341,
+          "original_sha256": "7e91edab1c980fa59897a7de7024001cd3ef1905152118c89ef099b19ea63291",
+          "fixture_sha256": "10cc2460fcdbfa125c92ee6287f57592cdf11e31d8d28ab911a42a70dc12d48b",
+          "file": "fapesq-57.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope-final.json"
+        }
+      ]
+    },
+    {
+      "source": "fapepi_selection",
+      "implementation_state": "not_implemented",
+      "status": "observed_sample_funding",
+      "valid_personnel_samples": 0,
+      "note": "Official edital listing and TECNOVA3 detail refer to company/project submissions and innovation funding. No bounded eligible personnel contract observed; lexical public selection is insufficient.",
+      "captures": [
+        {
+          "name": "fapepi_selection",
+          "url": "https://www.fapepi.pi.gov.br/editais-fapepi/",
+          "observed_at": "2026-09-08T14:49:10.540856+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 123551,
+          "original_sha256": "4d1dd916134787b0a3ca9bdffc2997ef0ff52f4ebd3661eea492de7062eb246d",
+          "fixture_sha256": "4e514d6945af4ffddf0031d326df38ef129912f17531a3b76cefc96ef1a09287",
+          "file": "fapepi_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapepi-technova",
+          "url": "https://www.fapepi.pi.gov.br/edital/selecao-publica-fapepi-finep-mcti-edital-n-01-2024-programa-tecnova3-piaui/",
+          "observed_at": "2026-09-08T15:00:26.693040+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 83972,
+          "original_sha256": "5e6f671fce6026db44358e948696f5bc338943e7a40a7db26d7ebe33a0644fcc",
+          "fixture_sha256": "7ec4086e0c23f9ac94b9d1b44cb5c20f59361b719bc0279f1253e76f4385683b",
+          "file": "fapepi-technova.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope.json"
+        }
+      ]
+    },
+    {
+      "source": "fapema_selection",
+      "implementation_state": "not_implemented",
+      "status": "personnel_hint_content_unresolved",
+      "valid_personnel_samples": 0,
+      "note": "Homepage has a trainee recruitment news link. Its current public route returns generic service/navigation content without the article body; no document or employment-versus-scholarship confirmation. Do not classify the whole source as funding-only.",
+      "captures": [
+        {
+          "name": "fapema_selection",
+          "url": "https://www.fapema.br/inicio/",
+          "observed_at": "2026-09-08T14:49:10.541854+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 69408,
+          "original_sha256": "7d5809aa8c86683be68fb099f2beeba00d63ba0653f70bc52011316ae5ec81b4",
+          "fixture_sha256": "04475e33b040d4d668f6397a612a622cdc9d192dd8c56e0a8ad99a7f588a50a0",
+          "file": "fapema_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapema-trainees",
+          "url": "https://www.fapema.br/fapema-amplia-parceria-para-selecao-de-trainees-que-vao-atuar-na-gestao-publica/",
+          "observed_at": "2026-09-08T14:50:05.628954+00:00",
+          "max_bytes": 2097152,
+          "status": 404,
+          "location": null,
+          "bytes": 60159,
+          "original_sha256": "cb3f75d14933ec7cb90d7db81ff0828e156250f66f919cde5507b2bf1503888c",
+          "fixture_sha256": "13ef2274bd434ed5dd4195737a6533e143a740994e06ca92587e6e560f31626b",
+          "file": "fapema-trainees.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        }
+      ]
+    },
+    {
+      "source": "fapece_selection",
+      "implementation_state": "not_implemented",
+      "status": "catalogue_identity_and_image_only_vacancy",
+      "valid_personnel_samples": 0,
+      "note": "Catalogue fapece.ce.gov.br fails DNS. An alternative FAPECE site identifies itself as Fundacao Assistencial e Previdenciaria da EMATERCE; official EMATERCE search evidence corroborates this entity name. fapece.com.br has TEMOS VAGA dated2026 as JPEG only, no PDF/text notice. Catalogue identity and image-based acquisition remain pending; no silent switch to FUNCAP or alternative host.",
+      "captures": [
+        {
+          "name": "fapece_selection",
+          "url": "https://fapece.ce.gov.br",
+          "observed_at": "2026-09-08T14:49:10.541854+00:00",
+          "max_bytes": 2097152,
+          "error": "gaierror",
+          "reason": "bounded acquisition failed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapece-oficial-reference",
+          "url": "https://www.ematerce.ce.gov.br/tag/fapece/",
+          "observed_at": "2026-09-08T14:50:07.529629+00:00",
+          "max_bytes": 2097152,
+          "error": "ConnectError",
+          "reason": "bounded acquisition failed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        },
+        {
+          "name": "fapece-alternative",
+          "url": "https://fapece.com.br/",
+          "observed_at": "2026-09-08T15:00:26.692033+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 159754,
+          "original_sha256": "c8d11a47c3c7958c52f216e1393fb6cb3ed72bc23fb5508568e8875ad61fa7ca",
+          "fixture_sha256": "3ec503d26ee56a9b01e9b947e2fc7163954fa5515ea00127beae9d517fd16899",
+          "file": "fapece-alternative.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope.json"
+        },
+        {
+          "name": "fapece-vaga",
+          "url": "https://fapece.com.br/temos-vaga-2/",
+          "observed_at": "2026-09-08T15:01:30.600269+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 118620,
+          "original_sha256": "32fe9131bbbe4701653f6e311c0e4113da47951505fc7f41580f0d46d476d736",
+          "fixture_sha256": "cf4792310972d44d32c4b10c47e619a2ab62e8bc9e6cf832bc1aa3da9eb3bca6",
+          "file": "fapece-vaga.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-personnel.json"
+        }
+      ]
+    },
+    {
+      "source": "fapern_selection",
+      "implementation_state": "not_implemented",
+      "status": "external_http503",
+      "valid_personnel_samples": 0,
+      "note": "Official root redirects to www.fapern.rn.gov.br and returns503. No challenge bypass, browser, or TLS change attempted.",
+      "captures": [
+        {
+          "name": "fapern_selection",
+          "url": "https://fapern.rn.gov.br",
+          "observed_at": "2026-09-08T14:49:10.678093+00:00",
+          "max_bytes": 2097152,
+          "status": 301,
+          "location": "https://www.fapern.rn.gov.br/",
+          "bytes": 237,
+          "original_sha256": "e87ddb19575a6467ae667c3f85d78c059bee91841b2f813cd9f7832ecff5d95f",
+          "fixture_sha256": "f3a372dc461a39ee43f29f43cd9a00cfc575c41a9655cde5723ad92a9a9db9c9",
+          "file": "fapern_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapern-root",
+          "url": "https://www.fapern.rn.gov.br/",
+          "observed_at": "2026-09-08T14:50:05.626965+00:00",
+          "max_bytes": 2097152,
+          "status": 503,
+          "location": null,
+          "bytes": 3523,
+          "original_sha256": "2ac91c91cdca26d21aaf49d7e238928e585a33057db5f2b058a3ef6b36f5cfbf",
+          "fixture_sha256": "7f501e43b00f455539312cb8c6a12f2b5154fc780be4d390c2eb7a20ca14a004",
+          "file": "fapern-root.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        }
+      ]
+    },
+    {
+      "source": "fapeal_selection",
+      "implementation_state": "not_implemented",
+      "status": "no_personnel_sample",
+      "valid_personnel_samples": 0,
+      "note": "Official www redirect and pesquisador/editais public listing observed. Bounded material is researcher/funding oriented; no personnel notice/document chain established. No full-source absence claim.",
+      "captures": [
+        {
+          "name": "fapeal_selection",
+          "url": "https://fapeal.br",
+          "observed_at": "2026-09-08T14:49:11.297378+00:00",
+          "max_bytes": 2097152,
+          "status": 301,
+          "location": "https://www.fapeal.br/",
+          "bytes": 162,
+          "original_sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+          "fixture_sha256": "bc702596c914de92f6ab21306eb1419576960073f5c6b2e73c6e61a47b484405",
+          "file": "fapeal_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "fapeal-root",
+          "url": "https://www.fapeal.br/",
+          "observed_at": "2026-09-08T14:50:05.627968+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 123544,
+          "original_sha256": "ac2d92ff2544c0a8ccc75eaef64d2cb1127ad251dcca2c0b66c4a7667a328a45",
+          "fixture_sha256": "45a12b9db05e9ed32dcc9bb2289f6877a1cf305fa6240e20271ae97ff7265f68",
+          "file": "fapeal-root.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        },
+        {
+          "name": "fapeal-editais",
+          "url": "https://www.fapeal.br/pesquisador/editais/",
+          "observed_at": "2026-09-08T15:05:35.345393+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 125240,
+          "original_sha256": "5d257a7d9618e1bd9b0a5624c07d29f3b4c3b80af75fcb9c46585db0773b01db",
+          "fixture_sha256": "5ebe2013ab275aae9700560945a376fa5d347fd7b1dc5cbd65eee7c9fc5c333d",
+          "file": "fapeal-editais.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-scope-final.json"
+        }
+      ]
+    },
+    {
+      "source": "facepe_selection",
+      "implementation_state": "not_implemented",
+      "status": "no_personnel_sample",
+      "valid_personnel_samples": 0,
+      "note": "Official editais/todos public list exposes research funding, scholarships and project programmes. No eligible personnel original established within observed sample; no empty/full-coverage claim.",
+      "captures": [
+        {
+          "name": "facepe_selection",
+          "url": "https://www.facepe.br",
+          "observed_at": "2026-09-08T14:49:11.575425+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 66879,
+          "original_sha256": "9b78652d543f7cc178977e6103b2a81a37760dacf758dfccd239bda7bacb794f",
+          "fixture_sha256": "5c68d655d8614ad58fb27139198d2ff72e5d9a8d8697b7981b630ad30cfe3c8d",
+          "file": "facepe_selection.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-initial.json"
+        },
+        {
+          "name": "facepe-editais",
+          "url": "https://www.facepe.br/editais/todos/",
+          "observed_at": "2026-09-08T14:50:05.627968+00:00",
+          "max_bytes": 2097152,
+          "status": 200,
+          "location": null,
+          "bytes": 399121,
+          "original_sha256": "d338f951f7acd930c902dd6ad229b4d8b99e5311c0b8370f3e9cddffe60d94bf",
+          "fixture_sha256": "5635752159e4a8fbdfeda5e2672e416bec72fd08352d1c84328509dbc2ad7b7f",
+          "file": "facepe-editais.html",
+          "format": "decoded UTF8 HTML; hidden values removed",
+          "manifest": "backend/tests/fixtures/tenderproof_batch99_southeast/manifest-followup.json"
+        }
+      ]
+    },
+    {
+      "source": "fapesb_selection",
+      "implementation_state": "implemented",
+      "status": "two_valid_bounded_personnel_cycles",
+      "valid_personnel_samples": 2,
+      "candidate_ids": [
+        "01-2026"
+      ],
+      "pages": [
+        9
+      ],
+      "document_sha256": [
+        "3382cab8425921fd78832dc11fb3748f8871fc86bbf66957b1c0d2b6b3a506f1"
+      ],
+      "report": "docs/tenderproof-batch99-southeast-fapesb-live.json",
+      "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+      "coverage": "partial",
+      "listing_discovery": "observed current fixed notice scope; edition changes rejected for review",
+      "canonical_publication_tested": false
+    },
+    {
+      "source": "faperj_selection",
+      "implementation_state": "implemented",
+      "status": "two_valid_bounded_personnel_cycles",
+      "valid_personnel_samples": 2,
+      "candidate_ids": [
+        "812.7.4"
+      ],
+      "pages": [
+        4
+      ],
+      "document_sha256": [
+        "cebc1ef81532e8c8b1987f588109fafa2a7f7d930506fa8486a9ba340ac283ae"
+      ],
+      "report": "docs/tenderproof-batch99-southeast-faperj-live.json",
+      "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+      "coverage": "partial",
+      "listing_discovery": "manually followed previously observed official article; current archive sample has no personnel candidate",
+      "canonical_publication_tested": false
+    },
+    {
+      "source": "fapesp_selection",
+      "implementation_state": "implemented",
+      "status": "two_valid_bounded_personnel_cycles",
+      "valid_personnel_samples": 2,
+      "candidate_ids": [
+        "4470"
+      ],
+      "pages": [
+        58
+      ],
+      "document_sha256": [
+        "bc3756fc599af3a3f0347cfe8a57d87475a2eb440e45a0eb6b5bab87b96599c9"
+      ],
+      "report": "docs/tenderproof-batch99-southeast-live-observed.json",
+      "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99se",
+      "coverage": "partial",
+      "listing_discovery": "observed current fixed notice scope; edition changes rejected for review",
+      "canonical_publication_tested": false
+    }
+  ],
+  "implemented_sources": 3,
+  "sources_without_implemented_personnel_contract": 9,
+  "live_personnel_sources_with_two_valid_cycles": 3,
+  "limits": {
+    "html_bytes": 2097152,
+    "capture_timeout_s": 25,
+    "pdf_bytes": 31457280,
+    "pdf_pages": 60,
+    "source_cycles": 2,
+    "listing_requests_per_live_cycle": 1,
+    "max_details_per_live_cycle": 3
+  },
+  "browser_sessions": 0,
+  "logins": 0,
+  "production_writes": 0,
+  "tls_bypass": false,
+  "tests": {
+    "passed": 33,
+    "junit": "backend/.tenderproof/batch99-southeast-contracts.xml"
+  },
+  "scope_pdf_evidence": "docs/tenderproof-batch99-southeast-scope-pdfs.json",
+  "limitations": [
+    "Exploratory captures and first failed orchestration remain preserved separately; source live reports are explicit bounded attempts.",
+    "No full-source historical traversal or claim of absence from no candidate sample.",
+    "FAPESP01/2026 and FAPESB01/2026 must fail closed when the numbered notice changes on reused pages.",
+    "FAPERJ first archive page did not discover historical812.7.4; following its observed official URL is explicit.",
+    "No automatic interpretation of retifications or publication performed."
+  ]
+}

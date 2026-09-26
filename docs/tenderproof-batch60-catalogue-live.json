@@ -1,0 +1,819 @@
+{
+  "observed_at": "2026-09-08T14:23:21.755139+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\b60cat",
+  "cycles": [
+    {
+      "source": "consulplan_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-33c7de66a683",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "file": "consulplan_open-cycle1-listing-f26177ec8a.html",
+          "sha256": "c3b269e5b3bf150db4774d46decf26ea634a7460152eb53be14dd7c45eb20995",
+          "bytes": 293620,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:22.244137+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-bb0f12505dab",
+          "candidate": {
+            "candidate_id": "consulplan_open-cidennf2026",
+            "title_observed": "CIDENNF - Consórcio Público Intermunicipal de  Desenvolvimento do Norte e Noroeste Fluminense",
+            "detail_url_observed": "https://institutoconsulplan.org.br/cidennf2026",
+            "external_id": "cidennf2026",
+            "observed_at": "2026-09-08T14:23:22.766738Z",
+            "source": "consulplan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: diretório documental não corroborado pelo ID do cabeçalho Consulplan",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/cidennf2026",
+              "file": "consulplan_open-cycle1-detail-858525bf8c.html",
+              "sha256": "8c5b9d6a65da27350a05f667770df2a831356be1670badd957c15c442da8d03c",
+              "bytes": 20483,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:23.186459+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-e545236bb2de",
+          "candidate": {
+            "candidate_id": "consulplan_open-unai2026",
+            "title_observed": "Câmara Municipal de Unaí/MG",
+            "detail_url_observed": "https://institutoconsulplan.org.br/unai2026",
+            "external_id": "unai2026",
+            "observed_at": "2026-09-08T14:23:22.767729Z",
+            "source": "consulplan_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/unai2026",
+              "file": "consulplan_open-cycle1-detail-fbafd4b6dd.html",
+              "sha256": "39928b6cbc3b9203b3bebe4b83ce3218d35b6076dfe788d12df02578a87d39e0",
+              "bytes": 15295,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:23.617760+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "consulplan_open-doc-4aa08d6c66c170ed",
+            "title": "Edital nº 1/2026 - Abertura",
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1/2026 - Abertura' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c2eb665edc",
+            "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+            "byte_len": 565628,
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:24.222678Z",
+            "storage_path": "art-c2eb665edc-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf"
+          },
+          "total_pages": 31,
+          "processed_pages": 31,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=31/31",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.781
+    },
+    {
+      "source": "institutoconsulplan_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-00b884a9056f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "file": "institutoconsulplan_open-cycle1-listing-902182244e.html",
+          "sha256": "063abd4d392528553d97125de65f0635d7006eff81b11c654f41c1a3c764a40d",
+          "bytes": 293734,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:26.924706+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-8711c3bb06f9",
+          "candidate": {
+            "candidate_id": "institutoconsulplan_open-cidennf2026",
+            "title_observed": "CIDENNF - Consórcio Público Intermunicipal de  Desenvolvimento do Norte e Noroeste Fluminense",
+            "detail_url_observed": "https://institutoconsulplan.org.br/cidennf2026",
+            "external_id": "cidennf2026",
+            "observed_at": "2026-09-08T14:23:27.510985Z",
+            "source": "institutoconsulplan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: diretório documental não corroborado pelo ID do cabeçalho Consulplan",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/cidennf2026",
+              "file": "institutoconsulplan_open-cycle1-detail-7849961410.html",
+              "sha256": "a80435dfffaf881c31435580314e15326157cb5ef0b3bddc471357b2394f4432",
+              "bytes": 20483,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:27.965035+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-6db76fc64322",
+          "candidate": {
+            "candidate_id": "institutoconsulplan_open-unai2026",
+            "title_observed": "Câmara Municipal de Unaí/MG",
+            "detail_url_observed": "https://institutoconsulplan.org.br/unai2026",
+            "external_id": "unai2026",
+            "observed_at": "2026-09-08T14:23:27.511988Z",
+            "source": "institutoconsulplan_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/unai2026",
+              "file": "institutoconsulplan_open-cycle1-detail-904323a836.html",
+              "sha256": "ff6a28fddc58c9f145306b359967210489ed46efae8198f0a3ff70e72261aaba",
+              "bytes": 15295,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:28.395954+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "institutoconsulplan_open-doc-4aa08d6c66c170ed",
+            "title": "Edital nº 1/2026 - Abertura",
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1/2026 - Abertura' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-df86b94ccf",
+            "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+            "byte_len": 565628,
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:28.583185Z",
+            "storage_path": "art-df86b94ccf-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf"
+          },
+          "total_pages": 31,
+          "processed_pages": 31,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=31/31",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.406
+    },
+    {
+      "source": "zambini_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-c08a5ae3e88f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.zambini.org.br/portal/concursos",
+          "https://www.zambini.org.br/portal/concursos/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.zambini.org.br/portal/concursos/encerrados",
+          "file": "zambini_open-cycle1-listing-c6eaa1ec9c.html",
+          "sha256": "39bac232852fbcab38ba9a6e1acbb7d5899f06ffcd24417c5ff1d01e8de3342e",
+          "bytes": 254557,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:31.879127+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-86eea67fa075",
+          "candidate": {
+            "candidate_id": "zambini_open-1966",
+            "title_observed": "Concurso 01/2022 da Prefeitura Municipal de Cabreúva/SP",
+            "detail_url_observed": "https://www.zambini.org.br/portal/concursos/ver/1966",
+            "external_id": "1966",
+            "observed_at": "2026-09-08T14:23:32.243797Z",
+            "source": "zambini_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+              "file": "zambini_open-cycle1-detail-f2b0802e43.html",
+              "sha256": "2cfb272f1768efd7c520584d442ad0ab1bfb82dc66a263515e02965fa575a22a",
+              "bytes": 32002,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:33.069602+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "zambini_open-doc-d64e8f4218e67fc9",
+            "title": "Edital 01 - CABREUVA CP 01-2022",
+            "url_requested": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "url_final": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01 - CABREUVA CP 01-2022' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: Homologação GCM_ Bombeiro Civil _Cabreuva; Classificação Final Teste de Aptidão Física; EDITAL DE HOMOLOGAÇÃO PARCIAL; EDITAL DE RETIFICAÇÃO DE CRONOGRAMA 01-22; Edital de convocação 2-22)."
+          },
+          "artifact": {
+            "artifact_id": "art-76ebfa5f9e",
+            "sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+            "byte_len": 642421,
+            "url_requested": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "url_final": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:33.248784Z",
+            "storage_path": "art-76ebfa5f9e-3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e.pdf"
+          },
+          "total_pages": 33,
+          "processed_pages": 33,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=33/33",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.219
+    },
+    {
+      "source": "consulplan_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-d9bcaad7f143",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "file": "consulplan_open-cycle2-listing-c660881330.html",
+          "sha256": "4f23d596b67d5eedfcf3f299e29bed7ce570ae4c5d0fe31ea31d336005936dcf",
+          "bytes": 293627,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:35.550485+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-c37fbc5dbb65",
+          "candidate": {
+            "candidate_id": "consulplan_open-cidennf2026",
+            "title_observed": "CIDENNF - Consórcio Público Intermunicipal de  Desenvolvimento do Norte e Noroeste Fluminense",
+            "detail_url_observed": "https://institutoconsulplan.org.br/cidennf2026",
+            "external_id": "cidennf2026",
+            "observed_at": "2026-09-08T14:23:36.045690Z",
+            "source": "consulplan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: diretório documental não corroborado pelo ID do cabeçalho Consulplan",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/cidennf2026",
+              "file": "consulplan_open-cycle2-detail-75c9c5f155.html",
+              "sha256": "0cd9f2fd265a61a1e4dcbfd89c2a52b449a57969aac1b8519bbe85bd169bb4df",
+              "bytes": 20483,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:36.469718+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-32d25979ea96",
+          "candidate": {
+            "candidate_id": "consulplan_open-unai2026",
+            "title_observed": "Câmara Municipal de Unaí/MG",
+            "detail_url_observed": "https://institutoconsulplan.org.br/unai2026",
+            "external_id": "unai2026",
+            "observed_at": "2026-09-08T14:23:36.046694Z",
+            "source": "consulplan_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/unai2026",
+              "file": "consulplan_open-cycle2-detail-0a2f458d9e.html",
+              "sha256": "c9291d86f19f9249bde944928648ed2a1b9e6bac5c2ff32742b61aa4de0ee274",
+              "bytes": 15295,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:36.904501+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "consulplan_open-doc-4aa08d6c66c170ed",
+            "title": "Edital nº 1/2026 - Abertura",
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1/2026 - Abertura' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-72cd58cfec",
+            "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+            "byte_len": 565628,
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:37.079456Z",
+            "storage_path": "art-72cd58cfec-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf"
+          },
+          "total_pages": 31,
+          "processed_pages": 31,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=31/31",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.781
+    },
+    {
+      "source": "institutoconsulplan_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-d7a420fa6703",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "file": "institutoconsulplan_open-cycle2-listing-f238d00e70.html",
+          "sha256": "5823abe29215ac1c26f1792a63a3f85d8232b27492669ea842d653b400054bb5",
+          "bytes": 293629,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:40.407085+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f0535a0b1c77",
+          "candidate": {
+            "candidate_id": "institutoconsulplan_open-cidennf2026",
+            "title_observed": "CIDENNF - Consórcio Público Intermunicipal de  Desenvolvimento do Norte e Noroeste Fluminense",
+            "detail_url_observed": "https://institutoconsulplan.org.br/cidennf2026",
+            "external_id": "cidennf2026",
+            "observed_at": "2026-09-08T14:23:40.987470Z",
+            "source": "institutoconsulplan_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: diretório documental não corroborado pelo ID do cabeçalho Consulplan",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/cidennf2026",
+              "file": "institutoconsulplan_open-cycle2-detail-71e095ec40.html",
+              "sha256": "b9f4bcfeb959db2988508e63b75eb49a77af9616e5e05bc4afc0cb8dcb7825c3",
+              "bytes": 20483,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:41.463619+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-2f0de8fdc762",
+          "candidate": {
+            "candidate_id": "institutoconsulplan_open-unai2026",
+            "title_observed": "Câmara Municipal de Unaí/MG",
+            "detail_url_observed": "https://institutoconsulplan.org.br/unai2026",
+            "external_id": "unai2026",
+            "observed_at": "2026-09-08T14:23:40.988475Z",
+            "source": "institutoconsulplan_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://institutoconsulplan.org.br/unai2026",
+              "file": "institutoconsulplan_open-cycle2-detail-40b450206b.html",
+              "sha256": "94fca1ef9046ba17110daf1007c63a961417f5909eaa5ebaa4ee7117971a43b6",
+              "bytes": 15295,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:41.919885+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "institutoconsulplan_open-doc-4aa08d6c66c170ed",
+            "title": "Edital nº 1/2026 - Abertura",
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1/2026 - Abertura' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c99dfff039",
+            "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+            "byte_len": 565628,
+            "url_requested": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "url_final": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:42.091909Z",
+            "storage_path": "art-c99dfff039-9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32.pdf"
+          },
+          "total_pages": 31,
+          "processed_pages": 31,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=31/31",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.75
+    },
+    {
+      "source": "zambini_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-5c54c9d1855c",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.zambini.org.br/portal/concursos",
+          "https://www.zambini.org.br/portal/concursos/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.zambini.org.br/portal/concursos/encerrados",
+          "file": "zambini_open-cycle2-listing-4a87564533.html",
+          "sha256": "c1262e2217f33dfb65416a6424e486479e1be84114dd4b0e97da58c5386c958b",
+          "bytes": 254557,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:23:45.760760+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-817f51ff1bef",
+          "candidate": {
+            "candidate_id": "zambini_open-1966",
+            "title_observed": "Concurso 01/2022 da Prefeitura Municipal de Cabreúva/SP",
+            "detail_url_observed": "https://www.zambini.org.br/portal/concursos/ver/1966",
+            "external_id": "1966",
+            "observed_at": "2026-09-08T14:23:46.259111Z",
+            "source": "zambini_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+              "file": "zambini_open-cycle2-detail-234d3740fc.html",
+              "sha256": "7a66829108335467f341b528de853d1c6bf77577440c9e6dcddb0ce44e473c5e",
+              "bytes": 32002,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:23:47.104211+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "zambini_open-doc-d64e8f4218e67fc9",
+            "title": "Edital 01 - CABREUVA CP 01-2022",
+            "url_requested": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "url_final": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01 - CABREUVA CP 01-2022' por conter 'edital' no título/URL; 18 documento(s) ignorado(s) (ex.: Homologação GCM_ Bombeiro Civil _Cabreuva; Classificação Final Teste de Aptidão Física; EDITAL DE HOMOLOGAÇÃO PARCIAL; EDITAL DE RETIFICAÇÃO DE CRONOGRAMA 01-22; Edital de convocação 2-22)."
+          },
+          "artifact": {
+            "artifact_id": "art-61ce72cdc0",
+            "sha256": "3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e",
+            "byte_len": 642421,
+            "url_requested": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "url_final": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:23:47.283519Z",
+            "storage_path": "art-61ce72cdc0-3f9052ca9e0c187c7e6709e39673bae1dc87f3daa27511198bbf191e2bd85b3e.pdf"
+          },
+          "total_pages": 33,
+          "processed_pages": 33,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=33/33",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.906
+    }
+  ]
+}

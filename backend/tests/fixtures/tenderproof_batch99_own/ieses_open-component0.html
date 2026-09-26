@@ -1,0 +1,583 @@
+/**
+ * PROJETOS IESES - JAVASCRIPT
+ * Gestão de projetos e busca
+ * Seguindo boas práticas de acessibilidade e performance
+ */
+
+/**
+ * Obtém o valor de um cookie pelo nome
+ */
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) {
+      return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+  }
+  return null;
+}
+
+/**
+ * Retorna o token CSRF (com mascaramento para proteção BREACH)
+ */
+function getCSRFToken() {
+  // Prioriza Security.getCSRFToken com mascaramento
+  if (
+    typeof Security !== "undefined" &&
+    typeof Security.getCSRFToken === "function"
+  ) {
+    return Security.getCSRFToken();
+  }
+  // Fallback: token raw
+  return getCookie("csrf_token");
+}
+
+// ==========================================
+// 1. CONFIGURAÇÃO E ESTADO
+// ==========================================
+const CONFIG = {
+  API_URL: "/projetos/api",
+  LIMIT: 12,
+  DEBOUNCE_DELAY: 300,
+  ANIMATION_DURATION: 300,
+};
+
+const state = {
+  offset: 0,
+  isLoading: false,
+  hasMoreResults: true,
+  currentSearchTerm: "",
+};
+
+// ==========================================
+// 2. UTILITÁRIOS
+// ==========================================
+
+/**
+ * Debounce function para otimizar chamadas de busca
+ * @param {Function} func - Função a ser executada
+ * @param {number} wait - Tempo de espera em ms
+ * @returns {Function} Função com debounce aplicado
+ */
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * Formata data para padrão brasileiro
+ * @param {string} data - Data no formato ISO
+ * @returns {string} Data formatada ou 'N/A'
+ */
+function formatarData(data) {
+  if (!data) return "N/A";
+
+  try {
+    const date = new Date(data);
+    return date.toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  } catch (error) {
+    return "N/A";
+  }
+}
+
+/**
+ * Sanitiza texto para prevenir XSS
+ * @param {string} text - Texto a ser sanitizado
+ * @returns {string} Texto seguro
+ */
+function sanitizeText(text) {
+  if (!text) return "";
+
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+/**
+ * Cria elemento com atributos e classes
+ * @param {string} tag - Tag HTML
+ * @param {Object} attributes - Atributos do elemento
+ * @param {string|Array} classes - Classes CSS
+ * @returns {HTMLElement} Elemento criado
+ */
+function createElement(tag, attributes = {}, classes = []) {
+  const element = document.createElement(tag);
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    if (key === "dataset") {
+      Object.entries(value).forEach(([dataKey, dataValue]) => {
+        element.dataset[dataKey] = dataValue;
+      });
+    } else {
+      element.setAttribute(key, value);
+    }
+  });
+
+  const classList = Array.isArray(classes) ? classes : [classes];
+  classList.forEach((cls) => cls && element.classList.add(cls));
+
+  return element;
+}
+
+// ==========================================
+// 3. CRIAÇÃO DE CARDS
+// ==========================================
+
+/**
+ * Atualiza o ProjectTokenKey na sessão do usuário (se logado)
+ * @param {string} projectTokenKey - O token do projeto
+ * @returns {Promise<boolean>} True se a atualização foi bem-sucedida
+ */
+async function updateSessionProjectToken(projectTokenKey) {
+  // Só atualiza se o usuário estiver logado
+  if (typeof window.IS_LOGGED_IN === "boolean" && !window.IS_LOGGED_IN) {
+    return false;
+  }
+
+  try {
+    const csrfToken = getCSRFToken();
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    if (csrfToken) {
+      headers["X-CSRF-Token"] = csrfToken;
+    }
+    const response = await fetch("/users/session/project", {
+      method: "POST",
+      headers: headers,
+      credentials: "include",
+      body: JSON.stringify({ projectTokenKey: projectTokenKey }),
+    });
+
+    if (!response.ok) {
+      console.warn("Não foi possível atualizar o projeto na sessão");
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.warn("Erro ao atualizar projeto na sessão:", error);
+    return false;
+  }
+}
+
+/**
+ * Cria o HTML de um card de projeto
+ * @param {Object} projeto - Dados do projeto
+ * @returns {HTMLElement} Card do projeto
+ */
+function criarCardProjeto(projeto) {
+  // Sanitiza dados do projeto
+  const entidade = sanitizeText(projeto.entidade) || "Entidade não informada";
+  const evento = sanitizeText(projeto.evento) || "Evento não informado";
+  const logo = projeto.logo || "./static/images/placeholder.png";
+
+  // URL vem do backend já formatada corretamente para o ambiente
+  const url = projeto.url || "#";
+  const projectTokenKey = projeto.projectTokenKey || "";
+
+  // Container do card
+  const cardContainer = createElement(
+    "div",
+    {
+      role: "listitem",
+      dataset: {
+        nome: (projeto.nome || "").toLowerCase(),
+        entidade: (projeto.entidade || "").toLowerCase(),
+        projectTokenKey: projectTokenKey,
+      },
+    },
+    "projeto-card",
+  );
+
+  // Card principal
+  const card = createElement(
+    "article",
+    {
+      "aria-label": `Projeto: ${entidade}`,
+    },
+    "card",
+  );
+
+  // Card body
+  const cardBody = createElement("div", {}, "card-body");
+
+  // Container da imagem
+  const imageContainer = createElement("div", {}, "image-container");
+  const img = createElement("img", {
+    src: logo,
+    alt: `Logo ${entidade}`,
+    class: "card-img-top",
+    loading: "lazy",
+    onerror: "this.src='./static/images/placeholder.png'",
+  });
+  imageContainer.appendChild(img);
+
+  // Título
+  const title = createElement("h3", {}, "card-title");
+  title.textContent = entidade;
+
+  // Descrição
+  const description = createElement("p", {}, "card-text");
+  description.textContent = evento;
+
+  // Monta o card body
+  cardBody.appendChild(imageContainer);
+  cardBody.appendChild(title);
+  cardBody.appendChild(description);
+
+  // Footer com botão
+  const footer = createElement("div", {}, "card-footer");
+  const link = createElement("a", {
+    href: url,
+    class: "btn btn-primary",
+    "aria-label": `Ver detalhes do projeto ${entidade}`,
+    dataset: {
+      projectTokenKey: projectTokenKey,
+      url: url,
+    },
+  });
+  link.textContent = "Ver detalhes";
+
+  // Adiciona evento de clique para atualizar a sessão antes de redirecionar
+  link.addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const tokenKey = this.dataset.projectTokenKey;
+    const targetUrl = this.dataset.url;
+
+    // Só atualiza a sessão se o usuário estiver logado
+    if (tokenKey && window.IS_LOGGED_IN) {
+      await updateSessionProjectToken(tokenKey);
+    }
+
+    // Redireciona para a página do projeto
+    window.location.href = targetUrl;
+  });
+
+  footer.appendChild(link);
+
+  // Monta o card completo
+  card.appendChild(cardBody);
+  card.appendChild(footer);
+  cardContainer.appendChild(card);
+
+  return cardContainer;
+}
+
+// ==========================================
+// 4. CARREGAMENTO DE PROJETOS
+// ==========================================
+
+/**
+ * Exibe estado de loading
+ * @param {boolean} show - Mostrar ou esconder loading
+ */
+function toggleLoading(show) {
+  const button = $("#carregar-mais");
+
+  if (show) {
+    button.prop("disabled", true).text("Carregando...");
+    button.attr("aria-busy", "true");
+  } else {
+    button.prop("disabled", false).text("Carregar mais projetos");
+    button.attr("aria-busy", "false");
+  }
+}
+
+/**
+ * Exibe mensagem de erro
+ * @param {string} message - Mensagem de erro
+ */
+function showError(message) {
+  const container = $("#lista-projetos");
+  const errorHtml = `
+    <div class="col-12">
+      <div class="empty-state" role="alert">
+        <p><strong>Erro:</strong> ${sanitizeText(message)}</p>
+        <p>Por favor, tente novamente mais tarde.</p>
+      </div>
+    </div>
+  `;
+
+  if (state.offset === 0) {
+    container.html(errorHtml);
+  }
+}
+
+/**
+ * Exibe mensagem quando não há resultados
+ */
+function showEmptyState() {
+  const container = $("#lista-projetos");
+  const emptyHtml = `
+    <div class="col-12">
+      <div class="empty-state" role="status">
+        <p>Nenhum projeto encontrado.</p>
+        ${state.currentSearchTerm ? "<p>Tente ajustar os termos de busca.</p>" : ""}
+      </div>
+    </div>
+  `;
+  container.html(emptyHtml);
+}
+
+/**
+ * Renderiza lista de projetos no DOM
+ * @param {Array} projetos - Array de projetos
+ */
+function renderizarProjetos(projetos) {
+  const container = $("#lista-projetos");
+
+  projetos.forEach((projeto) => {
+    const card = criarCardProjeto(projeto);
+    container.append(card);
+  });
+
+  // Anuncia aos leitores de tela
+  announceToScreenReader(`${projetos.length} projetos carregados`);
+}
+
+/**
+ * Carrega projetos da API
+ */
+async function carregarProjetos() {
+  // Previne múltiplas chamadas simultâneas
+  if (state.isLoading) return;
+
+  state.isLoading = true;
+  toggleLoading(true);
+
+  try {
+    const response = await $.ajax({
+      url: `${CONFIG.API_URL}?offset=${state.offset}&limit=${CONFIG.LIMIT}`,
+      method: "GET",
+      dataType: "json",
+      timeout: 10000, // 10 segundos de timeout
+    });
+
+    if (response.projetos && response.projetos.length > 0) {
+      renderizarProjetos(response.projetos);
+      state.offset += response.projetos.length;
+
+      // Verifica se há mais resultados
+      if (response.projetos.length < CONFIG.LIMIT) {
+        state.hasMoreResults = false;
+        $("#carregar-mais").hide();
+        announceToScreenReader("Todos os projetos foram carregados");
+      }
+    } else {
+      state.hasMoreResults = false;
+      $("#carregar-mais").hide();
+
+      if (state.offset === 0) {
+        showEmptyState();
+      } else {
+        announceToScreenReader("Não há mais projetos para carregar");
+      }
+    }
+  } catch (error) {
+    let errorMessage = "Erro ao carregar projetos.";
+
+    if (error.status === 404) {
+      errorMessage = "API de projetos não encontrada.";
+    } else if (error.status === 500) {
+      errorMessage = "Erro no servidor. Por favor, tente novamente.";
+    } else if (error.statusText === "timeout") {
+      errorMessage = "A requisição demorou muito. Verifique sua conexão.";
+    }
+
+    showError(errorMessage);
+
+    // Envia erro para sistema de tracking (se disponível)
+    if (window.gtag) {
+      gtag("event", "exception", {
+        description: `API Error: ${error.status}`,
+        fatal: false,
+      });
+    }
+  } finally {
+    state.isLoading = false;
+    toggleLoading(false);
+  }
+}
+
+// ==========================================
+// 5. SISTEMA DE BUSCA
+// ==========================================
+
+/**
+ * Filtra projetos baseado no termo de busca
+ * @param {string} termo - Termo de busca
+ */
+function filtrarProjetos(termo) {
+  state.currentSearchTerm = termo.toLowerCase().trim();
+
+  if (!state.currentSearchTerm) {
+    // Mostra todos os projetos
+    $(".projeto-card").show();
+    announceToScreenReader("Mostrando todos os projetos");
+    return;
+  }
+
+  let visibleCount = 0;
+
+  $(".projeto-card").each(function () {
+    const $card = $(this);
+    const nome = $card.data("nome") || "";
+    const entidade = $card.data("entidade") || "";
+
+    const matches =
+      nome.includes(state.currentSearchTerm) ||
+      entidade.includes(state.currentSearchTerm);
+
+    if (matches) {
+      $card.show();
+      visibleCount++;
+    } else {
+      $card.hide();
+    }
+  });
+
+  // Anuncia resultado da busca
+  announceToScreenReader(
+    visibleCount === 0
+      ? "Nenhum projeto encontrado com esse termo"
+      : `${visibleCount} projeto${visibleCount !== 1 ? "s" : ""} encontrado${visibleCount !== 1 ? "s" : ""}`,
+  );
+}
+
+/**
+ * Limpa busca e reseta estado
+ */
+function limparBusca() {
+  $("#busca-projetos").val("");
+  state.currentSearchTerm = "";
+  $(".projeto-card").show();
+}
+
+// ==========================================
+// 6. ACESSIBILIDADE
+// ==========================================
+
+/**
+ * Anuncia mensagens para leitores de tela
+ * @param {string} message - Mensagem a ser anunciada
+ */
+function announceToScreenReader(message) {
+  const $announcer = $("#sr-announcer");
+
+  if ($announcer.length === 0) {
+    // Cria elemento se não existir
+    $("body").append(
+      '<div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>',
+    );
+  }
+
+  $("#sr-announcer").text(message);
+
+  // Limpa após 1 segundo
+  setTimeout(() => {
+    $("#sr-announcer").text("");
+  }, 1000);
+}
+
+// ==========================================
+// 7. EVENT HANDLERS
+// ==========================================
+
+/**
+ * Inicializa event listeners
+ */
+function initEventListeners() {
+  // Botão carregar mais
+  $("#carregar-mais").on("click", function () {
+    if (!state.isLoading && state.hasMoreResults) {
+      carregarProjetos();
+    }
+  });
+
+  // Busca com debounce
+  const debouncedSearch = debounce(function () {
+    const termo = $(this).val();
+    filtrarProjetos(termo);
+  }, CONFIG.DEBOUNCE_DELAY);
+
+  $("#busca-projetos").on("input", debouncedSearch);
+
+  // Limpar busca com ESC
+  $("#busca-projetos").on("keydown", function (e) {
+    if (e.key === "Escape") {
+      limparBusca();
+    }
+  });
+
+  // Scroll infinito (opcional)
+  // Descomente para ativar scroll infinito
+  /*
+  $(window).on('scroll', debounce(function() {
+    if (state.hasMoreResults && !state.isLoading) {
+      const scrollPosition = $(window).scrollTop() + $(window).height();
+      const documentHeight = $(document).height();
+
+      if (scrollPosition > documentHeight - 500) {
+        carregarProjetos();
+      }
+    }
+  }, 200));
+  */
+}
+
+// ==========================================
+// 8. INICIALIZAÇÃO
+// ==========================================
+
+/**
+ * Inicializa a aplicação
+ */
+function init() {
+  // Carrega projetos iniciais
+  carregarProjetos();
+
+  // Inicializa event listeners
+  initEventListeners();
+
+  // Foco no campo de busca (opcional, para acessibilidade)
+  // $('#busca-projetos').focus();
+}
+
+// ==========================================
+// 9. DOCUMENT READY
+// ==========================================
+
+$(document).ready(function () {
+  init();
+});
+
+// ==========================================
+// 10. EXPORTS (se usando módulos)
+// ==========================================
+
+// Para uso em testes ou outros módulos
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    carregarProjetos,
+    filtrarProjetos,
+    criarCardProjeto,
+    formatarData,
+    sanitizeText,
+  };
+}

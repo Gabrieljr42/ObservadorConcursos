@@ -10,8 +10,18 @@ from app.crawl_lock import (
 from app.connectors import seed_master_sources
 from app.database import SessionLocal
 from app.models import Source
+from app.notifications import drain_push_outbox
 from app.services import CrawlService
 from app.worker import celery_app
+from app.config import get_settings
+
+
+@celery_app.task(name='app.tasks.scheduled_crawl_active_sources')
+def scheduled_crawl_active_sources() -> dict:
+    """Only explicitly enabled installations run the legacy hourly writer."""
+    if not get_settings().legacy_crawler_enabled:
+        return {'status': 'disabled', 'processed_sources': 0}
+    return crawl_active_sources.run()
 
 
 @celery_app.task(name='app.tasks.heartbeat')
@@ -23,8 +33,20 @@ def heartbeat() -> dict:
     }
 
 
+@celery_app.task(name='app.tasks.drain_push_outbox')
+def drain_push_outbox_task(limit: int = 100) -> dict:
+    """Explicit push drain; no scheduler registration is performed here."""
+    db = SessionLocal()
+    try:
+        return drain_push_outbox(db, limit=limit)
+    finally:
+        db.close()
+
+
 @celery_app.task(name='app.tasks.crawl_source')
 def crawl_source(source_id: int) -> dict:
+    if not get_settings().legacy_crawler_enabled:
+        return {'status': 'disabled', 'processed_sources': 0}
     db = SessionLocal()
     try:
         service = CrawlService(db)
@@ -41,6 +63,8 @@ def crawl_source(source_id: int) -> dict:
 @celery_app.task(name='app.tasks.crawl_active_sources')
 def crawl_active_sources(lock_token: str | None = None) -> dict:
     """Scheduled job: crawl all active sources and let CrawlService create versions/notifications."""
+    if not get_settings().legacy_crawler_enabled:
+        return {'status': 'disabled', 'processed_sources': 0}
     try:
         owned_lock_token = acquire_crawl_all_lock(lock_token)
     except CrawlLockUnavailable as exc:

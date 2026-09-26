@@ -1,0 +1,3285 @@
+{
+  "observed_at": "2026-09-07T23:41:23.466190+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\pilot-live-20260907",
+  "cycles": [
+    {
+      "source": "access_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-0b4e01995bb3",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://access.selecao.net.br/index/7/",
+          "https://access.selecao.net.br/index/1/",
+          "https://access.selecao.net.br/index/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://access.selecao.net.br/index/abertos/",
+          "file": "access_open-cycle1-listing-d1fe0ad731.html",
+          "sha256": "feec276830e96f6435e1807e0a269f4002937997ef57b75ae404fa094208f5bd",
+          "bytes": 30647,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:41:24.241577+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-40292cc42f06",
+          "candidate": {
+            "candidate_id": "access_open-180",
+            "title_observed": "Prefeitura Municipal de Guapimirim/RJ",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/180/",
+            "external_id": "180",
+            "observed_at": "2026-09-07T23:41:24.303881Z",
+            "source": "access_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/180/",
+              "file": "access_open-cycle1-detail-151eb4f887.html",
+              "sha256": "9bd06d3460e0d20fd7c2cfe0464d59f90903489cb702f9119cf3de8fc16c6828",
+              "bytes": 42501,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:24.891909+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-b971a88749f7",
+          "candidate": {
+            "candidate_id": "access_open-182",
+            "title_observed": "Prefeitura Municipal de Engenheiro Paulo de Frontin/RJ",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/182/",
+            "external_id": "182",
+            "observed_at": "2026-09-07T23:41:24.303881Z",
+            "source": "access_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/182/",
+              "file": "access_open-cycle1-detail-859e27922c.html",
+              "sha256": "a77552a9ff1cd5b929112df78ab31d16eca8cf9e323a96b8e8a77a4d4052eb93",
+              "bytes": 33110,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:25.498351+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c7bea44ba4a4",
+          "candidate": {
+            "candidate_id": "access_open-183",
+            "title_observed": "Prefeitura Municipal de Birigui/SP",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/183/",
+            "external_id": "183",
+            "observed_at": "2026-09-07T23:41:24.303881Z",
+            "source": "access_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/183/",
+              "file": "access_open-cycle1-detail-fb275e3c24.html",
+              "sha256": "59eff1896962ca8568aa0d8310fcd9bac293a095d4ef43436a3ca61b512dda77",
+              "bytes": 27635,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:26.175670+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "access_open-doc-cb2e87947ced995e",
+            "title": "EDITAL DE ABERTURA 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-ae8b92c4fe",
+            "sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+            "byte_len": 496688,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:26.660106Z",
+            "storage_path": "art-ae8b92c4fe-de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.219
+    },
+    {
+      "source": "abcp_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-32e2dcfc9f9c",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://abcp.selecao.net.br/index/1/",
+          "https://abcp.selecao.net.br/index/2/",
+          "https://abcp.selecao.net.br/index/3/",
+          "https://abcp.selecao.net.br/index/4/",
+          "https://abcp.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://abcp.selecao.net.br/index/abertos/",
+          "file": "abcp_open-cycle1-listing-7f6c9d0ef4.html",
+          "sha256": "c0fcc02fba86741db8d8f25920179d2fe485c40213a11e4a2420951b610c8a5a",
+          "bytes": 27492,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:41:29.365725+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e1cfc6e6bea5",
+          "candidate": {
+            "candidate_id": "abcp_open-2869",
+            "title_observed": "Concurso Público - 001/2026 - PREFEITURA MUNICIPAL DE CONCHAL - SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2869/",
+            "external_id": "2869",
+            "observed_at": "2026-09-07T23:41:29.423319Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2869/",
+              "file": "abcp_open-cycle1-detail-032df2e4ac.html",
+              "sha256": "9d399e0875425f16ba1aff1bc5547edb1b1b489efe98894bf4b54744a331f4db",
+              "bytes": 35810,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:30.216248+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-5466be422170cf31",
+            "title": "EDITAL DE ABERTURA 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-cac4ef0998",
+            "sha256": "f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194",
+            "byte_len": 749025,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:30.421098Z",
+            "storage_path": "art-cac4ef0998-f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194.pdf"
+          },
+          "total_pages": 40,
+          "processed_pages": 40,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=40/40",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-a404a9332afc",
+          "candidate": {
+            "candidate_id": "abcp_open-2868",
+            "title_observed": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2868/",
+            "external_id": "2868",
+            "observed_at": "2026-09-07T23:41:29.423319Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2868/",
+              "file": "abcp_open-cycle1-detail-41a1c9e158.html",
+              "sha256": "205804d21456a660762e355c3b8701cfcc574d4a7dc23570941f4b70624a6002",
+              "bytes": 18244,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:35.518920+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-91dfc52512d6b7dd",
+            "title": "EDITAL DE ABERTURA 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-b415916df7",
+            "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+            "byte_len": 791715,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:35.699706Z",
+            "storage_path": "art-b415916df7-00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a.pdf"
+          },
+          "total_pages": 19,
+          "processed_pages": 19,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=19/19",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-448646d850c9",
+          "candidate": {
+            "candidate_id": "abcp_open-2867",
+            "title_observed": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2867/",
+            "external_id": "2867",
+            "observed_at": "2026-09-07T23:41:29.423881Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2867/",
+              "file": "abcp_open-cycle1-detail-3db3511b90.html",
+              "sha256": "446056f41aaadd24392e310b839354c83d35ab68751632f32f01ede035177365",
+              "bytes": 22961,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:38.490202+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-35216b0584ff88e9",
+            "title": "EDITAL DE ABERTURA 25/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 25/08/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: RESPOSTAS AOS PEDIDOS DE IMPUGNAÇÃO DO EDITAL 01/09/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-35a9f74c9e",
+            "sha256": "ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72",
+            "byte_len": 829151,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:38.665291Z",
+            "storage_path": "art-35a9f74c9e-ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.312
+    },
+    {
+      "source": "avancasp_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-611b6d83b962",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://avancasp.selecao.net.br/index/1/",
+          "https://avancasp.selecao.net.br/index/2/",
+          "https://avancasp.selecao.net.br/index/3/",
+          "https://avancasp.selecao.net.br/index/4/",
+          "https://avancasp.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://avancasp.selecao.net.br/index/abertos/",
+          "file": "avancasp_open-cycle1-listing-1d1d791edb.html",
+          "sha256": "f68863e34eb918e1aaf7bbaf5d759b444031190ab24dfa3545e27a68801619d1",
+          "bytes": 47816,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:41:41.850792+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f11951bf65d7",
+          "candidate": {
+            "candidate_id": "avancasp_open-272",
+            "title_observed": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/272/",
+            "external_id": "272",
+            "observed_at": "2026-09-07T23:41:41.947213Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/272/",
+              "file": "avancasp_open-cycle1-detail-8f264fffa9.html",
+              "sha256": "50c6d591e36e3ed43a255335638d3dbcc17dd4ad2400b00c983454db7e72814c",
+              "bytes": 37303,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:42.544925+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-8a30699a26344fa0",
+            "title": "EDITAL COMPLETO 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-dc3860282a",
+            "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+            "byte_len": 742298,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:42.727521Z",
+            "storage_path": "art-dc3860282a-b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a.pdf"
+          },
+          "total_pages": 48,
+          "processed_pages": 48,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=48/48",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-3c8162e2418a",
+          "candidate": {
+            "candidate_id": "avancasp_open-271",
+            "title_observed": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CAÇAPAVA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/271/",
+            "external_id": "271",
+            "observed_at": "2026-09-07T23:41:41.947213Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/271/",
+              "file": "avancasp_open-cycle1-detail-6c580223d5.html",
+              "sha256": "0c8dc9da8a9dda2213c0eff76fb61d8ada5cbf2958311888d52c902d63fac745",
+              "bytes": 39885,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:47.033550+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-1dc8d92d820f856b",
+            "title": "EDITAL COMPLETO 01/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 01/09/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: RETIFICAÇÃO I DO EDITAL COMPLETO 02/09/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-27d174a831",
+            "sha256": "2923d95de8e7af7b3fa3c808c69a1d041580e837f37169139f271e5114a82c7c",
+            "byte_len": 1069898,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:47.284583Z",
+            "storage_path": "art-27d174a831-2923d95de8e7af7b3fa3c808c69a1d041580e837f37169139f271e5114a82c7c.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-45f6d52568bb",
+          "candidate": {
+            "candidate_id": "avancasp_open-270",
+            "title_observed": "Processo Seletivo - 01/2026 - PREFEITURA MUNICIPAL DE ARAÇARIGUAMA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/270/",
+            "external_id": "270",
+            "observed_at": "2026-09-07T23:41:41.948800Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/270/",
+              "file": "avancasp_open-cycle1-detail-95121aea0a.html",
+              "sha256": "41c544370368b04154826b90f47d3250b6fa1a1b2fd32695062bf4cfa838f20d",
+              "bytes": 40174,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:48.810839+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-90a3405d61a41680",
+            "title": "EDITAL COMPLETO 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c3414b3d9b",
+            "sha256": "9f0b5a41935cd88085b511a039a7bd47e88ddff019b686d640a113d00fe7dea0",
+            "byte_len": 1055539,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:49.063517Z",
+            "storage_path": "art-c3414b3d9b-9f0b5a41935cd88085b511a039a7bd47e88ddff019b686d640a113d00fe7dea0.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 9.375
+    },
+    {
+      "source": "ibade_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-f141677b7745",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.ibade.selecao.site/edital",
+          "file": "ibade_open-cycle1-listing-53b15f4ea6.html",
+          "sha256": "3f618f1411e7b00cd24b706eee735c124e46691d86b5eed537f1706879374f12",
+          "bytes": 119636,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:41:51.177064+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-ad4334eae65a",
+          "candidate": {
+            "candidate_id": "ibade_open-127",
+            "title_observed": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:41:51.497907Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/127",
+              "file": "ibade_open-cycle1-detail-2b872a9690.html",
+              "sha256": "c1b214b8eba93c4bdb51bff85c371c15a2e1b7a48c03fefa221ead16ac69dfe5",
+              "bytes": 22654,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:52.169954+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ddd270779505",
+          "candidate": {
+            "candidate_id": "ibade_open-126",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITARANA",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/126",
+            "external_id": "126",
+            "observed_at": "2026-09-07T23:41:51.498459Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/126",
+              "file": "ibade_open-cycle1-detail-034e56925d.html",
+              "sha256": "dcb3e859ffff1b7608436f9ffbe27cfaa11bb93be1246ab3e6b188883fbedf8d",
+              "bytes": 67526,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:53.295423+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-1d96ac96b928",
+          "candidate": {
+            "candidate_id": "ibade_open-125",
+            "title_observed": "CONSELHO REGIONAL DE ENFERMAGEM DO AMAZONAS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/125",
+            "external_id": "125",
+            "observed_at": "2026-09-07T23:41:51.498459Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/125",
+              "file": "ibade_open-cycle1-detail-3adb27c51d.html",
+              "sha256": "8c83deee4eca83f29761232a12ea2757aad9fdf6b1e67e6a48b80eb5c1a81923",
+              "bytes": 75177,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:54.278257+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 4.359
+    },
+    {
+      "source": "fenix_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-28ab6a3c594a",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.fenix.selecao.site/edital",
+          "file": "fenix_open-cycle1-listing-416c7ab258.html",
+          "sha256": "45f617287ecd4064ac02828bb51f8885e8512e9674c4d020379ac7b85c7ffe62",
+          "bytes": 146753,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:41:55.496851+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-4ad8997bee09",
+          "candidate": {
+            "candidate_id": "fenix_open-129",
+            "title_observed": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/129",
+            "external_id": "129",
+            "observed_at": "2026-09-07T23:41:55.917081Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/129",
+              "file": "fenix_open-cycle1-detail-dba55c475d.html",
+              "sha256": "505bfcf7b37845fdc1956c6dd2fb4d1e26ca69224ceea6493f8640e5d5efbe2e",
+              "bytes": 21695,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:56.568482+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-6dc56cd4a4cf5439",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-4cf2da85a1",
+            "sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+            "byte_len": 703886,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:41:57.110191Z",
+            "storage_path": "art-4cf2da85a1-cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3.pdf"
+          },
+          "total_pages": 14,
+          "processed_pages": 14,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=14/14",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-7c02a5dee628",
+          "candidate": {
+            "candidate_id": "fenix_open-128",
+            "title_observed": "CÂMARA MUNICIPAL DE MONÇÕES",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/128",
+            "external_id": "128",
+            "observed_at": "2026-09-07T23:41:55.917666Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/128",
+              "file": "fenix_open-cycle1-detail-cc5afc030a.html",
+              "sha256": "cc9f6946dc6168ee20653b72285d9eec9d8c3e69cb4290a0f78a426886ad95ae",
+              "bytes": 27037,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:41:59.573941+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-1552a9824dd32cd9",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: GABARITO; CONVOCAÇÃO PARA AS PROVAS; HOMOLOGAÇÃO DOS INSCRITOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-797619dcea",
+            "sha256": "8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9",
+            "byte_len": 471851,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:00.974782Z",
+            "storage_path": "art-797619dcea-8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9.pdf"
+          },
+          "total_pages": 14,
+          "processed_pages": 14,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=14/14",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-ccc7e3b187b5",
+          "candidate": {
+            "candidate_id": "fenix_open-127",
+            "title_observed": "PREFEITURA MUNICIPAL DE GLICÉRIO",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:41:55.918808Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/127",
+              "file": "fenix_open-cycle1-detail-feca096ed3.html",
+              "sha256": "ab33e9a0a119430e4abd1a5d495cf978e14bd8e10fb9ea4c5cf8cf233a869e67",
+              "bytes": 30414,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:02.998748+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-42a1ee32484d237b",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: RESULTADO FINAL; DECRETO DE HOMOLOGAÇÃO; RESULTADO PARICAL; GABARITO; HOMOLOGAÇÃO DOS INSCRITOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-b791c512cd",
+            "sha256": "e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194",
+            "byte_len": 395103,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:04.316369Z",
+            "storage_path": "art-b791c512cd-e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194.pdf"
+          },
+          "total_pages": 15,
+          "processed_pages": 15,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=15/15",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 10.75
+    },
+    {
+      "source": "legalle_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-dddf86cfcfc0",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.editais.legalleconcursos.com.br/edital",
+          "file": "legalle_open-cycle1-listing-59597f5ef7.html",
+          "sha256": "f04df5ee2cdf9afdef6b48026d92544e57e3b8fb0e9b14342c35189a7ab56ea9",
+          "bytes": 877087,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:06.114204+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-57c6ce88ec81",
+          "candidate": {
+            "candidate_id": "legalle_open-2557",
+            "title_observed": "Município de Relvado",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+            "external_id": "2557",
+            "observed_at": "2026-09-07T23:42:08.620801Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+              "file": "legalle_open-cycle1-detail-8b6460529c.html",
+              "sha256": "aeb463f732f1d54867e0c9484a06b58dd6e4f0024ed62a179fc71152bb915837",
+              "bytes": 43336,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:09.522996+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legalle_open-doc-b173c7c865c50792",
+            "title": "Edital de Abertura e Inscrições",
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura e Inscrições' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-1e50824d69",
+            "sha256": "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+            "byte_len": 658738,
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:09.983714Z",
+            "storage_path": "art-1e50824d69-1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4.pdf"
+          },
+          "total_pages": 32,
+          "processed_pages": 32,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=32/32",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-a693f0a2bbe4",
+          "candidate": {
+            "candidate_id": "legalle_open-2548",
+            "title_observed": "Câmara Municipal de Vereadores de Capão do Leão",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2548",
+            "external_id": "2548",
+            "observed_at": "2026-09-07T23:42:08.621533Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2548",
+              "file": "legalle_open-cycle1-detail-069eb6b1fa.html",
+              "sha256": "30b93d2973be2d59902b9bf3a580dcc8c1fad72a6aa9210164a07da1b5585ba4",
+              "bytes": 38125,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:13.966656+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-04ca91b17c2d",
+          "candidate": {
+            "candidate_id": "legalle_open-2556",
+            "title_observed": "Município de Francisco Alves",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2556",
+            "external_id": "2556",
+            "observed_at": "2026-09-07T23:42:08.621533Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2556",
+              "file": "legalle_open-cycle1-detail-5413d87ef4.html",
+              "sha256": "b3d0e507f93562d058232f7d717beead7ccb568ad90eda177348dbc6333a4a52",
+              "bytes": 40636,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:14.863988+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legalle_open-doc-66bd8f2ad728dab7",
+            "title": "Edital de Abertura e Inscrições",
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura e Inscrições' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-6939f31fa5",
+            "sha256": "62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4",
+            "byte_len": 627364,
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:15.219100Z",
+            "storage_path": "art-6939f31fa5-62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4.pdf"
+          },
+          "total_pages": 30,
+          "processed_pages": 30,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=30/30",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.875
+    },
+    {
+      "source": "fgv_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-f677b8514125",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://conhecimento.fgv.br/concursos?page=0",
+          "https://conhecimento.fgv.br/concursos?page=1",
+          "https://conhecimento.fgv.br/concursos?page=2",
+          "https://conhecimento.fgv.br/concursos?page=3",
+          "https://conhecimento.fgv.br/concursos?page=4",
+          "https://conhecimento.fgv.br/concursos?page=5",
+          "https://conhecimento.fgv.br/concursos?page=6",
+          "https://conhecimento.fgv.br/concursos?page=7",
+          "https://conhecimento.fgv.br/concursos?page=8",
+          "https://conhecimento.fgv.br/concursos?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://conhecimento.fgv.br/concursos",
+          "file": "fgv_open-cycle1-listing-3cf2755f8f.html",
+          "sha256": "863be06626bf1502bfff1a5ad43adbd721e55dc142bf052a454f0f605fe3acc5",
+          "bytes": 51683,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:18.848652+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-69a44d4c1326",
+          "candidate": {
+            "candidate_id": "fgv_open-seplagrj",
+            "title_observed": "Concurso Público para Secretaria de Planejamento e Gestão do Estado do Rio de Janeiro – SEPLAG/RJ",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/seplagrj",
+            "external_id": "seplagrj",
+            "observed_at": "2026-09-07T23:42:18.953774Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/seplagrj",
+              "file": "fgv_open-cycle1-detail-701fd699d0.html",
+              "sha256": "53b16bb6b912f7e3d9007c1010b02b8fd59adc6c3a73163ff175979518d7929d",
+              "bytes": 30896,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:19.460897+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-464036bdb625",
+          "candidate": {
+            "candidate_id": "fgv_open-seducpa26",
+            "title_observed": "Concurso Público para a Secretaria de Estado de Planejamento e Administração e a Secretaria de Estado de Educação do Pará",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/seducpa26",
+            "external_id": "seducpa26",
+            "observed_at": "2026-09-07T23:42:18.953774Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/seducpa26",
+              "file": "fgv_open-cycle1-detail-aba2db7300.html",
+              "sha256": "7b2f94cca9f42c4b67536f96ef31d48e0718fd2d85811fbb31fa01be6d2590ff",
+              "bytes": 31232,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:20.080752+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fgv_open-doc-aaef9cf56eb9df0c",
+            "title": "Edital",
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-b7a753fc7f",
+            "sha256": "c349be0bcdc09ad4f3ea951737fb71399bdb04996a11aea9da3c3ef1c0c2f605",
+            "byte_len": 1298333,
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:20.235153Z",
+            "storage_path": "art-b7a753fc7f-c349be0bcdc09ad4f3ea951737fb71399bdb04996a11aea9da3c3ef1c0c2f605.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-261952347382",
+          "candidate": {
+            "candidate_id": "fgv_open-tjrsjuiz26",
+            "title_observed": "Concurso Público para o Tribunal de Justiça do Estado do Rio Grande do Sul - Juiz Substituto",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/tjrsjuiz26",
+            "external_id": "tjrsjuiz26",
+            "observed_at": "2026-09-07T23:42:18.953774Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/tjrsjuiz26",
+              "file": "fgv_open-cycle1-detail-a11db0e26b.html",
+              "sha256": "7771cabc2e2f8eee1af82930d483e3c04e287261abe25755da9f3ae0e3d18b9f",
+              "bytes": 29216,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:21.224877+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fgv_open-doc-37686888a5d04c65",
+            "title": "Edital",
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-e203163273",
+            "sha256": "34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0",
+            "byte_len": 399923,
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:21.355776Z",
+            "storage_path": "art-e203163273-34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0.pdf"
+          },
+          "total_pages": 53,
+          "processed_pages": 53,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=53/53",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 10.204
+    },
+    {
+      "source": "funcern_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-f400054837ee",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funcern.br/concursos/?page=2",
+          "https://funcern.br/concursos/?page=3",
+          "https://funcern.br/concursos/?page=12",
+          "https://funcern.br/concursos/?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funcern.br/concursos/",
+          "file": "funcern_selection-cycle1-listing-8e3848a75b.html",
+          "sha256": "9b5ad673aff5c4de8708303d3ad9da20cb8d35e03411f001d83ff796a07c50df",
+          "bytes": 50144,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:29.500653+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-48ee493d954c",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-equador-2026",
+            "title_observed": "Concurso Público Município de Equador/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-equador-2026/",
+            "external_id": "concurso-equador-2026",
+            "observed_at": "2026-09-07T23:42:29.596260Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-equador-2026/",
+              "file": "funcern_selection-cycle1-detail-3e5aa197dc.html",
+              "sha256": "f78e3222c473c5c3d4395dc39c2fdc349e6b5a8ccff252468a551a12f7cbd77d",
+              "bytes": 43840,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:30.480697+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-d48a4eaaef1d",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-lagoa-de-pedras-2026",
+            "title_observed": "Concurso Público Lagoa de Pedras/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+            "external_id": "concurso-lagoa-de-pedras-2026",
+            "observed_at": "2026-09-07T23:42:29.597263Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: nyc3.digitaloceanspaces.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+              "file": "funcern_selection-cycle1-detail-30ab2162d5.html",
+              "sha256": "ec18d8679b33c1c442a2c0837b4b26bf2a3b21c890e52e13ff7bf63e48a08deb",
+              "bytes": 42965,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:31.368606+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.968
+    },
+    {
+      "source": "access_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-4413236704bb",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 3,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://access.selecao.net.br/index/7/",
+          "https://access.selecao.net.br/index/1/",
+          "https://access.selecao.net.br/index/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://access.selecao.net.br/index/abertos/",
+          "file": "access_open-cycle2-listing-d1fe0ad731.html",
+          "sha256": "b187d456b19bae73a8dac832453243279d84b25cca6c99321915771157d692f4",
+          "bytes": 30647,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:32.241076+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-9072d31e83e9",
+          "candidate": {
+            "candidate_id": "access_open-180",
+            "title_observed": "Prefeitura Municipal de Guapimirim/RJ",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/180/",
+            "external_id": "180",
+            "observed_at": "2026-09-07T23:42:32.302736Z",
+            "source": "access_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/180/",
+              "file": "access_open-cycle2-detail-151eb4f887.html",
+              "sha256": "9a7e1f71cbcdfbb2c3246b9135661bbb14c951f32ca3890c56312263b8367622",
+              "bytes": 42637,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:33.048226+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-74374439561f",
+          "candidate": {
+            "candidate_id": "access_open-182",
+            "title_observed": "Prefeitura Municipal de Engenheiro Paulo de Frontin/RJ",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/182/",
+            "external_id": "182",
+            "observed_at": "2026-09-07T23:42:32.302736Z",
+            "source": "access_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/182/",
+              "file": "access_open-cycle2-detail-859e27922c.html",
+              "sha256": "00ad60fa0456f7f70d6358e52dc586cace89728f1f1d1a320e8a613b2107260b",
+              "bytes": 33016,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:33.840743+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c58565d38bcf",
+          "candidate": {
+            "candidate_id": "access_open-183",
+            "title_observed": "Prefeitura Municipal de Birigui/SP",
+            "detail_url_observed": "https://access.selecao.net.br/informacoes/183/",
+            "external_id": "183",
+            "observed_at": "2026-09-07T23:42:32.302736Z",
+            "source": "access_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://access.selecao.net.br/informacoes/183/",
+              "file": "access_open-cycle2-detail-fb275e3c24.html",
+              "sha256": "e5d804fe2d5fb1936f861a7a2ff63beb2cd042415444bf754f7c9dd7df90ed8b",
+              "bytes": 27635,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:34.731596+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "access_open-doc-cb2e87947ced995e",
+            "title": "EDITAL DE ABERTURA 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-87b51a7c60",
+            "sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+            "byte_len": 496688,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:34.918639Z",
+            "storage_path": "art-87b51a7c60-de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.891
+    },
+    {
+      "source": "abcp_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-e783350420c6",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://abcp.selecao.net.br/index/1/",
+          "https://abcp.selecao.net.br/index/2/",
+          "https://abcp.selecao.net.br/index/3/",
+          "https://abcp.selecao.net.br/index/4/",
+          "https://abcp.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://abcp.selecao.net.br/index/abertos/",
+          "file": "abcp_open-cycle2-listing-7f6c9d0ef4.html",
+          "sha256": "c0fcc02fba86741db8d8f25920179d2fe485c40213a11e4a2420951b610c8a5a",
+          "bytes": 27492,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:37.236098+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-ef6802476bfa",
+          "candidate": {
+            "candidate_id": "abcp_open-2869",
+            "title_observed": "Concurso Público - 001/2026 - PREFEITURA MUNICIPAL DE CONCHAL - SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2869/",
+            "external_id": "2869",
+            "observed_at": "2026-09-07T23:42:37.296045Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2869/",
+              "file": "abcp_open-cycle2-detail-032df2e4ac.html",
+              "sha256": "b3d94779eb97024cd97f5ab6cf2b7fb8a51ec12281444fd06b3c79bf3a13ac18",
+              "bytes": 35810,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:37.907577+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-5466be422170cf31",
+            "title": "EDITAL DE ABERTURA 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-0000165dc0",
+            "sha256": "f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194",
+            "byte_len": 749025,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2869/anexos/fa2880f0-055b-4bd9-97e4-09b5b51e4675.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:38.134941Z",
+            "storage_path": "art-0000165dc0-f7582bdbc75bcb81f043d08880097fce92dcf9782d6b3928c8858706324d8194.pdf"
+          },
+          "total_pages": 40,
+          "processed_pages": 40,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=40/40",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-3d2b7d37074b",
+          "candidate": {
+            "candidate_id": "abcp_open-2868",
+            "title_observed": "Concurso Público - 001/2026 - CÂMARA MUNICIPAL DE GARÇA- SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2868/",
+            "external_id": "2868",
+            "observed_at": "2026-09-07T23:42:37.296045Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2868/",
+              "file": "abcp_open-cycle2-detail-41a1c9e158.html",
+              "sha256": "bafc4a577e2382d6dfb41f95ca87a44c21d4d4c491b7d305e1635772b80b27b1",
+              "bytes": 18244,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:43.331425+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-91dfc52512d6b7dd",
+            "title": "EDITAL DE ABERTURA 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-85594396d7",
+            "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+            "byte_len": 791715,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:43.494468Z",
+            "storage_path": "art-85594396d7-00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a.pdf"
+          },
+          "total_pages": 19,
+          "processed_pages": 19,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=19/19",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-f4203357896b",
+          "candidate": {
+            "candidate_id": "abcp_open-2867",
+            "title_observed": "Processo Seletivo Simplificado - 002/2026 - PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE IBIÚNA - SP",
+            "detail_url_observed": "https://abcp.selecao.net.br/informacoes/2867/",
+            "external_id": "2867",
+            "observed_at": "2026-09-07T23:42:37.296045Z",
+            "source": "abcp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://abcp.selecao.net.br/informacoes/2867/",
+              "file": "abcp_open-cycle2-detail-3db3511b90.html",
+              "sha256": "dc2649efb2656433266d71baddd8b4b050043df32df1d3757def4d110e1c1d9f",
+              "bytes": 22961,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:46.769949+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "abcp_open-doc-35216b0584ff88e9",
+            "title": "EDITAL DE ABERTURA 25/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA 25/08/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: RESPOSTAS AOS PEDIDOS DE IMPUGNAÇÃO DO EDITAL 01/09/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-7ea236637f",
+            "sha256": "ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72",
+            "byte_len": 829151,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/567/concursos/2867/anexos/4194043a-894b-4a70-88b8-d5c8ad4a62ce.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:46.947272Z",
+            "storage_path": "art-7ea236637f-ab10571f0d89399ed24f54e9ea7c41b7d56ebbbad1be70fa12d9f7838ad29c72.pdf"
+          },
+          "total_pages": 21,
+          "processed_pages": 21,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=21/21",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 12.828
+    },
+    {
+      "source": "avancasp_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-6caa27af2a0f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://avancasp.selecao.net.br/index/1/",
+          "https://avancasp.selecao.net.br/index/2/",
+          "https://avancasp.selecao.net.br/index/3/",
+          "https://avancasp.selecao.net.br/index/4/",
+          "https://avancasp.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://avancasp.selecao.net.br/index/abertos/",
+          "file": "avancasp_open-cycle2-listing-1d1d791edb.html",
+          "sha256": "f68863e34eb918e1aaf7bbaf5d759b444031190ab24dfa3545e27a68801619d1",
+          "bytes": 47816,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:42:50.013405+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-fb7de49df241",
+          "candidate": {
+            "candidate_id": "avancasp_open-272",
+            "title_observed": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/272/",
+            "external_id": "272",
+            "observed_at": "2026-09-07T23:42:50.142139Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/272/",
+              "file": "avancasp_open-cycle2-detail-8f264fffa9.html",
+              "sha256": "181ddbf209937c818936776b1bc7ae3bf4a9d8c8f4f63a1bead88a3d25ac7bf0",
+              "bytes": 37303,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:50.723333+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-8a30699a26344fa0",
+            "title": "EDITAL COMPLETO 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-62f0f51e23",
+            "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+            "byte_len": 742298,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:50.918498Z",
+            "storage_path": "art-62f0f51e23-b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a.pdf"
+          },
+          "total_pages": 48,
+          "processed_pages": 48,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=48/48",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-73446f8a243a",
+          "candidate": {
+            "candidate_id": "avancasp_open-271",
+            "title_observed": "Concurso Público - 01/2026 - PREFEITURA MUNICIPAL DE CAÇAPAVA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/271/",
+            "external_id": "271",
+            "observed_at": "2026-09-07T23:42:50.143136Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/271/",
+              "file": "avancasp_open-cycle2-detail-6c580223d5.html",
+              "sha256": "9a96bedefa2a9eb8d2933cead4eedeb24a33f6951b3f31bf4ff1d5ff6a2ebc41",
+              "bytes": 39885,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:56.454634+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-1dc8d92d820f856b",
+            "title": "EDITAL COMPLETO 01/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 01/09/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: RETIFICAÇÃO I DO EDITAL COMPLETO 02/09/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-1d3f6eeece",
+            "sha256": "2923d95de8e7af7b3fa3c808c69a1d041580e837f37169139f271e5114a82c7c",
+            "byte_len": 1069898,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/271/anexos/4e34447c-bda7-4f58-bc28-20d406f78d72.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:56.691649Z",
+            "storage_path": "art-1d3f6eeece-2923d95de8e7af7b3fa3c808c69a1d041580e837f37169139f271e5114a82c7c.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-80993f82c4e0",
+          "candidate": {
+            "candidate_id": "avancasp_open-270",
+            "title_observed": "Processo Seletivo - 01/2026 - PREFEITURA MUNICIPAL DE ARAÇARIGUAMA",
+            "detail_url_observed": "https://avancasp.selecao.net.br/informacoes/270/",
+            "external_id": "270",
+            "observed_at": "2026-09-07T23:42:50.143136Z",
+            "source": "avancasp_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://avancasp.selecao.net.br/informacoes/270/",
+              "file": "avancasp_open-cycle2-detail-95121aea0a.html",
+              "sha256": "6ac0cab4ffed89cfadedcdb7c0527bfa89c70e26693ebbd3fbe4174e6b8e5a6e",
+              "bytes": 40174,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:42:58.811158+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "avancasp_open-doc-90a3405d61a41680",
+            "title": "EDITAL COMPLETO 04/09/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL COMPLETO 04/09/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-5568f7d9b7",
+            "sha256": "9f0b5a41935cd88085b511a039a7bd47e88ddff019b686d640a113d00fe7dea0",
+            "byte_len": 1055539,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/301/concursos/270/anexos/276d3e6b-9df8-4f94-b4c6-cf543d4750a6.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:42:59.055327Z",
+            "storage_path": "art-5568f7d9b7-9f0b5a41935cd88085b511a039a7bd47e88ddff019b686d640a113d00fe7dea0.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 10.891
+    },
+    {
+      "source": "ibade_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-d0ce26deea29",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.ibade.selecao.site/edital",
+          "file": "ibade_open-cycle2-listing-53b15f4ea6.html",
+          "sha256": "d3c3868816176abf5331e9af3ad26cde52836b983ee726f8262d17d9e321a7b1",
+          "bytes": 119636,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:43:00.952995+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d895e970c58f",
+          "candidate": {
+            "candidate_id": "ibade_open-127",
+            "title_observed": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:43:01.384394Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/127",
+              "file": "ibade_open-cycle2-detail-2b872a9690.html",
+              "sha256": "acfe86317320743b01f9994c4bdd0eb9f29f51f46dbe0d775503bfc743e52ed2",
+              "bytes": 22654,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:02.072566+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-1ebf56b56fef",
+          "candidate": {
+            "candidate_id": "ibade_open-126",
+            "title_observed": "PREFEITURA MUNICIPAL DE ITARANA",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/126",
+            "external_id": "126",
+            "observed_at": "2026-09-07T23:43:01.385396Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/126",
+              "file": "ibade_open-cycle2-detail-034e56925d.html",
+              "sha256": "ed3c5d7c13cb02eb50e67225d560975aba32ffa2f5afb303d976ed1c37798692",
+              "bytes": 67526,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:02.927564+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-4a724e2d32eb",
+          "candidate": {
+            "candidate_id": "ibade_open-125",
+            "title_observed": "CONSELHO REGIONAL DE ENFERMAGEM DO AMAZONAS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/125",
+            "external_id": "125",
+            "observed_at": "2026-09-07T23:43:01.386390Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: s3.sa-east-1.amazonaws.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/125",
+              "file": "ibade_open-cycle2-detail-3adb27c51d.html",
+              "sha256": "6a8c671625b2ca62db632871186a3470b65322a77c4789c802da4560dbe2b1b1",
+              "bytes": 75177,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:04.908328+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 5.015
+    },
+    {
+      "source": "fenix_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-39b26ce0e636",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.fenix.selecao.site/edital",
+          "file": "fenix_open-cycle2-listing-416c7ab258.html",
+          "sha256": "1087836ddac1f09e84f2d6afe99ae6e189f4c0820403327d363d721cef444313",
+          "bytes": 146753,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:43:07.095624+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-5856e7627762",
+          "candidate": {
+            "candidate_id": "fenix_open-129",
+            "title_observed": "PREFEITURA MUNICIPAL DE PEDRINHAS PAULISTA",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/129",
+            "external_id": "129",
+            "observed_at": "2026-09-07T23:43:07.553493Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/129",
+              "file": "fenix_open-cycle2-detail-dba55c475d.html",
+              "sha256": "b08451d26fde9f6d0a24b426e8d1466556f434252048b0e5fcef272ee814403e",
+              "bytes": 21695,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:08.315878+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-6dc56cd4a4cf5439",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-9b40d7a834",
+            "sha256": "cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3",
+            "byte_len": 703886,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/129/086ce3931b3c61bd7fc57b5001f6048b.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:09.858125Z",
+            "storage_path": "art-9b40d7a834-cb0848ea34d18877d37dd46059306ba6212b9b1c56828e33228fda2c609f84f3.pdf"
+          },
+          "total_pages": 14,
+          "processed_pages": 14,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=14/14",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-e0b274669845",
+          "candidate": {
+            "candidate_id": "fenix_open-128",
+            "title_observed": "CÂMARA MUNICIPAL DE MONÇÕES",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/128",
+            "external_id": "128",
+            "observed_at": "2026-09-07T23:43:07.554059Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/128",
+              "file": "fenix_open-cycle2-detail-cc5afc030a.html",
+              "sha256": "10e64013a5bdc720ee504630908069f0f1d8b9984449b4d61c99da1b8a4fc773",
+              "bytes": 27037,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:12.359609+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-1552a9824dd32cd9",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 3 documento(s) ignorado(s) (ex.: GABARITO; CONVOCAÇÃO PARA AS PROVAS; HOMOLOGAÇÃO DOS INSCRITOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-4a475201f5",
+            "sha256": "8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9",
+            "byte_len": 471851,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/128/121419cd9771eefe8df48b7ecbde3f72.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:13.798136Z",
+            "storage_path": "art-4a475201f5-8ebc4c06943e87c2101fe37041c235bcce116d4f92f561767ed6d13ecafb89d9.pdf"
+          },
+          "total_pages": 14,
+          "processed_pages": 14,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=14/14",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-6e41bb90878a",
+          "candidate": {
+            "candidate_id": "fenix_open-127",
+            "title_observed": "PREFEITURA MUNICIPAL DE GLICÉRIO",
+            "detail_url_observed": "https://portal.fenix.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:43:07.554587Z",
+            "source": "fenix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.fenix.selecao.site/edital/ver/127",
+              "file": "fenix_open-cycle2-detail-feca096ed3.html",
+              "sha256": "1806bbc189216418a9708ef0d8ab62ea50c92571649fc417fbeab5701aee270d",
+              "bytes": 30414,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:15.748710+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fenix_open-doc-42a1ee32484d237b",
+            "title": "EDITAL DE ABERTURA",
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA' por conter 'edital' no título/URL; 6 documento(s) ignorado(s) (ex.: RESULTADO FINAL; DECRETO DE HOMOLOGAÇÃO; RESULTADO PARICAL; GABARITO; HOMOLOGAÇÃO DOS INSCRITOS)."
+          },
+          "artifact": {
+            "artifact_id": "art-3f1afeaf5a",
+            "sha256": "e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194",
+            "byte_len": 395103,
+            "url_requested": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "url_final": "https://cdn-fenix.selecao.site/edital/1/127/fdbf31fbcb35ed37a055ddaf3b8efabf.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:17.145341Z",
+            "storage_path": "art-3f1afeaf5a-e096affaf32d36f64b86e230528a0f9b85996fe88e6eaa24ad363795c122f194.pdf"
+          },
+          "total_pages": 15,
+          "processed_pages": 15,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=15/15",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 13.563
+    },
+    {
+      "source": "legalle_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-16937b0cd84b",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.editais.legalleconcursos.com.br/edital",
+          "file": "legalle_open-cycle2-listing-59597f5ef7.html",
+          "sha256": "b86240ecd0051b8b9a06d1edfdd315bc62fe108e27e5e401f680436572b4d047",
+          "bytes": 877087,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:43:19.574432+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-86048cfe6f00",
+          "candidate": {
+            "candidate_id": "legalle_open-2557",
+            "title_observed": "Município de Relvado",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+            "external_id": "2557",
+            "observed_at": "2026-09-07T23:43:22.465542Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+              "file": "legalle_open-cycle2-detail-8b6460529c.html",
+              "sha256": "419121d4ec1bb656a37b9dddc64a1bc7a9afe8ff31fa435f0fdb58b6c94df339",
+              "bytes": 43336,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:23.314550+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legalle_open-doc-b173c7c865c50792",
+            "title": "Edital de Abertura e Inscrições",
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura e Inscrições' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-a847147b2d",
+            "sha256": "1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4",
+            "byte_len": 658738,
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2557/36cdf58c0636416345eed85237af7977.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:23.613272Z",
+            "storage_path": "art-a847147b2d-1a7b5adca6f9c6909f919603148d42291ea2bcc91611fc42952e5b5cac21a2b4.pdf"
+          },
+          "total_pages": 32,
+          "processed_pages": 32,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=32/32",
+              "titulo_corroborado=2/2"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-9d760cbea6cd",
+          "candidate": {
+            "candidate_id": "legalle_open-2548",
+            "title_observed": "Câmara Municipal de Vereadores de Capão do Leão",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2548",
+            "external_id": "2548",
+            "observed_at": "2026-09-07T23:43:22.465542Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2548",
+              "file": "legalle_open-cycle2-detail-069eb6b1fa.html",
+              "sha256": "ac959b8bf77033c96e79ab5df5a5936a5f5376dc66dfc2c64f88f190b1cabdc3",
+              "bytes": 38125,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:27.881462+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-240eac118702",
+          "candidate": {
+            "candidate_id": "legalle_open-2556",
+            "title_observed": "Município de Francisco Alves",
+            "detail_url_observed": "https://portal.editais.legalleconcursos.com.br/edital/ver/2556",
+            "external_id": "2556",
+            "observed_at": "2026-09-07T23:43:22.465542Z",
+            "source": "legalle_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2556",
+              "file": "legalle_open-cycle2-detail-5413d87ef4.html",
+              "sha256": "af3ef7a91611f6980953f7ec6bca8f8affcc830ec848f6761f4c4241766d8779",
+              "bytes": 40636,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:28.596214+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legalle_open-doc-66bd8f2ad728dab7",
+            "title": "Edital de Abertura e Inscrições",
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura e Inscrições' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-40f9dd5aeb",
+            "sha256": "62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4",
+            "byte_len": 627364,
+            "url_requested": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn.legalle.com.br/edital/1/2556/877ca29781c6aed0b6da42a70f0116e8.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:28.924078Z",
+            "storage_path": "art-40f9dd5aeb-62e541d5e0b53ccda33f7aca69ccb47059511ab86d521647530944d7cce4b2c4.pdf"
+          },
+          "total_pages": 30,
+          "processed_pages": 30,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=30/30",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 13.312
+    },
+    {
+      "source": "fgv_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-179bb50f6ddd",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://conhecimento.fgv.br/concursos?page=0",
+          "https://conhecimento.fgv.br/concursos?page=1",
+          "https://conhecimento.fgv.br/concursos?page=2",
+          "https://conhecimento.fgv.br/concursos?page=3",
+          "https://conhecimento.fgv.br/concursos?page=4",
+          "https://conhecimento.fgv.br/concursos?page=5",
+          "https://conhecimento.fgv.br/concursos?page=6",
+          "https://conhecimento.fgv.br/concursos?page=7",
+          "https://conhecimento.fgv.br/concursos?page=8",
+          "https://conhecimento.fgv.br/concursos?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://conhecimento.fgv.br/concursos",
+          "file": "fgv_open-cycle2-listing-3cf2755f8f.html",
+          "sha256": "bed604f3740ab5f10a07580601a8f39fd91d3725daa0d621ab93bbc75ab2a521",
+          "bytes": 51683,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:43:32.587023+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-cd3ac87838ac",
+          "candidate": {
+            "candidate_id": "fgv_open-seplagrj",
+            "title_observed": "Concurso Público para Secretaria de Planejamento e Gestão do Estado do Rio de Janeiro – SEPLAG/RJ",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/seplagrj",
+            "external_id": "seplagrj",
+            "observed_at": "2026-09-07T23:43:32.696250Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/seplagrj",
+              "file": "fgv_open-cycle2-detail-701fd699d0.html",
+              "sha256": "bb7ad0615bab422205930c7b62df752d4e628ad7bd03c1534825c4a04ca18480",
+              "bytes": 30896,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:33.257651+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-c3dc01fec63f",
+          "candidate": {
+            "candidate_id": "fgv_open-seducpa26",
+            "title_observed": "Concurso Público para a Secretaria de Estado de Planejamento e Administração e a Secretaria de Estado de Educação do Pará",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/seducpa26",
+            "external_id": "seducpa26",
+            "observed_at": "2026-09-07T23:43:32.697249Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/seducpa26",
+              "file": "fgv_open-cycle2-detail-aba2db7300.html",
+              "sha256": "4e5d09481c54451d6e6795a734c86e47e0031a4b194a113432fa3851ba70f551",
+              "bytes": 31232,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:33.799611+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fgv_open-doc-aaef9cf56eb9df0c",
+            "title": "Edital",
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-46aec28f12",
+            "sha256": "c349be0bcdc09ad4f3ea951737fb71399bdb04996a11aea9da3c3ef1c0c2f605",
+            "byte_len": 1298333,
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-no-001-de-28.08.2026-doe-no-36.749-de-31.08.2026-abertura-seduc.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:33.953504Z",
+            "storage_path": "art-46aec28f12-c349be0bcdc09ad4f3ea951737fb71399bdb04996a11aea9da3c3ef1c0c2f605.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-55bd867485a2",
+          "candidate": {
+            "candidate_id": "fgv_open-tjrsjuiz26",
+            "title_observed": "Concurso Público para o Tribunal de Justiça do Estado do Rio Grande do Sul - Juiz Substituto",
+            "detail_url_observed": "https://conhecimento.fgv.br/concursos/tjrsjuiz26",
+            "external_id": "tjrsjuiz26",
+            "observed_at": "2026-09-07T23:43:32.697249Z",
+            "source": "fgv_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://conhecimento.fgv.br/concursos/tjrsjuiz26",
+              "file": "fgv_open-cycle2-detail-a11db0e26b.html",
+              "sha256": "0d80b775a3d00b0dc347677ebeae2db998f2daea4cae7133a32c3bafc527a503",
+              "bytes": 29216,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:35.039230+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fgv_open-doc-37686888a5d04c65",
+            "title": "Edital",
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-d5dd661097",
+            "sha256": "34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0",
+            "byte_len": 399923,
+            "url_requested": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "url_final": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-de-abertura-0031-2026-dmag.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:43:35.156326Z",
+            "storage_path": "art-d5dd661097-34139196623f1ee5c3cdd36143007696c2352e835d0da8b8f00a5f536b1604c0.pdf"
+          },
+          "total_pages": 53,
+          "processed_pages": 53,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=53/53",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 11.672
+    },
+    {
+      "source": "funcern_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-0344b47227b3",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funcern.br/concursos/?page=2",
+          "https://funcern.br/concursos/?page=3",
+          "https://funcern.br/concursos/?page=12",
+          "https://funcern.br/concursos/?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funcern.br/concursos/",
+          "file": "funcern_selection-cycle2-listing-8e3848a75b.html",
+          "sha256": "9b5ad673aff5c4de8708303d3ad9da20cb8d35e03411f001d83ff796a07c50df",
+          "bytes": 50144,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:43:44.965767+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f7bba42e5252",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-equador-2026",
+            "title_observed": "Concurso Público Município de Equador/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-equador-2026/",
+            "external_id": "concurso-equador-2026",
+            "observed_at": "2026-09-07T23:43:45.382982Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-equador-2026/",
+              "file": "funcern_selection-cycle2-detail-3e5aa197dc.html",
+              "sha256": "f78e3222c473c5c3d4395dc39c2fdc349e6b5a8ccff252468a551a12f7cbd77d",
+              "bytes": 43840,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:46.305864+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ed5b649dcf64",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-lagoa-de-pedras-2026",
+            "title_observed": "Concurso Público Lagoa de Pedras/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+            "external_id": "concurso-lagoa-de-pedras-2026",
+            "observed_at": "2026-09-07T23:43:45.383984Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "DestinationBlocked: host fora da allowlist: nyc3.digitaloceanspaces.com",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+              "file": "funcern_selection-cycle2-detail-30ab2162d5.html",
+              "sha256": "ec18d8679b33c1c442a2c0837b4b26bf2a3b21c890e52e13ff7bf63e48a08deb",
+              "bytes": 42965,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:43:47.196623+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 3.625
+    }
+  ]
+}

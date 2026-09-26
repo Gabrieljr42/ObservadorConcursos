@@ -1,0 +1,14 @@
+{
+  "schema": "t012.fafipa.parser-proposal-r13.v1",
+  "source": "fafipa_open",
+  "source_id": 69,
+  "external_id": "4208",
+  "module": "backend/app/tenderproof/fafipa_t012_r4.py",
+  "change_scope": "source-specific parser only",
+  "contract": "Emit the same 14 cargo-specific Evidence records used by reviewed-envelope-ready-r9.json; preserve the existing seven field values and all artifact pins.",
+  "cargo_shape": {"value_count": 14, "evidence_count": 14, "pages": [2, 3], "evidence_fields": ["artifact_id", "document_sha256", "source_url", "page_number", "snippet"]},
+  "guards": ["source/external pin", "artifact SHA/byte length/URLs", "strong PDF preflight", "page exists and is not error/truncated", "literal snippet exact match", "U+FFFD rejection", "cargo evidence cardinality equals 14"],
+  "semantic_change": "The cargo values do not change; only evidence shape changes from one aggregate table-header snippet to 14 exact cargo snippets.",
+  "run_identity": "A new ReviewedRun/run_id is not intrinsically required by the semantic correction: _run_id excludes evidence_id and keeps the same source/owner/target/external/artifact/field values. Regenerate a run/receipt only if the integrator records parser method/version or evidence snippets in the run identity; never reuse the stale live run blindly.",
+  "no_live": true
+}

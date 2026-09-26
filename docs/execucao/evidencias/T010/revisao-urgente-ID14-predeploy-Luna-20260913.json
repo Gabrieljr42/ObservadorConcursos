@@ -1,0 +1,54 @@
+{
+  "schema": "t010.id14.predeploy-independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "offline_read_only",
+  "decision": "LIBERA_DEPLOY; BLOQUEIA_IMPORT_PROPOSTA_ATUAL",
+  "provenance": {
+    "source": "fapese_selection",
+    "external_id": "007/2026",
+    "concurso_id": 14,
+    "artifact_id": "art-2addf5fed2",
+    "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+    "bytes": 345974,
+    "pages": 17,
+    "run_id": "tp-reviewed-6581e9efd4f0a48f202d390b7ddf7b73",
+    "reference_only": true
+  },
+  "parser_audit": {
+    "module": "backend/app/tenderproof/fapese_pronera_parser.py",
+    "fields_route": "integrated in fields.py for fapese_selection/007/2026",
+    "tests": "10 passed: ID14 + ID8 regression + T005 regression",
+    "cargo_count": 2,
+    "roles": ["Articulador(a) político-pedagógico", "Técnico de apoio"],
+    "role_evidence": ["p.3 item 2.4.1 / p.4 item 2.4.2", "qualification p.3 items 2.2.1/2.2.2", "remuneration p.5 items 3.2.1/3.2.2"],
+    "service_model": "PF/autônomo, cadastro reserva; no employment vacancy or monthly salary invented",
+    "remuneration": {"articulador": "R$60/hora efetivamente prestada, por etapa", "tecnico": "limite R$7.488 por etapa/período, não mensal"},
+    "vagas": {"imediatas": null, "cadastro_reserva": true, "pcd": null},
+    "inscricoes": {"start": "2026-09-07", "end": "2026-09-14", "current_catalogue_already_same": true},
+    "pending": ["quantidade de oportunidades", "entrevista_data"],
+    "u_fffd": 0
+  },
+  "catalogue_get": {
+    "orgao_current": "FUNDAÇÃO DE APOIO À PESQUISA E EXTENSÃO DE SERGIPE (FAPESE)",
+    "edital_current": "007/2026",
+    "inscricoes_current": ["2026-09-07T00:00:00Z", "2026-09-14T00:00:00Z"],
+    "cargos_current": null,
+    "prova_data_current": null
+  },
+  "isolated_receipt_audit": {
+    "proposal_id": "tpp-d24cad2cba3fac09662b7509409a7e27",
+    "state": "proposed_disposable_only",
+    "reported_eligible": ["orgao", "edital_numero", "prova_data", "cargos"],
+    "baseline_identity": "orgao/edital already canonical in pilot; inscription dates already equal",
+    "finding": "A elegibilidade reportada é excessiva/fixture de identidade: não autorizar casing/órgão overwrite, edital já coincide e prova_data permanece pending/null. O envelope mínimo de dispatch deve conter somente cargos.",
+    "mutated": false
+  },
+  "release": {
+    "deploy_code": "LIBERA após smoke-check, sem alterar o parser",
+    "import_proposal": "BLOQUEIA o receipt atual; liberar somente após nova revalidação descartável com eligible_fields=[cargos], baseline identity/inscrições preservados e pending fields mantidos",
+    "approve_apply": "bloqueados",
+    "next_gate": "regenerar/revalidar proposta mínima cargos-only e revisão independente; não promover quantidade/entrevista"
+  },
+  "mutation": "none"
+}

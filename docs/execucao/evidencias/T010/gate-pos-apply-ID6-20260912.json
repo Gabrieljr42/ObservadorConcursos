@@ -1,0 +1,41 @@
+{
+  "schema": "t010.id6.post-apply.v1",
+  "recorded_at": "2026-09-12T21:55:08-03:00",
+  "proposal": {
+    "id": "tpp-b47411064f1b447b5a6f519c5b925f42",
+    "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "proposal_hash": "8655bd498afcfa7d51e2c3f0e930f3178420d8446edbf7e919eddcfd593114a9",
+    "precondition": {"state": "proposed", "baseline_cargos": null, "proposed_cargos_rows": 11, "eligible_fields": ["cargos"]},
+    "approve": {"http": 200, "fields": ["cargos"], "approved_by": 1},
+    "apply": {"http": 200, "state": "applied", "version_id": 83, "version_count_for_concurso_6": 1}
+  },
+  "counts": {
+    "before": {"versions": 82, "outbox": 82, "notifications": 81, "proposals": 85},
+    "after_first_apply": {"versions": 83, "outbox": 83, "notifications": 82, "proposals": 85},
+    "after_replays": {"versions": 83, "outbox": 83, "notifications": 82, "proposals": 85}
+  },
+  "delivery": {
+    "outbox_id": 83,
+    "outbox_version_id": 83,
+    "outbox_state": "delivered",
+    "outbox_attempts": 1,
+    "notification_id": 82,
+    "notification_type": "version_update_83",
+    "notification_concurso_id": 6
+  },
+  "read_only_validation": {
+    "health": 200,
+    "concurso_id": 6,
+    "cargos": 11,
+    "proposal_final_state": "applied",
+    "proposal_final_version_id": 83,
+    "duplicate_version": false,
+    "duplicate_outbox": false
+  },
+  "replays": {
+    "same_proposal_apply": {"http": 200, "state": "applied", "version_id": 83, "new_version": false, "new_outbox": false, "new_notification": false},
+    "same_run_import": {"status": "idempotent", "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18", "new_proposal": false, "new_version": false, "new_outbox": false},
+    "other_records_touched": false
+  },
+  "central_docs": "not edited; awaiting post-apply review"
+}

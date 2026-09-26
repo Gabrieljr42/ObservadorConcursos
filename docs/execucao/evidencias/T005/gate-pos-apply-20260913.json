@@ -1,0 +1,11 @@
+{
+  "schema": "observador.t005.pos_apply.v1",
+  "recorded_at": "2026-09-13T01:23:17.5749965-03:00",
+  "scope": "T005 concurso32 only; ID8 and ID16 untouched",
+  "proposal": {"id": "tpp-661ba4a83c24df189bacd60e15ffe029", "hash": "6684fa331adfd23a565300785b44f32ba9f20c0c9e41f5cfaeb8af892fefacf0", "baseline_cargos": null, "approved_fields": ["cargos"], "final_state": "applied", "version_id": 89},
+  "apply": {"first_http": 200, "replay_http": 200, "replay_same_version": true, "replay_new_version": false, "replay_new_outbox": false, "replay_new_notification": false},
+  "counts": {"before": {"proposals": 92, "versions": 88, "outbox": 88, "notifications": 87}, "after": {"proposals": 92, "versions": 89, "outbox": 89, "notifications": 88}},
+  "receipts": {"outbox": {"id": 89, "version_id": 89, "state": "delivered", "attempts": 1}, "notification": {"id": 88, "concurso_id": 32, "notification_type": "version_update_89"}},
+  "contest32_api": {"cargo_count": 7, "total_vagas_imediatas": 7, "all_vagas_ampla_concorrencia": 1, "all_vagas_pcd": 0, "all_cadastro_reserva": null, "remuneracao": "3242.00", "remuneracao_observacao": "R$/mês", "jornada": "40h/semana", "taxa_inscricao": "162.10", "prova_data": "2026-10-18T00:00:00Z", "microareas": ["03", "04", "05", "07", "09", "12", "15"], "requisitos_present": true},
+  "gate": "PASS; aguardando UI/revisão final"
+}

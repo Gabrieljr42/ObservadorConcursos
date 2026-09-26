@@ -1,0 +1,2466 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<!DOCTYPE html>
+<!-- Atualizacao: 26/08/2026 - 14:25 -->
+
+		<!-- S: 2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Liferay 7 with freemarker -->
+
+
+<html class="ltr" dir="ltr" lang="pt-BR" prefix="og: https://ogp.me/ns#">
+
+	<head>
+		<title>
+FAPEMAT</title>
+		<meta property="og:title" content="FAPEMAT" />
+
+
+
+		
+		
+			<meta name="adopt-website-id" content="b0de1abc-876b-4631-8231-2cf4897a788e" />
+			<script src="//tag.goadopt.io/injector.js?website_code=b0de1abc-876b-4631-8231-2cf4897a788e" class="adopt-injector"></script>
+
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="importmap">{"imports":{"@clayui/breadcrumb":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$breadcrumb.js","@clayui/form":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$form.js","react-dom":"/o/frontend-js-react-web/__liferay__/exports/react-dom.js","@clayui/popover":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$popover.js","@clayui/charts":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$charts.js","@clayui/shared":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$shared.js","@clayui/localized-input":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$localized-input.js","@clayui/modal":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$modal.js","@clayui/empty-state":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$empty-state.js","@clayui/color-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$color-picker.js","@clayui/navigation-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$navigation-bar.js","react":"/o/frontend-js-react-web/__liferay__/exports/react.js","@clayui/pagination":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination.js","@clayui/icon":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js","@clayui/table":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$table.js","@clayui/autocomplete":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$autocomplete.js","@clayui/slider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$slider.js","@clayui/management-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$management-toolbar.js","@clayui/multi-select":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-select.js","@clayui/nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$nav.js","@clayui/time-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$time-picker.js","@clayui/provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$provider.js","@clayui/upper-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$upper-toolbar.js","@clayui/loading-indicator":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js","@clayui/panel":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$panel.js","@clayui/drop-down":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$drop-down.js","@clayui/list":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$list.js","@clayui/date-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$date-picker.js","@clayui/label":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$label.js","@clayui/data-provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$data-provider.js","@liferay/frontend-js-api/data-set":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api$data-set.js","@clayui/core":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$core.js","@clayui/pagination-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination-bar.js","@clayui/layout":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$layout.js","@clayui/multi-step-nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-step-nav.js","@liferay/frontend-js-api":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api.js","@clayui/css":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$css.js","@clayui/toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$toolbar.js","@clayui/alert":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$alert.js","@clayui/badge":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$badge.js","@clayui/link":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$link.js","@clayui/card":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$card.js","@clayui/progress-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$progress-bar.js","@clayui/tooltip":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tooltip.js","@clayui/button":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$button.js","@clayui/tabs":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tabs.js","@clayui/sticker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$sticker.js"},"scopes":{}}</script><script data-senna-track="temporary">var Liferay = window.Liferay || {};Liferay.Icons = Liferay.Icons || {};Liferay.Icons.controlPanelSpritemap = 'https://www.fapemat.mt.gov.br/o/admin-theme/images/clay/icons.svg';Liferay.Icons.spritemap = 'https://www.fapemat.mt.gov.br/o/mt-portal-theme/images/clay/icons.svg';</script>
+<script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=pt_BR&t=1786999844604&/o/frontend-js-jquery-web/jquery/jquery.min.js&/o/frontend-js-jquery-web/jquery/init.js&/o/frontend-js-jquery-web/jquery/ajax.js&/o/frontend-js-jquery-web/jquery/bootstrap.bundle.min.js&/o/frontend-js-jquery-web/jquery/collapsible_search.js&/o/frontend-js-jquery-web/jquery/fm.js&/o/frontend-js-jquery-web/jquery/form.js&/o/frontend-js-jquery-web/jquery/popper.min.js&/o/frontend-js-jquery-web/jquery/side_navigation.js" type="text/javascript"></script>
+<script data-senna-track="permanent" type="text/javascript">window.Liferay = window.Liferay || {}; window.Liferay.CSP = {nonce: ''};</script>
+<link data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/editais_1" rel="canonical" />
+<link data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/en/editais_1" hreflang="en-US" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/editais_1" hreflang="pt-BR" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/editais_1" hreflang="x-default" rel="alternate" />
+
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="FAPEMAT">
+<meta property="og:title" content="Editais - FAPEMAT - Site">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.fapemat.mt.gov.br/editais_1">
+
+
+<link href="https://www.fapemat.mt.gov.br/o/mt-portal-theme/images/favicon.ico" rel="apple-touch-icon" />
+<link href="https://www.fapemat.mt.gov.br/o/mt-portal-theme/images/favicon.ico" rel="icon" />
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/o/mt-portal-theme/css/clay.css?browserId=other&amp;themeId=mtportaltheme_WAR_mtportaltheme&amp;minifierType=css&amp;languageId=pt_BR&amp;t=1787840282000" id="liferayAUICSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	<link href="/combo?browserId=other&amp;minifierType=css&amp;themeId=mtportaltheme_WAR_mtportaltheme&amp;languageId=pt_BR&amp;com_liferay_portal_search_web_portlet_SearchPortlet:%2Fo%2Fportal-search-web%2Fcss%2Fmain.css&amp;com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet:%2Fo%2Fproduct-navigation-product-menu-web%2Fcss%2Fmain.css&amp;com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet:%2Fo%2Fproduct-navigation-user-personal-bar-web%2Fcss%2Fmain.css&amp;t=1787840282000" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="c347a851" />
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		var Liferay = Liferay || {};
+
+		Liferay.Browser = {
+			acceptsGzip: function() {
+				return true;
+			},
+
+			
+
+			getMajorVersion: function() {
+				return 0;
+			},
+
+			getRevision: function() {
+				return '';
+			},
+			getVersion: function() {
+				return '';
+			},
+
+			
+
+			isAir: function() {
+				return false;
+			},
+			isChrome: function() {
+				return false;
+			},
+			isEdge: function() {
+				return false;
+			},
+			isFirefox: function() {
+				return false;
+			},
+			isGecko: function() {
+				return false;
+			},
+			isIe: function() {
+				return false;
+			},
+			isIphone: function() {
+				return false;
+			},
+			isLinux: function() {
+				return false;
+			},
+			isMac: function() {
+				return false;
+			},
+			isMobile: function() {
+				return false;
+			},
+			isMozilla: function() {
+				return false;
+			},
+			isOpera: function() {
+				return false;
+			},
+			isRtf: function() {
+				return false;
+			},
+			isSafari: function() {
+				return false;
+			},
+			isSun: function() {
+				return false;
+			},
+			isWebKit: function() {
+				return false;
+			},
+			isWindows: function() {
+				return false;
+			}
+		};
+
+		Liferay.Data = Liferay.Data || {};
+
+		Liferay.Data.ICONS_INLINE_SVG = true;
+
+		Liferay.Data.NAV_SELECTOR = '#navigation';
+
+		Liferay.Data.NAV_SELECTOR_MOBILE = '#navigationCollapse';
+
+		Liferay.Data.isCustomizationView = function() {
+			return false;
+		};
+
+		Liferay.Data.notices = [
+			
+		];
+
+		(function () {
+			var available = {};
+
+			var direction = {};
+
+			
+
+				available['pt_BR'] = 'português\x20\x28Brasil\x29';
+				direction['pt_BR'] = 'ltr';
+
+			
+
+				available['en_US'] = 'inglês\x20\x28Estados\x20Unidos\x29';
+				direction['en_US'] = 'ltr';
+
+			
+
+			Liferay.Language = {
+				available,
+				direction,
+				get: function(key) {
+					return key;
+				}
+			};
+		})();
+
+		var featureFlags = {"LPD-11018":false,"LPS-193884":false,"LPS-178642":false,"LPS-193005":false,"LPS-187284":false,"LPS-187285":false,"LPS-114786":false,"LPS-192957":false,"COMMERCE-8087":true,"LRAC-10757":false,"LPS-180090":false,"LPS-170809":false,"LPS-178052":false,"LPS-189856":false,"LPS-187436":false,"LPS-182184":false,"LPS-185892":false,"LPS-186620":false,"COMMERCE-12754":false,"LPS-184404":false,"LPS-180328":false,"LPS-198183":false,"LPS-171364":false,"LPS-153714":false,"LPS-96845":false,"LPS-170670":false,"LPS-141392":false,"LPS-169981":false,"LPD-15804":false,"LPS-153839":false,"LPS-200135":false,"LPS-187793":false,"LPS-177027":false,"LPD-10793":false,"COMMERCE-12192":false,"LPD-11003":false,"LPS-196768":false,"LPS-196724":false,"LPS-196847":false,"LPS-163118":false,"LPS-114700":false,"LPS-135430":false,"LPS-134060":false,"LPS-164563":false,"LPS-122920":false,"LPS-203351":false,"LPS-194395":false,"LPD-6368":false,"LPD-10701":false,"LPS-202104":false,"COMMERCE-9599":false,"LPS-187142":false,"LPD-15596":false,"LPS-198959":false,"LPS-196935":true,"LPS-187854":false,"LPS-176691":false,"LPS-197909":false,"LPS-202534":false,"COMMERCE-8949":false,"COMMERCE-11922":false,"LPS-194362":false,"LPS-165481":false,"LPS-153813":false,"LPS-174455":false,"LPD-10735":false,"COMMERCE-13024":false,"LPS-194763":false,"LPS-165482":false,"LPS-193551":false,"LPS-197477":false,"LPS-174816":false,"LPS-186360":false,"LPS-153332":false,"COMMERCE-12170":false,"LPS-179669":false,"LPS-174417":false,"LPS-183882":false,"LPS-155284":false,"LRAC-15017":false,"LPS-200108":false,"LPS-159643":false,"LPS-161033":false,"LPS-164948":false,"LPS-186870":false,"LPS-186871":false,"LPS-188058":false,"LPS-129412":false,"LPS-166126":false,"LPS-169837":false};
+
+		Liferay.FeatureFlags = Object.keys(featureFlags).reduce(
+			(acc, key) => ({
+				...acc, [key]: featureFlags[key] === 'true' || featureFlags[key] === true
+			}), {}
+		);
+
+		Liferay.PortletKeys = {
+			DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+			DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+			ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet'
+		};
+
+		Liferay.PropsValues = {
+			JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+			UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 99999999999
+		};
+
+		Liferay.ThemeDisplay = {
+
+			
+
+			
+				getLayoutId: function() {
+					return '139';
+				},
+
+				
+
+				getLayoutRelativeControlPanelURL: function() {
+					return '/group/fapemat/~/control_panel/manage';
+				},
+
+				getLayoutRelativeURL: function() {
+					return '/editais_1';
+				},
+				getLayoutURL: function() {
+					return 'https://www.fapemat.mt.gov.br/editais_1';
+				},
+				getParentLayoutId: function() {
+					return '0';
+				},
+				isControlPanel: function() {
+					return false;
+				},
+				isPrivateLayout: function() {
+					return 'false';
+				},
+				isVirtualLayout: function() {
+					return false;
+				},
+			
+
+			getBCP47LanguageId: function() {
+				return 'pt-BR';
+			},
+			getCanonicalURL: function() {
+
+				
+
+				return 'https\x3a\x2f\x2fwww\x2efapemat\x2emt\x2egov\x2ebr\x2feditais_1';
+			},
+			getCDNBaseURL: function() {
+				return 'https://www.fapemat.mt.gov.br';
+			},
+			getCDNDynamicResourcesHost: function() {
+				return '';
+			},
+			getCDNHost: function() {
+				return '';
+			},
+			getCompanyGroupId: function() {
+				return '20194';
+			},
+			getCompanyId: function() {
+				return '20154';
+			},
+			getDefaultLanguageId: function() {
+				return 'pt_BR';
+			},
+			getDoAsUserIdEncoded: function() {
+				return '';
+			},
+			getLanguageId: function() {
+				return 'pt_BR';
+			},
+			getParentGroupId: function() {
+				return '363786';
+			},
+			getPathContext: function() {
+				return '';
+			},
+			getPathImage: function() {
+				return '/image';
+			},
+			getPathJavaScript: function() {
+				return '/o/frontend-js-web';
+			},
+			getPathMain: function() {
+				return '/c';
+			},
+			getPathThemeImages: function() {
+				return 'https://www.fapemat.mt.gov.br/o/mt-portal-theme/images';
+			},
+			getPathThemeRoot: function() {
+				return '/o/mt-portal-theme';
+			},
+			getPlid: function() {
+				return '23613062';
+			},
+			getPortalURL: function() {
+				return 'https://www.fapemat.mt.gov.br';
+			},
+			getRealUserId: function() {
+				return '20158';
+			},
+			getRemoteAddr: function() {
+				return '192.168.200.230';
+			},
+			getRemoteHost: function() {
+				return '192.168.200.230';
+			},
+			getScopeGroupId: function() {
+				return '363786';
+			},
+			getScopeGroupIdOrLiveGroupId: function() {
+				return '363786';
+			},
+			getSessionId: function() {
+				return '';
+			},
+			getSiteAdminURL: function() {
+				return 'https://www.fapemat.mt.gov.br/group/fapemat/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view';
+			},
+			getSiteGroupId: function() {
+				return '363786';
+			},
+			getURLControlPanel: function() {
+				return '/group/control_panel?refererPlid=23613062';
+			},
+			getURLHome: function() {
+				return 'https\x3a\x2f\x2fwww\x2efapemat\x2emt\x2egov\x2ebr\x2fweb\x2fguest';
+			},
+			getUserEmailAddress: function() {
+				return '';
+			},
+			getUserId: function() {
+				return '20158';
+			},
+			getUserName: function() {
+				return '';
+			},
+			isAddSessionIdToURL: function() {
+				return false;
+			},
+			isImpersonated: function() {
+				return false;
+			},
+			isSignedIn: function() {
+				return false;
+			},
+
+			isStagedPortlet: function() {
+				
+					
+						return false;
+					
+				
+			},
+
+			isStateExclusive: function() {
+				return false;
+			},
+			isStateMaximized: function() {
+				return false;
+			},
+			isStatePopUp: function() {
+				return false;
+			}
+		};
+
+		var themeDisplay = Liferay.ThemeDisplay;
+
+		Liferay.AUI = {
+
+			
+
+			getCombine: function() {
+				return true;
+			},
+			getComboPath: function() {
+				return '/combo/?browserId=other&minifierType=&languageId=pt_BR&t=1786999811032&';
+			},
+			getDateFormat: function() {
+				return '%d/%m/%Y';
+			},
+			getEditorCKEditorPath: function() {
+				return '/o/frontend-editor-ckeditor-web';
+			},
+			getFilter: function() {
+				var filter = 'raw';
+
+				
+					
+						filter = 'min';
+					
+					
+
+				return filter;
+			},
+			getFilterConfig: function() {
+				var instance = this;
+
+				var filterConfig = null;
+
+				if (!instance.getCombine()) {
+					filterConfig = {
+						replaceStr: '.js' + instance.getStaticResourceURLParams(),
+						searchExp: '\\.js$'
+					};
+				}
+
+				return filterConfig;
+			},
+			getJavaScriptRootPath: function() {
+				return '/o/frontend-js-web';
+			},
+			getPortletRootPath: function() {
+				return '/html/portlet';
+			},
+			getStaticResourceURLParams: function() {
+				return '?browserId=other&minifierType=&languageId=pt_BR&t=1786999811032';
+			}
+		};
+
+		Liferay.authToken = 'AlkFOH1P';
+
+		
+
+		Liferay.currentURL = '\x2feditais_1';
+		Liferay.currentURLEncoded = '\x252Feditais_1';
+	// ]]>
+</script>
+
+<script data-senna-track="temporary" type="text/javascript">window.__CONFIG__= {basePath: '',combine: true, defaultURLParams: null, explainResolutions: false, exposeGlobal: false, logLevel: 'warn', moduleType: 'module', namespace:'Liferay', nonce: '', reportMismatchedAnonymousModules: 'warn', resolvePath: '/o/js_resolve_modules', url: '/combo/?browserId=other&minifierType=js&languageId=pt_BR&t=1786999811032&', waitTimeout: 60000};</script><script data-senna-track="permanent" src="/o/frontend-js-loader-modules-extender/loader.js?&mac=9WaMmhziBCkScHZwrrVcOR7VZF4=&browserId=other&languageId=pt_BR&minifierType=js" type="text/javascript"></script><script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=pt_BR&t=1786999811032&/o/frontend-js-aui-web/aui/aui/aui-min.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base-min.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex-min.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core-min.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable-min.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras-min.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base-min.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex-min.js&/o/frontend-js-aui-web/aui/oop/oop-min.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang-min.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/oauth2-provider-web/js/liferay.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js" type="text/javascript"></script>
+<script data-senna-track="temporary" type="text/javascript">window.Liferay = Liferay || {}; window.Liferay.OAuth2 = {getAuthorizeURL: function() {return 'https://www.fapemat.mt.gov.br/o/oauth2/authorize';}, getBuiltInRedirectURL: function() {return 'https://www.fapemat.mt.gov.br/o/oauth2/redirect';}, getIntrospectURL: function() { return 'https://www.fapemat.mt.gov.br/o/oauth2/introspect';}, getTokenURL: function() {return 'https://www.fapemat.mt.gov.br/o/oauth2/token';}, getUserAgentApplication: function(externalReferenceCode) {return Liferay.OAuth2._userAgentApplications[externalReferenceCode];}, _userAgentApplications: {}}</script><script data-senna-track="temporary" type="text/javascript">try {var MODULE_MAIN='calendar-web@5.0.89/index';var MODULE_PATH='/o/calendar-web';AUI().applyConfig({groups:{calendar:{base:MODULE_PATH+"/js/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-calendar-a11y":{path:"calendar_a11y.js",requires:["calendar"]},"liferay-calendar-container":{path:"calendar_container.js",requires:["aui-alert","aui-base","aui-component","liferay-portlet-base"]},"liferay-calendar-date-picker-sanitizer":{path:"date_picker_sanitizer.js",requires:["aui-base"]},"liferay-calendar-interval-selector":{path:"interval_selector.js",requires:["aui-base","liferay-portlet-base"]},"liferay-calendar-interval-selector-scheduler-event-link":{path:"interval_selector_scheduler_event_link.js",requires:["aui-base","liferay-portlet-base"]},"liferay-calendar-list":{path:"calendar_list.js",requires:["aui-template-deprecated","liferay-scheduler"]},"liferay-calendar-message-util":{path:"message_util.js",requires:["liferay-util-window"]},"liferay-calendar-recurrence-converter":{path:"recurrence_converter.js",requires:[]},"liferay-calendar-recurrence-dialog":{path:"recurrence.js",requires:["aui-base","liferay-calendar-recurrence-util"]},"liferay-calendar-recurrence-util":{path:"recurrence_util.js",requires:["aui-base","liferay-util-window"]},"liferay-calendar-reminders":{path:"calendar_reminders.js",requires:["aui-base"]},"liferay-calendar-remote-services":{path:"remote_services.js",requires:["aui-base","aui-component","liferay-calendar-util","liferay-portlet-base"]},"liferay-calendar-session-listener":{path:"session_listener.js",requires:["aui-base","liferay-scheduler"]},"liferay-calendar-simple-color-picker":{path:"simple_color_picker.js",requires:["aui-base","aui-template-deprecated"]},"liferay-calendar-simple-menu":{path:"simple_menu.js",requires:["aui-base","aui-template-deprecated","event-outside","event-touch","widget-modality","widget-position","widget-position-align","widget-position-constrain","widget-stack","widget-stdmod"]},"liferay-calendar-util":{path:"calendar_util.js",requires:["aui-datatype","aui-io","aui-scheduler","aui-toolbar","autocomplete","autocomplete-highlighters"]},"liferay-scheduler":{path:"scheduler.js",requires:["async-queue","aui-datatype","aui-scheduler","dd-plugin","liferay-calendar-a11y","liferay-calendar-message-util","liferay-calendar-recurrence-converter","liferay-calendar-recurrence-util","liferay-calendar-util","liferay-scheduler-event-recorder","liferay-scheduler-models","promise","resize-plugin"]},"liferay-scheduler-event-recorder":{path:"scheduler_event_recorder.js",requires:["dd-plugin","liferay-calendar-util","resize-plugin"]},"liferay-scheduler-models":{path:"scheduler_models.js",requires:["aui-datatype","dd-plugin","liferay-calendar-util"]}},root:MODULE_PATH+"/js/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-search-web@6.0.127/index';var MODULE_PATH='/o/portal-search-web';AUI().applyConfig({groups:{search:{base:MODULE_PATH+"/js/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-search-custom-filter":{path:"custom_filter.js",requires:[]},"liferay-search-date-facet":{path:"date_facet.js",requires:["aui-form-validator","liferay-search-facet-util"]},"liferay-search-facet-util":{path:"facet_util.js",requires:[]},"liferay-search-modified-facet":{path:"modified_facet.js",requires:["aui-form-validator","liferay-search-facet-util"]},"liferay-search-sort-configuration":{path:"sort_configuration.js",requires:["aui-node"]},"liferay-search-sort-util":{path:"sort_util.js",requires:[]}},root:MODULE_PATH+"/js/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-js-components-web@2.0.63/index';var MODULE_PATH='/o/frontend-js-components-web';AUI().applyConfig({groups:{components:{mainModule:MODULE_MAIN}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='staging-processes-web@5.0.55/index';var MODULE_PATH='/o/staging-processes-web';AUI().applyConfig({groups:{stagingprocessesweb:{base:MODULE_PATH+"/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-staging-processes-export-import":{path:"js/main.js",requires:["aui-datatype","aui-dialog-iframe-deprecated","aui-modal","aui-parse-content","aui-toggler","liferay-portlet-base","liferay-util-window"]}},root:MODULE_PATH+"/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-react-web@5.0.37/index';var MODULE_PATH='/o/frontend-js-react-web';AUI().applyConfig({groups:{react:{mainModule:MODULE_MAIN}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/document-library-web@6.0.177/document_library/js/index';var MODULE_PATH='/o/document-library-web';AUI().applyConfig({groups:{dl:{base:MODULE_PATH+"/document_library/js/legacy/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"document-library-upload-component":{path:"DocumentLibraryUpload.js",requires:["aui-component","aui-data-set-deprecated","aui-overlay-manager-deprecated","aui-overlay-mask-deprecated","aui-parse-content","aui-progressbar","aui-template-deprecated","liferay-search-container","querystring-parse-simple","uploader"]}},root:MODULE_PATH+"/document_library/js/legacy/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-state-web@1.0.20/index';var MODULE_PATH='/o/frontend-js-state-web';AUI().applyConfig({groups:{state:{mainModule:MODULE_MAIN}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='exportimport-web@5.0.83/index';var MODULE_PATH='/o/exportimport-web';AUI().applyConfig({groups:{exportimportweb:{base:MODULE_PATH+"/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-export-import-export-import":{path:"js/main.js",requires:["aui-datatype","aui-dialog-iframe-deprecated","aui-modal","aui-parse-content","aui-toggler","liferay-portlet-base","liferay-util-window"]}},root:MODULE_PATH+"/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-alloyeditor-web@5.0.46/index';var MODULE_PATH='/o/frontend-editor-alloyeditor-web';AUI().applyConfig({groups:{alloyeditor:{base:MODULE_PATH+"/js/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-alloy-editor":{path:"alloyeditor.js",requires:["aui-component","liferay-portlet-base","timers"]},"liferay-alloy-editor-source":{path:"alloyeditor_source.js",requires:["aui-debounce","liferay-fullscreen-source-editor","liferay-source-editor","plugin"]}},root:MODULE_PATH+"/js/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-workflow-kaleo-designer-web@5.0.125/index';var MODULE_PATH='/o/portal-workflow-kaleo-designer-web';AUI().applyConfig({groups:{"kaleo-designer":{base:MODULE_PATH+"/designer/js/legacy/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-kaleo-designer-autocomplete-util":{path:"autocomplete_util.js",requires:["autocomplete","autocomplete-highlighters"]},"liferay-kaleo-designer-definition-diagram-controller":{path:"definition_diagram_controller.js",requires:["liferay-kaleo-designer-field-normalizer","liferay-kaleo-designer-utils"]},"liferay-kaleo-designer-dialogs":{path:"dialogs.js",requires:["liferay-util-window"]},"liferay-kaleo-designer-editors":{path:"editors.js",requires:["aui-ace-editor","aui-ace-editor-mode-xml","aui-base","aui-datatype","aui-node","liferay-kaleo-designer-autocomplete-util","liferay-kaleo-designer-utils"]},"liferay-kaleo-designer-field-normalizer":{path:"field_normalizer.js",requires:["liferay-kaleo-designer-remote-services"]},"liferay-kaleo-designer-nodes":{path:"nodes.js",requires:["aui-datatable","aui-datatype","aui-diagram-builder","liferay-kaleo-designer-editors","liferay-kaleo-designer-utils"]},"liferay-kaleo-designer-remote-services":{path:"remote_services.js",requires:["aui-io"]},"liferay-kaleo-designer-templates":{path:"templates.js",requires:["aui-tpl-snippets-deprecated"]},"liferay-kaleo-designer-utils":{path:"utils.js",requires:[]},"liferay-kaleo-designer-xml-definition":{path:"xml_definition.js",requires:["aui-base","aui-component","dataschema-xml","datatype-xml"]},"liferay-kaleo-designer-xml-definition-serializer":{path:"xml_definition_serializer.js",requires:["escape","liferay-kaleo-designer-xml-util"]},"liferay-kaleo-designer-xml-util":{path:"xml_util.js",requires:["aui-base"]},"liferay-portlet-kaleo-designer":{path:"main.js",requires:["aui-ace-editor","aui-ace-editor-mode-xml","aui-tpl-snippets-deprecated","dataschema-xml","datasource","datatype-xml","event-valuechange","io-form","liferay-kaleo-designer-autocomplete-util","liferay-kaleo-designer-editors","liferay-kaleo-designer-nodes","liferay-kaleo-designer-remote-services","liferay-kaleo-designer-utils","liferay-kaleo-designer-xml-util","liferay-util-window"]}},root:MODULE_PATH+"/designer/js/legacy/"}}});
+} catch(error) {console.error(error);}try {var MODULE_MAIN='dynamic-data-mapping-web@5.0.100/index';var MODULE_PATH='/o/dynamic-data-mapping-web';!function(){const a=Liferay.AUI;AUI().applyConfig({groups:{ddm:{base:MODULE_PATH+"/js/",combine:Liferay.AUI.getCombine(),filter:a.getFilterConfig(),modules:{"liferay-ddm-form":{path:"ddm_form.js",requires:["aui-base","aui-datatable","aui-datatype","aui-image-viewer","aui-parse-content","aui-set","aui-sortable-list","json","liferay-form","liferay-map-base","liferay-translation-manager","liferay-util-window"]},"liferay-portlet-dynamic-data-mapping":{condition:{trigger:"liferay-document-library"},path:"main.js",requires:["arraysort","aui-form-builder-deprecated","aui-form-validator","aui-map","aui-text-unicode","json","liferay-menu","liferay-translation-manager","liferay-util-window","text"]},"liferay-portlet-dynamic-data-mapping-custom-fields":{condition:{trigger:"liferay-document-library"},path:"custom_fields.js",requires:["liferay-portlet-dynamic-data-mapping"]}},root:MODULE_PATH+"/js/"}}})}();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='contacts-web@5.0.57/index';var MODULE_PATH='/o/contacts-web';AUI().applyConfig({groups:{contactscenter:{base:MODULE_PATH+"/js/",combine:Liferay.AUI.getCombine(),filter:Liferay.AUI.getFilterConfig(),modules:{"liferay-contacts-center":{path:"main.js",requires:["aui-io-plugin-deprecated","aui-toolbar","autocomplete-base","datasource-io","json-parse","liferay-portlet-base","liferay-util-window"]}},root:MODULE_PATH+"/js/"}}});
+} catch(error) {console.error(error);}</script>
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		
+			
+				
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+	
+		
+
+			
+
+			
+				<script id="googleAnalyticsScript" type="text/javascript" data-senna-track="permanent">
+					(function(i, s, o, g, r, a, m) {
+						i['GoogleAnalyticsObject'] = r;
+
+						i[r] = i[r] || function() {
+							var arrayValue = i[r].q || [];
+
+							i[r].q = arrayValue;
+
+							(i[r].q).push(arguments);
+						};
+
+						i[r].l = 1 * new Date();
+
+						a = s.createElement(o);
+						m = s.getElementsByTagName(o)[0];
+						a.async = 1;
+						a.src = g;
+						m.parentNode.insertBefore(a, m);
+					})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+					
+
+					
+						
+							ga('create', 'UA-87706775-1', 'auto');
+						
+					
+
+					
+
+					
+
+					ga('send', 'pageview');
+
+					
+				</script>
+			
+		
+		
+
+
+
+	
+		
+
+			
+
+			
+		
+	
+
+
+
+	
+		
+
+			
+
+			
+				<script async src=""https://www.googletagmanager.com/gtag/js?id=G-5NQ4CC65SP""></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-5NQ4CC65SP');
+</script>
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.fapemat.mt.gov.br/o/mt-portal-theme/css/main.css?browserId=other&amp;themeId=mtportaltheme_WAR_mtportaltheme&amp;minifierType=css&amp;languageId=pt_BR&amp;t=1787840282000" id="liferayThemeCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+		.buscaCabecalho { display: none; }
+
+#logo-header img { max-width: 157%; /* CSS PERSONALIZADO PAGINAS PUBLICAS*/}
+	</style>
+
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+
+
+<script data-senna-track="temporary">var Liferay = window.Liferay || {}; Liferay.CommerceContext = {"commerceAccountGroupIds":[],"accountEntryAllowedTypes":["person"],"commerceChannelId":"0","showUnselectableOptions":false,"currency":{"currencyId":"66836647","currencyCode":"USD"},"showSeparateOrderItems":false,"commerceSiteType":0};</script><link href="/o/commerce-frontend-js/styles/main.css" rel="stylesheet" type="text/css" />
+<style data-senna-track="temporary" type="text/css">
+</style>
+<link data-senna-track="temporary" href="/o/layout-common-styles/main.css?plid=23613062&segmentsExperienceId=73983603&t=1786018907208" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+
+<script type="text/javascript">
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title:event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		<script src="/o/mt-portal-theme/js/jquery_galeria.js" type="text/javascript"></script>
+		
+		<script src="/o/mt-portal-theme/js/custom_bottom.js" type="text/javascript"></script>
+		
+		<link href="/o/mt-portal-theme/css/aui.css" rel="stylesheet" type="text/css">
+		<link href="/documents/20194/7978470/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
+		<script>
+			function searchInterno() {}
+		</script>
+		
+	</head>
+
+	<body class="other change-tracking-enabled controls-visible  yui3-skin-sam signed-out public-page site" >
+		<NOSCRIPT>
+			Este site precisa que o seu navegador tenha JAVASCRIPT ativo para funcionar.
+		</NOSCRIPT>
+
+		<a class="d-block p-2 sr-only sr-only-focusable text-reset float-left bg-light" href="#main-content">
+skip-to-content		</a>
+
+		<!--@liferay_ui["quick-access"] contentId="#main-content" /-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--<link rel="stylesheet" href="/o/mt-portal-theme/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="/o/mt-portal-theme/css/bootstrap-responsive.min.css" >-->
+		<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+		<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>-->
+
+
+
+
+
+		<div class="container-fluid wrapperGeral" id="wrapper">
+			<header id="cabecalho">	
+				<div class="container">
+					<div class="row inner-header">
+						<div class="col-md-4">
+							<div id="heading">
+								<h1 aria-level="1" class="site-title mb-0" role="heading" id="logo-header">
+									<span class="sr-only">Ir para FAPEMAT</span>
+									<a class="logo custom-logo logotipoSite" href="https://www.fapemat.mt.gov.br/inicio" title="Ir para FAPEMAT" accesskey="5">
+										<img alt="Logo" height="271" src="/image/layout_set_logo?img_id=74062950&amp;t=1788855421800" class="img-fluid" />
+									</a>
+								</h1>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="row float-right cabecalho1 d-none d-lg-block">
+								<ul class="navTopo">
+									<li><a href="https://portal.mt.gov.br/app/catalog" aria-label="ir para mt.gov.br" title="ir para mt.gov.br" alt="ir para mt.gov.br" target='_blank'>mt.gov.br</a></li>
+									<li><a href="https://www.fapemat.mt.gov.br/telefones" aria-label="Contatos - Telefones" title="Contatos - Telefones">contatos</a></li>
+									<li><a href="https://www.fapemat.mt.gov.br/mapa-do-site" aria-label="mapa do site" title="Navegue para o mapa do site">mapa do site</a></li>
+									<li>
+										<a href="https://www.fapemat.mt.gov.br/acessibilidade" class="acessibilidade-link" accesskey="0">acessibilidade : 
+										<a href="#" id="botaoDiminuirFonte" onclick="diminuirFonte()"><span class="sr-only">Diminuir fonte</span>-<i class="fa-solid fa-font"></i></a>
+										<a href="#" id="botaoAumentarFonte" onclick="aumentarFonte()"><span class="sr-only">Aumentar fonte</span>+<i class="fa-solid fa-font"></i></a> 
+										<a href="#" id="botaoTamanhoNeutro" onclick="tamanhoNeutro()"><span class="sr-only">Tamanho neutro</span>
+											<span style="font-size: 10px;"><i class="fa-solid fa-font"></i></span>
+											<span style="font-size: 14px;margin-left:-6px"><i class="fa-solid fa-font"></i></span></a>
+										<a href="#" id="botaoContraste" onclick="contrast()" aria-label="Contraste" title="Mude o contraste"><span class="sr-only">Contraste</span><i class="fa-solid fa-circle-half-stroke"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div style="clear:both;"></div>
+							<div class="row float-right cabecalho2">
+								<div class="buscaCabecalho">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+								<div class="redesSociaisCabecalho d-none d-lg-block">    <ul class="iconsSocial">
+
+
+
+
+        
+    </ul>
+</div>
+							</div>
+							<div style="clear:both;"></div>
+							<div class="row float-right cabecalho3">
+            <a href="https://www.transparencia.mt.gov.br/" target="_blank" class=""><img src="/o/mt-portal-theme/images/logo_transparencia_topo.png" alt="" title="Navegue para " aria-label=""></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</header>
+
+
+			<div class="container-fluid container-fluid-menuSite sticky-top">
+				<div class="container container-menuSite">
+<nav class="navbar navbar-expand-lg menuPrincipal" aria-label="Menu principal">
+
+  <button class="navbar-toggler" type="button"
+          data-toggle="collapse" data-target="#main_nav"
+          aria-controls="main_nav" aria-expanded="false" aria-label="Abrir menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav mr-auto">
+
+        
+
+
+                <li class="nav-item dropdown " accesskey="2" tabindex="-1">
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    id="menuServicos-120"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Institucional">
+                        Institucional
+                    </a>
+
+                    <nav class="dropdown-menu" aria-labelledby="menuServicos-120" role="menu">
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/galeria-de-presidente" aria-label="Galeria de Presidente" > Galeria de Presidente</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/galeria-dos-diretores-tecnico-cientifico" aria-label="Galeria dos Diretores Técnico Científico" > Galeria dos Diretores Técnico Científico</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/missao-visao" aria-label="Missão/Visão" > Missão/Visão</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/legislacao" aria-label="Legislação" > Legislação</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/carta-servico" aria-label="Carta Serviço" > Carta Serviço</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/organograma" aria-label="Organograma" > Organograma</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/integridade" aria-label="Integridade" > Integridade</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/conselho" aria-label="Conselho" > Conselho</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/institucional/comissao-de-etica" aria-label="Comissão de Ética" > Comissão de Ética</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://egprocessos.seplag.mt.gov.br/orgao/10" aria-label="Gestão de Processos" target="_blank"> Gestão de Processos</a>
+
+                    </nav>
+                </li>
+
+
+
+                <li class="nav-item dropdown "  >
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    id="menuServicos-94"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Transparência">
+                        Transparência
+                    </a>
+
+                    <nav class="dropdown-menu" aria-labelledby="menuServicos-94" role="menu">
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/aquisicao-e-contratos" aria-label="Aquisição e Contratos" > Aquisição e Contratos</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/legislacao" aria-label="Legislação" > Legislação</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/pessoal" aria-label="Pessoal" > Pessoal</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/receita-e-despesas" aria-label="Receita e Despesas" > Receita e Despesas</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/convenios-cooperacao" aria-label="Convênios / Cooperação" > Convênios / Cooperação</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/protecao-de-dados" aria-label="Proteção de Dados" > Proteção de Dados</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/integridade" aria-label="Integridade" > Integridade</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/contabilidade" aria-label="Contabilidade" > Contabilidade</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/patrimonio-e-inventario" aria-label="Patrimônio e Inventário" > Patrimônio e Inventário</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/projetos" aria-label="Projetos" > Projetos</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/transparencia/bolsas" aria-label="Bolsas" > Bolsas</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/relatorio-acoes" aria-label="Relatório Ações FAPEMAT" > Relatório Ações FAPEMAT</a>
+
+                    </nav>
+                </li>
+
+
+
+                <li class="nav-item active"  >
+                    <a class="nav-link" href="https://www.fapemat.mt.gov.br/editais_1" aria-label="Editais" > Editais</a>
+                </li>
+
+
+
+                <li class="nav-item "  >
+                    <a class="nav-link" href="https://www.fapemat.mt.gov.br/contatos" aria-label="Contatos" > Contatos</a>
+                </li>
+
+
+
+                <li class="nav-item dropdown "  >
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    id="menuServicos-30"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Resoluções e Manuais">
+                        Resoluções e Manuais
+                    </a>
+
+                    <nav class="dropdown-menu" aria-labelledby="menuServicos-30" role="menu">
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/-/bolsa-apoio-técnico-científico-administrativo-batca" aria-label="Resoluções de Bolsas" > Resoluções de Bolsas</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/-/17468798-procedimentos-para-devolucao-de-recurso-de-auxilio-a-pesquisa-atraves-dar" aria-label="Manual de Prestação de Contas" > Manual de Prestação de Contas</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/-/3641946-manuais" aria-label="Tutoriais do Sigfapemat" > Tutoriais do Sigfapemat</a>
+
+                    </nav>
+                </li>
+
+
+
+                <li class="nav-item dropdown "  >
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    id="menuServicos-3"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Imprensa">
+                        Imprensa
+                    </a>
+
+                    <nav class="dropdown-menu" aria-labelledby="menuServicos-3" role="menu">
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/noticias" aria-label="Notícias" > Notícias</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fapemat.mt.gov.br/videos" aria-label="Vídeos" > Vídeos</a>
+
+                    </nav>
+                </li>
+
+
+
+                <li class="nav-item dropdown "  >
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    id="menuServicos-5"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Links">
+                        Links
+                    </a>
+
+                    <nav class="dropdown-menu" aria-labelledby="menuServicos-5" role="menu">
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://aquisicoes.gestao.mt.gov.br/#" aria-label="AQUISIÇÕES- SIAG" > AQUISIÇÕES- SIAG</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.fiplan.mt.gov.br:8443/Fiplan.jsp" aria-label="FIPLAN" > FIPLAN</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://gv.gestao.mt.gov.br/" aria-label="GV - VIAGENS" > GV - VIAGENS</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://www.iomat.mt.gov.br/" aria-label="IOMAT- IMPRENSA OFICIAL" > IOMAT- IMPRENSA OFICIAL</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://www.protocolo.gestao.mt.gov.br/acessogeral/logon.php" aria-label="PROTOCOLO" > PROTOCOLO</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://sac.cepromat.mt.gov.br/" aria-label="SAC - MTI" > SAC - MTI</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://seap-prod.gestao.mt.gov.br/forms/frmservlet?config=archonj" aria-label="SEAP" > SEAP</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="https://aquisicoes.sad.mt.gov.br/sigacontrato/subsystems/principal/pages/home.jsf" aria-label="SIAG-C" > SIAG-C</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://sigfap.fapemat.mt.gov.br/" aria-label="SIGFAPEMAT" > SIGFAPEMAT</a>
+
+
+
+                            <a class="dropdown-item" role="menuitem" href="http://sigpat.sad.mt.gov.br/asi/apresentacao/IndexASI.html" aria-label="SIGPAT" > SIGPAT</a>
+
+                    </nav>
+                </li>
+
+
+
+                <li class="nav-item "  >
+                    <a class="nav-link" href="https://ouvidoria.cge.mt.gov.br" aria-label="FALE CIDADÃO" > FALE CIDADÃO</a>
+                </li>
+
+
+
+                <li class="nav-item "  >
+                    <a class="nav-link" href="https://www.fapemat.mt.gov.br/perguntas-e-respostas" aria-label="Perguntas e Respostas" > Perguntas e Respostas</a>
+                </li>
+    </ul>
+    <ul class="navbar-nav ml-auto sic">
+        <li class="nav-item">            <a href="https://ouvidoria.cge.mt.gov.br/falecidadao/servlet/cadastrardemanda?5" target="_blank" class=""><img src="/documents/21013/135253/SIC+-+Acesso+a+Informa%C3%A7%C3%A3o/9b0c56df-d3df-4052-88a0-57cdc5ec0644?t=1442867531128" alt="" title="Navegue para " aria-label=""></a>
+ </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+    document.querySelector('.buscaCabecalho button[type="submit"]').setAttribute('aria-label', 'Buscar no site');
+</script>
+
+<script>
+
+// Código para controle de dropdowns do menu principal, garantindo acessibilidade e usabilidade em desktop e mobile
+(function () {
+  var dropdowns = document.querySelectorAll('#main_nav .nav-item.dropdown');
+
+  dropdowns.forEach(function (dropdown) {
+    var toggle = dropdown.querySelector('.dropdown-toggle');
+    var menu = dropdown.querySelector('.dropdown-menu');
+
+    if (!toggle || !menu) return;
+
+    toggle.removeAttribute('data-toggle');
+
+    function openMenu() {
+      dropdown.classList.add('open', 'show');
+      menu.classList.add('show');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      dropdown.classList.remove('open', 'show');
+      menu.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      openMenu();
+    });
+
+    dropdown.addEventListener('focusin', openMenu);
+
+    dropdown.addEventListener('focusout', function () {
+      setTimeout(function () {
+        if (!dropdown.contains(document.activeElement)) {
+          closeMenu();
+        }
+      }, 0);
+    });
+  });
+})();
+
+</script>				</div>
+			</div>
+			<div class="pagetitle-wrapper" style="display:none;"><div></div></div>
+
+
+				<div class="container-fluid cab-titulo-pagina_bg">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 py-2 px-5">
+								<h2 class="cab-titulo-pagina_fonte">
+										Editais<br/>
+								</h2>
+							</div>
+						</div>
+					</div> 
+				</div>
+			<div class="container-fluid conteudoPrincipal">
+				<section id="content" accesskey="1" tabindex="-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="layout-content portlet-layout" id="main-content" role="main">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	<div class="lfr-layout-structure-item-mtui---a--es-para-cole--es lfr-layout-structure-item-22e7f4b5-5415-9a25-53f3-85fa259fe305 " style="">
+ <div id="fragment-093021c4-0963-61bc-bdf9-dc139e65fbd3">
+ </div>
+ <style>.fragment_3875 .navbar {
+	background-color: #30313f;
+  color: #cdced9;
+}
+@media (max-width: 442px){
+	.logout .badge { display: none; }
+}</style>
+ <script type="module">const configuration = {"urlViewItems":"/group/fapemat/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_com_liferay_journal_web_portlet_JournalPortlet_displayStyle=list&_com_liferay_journal_web_portlet_JournalPortlet_folderId=74121371&_com_liferay_journal_web_portlet_JournalPortlet_groupId=363786&p_p_auth=HqX2jwqD","urlAddItem":"/group/fapemat/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_com_liferay_journal_web_portlet_JournalPortlet_mvcRenderCommandName=%2Fjournal%2Fedit_article&_com_liferay_journal_web_portlet_JournalPortlet_redirect=%2Fgroup%2Ffapemat%2F~%2Fcontrol_panel%2Fmanage%3Fp_p_id%3Dcom_liferay_journal_web_portlet_JournalPortlet%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_com_liferay_journal_web_portlet_JournalPortlet_displayStyle%3Dlist%26_com_liferay_journal_web_portlet_JournalPortlet_folderId%3D74121371%26_com_liferay_journal_web_portlet_JournalPortlet_groupId%3D363786%26p_p_auth%3DHqX2jwqD&_com_liferay_journal_web_portlet_JournalPortlet_backURL=%2Fgroup%2Ffapemat%2F~%2Fcontrol_panel%2Fmanage%3Fp_p_id%3Dcom_liferay_journal_web_portlet_JournalPortlet%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_com_liferay_journal_web_portlet_JournalPortlet_displayStyle%3Dlist%26_com_liferay_journal_web_portlet_JournalPortlet_folderId%3D74121371%26_com_liferay_journal_web_portlet_JournalPortlet_groupId%3D363786%26p_p_auth%3DHqX2jwqD&_com_liferay_journal_web_portlet_JournalPortlet_backURLTitle=Conteúdo+Web&_com_liferay_journal_web_portlet_JournalPortlet_ddmStructureId=74121000&_com_liferay_journal_web_portlet_JournalPortlet_folderId=74121371&_com_liferay_journal_web_portlet_JournalPortlet_groupId=363786&_com_liferay_journal_web_portlet_JournalPortlet_showSelectFolder=false&p_p_auth=HqX2jwqD","sampleTag":"","showLogoutButton":"yes","linkType":"text","sampleContent":{},"sampleFriendlyUrl":""}; const fragmentElement = document.querySelector('#fragment-093021c4-0963-61bc-bdf9-dc139e65fbd3'); const fragmentEntryLinkNamespace = 'upin'; const fragmentNamespace = 'upin'; const layoutMode = 'view';fetch('/o/headless-admin-user/v1.0/organizations', {
+	headers: {
+		'Content-Type': 'application/json'
+	}
+})
+	.then(response => {
+	if (!response.ok) {
+		throw new Error(`Erro na resposta: ${response.status} ${response.statusText}`);
+	}
+	return response.json();
+})
+	.then(data => {
+	console.log('Organizações recebidas:', data);
+})
+	.catch(error => {
+	console.error('Erro ao buscar organizações:', error);
+});;</script>
+</div>
+<div class="lfr-layout-structure-item-mtui---navega--o-de-conte-dos-categorizados lfr-layout-structure-item-86e9c790-85d5-aadc-6c1e-d9cde56c8629 " style="">
+ <div id="fragment-ed5cf7a1-3b1c-02b2-6b5b-3ee0edbe9cda">
+  <div class="mtui-categories-list" id="categorized-contents-navigation-instance-fgvh">
+   <div class="portlet-boundary portlet-boundary_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_  portlet-static portlet-static-end portlet-barebone portlet-asset-categories-navigation " id="p_p_id_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh_"><span id="p_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh"></span>
+    <section class="portlet" id="portlet_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh">
+     <div class="portlet-content">
+      <div class=" portlet-content-container">
+       <div class="portlet-body">
+        <style>
+	.mtui-categories-list__col-item {
+    padding-right: 0px !important;
+  }
+	
+	.transparencia-lista .bloco-card {
+	  display: flex;
+    flex-direction: column;
+    align-items: center;
+		padding: 5px;
+		/*margin-bottom: 5px;
+		background: #007CCE;*/
+	}
+	
+	.transparencia-lista  a:hover .bloco-card {
+		background: #00C0FF;
+	}
+	
+	.transparencia-lista .bloco-card .bloco-icone {
+	  padding: 13px 15px;
+    color: #FFF;
+    border-radius: 50%;
+    margin-top: 10px;
+		border: 2px solid #FFF;
+	}
+	
+	.transparencia-lista .bloco-card .bloco-icone i {
+	  font-size: 35px;
+		font-weight: normal;
+	}
+	
+	.transparencia-lista .bloco-card .bloco-titulo {
+		color: #FFF;
+		min-height: 40px;
+	}
+
+	.transparencia-lista a:hover {
+	  text-decoration: none;
+	}
+	
+</style>
+        <div class="px-lg-3 transparencia-lista">
+         <div class="row">
+          <div class="mtui-categories-list__col-item col-md-3 mb-3"><a class="d-block" href="#" data-categorized-content-category-link data-category-id="73983336">
+            <div class="bloco-card" style="background: #0093F3">
+             <div class="bloco-icone"><i class="fa fa-file-lines" style="color: '#fff'"></i>
+             </div>
+             <div class="bloco-titulo h6 h-2l mt-2 text-center" title="Abertos"><span class="h6 fw-regular line-clamp-2">Abertos</span>
+             </div>
+            </div> </a>
+          </div>
+          <div class="mtui-categories-list__col-item col-md-3 mb-3"><a class="d-block" href="#" data-categorized-content-category-link data-category-id="73983347">
+            <div class="bloco-card" style="background: #00AAFF">
+             <div class="bloco-icone"><i class="fa fa-file-lines" style="color: '#fff'"></i>
+             </div>
+             <div class="bloco-titulo h6 h-2l mt-2 text-center" title="Encerrados"><span class="h6 fw-regular line-clamp-2">Encerrados</span>
+             </div>
+            </div> </a>
+          </div>
+          <div class="mtui-categories-list__col-item col-md-3 mb-3"><a class="d-block" href="#" data-categorized-content-category-link data-category-id="73983339">
+            <div class="bloco-card" style="background: #00C0FF">
+             <div class="bloco-icone"><i class="fa fa-file-lines" style="color: '#fff'"></i>
+             </div>
+             <div class="bloco-titulo h6 h-2l mt-2 text-center" title="Resultado"><span class="h6 fw-regular line-clamp-2">Resultado</span>
+             </div>
+            </div> </a>
+          </div>
+         </div>
+        </div>
+        <script>
+(function() {
+
+    const paginationWrapper = document.getElementById('categorized-content-pagination-wrapper');
+
+    if (!paginationWrapper) {
+        return;
+    }
+    const totalItems = Number(paginationWrapper.getAttribute('data-total'));
+    const page =  Number(paginationWrapper.getAttribute('data-page'));
+    const totalPages =  Number(paginationWrapper.getAttribute('data-total-pages'));
+
+    const pagination = MTUI.renderPagination(paginationWrapper, page, totalPages, function(p) { 
+
+        const url = new URL(window.location.href);
+        url.searchParams.set('page', p);
+        MTUI.utils.goToUrl(url.toString());
+
+     });
+ 
+
+}())
+
+</script>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script>
+  (function() {
+    const wrapper = document.getElementById('categorized-contents-navigation-instance-fgvh');
+    const colItems = wrapper.querySelectorAll('.mtui-quant-cols');
+    colItems && Array.from(colItems).forEach(colItem => {
+      colItem && colItem.classList.add("col-md-3");
+    })
+  }())
+</script>
+ </div>
+ <style>.fragment_2101 {
+}</style>
+ <script type="module">const configuration = {"ddmTemplateKey":"MTUI-NAVEGACAO-DE-CATEGORIAS-E-CONTEUDOS-CATEGORIZADOS","colNumber":"col-md-3","targetUrl":"/edital"}; const fragmentElement = document.querySelector('#fragment-ed5cf7a1-3b1c-02b2-6b5b-3ee0edbe9cda'); const fragmentEntryLinkNamespace = 'fgvh'; const fragmentNamespace = 'fgvh'; const layoutMode = 'view';fragmentElement.querySelectorAll('[data-categorized-content-category-link]').forEach($link => {
+	let linkCatId = $link.getAttribute('data-category-id');
+  let configurationUrl = document.location.href;
+  if(configuration.targetUrl && configuration.targetUrl.length) {
+    configurationUrl = configuration.targetUrl.startsWith('http') ? configuration.targetUrl : (Liferay.ThemeDisplay.getPortalURL()+configuration.targetUrl).replace('//', '/');
+  }
+  let url = new URL(configurationUrl);
+  url.searchParams.set('categoryId', linkCatId)
+	$link.setAttribute('href', url.toString())
+})
+;</script>
+</div>
+
+
+
+
+		</div>
+	
+
+
+<form action="#" aria-hidden="true" class="hide" id="hrefFm" method="post" name="hrefFm"><span></span><button hidden type="submit">Oculto</button></form>
+
+	
+				</section>
+			</div>
+
+			<footer id="footer" role="contentinfo">
+				<div class="container">
+					<div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="27290" data-analytics-asset-title="Rodapé" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="27292">
+			
+
+			<style>
+	footer#footer .container .row .journal-content-article { width: 100%; }
+
+	.rodapeSiteMap { width: 100%; }
+	.rodapeSiteMap div { margin-bottom: 15px; }
+
+	.rodapeSiteMap h3 { color; #FFF; }
+	
+	.rodapeSiteMap a,
+	.rodapeSiteMap a:visited,
+	.rodapeSiteMap a:active,
+	.rodapeSiteMap a:hover {
+		color: #FFF; 
+		text-decoration: none;
+		font-size: 11px;
+	}
+	
+	.rodapeSiteMap a:hover {
+		text-decoration: underline;
+	}
+</style>
+
+	<div class="row rodapeSiteMap">
+		
+			<div class="col-lg-2 col-md-4 col-6">
+				<h3 class="h5">Serviços</h3>
+				
+					
+					<a href="https://portal.mt.gov.br/app/catalog" target="_blank">Portal de Serviços</a><br>
+					
+					<a href="http://www.mtcidadao.mt.gov.br" target="_blank">MT Cidadão</a><br>
+			</div>
+		
+			<div class="col-lg-2 col-md-4 col-6">
+				<h3 class="h5">Contatos</h3>
+				
+					
+					<a href="https://www.secom.mt.gov.br/contatos" target="_blank">Lista de telefones</a><br>
+					
+					<a href="https://ouvidoria.cge.mt.gov.br/" target="_blank">Ouvidoria</a><br>
+			</div>
+		
+			<div class="col-lg-2 col-md-4 col-6">
+				<h3 class="h5">Portal de Comunicação</h3>
+				
+					
+					<a href="https://www.secom.mt.gov.br/noticias" target="_blank">Notícias</a><br>
+					
+					<a href="https://www.secom.mt.gov.br/radio-paiaguas" target="_blank">Rádio Paiaguás</a><br>
+					
+					<a href="https://www.secom.mt.gov.br/tv-paiaguas" target="_blank">TV Paiaguás</a><br>
+					
+					<a href="https://www.secom.mt.gov.br/fotos" target="_blank">Fotos</a><br>
+			</div>
+		
+			<div class="col-lg-2 col-md-4 col-6">
+				<h3 class="h5">Sites Institucionais</h3>
+				
+					
+					<a href="https://portal.mt.gov.br/app/catalog/orgao" target="_blank">Secretarias do Governo</a><br>
+			</div>
+		
+			<div class="col-lg-2 col-md-4 col-6">
+				<h3 class="h5">Transparência</h3>
+				
+					
+					<a href="https://www.transparencia.mt.gov.br/" target="_blank">Portal da Transparência</a><br>
+					
+					<a href="https://ouvidoria.cge.mt.gov.br/falecidadao/servlet/cadastrardemanda?5" target="_blank">Acesso à informação</a><br>
+			</div>
+	</div>
+
+
+			
+		</div>
+
+		
+
+	
+
+
+					</div>
+					
+					<hr class="divisaoFooter">
+
+					<div class="row">
+						<h4>Contato</h4>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12 pl-2">
+    Avenida Tenente Coronel Duarte, 1278 - Centro Sul | CEP: 78020 - 450 |  Cuiabá - MT (<a target="_blank" href="https://maps.app.goo.gl/3pL4p5HohWNcfUcL6">ver no mapa</a>)
+
+</div>    <div class="col-md-12 pl-2">
+
+Fones: <a href="http://www.mt.gov.br/telefones">Lista de Telefones</a>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LeS9ZwpAAAAALmss4OfylZO4UIGbkHmZOyru1n6"></script><script>
+function geraTokenHabilitacao() {
+grecaptcha.ready(function() {
+grecaptcha.execute('6LeS9ZwpAAAAALmss4OfylZO4UIGbkHmZOyru1n6', {action: 'homepage'}).then(function(token) {
+    document.getElementById("TokenHabilitacao").value = token;
+    document.getElementById("formHabilitacao").submit();
+});
+});
+return false;
+}
+</script>
+					</div>
+					
+					<div class="row">
+    <ul class="iconsSocial">
+
+
+
+
+        
+    </ul>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-6">
+							<a href="https://play.google.com/store/apps/details?id=br.gov.mt.cepromat.mtcidadao&hl=pt-BR" target="_blank"><img src="/o/mt-portal-theme/images/rodape_google_play.png" title="Google Play" alt="Google Play" width="100"> </a>
+							<a href="https://itunes.apple.com/us/app/mt-cidadao/id1062953749?mt=8" target="_blank"><img src="/o/mt-portal-theme/images/rodape_apple_store.png" title="App Store" alt="App Store" width="100"> </a>
+						</div>
+						<div class="col-md-6 text-right rodapeMTI">
+							Desenvolvido por <a href="http://www.mti.mt.gov.br" target="_blank"><img src="/o/mt-portal-theme/images/rodape_logo_mti.png" title="MTI" alt="MTI"> </a>
+						</div>
+					</div>
+				</div>
+
+			</footer>
+		</div>
+
+
+		<script>
+			$("input#_com_liferay_portal_search_web_portlet_SearchPortlet_keywords").attr("accesskey","3");
+
+			document.addEventListener("DOMContentLoaded", function () {
+				const container = document.querySelector(".rodapeSiteMap");
+				if (container) {
+					const h5s = container.getElementsByTagName("h5");
+
+					if (h5s.length > 0) {
+						h5s[0].setAttribute("accesskey", "4");
+					}
+				}
+			});
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	
+		
+
+			
+
+			
+		
+	
+
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<script type="text/javascript">
+
+	function getValueByAttribute(node, attr) {
+		return (
+			node.dataset[attr] ||
+			(node.parentElement && node.parentElement.dataset[attr])
+		);
+	}
+
+	function sendDocumentDownloadedAnalyticsEvent(anchor) {
+		var fileEntryId = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryId'
+		);
+		var title = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryTitle'
+		);
+		var version = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryVersion'
+		);
+
+		if (fileEntryId) {
+			Analytics.send('documentDownloaded', 'Document', {
+				groupId: themeDisplay.getScopeGroupId(),
+				fileEntryId,
+				preview: !!window._com_liferay_document_library_analytics_isViewFileEntry,
+				title,
+				version,
+			});
+		}
+	}
+
+	function handleDownloadClick(event) {
+		if (window.Analytics) {
+			if (event.target.nodeName.toLowerCase() === 'a') {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target
+				);
+			}
+			else if (
+				event.target.parentNode &&
+				event.target.parentNode.nodeName.toLowerCase() === 'a'
+			) {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target.parentNode
+				);
+			}
+			else {
+				var target = event.target;
+				var matchTextContent =
+					target.textContent &&
+					target.textContent.toLowerCase() ===
+						'baixar';
+				var matchTitle =
+					target.title && target.title.toLowerCase() === 'download';
+				var matchAction = target.action === 'download';
+				var matchLexiconIcon = !!target.querySelector(
+					'.lexicon-icon-download'
+				);
+				var matchLexiconClassName = target.classList.contains(
+					'lexicon-icon-download'
+				);
+				var matchParentTitle =
+					target.parentNode &&
+					target.parentNode.title &&
+					target.parentNode.title.toLowerCase() === 'download';
+				var matchParentLexiconClassName =
+					target.parentNode &&
+					target.parentNode.classList.contains('lexicon-icon-download');
+
+				if (
+					matchTextContent ||
+					matchTitle ||
+					matchParentTitle ||
+					matchAction ||
+					matchLexiconIcon ||
+					matchLexiconClassName ||
+					matchParentLexiconClassName
+				) {
+					var selectedFiles = document.querySelectorAll(
+						'.form .custom-control-input:checked'
+					);
+
+					selectedFiles.forEach(({value}) => {
+						var selectedFile = document.querySelector(
+							'[data-analytics-file-entry-id="' + value + '"]'
+						);
+
+						sendDocumentDownloadedAnalyticsEvent(
+							selectedFile
+						);
+					});
+				}
+			}
+		}
+	}
+
+	Liferay.once('destroyPortlet', () => {
+		document.body.removeEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+	Liferay.once('portletReady', () => {
+		document.body.addEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onDestroyPortlet = function () {
+		Liferay.detach('messagePosted', onMessagePosted);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+
+	var onMessagePosted = function (event) {
+		if (window.Analytics) {
+			const eventProperties = {
+				className: event.className,
+				classPK: event.classPK,
+				commentId: event.commentId,
+				text: event.text,
+			};
+
+			const blogNode = document.querySelector(
+				'[data-analytics-asset-id="' + event.classPK + '"]'
+			);
+
+			const dmNode = document.querySelector(
+				'[data-analytics-file-entry-id="' + event.classPK + '"]'
+			);
+
+			if (blogNode) {
+				eventProperties.title = blogNode.dataset.analyticsAssetTitle;
+			}
+			else if (dmNode) {
+				eventProperties.title = dmNode.dataset.analyticsFileEntryTitle;
+			}
+
+			Analytics.send('posted', 'Comment', eventProperties);
+		}
+	};
+
+	Liferay.on('messagePosted', onMessagePosted);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onVote = function (event) {
+		if (window.Analytics) {
+			let title = event.contentTitle;
+
+			if (!title) {
+				const dmNode = document.querySelector(
+					'[data-analytics-file-entry-id="' + event.classPK + '"]'
+				);
+
+				if (dmNode) {
+					title = dmNode.dataset.analyticsFileEntryTitle;
+				}
+			}
+
+			Analytics.send('VOTE', 'Ratings', {
+				className: event.className,
+				classPK: event.classPK,
+				ratingType: event.ratingType,
+				score: event.score,
+				title,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('ratings:vote', onVote);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('ratings:vote', onVote);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onShare = function (data) {
+		if (window.Analytics) {
+			Analytics.send('shared', 'SocialBookmarks', {
+				className: data.className,
+				classPK: data.classPK,
+				type: data.type,
+				url: data.url,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('socialBookmarks:share', onShare);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('socialBookmarks:share', onShare);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+
+	if (window.svg4everybody && Liferay.Data.ICONS_INLINE_SVG) {
+		svg4everybody(
+			{
+				polyfill: true,
+				validate: function (src, svg, use) {
+					return !src || !src.startsWith('#');
+				}
+			}
+		);
+	}
+
+
+	// <![CDATA[
+
+		
+
+		Liferay.currentURL = '\x2feditais_1';
+		Liferay.currentURLEncoded = '\x252Feditais_1';
+
+	// ]]>
+
+
+		// <![CDATA[
+			
+				
+
+				
+
+				
+			
+		// ]]>
+	
+
+	
+		Liferay.Portlet.register('com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh_',
+			portletId: 'com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d23613062\x26p_p_id\x3dcom_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_INSTANCE_mtuicategorizedcontentscategorynavigationfgvh\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Feditais_1',
+			refreshURLData: {}
+		}
+	);
+
+
+	
+		Liferay.Portlet.register('com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_INSTANCE_templateSearch');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_INSTANCE_templateSearch_',
+			portletId: 'com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_INSTANCE_templateSearch',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d23613062\x26p_p_id\x3dcom_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_INSTANCE_templateSearch\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Feditais_1',
+			refreshURLData: {}
+		}
+	);
+
+
+</script><script type="module">
+import {InfoItemActionHandler as ComponentModule} from '/o/layout-taglib/__liferay__/index.js';
+Liferay.Loader.require(
+'frontend-js-web/index',
+function(frontendJsWeb) {
+try {
+AUI().use(
+  'liferay-menu',
+function(A) {
+{
+Liferay.component('infoItemActionComponent', new ComponentModule({"executeInfoItemActionURL":"https:\/\/www.fapemat.mt.gov.br\/c\/portal\/execute_info_item_action?p_l_mode=view&plid=23613062","namespace":"","spritemap":"https:\/\/www.fapemat.mt.gov.br\/o\/mt-portal-theme\/images\/clay\/icons.svg"}), { destroyOnNavigate: true, portletId: ''});
+}
+(function() {
+var $ = AUI.$;var _ = AUI._;
+	var {delegate} = frontendJsWeb;
+
+	delegate(
+		document,
+		'focusin',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.add('open');
+		}
+	);
+
+	delegate(
+		document,
+		'focusout',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.remove('open');
+		}
+	);
+})();
+(function() {
+var $ = AUI.$;var _ = AUI._;
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 0; i < liferayNotices.length; i++) {
+		Liferay.Util.openToast(liferayNotices[i]);
+	}
+
+})();
+(function() {
+var $ = AUI.$;var _ = AUI._;
+		var {openToast} = frontendJsWeb;
+
+		AUI().use(
+			'liferay-session',
+			function() {
+				Liferay.Session = new Liferay.SessionBase(
+					{
+						autoExtend: true,
+						redirectOnExpire: false,
+						redirectUrl: 'https\x3a\x2f\x2fwww\x2efapemat\x2emt\x2egov\x2ebr\x2fweb\x2fguest',
+						sessionLength: 7200,
+						sessionTimeoutOffset: 70,
+						warningLength: 60
+					}
+				);
+
+				
+			}
+		);
+	
+})();
+});
+} catch (err) {
+	console.error(err);
+}
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://www.fapemat.mt.gov.br/o/mt-portal-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=pt_BR&amp;t=1787840282000" type="text/javascript"></script>
+
+
+
+
+<script type="module">
+import {default as main} from '/o/frontend-js-tooltip-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {default as main} from '/o/frontend-js-tabs-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {default as main} from '/o/frontend-js-alert-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {default as main} from '/o/frontend-js-dropdown-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {default as main} from '/o/frontend-js-collapse-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {runThirdPartyCookiesInterval} from '/o/cookies-banner-web/__liferay__/index.js';
+{
+runThirdPartyCookiesInterval();
+}
+
+</script><script type="text/javascript">
+Liferay.CustomDialogs = {enabled: false};
+
+</script><script>
+
+</script><script data-senna-track="temporary" src="https://www.seplag.mt.gov.br/documents/d/asset-library-75659502/remove-main" type="text/javascript"></script><script data-senna-track="temporary" src="https://www.mti.mt.gov.br/documents/d/asset-library-75659502/set-img-acessibility-attr" type="text/javascript"></script>
+	</body>
+
+</html>
+		
+	
+

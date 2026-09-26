@@ -1,0 +1,26 @@
+{
+  "schema": "t012.klc.backend-bundle-r23.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "REJECT",
+  "gate": "ACCEPT_DEPLOY_BUNDLE_R22",
+  "scope": "offline read-only; no Docker/API/live/deploy or central-document mutation",
+  "confirmed": {
+    "parser_pins": "source klc_open/external 632, artifact art-klc-ret1-1887b316, SHA 0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60, 423600 bytes/1 page, exact URL and date marker",
+    "field_contract": "direct parser with document manifest returns only prova_data=2026-05-17; mutation guards pass",
+    "recovery_contract": "METHOD_VERSION 1.22 is bumped and old cases become non-current; targeted recovery/document tests pass",
+    "cross_regressions": "FAFIPA/Publiconsult/APTA/Avança pins and prior dispatch remain intact in inspected code"
+  },
+  "blocker": {
+    "severity": "P1",
+    "finding": "The real shared dispatcher does not enforce document title/kind identity for the KLC retification.",
+    "reproduction": "Calling fields.extract_fields(candidate, artifact, pages) with the exact KLC retification artifact but omitting/mismatching the document manifest returned supported prova_data=2026-05-17. fields.py line 447 invokes dispatch_klc_ret without document; the parser's title/kind checks run only when document is non-null.",
+    "impact": "R22 claims exact URL/title/kind identity, but the deployed fields/review_fields path can promote the pinned amendment without proving kind=retificacao and the exact title; fail-closed identity is incomplete.",
+    "required_action": "Thread the document manifest through the dispatcher/review_fields or enforce exact title/kind before dispatch; add a deployed-path negative test for missing/wrong title/kind, then rerun KLC recovery and combined regressions."
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_klc_retificacao_r22.py backend/tests/test_tenderproof_document_review_gate.py -k 'klc or prepare_preserved or current'",
+    "result": "11 passed, 21 deselected",
+    "compileall": "PASS"
+  },
+  "side_effects": {"live": false, "proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

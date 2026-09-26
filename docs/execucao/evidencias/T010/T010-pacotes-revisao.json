@@ -1,0 +1,96 @@
+{
+  "schema_version": "t010.proposal-review.v1",
+  "read_only": true,
+  "application_status": "blocked_until_T007_T008_acceptance",
+  "provenance_policy": "preserve_source_type_units_and_reference_only",
+  "records": [
+    {
+      "id": 1,
+      "source_type": "concurso_publico",
+      "identity": "Prefeitura Municipal de Birigui/SP — Concurso Público 01/2026, Edital 179/2026",
+      "organizer": "ACCESS",
+      "reference_only": true,
+      "checked": {"location": "Birigui/SP", "role": "Professor Auxiliar", "requirements": "Licenciatura em Pedagogia ou Normal Superior com habilitação", "workload": "até 40 horas semanais", "remuneration": {"amount": 30.53, "currency": "BRL", "unit": "hora-aula"}, "vacancies": {"ac": 9, "pcd": 1, "total": 10}, "fee": {"amount": 54.0, "currency": "BRL", "unit": "inscricao"}, "registration_deadline": "2026-10-09"},
+      "pending": ["edital_url", "prova_data_exata"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id1.pdf", "sha256": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087", "pages": [1, 2, 4, 18]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 5,
+      "source_type": "concurso_publico",
+      "identity": "Câmara Municipal de Unaí/MG — VIII Concurso Público, Edital 1/2026",
+      "organizer": "Instituto Consulplan",
+      "reference_only": true,
+      "checked": {"location": "Unaí/MG", "registration_window": "2026-10-30 16:00 a 2026-12-01 16:00 (horario de Brasilia)", "fee": {"amount": 80.0, "currency": "BRL", "unit": "inscricao"}, "cargo_table": "presente no item 1.1.2"},
+      "pending": ["cargos/requisitos/vagas/remuneracao por linha", "prova_data_exata"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id5.pdf", "sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32", "pages": [1, 2, 3]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 6,
+      "source_type": "processo_seletivo_publico",
+      "identity": "Prefeitura Municipal de Berizal/MG — Edital 001/2026",
+      "organizer": "IMESO",
+      "reference_only": true,
+      "checked": {"location": "Berizal/MG", "role": "Agente Comunitário de Saúde — microáreas 1–11", "requirements": "Ensino Médio e residência na área", "workload": "40 horas semanais", "remuneration": {"amount": 3242.0, "currency": "BRL", "unit": "mensal"}, "vacancies": {"immediate": 11, "cadastro_reserva": true}, "fee": {"amount": 120.0, "currency": "BRL", "unit": "por vaga"}, "registration_window": "2026-10-13 10:00 a 2026-11-13 17:00"},
+      "pending": ["prova_data_exata", "detalhamento individual das microáreas"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id6.pdf", "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc", "pages": [1, 2, 20]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 7,
+      "source_type": "concurso_publico",
+      "identity": "Câmara Municipal de Garça/SP — Edital 001/2026",
+      "organizer": "ABCP",
+      "reference_only": true,
+      "checked": {"location": "Garça/SP", "role": "Técnico Legislativo", "requirements": "Ensino Médio", "workload": "35 horas semanais", "remuneration": {"amount": 3378.77, "currency": "BRL", "unit": "mensal", "benefits": ["auxílio alimentação R$680", "vale-transporte"]}, "vacancies": {"ac": 1, "cadastro_reserva": true}, "registration_window": "2026-09-04 a 2026-10-07"},
+      "pending": ["taxa de inscrição", "prova_data_exata"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id7.pdf", "sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a", "pages": [1, 2]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 8,
+      "source_type": "concurso_publico",
+      "identity": "Prefeitura Municipal de Reriutaba/CE — Edital 01/2026 de 02/09/2026",
+      "organizer": "IDIB",
+      "reference_only": true,
+      "checked": {"location": "Reriutaba/CE", "role": "Guarda Civil Municipal", "requirements": "Ensino Médio; CNH AB ou superior", "workload": "40 horas semanais", "remuneration": {"basis": "salário-mínimo + 30% periculosidade + adicional noturno", "unit": "mensal_variavel"}, "vacancies": {"immediate": 9, "ac": 6, "pcd": 1, "ppp": 2, "cadastro_reserva": 11}, "fee": {"amount": 156.67, "currency": "BRL", "unit": "inscricao"}, "registration_window": "2026-09-02 14:00 a 2026-10-05 23:59"},
+      "pending": ["valor_base_do_salario_minimo na data de referência", "prova_data_exata"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id8.pdf", "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a", "pages": [1, 2, 3, 5]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 14,
+      "source_type": "chamada_publica_prestacao_civil",
+      "identity": "FAPESE — PRONERA, Edital 007/2026",
+      "organizer": "FAPESE",
+      "reference_only": true,
+      "checked": {"roles": ["Articulador(a) político-pedagógico", "Técnico de Apoio"], "requirements": "nível superior/experiência conforme edital", "location": "Região Metropolitana de Aracaju/SE; atividades na UFS e locais curriculares", "remuneration": [{"amount": 60.0, "currency": "BRL", "unit": "hora efetivamente prestada"}, {"amount": 7488.0, "currency": "BRL", "unit": "por etapa, limite"}], "registration_window": "2026-09-07 a 2026-09-14", "employment_type": "prestador PF / cadastro reserva"},
+      "pending": ["quantidade de oportunidades", "entrevista_data"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id14.pdf", "sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b", "pages": [1, 3, 5, 7, 10, 11]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 15,
+      "source_type": "processo_seletivo_temporario",
+      "identity": "Prefeitura Municipal de Florianópolis/SC — Edital 010/2025",
+      "organizer": "IBADE",
+      "reference_only": true,
+      "checked": {"roles": ["Auxiliar de Sala", "Professor Auxiliar de Tecnologia Educacional", "Professor Auxiliar Intérprete Educacional", "Professores por áreas", "Administrador Escolar", "Orientador Educacional", "Supervisor Escolar"], "remuneration": {"role": "Auxiliar de Sala", "amount": 2931.06, "currency": "BRL", "unit": "mensal", "workload": "30 horas semanais"}, "registration_window": "2025-07-02 a 2025-07-16", "selection": "prova de títulos, sem prova objetiva", "employment_type": "substituto temporário ano letivo 2025"},
+      "pending": ["quantidade de vagas", "taxa", "remuneração/jornada por função restante"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id15.pdf", "sha256": "5dad1b02870a98e5e85217547f3d0cd57fa7d89b55ce3e5aaa444b5f13163dac", "pages": [1, 2, 3, 6, 7]},
+      "review_status": "ready_for_independent_review"
+    },
+    {
+      "id": 16,
+      "source_type": "concurso_publico",
+      "identity": "Prefeitura Municipal de Osvaldo Cruz/SP — Concurso Público 002/2024",
+      "organizer": "OMNI",
+      "reference_only": true,
+      "checked": {"location": "Osvaldo Cruz/SP", "roles": [{"role": "Bibliotecário", "vacancies": 1, "workload": "40h", "remuneration": 2327.96, "fee": 15.0}, {"role": "Contador", "vacancies": 1, "workload": "40h", "remuneration": 8572.64, "fee": 15.0}, {"role": "Dentista", "vacancies": 1, "workload": "20h", "remuneration": 3682.45, "fee": 15.0}, {"role": "Fonoaudiólogo", "vacancies": 1, "workload": "20h", "remuneration": 2327.96, "fee": 15.0}, {"role": "Médico Clínico Geral", "vacancies": 1, "workload": "10h", "remuneration": 3682.45, "fee": 15.0}, {"role": "Médico Geriatra", "vacancies": 1, "workload": "10h", "remuneration": 3682.45, "fee": 15.0}], "currency": "BRL", "remuneration_unit": "mensal", "exam_date": "2025-01-12", "document_period": "2024/2025"},
+      "pending": ["demais cargos em cadastro reserva", "requisitos por cargo no pacote resumido", "prova_data pode ter sido alterada"],
+      "evidence": {"artifact": "docs/execucao/evidencias/T010/id16.pdf", "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb", "pages": [1, 11, 22]},
+      "review_status": "ready_for_independent_review"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "provenance": "bounded unauthenticated public HTTP; raw HTML; no browser; no complete coverage claim",
+  "pages": [
+    {
+      "source": "access_open",
+      "kind": "listing",
+      "url": "https://access.selecao.net.br/index/abertos/",
+      "observed_at": "2026-09-07T23:33:12.964447+00:00",
+      "file": "access_open-listing.html",
+      "sha256": "98686eca30813eb23c756a06a440ef9fc02483ebc9a9880424f8e60f2ee8bfb2",
+      "bytes": 30587,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "access_open",
+      "kind": "detail",
+      "url": "https://access.selecao.net.br/informacoes/180/",
+      "observed_at": "2026-09-07T23:33:13.355476+00:00",
+      "file": "access_open-detail.html",
+      "sha256": "993e17f070b50aa94dd0999318d5c70a1ccd2ba4f8f85262aa4f5fecdd54e703",
+      "bytes": 42433,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "abcp_open",
+      "kind": "listing",
+      "url": "https://abcp.selecao.net.br/index/abertos/",
+      "observed_at": "2026-09-07T23:33:13.564983+00:00",
+      "file": "abcp_open-listing.html",
+      "sha256": "7d9c3cd2814c36b9a958fc92e6d5d2b1fe4332112352cecff4d0387c495f6f71",
+      "bytes": 27402,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "abcp_open",
+      "kind": "detail",
+      "url": "https://abcp.selecao.net.br/informacoes/2869/",
+      "observed_at": "2026-09-07T23:33:13.829835+00:00",
+      "file": "abcp_open-detail.html",
+      "sha256": "f3681a51051d7a92f2d177705fca1a046592d4232f9d575f2a2161c948dac2a8",
+      "bytes": 35736,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "avancasp_open",
+      "kind": "listing",
+      "url": "https://avancasp.selecao.net.br/index/abertos/",
+      "observed_at": "2026-09-07T23:33:14.031478+00:00",
+      "file": "avancasp_open-listing.html",
+      "sha256": "d04a91da70d0f3dfa40ce1b216e594508ed03f5c8bbfebbc2284035aaa27cbf2",
+      "bytes": 47635,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "avancasp_open",
+      "kind": "detail",
+      "url": "https://avancasp.selecao.net.br/informacoes/272/",
+      "observed_at": "2026-09-07T23:33:14.640699+00:00",
+      "file": "avancasp_open-detail.html",
+      "sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3",
+      "bytes": 37232,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "ibade_open",
+      "kind": "listing",
+      "url": "https://portal.ibade.selecao.site/edital",
+      "observed_at": "2026-09-07T23:33:15.003123+00:00",
+      "file": "ibade_open-listing.html",
+      "sha256": "06d0395e4c8b5f0da556537fb6195a8771153d7accc8eb1bba14b701f593291c",
+      "bytes": 119636,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "ibade_open",
+      "kind": "detail",
+      "url": "https://portal.ibade.selecao.site/edital/ver/127",
+      "observed_at": "2026-09-07T23:33:15.182626+00:00",
+      "file": "ibade_open-detail.html",
+      "sha256": "8c8eb76ab1a9b20e53e96bd551f8bd312b187bebb95174029862ee40fd9ad122",
+      "bytes": 22654,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "fenix_open",
+      "kind": "listing",
+      "url": "https://portal.fenix.selecao.site/edital",
+      "observed_at": "2026-09-07T23:33:15.266453+00:00",
+      "file": "fenix_open-listing.html",
+      "sha256": "f5108b7674c52628b6cf8cc0780e64e12d8044a6e5351d1eeca5f4f2a6938c68",
+      "bytes": 146753,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "fenix_open",
+      "kind": "detail",
+      "url": "https://portal.fenix.selecao.site/edital/ver/129",
+      "observed_at": "2026-09-07T23:33:15.611896+00:00",
+      "file": "fenix_open-detail.html",
+      "sha256": "8d0e52c82350a5af6e0382bc7ca0d6dc294bbfe3e23b0474b0d162b1235f85c9",
+      "bytes": 21695,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "legalle_open",
+      "kind": "listing",
+      "url": "https://portal.editais.legalleconcursos.com.br/edital",
+      "observed_at": "2026-09-07T23:33:15.722507+00:00",
+      "file": "legalle_open-listing.html",
+      "sha256": "330ff970e4df40b71b38572310e7675ab6008294c373a9a4cdfbac1b7f874a53",
+      "bytes": 877087,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "legalle_open",
+      "kind": "detail",
+      "url": "https://portal.editais.legalleconcursos.com.br/edital/ver/2557",
+      "observed_at": "2026-09-07T23:33:16.462279+00:00",
+      "file": "legalle_open-detail.html",
+      "sha256": "3386be471693ae5fd1b8b8c5eb053ea3d7d35f5e8e401939fe079621db970bc3",
+      "bytes": 43336,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "fgv_open",
+      "kind": "listing",
+      "url": "https://conhecimento.fgv.br/concursos",
+      "observed_at": "2026-09-07T23:33:16.589253+00:00",
+      "file": "fgv_open-listing.html",
+      "sha256": "98fc19b10f08178ba513f80d86e2600e607c27dea57929ba4bfac575068bc727",
+      "bytes": 51683,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "funcern_selection",
+      "kind": "listing",
+      "url": "https://funcern.br/concursos/",
+      "observed_at": "2026-09-07T23:33:16.715078+00:00",
+      "file": "funcern_selection-listing.html",
+      "sha256": "9b5ad673aff5c4de8708303d3ad9da20cb8d35e03411f001d83ff796a07c50df",
+      "bytes": 50144,
+      "status": 200,
+      "capture_postprocessing_error": "TypeError: startswith first arg must be bytes or a tuple of bytes, not str"
+    },
+    {
+      "source": "fgv_open",
+      "kind": "detail",
+      "url": "https://conhecimento.fgv.br/concursos/seplagrj",
+      "observed_at": "2026-09-07T23:34:36.181423+00:00",
+      "file": "fgv_open-detail.html",
+      "sha256": "99768ad9a390db6746bace76c7b60d1d5b9af9cc7220286b4dae858293f9fdcf",
+      "bytes": 30896,
+      "status": 200
+    },
+    {
+      "source": "fgv_open",
+      "kind": "page2",
+      "url": "https://conhecimento.fgv.br/concursos?page=1",
+      "observed_at": "2026-09-07T23:34:36.306415+00:00",
+      "file": "fgv_open-page2.html",
+      "sha256": "52c4a3e16bb55d5da65c7c2fca5197591da198505db7fde15bc614bae01d509f",
+      "bytes": 52618,
+      "status": 200
+    },
+    {
+      "source": "funcern_selection",
+      "kind": "detail",
+      "url": "https://funcern.br/concursos/concurso-equador-2026/",
+      "observed_at": "2026-09-07T23:34:36.374799+00:00",
+      "file": "funcern_selection-detail.html",
+      "sha256": "f78e3222c473c5c3d4395dc39c2fdc349e6b5a8ccff252468a551a12f7cbd77d",
+      "bytes": 43840,
+      "status": 200
+    },
+    {
+      "source": "funcern_selection",
+      "kind": "page2",
+      "url": "https://funcern.br/concursos/?page=2",
+      "observed_at": "2026-09-07T23:34:36.849936+00:00",
+      "file": "funcern_selection-page2.html",
+      "sha256": "5461d845a2ce0d3c9f912b41bdadd15289a33f0d434204a3dcf078d95c426ba9",
+      "bytes": 50743,
+      "status": 200
+    }
+  ]
+}

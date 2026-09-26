@@ -1,0 +1,76 @@
+{
+  "schema": "t012.apta.prepare-500-diagnosis-r14.v1",
+  "recorded_at": "2026-09-13T13:25:38.6720923-03:00",
+  "scope": "read_only_diagnosis",
+  "source_id": 48,
+  "source": "apta_open",
+  "external_id": "708",
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "owner_user_id": 1,
+  "request": {
+    "method": "POST",
+    "route": "/tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "document_title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+    "kind": "retificacao",
+    "expected_page_count": 1,
+    "artifact_id": "art-apta-ret2-708",
+    "artifact_sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+    "artifact_byte_len": 76767,
+    "url": "redacted; exact manifest URL not persisted here",
+    "credentials": "redacted"
+  },
+  "api_log": {
+    "status": 500,
+    "access_line": "POST .../document-review/tp-reviewed-9ca7ffc16743d555cc227a038f337bfa/prepare-preserved HTTP/1.1 500 Internal Server Error",
+    "exception_type": "ValueError",
+    "exception_message": "APTA/708: page count drift",
+    "traceback_file": "/app/app/tenderproof/apta_aragarcas_parser.py",
+    "traceback_line": 27,
+    "function": "_texts",
+    "source_contract": {
+      "expected_pages": 20,
+      "expected_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+      "expected_byte_len": 362093
+    },
+    "log_capture_note": "Exact traceback was captured from the correlated API log before the subsequent Docker client pipe became inaccessible; no secret-bearing lines retained."
+  },
+  "worker_log": {
+    "correlated_apta_prepare_exception": false,
+    "note": "No correlated worker traceback was observed; the failure is synchronous in the API request."
+  },
+  "read_only_state_after": {
+    "pending": true,
+    "documents": [
+      {
+        "kind": "retificacao",
+        "title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+        "artifact_sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+        "artifact_byte_len": 76767,
+        "page_count": 1
+      }
+    ],
+    "approved": false,
+    "proposal_created": false,
+    "canonical_mutation": false
+  },
+  "counts_last_verified": {
+    "contests": 34,
+    "catalog_sources": 33,
+    "configured_sources": 99,
+    "canonical_cargos": 182,
+    "proposals": 99,
+    "versions": 92,
+    "outbox": 92,
+    "notifications": 91,
+    "push_devices": 0,
+    "favorites": 0,
+    "alerts": 1
+  },
+  "diagnosis": {
+    "root_cause": "The strict APTA parser is invoked while validating the run's principal artifact and requires exactly 20 pages. The run currently carries the one-page retification artifact, so _texts raises page count drift; the route does not translate this ValueError into a bounded 4xx.",
+    "safe_next_step": "Repair/fail-closed the parser/document-review contract so a retification is validated against the principal 20-page artifact and the one-page amendment separately; then obtain a new explicit review gate before any retry.",
+    "status": "APTA_R14_BLOCKED_HTTP500",
+    "retry": false,
+    "mutations": false
+  }
+}

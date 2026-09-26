@@ -1,0 +1,59 @@
+{
+  "schema": "t012.avancasp.document-review-live-r2-r3-diagnosis.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "avancasp_open",
+  "source_id": 54,
+  "external_id": "272",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "receipt": "document-review-live-r2-first-artifact-receipt-20260913.json",
+  "finding": {
+    "classification": "STALE_PARSER_PIN",
+    "operator_selection": "CORRECT",
+    "reason": "The staged artifact is the first pending manifest URL bbc8... and exactly matches R2's first-document package. The evidence-only Avança parser still pins a prior aa3e... URL/SHA (b0ba...), so parser rejection is expected.",
+    "transformation": "NONE_PROVEN",
+    "save_commit": "TenderProofStore uses artifact_id-SHA.pdf; the recorded c60... basename is the exact hash-addressed form and local round-trip preserves bytes/SHA/length."
+  },
+  "manifest": {
+    "title": "EDITAL COMPLETO 04/09/2026",
+    "kind": "edital",
+    "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf"
+  },
+  "staging": {
+    "artifact_id": "avancasp-open-edital-272-bbc8f6fc",
+    "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+    "byte_len": 750381,
+    "pages": 48,
+    "basename": "avancasp-open-edital-272-bbc8f6fc-c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637.pdf"
+  },
+  "old_parser_pin": {
+    "document_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "byte_len": 742298,
+    "pages": 48,
+    "location": "docs/execucao/evidencias/T012/avancasp_open/avancasp_parser.py"
+  },
+  "r3_correction": {
+    "proposal_file": "docs/execucao/evidencias/T012/avancasp_open/avancasp_parser_r3_pin.py",
+    "replace_pin_with": {
+      "document_url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48
+    },
+    "scope": "source-specific evidence proposal only; production/backend parser untouched"
+  },
+  "guardrails": {
+    "new_prepare": false,
+    "approve": false,
+    "reject": false,
+    "api": false,
+    "docker": false,
+    "catalogue_or_live_mutation": false
+  },
+  "tests": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/test_document_review_live_r2_r3.py",
+    "command": "from backend: .venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/avancasp_open/test_document_review_live_r2_r3.py",
+    "result": "4 passed"
+  }
+}

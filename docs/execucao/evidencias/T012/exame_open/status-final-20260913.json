@@ -1,0 +1,74 @@
+{
+  "schema": "t012.exame-open.status.v1",
+  "recorded_at": "2026-09-13",
+  "source": {
+    "source_id": 20,
+    "name": "exame_open",
+    "organization": "Exame Auditores & Consultores",
+    "listing_url": "https://concursos.exameconsultores.com.br/index/1/",
+    "adapter": "ObservedNetAdapter / source registry exame_open"
+  },
+  "decision": "BLOCKER_DUPLICATE_ALREADY_PUBLISHED",
+  "candidate_reviewed": {
+    "external_id": "544",
+    "title": "P.M. de Santana de Pirapama - Concurso Público",
+    "detail_url": "https://concursos.exameconsultores.com.br/informacoes/544/",
+    "document_url": "https://anexos-r2.selecao.net.br/uploads/140/concursos/544/anexos/5ec58b83-6a63-4405-b905-1a1b7ba7770d.pdf",
+    "artifact_id": "art-16edada9e8",
+    "artifact_path": "backend/.tenderproof/r30new/exame_open/artifacts/art-df48dee888-83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553.pdf",
+    "sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+    "bytes": 2664803,
+    "pages": 46,
+    "observed_at": "2026-09-08T00:06:42.312279Z",
+    "identity": {
+      "titulo": "Prefeitura Municipal de Santana de Pirapama",
+      "orgao": "Prefeitura Municipal de Santana de Pirapama",
+      "edital_numero": "01/2026",
+      "cidade_uf": "Santana de Pirapama/MG"
+    },
+    "currency": {
+      "registration_start": "2026-10-12T09:00:00-03:00",
+      "registration_end": "2026-11-10T23:59:00-03:00",
+      "status_on_2026_09_13": "FUTURE_REGISTRATION_CONFIRMED"
+    }
+  },
+  "documented_fields": {
+    "source": "backend/.tenderproof/r30new/exame_open/processing/fa88d374b9cf5e059fad4a2fe406feae4c49cbf4803083ec521d3c75ee22557c/b38096dc682b4d07b4018793fc1e0655/output.json",
+    "identity_evidence": [
+      {"page": 1, "snippet": "PREFEITURA MUNICIPAL DE SANTANA DE PIRAPAMA ... Edital de abertura de Concurso Público nº 01/2026"},
+      {"page": 2, "snippet": "Regime Jurídico: Estatutário."}
+    ],
+    "schedule_evidence": [
+      {"page": 46, "snippet": "Período de inscrições 12/10/2026 a 10/11/2026 (das 9h do primeiro dia às 23h59 do último dia)"},
+      {"page": 46, "snippet": "Aplicação da Prova Objetiva de Múltipla Escolha 29/11/2026"}
+    ],
+    "cargo_table": {"pages": [21, 22, 23], "status": "documented_but_not_promoted_due_duplicate"},
+    "taxa_and_remuneration": {"pages": [21, 22, 23], "status": "documented_but_not_promoted_due_duplicate", "unit": "BRL"}
+  },
+  "duplicate_check": {
+    "published": true,
+    "published_concurso_id": 1,
+    "published_source": "exame_open",
+    "evidence": "docs/tenderproof-batch30-publication-live.json :: samples[exame_open]",
+    "published_identity": {"titulo": "P.M. de Santana de Pirapama - Concurso Público", "orgao": "Prefeitura Municipal De Santana De Pirapama", "edital_numero": "01/2026", "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553"},
+    "preserved_runs": ["tpr-808e203c2032", "tpr-a343487b9ac0"],
+    "conclusion": "All successful preserved Exame runs converge to external_id 544 and the same PDF already represented by published contest 1. No second selection/detail is available in the preserved eight-run packet."
+  },
+  "gates": {
+    "identity": "PASS_OFFLINE",
+    "artifact_pin": "PASS_OFFLINE",
+    "currency": "PASS_FUTURE_REGISTRATION",
+    "non_duplication": "FAIL_ALREADY_PUBLISHED",
+    "source_specific_parser": "NOT_RUN",
+    "strong_preflight_revalidate_sqlite": "NOT_RUN",
+    "reviewed_run": false,
+    "proposal": false,
+    "import": false,
+    "publish": false,
+    "apply": false,
+    "network": false,
+    "docker": false,
+    "db_mutation": false
+  },
+  "resume_condition": "Select a different preserved Exame detail with a distinct external_id and identity, or extend acquisition in a separately authorized task. Do not create a duplicate proposal for external_id 544 or reuse published concurso_id 1."
+}

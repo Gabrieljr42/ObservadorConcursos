@@ -1,0 +1,11 @@
+{
+  "schema": "observador.t010.id14.pos_apply.v1",
+  "recorded_at": "2026-09-13T02:10:02.5160494-03:00",
+  "scope": "ID14 only; ID16 untouched",
+  "proposal": {"id": "tpp-c3f5d96741ac903d3c70469a4af3972a", "hash": "3a791132db28b5befa44c6cf6d9245eaa8dadc81a6cb275b63031ef6d1eb1c42", "approved_fields": ["cargos"], "final_state": "applied", "version_id": 90},
+  "apply": {"first_http": 200, "replay_http": 200, "replay_same_version": true, "replay_new_version": false, "replay_new_outbox": false, "replay_new_notification": false},
+  "counts": {"before": {"proposals": 93, "versions": 89, "outbox": 89, "notifications": 88}, "after": {"proposals": 93, "versions": 90, "outbox": 90, "notifications": 89}},
+  "receipts": {"outbox": {"id": 90, "version_id": 90, "state": "delivered", "attempts": 1}, "notification": {"id": 89, "concurso_id": 14, "notification_type": "version_update_90"}},
+  "contest14_api": {"cargo_count": 2, "names": ["Articulador(a) político-pedagógico", "Técnico de apoio"], "vagas_imediatas": null, "vagas_ampla_concorrencia": null, "vagas_pcd": null, "cadastro_reserva": null, "jornada": null, "remuneracao_observacao": ["R$/hora de serviço efetivamente prestada; varia por etapa; não é mensal", "limite máximo por etapa/período de atividade; não é mensal"], "identity_and_inscricoes_preserved": true, "prova_data": null},
+  "gate": "PASS; ID14 applied/replay idempotent"
+}

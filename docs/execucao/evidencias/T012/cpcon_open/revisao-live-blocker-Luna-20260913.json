@@ -1,0 +1,54 @@
+{
+  "schema": "t012.cpcon.live-blocker-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_BLOCKED",
+  "scope": "read_only receipt/reconciliation; no API, DB, pilot or catalogue mutation",
+  "identity_and_run": {
+    "source_id": 35,
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "run_id": "tp-reviewed-d5a97b3c28480927445e02c413470637",
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "byte_len": 498894,
+    "pages": 13,
+    "import": "validated/imported reference_only, owner_user_id=1"
+  },
+  "blocker": {
+    "http": 422,
+    "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+    "eligible_fields": [],
+    "blocked_fields": {
+      "titulo": "trecho, página, origem ou vínculo documental inválido",
+      "orgao": "trecho, página, origem ou vínculo documental inválido",
+      "edital_numero": "trecho, página, origem ou vínculo documental inválido",
+      "cargos": "valor não reproduzido pelo extrator sobre os bytes preservados",
+      "inscricao_inicio": "campo não extraído; preservar baseline",
+      "inscricao_fim": "campo não extraído; preservar baseline",
+      "prova_data": "campo não extraído; preservar baseline",
+      "taxa": "campo não extraído; preservar baseline"
+    },
+    "interpretation": "The imported ReviewedRun is structurally validated, but its evidence/value set is not reproduced by the fresh normal extractor/revalidation path; the proposal endpoint correctly fails closed before creation."
+  },
+  "checkpoint": {
+    "before_after_equal": true,
+    "concursos": 34,
+    "distinct_sources": 33,
+    "cargos": 196,
+    "versions": 92,
+    "outbox": 92,
+    "notifications": 91,
+    "proposals": 97
+  },
+  "mutations": {
+    "proposal_created": false,
+    "version_created": false,
+    "outbox_created": false,
+    "notification_created": false,
+    "catalogue_created": false,
+    "approve": false,
+    "apply": false
+  },
+  "duplicate_check": "PASS: source_id=35/external_id absent from catalog duplicate check",
+  "next_gate": "Regenerate or accept a corrected evidence envelope whose literal snippets/values reproduce fresh extraction; do not retry this run until independent review."
+}

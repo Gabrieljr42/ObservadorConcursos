@@ -1,0 +1,26 @@
+{
+  "schema": "t012.ufu_selection.luna-envelope-r6-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "scope": "only immutable final snapshot plus R6 receipt/handoff; no R3 operational use, no live",
+  "pins": {
+    "snapshot_sha256": "c0f7d2dbf286ddb0d7e95295c64a6486c6733aa414b44b1f7a8fe39a241c8303",
+    "canonical_payload_sha256": "d8ee8f25098087ed7a3a2d4b59bdd6a77e30b1a3b8ec5419b1b778e132ca64d3",
+    "importer_sha256": "f93541eaff2b22cb2d6fa26beb52b5dfb0de0ad4b4cde27f29e230651a1bc1e1"
+  },
+  "checks": {
+    "snapshot_and_contract": "PASS: snapshot hash matches receipt; owner 1, source 40, external 1843, concurso_id null, exact five fields and pinned artifact are present.",
+    "single_process_recompute": "PASS in one direct process: tp-reviewed-b7ebd09edb838a9837d2a7a32e7a6d9c.",
+    "three_process_recompute": "FAIL in independent execution: three fresh invocations returned tp-reviewed-1c587b6b8bc29f5d8aef531527e45a09, not the receipt's b7eb ID. One invocation ran under a separate CodexSandboxOffline path, demonstrating workspace/runtime divergence.",
+    "receipt_handoff": "PASS as recorded: receipt/handoff bind b7eb, target null, owner 1, source 40 and importer SHA f93541…",
+    "proposal_release": "BLOCKED: independent three-process equality is not reproducible from this review execution, so the run binding cannot be independently accepted."
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-final-ufu40-1843-snapshot.json",
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-final-ufu40-1843-r6-receipt.json",
+    "docs/execucao/evidencias/T012/ufu_selection/live-envelope-final-ufu40-1843-r6-handoff.json"
+  ],
+  "required_fix": "Reproduce the three-process result in one immutable runtime whose module path/content hash is f93541… and bind all processes to the c0f7 snapshot; only then permit live import/proposal preflight.",
+  "mutations_performed": false
+}

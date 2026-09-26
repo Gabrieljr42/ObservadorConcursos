@@ -1,0 +1,57 @@
+{
+  "schema": "t010.id8.independent-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "mode": "offline_read_only",
+  "decision": "DEVOLVIDO_PAGE_LIMIT_GATE",
+  "identity_provenance": {
+    "source": "idib_open",
+    "external_id": "362",
+    "concurso_id": 8,
+    "detail_url": "https://concurso.idib.org.br/Concurso.aspx?ID=362",
+    "pdf_url_preserved": true,
+    "artifact_id": "art-cdeead8742",
+    "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "byte_len": 1048994,
+    "page_count": 75,
+    "owner_user_id": 1
+  },
+  "field_audit": {
+    "cargo_pages": [3, 72],
+    "cargo_count": 1,
+    "cargo": "Guarda Civil Municipal",
+    "vagas": {"imediatas": 9, "ampla": 6, "pcd": 1, "ppp": 2, "indigenas": 0, "quilombolas": 0, "cr": 11},
+    "remuneracao": "salário-mínimo + 30% (periculosidade) + adicional noturno",
+    "remuneracao_unit": "BRL/mês + adicionais explicitados; base não quantificada",
+    "jornada": "40h semanais",
+    "requisitos": "Ensino Médio Completo; CNH ou Permissão para Dirigir categoria AB ou superior",
+    "taxa": "BRL 156.67",
+    "registration": "02/09/2026 14h–05/10/2026 23h59 (p.5)",
+    "exam": "06/12/2026 (p.68; receipt canonical extractor)",
+    "u_fffd": 0,
+    "no_invented_salary_base": true
+  },
+  "parser_route": {
+    "module": "backend/app/tenderproof/idib_reriutaba_jobs.py",
+    "version": "idib-reriutaba-362/1",
+    "fields_route": "fields.py has targeted prova and cargos branches for source idib_open/external_id 362",
+    "guards": ["SHA/byte length", "selected pages 3 and 72", "truncated/error", "U+FFFD", "verbatim evidence"],
+    "tests": "9 passed (test_tenderproof_idib.py + test_idib_reriutaba_jobs.py)",
+    "receipt": "preflight passed; replacement_characters=0; targeted tests 2 passed; run reviewed model pass",
+    "run": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e",
+    "reference_only": true,
+    "baseline_cargos": null,
+    "dry_run": "validated",
+    "canonical_proposal": "none persisted"
+  },
+  "page_limit_diagnosis": {
+    "observed": "isolated create_proposal/_revalidate returned HTTP 422 page_limit after processing the intact 75-page PDF",
+    "current_global_limit": 60,
+    "safe_conclusion": "A selected-evidence package cannot bypass the current worker: processing_worker counts the original PDF pages before extraction. Preserve page_count=75 and SHA; do not raise the global limit.",
+    "required_fix": "Add a narrowly targeted SHA+source+external allowlist/exception for this exact artifact (or an equivalent prevalidated selected-page package that cryptographically binds the original SHA and page_count=75), with resource/output limits unchanged.",
+    "fail_closed_tests_required": ["75-page exact SHA accepted only by targeted path", "wrong SHA/source/external rejected", "76-page or mutated PDF rejected", "U+FFFD/truncated selected pages rejected", "global 60-page limit unchanged", "no proposal persisted on any failure"],
+    "deploy_import_release": false
+  },
+  "mutation": "none",
+  "next_gate": "Implement and test targeted SHA-pinned page-limit handling; rerun preflight, parser/fields route, dry-run and isolated create_proposal, then independent review. No deploy/import/apply before that."
+}

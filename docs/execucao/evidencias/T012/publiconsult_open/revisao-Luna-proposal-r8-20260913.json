@@ -1,0 +1,41 @@
+{
+  "schema": "t012.publiconsult.proposal-r8-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "REJECT",
+  "reason": "R8 fixes the missing title and excludes the TAF correctly, but the proposed raw-PDF extractor does not provide the required complete fail-closed error/truncation contract for backend integration.",
+  "confirmed": {
+    "observed_422": "proposal creation required reproduced titulo, orgao and edital_numero; prior parser supplied only orgao/edital",
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+    "orgao": "Prefeitura Municipal de Votuporanga/SP",
+    "edital_numero": "1/2026",
+    "principal_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "principal_bytes": 720592,
+    "principal_pages": 25,
+    "principal_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "taf_excluded": true,
+    "omitted": ["cargos", "remuneracao", "taxa", "prova_data", "documentos"]
+  },
+  "guards": {
+    "source_external_url_sha_bytes": "implemented",
+    "page_count_nonempty": "implemented",
+    "U+FFFD": "implemented",
+    "page_error_flag": "missing: raw bytes API has no page error/truncated/processing_error input",
+    "truncation_guard": "missing",
+    "page_order_explicit": "missing: only count is checked",
+    "marker_checks": "implemented for VOTUPORANGA, 1/2026 and EDITAL de ABERTURA de INSCRI"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_proposal_r8.py",
+    "result": "5 passed",
+    "interpretation": "covers source/external/URL, byte/SHA alteration and output omission, but not page errors/truncation/order"
+  },
+  "required_correction": [
+    "Accept the dispatcher PageText/list contract or explicitly validate page order and per-page error/truncated/processing_error flags before extraction.",
+    "Add negative tests for each error/truncation/page-order case and preserve evidence binding to artifact SHA/page/source URL."
+  ],
+  "side_effects": {"backend_edited": false, "api": false, "live": false, "database": false}
+}

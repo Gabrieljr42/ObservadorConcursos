@@ -1,0 +1,33 @@
+{
+  "schema": "t012.klc_open.luna-parser-r7-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "KLC_PARSER_R7_REJECT_FOR_INTEGRATION",
+  "scope": "read_only; no network, API, DB, deployment, or catalogue mutation",
+  "checks": {
+    "artifact": "PASS: local file is 348300 bytes and SHA256 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "guards": "PASS for unconditional U+FFFD, exact length/SHA, source/external, exact document URL, page count/order, global/per-page errors and processing flags",
+    "types_and_evidence": "PASS: list[ExtractedField], formal Evidence with artifact/SHA/URL/page/snippet/json_path/validation, and _reproduced_evidence test",
+    "tests": "10 tests are declared and ten test functions are present, including size +/-1, URL drift, no strict_text bypass, dispatch and U+FFFD; execution unavailable because Python/pytest is not installed",
+    "dispatch": "PASS as a typed local boundary; normal registry wiring remains a separate pending step"
+  },
+  "blocking_findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:parse/dispatch",
+      "finding": "The parser validates content bytes and the passed document_url but never validates artifact.sha256, artifact.byte_len, artifact.url_requested or artifact.url_final inside the typed dispatch boundary. A mismatched Artifact can therefore receive emitted Evidence even though the content pin passed.",
+      "required_fix": "In dispatch, require artifact SHA/byte_len and both URLs to equal the pinned constants before parse; add mismatch tests."
+    },
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:39-43",
+      "finding": "PageText.truncated is not inspected. Only global truncated and error fields are checked, so a page marked truncated can pass if the caller omits the global flag.",
+      "required_fix": "Reject any page with truncated=true in parse/dispatch and add a regression test."
+    }
+  ],
+  "gate": "Do not promote R7 until Artifact metadata and per-page truncation are fail-closed; after those fixes, the local typed parser is suitable for integration wiring.",
+  "evidence_files": [
+    "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py",
+    "docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py",
+    "docs/execucao/evidencias/T012/klc_open/strong-preflight-r3.json"
+  ]
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "faperj-archive",
+    "url": "https://faperj.br/?id=35.5.3",
+    "observed_at": "2026-09-08T14:53:11.828734+00:00",
+    "max_bytes": 2097152,
+    "status": 302,
+    "location": "/arquivo_noticias.phtml",
+    "bytes": 2,
+    "original_sha256": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+    "fixture_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "file": "faperj-archive.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

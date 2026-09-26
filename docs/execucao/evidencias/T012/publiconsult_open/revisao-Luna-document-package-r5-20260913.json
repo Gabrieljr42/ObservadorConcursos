@@ -1,0 +1,29 @@
+{
+  "schema": "t012.publiconsult.document-review-package-luna-r5.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only package review; no live/API/DB mutation",
+  "verdict": "BLOCKER",
+  "reason": "R5 is a correct single-attempt package and local artifact-registration plan, but no successful prepare-preserved response is recorded; expected GET/404/409 outcomes are not observations.",
+  "checks": {
+    "owner_run": "PASS: owner_user_id=1, run_id=tp-reviewed-bea209a94599014adb6a275693a9e107, candidate 681 and exact full manifest title are explicit.",
+    "kind_identity": "PASS: API kind remains 'outro'; semantic label convocacao_taf; URL/host/path and expected pages=6 match the pending manifest.",
+    "artifact": "PASS: artifact publiconsult-open-taf-681-r2 is PDF, SHA d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7, 341466 bytes; hash-addressed basename is compatible with TenderProofStore save/commit.",
+    "store_contract": "PASS in code/plan: save_artifact_file and commit_run_artifact validate SHA/byte length and use artifact_id-SHA.pdf; existing local test proves absent blob -> registered save -> load exact bytes.",
+    "expected_guards": "UNPROVEN operationally: GET_current_before=null, GET after one case, foreign-owner 404, incompatible case 409 and blob-missing 409 are only package expectations; no owner-authenticated GET/current receipt or successful prepare receipt is present.",
+    "success": "FAIL/BLOCKER: package and receipt remain READY_FOR_REVIEW; previous exact-title r3 prepare returned HTTP 409, and diagnosis says store registration/current-case state was not proven. No prepare-preserved 200 or persisted one-case state is evidenced.",
+    "tests": "PASS: from backend, test_document_review_409_r4.py + test_document_review_r3_exact.py -> 2 passed; these are local contract tests, not proof of live success."
+  },
+  "required_before_single_retry": [
+    "Register the exact PDF through save_artifact_file or commit_run_artifact in the configured owner-1 ephemeral store, preserving the returned hash-addressed basename and artifact metadata.",
+    "Capture authenticated GET/current for owner 1 before the call and confirm no incompatible case; foreign-owner access must remain 404.",
+    "Make exactly one prepare-preserved call with the package payload and record HTTP success plus current case owner/run/artifact identity. If current case differs, stop on 409 and do not overwrite.",
+    "Only after successful prepare and normal document-review approval may the principal proposal be retried once; TAF remains a separate document."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-package-r5.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-package-r5-receipt.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/diagnostico-document-review-409-r4.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r3-receipt-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/test_document_review_409_r4.py"
+  ]
+}

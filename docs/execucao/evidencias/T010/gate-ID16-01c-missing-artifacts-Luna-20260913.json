@@ -1,0 +1,20 @@
+{
+  "schema": "t010.id16.final-gate.missing-artifacts.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "REJECT_PENDING_ARTIFACTS",
+  "requested_run_id": "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+  "checks": {
+    "workspace_search": "no match for run id or 01c65",
+    "envelope": "not present",
+    "receipt": "not present",
+    "proposal_manifest": "not present"
+  },
+  "prior_context": {
+    "run": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+    "known_blocked_proposal": "tpp-bdb86b21341b923ed50b5346fcc3ddb6",
+    "known_blocked_proposal_policy": "NEVER_APPROVE"
+  },
+  "release": "BLOCKED: cannot independently confirm values, 18+1 evidence, isolated revalidate or deterministic derivations without the named files. Do not import/create proposal.",
+  "mutations": {"pilot": false, "approve": false, "apply": false}
+}

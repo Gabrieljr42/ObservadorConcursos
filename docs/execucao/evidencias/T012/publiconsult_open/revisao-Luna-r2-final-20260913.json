@@ -1,0 +1,18 @@
+{
+  "schema": "t012.publiconsult.luna-r2-final-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "PUBLICONSULT_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "normalization": "PASS with simulated positive canonical ID: standard ReviewedRun validation succeeds; all evidence fields are lists; forbidden observacao removed; observed_at present",
+    "identity": "PASS: external_id=681, source_number=56 publiconsult_open, Votuporanga/SP Processo Seletivo 1/2026; source row remains separate BASELINE_ONLY",
+    "artifact": "PASS: PDF SHA 7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f, 720592 bytes; receipt envelope SHA 0bcbe57c7d4c6b1ca815fcf73856c55b50df27f3a6ce7c129c69e3158e0d9c6c",
+    "fields": "PASS: title/orgao/edital/dates, 2 functions (20+CR each), remuneration, 32/40h, requirements and fees are preserved with literal PDF evidence; prova marked as planned/unconfirmed in original_value",
+    "duplicate": "PASS: Publiconsult absent from sanitized baseline and no Votuporanga/681 match in preserved catalogue snapshot",
+    "tests": "PASS: six fail-closed tests; post-normalization checks pass except intended null-ID gate",
+    "safety": "PASS: reference_only=true, pending_fields empty, no network/pilot/apply"
+  },
+  "condition": "Integrator must allocate the canonical concurso_id through the normal route, rerun model validation/import dry-run and perform normal duplicate/CAS review before proposal; do not alter fields/evidence.",
+  "conclusion": "R2 is ready for canonical allocation followed by guarded import/proposal; approval/apply remain outside this authorization."
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "t004.adapter-gap-inventory-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "INVENTORY_R3_ACCEPT",
+  "reviewed_artifacts": [
+    "docs/execucao/evidencias/T004/inventario-lacunas-adaptadores-20260913.json",
+    "docs/execucao/evidencias/T004/inventario-lacunas-adaptadores-20260913.md",
+    "docs/execucao/evidencias/revisao-inventario-adapters-T004-Luna-r2-20260913.json"
+  ],
+  "checks": {
+    "schema_and_shape": "PASS: JSON parses; matrix totals=99; eight runtime entries; seven focal content gaps plus one closed/accepted case are consistently separated.",
+    "namespace": "PASS: matrix_source_number is explicitly distinct from concurso_id; examples #5 vs concurso 5 and #18 vs concurso 18 are correct.",
+    "factory_mapping": "PASS: AOCPConnector for source 3; ConfigurableHTMLConnector for sources 8,23,25,28,41,61; InstitutionalSelectionConnector for source 90. Matches registry/factory and r2.",
+    "runtime_factory_absent": 0,
+    "promotion_guard": "PASS: integration_status remains not_certified; implementation_state is not promoted; no import/proposal and no pilot mutation claimed.",
+    "gap_distinction": "PASS: factory/instantiation gaps are empty; acquisition/identity/escopo/homologacao and runner/document gaps remain explicitly bounded.",
+    "distribution_mapping": "PASS: concurso IDs 5,18,20,22,23,24,25 map to institutoconsulplan, quadrix, legatus, funcern, fgv, fcc, facet respectively; runner_ready=false and cargo fields absent/null as T004 distribution states."
+  },
+  "nonblocking_note": "For future reproducibility, list backend/app/connectors/registry.py directly in inputs (the mapping is already evidenced transitively by the accepted r2 and registration strings). No correction blocks r3 acceptance."
+}

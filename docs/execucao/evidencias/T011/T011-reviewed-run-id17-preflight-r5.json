@@ -1,0 +1,15 @@
+{
+  "schema": "t011.id17.preflight.v1",
+  "envelope": "T011-reviewed-run-id17.json",
+  "run_id": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+  "processes": [
+    {"status": "validated", "dry_run": true, "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+    {"status": "validated", "dry_run": true, "fields": ["titulo", "orgao", "edital_numero", "cargos"]}
+  ],
+  "deterministic": true,
+  "isolated_only": true,
+  "canonical_import": false,
+  "network": false,
+  "pilot_touched": false,
+  "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -c 'ReviewedRun.model_validate_json(Path(...).read_text()); import_reviewed_run(..., dry_run=True)'"
+}

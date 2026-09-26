@@ -1,0 +1,231 @@
+{
+  "observed_at": "2026-09-08T15:30:28.039361+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99verbena",
+  "cycles": [
+    {
+      "source": "verbena_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-350f4cd42053",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoverbena.ufg.br/",
+          "file": "verbena_selection-cycle1-listing-b7acc50223.html",
+          "sha256": "e30f48c81e79b7199efa78d11d08535694ae2e5e6ad7845d31c0abbe40e743dc",
+          "bytes": 99548,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:30:29.134984+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d1acc97aabfe",
+          "candidate": {
+            "candidate_id": "verbena_selection-2026-pires",
+            "title_observed": "IV - Concurso Público da Câmara Municipal de Pires do Rio - GO",
+            "detail_url_observed": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+            "external_id": "concurso-camara-pires-do-rio",
+            "observed_at": "2026-09-08T15:30:29.175191Z",
+            "source": "verbena_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+              "file": "verbena_selection-cycle1-detail-b2d728079b.html",
+              "sha256": "242894489f98c951f5109856ba1ac0c0c4950e6ba0e2537077ac5897ee0cb269",
+              "bytes": 12617,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:30:29.675699+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "verbena_selection-doc-d3e0d3d162f0d711",
+            "title": "Edital de Abertura Nº 01/2026",
+            "url_requested": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "url_final": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura Nº 01/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-a17f2149f4",
+            "sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+            "byte_len": 1688048,
+            "url_requested": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "url_final": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:30:29.918283Z",
+            "storage_path": "art-a17f2149f4-32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225.pdf"
+          },
+          "total_pages": 46,
+          "processed_pages": 46,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=46/46",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.094
+    },
+    {
+      "source": "verbena_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-56985b9deaef",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://institutoverbena.ufg.br/",
+          "file": "verbena_selection-cycle2-listing-c203386324.html",
+          "sha256": "54998be1594339b3c18f62aafe75e8035d053c2dae8f6faffbac667772435e8f",
+          "bytes": 99548,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T15:30:32.225054+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-4b502a9f0718",
+          "candidate": {
+            "candidate_id": "verbena_selection-2026-pires",
+            "title_observed": "IV - Concurso Público da Câmara Municipal de Pires do Rio - GO",
+            "detail_url_observed": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+            "external_id": "concurso-camara-pires-do-rio",
+            "observed_at": "2026-09-08T15:30:32.250037Z",
+            "source": "verbena_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+              "file": "verbena_selection-cycle2-detail-b2d728079b.html",
+              "sha256": "242894489f98c951f5109856ba1ac0c0c4950e6ba0e2537077ac5897ee0cb269",
+              "bytes": 12617,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T15:30:32.704669+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "verbena_selection-doc-d3e0d3d162f0d711",
+            "title": "Edital de Abertura Nº 01/2026",
+            "url_requested": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "url_final": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura Nº 01/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s).",
+            "acquisition_request": null
+          },
+          "artifact": {
+            "artifact_id": "art-4abeea0970",
+            "sha256": "32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225",
+            "byte_len": 1688048,
+            "url_requested": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "url_final": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/sistema/arquivos/editais/Edital_de_Abertura_Nº_01-2026_Concurso_Público_da_Câmara_Municipal_de_Pires_do_Rio-GO.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:30:32.946034Z",
+            "storage_path": "art-4abeea0970-32b216b2a0c0b95405a08f963999634bdeaa7803680701381fdb9e3b472bc225.pdf"
+          },
+          "total_pages": 46,
+          "processed_pages": 46,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=46/46",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.015
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "tenderproof.t010.id16.r2-operational-gate.v1",
+  "recorded_at": "2026-09-13T02:38:00-03:00",
+  "baseline": {
+    "contests": 33,
+    "sources": 99,
+    "cargos": 162,
+    "versions": 90,
+    "proposals": 93,
+    "outbox": 90,
+    "notifications": 89,
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_delivery_attempts": 0
+  },
+  "backup": {
+    "bundle_prefix": "pilot-20260913T055455247Z",
+    "isolated_restore": {"contests": 33, "versions": 90, "proposals": 93, "outbox": 90, "notifications": 89}
+  },
+  "deploy": {
+    "scope": "api-only",
+    "image": "sha256:18ac8083665d70a10de49e224d6447219a45f8d1ea956b396b4cbb6d07dd37c0",
+    "health": 200,
+    "read_regressions": {"8": 200, "17": 200, "32": 200}
+  },
+  "document_review": {
+    "run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+    "artifact_sha256": "e5d57b83713d09e9095a23fd7767f3ab8f9c109cad8aa1636cb4f1bd13b38f05",
+    "artifact_bytes": 397534,
+    "artifact_pages": 23,
+    "pending_before": true,
+    "current_case": null,
+    "prepare_http": 409,
+    "prepare_detail": "A lista oficial mudou. Execute nova coleta antes da revisão",
+    "draft_submitted": false,
+    "approved": false,
+    "pending_after": true
+  },
+  "proposal": {"created": false, "approve": false, "apply": false},
+  "counts_after": {"versions": 90, "proposals": 93, "outbox": 90, "notifications": 89},
+  "next_gate": "Reconcile/refetch the official document manifest through normal collection before preparing the SHA-bound no-op; no SQL or proposal retry."
+}

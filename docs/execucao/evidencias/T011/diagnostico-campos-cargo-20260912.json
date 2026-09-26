@@ -1,0 +1,35 @@
+{
+  "schema": "t011.checked-fields-trace.v1",
+  "diagnosed_at": "2026-09-12T19:45:02-03:00",
+  "scope": [17, 18, 20, 22, 23, 24, 25],
+  "sources": {
+    "accepted_package": "docs/execucao/evidencias/T011/pacotes-proposta-revisao.json",
+    "manifest": "docs/execucao/evidencias/T011/manifesto-propostas-offline.json",
+    "dispatch": "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md",
+    "proposal_review": "docs/execucao/evidencias/revisao-gate-final-T011-Luna-20260912.json",
+    "catalog_snapshot": "docs/T004-AUDITORIA-CATALOGO-32-20260912-current.json"
+  },
+  "finding": {
+    "classification": "documentary_fields_not_transferred_to_persisted_run",
+    "package_checked_scope": "includes cargos/vagas/remuneracao/jornada/taxa for records where explicitly documented",
+    "manifest_http_payload": "only run_id and concurso_id; schema-valid ProposalIn does not carry extracted fields",
+    "proposal_effect": "normal create_proposal derives eligible fields from persisted run; review evidence shows only identity/registration fields",
+    "api_effect": "catalog snapshot reports cargos absent_in_api, vagas/salario/taxa absent_in_api and cargos_count null",
+    "reference_only": true,
+    "units_preserved": true
+  },
+  "records": [
+    {"id": 17, "run_id": "tp-tcj-8ab7bff262fa52d4a80aa00058905974-1", "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f", "proposal_id": "tpp-02c29e4baa1b036eab1d02de59a65c74", "proposal_checked_fields": ["titulo", "edital_numero", "inscricao_inicio", "inscricao_fim"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "no_change"},
+    {"id": 18, "run_id": "tp-tcj-0d43415604dd529fb88764b330b70894-2", "artifact_sha256": "5f245894ba03dca5352a79fc991880b95e3fcf907fa38a1218ed2c4a373f0ab3", "proposal_id": "tpp-e592fd8efd3baebe12b3b76a696a04f3", "proposal_checked_fields": ["titulo", "orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "no_change"},
+    {"id": 20, "run_id": "tp-tcj-fcb88161aca85300b7577a2c9bb3ca8d-1", "artifact_sha256": "774a05bbd92b0505628a8c18f1d272b4297118b4dc1c63ecd4c8c334fe8ed7ce", "proposal_id": "tpp-49afc9246a42a37353b05df1bf11650a", "proposal_checked_fields": ["titulo", "orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "no_change"},
+    {"id": 22, "run_id": "tp-tcj-78d603004e005e7889bbab3e41ebb061-1", "artifact_sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca", "proposal_id": "tpp-89d123b46f995642fae59e48e0c2ea25", "proposal_checked_fields": ["titulo", "orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "proposed"},
+    {"id": 23, "run_id": "tp-tcj-9ba68e23375a5ff7a0fef6e8ea7bbbc5-1", "artifact_sha256": "6086daa5015ef0052e2cc3b35b81e5de7344d19312726f9594c9e44e4e98681a", "proposal_id": "tpp-23904639452716008c2fe67f1af38f63", "proposal_checked_fields": ["titulo", "orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "proposed"},
+    {"id": 24, "run_id": "tp-tcj-52dedb38da915f1899046496075c743c-2", "artifact_sha256": "c9e43c7a9e5ed7b13bde0310a4c5dfc935febc3ce992024029ef72db9aced5c3", "proposal_id": "tpp-4e99e2ad1f2d8d8bf41150a564e958ca", "proposal_checked_fields": ["titulo", "orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "proposed"},
+    {"id": 25, "run_id": "tp-tcj-e34b795398cb56cc8260c5df21b3e3e4-1", "artifact_sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221", "proposal_id": "tpp-988abe18c6d18f774bb4688c7656ea86", "proposal_checked_fields": ["orgao", "edital_numero"], "missing_from_run_and_api": ["cargos", "vagas", "remuneracao", "carga_horaria", "taxa"], "state": "proposed"}
+  ],
+  "correction": {
+    "action": "prepare_new_reviewed_run_per_record from preserved artifact, populating only checked fields and evidence SHA; then create a new normal proposal",
+    "do_not": ["reuse current proposals", "promote pending fields", "infer remuneration temporal unit", "retry ID 21"],
+    "status": "not_executed; no POST/DB/pilot"
+  }
+}

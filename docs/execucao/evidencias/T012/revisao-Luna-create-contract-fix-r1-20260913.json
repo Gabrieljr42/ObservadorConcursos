@@ -1,0 +1,25 @@
+{
+  "schema": "t012.create-contract-fix-luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only contract/transction review; no API, Docker, live or catalog mutation",
+  "checks": {
+    "null_create": "PASS: ReviewedRun accepts null only as explicit CREATE handoff; ProposalIn requires source_id when target is null, and canonical.resolve requires exact source/candidate plus strong revalidation before proposal.",
+    "positive_update": "PASS: positive concurso_id remains constrained gt=0 and existing update/review paths pass regressions.",
+    "nonpositive": "PASS: zero/negative ReviewedRun and ProposalIn values are rejected by validation.",
+    "allocation": "PASS: no separate allocator; apply is the sole transactional creator and obtains the DB primary key after final revalidation.",
+    "concurrency_and_dedupe": "PASS: proposal unique key/deterministic lookup, apply CAS, canonical identity uniqueness and source/external checks remain enforced.",
+    "owner_isolation": "PASS: run owner check, owner-scoped run IDs, proposal ownership and replay guards remain in place.",
+    "rollback_and_effects": "PASS by existing publication transaction tests: failed/concurrent apply rolls back; version/outbox/notification are created only within the successful transaction.",
+    "legacy_compatibility": "PASS: existing positive-target runs and persisted applied ledger remain covered; null is additive CREATE semantics."
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py::test_apta_reviewed_envelope_matches_import_schema_after_canonical_allocation backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_canonical.py backend/tests/test_tenderproof_publication_post.py",
+    "result": "25 passed",
+    "compileall": "PASS",
+    "known_unrelated": "Broader APTA extraction fixture failure remains separate: existing fields['titulo'] is failed; it does not affect this contract test or publication regressions."
+  },
+  "residual_condition": "Import remains reference-only until normal target allocation and proposal review; approve/apply must continue through existing revalidation/CAS transaction.",
+  "mutations_performed": false
+}

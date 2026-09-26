@@ -1,0 +1,28 @@
+[
+  {
+    "name": "fapesb-reda",
+    "url": "https://www.fapesb.ba.gov.br/reda/",
+    "observed_at": "2026-09-08T15:09:02.331493+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 111433,
+    "original_sha256": "b287682da485d67fab988d11b63cdf9f2db6e9fd5fe506f2a05ebc136a805069",
+    "fixture_sha256": "84b61bbb3af0277d821d87002f504420b72bce63bae4c2b72645681678a79900",
+    "file": "fapesb-reda.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "fapesb-reda-search",
+    "url": "https://www.fapesb.ba.gov.br/?s=reda",
+    "observed_at": "2026-09-08T15:09:02.331493+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 98359,
+    "original_sha256": "b35c2225d4065ff2467ec0c5d86da4434beb22b48561d8025c6a724679ea64d0",
+    "fixture_sha256": "4c6c98fcaf814ac95ca451135c86e162f006f2d4ad19f7ff84323a348b19c977",
+    "file": "fapesb-reda-search.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  }
+]

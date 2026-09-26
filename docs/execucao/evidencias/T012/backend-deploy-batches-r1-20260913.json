@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-13T10:24:37.0969820-03:00",
+  "result": "T012_BACKEND_BATCHES_DEPLOYED_READY_FOR_LIVE_PROPOSALS",
+  "accepted_gates": [
+    "docs/execucao/evidencias/T012/revisao-indep-dispatch-batch2-r3-20260913.json",
+    "docs/execucao/evidencias/T012/revisao-indep-batch1-repro-r2-20260913.json",
+    "docs/execucao/evidencias/T012/ufu_selection/revisao-Luna-integration-r1-20260913.json"
+  ],
+  "preflight": {"health": "ok", "checkpoint": {"concursos": 34, "distinct_sources": 33, "raw_cargos": 196, "canonical_published_cargos": 182}},
+  "build": {"image": "sha256:bf9170323cb767d36105995d9465109addd032c9d9695bc37ae9da95d637b0a2", "services_built": ["api", "worker", "scheduler"], "services_recreated": ["api", "worker", "scheduler"], "services_preserved": ["web", "postgres", "redis"], "volumes_preserved": true},
+  "validation": {"health": "ok", "login": 200, "web_inicio": 200, "web_concurso_34": 200, "checkpoint": {"concursos": 34, "distinct_sources": 33, "raw_cargos": 196, "canonical_published_cargos": 182}, "db_counts": {"proposals": 97, "versions": 92, "outbox": 92, "notifications": 91, "push_devices": 0}},
+  "side_effects": {"imports": 0, "proposals_created": 0, "approve": 0, "apply": 0, "catalogue_mutations": 0},
+  "note": "A soma bruta de 196 inclui 14 cargos do ReviewedRun FAFIPA bloqueado; o contador canônico publicado permanece 182. Nenhuma fonte foi importada/proposta/aplicada nesta rodada."
+}

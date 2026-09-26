@@ -1,0 +1,48 @@
+{
+  "schema": "t011.independent-review.v4",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "DEVOLVIDO",
+  "read_only": true,
+  "mutations": [],
+  "material_recheck": {
+    "pdf_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "pdf_byte_len": 1094969,
+    "rows": 27,
+    "vagas_total": 79,
+    "ac": 74,
+    "pcd": 5,
+    "cadastro_reserva": null,
+    "identity": "contemax_open / concursos-em-andamento/prefeitura-municipal-de-cubati-pb / concurso 17"
+  },
+  "current_files_sha_timestamp": [
+    {"path": "docs/execucao/evidencias/T011/ID17-parser-luna-20260912.json", "sha256": "717496a766866259aa8f909224891b137d0b8b3d1d6ff5477b2a8921310bb4e1", "mtime": "2026-09-12T23:41:12.4709863-03:00"},
+    {"path": "docs/execucao/evidencias/T011/gate-ID17-r3-preflight-20260912.json", "sha256": "54b15e48a51d2da850367d1624c8fc52a348a79f640cc3072696460f1a20a923", "mtime": "2026-09-12T23:38:49.8421776-03:00"},
+    {"path": "docs/execucao/evidencias/T011/reviewed-runs-inputs.json", "sha256": "bec6a5bb6d26e63ab66a9f7348b7a2f7a33112a81e005ea55cc728a9a4154a6e", "mtime": "2026-09-12T20:50:49.6758384-03:00"}
+  ],
+  "determinism_reconciliation": {
+    "integrator_claimed_run_id": "tp-reviewed-e3bd05e59ca40b87f992fb3d78cca8bf",
+    "label_in_preflight": "t011-reviewed-17-6caf7901",
+    "current_envelope_file": null,
+    "current_envelope_sha256": null,
+    "_run_id_rederived_in_two_processes": false,
+    "dry_run_repeated_on_same_envelope": false,
+    "finding": "The corrected ReviewedRun envelope (including complete fields/evidence serialization) is not preserved in the workspace. Therefore the claimed e3bd ID cannot be independently recomputed, compared, or shown stable; the label mismatch is unresolved and may be version/serialization drift or a construction bug. The old t011-reviewed label is not an importer-derived ID.",
+    "canonical_absence": "gate receipt reports new corrected run/proposal absent; legacy tp-tcj run and tpp-02c... no_change remain distinct and must not be reused"
+  },
+  "parser_and_gate": {
+    "parser_preflight": "corrected AC=74/PCD=5/CR null; no 75 aggregate or p19 subtotal",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "baseline_cargos": null,
+    "dry_run_reported": "validated; fields titulo/orgao/edital_numero/cargos",
+    "network_or_pilot": "gate reports network=false and stopped before import/proposal"
+  },
+  "required_before_acceptance": [
+    "Persist the exact corrected tenderproof.reviewed-run.v1 envelope used by the integrator, with its SHA-256 and timestamp.",
+    "Run two independent processes against that same envelope and bytefile; both must derive tp-reviewed-e3bd05e59ca40b87f992fb3d78cca8bf and dry-run status validated.",
+    "Use only that canonical derived ID for one import and later one proposal; do not use t011-reviewed-17-6caf7901 or legacy tp-tcj run."
+  ],
+  "authorization": "No import, proposal creation, approval, apply, or UI/quadro action authorized until deterministic reconciliation passes."
+}

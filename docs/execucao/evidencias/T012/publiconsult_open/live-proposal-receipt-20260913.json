@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult-live-proposal-receipt.v1",
+  "timestamp": "2026-09-13T13:36:21.8803943Z",
+  "status": "BLOCKED_DOCUMENT_REVIEW",
+  "source_id": 56,
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "canonical_allocation": {"materialized_review_envelope_id": 35, "catalog_created": false, "proposal_apply_allocation_deferred": true, "temporary_id_rejected": 999999},
+  "health": {"http": 200, "app": "Observador de Concursos", "image": "sha256:bf9170323cb767d36105995d9465109addd032c9d9695bc37ae9da95d637b0a2"},
+  "checkpoint_before_after": {"contests": 34, "sources_configured": 99, "proposals": 97, "versions": 92, "outbox": 92, "notifications": 91, "push_devices": 0, "canonical_published_cargos": 182, "raw_run_cargos": 196},
+  "envelope": {"path": "docs/execucao/evidencias/T012/publiconsult_open/live-reviewed-envelope-r1-canonical35.json", "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "dry_run": "validated", "import": "imported", "fields": ["orgao", "edital_numero"], "baseline": {"orgao": null, "edital_numero": null}},
+  "artifact": {"sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25},
+  "duplicate_cas": {"source_id": 56, "external_id": "681", "catalog_match": false, "canonical_identity_match": false, "proposal_match": false},
+  "proposal_attempt": {"endpoint": "POST /tenderproof/publications/proposals", "body": {"run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "source_id": 56, "authorization": null}, "http": 409, "retry": false, "reason": "document-review pending: existing Publiconsult 681 state contains one pending document (TAF convocação); proposal creation gate refused before persistence"},
+  "document_review_pending": {"source": "publiconsult_open", "candidate_key": "681", "kind": "outro", "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II", "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf"},
+  "apply": false,
+  "version_outbox_notification_delta": {"versions": 0, "outbox": 0, "notifications": 0},
+  "next_gate": "review/resolve the pending document through the normal document-review flow, then re-run duplicate/CAS and proposal once; no retry in this receipt"
+}

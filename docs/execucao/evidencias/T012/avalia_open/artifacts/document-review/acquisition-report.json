@@ -1,0 +1,50 @@
+{
+  "schema": "t012.avalia.document-review-acquisition.v1",
+  "started_at": "2026-09-13T10:55:24.476464+00:00",
+  "source": "avalia_open",
+  "external_id": "631",
+  "detail_url": "https://www2.avalia.org.br/concurso.jsp?id=631",
+  "scope": "exactly two pending URLs; bounded GET only",
+  "requests_expected": 2,
+  "documents": [
+    {
+      "pending_id": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a",
+      "kind": "outro",
+      "title": "1º Termo de Retificação do Edital de Abertura nº 001/2026 - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "status": "ACQUIRED",
+      "sha256": "e8853dce1e756741e850a21fe9004585b35243bc67d806d6bd91c8a3abd17f8f",
+      "byte_len": 102501,
+      "content_type": "application/pdf",
+      "url_final": "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "file": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "redirect_chain": [
+        "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf"
+      ]
+    },
+    {
+      "pending_id": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38",
+      "kind": "edital",
+      "title": "Edital de Abertura - Concurso Público nº 001/2026",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "status": "ACQUIRED",
+      "sha256": "8de3f149e76c2978d04765dc330fc28bff976feabe1012b6a1a600d365b437a2",
+      "byte_len": 634236,
+      "content_type": "application/pdf",
+      "url_final": "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "file": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "redirect_chain": [
+        "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf"
+      ]
+    }
+  ],
+  "network": true,
+  "db_write": false,
+  "proposal_dispatch": false,
+  "requests_used": 2,
+  "diagnostics": [
+    "http: 200, 102501 bytes, 0 redirects",
+    "http: 200, 634236 bytes, 0 redirects"
+  ],
+  "finished_at": "2026-09-13T10:55:24.624750+00:00"
+}

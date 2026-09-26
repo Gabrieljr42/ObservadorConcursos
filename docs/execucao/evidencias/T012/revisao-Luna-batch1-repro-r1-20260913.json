@@ -1,0 +1,45 @@
+{
+  "schema": "t012.batch1-repro.luna-review-r1.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read_only; no live API/DB writes, proposal, apply or deployment",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py",
+    "result": "10 passed, 81 warnings",
+    "side_effects": "tests assert zero PublicationProposal, ConcursoVersion and PublicationOutbox rows"
+  },
+  "fafipa_4208": {
+    "verdict": "PASS",
+    "checks": [
+      "exact source/external, SHA 26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f, 3630911 bytes, detail/document URLs",
+      "strong fallback organization Município de Mirador - PR + edital 001/2026",
+      "fields.py source branch replaces generic title/orgao/edital/dates/cargos with fresh parser output",
+      "evidence is regenerated from preserved pages and stale identity/SHA drift is rejected",
+      "round-trip _revalidate eligible identity, dates and cargos with no writes"
+    ]
+  },
+  "cpcon_002_2026": {
+    "verdict": "PASS",
+    "checks": [
+      "exact source/external, SHA 6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05, 498894 bytes, URL pin and 13-page fixture",
+      "fields.py replaces generic identity and cargos through extract_fields; six cargo rows are eligible",
+      "fresh literal evidence is used; stale title 001/2026 is rejected by _reproduced_evidence",
+      "taxa/prova remain omitted; remuneration unit remains explicitly unspecified",
+      "round-trip real _revalidate passes without resolver TypeError or publication writes"
+    ]
+  },
+  "batch2_preservation": "No batch2 files were changed by this review; prior batch2 dispatch gate remains a separate accepted deploy gate.",
+  "conditions": [
+    "Use only the accepted FAFIPA R4 and CPCON R2 reviewed envelopes/receipts; superseded CPCON receipt/envelope must remain excluded.",
+    "Canonical allocation and normal proposal gate remain required; this review does not authorize import, approve or apply."
+  ],
+  "evidence": [
+    "backend/app/tenderproof/fields.py:489-620",
+    "backend/app/tenderproof/fafipa_t012_r4.py",
+    "backend/app/tenderproof/cpcon_t012.py",
+    "backend/tests/test_t012_fafipa_dispatch_r5.py",
+    "backend/tests/test_cpcon_t012.py",
+    "docs/execucao/evidencias/T012/fafipa_open/integration-repro-r1.json",
+    "docs/execucao/evidencias/T012/cpcon_open/integration-repro-r1.json"
+  ]
+}

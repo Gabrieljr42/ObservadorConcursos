@@ -1,0 +1,12 @@
+{
+  "schema":"t012.klc_open.document-review-receipt-r7.v1",
+  "status":"READY_FOR_INDEPENDENT_DOCUMENT_REVIEW",
+  "package":"document-review-package-r7-retificacao.json",
+  "prepare_payload":"document-review-prepare-payload-r7.json",
+  "pending_document":"Retificação 1 - Alteração da Data da Prova",
+  "artifact_sha256":"0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+  "artifact_bytes":423600,"pages":1,
+  "diff":{"prova_data":{"from":"2026-05-10","to":"2026-05-17"},"no_field_change":false},
+  "tests":{"command":"backend/.venv/Scripts/python.exe -m pytest docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py -q","result":"13 passed","retificacao_extract":"PASS; U+FFFD=0; SHA/bytes/pages verified"},
+  "gates":{"owner":1,"source":57,"external_id":"632","review": "independent required","proposal":false,"apply":false,"network":false,"docker":false,"catalogue":false}
+}

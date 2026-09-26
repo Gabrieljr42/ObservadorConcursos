@@ -1,0 +1,1469 @@
+{
+  "generated_at": "2026-09-08T13:11:52.751940+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-continuous-replay-verified-20260908\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-7b150c97b6b5582daf436d4818280203-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 1,
+      "proposal_id": "tpp-b2d3790112e76fbda1712738709d2cb0",
+      "version_id": 1,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "P.M. de Santana de Pirapama - Concurso Público"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Santana De Pirapama"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-02a13de33514501fafc230cba38d9c4c-1",
+      "source": "exame_open",
+      "document_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+      "fields": {
+        "titulo": {
+          "value": "P.M. de Santana de Pirapama - Concurso Público",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Santana De Pirapama",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 1,
+      "proposal_id": "tpp-7f9e61af5a9672d64a4e9f0d20b51d36",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-8395ccbdc74458b8ac65c60b56057325-1",
+      "source": "objetiva_open",
+      "document_sha256": "7c42b44a0226d52297842252924f97a5ae07d4c92706a5f576e960769e8be463",
+      "fields": {
+        "titulo": {
+          "value": "GUAPORÉ/RS - Câmara Municipal - Concurso Público 001/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Guaporé",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 2,
+      "proposal_id": "tpp-e7d435a06bc19d47f20df39c23e18bbd",
+      "version_id": 2,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "GUAPORÉ/RS - Câmara Municipal - Concurso Público 001/2026"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Guaporé"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "001/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-93da8f9dab225e7aa69d13de4c69c579-1",
+      "source": "objetiva_open",
+      "document_sha256": "7c42b44a0226d52297842252924f97a5ae07d4c92706a5f576e960769e8be463",
+      "fields": {
+        "titulo": {
+          "value": "GUAPORÉ/RS - Câmara Municipal - Concurso Público 001/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Guaporé",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 2,
+      "proposal_id": "tpp-f7e7d39fd5e09d261dcf4ee0c073b73c",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-d0e7bacf9a695896bb6c571b9ad3d81b-1",
+      "source": "sigma_open",
+      "document_sha256": "b2c123149dd32405293d380f3e9848bc6e31632ca741c7af37b623ba723a962b",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO N.º 001.2026 - PREFEITURA MUNICIPAL DE ITAJU",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Itaju",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "28.50"
+            ],
+            "escopo": "tem 1.2. 1.2. O emprego público temporário a ser provido, carga horária de trabalho e salário são os co",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-97062cfbfa025418ab7605b30b4132b4-1",
+      "source": "sigma_open",
+      "document_sha256": "b2c123149dd32405293d380f3e9848bc6e31632ca741c7af37b623ba723a962b",
+      "fields": {
+        "titulo": {
+          "value": "PROCESSO SELETIVO SIMPLIFICADO N.º 001.2026 - PREFEITURA MUNICIPAL DE ITAJU",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Itaju",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "28.50"
+            ],
+            "escopo": "tem 1.2. 1.2. O emprego público temporário a ser provido, carga horária de trabalho e salário são os co",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-aa3100ea3fce561c964aa2d29c26761d-1",
+      "source": "fafipa_open",
+      "document_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público do Município de Mirador - PR",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-6e7a25774adb57d69218566aa6b6d8a3-1",
+      "source": "fafipa_open",
+      "document_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público do Município de Mirador - PR",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-19f8dfec5370599fabd3d9b4525b0aaf-1",
+      "source": "omni_open",
+      "document_sha256": "8a0b4dfc5371f779f15175201a0fdb871faee4aaf710e840ecc6c6e0d9ce1f28",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 002/2024 - Prefeitura Municipal de Papanduva - SC",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Municipio De Papanduva - Sc",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2024-07-16",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2024-08-15",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-a607e21cdd725c76bb24ec8b19764331-1",
+      "source": "omni_open",
+      "document_sha256": "8a0b4dfc5371f779f15175201a0fdb871faee4aaf710e840ecc6c6e0d9ce1f28",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 002/2024 - Prefeitura Municipal de Papanduva - SC",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Municipio De Papanduva - Sc",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2024-07-16",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2024-08-15",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-bc0817ca08ca5a899c5e271915bbbf39-1",
+      "source": "w2_open",
+      "document_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2016 - PREFEITURA MUNICIPAL DE ESPÍRITO SANTO DO DOURADO/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Espírito Santo Do Dourado",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-717e7efbc505560e8c514a4115f61bd7-1",
+      "source": "w2_open",
+      "document_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Público - 001/2016 - PREFEITURA MUNICIPAL DE ESPÍRITO SANTO DO DOURADO/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Espírito Santo Do Dourado",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "conflict"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-afc0f06a04045eb087bc0130b5d8c74a-1",
+      "source": "consulpam_open",
+      "document_sha256": "649269876c1a1cd6aa94a80f721fb9553859f771503de159949f07f7677e0d3a",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE JAGUARIBE-CE(EDITAL 004/2026-SAAE-CONCURSO PÚBLICO)",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Jaguaribe",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "004/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "2282.68",
+              "2533.78"
+            ],
+            "escopo": "RELAÇÃO DE REQUISITOS, REMUNERAÇÃO E CARGA HORÁRIA CÓD. CARGO TOTAL VI+CR VAGAS IMEDIATAS (VI) CADASTRO RESERVA (CR) SALÁRIO INICI",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 3,
+      "proposal_id": "tpp-4203d3409c1c44e6a28f8d582afd4656",
+      "version_id": 3,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "PREFEITURA MUNICIPAL DE JAGUARIBE-CE(EDITAL 004/2026-SAAE-CONCURSO PÚBLICO)"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Jaguaribe"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "004/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-f2749b509772594884bdfc8d0af9b300-1",
+      "source": "consulpam_open",
+      "document_sha256": "649269876c1a1cd6aa94a80f721fb9553859f771503de159949f07f7677e0d3a",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE JAGUARIBE-CE(EDITAL 004/2026-SAAE-CONCURSO PÚBLICO)",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Jaguaribe",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "004/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "2282.68",
+              "2533.78"
+            ],
+            "escopo": "RELAÇÃO DE REQUISITOS, REMUNERAÇÃO E CARGA HORÁRIA CÓD. CARGO TOTAL VI+CR VAGAS IMEDIATAS (VI) CADASTRO RESERVA (CR) SALÁRIO INICI",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 3,
+      "proposal_id": "tpp-34ff8bc756c04bc3c19614e7cff2db41",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-881eb2c797c450a7b8d65fa081cd0306-1",
+      "source": "idcap_open",
+      "document_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Privado 001/2026 - OGMO Itajaí - Categoria Capatazia/Arrumador",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-764462889d035f16a0083bb6222d0343-1",
+      "source": "idcap_open",
+      "document_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+      "fields": {
+        "titulo": {
+          "value": "Processo Seletivo Privado 001/2026 - OGMO Itajaí - Categoria Capatazia/Arrumador",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "001/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-1a12ac38fbb459e9813f6cfce6b79e70-1",
+      "source": "quadrix_open",
+      "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Valença",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Valença",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3650.83",
+              "4468.62"
+            ],
+            "escopo": "s vagas estão distribuídas conforme a tabela a seguir: Cod. Cargo Nível de escolaridade/Requisito Vencimento AC PCD PPP Total 400 Professor III N",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-f0c9cab9c0ee59c38287442cf8116db9-1",
+      "source": "quadrix_open",
+      "document_sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Valença",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Valença",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3650.83",
+              "4468.62"
+            ],
+            "escopo": "s vagas estão distribuídas conforme a tabela a seguir: Cod. Cargo Nível de escolaridade/Requisito Vencimento AC PCD PPP Total 400 Professor III N",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-9cb74af8fbcc519d9365b86b702669b3-1",
+      "source": "cotec_open",
+      "document_sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Itacarambi/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Itacarambi",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 4,
+      "proposal_id": "tpp-e649cc7f5d921829c7d2b12b9544aee4",
+      "version_id": 4,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "Câmara Municipal de Itacarambi/MG"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Câmara Municipal De Itacarambi"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-a312a29af151553fa71ccde7a37d0f6f-1",
+      "source": "cotec_open",
+      "document_sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+      "fields": {
+        "titulo": {
+          "value": "Câmara Municipal de Itacarambi/MG",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Câmara Municipal De Itacarambi",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 4,
+      "proposal_id": "tpp-96d2fc05b12d2ac871041c67ae7a2b11",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-43c3b27352145a7a9daba6918da45ebf-1",
+      "source": "aguia_open",
+      "document_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Bálsamo",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Bálsamo",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-09fc7fdff91c51d8b19ba084149fd9d9-1",
+      "source": "aguia_open",
+      "document_sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Bálsamo",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Bálsamo",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-7499569f468154ed8cbc5bffebbb4b7c-1",
+      "source": "institutomais_open",
+      "document_sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+      "fields": {
+        "titulo": {
+          "value": "São Sebastião PREV / SP - Concurso Público – Edital Nº 01/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De São Sebastião",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 5,
+      "proposal_id": "tpp-7093aa7f6dd94c774918f3e2ab34043a",
+      "version_id": 5,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "São Sebastião PREV / SP - Concurso Público – Edital Nº 01/2026"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Município De São Sebastião"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2026"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-3299d4ad76305ec59261fb1a8fcd3358-1",
+      "source": "institutomais_open",
+      "document_sha256": "aa95d8a4f3de7f686500727cf8b607a08f5381262cfa12bf3d0ffa854995ed34",
+      "fields": {
+        "titulo": {
+          "value": "São Sebastião PREV / SP - Concurso Público – Edital Nº 01/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Município De São Sebastião",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 5,
+      "proposal_id": "tpp-a5b31dc602929ceb0087d3ac8f9b98aa",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-028c2856fe4f5f1ab02eb8ba5c8f5049-1",
+      "source": "reisesreis_open",
+      "document_sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Itabirinha",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2025",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "applied",
+      "action": "create",
+      "concurso_id": 6,
+      "proposal_id": "tpp-63b81150226b61f96de808422ce0d6e8",
+      "version_id": 6,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {
+        "titulo": {
+          "label": "título",
+          "old": null,
+          "new": "PREFEITURA MUNICIPAL DE ITABIRINHA"
+        },
+        "orgao": {
+          "label": "órgão",
+          "old": null,
+          "new": "Prefeitura Municipal De Itabirinha"
+        },
+        "edital_numero": {
+          "label": "número do edital",
+          "old": null,
+          "new": "01/2025"
+        },
+        "link_edital": {
+          "label": "link do edital",
+          "old": null,
+          "new": "[URL preservada no ledger]"
+        },
+        "content_hash": {
+          "label": "hash do conteúdo bruto",
+          "old": null,
+          "new": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-dd44e9f53e97556bb7984b228b1230e4-1",
+      "source": "reisesreis_open",
+      "document_sha256": "9a6c3edcae6c543b314e59070fbc9a4420adc6fe90cf6e1fc53a76115d5dfde5",
+      "fields": {
+        "titulo": {
+          "value": "PREFEITURA MUNICIPAL DE ITABIRINHA",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": "Prefeitura Municipal De Itabirinha",
+          "state": "supported"
+        },
+        "edital_numero": {
+          "value": "01/2025",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "no_change",
+      "action": "update",
+      "concurso_id": 6,
+      "proposal_id": "tpp-73048d65d2a99207a77848f90a955846",
+      "version_id": null,
+      "approved_fields": [
+        "edital_numero",
+        "orgao",
+        "titulo"
+      ],
+      "diff": {},
+      "repeat_same_result": true
+    },
+    {
+      "run_id": "tp-tcj-fbb2b55837b25f4cb9228a31e730322a-1",
+      "source": "publiconsult_open",
+      "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-99f098ca97c453f196579d0039a65b83-1",
+      "source": "publiconsult_open",
+      "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+      "fields": {
+        "titulo": {
+          "value": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-ce0bb68874175840be81dcbeadfbbbf0-1",
+      "source": "ufu_selection",
+      "document_sha256": "da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Técnico-Administrativo PROGEP - Edital 62/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2026-05-06",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-05-28",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3181.39",
+              "5215.39"
+            ],
+            "escopo": "VIII, da Constituição da República Federativa do Brasil, na CARGOS NÍVEL \"D\" CIDADE TOTAL DE VAGAS REMUNERAÇÃO CARGA HORÁRIA SEMANAL TÉCNICO DE L",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-3d171a536c655c5eb9db85fbc47c34ea-1",
+      "source": "ufu_selection",
+      "document_sha256": "da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf",
+      "fields": {
+        "titulo": {
+          "value": "Concurso Técnico-Administrativo PROGEP - Edital 62/2026",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": "2026-05-06",
+          "state": "supported"
+        },
+        "inscricao_fim": {
+          "value": "2026-05-28",
+          "state": "supported"
+        },
+        "remuneracao": {
+          "value": {
+            "valores_observados": [
+              "3181.39",
+              "5215.39"
+            ],
+            "escopo": "VIII, da Constituição da República Federativa do Brasil, na CARGOS NÍVEL \"D\" CIDADE TOTAL DE VAGAS REMUNERAÇÃO CARGA HORÁRIA SEMANAL TÉCNICO DE L",
+            "nota": "Valores por cargo conforme contexto; não inferir mínimo/máximo global."
+          },
+          "state": "supported"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-e77a5eb3a075577a9e18bf6fc5c66812-1",
+      "source": "uniselva_selection",
+      "document_sha256": "eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750",
+      "fields": {
+        "titulo": {
+          "value": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "008/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    },
+    {
+      "run_id": "tp-tcj-5fcf14a42cd15cb3a54ca9405bd4c7be-1",
+      "source": "uniselva_selection",
+      "document_sha256": "eb67c53d28b1d9324822c8dc3595b4a66b13b3463bf3c05a3fba164d6625f750",
+      "fields": {
+        "titulo": {
+          "value": "EDITAL 062/2026 CONTRATAÇÃO DE ESTAGIÁRIO(A) GRADUAÇÃO EM SECRETARIADO, ADMINISTRAÇÃO OU COMUNICAÇÃO SOCIAL",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": "008/2026",
+          "state": "supported"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 60,
+  "source_filter": null,
+  "counts": {
+    "concursos": 6,
+    "versions": 6,
+    "outbox": 6,
+    "notifications": 0
+  },
+  "states": {
+    "applied": 6,
+    "no_change": 6,
+    "blocked": 20
+  },
+  "sources_with_creation": [
+    "consulpam_open",
+    "cotec_open",
+    "exame_open",
+    "institutomais_open",
+    "objetiva_open",
+    "reisesreis_open"
+  ],
+  "temporary_database_removed": true
+}

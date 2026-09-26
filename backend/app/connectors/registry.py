@@ -806,13 +806,13 @@ MASTER_SOURCES: list[SourceDefinition] = [
         default_uf='MA',
         frequency_minutes=720,
     ),
-    # 79. FAPECE
+    # 79. FUNCAP — preserve the legacy source key used by the inventory.
     SourceDefinition(
         source_type='fapece_selection',
-        name='FAPECE (Ceará) - Seleções',
-        banca='FAPECE',
-        base_url='https://fapece.ce.gov.br',
-        list_urls=['https://fapece.ce.gov.br'],
+        name='FUNCAP (Ceará) - Seleções',
+        banca='FUNCAP',
+        base_url='https://www.ce.gov.br/funcap/',
+        list_urls=['https://montenegro.funcap.ce.gov.br/sugba/editais-site-wordpress/'],
         category='institutional_selection',
         default_uf='CE',
         frequency_minutes=720,
@@ -952,7 +952,12 @@ MASTER_SOURCES: list[SourceDefinition] = [
         name='FAPEG (Goiás) - Seleções',
         banca='FAPEG',
         base_url='https://goias.gov.br/fapeg',
-        list_urls=['https://goias.gov.br/fapeg/categoria/editais/'],
+        list_urls=[
+            'https://goias.gov.br/administracao/processos-seletivos-simplificados/',
+            'https://goias.gov.br/fapeg/editais/inscricoes-abertas/',
+            'https://goias.gov.br/fapeg/editais/em-andamento/',
+            'https://goias.gov.br/fapeg/editais/encerrados/',
+        ],
         category='institutional_selection',
         default_cidade='Goiânia',
         default_uf='GO',

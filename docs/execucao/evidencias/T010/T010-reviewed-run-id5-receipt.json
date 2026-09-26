@@ -1,0 +1,16 @@
+{
+  "schema": "t010.id5.reviewed-run.receipt.v1",
+  "record_id": 5,
+  "status": "READY_FOR_REVIEW",
+  "envelope": "docs/execucao/evidencias/T010/T010-reviewed-run-id5.json",
+  "envelope_sha256": "a19ebeecdb08e24a8f6518092813bef52c866ef93449b3580af22576e2a6e7b1",
+  "run_id": "tp-reviewed-a2c424da86d00219b4709266d52a25fe",
+  "source": "institutoconsulplan_open",
+  "external_id": "unai2026",
+  "artifact_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+  "fields": ["cargos"],
+  "cargo_count": 3,
+  "validation": {"reviewed_run_model":"pass","import_dry_run":"validated","extract_fields":"cargos supported; titulo/orgao/edital/inscricoes supported; prova_data generic unknown; remuneracao top-level unknown"},
+  "reproduction": {"evidence_equal":true,"value_equal":true,"isolated_proposal":false,"network":false,"db_pilot":false},
+  "gate":"independent review; no proposal/apply performed"
+}

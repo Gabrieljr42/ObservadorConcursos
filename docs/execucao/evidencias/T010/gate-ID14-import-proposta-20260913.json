@@ -1,0 +1,11 @@
+{
+  "schema": "observador.t010.id14.import_proposal.v1",
+  "recorded_at": "2026-09-13T01:58:32.9672687-03:00",
+  "run_id": "tp-reviewed-f3755a775f9b16a6a1ca2aeb5b0ea45c",
+  "dry_run": {"status": "validated", "fields": ["cargos"]},
+  "import": {"status": "imported", "approve_apply": false},
+  "proposal": {"id": "tpp-c3f5d96741ac903d3c70469a4af3972a", "hash": "3a791132db28b5befa44c6cf6d9245eaa8dadc81a6cb275b63031ef6d1eb1c42", "state": "proposed", "contest_id": 14, "eligible_fields": ["cargos"], "baseline_cargos": null, "baseline_prova_data": null, "proposed_cargos_count": 2},
+  "payload_checks": {"identity_and_inscriptions_preserved": true, "vagas_imediatas": null, "vagas_ampla_concorrencia": null, "vagas_pcd": null, "cadastro_reserva": true, "remuneration_units": ["R$/hora de serviço efetivamente prestada; varia por etapa; não é mensal", "limite máximo por etapa/período de atividade; não é mensal"], "jornada": null},
+  "counts_after": {"proposals": 93, "versions": 89, "outbox": 89, "notifications": 88},
+  "gate": "PASS; aguardando revisão independente pós-import"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "t010.id6.final-preimport-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "scope": "Libera somente build/deploy do parser, backup verificado, import normal e criação de proposta; mantém approve/apply bloqueados até revisão pós-persistência.",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "identity_owner": {
+    "envelope_owner_user_id": 1,
+    "pilot_checkpoint_user_id": 1,
+    "compatible": true,
+    "explanation": "A criação de proposta exige run.owner_user_id == usuário autenticado; r2 corrigiu o proprietário para o operador local."
+  },
+  "run_id_contract": {
+    "computed": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "receipt": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18",
+    "owner_change_invariance_verified": true,
+    "reason": "_run_id constrói a identidade somente com source, concurso_id, external_id, artifact_sha256 e fields semanticamente limpos; owner_user_id, timestamps, path e evidence_id não participam."
+  },
+  "artifact_and_identity": {
+    "path": "docs/execucao/evidencias/T010/id6.pdf",
+    "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "byte_len": 597314,
+    "source": "imeso_open",
+    "external_id": "139",
+    "concurso_id": 6,
+    "source_id": 17,
+    "detail_url": "https://portal.imeso.com.br/edital/ver/139",
+    "artifact_url": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf",
+    "hash_bytes_match": true
+  },
+  "fields_and_evidence": {
+    "field_names": ["cargos"],
+    "pending_fields": [],
+    "cargo_rows": 11,
+    "microareas": "1–11, cada uma individual",
+    "values": "1 imediata + CR, AC 1, PcD 0, BRL 3242.00/mês, 40h, requisito literal e taxa 120.00",
+    "proof_date_or_unknown_promoted": false,
+    "parser_direct": "supported; value e units iguais ao envelope; 11 evidências literais na página 22",
+    "evidence_canonicalization": "aceita: envelope usa IDs t010-id6-cargo-01..11 e validation.ok=true; parser/runtime exclui evidence_id da identidade e confirma snippets, SHA, URL, página e método"
+  },
+  "catalogue_and_conflict": {
+    "checkpoint_get": "user=1; contest 6/source 17/external 139; cargos=null",
+    "run_get": "404 para tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18 antes do import",
+    "proposal_or_duplicate": "nenhum observado",
+    "material_diff_expected": "cargos null -> 11 linhas"
+  },
+  "validation": {
+    "dry_run": {"status": "validated", "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18", "persisted": false},
+    "isolated_create_proposal": "pass; fixture SQLite isolado, sem piloto",
+    "regression_tests": "7 passed (test_imeso_berizal_jobs.py + test_reviewed_run_import.py)",
+    "network_writes": false,
+    "pilot_db_writes": false
+  },
+  "gate_conclusion": "ACEITA para import + criação de proposta somente após backup verificado e confirmação pós-import do run/owner; não autoriza approve/apply."
+}

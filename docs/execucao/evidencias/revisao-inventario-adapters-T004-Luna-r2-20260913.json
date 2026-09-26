@@ -1,0 +1,41 @@
+{
+  "schema_version": "t004-adapter-inventory-review.v2",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "INVENTORY_REJECT",
+  "scope": "Comparação read-only do inventário de 99 fontes com MASTER_SOURCES, DEDICATED_CLASSES e get_connector; sem rede, piloto ou mutação.",
+  "finding": "O campo histórico current_adapter=null não prova ausência de adapter executável. Oito fontes têm definição no registry e todas instanciam pela factory.",
+  "sources": {
+    "status_inventory": "docs/tenderproof-product-status.json (8 entries, implementation_state=pending/current_adapter=null)",
+    "definitions": "backend/app/connectors/registry.py:63-1062, source rows at 84, 131, 269, 287, 314, 432, 622, 939",
+    "factory": "backend/app/connectors/registry.py:1066-1137",
+    "generic_classes": "backend/app/connectors/configurable.py:64; backend/app/connectors/institutional.py:17",
+    "aocp": "backend/app/connectors/dedicated/aocp.py:34; backend/app/connectors/dedicated/__init__.py:1; registry.py:1078"
+  },
+  "factory_results": [
+    {"source_number":3,"source_type":"aocp_open","factory":"AOCPConnector","registration":"dedicated","instantiable":true,"correction":"current_adapter não é ausente; atualizar para AOCPConnector, sem declarar integração completa"},
+    {"source_number":8,"source_type":"seprod_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, aquisição TLS permanece bloqueada"},
+    {"source_number":23,"source_type":"unifil_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, aquisição 403 permanece bloqueada"},
+    {"source_number":25,"source_type":"leandroferreira_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, identidade/DNS ainda não provados"},
+    {"source_number":28,"source_type":"iuds_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, TLS permanece bloqueado"},
+    {"source_number":41,"source_type":"idgran_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, DNS/identidade pendentes"},
+    {"source_number":61,"source_type":"oppus_open","factory":"ConfigurableHTMLConnector","registration":"MASTER_SOURCES fallback","instantiable":true,"correction":"não nulo; adapter genérico, identidade/escopo incompatível não homologados"},
+    {"source_number":90,"source_type":"fapemat_selection","factory":"InstitutionalSelectionConnector","registration":"MASTER_SOURCES institutional_selection fallback","instantiable":true,"correction":"não nulo; adapter institucional genérico, aquisição reset permanece pendente"}
+  ],
+  "executable_gaps": [],
+  "qualification": "Nenhum dos oito é lacuna interna de import/factory. Persistem lacunas de aquisição, identidade, escopo, detalhe e homologação; não promover como integração completa apenas por instanciabilidade.",
+  "distribution_mapping_check": {
+    "source": "docs/T004-DISTRIBUICAO-32-20260912.json records",
+    "records": [
+      {"concurso_id":5,"source":"institutoconsulplan_open","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":18,"source":"quadrix_open","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":20,"source":"legatus_open","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":22,"source":"funcern_selection","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":23,"source":"fgv_open","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":24,"source":"fcc_open","runner_ready":false,"cargos_count_api":null},
+      {"concurso_id":25,"source":"facet_open","runner_ready":false,"cargos_count_api":null}
+    ],
+    "result": "Mapping uses concurso_id as record id and source as source_type; these are not source_number. All seven mappings reproduced exactly; all are insufficient/null cargo and not runner-ready."
+  },
+  "recommendation": "Corrigir o inventário para distinguir adapter_factory/adapter_class de integration_status. Preserve pending/external blockers and require acquisition + reviewed evidence before changing implementation_state."
+}

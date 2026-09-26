@@ -1,0 +1,21 @@
+{
+  "schema": "t011.id17.post-apply-idempotency.v1",
+  "timestamp": "2026-09-13T00:03:10.3396352-03:00",
+  "proposal_id": "tpp-83d38414eccb6f38e1b1c3d7ab31b291",
+  "proposal_hash": "ffa5910d25c23192835d6d3c6f4956f388c2e60078a813958bcce59b146b157a",
+  "approval": {"fields": ["cargos"], "state": "approved_then_applied"},
+  "apply": {"state": "applied", "version_id": 85, "diff_fields": ["cargos"], "old_cargos": null},
+  "payload_checks": {"cargo_count": 27, "vagas_total": 79, "ac": 74, "pcd": 5, "cadastro_reserva_nonnull": 0, "empty_requirements": 0},
+  "outbox": {"id": 85, "state": "delivered", "version_id": 85, "attempts": 1},
+  "notification": {"id": 84, "concurso_id": 17, "type": "version_update_85"},
+  "counts_before": {"proposals": 87, "versions": 84, "outbox": 84, "notifications": 83},
+  "counts_after": {"proposals": 87, "versions": 85, "outbox": 85, "notifications": 84},
+  "replays": {
+    "apply_same_proposal": {"version_id": 85, "new_version": false, "new_outbox": false, "new_notification": false},
+    "reimport_same_run": {"run_id": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc", "status": "idempotent"}
+  },
+  "contest_get": {"contest_id": 17, "cargo_count": 27, "vagas_total": 79, "ac": 74, "pcd": 5, "cadastro_reserva_nonnull": 0, "empty_requirements": 0},
+  "health": 200,
+  "legacy_preserved": {"proposal_id": "tpp-02c29e4baa1b036eab1d02de59a65c74", "state": "no_change"},
+  "next_gate": "UI/revisão final; nenhum outro registro"
+}

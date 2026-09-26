@@ -1,0 +1,34 @@
+{
+  "schema": "tenderproof.t010.id16.run-mismatch-audit.v1",
+  "recorded_at": "2026-09-13",
+  "scope": "offline_read_only_dry_run",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id16.pdf",
+    "sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+    "bytes": 396219,
+    "pages": 23
+  },
+  "mismatch": {
+    "accepted_expected_run": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae",
+    "deployed_parser_run": "tp-reviewed-490ad729b6a00d3ecf988ddb355bab27",
+    "deployed_gate": "dry_run_validated; pilot_import=false; proposal=false",
+    "substitution": "forbidden"
+  },
+  "local_reproduction": {
+    "derivation_1": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae",
+    "derivation_2": "tp-reviewed-781d2b5b9954e1ba081ef092c6b6c8ae",
+    "equal": true,
+    "dry_run_fields": ["cargos", "prova_data"],
+    "dry_run_persisted": false,
+    "nested_cargo_evidence": false,
+    "semantic_sha256": "04892df41948bf2cfcaf16e94ea0c7d993ce15d955bf3112dcc97680e07872e7"
+  },
+  "comparison": {
+    "run_id_identity": "source, concurso_id, external_id, artifact_sha256 and semantic fields; evidence_id, candidate/document/artifact IDs, paths and timestamps are excluded or non-identity metadata",
+    "content": "same SHA-bound PDF, 18 cargos (10 immediate, 8 CR), prova_data=2025-01-12",
+    "finding": "490ad is not reproducible from the preserved envelope and current local parser route; therefore it cannot be accepted as a canonical derivation merely by ID substitution",
+    "likely_boundary": "field evidence representation (snippet/method/method_version and/or envelope serialization), not PDF provenance"
+  },
+  "decision": "BLOCK_RUN_MISMATCH; retain 781 receipt; require the exact deployed 490ad envelope or its evidence-level diff before any import/proposal/apply",
+  "mutations": {"dry_run": true, "production_import": false, "proposal": false, "apply": false}
+}

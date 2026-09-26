@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-13T09:28:08.6567560-03:00",
+  "result": "FAFIPA_LIVE_PROPOSAL_BLOCKED_REVALIDATION_EVIDENCE_DRIFT",
+  "scope": {"source_id": 69, "source": "fafipa_open", "external_id": "4208", "title": "Concurso Público do Município de Mirador - PR"},
+  "checkpoint_before": {"concursos": 34, "distinct_sources": 33, "cargos": 196, "versions": 92, "outbox": 92, "notifications": 91, "proposals": 97},
+  "duplicate_cas": {"result": "PASS", "matching_source_external": false, "matching_external_id": false},
+  "dry_run": {"result": "validated", "run_id": "tp-reviewed-97e7836300215e6847ff878a5ecdabdb", "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"], "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f", "bytes": 3630911, "pages": 38},
+  "import": {"result": "imported", "reference_only": true, "owner_user_id": 1},
+  "proposal_attempt": {"http": 422, "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida", "proposal_id": null},
+  "diagnosis": {"revalidate_eligible": [], "revalidate_blocked": {"titulo": "trecho, página, origem ou vínculo documental inválido", "orgao": "trecho, página, origem ou vínculo documental inválido", "edital_numero": "trecho, página, origem ou vínculo documental inválido", "inscricao_inicio": "valor não reproduzido pelo extrator sobre os bytes preservados", "inscricao_fim": "valor não reproduzido pelo extrator sobre os bytes preservados", "prova_data": "valor não reproduzido pelo extrator sobre os bytes preservados", "cargos": "valor não reproduzido pelo extrator sobre os bytes preservados", "taxa": "campo não extraído; preservar baseline"}, "root_cause": "ReviewedRun R3 snippets/values não reproduzem a extração fresca do parser R4/R6; fluxo normal falha fechado antes da proposta."},
+  "checkpoint_after": {"concursos": 34, "distinct_sources": 33, "cargos": 196, "versions": 92, "outbox": 92, "notifications": 91, "proposals": 97},
+  "mutations": {"proposal_created": false, "version_created": false, "outbox_created": false, "notification_created": false, "approve": false, "apply": false},
+  "next_gate": "parser/evidence envelope R5+ aceito; não retry/reimportar até nova revisão"
+}

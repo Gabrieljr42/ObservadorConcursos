@@ -1,0 +1,28 @@
+{
+  "review": "Luna proposal reject R2 post-deploy schema",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_DEPLOYED_SCHEMA_FOR_LIVE_REJECT",
+  "receipt": "backend-deploy-proposal-reject-r1-20260913.json",
+  "deployment": {
+    "image": "sha256:3b9808ea1e75cd15704e14db526faf00a3ff085fbf7de4fdccc7759cbe6bffbe",
+    "scope": "api-worker-scheduler; no live proposal rejection",
+    "postgres_schema": "receipt reports PASS_IDEMPOTENT_TWICE after DATETIME->TIMESTAMP correction",
+    "columns": ["rejected_at", "rejected_by", "rejection_reason"],
+    "backcompat": "nullable additive columns; existing proposal ledger preserved",
+    "counts_unchanged": {"contests": 34, "versions": 92, "outbox": 92, "notifications": 91, "proposals": 98}
+  },
+  "code_checks": {
+    "sqlite_type": "DATETIME",
+    "postgres_type": "TIMESTAMP",
+    "endpoint_contract": "unchanged ACCEPT R1: authorize, owner-bound 404, required reason, proposed-only CAS, idempotent rejected replay",
+    "side_effects": "rejection writes only proposal audit columns; no catalog/version/outbox/notification effects",
+    "migration": "repeatable additive branch selected by engine.dialect.name"
+  },
+  "tests": {
+    "targeted_and_canonical": "13 passed: test_tenderproof_proposal_rejection.py + test_tenderproof_canonical.py",
+    "deployment_focused": "receipt reports 2 passed",
+    "live": false
+  },
+  "operational_gate": "Use only the deployed endpoint with authenticated owner and a pending owned proposal; do not approve/apply as part of rejection. PostgreSQL verification is accepted from the deployment receipt; no additional live connection was made by this review.",
+  "mutations_by_review": false
+}

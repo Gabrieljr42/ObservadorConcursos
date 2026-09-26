@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-13T08:01:04-03:00",
+  "source": "shdias_open",
+  "source_id": 51,
+  "external_id": "MTEw/MzA4",
+  "artifact_sha256": "f7deaacf2d2c6c02195cd84d3da9c8ab3527e3fc03062ac8ebb8e321f3a750c7",
+  "artifact_bytes": 697485,
+  "artifact_pages_declared": 44,
+  "backup": {"status":"REUSED_PASS","bundle":"/backups/pilot-20260913T103843603Z-operational"},
+  "preflight": {"health":200,"duplicate_count_before":0,"canonical_source_count_before":99,"canonical_contest_count_before":33},
+  "allocation": {"source_number":51,"canonical_concurso_id":null,"rule":"not inferred; source_number never used as concurso_id"},
+  "import": {"status":"PASS","run_id":"tp-reviewed-shdias-mtew-mza4-20260913","owner_user_id":1,"reference_only":true,"sha_revalidated":true},
+  "proposal": {"status":"BLOCKED_BEFORE_PROPOSAL","proposal_id":null,"approve":false,"apply":false,"http_status":422,"detail":"TenderProof: vínculo documental forte ausente (código explícito ou órgão e edital correspondentes)"},
+  "blocker": {"stage":"publication._revalidate","forced_identity_or_concurso_id":false,"unknown_fields_added":false},
+  "after": {"canonical_contest_count":33,"canonical_source_count":99,"proposals":95,"versions":91,"outbox":91,"notifications":90,"shdias_external_match_count":0},
+  "other_sources_touched":false,
+  "next_gate":"reconcile the preserved PDF identity evidence against the current SHDias adapter/revalidation contract; do not force allocation or proposal"
+}

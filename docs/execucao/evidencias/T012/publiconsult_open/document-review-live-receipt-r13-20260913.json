@@ -1,0 +1,15 @@
+{
+  "schema": "t012.publiconsult.document-review-live-receipt-r13.v1",
+  "recorded_at": "2026-09-13T13:55:33.1092558-03:00",
+  "source_id": 56,
+  "external_id": "681",
+  "run_id": "tp-reviewed-6d188a567582fae5ac3e8c82df38e75a",
+  "owner_user_id": 1,
+  "manifest": {"title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026", "kind": "edital", "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "pages": 25, "taf_included": false},
+  "preflight": {"health": 200, "pending": false, "documents": 0, "case_id": null, "revision_hash": null},
+  "operation": {"endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare", "attempts": 1, "http": 409, "log": "POST .../prepare HTTP/1.1 409 Conflict", "contract_reason": "Não há pendências documentais para esta observação", "response_body": "client did not retain body; reason confirmed by local prepare guard/state", "approve": false, "proposal": false, "apply": false},
+  "post_state": {"pending": false, "documents": 0, "case_id": null, "revision_hash": null},
+  "counts_unchanged": {"contests": 35, "distinct_source_ids": 34, "canonical_cargos": 188, "versions": 93, "outbox": 93, "notifications": 92, "favorites": 0, "alerts": 1},
+  "result": "PUBLICONSULT_DOCUMENT_PREPARE_BLOCKED_NO_PENDING_CASE",
+  "stop_rule": "Single prepare returned 409; no retry, prepare-preserved, document approval, proposal or apply."
+}

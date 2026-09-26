@@ -1,0 +1,72 @@
+{
+  "schema": "t010.id7.pre-proposal-gate.v1",
+  "timestamp": "2026-09-12T22:31:21-03:00",
+  "operator": "Luna integrador",
+  "preflight": {
+    "run_id_absent_before_import": true,
+    "exact_proposal_absent_before_create": true,
+    "historical_target7_proposals_preserved": 2,
+    "source_id": 22,
+    "concurso_id": 7,
+    "owner_user_id": 1,
+    "artifact_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+    "artifact_byte_len": 791715
+  },
+  "backup": {
+    "bundle": "/backups/pilot-20260913T012509190Z",
+    "operational_files": 13262,
+    "operational_verify": "pass",
+    "postgres_manifest": "pg_restore --list pass",
+    "isolated_database": "id7_restore_20260912",
+    "isolated_restore_counts": {
+      "concursos": 33,
+      "sources": 99,
+      "concurso_publications": 34,
+      "concurso_versions": 83,
+      "tenderproof_publication_outbox": 83,
+      "notifications": 82,
+      "tenderproof_publication_proposals": 85
+    },
+    "canonical_database_untouched": true
+  },
+  "parser_gate": {
+    "live_api_version": "abcp-garca-2868/1",
+    "source": "abcp_open",
+    "external_id": "2868",
+    "redeploy": "not needed; parser present in live API",
+    "directed_tests": "6 passed, 1 warning"
+  },
+  "import": {
+    "dry_run": {"status": "validated", "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e", "fields": ["cargos"]},
+    "apply": {"status": "imported", "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e", "fields": ["cargos"]},
+    "persisted_readback": {
+      "owner_user_id": 1,
+      "source": "abcp_open",
+      "external_id": "2868",
+      "detail_url": "https://abcp.selecao.net.br/informacoes/2868/",
+      "artifact_sha256": "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a",
+      "validation_status": "valid",
+      "fields": ["cargos"]
+    }
+  },
+  "proposal": {
+    "http_create": 201,
+    "proposal_id": "tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "proposal_hash": "7e211ef682090674ab855a02c3c472093422015988130af96668a248695d3875",
+    "state": "proposed",
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "concurso_id": 7,
+    "source_id": 22,
+    "baseline_cargos": null,
+    "proposed_cargos_count": 1,
+    "version_id": null,
+    "get_repeat": "proposed; same hash/state",
+    "diff": {"cargos": "add Técnico Legislativo; 1 AC + CR; R$ 3378.77/mês; 35 horas semanais"}
+  },
+  "counts": {
+    "before": {"proposals": 85, "versions": 83, "outbox": 83, "notifications": 82},
+    "after": {"proposals": 86, "versions": 83, "outbox": 83, "notifications": 82}
+  },
+  "health_http": 200,
+  "gate": "aguardar revisão independente pós-import; approve/apply não executados"
+}

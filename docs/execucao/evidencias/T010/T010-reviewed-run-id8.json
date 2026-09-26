@@ -1,0 +1,72 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "idib_open",
+  "concurso_id": 8,
+  "external_id": "362",
+  "title": "CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.",
+  "detail_url": "https://concurso.idib.org.br/Concurso.aspx?ID=362",
+  "artifact": {
+    "artifact_id": "art-cdeead8742",
+    "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "byte_len": 1048994,
+    "url_requested": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+    "url_final": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T21:00:00.096867Z",
+    "content_path": "docs/execucao/evidencias/T010/id8.pdf"
+  },
+  "fields": [
+    {
+      "field_name": "cargos",
+      "value": [{
+        "nome": "Guarda Civil Municipal",
+        "vagas_imediatas": 9,
+        "cadastro_reserva": 11,
+        "vagas_ampla_concorrencia": 6,
+        "vagas_pcd": 1,
+        "vagas_ppp": 2,
+        "vagas_indigenas": 0,
+        "vagas_quilombolas": 0,
+        "remuneracao": "salário-mínimo + 30% (periculosidade) + adicional noturno",
+        "moeda": "BRL",
+        "remuneracao_observacao": "mensal_variavel; base do salário-mínimo não quantificada no edital",
+        "jornada": "40h semanais",
+        "requisitos": "Ensino Médio Completo; CNH ou Permissão para Dirigir categoria AB ou superior",
+        "taxa_inscricao": "156.67"
+      }],
+      "evidence": [
+        {
+          "evidence_id": "t010-id8-cargo-001",
+          "artifact_id": "art-cdeead8742",
+          "document_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+          "source_url": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+          "page_number": 3,
+          "snippet": "Guarda\nCivil\nMunicipal\n40h\n09\n6\n1\n2\n0\n0\n11\nEnsino Médio\nCompleto\nSalário-Mínimo +\n30%\n(periculosidade) +\nAdicional Noturno",
+          "method": "deterministic-regex",
+          "method_version": "idib-reriutaba-362/1",
+          "validation": {"ok": true}
+        },
+        {
+          "evidence_id": "t010-id8-cargo-002",
+          "artifact_id": "art-cdeead8742",
+          "document_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+          "source_url": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+          "page_number": 72,
+          "snippet": "Guarda\nCivil\nMunicipal\n40h\n09\n06\n01\n2\n0\n0\n11\nEnsino Médio\nCompleto\nSalário-Mínimo +\n30%\n(periculosidade) +\nAdicional Noturno",
+          "method": "deterministic-regex",
+          "method_version": "idib-reriutaba-362/1",
+          "validation": {"ok": true}
+        }
+      ],
+      "units": {
+        "remuneracao": "BRL/mês + adicionais explicitados no edital",
+        "jornada": "horas semanais",
+        "taxa_inscricao": "BRL/inscricao"
+      }
+    }
+  ],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-08T21:00:00.096867Z"
+}

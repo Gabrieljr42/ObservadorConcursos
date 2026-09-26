@@ -1,0 +1,14 @@
+{
+  "schema": "t012.publiconsult.live-proposal-receipt-r10.v1",
+  "timestamp": "2026-09-13T15:13:29.5922578Z",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "document_review": {"case_id": "drc-preserved-5b8ae617394ffc55fa7f3f2321677c81", "revision_hash": "cb5ea0d5910df1e4c4ccb990f4a309c3674f0abdfe4f82c2cd125f8cbf42b0ca", "pending": false, "documents": 0},
+  "preflight": {"health": 200, "login": 200, "checkpoint": 200, "catalog_match": false, "contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "outbox": 92, "notifications": 91, "favorites": 0, "alerts": 1},
+  "proposal_attempt": {"endpoint": "POST /tenderproof/publications/proposals", "body": {"run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107", "source_id": 56, "concurso_id": null, "authorization": null}, "http": 422, "detail": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida", "proposal_id": null, "persisted": false, "retry": false, "approve": false, "apply": false},
+  "gate": "BLOCKED_PUBLICONSULT_CREATE_PROPOSAL_422_R10",
+  "next_step": "Diagnose deployed source-specific revalidation/evidence reproduction for the principal edital before any further retry. No catalog mutation occurred."
+}

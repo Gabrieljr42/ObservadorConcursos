@@ -1,0 +1,48 @@
+{
+  "schema": "t012.cesgranrio27.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "CESGRANRIO_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "cesgranrio_open",
+    "source_number": 12,
+    "external_id": "27",
+    "title": "EDITAL Nº 01/2026 - Concurso Público SEMA/MT",
+    "organization": "Secretaria de Estado de Meio Ambiente do Estado de Mato Grosso - SEMA/MT",
+    "duplicate_check": "preserved event 27 absent from current 32-source catalogue and no identity collision reported"
+  },
+  "artifact": {
+    "path": "backend/.tenderproof/batch60-major-cesgranrio-live-20260908/artifacts/art-262c2f6ba7-e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f.pdf",
+    "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+    "byte_len": 1166736,
+    "pages": 81,
+    "local_hash_verified": true
+  },
+  "fields": {
+    "supported": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "taxa_inscricao", "cargos"],
+    "cargo_count": 2,
+    "profile_count": 24,
+    "remunerations": ["10491.97", "8269.16"],
+    "jornada": "40 horas semanais",
+    "reserve_only": "vagas_imediatas=0 and cadastro_reserva=true explicitly supported",
+    "omitted": ["prova_data", "canonical_concurso_id"]
+  },
+  "page_limit": {
+    "original_run": "failed_page_limit",
+    "mitigation": "offline full 81-page local PDF revalidation with hash match",
+    "fail_closed": "canonical_concurso_id null; apply/publish false; no cronograma substitution"
+  },
+  "replay": {
+    "derivation_equal": true,
+    "cargo_count_equal": 2,
+    "profile_count_equal": 24,
+    "rules": "only page-backed values; no inferred proof date or canonical ID"
+  },
+  "handoff": {
+    "reference_only": true,
+    "canonical_concurso_id": "allocate_by_integrator",
+    "apply": false,
+    "next_step": "allocate canonical ID, validate exact envelope with standard ReviewedRun importer, then create proposal"
+  },
+  "decision": "Accept conditionally for canonical allocation/import/proposal. No import or proposal mutation is authorized until canonical ID allocation and normal importer dry-run pass."
+}

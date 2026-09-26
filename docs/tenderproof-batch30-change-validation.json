@@ -1,0 +1,39 @@
+{
+  "validated_at": "2026-09-08T13:20:41.674072+00:00",
+  "source": "exame_open",
+  "candidate": "544",
+  "simulation": true,
+  "scope": "Controlled EXAME HTML mutations only; not a real source change.",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-change-validation-20260908",
+  "network_requests": 0,
+  "canonical_writes": 0,
+  "browser_sessions": 0,
+  "steps": [
+    {
+      "name": "candidate removed from observed listing",
+      "cycle_status": "partial",
+      "observations": 1,
+      "valid": 1,
+      "review_required": 0
+    },
+    {
+      "name": "new principal requires review",
+      "cycle_status": "partial",
+      "observations": 2,
+      "valid": 1,
+      "review_required": 1
+    },
+    {
+      "name": "repeat unchanged new manifest",
+      "cycle_status": "partial",
+      "observations": 2,
+      "valid": 1,
+      "review_required": 1
+    }
+  ],
+  "passed": true,
+  "original_volume_unchanged": true,
+  "downloads": 1,
+  "last_valid_sha256": "83eab2c8f36dbfa778503b5156e202b82fa6220890dd758c3554934e04350553",
+  "drivers_closed": 6
+}

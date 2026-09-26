@@ -1,0 +1,18 @@
+{
+  "schema": "tenderproof.t010.id16.pos-apply.v1",
+  "recorded_at": "2026-09-13T04:01:24-03:00",
+  "backup": {"bundle_prefix": "pilot-20260913T065719174Z", "restore_isolated": true, "note": "fresh backup completed immediately before approve/apply; isolated restore counts matched baseline"},
+  "proposal": {
+    "id": "tpp-1a0fc40cc8df713e6958de0f43efc032",
+    "hash": "ecfc21e9b02707be162761e86ab7f149dd1a011e7d038e37d8f4c8572d2aaee1",
+    "run_id": "tp-reviewed-01c65a37fe15ca4b54898d7e0774a7f7",
+    "approve": {"state": "approved", "fields": ["cargos", "prova_data"], "approved_by": 1},
+    "apply": {"state": "applied", "version_id": 91, "old_cargos": null, "old_prova_data": null, "replay_same_version": 91},
+    "replay": {"result": "idempotent", "new_version": false, "new_outbox": false, "new_notification": false}
+  },
+  "id16": {"cargos": 18, "immediate": 10, "cadastro_reserva": 8, "prova_data": "2025-01-12", "inscricao_inicio": "2024-11-27", "inscricao_fim": "2024-12-29", "identity_preserved": true},
+  "final_counts": {"cargos": 180, "versions": 91, "proposals": 95, "outbox": 91, "notifications": 90, "push_devices": 0, "push_deliveries": 0, "push_attempts": 0},
+  "health": "200",
+  "regressions": {"8": 200, "14": 200, "17": 200, "32": 200},
+  "prohibited": {"bdb86": "NEVER_APPROVE_NEVER_APPLY", "other_records_touched": false}
+}

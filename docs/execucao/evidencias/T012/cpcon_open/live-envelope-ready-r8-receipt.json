@@ -1,0 +1,14 @@
+{
+  "schema":"t012.cpcon_open.live-envelope-r8-receipt.v1",
+  "status":"BLOCKED_CANONICAL_REVIEWED_RUN_CONTRACT",
+  "envelope":"live-envelope-ready-r8.json",
+  "run_id":"tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2",
+  "owner_user_id":1,"source_id":35,
+  "artifact":{"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":13},
+  "fields":{"titulo":1,"orgao":1,"edital_numero":1,"cargos":6},
+  "canonical_dry_run":{"status":"BLOCKED","errors":["concurso_id missing (ReviewedRun requires positive integer)","run_id extra_forbidden (ReviewedRun v1 has no run_id key)"]},
+  "ephemeral_harness":{"concurso_id":999,"run_id":"tp-reviewed-c13119d05e49d1660759bec6ff4b5a51","import_dry_run":"PASS","round_trip":"PASS","persisted":false},
+  "negative_checks":{"null_target_rejected":true,"old_r6_not_reused":true,"proposal_not_called":true},
+  "create_proposal_payload":{"source_id":35,"concurso_id":null,"run_id":"tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2","dispatch":"blocked until API contract supplies canonical positive target"},
+  "next_gate":"integrator must allocate a positive canonical concurso_id or version the importer/API contract; do not invent one"
+}

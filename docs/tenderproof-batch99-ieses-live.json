@@ -1,0 +1,175 @@
+{
+  "observed_at": "2026-09-08T15:26:10.813195+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99ieses",
+  "cycles": [
+    {
+      "source": "ieses_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-e056936783ae",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ieses.org/projetos/api?offset=12&limit=12"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ieses.org/projetos/api?offset=0&limit=12",
+          "file": "ieses_open-cycle1-listing-6a4c9c5d51.html",
+          "sha256": "e37c1c5791f4f5bbaf2f56a543a020c007628f5fdadc1329fdfeb0893791eedf",
+          "bytes": 4907,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T15:26:11.505078+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-70ba5e9a5aaf",
+          "candidate": {
+            "candidate_id": "ieses_open-scgas2026",
+            "title_observed": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+            "detail_url_observed": "https://www.scgas2026.ieses.org/",
+            "external_id": "scgas2026",
+            "observed_at": "2026-09-08T15:26:11.505078Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: redirect de detalhe altera identidade",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-133d465c01af",
+          "candidate": {
+            "candidate_id": "ieses_open-crmvsc",
+            "title_observed": "Conselho Regional de Medicina Veterinária do Estado de Santa Catarina - CONCURSO PÚBLICO - CRMVSC 001 2026",
+            "detail_url_observed": "https://www.crmvsc.ieses.org/",
+            "external_id": "crmvsc",
+            "observed_at": "2026-09-08T15:26:11.505078Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: redirect de detalhe altera identidade",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.016
+    },
+    {
+      "source": "ieses_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-ac1f769d94f1",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ieses.org/projetos/api?offset=12&limit=12"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ieses.org/projetos/api?offset=0&limit=12",
+          "file": "ieses_open-cycle2-listing-6a4c9c5d51.html",
+          "sha256": "e37c1c5791f4f5bbaf2f56a543a020c007628f5fdadc1329fdfeb0893791eedf",
+          "bytes": 4907,
+          "format": "decoded public JSON; signed URL values redacted; fixture hash only",
+          "observed_at": "2026-09-08T15:26:13.324810+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f78fb016c0e6",
+          "candidate": {
+            "candidate_id": "ieses_open-scgas2026",
+            "title_observed": "SCGÁS - Companhia de Gás de Santa Catarina - Concurso Público - Edital 001/2026",
+            "detail_url_observed": "https://www.scgas2026.ieses.org/",
+            "external_id": "scgas2026",
+            "observed_at": "2026-09-08T15:26:13.324810Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: redirect de detalhe altera identidade",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-11c634920793",
+          "candidate": {
+            "candidate_id": "ieses_open-crmvsc",
+            "title_observed": "Conselho Regional de Medicina Veterinária do Estado de Santa Catarina - CONCURSO PÚBLICO - CRMVSC 001 2026",
+            "detail_url_observed": "https://www.crmvsc.ieses.org/",
+            "external_id": "crmvsc",
+            "observed_at": "2026-09-08T15:26:13.324810Z",
+            "source": "ieses_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: redirect de detalhe altera identidade",
+          "captures": [],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 1.516
+    }
+  ]
+}

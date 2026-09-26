@@ -1,0 +1,49 @@
+{
+  "schema": "t011.independent-post-import-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "ACEITO",
+  "read_only": true,
+  "mutations": [],
+  "evidence": "docs/execucao/evidencias/T011/gate-ID17-r6-import-proposta-20260912.json",
+  "run": {
+    "run_id": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+    "envelope_sha256": "58d7d17f88e43239cf31030369c59083d95a63d6e11e6ae994b4bdf6dda730f0",
+    "owner_user_id": 1,
+    "source": "contemax_open",
+    "concurso_id": 17,
+    "artifact_sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "reference_only": true,
+    "baseline_cargos": null
+  },
+  "proposal": {
+    "id": "tpp-83d38414eccb6f38e1b1c3d7ab31b291",
+    "hash": "ffa5910d25c23192835d6d3c6f4956f388c2e60078a813958bcce59b146b157a",
+    "state": "proposed",
+    "owner_user_id": 1,
+    "source_id": 34,
+    "concurso_id": 17,
+    "eligible_fields": ["cargos"],
+    "approved": false,
+    "applied": false,
+    "diff_scope": "baseline cargos null -> 27 proposed cargos; no other eligible field",
+    "material": {"rows": 27, "vagas_total": 79, "ac": 74, "pcd": 5, "cadastro_reserva": null, "empty_requirements": 0, "replacement_characters": 0}
+  },
+  "content_reconciliation": {
+    "pdf_and_envelope": "SHA/bytes and identity match prior accepted r6 envelope",
+    "requirements": "27 non-empty, no trailing salary marker corruption",
+    "remuneration_units": "BRL; unidade temporal não especificada",
+    "workload": "40h",
+    "fees_exam_dates": "preserved separately; not promoted into cargos",
+    "evidence": "27 cargo evidence items on pages 19–20, artifact SHA-bound",
+    "legacy": "tpp-02c29e4baa1b036eab1d02de59a65c74 remains no_change and was not reused"
+  },
+  "counts_read_only": {
+    "proposals": {"before": 86, "after": 87},
+    "versions": {"before": 84, "after": 84},
+    "outbox": {"before": 84, "after": 84},
+    "notifications": {"before": 83, "after": 83}
+  },
+  "release": "ACEITO para approve somente cargos e um único apply desta proposta. Não aprovar outros campos; após apply exigir revisão pós-apply e replay/idempotência."
+}

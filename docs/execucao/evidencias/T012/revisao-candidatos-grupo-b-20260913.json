@@ -1,0 +1,58 @@
+{
+  "schema": "t012.candidate-group-b-review.v1",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only",
+  "sources_checked": [
+    "docs/execucao/evidencias/matriz-fontes-99-reconciliada-r5-20260913.json",
+    "docs/execucao/evidencias/matriz-fontes-99-reconciliada-r5-20260913.csv",
+    "docs/entrega-fontes-atual.csv",
+    "docs/tenderproof-sources-99.json",
+    "docs/tenderproof-product-status.json",
+    "docs/execucao/tarefas/T012.md"
+  ],
+  "global_findings": {
+    "catalogue_baseline": "All five rows are BASELINE_ONLY with no overlay target or version_id; no new selection envelope, proposal, or publication is present.",
+    "distinct_source_identity": "The five source_ids are distinct and each source catalog entry reports no_catalogue_alias_detected.",
+    "duplicate_check": "No orgao/edital/external_id candidate identity is supplied for these rows, so absence of a duplicate cannot be proven beyond distinct source identity; no duplicate was introduced by this review.",
+    "proposal_evidence": "No source-specific evidence envelope with artifact, selection identity, fields, and provenance is present for any of the five candidates."
+  },
+  "reviews": [
+    {
+      "number": 52,
+      "source_id": "zambini_open",
+      "verdict": "REJECT",
+      "reason": "The preserved observation is a bounded catalogue page with zero document links and EMPTY_VERIFIED/empty_valid legacy status. It does not establish a publishable contest/selection, identity, or proposal evidence; an envelope is required before eligibility can be reconsidered.",
+      "evidence": "docs/tenderproof-sources-99.json#number=52; docs/entrega-fontes-atual.csv#numero=52"
+    },
+    {
+      "number": 81,
+      "source_id": "fapeal_selection",
+      "verdict": "REJECT",
+      "reason": "The bounded observation has no document links and scope_status=requires_item_filter; the source explicitly contains programs, grants and possible funding/selection material. No personnel selection/contratação item, identity, or minimum proposal evidence is proven.",
+      "evidence": "docs/tenderproof-sources-99.json#number=81; docs/tenderproof-product-status.json#sources[fapeal_selection]"
+    },
+    {
+      "number": 84,
+      "source_id": "faperj_selection",
+      "verdict": "REJECT",
+      "reason": "The preserved observation has no document links and scope_status=requires_item_filter; it exposes bolsas/auxílios and research programs. No publicable personnel selection/contratação, exact identity, or minimum proposal evidence is proven.",
+      "evidence": "docs/tenderproof-sources-99.json#number=84; docs/tenderproof-product-status.json#sources[faperj_selection]"
+    },
+    {
+      "number": 87,
+      "source_id": "fapesc_selection",
+      "verdict": "REJECT",
+      "reason": "The only observed document is an unclassified institutional PDF; no selection edital or personnel contract is identified. scope_status=requires_item_filter and document evidence is unverified, so publishability and proposal evidence are absent.",
+      "evidence": "docs/tenderproof-sources-99.json#number=87; docs/tenderproof-product-status.json#sources[fapesc_selection]"
+    },
+    {
+      "number": 95,
+      "source_id": "fapespa_selection",
+      "verdict": "REJECT",
+      "reason": "The source is only partially observed with no source-specific selection envelope or verified document/fields. Its institutional scope requires item filtering; no personnel selection/contratação identity or minimum proposal evidence is proven.",
+      "evidence": "docs/tenderproof-sources-99.json#number=95; docs/tenderproof-product-status.json#sources[fapespa_selection]"
+    }
+  ],
+  "not_preapproved": true,
+  "next_gate": "Provide a source-specific envelope with official artifact, exact source/external_id/orgao/edital identity, publishable personnel-selection scope, field evidence and duplicate check; then review independently."
+}

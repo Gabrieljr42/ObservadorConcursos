@@ -1,0 +1,35 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "status": "PROPOSTA_PRONTA",
+  "import_status": "ready_for_import",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "concurso_id": null,
+  "title": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes",
+  "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+  "artifact": {
+    "artifact_id": "ufu-selection-1843-detail-2026",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "pages": 1,
+    "fixture": "backend/tests/fixtures/tenderproof_batch30_institutional/ufu_selection-cycle1-detail-9088337b8d.html"
+  },
+  "fields": [
+    {"field_name": "titulo", "value": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "json_path": "identity.title", "snippet": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "page": 1},
+    {"field_name": "orgao", "value": "Universidade Federal de Uberlândia", "json_path": "identity.orgao", "snippet": "Universidade Federal de Uberlândia", "page": 1},
+    {"field_name": "edital_numero", "value": "144/2026", "json_path": "identity.edital_numero", "snippet": "144/2026", "page": 1},
+    {"field_name": "inscricao_inicio", "value": "2026-08-19T15:00:00", "json_path": "inscricao_inicio", "snippet": "19/08/2026 15:00 03/09/2026 14:59 Inscrições", "page": 1},
+    {"field_name": "inscricao_fim", "value": "2026-09-03T14:59:00", "json_path": "inscricao_fim", "snippet": "19/08/2026 15:00 03/09/2026 14:59 Inscrições", "page": 1}
+  ],
+  "pending_fields": [],
+  "omitted_unproven_fields": ["prova_data", "taxa", "cargos", "remuneracao", "documentos_pdf"],
+  "reference_only": true,
+  "provenance": {
+    "parser": "backend/app/tenderproof/ufu_selection_parser.py",
+    "test": "backend/tests/test_ufu_selection_preflight.py",
+    "network": false,
+    "sqlite_round_trip": "imported -> idempotent -> _revalidate blocked unsupported generic fields; no publication side effects",
+    "negative_cases": ["sha/byte drift", "identity drift", "truncation", "marker drift"]
+  }
+}

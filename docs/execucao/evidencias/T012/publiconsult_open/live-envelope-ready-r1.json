@@ -1,0 +1,19 @@
+{
+  "schema": "t012.publiconsult-live-envelope-ready-r1.v1",
+  "state": "READY_FOR_INTEGRATION",
+  "source": "publiconsult_open",
+  "source_number": 56,
+  "external_id": "681",
+  "concurso_id": null,
+  "observed_at": "2026-09-08T12:51:27.164530Z",
+  "identity": {"title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026", "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H", "identity_ids": []},
+  "artifact": {"artifact_id": "art-74ea1bc8f9", "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "byte_len": 720592, "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf", "downloaded_at": "2026-09-08T12:51:29.654529Z"},
+  "fields": [
+    {"field_name": "orgao", "state": "supported", "value": "Prefeitura Municipal de Votuporanga/SP", "evidence": [{"evidence_id": "ev-publiconsult-681-r4-orgao", "artifact_id": "art-74ea1bc8f9", "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "source_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf", "page_number": 1, "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo Nº 1/2026", "method": "publiconsult-source-parser", "method_version": "t012-publiconsult-r4"}]},
+    {"field_name": "edital_numero", "state": "supported", "value": "1/2026", "evidence": [{"evidence_id": "ev-publiconsult-681-r4-edital_numero", "artifact_id": "art-74ea1bc8f9", "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f", "source_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf", "page_number": 1, "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo Nº 1/2026", "method": "publiconsult-source-parser", "method_version": "t012-publiconsult-r4"}]}
+  ],
+  "eligible_expected": {"orgao": "Prefeitura Municipal de Votuporanga/SP", "edital_numero": "1/2026"},
+  "blocked_expected": {"titulo": "campo não extraído; preservar baseline", "inscricao_inicio": "campo não extraído; preservar baseline", "inscricao_fim": "campo não extraído; preservar baseline", "prova_data": "campo não extraído; preservar baseline", "taxa": "campo não extraído; preservar baseline", "cargos": "campo não extraído; preservar baseline"},
+  "round_trip": {"status": "passed", "temporary_concurso_id": 999999, "run_id": "tp-reviewed-0569c5862839a0e974e138e3301c246b", "sqlite": "ephemeral", "stale_identity_negative": "HTTP_422", "artifact_drift_negative": "HTTP_422", "catalog_or_service_mutation": false},
+  "integrator_action": "Allocate local concurso_id through the normal route, inject it before ReviewedRun.model_validate/dry-run, then submit this source-scoped envelope; do not reuse the temporary ID or old run."
+}

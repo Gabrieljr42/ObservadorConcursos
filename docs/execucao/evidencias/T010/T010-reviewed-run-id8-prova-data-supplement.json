@@ -1,0 +1,38 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "idib_open",
+  "concurso_id": 8,
+  "external_id": "362",
+  "title": "CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.",
+  "detail_url": "https://concurso.idib.org.br/Concurso.aspx?ID=362",
+  "artifact": {
+    "artifact_id": "art-cdeead8742",
+    "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "byte_len": 1048994,
+    "url_requested": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+    "url_final": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T21:00:00.096867Z",
+    "content_path": "docs/execucao/evidencias/T010/id8.pdf"
+  },
+  "fields": [{
+    "field_name": "prova_data",
+    "value": "2026-12-06",
+    "original_value": "06/12/2026",
+    "evidence": [{
+      "evidence_id": "t010-id8-prova-001",
+      "artifact_id": "art-cdeead8742",
+      "document_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+      "source_url": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+      "page_number": 68,
+      "snippet": "15 Realização das Provas Objetivas 06/12/2026",
+      "method": "deterministic-regex",
+      "method_version": "idib-reriutaba-362/1",
+      "validation": {"ok": true}
+    }]
+  }],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-08T21:00:00.096867Z"
+}

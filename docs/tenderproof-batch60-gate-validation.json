@@ -1,0 +1,99 @@
+{
+  "validated_at": "2026-09-08T14:45:47.260282+00:00",
+  "passed": true,
+  "gate": "accepted_bounded_partial_scope_with_blocked_sources",
+  "valid_document_sources": [
+    "apta_open",
+    "avalia_open",
+    "cebraspe_open",
+    "cesgranrio_open",
+    "consep_open",
+    "consulplan_open",
+    "cpcon_open",
+    "educapb_open",
+    "elo_open",
+    "epl_open",
+    "facet_open",
+    "fcc_open",
+    "fundep_open",
+    "funvapi_open",
+    "ibam_open",
+    "institutoconsulplan_open",
+    "msconcursos_open",
+    "shdias_open",
+    "zambini_open"
+  ],
+  "blocked_sources": [
+    "aocp_open",
+    "contemax_open",
+    "fumarc_open",
+    "gualimp_open",
+    "idgran_open",
+    "idib_open",
+    "iuds_open",
+    "jcm_open",
+    "leandroferreira_open",
+    "seprod_open",
+    "unifil_open"
+  ],
+  "missing_adapters": [
+    "aocp_open",
+    "seprod_open",
+    "fumarc_open",
+    "unifil_open",
+    "leandroferreira_open",
+    "iuds_open",
+    "idgran_open",
+    "idib_open",
+    "jcm_open"
+  ],
+  "canonical_creation_sources": [
+    "consulplan_open",
+    "facet_open",
+    "funvapi_open",
+    "ibam_open",
+    "zambini_open"
+  ],
+  "canonical_blocked_sources": [
+    "apta_open",
+    "avalia_open",
+    "cebraspe_open",
+    "cesgranrio_open",
+    "consep_open",
+    "cpcon_open",
+    "educapb_open",
+    "elo_open",
+    "epl_open",
+    "fcc_open",
+    "fundep_open",
+    "institutoconsulplan_open",
+    "msconcursos_open",
+    "shdias_open"
+  ],
+  "regression": {
+    "tests": 885,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 14,
+    "passed": 871
+  },
+  "postgres_tests": {
+    "tests": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 36
+  },
+  "production_enabled": false,
+  "scope": "Sampled discovery, acquisition, deduplication and recovery only. Five sources created isolated canonical entries; fourteen need stronger reviewed identity or explicit existing-target association. Eleven batch entries excluded from homologation; nine lack adapters. No whole-source certification.",
+  "evidence": [
+    "tenderproof-batch60-current-validation.json",
+    "tenderproof-batch60-continuous-replay.json",
+    "tenderproof-batch60-recovery-validation.json",
+    "tenderproof-batch60-mixed-validation.json",
+    "tenderproof-batch60-publication-live.json",
+    "tenderproof-batch60-material-update.json",
+    "tenderproof-batch60-review.json",
+    "tenderproof-batch60-postgres-validation.json"
+  ]
+}

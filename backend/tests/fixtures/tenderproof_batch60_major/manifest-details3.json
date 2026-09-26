@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cebraspe-adeal",
+    "url": "https://apis.cebraspe.org.br/cebraspe/eventos/ADEAL_26",
+    "observed_at": "2026-09-08T14:06:38.352064+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 1109,
+    "original_sha256": "ef1977c04324dfb7abe74a3c32dedbfdf3d852d1c542cef2c725a9ccf39c7c5d",
+    "fixture_sha256": "a163dca35cac1eb019751bd8d9e64769d4bcccb9bff022563c4baa84865fccf7",
+    "file": "cebraspe-adeal.json",
+    "format": "public JSON; signed URL queries removed"
+  },
+  {
+    "name": "cesgranrio-main",
+    "url": "https://concursos.cesgranrio.org.br/portal/main.1715d0bd4a4503a5.js",
+    "observed_at": "2026-09-08T14:06:38.352064+00:00",
+    "status": 404,
+    "location": null,
+    "bytes": 4349,
+    "original_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+    "fixture_sha256": "5c061f6abfc0985b54c3c772a040a76ed0d628b6c50279d237be09420dae874c",
+    "file": "cesgranrio-main.js",
+    "format": "raw JavaScript"
+  }
+]

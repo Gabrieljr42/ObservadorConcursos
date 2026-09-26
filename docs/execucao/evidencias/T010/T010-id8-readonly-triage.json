@@ -1,0 +1,30 @@
+{
+  "schema": "tenderproof.t010.id8-triage.v1",
+  "record_id": 8,
+  "classification": "INSUFFICIENT_IDENTITY_PROVENANCE",
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id8.pdf",
+    "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+    "byte_len": 1048994,
+    "pages": 75,
+    "preserved_only": true
+  },
+  "documentary_fields_reproduced_readonly": {
+    "page_1": "Prefeitura Municipal de Reriutaba/CE; Concurso Público; Edital nº 01/2026, de 02/09/2026",
+    "page_3": "Guarda Civil Municipal; 9 imediatas (6 AC, 1 PcD, 2 PPP) + 11 CR; Ensino Médio Completo; 40h; salário-mínimo + 30% periculosidade + adicional noturno",
+    "page_3_requirements": "CNH ou Permissão para Dirigir categoria AB ou superior",
+    "page_5": "taxa R$ 156,67; inscrições 02/09/2026 14h–05/10/2026 23h59"
+  },
+  "identity_chain": {
+    "concurso_id": 8,
+    "source": "idib_open",
+    "external_id": "362",
+    "catalog_title": "CONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.",
+    "catalog_source_origin": "unknown_in_api",
+    "catalog_documents": [],
+    "missing": ["candidate.detail_url_observed", "artifact.url_requested", "artifact.url_final", "observed_at"]
+  },
+  "decision": "stop; parser/reviewed_run not created because required exact URL/observed_at provenance is absent from preserved T004/T010 material",
+  "required_concrete_source": "preserved catalog candidate/detail capture for idib_open external_id 362, including exact detail URL and PDF URL",
+  "network_or_download": "not used"
+}

@@ -1,0 +1,30 @@
+{
+  "label": "synthetic controlled fixture, not portal history",
+  "url": "https://novo.ibgpconcursos.com.br/list",
+  "html": "<p>Sem concursos</p>",
+  "pages": {
+    "https://novo.ibgpconcursos.com.br/704": "<a class=\"notice\" href=\"/edital.pdf\">Edital</a><a class=\"annex\" href=\"/annex.pdf\">Anexo</a>"
+  },
+  "documents": {
+    "https://novo.ibgpconcursos.com.br/edital.pdf": {
+      "identity": "ibgp:704:001/2026",
+      "kind": "edital_principal",
+      "content": "%PDF-1.4 synthetic fixture document",
+      "page_text": "Edital 001/2026 ITABIRAPREV",
+      "quote": "Edital 001/2026",
+      "physical_page": 1
+    },
+    "https://novo.ibgpconcursos.com.br/annex.pdf": {
+      "identity": "ibgp:704:001/2026",
+      "kind": "anexo",
+      "content": "%PDF-1.4 synthetic fixture document",
+      "page_text": "Edital 001/2026 ITABIRAPREV",
+      "quote": "Edital 001/2026",
+      "physical_page": 1
+    }
+  },
+  "expected_count": 1,
+  "legitimate_empty": false,
+  "is_synthetic": true,
+  "expected": "false_empty"
+}

@@ -1,0 +1,73 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fepese_open",
+      "url": "https://2026cpcelesc.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "basis": "literal edital tab link in CELESC homepage captured",
+      "observed_at": "2026-09-08T15:30:01.397559+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 6086,
+      "sha256": "beeb9784046da5a0c7bd391fdd95c51c669bdd106029c65591192daf09f32a56",
+      "file": "fepese_open-6a0b95a7-beeb978404.html",
+      "encoding": "iso-8859-1",
+      "title": "2026 - CELESC",
+      "links": [
+        {
+          "url": "https://2026cpcelesc.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": "Principal"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": "Edital"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": "Perguntas"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": "Cronograma"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br/inscricao/#!/edital/e63c53d5ae1fac8198c4c334df94060f",
+          "title": "Inscrição"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": "Contato"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=TR01_2026_001_CP_CELESC_Errata.pdf&inline=1",
+          "title": "Errata do Termo de Retificação nº 1"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=TR01_2026_001_CP_CELESC.pdf&inline=1",
+          "title": "Termo de Retificação nº 1"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br?go=download&arquivo=2026_001_CP_CELESC_TR01.pdf&inline=1",
+          "title": "Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://2026cpcelesc.fepese.org.br/class/funcoes.js",
+        "https://plugin.handtalk.me/web/latest/handtalk.min.js"
+      ]
+    }
+  ]
+}

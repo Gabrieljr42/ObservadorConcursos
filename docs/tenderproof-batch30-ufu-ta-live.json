@@ -1,0 +1,233 @@
+{
+  "observed_at": "2026-09-08T13:04:48.648873+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-ufu-ta-live-20260908",
+  "cycles": [
+    {
+      "source": "ufu_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-edaa5b470395",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concurso_ta",
+          "file": "ufu_selection-cycle1-listing-53718fa8cc.html",
+          "sha256": "3c35bfee3d0556cc0bde2a893b3381735c58ad02a988e5720bb7d3af1ce4e593",
+          "bytes": 63485,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T13:04:49.436618+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-29d8129e15f4",
+          "candidate": {
+            "candidate_id": "ufu_selection-1781",
+            "title_observed": "Concurso Técnico-Administrativo PROGEP - Edital 62/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1781",
+            "external_id": "1781",
+            "observed_at": "2026-09-08T13:04:49.541066Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1781",
+              "file": "ufu_selection-cycle1-detail-6aa885becd.html",
+              "sha256": "42c1192cc9a517c62a35fec269a3ccc4f01e952f4c6e2ea182927a0b9f274829",
+              "bytes": 55476,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:04:50.256563+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ufu_selection-doc-ac1aacca91030c5cdb835cad7f32b4c6",
+            "title": "Edital de Processo",
+            "url_requested": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "url_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Processo' por conter 'edital' no título/URL; 5 documento(s) ignorado(s) (ex.: Retificação de Edital III; Comunicado PROGEP; Retificação de Edital II; Retificação de Edital I; Publicação do Edital no Diário Oficial da União (DOU))."
+          },
+          "artifact": {
+            "artifact_id": "art-7406e06560",
+            "sha256": "da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf",
+            "byte_len": 1025657,
+            "url_requested": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "url_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T13:04:50.655638Z",
+            "storage_path": "art-7406e06560-da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf.pdf"
+          },
+          "total_pages": 48,
+          "processed_pages": 48,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=48/48",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.735
+    },
+    {
+      "source": "ufu_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-a6723f84dd42",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.portalselecao.ufu.br/servicos/Edital/listar/concursos"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.portalselecao.ufu.br/servicos/Edital/listar/concurso_ta",
+          "file": "ufu_selection-cycle2-listing-53718fa8cc.html",
+          "sha256": "3c35bfee3d0556cc0bde2a893b3381735c58ad02a988e5720bb7d3af1ce4e593",
+          "bytes": 63485,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T13:04:54.023368+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-258156f967c8",
+          "candidate": {
+            "candidate_id": "ufu_selection-1781",
+            "title_observed": "Concurso Técnico-Administrativo PROGEP - Edital 62/2026",
+            "detail_url_observed": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1781",
+            "external_id": "1781",
+            "observed_at": "2026-09-08T13:04:54.129884Z",
+            "source": "ufu_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1781",
+              "file": "ufu_selection-cycle2-detail-6aa885becd.html",
+              "sha256": "42c1192cc9a517c62a35fec269a3ccc4f01e952f4c6e2ea182927a0b9f274829",
+              "bytes": 55476,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T13:04:54.910149+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ufu_selection-doc-ac1aacca91030c5cdb835cad7f32b4c6",
+            "title": "Edital de Processo",
+            "url_requested": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "url_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Processo' por conter 'edital' no título/URL; 5 documento(s) ignorado(s) (ex.: Retificação de Edital III; Comunicado PROGEP; Retificação de Edital II; Retificação de Edital I; Publicação do Edital no Diário Oficial da União (DOU))."
+          },
+          "artifact": {
+            "artifact_id": "art-47bc13b573",
+            "sha256": "da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf",
+            "byte_len": 1025657,
+            "url_requested": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "url_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ac1aacca91030c5cdb835cad7f32b4c6",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T13:04:55.290608Z",
+            "storage_path": "art-47bc13b573-da98fe1a3e68bc0910fe64c17e3f21de9dcef365f759b89721e89a36591effaf.pdf"
+          },
+          "total_pages": 48,
+          "processed_pages": 48,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=48/48",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "supported"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.484
+    }
+  ]
+}

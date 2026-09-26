@@ -1,0 +1,38 @@
+{
+  "schema": "t012.klc_open.luna-parser-r5-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "KLC_PARSER_R5_REJECT_FOR_INTEGRATION",
+  "scope": "read_only; no network, API, DB, deploy, or catalogue mutation",
+  "checks": {
+    "pins": "PASS: source klc_open, external_id 632, SHA 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4; document URL and 10-page shape are represented",
+    "typed_output": "PASS: parse/dispatch return list[ExtractedField] and Evidence carries artifact_id, document_sha256, source_url, page, snippet, json_path and validation",
+    "guards": "PARTIAL: page count/order, page errors, truncation/errors and SHA are fail-closed; integral U+FFFD is checked only when strict_text=true, while dispatch leaves strict_text at its default false",
+    "reproduced_evidence": "PASS in the dedicated test with matching Artifact",
+    "tests": "Preflight records 7 passes; source test file contains seven tests. Execution was not independently reproducible because pytest/python is unavailable in this environment"
+  },
+  "blocking_findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:parse/dispatch",
+      "finding": "The normal typed dispatch path does not enforce the integral U+FFFD guard: strict_text defaults false and dispatch does not set it true.",
+      "required_fix": "Make strict text validation unconditional for production dispatch (or pass strict_text=True) and retain a dispatch-level regression test."
+    },
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:parse",
+      "finding": "parse accepts an arbitrary document_url and dispatch forwards artifact.url_final; the pinned document URL is not enforced despite the claimed URL pin.",
+      "required_fix": "Reject document URL substitution against DOCUMENT_URL, and test both requested/final artifact URL binding."
+    },
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py:dispatch",
+      "finding": "The typed function exists only in the evidence-local module; no backend registry/normal dispatch import was found, while generic revalidate remains BLOCKED_STRONG_BINDING.",
+      "required_fix": "Register the adapter in the real dispatch/revalidate path and demonstrate a normal dry-run with strong fallback and no canonical mutation."
+    }
+  ],
+  "evidence_files": [
+    "docs/execucao/evidencias/T012/klc_open/klc_parser_r3.py",
+    "docs/execucao/evidencias/T012/klc_open/test_klc_parser_r3.py",
+    "docs/execucao/evidencias/T012/klc_open/strong-preflight-r3.json"
+  ]
+}

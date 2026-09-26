@@ -1,0 +1,23 @@
+{
+  "schema": "t012.dispatch-batch2.luna-review-r2.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read_only; no deploy/pilot/API/DB/catalogue mutation",
+  "directed_test": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py",
+    "result": "11 passed in 40.34s",
+    "side_effects": "none observed; receipts state network=false, pilot_mutated=false, no proposal/version/outbox writes"
+  },
+  "blocker_reconciliation": {
+    "klc_632": "RESOLVED: fields.py checks parser SHA/348300 bytes and requested/final DOCUMENT_URL before dispatch; klc dispatch repeats metadata/URL pins and parser checks pages/truncation/errors/U+FFFD.",
+    "avancasp_272": "RESOLVED: only PDF SHA b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a, 742298 bytes, exact official PDF URL, detail URL and exactly 48 ordered pages are accepted; all page error/truncated/empty/U+FFFD states fail closed. The prior HTML artifact SHA 8f8466… is not routable and is rejected by this branch; it is not silently promoted.",
+    "apta_708": "RESOLVED: extract_identity and fields.py now require exact detail URL, document requested/final URL, SHA/362093 bytes, 20 pages and page text/error/truncation guards."
+  },
+  "routing_and_types": {
+    "strict_source_external": "PASS: exact source/external map, mismatch fields become FAILED without generic fallback",
+    "typed_evidence": "PASS: source parsers return typed ExtractedField/Evidence; Publiconsult also returns ValidationResult",
+    "epl_publiconsult": "PASS: existing exact artifact/page/U+FFFD/URL guards remain intact",
+    "generic_fallback": "PASS: parser exceptions are converted to FAILED replacements rather than weaker generic values"
+  },
+  "deployment_gate": "Deploy is acceptable for these five dispatch branches only. This does not authorize canonical import, proposal, approval, or apply; continue separate reviewed-run/temporal gates."
+}

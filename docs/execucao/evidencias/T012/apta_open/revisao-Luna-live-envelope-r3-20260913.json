@@ -1,0 +1,35 @@
+{
+  "schema": "t012.apta.live-envelope.luna-review-r3.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "read_only; no live import/proposal/API/DB mutation",
+  "supersession": {
+    "r1": "superseded by live-envelope-ready-r3.json",
+    "r2": "superseded by live-envelope-ready-r3.json",
+    "active": "live-envelope-ready-r3.json"
+  },
+  "artifact": {
+    "storage_path": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "path_policy": "deployment-local basename only; no traversal",
+    "preserved_source": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "urls": "exact requested/final APTA document URL",
+    "status": "PASS; isolated save_artifact_file round-trip rewrites and verifies canonical basename"
+  },
+  "checks": {
+    "pins_and_fallback": "PASS: source apta_open/external 708, exact detail/document URLs, organization Câmara Municipal de Aragarças + edital 01/2026 fallback",
+    "currentness": "PASS: proven inscription window 17/08/2026–20/09/2026 contains review date 13/09/2026",
+    "eligible": ["titulo", "orgao", "edital_numero"],
+    "reference_only": ["cargos", "remuneracao", "taxa"],
+    "identity_evidence": "PASS: literal PDF snippets, artifact SHA/URL/page bound; no historical run reuse",
+    "side_effects": "PASS: no live proposal/version/outbox; pre-live remains isolated"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/apta_open/test_storage_path_r3.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_batch2_dispatch.py -k 'apta or storage_path'",
+    "result": "5 passed, 10 deselected",
+    "compileall": "PASS per receipt"
+  },
+  "release": "Permit only the normal isolated/live-import-plus-proposal handoff using the canonical basename and configured artifact root. Approve/apply and any field beyond the three listed remain blocked."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "t012.avalia.document-review-gate.v2",
+  "status": "AVALIA_DOCUMENTS_R2_READY_FOR_REVIEW",
+  "run_id": "tpr-8079a5856a43",
+  "source": "avalia_open",
+  "external_id": "631",
+  "checks": {
+    "bounded_urls": 2,
+    "http_200": 2,
+    "redirects": 0,
+    "sha_bytes_mime_pages": "PASS",
+    "identity": "PASS",
+    "pending_ids_linked": 2,
+    "decision_statuses": ["ACCEPT", "ACCEPT"],
+    "schema_tests": "2 passed",
+    "proposal_retry": false,
+    "db_write": false,
+    "apply": false
+  },
+  "artifacts": {
+    "acquisition": "artifacts/document-review/acquisition-report.json",
+    "content_receipts": "content-receipts-r2.json",
+    "decision_manifest": "decision-manifest-r2.json",
+    "tests": "test_document_review_r2.py"
+  },
+  "document_effect": "Retificação prova alteração da tabela 2.1 (GCM: 44h, quotas, 45 CR, R$ 3.100,00, taxa R$ 150,00); qualquer promoção exige revalidação/proposta SHA-bound posterior.",
+  "next_gate": "Integrador enviar somente as duas decisões ao fluxo normal de document-review; após aceite, gerar novo reviewed-run/proposta."
+}

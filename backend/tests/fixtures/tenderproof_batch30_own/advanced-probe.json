@@ -1,0 +1,52 @@
+[
+  {
+    "source": "ibfc_detail",
+    "url": "https://concursos.ibfc.org.br/informacoes/496/",
+    "observed_at": "2026-09-08T00:03:47.549516+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 36399,
+    "sha256": "b68a4df42831f9cef2d390c64d8b11e4c18abe860d3e097e9e79fe69ca1aac42",
+    "file": "ibfc_detail-listing.html"
+  },
+  {
+    "source": "institutomais_detail2",
+    "url": "https://www.institutomais.org.br/Concursos/Detalhe/10646",
+    "observed_at": "2026-09-08T00:03:47.549516+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 20208,
+    "sha256": "c129187df1ab37fb58fcd6db49cb797f0d5ca09ea96e46a0d81e2716fce52fe9",
+    "file": "institutomais_detail2-listing.html"
+  },
+  {
+    "source": "admtec_detail",
+    "url": "https://admtec.org.br/concursos/publicacoes/MTEz/MTIx",
+    "observed_at": "2026-09-08T00:03:47.550504+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 52315,
+    "sha256": "34f0205d6656a53301767bb5869fb7d5f49eb5fd6e5173c2977a322b009e850b",
+    "file": "admtec_detail-listing.html"
+  },
+  {
+    "source": "reis_grid",
+    "url": "https://novo.reisauditores.com.br/_astro/ConcursosGrid.D92mt0L9.js",
+    "observed_at": "2026-09-08T00:03:47.550504+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 1929,
+    "sha256": "e4965abda21d52e7328c28d876f85069bd28596396968a3874886a8145cdc462",
+    "file": "reis_grid-listing.html"
+  },
+  {
+    "source": "reis_api",
+    "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+    "observed_at": "2026-09-08T00:03:48.238921+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 1132,
+    "sha256": "4e740a6f8d2b4a111028b745ac1963858ded28dd7de75f43459f8cadb8c92aea",
+    "file": "reis_api-listing.html"
+  }
+]

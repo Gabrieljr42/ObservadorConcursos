@@ -1,0 +1,16 @@
+{
+  "schema": "t012.avalia.luna-document-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "AVALIA_DOCUMENT_REVIEW_NEEDS_HUMAN",
+  "run_id": "tpr-8079a5856a43",
+  "external_id": "631",
+  "summary": "Both pending entries are identity-consistent by receipt metadata, but neither exact PDF is preserved in the local review store/artifacts; therefore no reproducible SHA/bytes/type validation or literal page decision is possible.",
+  "documents": [
+    {"id": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a", "status": "NEEDS_HUMAN", "reason": "Retificação URL/title only; bytes/SHA/pages absent."},
+    {"id": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38", "status": "NEEDS_HUMAN", "reason": "Edital URL/title only; bytes/SHA/pages absent."}
+  ],
+  "not_accepted": ["No ACCEPT or REJECT was issued; doing so would invent document evidence."],
+  "no_mutation": true,
+  "next_gate": "Acquire/preserve exact bytes, validate hashes/pages and document identity, then use normal review-case/API decision payloads."
+}

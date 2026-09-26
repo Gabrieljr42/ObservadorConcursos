@@ -1,0 +1,243 @@
+{
+  "observed_at": "2026-09-08T15:21:40.139961+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99fapeg",
+  "cycles": [
+    {
+      "source": "fapeg_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-8b380c61486a",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://goias.gov.br/administracao/processos-seletivos-simplificados/",
+          "file": "fapeg_selection-cycle1-listing-be08ea3a5d.html",
+          "sha256": "c4060010153333b8ca8b3277837d802643ca8d511bfc1bb435075312d6eda4aa",
+          "bytes": 184254,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:21:40.869498+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-a4a724d5a3f9",
+          "candidate": {
+            "candidate_id": "fapeg_selection-59",
+            "title_observed": "Processo Seletivo Simplificado - Edital nº 009/2024 fapeg",
+            "detail_url_observed": "https://selecao.go.gov.br/edital/edital-n-0092024–seadfapeg_processo-seletivo-simplificado_fapeg%7C59",
+            "external_id": "009/2024",
+            "observed_at": "2026-09-08T15:21:41.083155Z",
+            "source": "fapeg_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://selecao.go.gov.br/edital/edital-n-0092024–seadfapeg_processo-seletivo-simplificado_fapeg%7C59",
+              "file": "fapeg_selection-cycle1-detail-21b12d32be.html",
+              "sha256": "965c1b96b67782f1ba552434b093e401c7b4998724ae872131902ab508d0730f",
+              "bytes": 47953,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:21:41.939705+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapeg-exportarEditalPdf-177",
+            "title": "Edital 009/2024 SEAD/FAPEG",
+            "url_requested": "https://selecao.go.gov.br/exportarEditalPdf",
+            "url_final": "https://selecao.go.gov.br/exportarEditalPdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 009/2024 SEAD/FAPEG' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Retificação Retificação 002; Retificação EDITAL Nº 009/2024–SEAD/FAPEG (RETIFICADO) Versão: 002; Retificação Retificação 001; Retificação EDITAL Nº 009/2024–SEAD/FAPEG (RETIFICADO) Versão: 001).",
+            "acquisition_request": {
+              "method": "POST",
+              "body": "177,0",
+              "content_type": "application/x-www-form-urlencoded"
+            }
+          },
+          "artifact": {
+            "artifact_id": "art-ecc3730d22",
+            "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+            "byte_len": 489850,
+            "url_requested": "https://selecao.go.gov.br/exportarEditalPdf",
+            "url_final": "https://selecao.go.gov.br/exportarEditalPdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:21:42.607060Z",
+            "storage_path": "art-ecc3730d22-fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054.pdf"
+          },
+          "total_pages": 29,
+          "processed_pages": 29,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=29/29",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 18.938
+    },
+    {
+      "source": "fapeg_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-e50826671353",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://goias.gov.br/administracao/processos-seletivos-simplificados/",
+          "file": "fapeg_selection-cycle2-listing-be08ea3a5d.html",
+          "sha256": "c4060010153333b8ca8b3277837d802643ca8d511bfc1bb435075312d6eda4aa",
+          "bytes": 184254,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:21:59.682279+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-1f50509542f5",
+          "candidate": {
+            "candidate_id": "fapeg_selection-59",
+            "title_observed": "Processo Seletivo Simplificado - Edital nº 009/2024 fapeg",
+            "detail_url_observed": "https://selecao.go.gov.br/edital/edital-n-0092024–seadfapeg_processo-seletivo-simplificado_fapeg%7C59",
+            "external_id": "009/2024",
+            "observed_at": "2026-09-08T15:21:59.895278Z",
+            "source": "fapeg_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://selecao.go.gov.br/edital/edital-n-0092024–seadfapeg_processo-seletivo-simplificado_fapeg%7C59",
+              "file": "fapeg_selection-cycle2-detail-21b12d32be.html",
+              "sha256": "965c1b96b67782f1ba552434b093e401c7b4998724ae872131902ab508d0730f",
+              "bytes": 47953,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:22:00.715916+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapeg-exportarEditalPdf-177",
+            "title": "Edital 009/2024 SEAD/FAPEG",
+            "url_requested": "https://selecao.go.gov.br/exportarEditalPdf",
+            "url_final": "https://selecao.go.gov.br/exportarEditalPdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 009/2024 SEAD/FAPEG' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: Retificação Retificação 002; Retificação EDITAL Nº 009/2024–SEAD/FAPEG (RETIFICADO) Versão: 002; Retificação Retificação 001; Retificação EDITAL Nº 009/2024–SEAD/FAPEG (RETIFICADO) Versão: 001).",
+            "acquisition_request": {
+              "method": "POST",
+              "body": "177,0",
+              "content_type": "application/x-www-form-urlencoded"
+            }
+          },
+          "artifact": {
+            "artifact_id": "art-96f817309c",
+            "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+            "byte_len": 489850,
+            "url_requested": "https://selecao.go.gov.br/exportarEditalPdf",
+            "url_final": "https://selecao.go.gov.br/exportarEditalPdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:22:01.590508Z",
+            "storage_path": "art-96f817309c-fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054.pdf"
+          },
+          "total_pages": 29,
+          "processed_pages": 29,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=29/29",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 19.031
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 4,
+    "all_clients_closed": true
+  }
+}

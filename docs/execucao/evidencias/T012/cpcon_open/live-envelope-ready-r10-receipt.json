@@ -1,0 +1,13 @@
+{
+  "schema":"t012.cpcon_open.live-envelope-r10-receipt.v1",
+  "status":"READY_FOR_REVIEW",
+  "source":"cpcon_open","source_id":35,"external_id":"processo-seletivo-simplificado-no-002-2026","owner_user_id":1,
+  "envelope":"live-envelope-ready-r9.json",
+  "artifact_sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+  "derived_run_id":"tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76",
+  "old_run_id":"tp-reviewed-07cdb2ac5f0e960d05dc6a5b300fd7db",
+  "determinism":{"process_1":"tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76","process_2":"tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76","serialized_round_trip":"identical","old_id_rejected":"PASS: does not equal importer-derived identity"},
+  "fields":{"titulo":1,"orgao":1,"edital_numero":1,"cargos":6},
+  "proposal_handoff":{"owner_user_id":1,"source_id":35,"concurso_id":null,"run_id":"tp-reviewed-6b4115de3994cd7d721b82ee1b47ec76","dispatch":"review only; no live call"},
+  "checks":{"import_dry_run":"PASS","artifact_round_trip":"PASS","negative_old_id":"PASS","api":false,"live":false,"docker":false}
+}

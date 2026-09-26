@@ -1,0 +1,50 @@
+{
+  "schema": "t012.backend-deploy-ufu-r8-apta-smoke-r2.v1",
+  "recorded_at": "2026-09-13T15:38:57.0951770Z",
+  "scope": "backend-only api/worker/scheduler; no data/import/proposal/approve/apply mutation",
+  "review_refs": [
+    "docs/execucao/evidencias/T012/ufu_selection/revisao-Luna-ufu-integration-r8-20260913.json",
+    "docs/execucao/evidencias/T012/apta_open/revisao-Luna-apta-smoke-fix-r9-20260913.json"
+  ],
+  "deploy": {
+    "compose": "backend/docker-compose.pilot.yml",
+    "services_recreated": ["api", "worker", "scheduler"],
+    "services_preserved": ["postgres", "redis", "web"],
+    "image": "observador-product:local",
+    "image_id": "sha256:9dfcaadfe6ec3f929e591c8f8ede2a8c407fd4ee51ed645645f597f80aa05935",
+    "volume_policy": "Postgres/Redis/web volumes preserved; no prune/reset/delete",
+    "health": {"http": 200, "status": "ok", "env": "local-pilot"},
+    "web_routes": {"/inicio": 200, "/concurso/34": 200},
+    "code_hashes": {
+      "backend/app/tenderproof/fields.py": "10388ce71a2f697b7dcb6296da2cf53e9bcda7450eb3afbd5e83d3cd91a6d065",
+      "backend/app/tenderproof/ufu_selection_parser.py": "0fb03e9f950de4969d9737a33cc960b36883e185e379f11c8e1f467175fb6a6f",
+      "backend/tests/test_t012_apta_open_selection.py": "9ff3791b89f4262143f54b6a04279ad7f4710a1082892d47a27d160f9070d0cf"
+    }
+  },
+  "baseline_after_deploy": {
+    "concursos": 34,
+    "sources": 99,
+    "canonical_cargos": 182,
+    "proposals": 98,
+    "versions": 92,
+    "outbox": 92,
+    "notifications": 91,
+    "favorites": 0,
+    "alerts": 1,
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_attempts": 0
+  },
+  "preserved_runs_read_only": {
+    "tp-reviewed-f3e9c58974f5f13419565aa22ded286d": {"owner": 1, "source": "ufu_selection", "external_id": "1843", "target": null, "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"], "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "validation_status": "valid"},
+    "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa": {"owner": 1, "source": "apta_open", "external_id": "708", "target": null, "fields": ["titulo", "orgao", "edital_numero"], "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c", "validation_status": "valid"}
+  },
+  "tests": {
+    "apta_smoke": {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py", "result": "3 passed"},
+    "ufu_preflight": {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py", "result": "10 passed"},
+    "ufu_contract_batch": {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_ufu_observed_contract.py backend/tests/test_t012_batch2_dispatch.py", "result": "16 passed"},
+    "scope": "tests are read-only/isolated; no live proposal or publication"
+  },
+  "result": "UFU_R8_APTA_R9_DEPLOYED_READY",
+  "next_gate": "separate review/live gate; no import/proposal/approve/apply in this operation"
+}

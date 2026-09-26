@@ -1,0 +1,32 @@
+{
+  "schema": "t010.proposal-cancellation-flow-check.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "proposal_id": "tpp-bdb86b21341b923ed50b5346fcc3ddb6",
+  "read_only": true,
+  "finding": "NO_FORMAL_REJECT_OR_SUPERSEDE_ENDPOINT",
+  "verified_files": [
+    "backend/app/tenderproof/publication_router.py",
+    "backend/app/tenderproof/publication.py",
+    "backend/app/tenderproof/publication_models.py"
+  ],
+  "api_contract": {
+    "get": "GET /tenderproof/publications/proposals/{proposal_id} (read-only)",
+    "create": "POST /tenderproof/publications/proposals (creates/idempotently returns a proposed row)",
+    "approve": "POST /tenderproof/publications/proposals/{proposal_id}/approve",
+    "apply": "POST /tenderproof/publications/proposals/{proposal_id}/apply",
+    "rollback": "POST /tenderproof/publications/proposals/{proposal_id}/rollback"
+  },
+  "state_model": {
+    "states_present": ["proposed", "approved", "applying", "applied", "no_change", "rolled_back"],
+    "rejected_or_cancelled_state": false,
+    "rollback_precondition": "state must be applied; proposed returns 409 (somente alteração aplicada pode ser revertida)",
+    "rollback_effect": "canonical mutation/version/outbox; therefore inapplicable and forbidden here"
+  },
+  "operational_decision": {
+    "current_proposal": "NEVER_APPROVE; NEVER_APPLY; leave proposed/inert",
+    "corrected_proposal": "may coexist through normal POST after correction; unique key includes owner, run, target and proposal_hash, so a changed hash yields a distinct row; same hash is idempotent",
+    "canonical_side_effect_of_new_proposed_row": "none (no version, outbox, notification or catalogue mutation until approve/apply)"
+  },
+  "mutations": {"api_called": false, "pilot": false, "sql": false, "quadro": false}
+}

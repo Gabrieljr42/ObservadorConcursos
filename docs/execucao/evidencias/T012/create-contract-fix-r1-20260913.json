@@ -1,0 +1,41 @@
+{
+  "schema": "t012.create-contract-fix-receipt.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "ReviewedRun v1 CREATE target allocation; offline only",
+  "change": {
+    "reviewed_run": "concurso_id is now int|null with gt=0; null is the explicit CREATE handoff, while positive IDs preserve update/legacy compatibility.",
+    "proposal_boundary": "ProposalIn rejects null concurso_id without explicit positive source_id (422); canonical.resolve remains responsible for source/external URL/strong identity checks.",
+    "allocator": "No allocator was added: publication.apply_proposal remains the sole transactional allocator, inserting Concurso and obtaining the database-generated primary key after final revalidation.",
+    "owner_isolation": "run owner checks, owner-scoped run_id, proposal ownership and replay guards remain unchanged.",
+    "dedupe_atomicity": "proposal deterministic id/unique lookup, approved->applying CAS, canonical identity binding, unique source+external constraint, version/outbox and document gate remain in the existing transaction."
+  },
+  "files_modified": [
+    "backend/app/tenderproof/reviewed_run_import.py",
+    "backend/app/tenderproof/publication_router.py",
+    "backend/tests/test_reviewed_run_import.py",
+    "backend/tests/test_t012_apta_open_selection.py"
+  ],
+  "coverage": {
+    "APTA_708_null_model": "PASS: preserved envelope validates with concurso_id=null; zero/negative rejected.",
+    "CPCON_process002_null_model": "PASS: cpcon-002-reviewed-run-r2 validates with concurso_id=null in isolated model check.",
+    "positive_update": "PASS: existing canonical/publication tests retain positive target behavior.",
+    "owner_replay_and_conflict": "PASS: reviewed-run owner-scoped/idempotence/conflict tests."
+  },
+  "commands": [
+    {
+      "command": "$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py::test_apta_reviewed_envelope_matches_import_schema_after_canonical_allocation backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_canonical.py backend/tests/test_tenderproof_publication_post.py",
+      "result": "25 passed"
+    },
+    {
+      "command": "$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -c \"... ReviewedRun.model_validate(cpcon_payload with concurso_id=None) ...\"",
+      "result": "CPCON_NULL_MODEL_PASS"
+    },
+    {
+      "command": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof backend/tests/test_reviewed_run_import.py backend/tests/test_t012_apta_open_selection.py",
+      "result": "PASS"
+    }
+  ],
+  "known_unrelated": "The broader APTA extraction test remains independently failing because fields['titulo'] is failed on the existing fixture/parser state; the CREATE contract test and publication regressions pass.",
+  "pilot_mutation": false,
+  "docker_live_network": false
+}

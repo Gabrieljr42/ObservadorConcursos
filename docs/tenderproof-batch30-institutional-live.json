@@ -1,0 +1,229 @@
+{
+  "observed_at": "2026-09-08T12:51:25.757339+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-institutional-live-20260908",
+  "cycles": [
+    {
+      "source": "publiconsult_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-fdcf9fbcb2d3",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://publiconsult.com.br/Concurso/Index",
+          "file": "publiconsult_open-cycle1-listing-8afd5b1fda.html",
+          "sha256": "7a6b07adb2fb2a6d8fafd16be066ebff40d3afd4f4525a8596b540129ec3b779",
+          "bytes": 20587,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:51:27.077304+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d2bc11468688",
+          "candidate": {
+            "candidate_id": "publiconsult_open-681",
+            "title_observed": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+            "detail_url_observed": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+            "external_id": "681",
+            "observed_at": "2026-09-08T12:51:27.164530Z",
+            "source": "publiconsult_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+              "file": "publiconsult_open-cycle1-detail-eafa3640bd.html",
+              "sha256": "8ffe5f542195e2be24e5e33fca5abdefabf28c37041e7ab4d4be30f54fa73901",
+              "bytes": 17989,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:51:28.101778+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "publiconsult_open-doc-7202d03a49e27a72",
+            "title": "Edital de Abertura de Inscrições",
+            "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura de Inscrições' por conter 'edital' no título/URL; 14 documento(s) ignorado(s) (ex.: Edital de Classificação Provisória; Anexo I - Classificação Provisória - Geral; Anexo II - Classificação Provisória - Candidatos com Deficiência; Anexo III - Candidatos Não Classificados; Resultado da Análise dos Títulos)."
+          },
+          "artifact": {
+            "artifact_id": "art-74ea1bc8f9",
+            "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+            "byte_len": 720592,
+            "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T12:51:29.654529Z",
+            "storage_path": "art-74ea1bc8f9-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"
+          },
+          "total_pages": 25,
+          "processed_pages": 25,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=25/25",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.25
+    },
+    {
+      "source": "publiconsult_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-da1cae8a2a04",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://publiconsult.com.br/Concurso/Index",
+          "file": "publiconsult_open-cycle2-listing-8afd5b1fda.html",
+          "sha256": "7a6b07adb2fb2a6d8fafd16be066ebff40d3afd4f4525a8596b540129ec3b779",
+          "bytes": 20587,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T12:51:32.866890+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-4c4fe4030c27",
+          "candidate": {
+            "candidate_id": "publiconsult_open-681",
+            "title_observed": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+            "detail_url_observed": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+            "external_id": "681",
+            "observed_at": "2026-09-08T12:51:32.937087Z",
+            "source": "publiconsult_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+              "file": "publiconsult_open-cycle2-detail-eafa3640bd.html",
+              "sha256": "8ffe5f542195e2be24e5e33fca5abdefabf28c37041e7ab4d4be30f54fa73901",
+              "bytes": 17989,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T12:51:33.923093+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "publiconsult_open-doc-7202d03a49e27a72",
+            "title": "Edital de Abertura de Inscrições",
+            "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de Abertura de Inscrições' por conter 'edital' no título/URL; 14 documento(s) ignorado(s) (ex.: Edital de Classificação Provisória; Anexo I - Classificação Provisória - Geral; Anexo II - Classificação Provisória - Candidatos com Deficiência; Anexo III - Candidatos Não Classificados; Resultado da Análise dos Títulos)."
+          },
+          "artifact": {
+            "artifact_id": "art-4bcc9aab21",
+            "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+            "byte_len": 720592,
+            "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf?AWSAccessKeyId=REDACTED&Expires=REDACTED&Signature=REDACTED&raw=REDACTED",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T12:51:35.124947Z",
+            "storage_path": "art-4bcc9aab21-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"
+          },
+          "total_pages": 25,
+          "processed_pages": 25,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=25/25",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.5
+    }
+  ]
+}

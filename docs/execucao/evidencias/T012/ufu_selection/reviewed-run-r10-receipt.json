@@ -1,0 +1,20 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "envelope": "reviewed-run-r10.json",
+  "envelope_sha256": "25490652d1d2fdda4e8f5b9c1d7bea3c48976249eb0e7b70e14dd13d3c163792",
+  "canonical_payload_sha256": "55af0a123106b5346744e2e5f12f482c0203ca9a235220e1c93a168dc7a61a0c",
+  "run_id": "tp-reviewed-fda366b2fc4f331f6704f8672be2a50d",
+  "previous_run_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "parser_sha256": "3516739354b24d3e2a890dded9c4fc07d9d69874413b1afc0459f11b642d804a",
+  "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+  "artifact_bytes": 26619,
+  "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+  "evidence_source_url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+  "revalidation": {"eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"], "blocked_baseline_only": ["taxa", "cargos", "prova_data"]},
+  "network": false
+}

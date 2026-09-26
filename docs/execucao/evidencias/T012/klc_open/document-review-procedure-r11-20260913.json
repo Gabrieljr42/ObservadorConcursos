@@ -1,0 +1,73 @@
+{
+  "schema": "t012.klc_open.document-review-procedure-r11.v1",
+  "recorded_at": "2026-09-13",
+  "reviewer": "Luna",
+  "verdict": "READY_FOR_ARTIFACT_REGISTRATION_AND_PREPARE",
+  "scope": "offline procedure only; no API, Docker, live or catalogue mutation performed",
+  "binding": {
+    "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+    "owner_user_id": 1,
+    "source_id": 57,
+    "source": "klc_open",
+    "external_id": "632",
+    "pending_kind": "retificacao",
+    "pending_title": "Retificação 1 - Alteração da Data da Prova",
+    "pending_url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+    "artifact_id": "art-klc-ret1-1887b316",
+    "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+    "byte_len": 423600,
+    "expected_page_count": 1
+  },
+  "supported_registration": {
+    "mechanism": "TenderProofStore.save_artifact_file(Artifact, bytes)",
+    "status": "existing supported local-store mechanism; used by production scripts/tests; no SQL ad hoc",
+    "not_reviewed_run_import": "reviewed_run_import is for a complete reviewed-run principal artifact and is not appropriate for this detached pending retification",
+    "not_endpoint": "prepare-preserved does not fetch or register bytes; it requires the blob already loadable by the configured TenderProofStore"
+  },
+  "procedure": [
+    "Use the same deployment TENDERPROOF_ARTIFACT_DIR and operational store as the target run; do not use the evidence directory as storage_path.",
+    "Read the preserved PDF, verify len=423600 and SHA256 exactly; reject before writing on any mismatch.",
+    "Construct Artifact with artifact_id, exact sha/byte_len, url_requested=url_final=the pending URL, content_type=application/pdf, and a valid preserved-acquisition timestamp. Call save_artifact_file; it atomically writes a hash-addressed basename and registers the blob.",
+    "Before registration, inspect the existing blob by artifact_id: same SHA/length is idempotent; any different SHA/length is a hard stop and must not be overwritten.",
+    "Reload with load_artifact_bytes and recheck bytes/hash/length. Only after this checkpoint send one prepare-preserved request bound to the exact run and pending manifest.",
+    "On prepare failure, stop and capture status/body; do not retry, approve, propose or apply. The registered blob may remain as preserved evidence; no catalogue/version/outbox/notification mutation is expected."
+  ],
+  "corrected_prepare_payload": {
+    "document": {
+      "title": "Retificação 1 - Alteração da Data da Prova",
+      "url": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "kind": "retificacao"
+    },
+    "artifact": {
+      "artifact_id": "art-klc-ret1-1887b316",
+      "sha256": "0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60",
+      "byte_len": 423600,
+      "url_requested": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "url_final": "https://www.klcconcursos.com.br/editais/1887b316fec80864152561400d6ea76d.pdf",
+      "downloaded_at": "2026-09-13T17:10:15.2990494Z",
+      "content_type": "application/pdf",
+      "storage_path": "art-klc-ret1-1887b316-0d16e9bc0f61000846c9828340710ee30845191704bc2c888f0d14734a278d60.pdf"
+    },
+    "expected_page_count": 1
+  },
+  "decision_scope_after_case": {
+    "decision_type": "field_changes",
+    "no_field_change": false,
+    "only_change": {"field_name": "prova_data", "previous": "2026-05-10", "new": "2026-05-17"},
+    "other_documental_changes": "not promoted by this procedure; require separate reviewed decision"
+  },
+  "offline_test": {
+    "command": "isolated Python store with temporary TENDERPROOF_ARTIFACT_DIR",
+    "result": "PASS: save_artifact_file generated the hash-addressed storage_path; load_artifact_bytes reloaded 423600 bytes with matching SHA; second reload was idempotent",
+    "case_creation_guard": "PASS: test_tenderproof_document_review_gate.py prepare_preserved local-artifact case creation/idempotency",
+    "network": false,
+    "docker": false,
+    "central_store": "untouched"
+  },
+  "checkpoints": {
+    "pre_registration": "run/pending owner/source/external/url identity must be confirmed by the authorized operator",
+    "post_registration": "blob exists, storage_path is basename under artifact_dir, bytes/hash/length match",
+    "post_prepare": "case id/revision returned; current case identity/run/document/hash must match; otherwise stop",
+    "rollback": "no case/catalog effects before successful prepare; preserve the registered blob for audit/retry, and never overwrite a conflicting artifact_id"
+  }
+}

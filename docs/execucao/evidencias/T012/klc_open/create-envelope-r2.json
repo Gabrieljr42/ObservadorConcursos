@@ -1,0 +1,87 @@
+{
+  "schema": "t012.klc-create-envelope.v2",
+  "operation": "CREATE",
+  "status": "READY_FOR_REVIEW",
+  "source": "klc_open",
+  "source_number": 57,
+  "external_id": "632",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "run_id": null,
+  "proposal_target": null,
+  "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+  "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+  "artifact": {
+    "artifact_id": "art-96637dad76",
+    "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "byte_len": 348300,
+    "pages": 10,
+    "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "content_type": "application/pdf",
+    "store_path": "backend/.tenderproof/r99kill13/klc_open/artifacts/art-96637dad76-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf"
+  },
+  "fields": [
+    {
+      "field_name": "titulo",
+      "value": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+      "evidence": {"page": 1, "snippet": "PROCESSO SELETIVO", "method_version": "klc-open-632-r3"}
+    },
+    {
+      "field_name": "orgao",
+      "value": "Prefeitura Municipal de Teodoro Sampaio - SP",
+      "evidence": {"page": 1, "snippet": "Teodoro Sampaio", "method_version": "klc-open-632-r3"}
+    },
+    {
+      "field_name": "edital_numero",
+      "value": "002/2026",
+      "evidence": {"page": 1, "snippet": "002/2026", "method_version": "klc-open-632-r3"}
+    },
+    {
+      "field_name": "inscricao_inicio",
+      "value": "2026-04-15",
+      "evidence": {"page": 1, "snippet": "15 de abril", "method_version": "klc-open-632-r3"}
+    },
+    {
+      "field_name": "inscricao_fim",
+      "value": "2026-04-26",
+      "evidence": {"page": 1, "snippet": "26 de abril de 2026", "method_version": "klc-open-632-r3"}
+    },
+    {
+      "field_name": "cargos",
+      "value": [{
+        "nome": "Monitor de Transporte e Atividade Escolares",
+        "cadastro_reserva": true,
+        "remuneracao": "1621.00",
+        "jornada": "30 h/s",
+        "requisitos": "Ensino Médio completo",
+        "taxa_inscricao": "19.75",
+        "beneficio": "ticket alimentação; valor atual R$ 715,00"
+      }],
+      "evidence": [
+        {"page": 1, "snippet": "Monitor de Transporte", "path": "cargos[0].nome"},
+        {"page": 1, "snippet": "1,621,00 +", "path": "cargos[0].remuneracao"},
+        {"page": 1, "snippet": "30 h/s", "path": "cargos[0].jornada"},
+        {"page": 1, "snippet": "Ensino Médio completo", "path": "cargos[0].requisitos"},
+        {"page": 1, "snippet": "19,75", "path": "cargos[0].taxa_inscricao"},
+        {"page": 1, "snippet": "ticket alimentação", "path": "cargos[0].beneficio"},
+        {"page": 1, "snippet": "R$ 715,00", "path": "cargos[0].beneficio"}
+      ]
+    }
+  ],
+  "import_replay": {
+    "schema": "tenderproof.reviewed-run.v1-compatible-payload",
+    "owner_boundary": "owner_user_id=1 only",
+    "run_id_derivation": "deferred until canonical concurso_id is allocated; no synthetic ID included",
+    "replay": "same envelope bytes/pins/fields are deterministic",
+    "canonical_id_requirement": "normal ReviewedRun import requires a positive canonical concurso_id; this CREATE envelope intentionally remains null"
+  },
+  "guards": {
+    "fields_source": "klc_parser_r3 + identity-integration-r1 + batch2 accepted literals only",
+    "unproven_fields_omitted": ["prova_data", "beneficios adicionais", "other cargos"],
+    "live_api": false,
+    "proposal": false,
+    "pilot": false,
+    "docker": false
+  }
+}

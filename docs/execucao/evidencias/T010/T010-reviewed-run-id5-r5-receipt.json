@@ -1,0 +1,17 @@
+{
+  "schema":"t010.id5.reviewed-run-r5.receipt.v1",
+  "record_id":5,
+  "status":"ID5_RUNNER_EVIDENCE_R5_READY",
+  "supersedes":["T010-reviewed-run-id5-r4.json"],
+  "superseded_runs":["tp-reviewed-374bfb111a85ef1c478668da5e8c948c"],
+  "envelope":"T010-reviewed-run-id5-r5.json",
+  "envelope_sha256":"bd1f190f6dfd7170e22b9ef7ac44ed530012bbdfe1b8c768d49f42eb4b7275a7",
+  "run_id":"tp-reviewed-40120e7a2b6662b131075dc416d2cb18",
+  "runner":"backend/app/tenderproof/consulplan_unai_jobs.py",
+  "parser_version":"consulplan-unai-2026/5",
+  "fee_evidence":{"page":3,"count":3,"json_paths":["cargos[0].taxa_inscricao","cargos[1].taxa_inscricao","cargos[2].taxa_inscricao"],"snippet":"O valor da taxa de inscrição será de R$ 80,00 (oitenta reais) para todos os cargos."},
+  "completeness_evidence":"T010-id5-completeness-20260913.json",
+  "validation":{"reviewed_run_model":"pass","import_dry_run":"validated","tests":"4 passed","network":false,"proposal":false,"apply":false},
+  "historical_r4":"preserved as superseded; proof supplement remains separate",
+  "gate":"independent review required before any import/proposal"
+}

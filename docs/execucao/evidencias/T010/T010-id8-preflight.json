@@ -1,0 +1,14 @@
+{
+  "schema": "t010.id8.preflight.v1",
+  "record_id": 8,
+  "identity": {"source": "idib_open", "external_id": "362", "concurso_id": 8, "owner_user_id": 1, "detail_url": "https://concurso.idib.org.br/Concurso.aspx?ID=362"},
+  "document": {"artifact_id": "art-cdeead8742", "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a", "local_pdf": "docs/execucao/evidencias/T010/id8.pdf", "bytes": 1048994, "pages": 75},
+  "catalogue_baseline": {"id": 8, "source_id": 45, "external_id": "362", "cargos": null},
+  "checked_fields": ["cargos", "vagas_imediatas", "vagas_ac", "vagas_pcd", "vagas_ppp", "vagas_cr", "requisitos", "jornada", "remuneracao_observacao", "taxa_inscricao", "inscricao_inicio", "inscricao_fim", "prova_data"],
+  "parser_derivation": {"module": "backend/app/tenderproof/idib_reriutaba_jobs.py", "version": "idib-reriutaba-362/1", "pages": [3, 72], "fail_closed_sha": true, "fail_closed_u_fffd": true},
+  "envelope": {"path": "docs/execucao/evidencias/T010/T010-reviewed-run-id8.json", "sha256": "81c37dc42f00d4189607bab6029e7476ce86dac363f58dfd0abeb59d850a469c", "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e"},
+  "dry_run": "pass",
+  "isolated_proposal": {"status": "PASS", "eligible_fields": ["cargos"], "proposal_state": "proposed", "catalogue_cargos_after": null, "database": "disposable SQLite only"},
+  "historical_422": {"status": "superseded", "cause": "page_limit before reviewed ID8 exception", "recorded_at": "2026-09-13"},
+  "decision": "READY_FOR_OPERATIONAL_FINAL_REVIEW_BEFORE_DISPATCH"
+}

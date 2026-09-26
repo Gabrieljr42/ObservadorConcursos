@@ -1,0 +1,475 @@
+{
+  "observed_at": "2026-09-07T23:45:57.845894+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\pilot-live-20260907",
+  "cycles": [
+    {
+      "source": "ibade_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-cce42e077c3e",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.ibade.selecao.site/edital",
+          "file": "ibade_open-cycle1-listing-3de618cb76.html",
+          "sha256": "db3afee9d6310a2fd918093d182c198592328f1c7c42686626a9dda70da3d4cd",
+          "bytes": 119636,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:45:59.032668+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-432e90ce4b9a",
+          "candidate": {
+            "candidate_id": "ibade_open-127",
+            "title_observed": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:45:59.345884Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/127",
+              "file": "ibade_open-cycle1-detail-2d8086bb71.html",
+              "sha256": "a3a08342e10127e8730e1d9680831b9502df54cb681fd0a80f45545826c483c1",
+              "bytes": 22654,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:45:59.899498+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ibade_open-doc-17dc193aee4de957",
+            "title": "Edital de abertura",
+            "url_requested": "https://ibade.selecao.site/arquivo.php?file=edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn-ibade.selecao.site/edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf?X-Amz-Content-Sha256=REDACTED&X-Amz-Algorithm=REDACTED&X-Amz-Credential=REDACTED&X-Amz-Date=REDACTED&X-Amz-SignedHeaders=REDACTED&X-Amz-Expires=REDACTED&X-Amz-Signature=REDACTED",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de abertura' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: ANEXO II – CRONOGRAMA PREVISTO; LISTAGEM REFERENCIAIS DE SALÁRIOS; ANEXO I – QUADRO DE VAGAS; Histórico de Abertura)."
+          },
+          "artifact": {
+            "artifact_id": "art-b3041425fa",
+            "sha256": "e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c",
+            "byte_len": 696670,
+            "url_requested": "https://ibade.selecao.site/arquivo.php?file=edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn-ibade.selecao.site/edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf?X-Amz-Content-Sha256=REDACTED&X-Amz-Algorithm=REDACTED&X-Amz-Credential=REDACTED&X-Amz-Date=REDACTED&X-Amz-SignedHeaders=REDACTED&X-Amz-Expires=REDACTED&X-Amz-Signature=REDACTED",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:46:00.361681Z",
+            "storage_path": "art-b3041425fa-e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c.pdf"
+          },
+          "total_pages": 26,
+          "processed_pages": 26,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=26/26",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.484
+    },
+    {
+      "source": "funcern_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-fa03a116b074",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funcern.br/concursos/?page=2",
+          "https://funcern.br/concursos/?page=3",
+          "https://funcern.br/concursos/?page=12",
+          "https://funcern.br/concursos/?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funcern.br/concursos/",
+          "file": "funcern_selection-cycle1-listing-968c950d00.html",
+          "sha256": "9b5ad673aff5c4de8708303d3ad9da20cb8d35e03411f001d83ff796a07c50df",
+          "bytes": 50144,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:46:04.289341+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-47f3d0de90d2",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-equador-2026",
+            "title_observed": "Concurso Público Município de Equador/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-equador-2026/",
+            "external_id": "concurso-equador-2026",
+            "observed_at": "2026-09-07T23:46:04.397758Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-equador-2026/",
+              "file": "funcern_selection-cycle1-detail-163a01e5e2.html",
+              "sha256": "f78e3222c473c5c3d4395dc39c2fdc349e6b5a8ccff252468a551a12f7cbd77d",
+              "bytes": 43840,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:46:05.422367+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-0fda8a7cdf55",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-lagoa-de-pedras-2026",
+            "title_observed": "Concurso Público Lagoa de Pedras/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+            "external_id": "concurso-lagoa-de-pedras-2026",
+            "observed_at": "2026-09-07T23:46:04.401007Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+              "file": "funcern_selection-cycle1-detail-5140aede0a.html",
+              "sha256": "ec18d8679b33c1c442a2c0837b4b26bf2a3b21c890e52e13ff7bf63e48a08deb",
+              "bytes": 42965,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:46:06.398083+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funcern_selection-doc-6e93f385f6714624",
+            "title": "Edital 01/2026",
+            "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026' por conter 'edital' no título/URL; 9 documento(s) ignorado(s) (ex.: Resultado Preliminar – Isenção por Doação de Medula Óssea; Resultado Preliminar – Isenção por Doação de Sangue; Resultado Preliminar – Isenção por Prestação de Serviço Eleitoral; Resultado Preliminar – Isenção por CadÚnico; Resultado Definitivo - Isenção por Prestação de Serviço Eleitoral)."
+          },
+          "artifact": {
+            "artifact_id": "art-706a096c22",
+            "sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+            "byte_len": 786327,
+            "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:46:08.145773Z",
+            "storage_path": "art-706a096c22-8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.516
+    },
+    {
+      "source": "ibade_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-53320049605a",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://portal.ibade.selecao.site/edital",
+          "file": "ibade_open-cycle2-listing-6a88c0d16a.html",
+          "sha256": "419fec8dcc423d07dd59b145d3708a7b404a7f3cbc6185ef4760330489e35249",
+          "bytes": 119636,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:46:09.537020+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e3e8d250b37c",
+          "candidate": {
+            "candidate_id": "ibade_open-127",
+            "title_observed": "Secretaria Municipal de Educação e Cultura de Chapadão do Sul/MS",
+            "detail_url_observed": "https://portal.ibade.selecao.site/edital/ver/127",
+            "external_id": "127",
+            "observed_at": "2026-09-07T23:46:09.839251Z",
+            "source": "ibade_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://portal.ibade.selecao.site/edital/ver/127",
+              "file": "ibade_open-cycle2-detail-772fcea684.html",
+              "sha256": "c4bfd1ade60946985322eeaa0d63e342070e2057b6a388f4586ca2816ea7397d",
+              "bytes": 22654,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:46:10.439103+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "ibade_open-doc-17dc193aee4de957",
+            "title": "Edital de abertura",
+            "url_requested": "https://ibade.selecao.site/arquivo.php?file=edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn-ibade.selecao.site/edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf?X-Amz-Content-Sha256=REDACTED&X-Amz-Algorithm=REDACTED&X-Amz-Credential=REDACTED&X-Amz-Date=REDACTED&X-Amz-SignedHeaders=REDACTED&X-Amz-Expires=REDACTED&X-Amz-Signature=REDACTED",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital de abertura' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: ANEXO II – CRONOGRAMA PREVISTO; LISTAGEM REFERENCIAIS DE SALÁRIOS; ANEXO I – QUADRO DE VAGAS; Histórico de Abertura)."
+          },
+          "artifact": {
+            "artifact_id": "art-ebb0b0aee2",
+            "sha256": "e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c",
+            "byte_len": 696670,
+            "url_requested": "https://ibade.selecao.site/arquivo.php?file=edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf",
+            "url_final": "https://s3.sa-east-1.amazonaws.com/cdn-ibade.selecao.site/edital/1/127/ba13c6a0dbe47510fa87cdc9cabb0f81.pdf?X-Amz-Content-Sha256=REDACTED&X-Amz-Algorithm=REDACTED&X-Amz-Credential=REDACTED&X-Amz-Date=REDACTED&X-Amz-SignedHeaders=REDACTED&X-Amz-Expires=REDACTED&X-Amz-Signature=REDACTED",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:46:10.874836Z",
+            "storage_path": "art-ebb0b0aee2-e3799233574e7bb46f3dd22cbae8b780a07bd86574ad3db8671d0c7f7f3bfe6c.pdf"
+          },
+          "total_pages": 26,
+          "processed_pages": 26,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=26/26",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.562
+    },
+    {
+      "source": "funcern_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-7bd63419de02",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 2,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funcern.br/concursos/?page=2",
+          "https://funcern.br/concursos/?page=3",
+          "https://funcern.br/concursos/?page=12",
+          "https://funcern.br/concursos/?page=13"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funcern.br/concursos/",
+          "file": "funcern_selection-cycle2-listing-968c950d00.html",
+          "sha256": "9b5ad673aff5c4de8708303d3ad9da20cb8d35e03411f001d83ff796a07c50df",
+          "bytes": 50144,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-07T23:46:14.368944+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-3a237e2c7554",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-equador-2026",
+            "title_observed": "Concurso Público Município de Equador/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-equador-2026/",
+            "external_id": "concurso-equador-2026",
+            "observed_at": "2026-09-07T23:46:14.493599Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-equador-2026/",
+              "file": "funcern_selection-cycle2-detail-163a01e5e2.html",
+              "sha256": "f78e3222c473c5c3d4395dc39c2fdc349e6b5a8ccff252468a551a12f7cbd77d",
+              "bytes": 43840,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:46:15.506686+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-235dc4e8356e",
+          "candidate": {
+            "candidate_id": "funcern_selection-concurso-lagoa-de-pedras-2026",
+            "title_observed": "Concurso Público Lagoa de Pedras/RN",
+            "detail_url_observed": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+            "external_id": "concurso-lagoa-de-pedras-2026",
+            "observed_at": "2026-09-07T23:46:14.495594Z",
+            "source": "funcern_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funcern.br/concursos/concurso-lagoa-de-pedras-2026/",
+              "file": "funcern_selection-cycle2-detail-5140aede0a.html",
+              "sha256": "ec18d8679b33c1c442a2c0837b4b26bf2a3b21c890e52e13ff7bf63e48a08deb",
+              "bytes": 42965,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-07T23:46:16.436594+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funcern_selection-doc-6e93f385f6714624",
+            "title": "Edital 01/2026",
+            "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 01/2026' por conter 'edital' no título/URL; 9 documento(s) ignorado(s) (ex.: Resultado Preliminar – Isenção por Doação de Medula Óssea; Resultado Preliminar – Isenção por Doação de Sangue; Resultado Preliminar – Isenção por Prestação de Serviço Eleitoral; Resultado Preliminar – Isenção por CadÚnico; Resultado Definitivo - Isenção por Prestação de Serviço Eleitoral)."
+          },
+          "artifact": {
+            "artifact_id": "art-8e94c80074",
+            "sha256": "8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca",
+            "byte_len": 786327,
+            "url_requested": "https://funcern.br/documents/2746/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "url_final": "https://nyc3.digitaloceanspaces.com/repo/funcern.br/media/documents/Edital_LagoadePedrasRN_4_49lUN1f.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-07T23:46:17.830080Z",
+            "storage_path": "art-8e94c80074-8e296b419b83ff91630ca85822b9fb7e6398c379c4e5db4d8e7b0759cf1cdcca.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.969
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "task": "T012",
+  "source": "fafipa_open",
+  "source_id": 69,
+  "external_id": "4208",
+  "owner_user_id": 1,
+  "decision": "REJECT",
+  "scope": "Revisão offline independente do reviewed-envelope-ready-r9.json e receipt, sem live/import/proposal/apply.",
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/fafipa_open/reviewed-envelope-ready-r9.json",
+    "sha256": "3093AF052D2030A14D6FA592A1C3E16BDADFB6AF1D3689DBDD208FDA16C30B1F",
+    "schema": "tenderproof.reviewed-run.v1",
+    "concurso_id": null,
+    "structural_validation": "PASS_CURRENT_CONTRACT",
+    "field_count": 7,
+    "fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "cargo_count": 14,
+    "cargo_evidence_count": 14,
+    "remuneracao_top_level_present": false,
+    "taxa_top_level_present": false,
+    "run_id_in_envelope": false,
+    "computed_run_id_current": "tp-reviewed-fefe8924b68403d795a4d43b73e85e1c",
+    "artifact": {
+      "sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+      "byte_len": 3630911,
+      "path": "docs/execucao/evidencias/T012/fafipa_open/artifacts/fafipa-4208-edital.pdf"
+    }
+  },
+  "receipt": {
+    "path": "docs/execucao/evidencias/T012/fafipa_open/reviewed-envelope-ready-r9-receipt.json",
+    "sha256": "9E569E3434C801CB4E8182EFF504A060FF2CB949D2FEA0214C7E8C38329E6F8D",
+    "status_claimed": "READY_FOR_REVIEW",
+    "null_id_claim": "blocked as expected; allocate through normal route",
+    "receipt_run_id": "tp-reviewed-187a43fbfc355834ff54dbcb6adb4fc1"
+  },
+  "contract_check": {
+    "implementation": "backend/app/tenderproof/reviewed_run_import.py",
+    "current_rule": "ReviewedRun.concurso_id is int | None with gt=0; None is explicitly accepted for a reviewed CREATE target (lines 64-68).",
+    "same_process_result": "ReviewedRun.model_validate(envelope) PASS; build_run PASS; computed run id tp-reviewed-fefe8924b68403d795a4d43b73e85e1c.",
+    "replay_identity": "PASS: repeated current derivation is deterministic; receipt run id does not match current derivation.",
+    "owner_negative": "PASS_EXPECTED: owner_user_id=0 remains rejected by Field(gt=0).",
+    "artifact_integrity": "PASS: local bytes SHA/length match envelope (26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f / 3630911)."
+  },
+  "rejection_reasons": [
+    "Receipt contradicts the current importer contract: concurso_id=null is accepted by ReviewedRun and is the explicit reviewed CREATE target; it is not blocked at schema validation.",
+    "Receipt run_id tp-reviewed-187a43fbfc355834ff54dbcb6adb4fc1 is not the current deterministic run id tp-reviewed-fefe8924b68403d795a4d43b73e85e1c, indicating the receipt was generated against a stale envelope/schema/derivation.",
+    "Therefore the envelope is structurally valid, but the envelope+receipt package is not auditable as READY_FOR_LIVE_IMPORT_PROPOSAL."
+  ],
+  "exact_correction": "Regenerate the receipt in the same process using the current reviewed_run_import.ReviewedRun/build_run/import_reviewed_run contract: record concurso_id=null as accepted allocation state, recompute run_id as tp-reviewed-fefe8924b68403d795a4d43b73e85e1c, replay artifact SHA/length and 7/14 cardinalities, then rerun negative owner=0 and byte-drift guards. Do not inject a synthetic run_id into the envelope and do not allocate or mutate SQLite in this review.",
+  "mutations": {"live": false, "import": false, "proposal": false, "apply": false, "sqlite": false}
+}

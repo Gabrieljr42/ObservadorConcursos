@@ -1,0 +1,22 @@
+{
+  "schema": "t004.local-update-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "T004_LOCAL_ACCEPT_WITH_CORRECTIONS",
+  "scope": "Leitura independente de T004.md, inventário r3/revisão, ID5 r3/suplemento/receipts, Garibaldi e relatórios 18/20/22-25; sem mutação.",
+  "checks": {
+    "overall_state": "PASS: T004 permanece EM_REVISAO/PARCIAL; não há fechamento total nem novo lote autorizado.",
+    "inventory": "PASS: r3 mantém runtime_factory_absent=0, integration_status not_certified e namespace source_number distinto de concurso_id.",
+    "id5_artifacts": "PASS parcial: SHA 9bdb0e77...96dac32, run r3, three cargo rows, taxa p3 e suplemento prova p31 são internamente coerentes; receipts registram dry-run/testes e zero proposta/apply.",
+    "id5_pending_resolution": "CORREÇÃO NECESSÁRIA: o run contém somente três linhas selecionadas, não o quadro completo. T010.md ainda fixa ID5=INSUFFICIENT_EVIDENCE; T004.md não deve dizer sem qualificação que a pendência do runner está resolvida ou que o caso está pronto para import/proposta. Dizer apenas targeted-parser parcial/ready-for-new-review, mantendo import bloqueado até escopo do quadro ser aceito.",
+    "garibaldi": "PASS: identidade/origem/histórico localmente comprovados; manifest é metadata-only, bytes ausentes, teste ledger descartável não certifica publicação. Blocker tem caso, owner implícito T004 e condição objetiva (bytes/receipt/GET publication).",
+    "blocked_records": "PASS: IDs 18,20,22,23,24,25 têm SHA, identidade, campos comprováveis/ausentes, status SPECIFIC_BLOCKER, condição e owner T004-content; não há promoção de agregados/exemplos.",
+    "mapping": "PASS: concurso 5/18/20/22/23/24/25 mapeiam respectivamente institutoconsulplan/quadrix/legatus/funcern/fgv/fcc/facet; matrix source numbers são 38/42/62/64/10/9/31, não os IDs dos concursos.",
+    "false_closure": "Não há falso fechamento global; há somente a formulação excessiva do fechamento interno de ID5 descrita acima."
+  },
+  "required_corrections": [
+    "Alterar T004.md para distinguir parser direcionado ID5 (3 linhas) de runner/source coverage completo.",
+    "Remover ou qualificar 'prontos para import/proposta' como dependente de novo aceite explícito; preservar o estado autoritativo T010 ID5 INSUFFICIENT_EVIDENCE.",
+    "Manter inventory r3 gap do caso ID5 ou atualizá-lo apenas para 'targeted parser existe; cobertura completa/runner de distribuição não comprovados'."
+  ]
+}

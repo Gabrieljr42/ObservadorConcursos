@@ -1,0 +1,15 @@
+{
+  "schema":"t012.source-status.v1",
+  "source":"fapece_selection",
+  "source_id":79,
+  "agency":"FUNCAP-CE",
+  "state":"NOT_CURRENT",
+  "decision":"NOT_CURRENT_DO_NOT_PUBLISH",
+  "observed_at":"2026-09-09T14:34:44.296152+00:00",
+  "scope":"preserved FUNCAP-CE current-documents snapshot only; no network/API/DB access",
+  "reconciliation":{"process_count":18,"year_2026_process_count":14,"status_counts":{"Editais Encerrados":18},"vigent_2026_count":0},
+  "reason":"Nenhum processo FUNCAP-CE preservado estava vigente na observação. Todos os 18 registros, incluindo os 14 processos de 2026, possuem status observado 'Editais Encerrados'; não há inscrições abertas nem processo operacionalmente atual elegível para publicação.",
+  "evidence":{"report_path":"backend/.tenderproof/product-completion/funcap/current-documents-20260909T143144Z/report.json","report_sha256":"f211cf1b55b3f605511d98dacb8b6cf1b33837a8258fd6be4acd6228fc819cf5","report_bytes":79173,"verification_path":"backend/.tenderproof/product-completion/funcap/current-documents-20260909T143144Z/verification.json","verification_sha256":"c0fc80ccfe566652d78fa786c91b735d42b2e261d38dc7b69f9b04cc3fadad90","sample_2026":[{"solicitation_id":"272","title":"EDITAL Nº 14/2026 FUNCAP - PESQUISADOR VISITANTE","status":"Editais Encerrados"},{"solicitation_id":"275","title":"EDITAL Nº 13/2026 - PROFIX-CE","status":"Editais Encerrados"},{"solicitation_id":"278","title":"EDITAL Nº 12/2026 - REDES DE EXTENSÃO","status":"Editais Encerrados"},{"solicitation_id":"276","title":"EDITAL Nº 11/2026 PROGRAMA EJ-CE","status":"Editais Encerrados"},{"solicitation_id":"265","title":"MULHERES EMPREENDEDORAS - EDITAL 04/2026","status":"Editais Encerrados"}]},
+  "actions":{"parser":false,"strong_preflight":false,"revalidate":false,"reviewed_run":false,"proposal":false,"publish":false,"apply":false,"db":false},
+  "next_condition":"Reabrir somente com novo snapshot oficial que contenha status vigente/inscrições abertas ou atividade operacional atual e bytes/documento identificados; não tentar os registros encerrados desta evidência."
+}

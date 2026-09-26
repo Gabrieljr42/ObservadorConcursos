@@ -1,0 +1,804 @@
+{
+  "generated_at": "2026-09-08T15:23:58.476567+00:00",
+  "scope": "12regional institutional personnel sources; bounded public verified TLS; no production/browser/login; funding/bolsas/procurement excluded",
+  "gate99_accepted": false,
+  "captured_records_verified": 41,
+  "hash_errors": [],
+  "sources": [
+    {
+      "source": "fapesc_selection",
+      "finding": "Official delegated archive2022; original001/2022 and two amendments observed. PDF has two leading LF bytes; exact transport preserved, transport signature accepts bounded prefix but production strict parser rejects; two failed offline cycles preserved. No byte repair or certification.",
+      "captures": [
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.fepese.org.br/",
+          "basis": "Official Diario SC 20221011/3003.pdf names fapesc.fepese.org.br as sole official contest site; TLS upgrade same host",
+          "observed_at": "2026-09-08T14:58:49.118247+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 16377,
+          "sha256": "e045ec0201a717b4a402fc8ea8112b3e56dbe44daade5739bb5c8d4da1a64515",
+          "file": "fapesc_selection-cd1fb755-e045ec0201.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\alternate-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.sc.gov.br/chamadas-em-andamento/",
+          "basis": "Literal navigation link in fapesc_selection-25c39d73-598e25ea79.html",
+          "observed_at": "2026-09-08T14:52:07.497087+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 144841,
+          "sha256": "f90732ac2afd33c3e01525c366552a41704127f73d8ce17dd42fdeaaf235bdc0",
+          "file": "fapesc_selection-041e8ef7-f90732ac2a.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "basis": "literal observed edital navigation in official contest homepage",
+          "observed_at": "2026-09-08T14:59:45.603101+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 3829,
+          "sha256": "9152b4d458c239b1f7a3e282fbee42dda0262ffe9be28602b0d3441f895ee4fd",
+          "file": "fapesc_selection-37b522c0-9152b4d458.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\contest-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+          "basis": "literal original edital href in detail",
+          "observed_at": "2026-09-08T15:07:04.972981+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 715217,
+          "sha256": "92564af99aebb45866f7ef60f5c34c08c1241ca08725b55623d8f06ac56ed8ae",
+          "file": "fapesc_selection-92564af99aebb458.response",
+          "error": "response not successful PDF",
+          "client_closed": true,
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\fapesc-pdf-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.sc.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:50.168713+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 155765,
+          "sha256": "598e25ea79f1ca361897fba01228ab1a3fc60d1a606e8a1396d42ffbf476ede8",
+          "file": "fapesc_selection-25c39d73-598e25ea79.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapesc_selection",
+          "url": "https://fapesc.sc.gov.br/balanco-de-gestao-fapesc-da-um-salto-rumo-ao-ecossistema-de-ciencia-tecnologia-e-inovacao/",
+          "basis": "Official indexed news references first institutional public employment contest",
+          "observed_at": "2026-09-08T14:52:58.698370+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 138393,
+          "sha256": "081890b9b4ad652ea1e99661d8ede44a1c1c3d01c4026eee54a849e68d34868c",
+          "file": "fapesc_selection-5134501a-081890b9b4.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\selection-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fundect_selection",
+      "finding": "Observed consultations page contains research funding/productivity, PICTEC and event programmes. No scoped personnel notice proved in bounded sample; not certified empty.",
+      "captures": [
+        {
+          "source": "fundect_selection",
+          "url": "https://www.fundect.ms.gov.br/informativos/consultas/",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:50.169711+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 504989,
+          "sha256": "0fa90a2f3848e4e1bbbfb5b7cfe29b4035c6b781beb8cab4fa9675714b435809",
+          "file": "fundect_selection-3db12126-0fa90a2f38.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapemat_selection",
+      "finding": "Observed official www.fapemat.mt.gov.br redirect and editais_1. No scoped personnel sample. Shared host /web/secitec content belongs to SECITEC and cannot prove FAPEMAT selection.",
+      "captures": [
+        {
+          "source": "fapemat_selection",
+          "url": "https://www.fapemat.mt.gov.br/editais_1",
+          "basis": "Literal navigation link in fapemat_selection-7910c600-dc91377ad1.html",
+          "observed_at": "2026-09-08T14:52:08.801904+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 76488,
+          "sha256": "2901b1681ee90d234b324a95825ba23950c03d0c71648046a694c29622067df1",
+          "file": "fapemat_selection-7b3739a6-2901b1681e.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapemat_selection",
+          "url": "https://www.fapemat.mt.gov.br/",
+          "basis": "Observed redirect Location in initial manifest",
+          "observed_at": "2026-09-08T14:50:49.039253+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 111813,
+          "sha256": "dc91377ad1fa717d0f00951c08e3f9af68d07328b5fc7c92527af4e37298a696",
+          "file": "fapemat_selection-7910c600-dc91377ad1.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapemat_selection",
+          "url": "https://fapemat.mt.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:50.169711+00:00",
+          "tls_verified": true,
+          "status": 302,
+          "location": "https://www.fapemat.mt.gov.br/",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "file": "fapemat_selection-6ee7b016-e3b0c44298.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapeg_selection",
+      "finding": "SEAD official listing links FAPEG009/2024 contest59. Original button177 exports by POST. Header Content-Type application/x-www-form-urlencoded required by observed downloader. First headerless500 preserved; corrected exact official request returns PDF29pages. Typed POST integration completed, 2real cycles valid29pages/sameSHA, recovery without repost tested.",
+      "captures": [
+        {
+          "source": "fapeg_selection",
+          "url": "https://goias.gov.br/administracao/processos-seletivos-simplificados/",
+          "basis": "Official SEAD selection list indexed with FAPEG009/2024",
+          "observed_at": "2026-09-08T14:52:11.870114+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 218372,
+          "sha256": "ed9a5fda1a56ae7bb3b1b951f23bd23d84d1654409fd609899583812a6748523",
+          "file": "fapeg_selection-aef872c2-ed9a5fda1a.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://selecao.go.gov.br/assets/externo/js/js-file-downloader.min.js",
+          "basis": "literal source script in detail",
+          "observed_at": "2026-09-08T15:06:59.035732+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 16569,
+          "sha256": "c11d0cdcaf68934da92697a7ddbf93152806ef902521d809227e374808a225a0",
+          "file": "fapeg_selection-467ad92a-c11d0cdcaf.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\downloader-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://goias.gov.br/fapeg/ultimos-dias-para-inscricoes-no-processo-seletivo-da-fapeg-prazo-encerra-na-proxima-segunda-feira-23-de-setembro/",
+          "basis": "Official indexed employment notice from web search",
+          "observed_at": "2026-09-08T14:50:50.257044+00:00",
+          "tls_verified": true,
+          "status": 302,
+          "location": "https://goias.gov.br/comunicado/",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "file": "fapeg_selection-b6b84e8f-e3b0c44298.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://goias.gov.br/fapeg/categoria/editais/",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:51.096685+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 203063,
+          "sha256": "660df9eb411f0ef03363b3ca9d7bca55f80d9ed9c7d16008fa1467be37b2137c",
+          "file": "fapeg_selection-d4132f22-660df9eb41.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://selecao.go.gov.br/exportarEditalPdf",
+          "basis": "Official index.js exportEditalPdf body; original publication row177 in contest59",
+          "observed_at": "2026-09-08T15:03:26.149598+00:00",
+          "tls_verified": true,
+          "method": "POST",
+          "body": "177,0",
+          "status": 500,
+          "location": null,
+          "bytes": 27898,
+          "sha256": "f226d84db30c1b12c8127dc89c69a7b113f8297aa90ecfd45f929510eff44e50",
+          "file": "fapeg_selection-f226d84db30c1b12.response",
+          "error": "response not successful PDF",
+          "client_closed": true,
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\pdf-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://selecao.go.gov.br/exportarEditalPdf",
+          "basis": "Official observed downloader default contentType and original publication row177",
+          "observed_at": "2026-09-08T15:07:53.509685+00:00",
+          "tls_verified": true,
+          "method": "POST",
+          "body": "177,0",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "status": 200,
+          "location": null,
+          "bytes": 489850,
+          "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+          "file": "fapeg_selection-fd9ad5e3fb8490bf.pdf",
+          "pages": 29,
+          "client_closed": true,
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\pdf-retry-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://selecao.go.gov.br/assets/externo/js/app/edital/index.js",
+          "basis": "literal script src in official detail",
+          "observed_at": "2026-09-08T14:57:45.918599+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 53327,
+          "sha256": "34469bdc3cbf448ae6921dd8f8cb680b2c59ea2cea87397dea9bfc305d7d4931",
+          "file": "fapeg_selection-7d5fc3c7-34469bdc3c.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\script-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeg_selection",
+          "url": "https://selecao.go.gov.br/edital/edital-n-0092024–seadfapeg_processo-seletivo-simplificado_fapeg%7C59",
+          "basis": "Literal FAPEG selection link in official SEAD listing",
+          "observed_at": "2026-09-08T14:52:58.698370+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 152513,
+          "sha256": "b88cc7343c93c71ab193ac8b94db96772270d1fe07e9618707e570e483372772",
+          "file": "fapeg_selection-45a1387e-b88cc7343c.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\selection-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapdf_selection",
+      "finding": "Observed current editais-fapdf-20261 lists science and innovation funding. No scoped personnel sample proved; not certified empty.",
+      "captures": [
+        {
+          "source": "fapdf_selection",
+          "url": "https://fap.df.gov.br/editais-fapdf-20261",
+          "basis": "Literal navigation link in fapdf_selection-6555612f-1a6d91c12a.html",
+          "observed_at": "2026-09-08T14:52:07.498078+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 263938,
+          "sha256": "e0df53e9b31142a9851505cf3d61c57ab1f8f72849f391f9ab66cfa218f7b690",
+          "file": "fapdf_selection-3890b200-e0df53e9b3.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapdf_selection",
+          "url": "https://fap.df.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:51.660910+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 256026,
+          "sha256": "1a6d91c12a3970a8c9a2993965cab3780d18bda0be1e59f9a887a73e7093244f",
+          "file": "fapdf_selection-6555612f-1a6d91c12a.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapt_selection",
+      "finding": "Official /fapt/editais/31uugl1y7as4 resolves to public programme listing. No scoped personnel sample proved. FAPTO is a different foundation and not substituted.",
+      "captures": [
+        {
+          "source": "fapt_selection",
+          "url": "http://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "basis": "Literal navigation link in fapt_selection-831a1e45-f36864cc87.html",
+          "observed_at": "2026-09-08T14:52:09.768257+00:00",
+          "tls_verified": true,
+          "status": 301,
+          "location": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "bytes": 169,
+          "sha256": "ced41fce8e4afba9d810d028d2691cbe9b919dfa67250ab541b573597c3050af",
+          "file": "fapt_selection-988fee64-ced41fce8e.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapt_selection",
+          "url": "https://www.to.gov.br/fapt/editais/31uugl1y7as4",
+          "basis": "Literal redirect Location in categories manifest",
+          "observed_at": "2026-09-08T14:53:40.011142+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 10766,
+          "sha256": "8052b22669b0c8ec71f8822c94d8423ed448ba1e38cf3cd78458b54b9af04a99",
+          "file": "fapt_selection-cef67142-8052b22669.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\details-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapt_selection",
+          "url": "https://www.to.gov.br/fapt/",
+          "basis": "Observed redirect Location in initial manifest",
+          "observed_at": "2026-09-08T14:50:49.040253+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 15658,
+          "sha256": "f36864cc87a84e0a696dca4171e8ee73c50aa0dae83bfa6fa6edcf9c362f4920",
+          "file": "fapt_selection-831a1e45-f36864cc87.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapt_selection",
+          "url": "https://fapt.to.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:51.827820+00:00",
+          "tls_verified": true,
+          "status": 301,
+          "location": "https://www.to.gov.br/fapt/",
+          "bytes": 169,
+          "sha256": "ced41fce8e4afba9d810d028d2691cbe9b919dfa67250ab541b573597c3050af",
+          "file": "fapt_selection-b39df24e-ced41fce8e.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapeam_selection",
+      "finding": "Official editais/?aba=editais-abertos contains funding programmes. Scientific/logo competitions and bursary selection are outside personnel scope.",
+      "captures": [
+        {
+          "source": "fapeam_selection",
+          "url": "https://www.fapeam.am.gov.br/editais?aba=editais-abertos",
+          "basis": "Literal navigation link in fapeam_selection-6bae1a0d-4fc147cf2e.html",
+          "observed_at": "2026-09-08T14:52:07.498078+00:00",
+          "tls_verified": true,
+          "status": 301,
+          "location": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "file": "fapeam_selection-f839c4ca-e3b0c44298.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeam_selection",
+          "url": "https://www.fapeam.am.gov.br/editais/?aba=editais-abertos",
+          "basis": "Literal redirect Location in categories manifest",
+          "observed_at": "2026-09-08T14:53:40.010141+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 118942,
+          "sha256": "5ba63d4ed7c5cfed4bf03ba69c2eceddd9400bcaf58d77d1f7b37a2ead18c45f",
+          "file": "fapeam_selection-78682234-5ba63d4ed7.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\details-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeam_selection",
+          "url": "https://fapeam.am.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:52.525829+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 115406,
+          "sha256": "4fc147cf2e9e62e25f4026ddd747820bd832df3520bd0b8905c28213a9677d3c",
+          "file": "fapeam_selection-6bae1a0d-4fc147cf2e.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapespa_selection",
+      "finding": "Reviewed archive PSS001/2025, current /chamadas/ section proves temporary personnel selection. Original PDF is explicitly reviewed official indexed evidence, absent from current section links. This is not a claim of discovery in current HTML or complete2026coverage.",
+      "captures": [
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/?action=Conteudo.showPdf&id=258",
+          "basis": "Official indexed homepage with PSS001/2026 and002/2026 literal titles, not assumed PDF",
+          "observed_at": "2026-09-08T14:58:49.118247+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 110276,
+          "sha256": "532361b34a6d2d992ebf6d7d253e71ba8e7b523661037e132eac50994adcf190",
+          "file": "fapespa_selection-540052a6-532361b34a.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\alternate-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "basis": "Literal navigation link in fapespa_selection-143cc037-033a593825.html",
+          "observed_at": "2026-09-08T14:52:09.988426+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 110533,
+          "sha256": "baaba578aa7b1f0c7877183cb4abadc90f71f7d2d8ad647de45538175dddb40d",
+          "file": "fapespa_selection-aae9b717-baaba578aa.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/",
+          "basis": "Observed redirect Location in initial manifest",
+          "observed_at": "2026-09-08T14:50:49.040253+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 207837,
+          "sha256": "033a59382540d94b4e4f474a6679e545d508976ece3567fd1503253d3652a0e2",
+          "file": "fapespa_selection-143cc037-033a593825.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/2023/04/12/fapespa-lanca-edital-com-vagas-para-tecnicos-em-cinco-areas-de-nivel-superior/",
+          "basis": "Official indexed employment notice from web search",
+          "observed_at": "2026-09-08T14:50:50.392066+00:00",
+          "tls_verified": true,
+          "status": 404,
+          "location": null,
+          "bytes": 79569,
+          "sha256": "a7a78e14540516861ef7347143511b55a12cb10af3d9797271e249855a316310",
+          "file": "fapespa_selection-5ed66628-a7a78e1454.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://fapespa.pa.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:52.987650+00:00",
+          "tls_verified": true,
+          "status": 301,
+          "location": "https://www.fapespa.pa.gov.br/",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "file": "fapespa_selection-6d2e31d2-e3b0c44298.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+          "basis": "Official indexed original FAPESPA PSS001/2025; absent from current calls links, explicit reviewed archive evidence only",
+          "observed_at": "2026-09-08T15:03:26.835447+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 933613,
+          "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+          "file": "fapespa_selection-b7c6e61108b99fee.pdf",
+          "pages": 22,
+          "client_closed": true,
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\pdf-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapespa_selection",
+          "url": "https://www.fapespa.pa.gov.br/chamadas/",
+          "basis": "Official indexed calls listing, also current navigation CHAMADAS",
+          "observed_at": "2026-09-08T14:52:58.697373+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 95100,
+          "sha256": "9b4670401e8ad57d8716e56c22fe578f03da2c5254707c65498319739072321d",
+          "file": "fapespa_selection-78cf8aac-9b4670401e.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\selection-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapeap_selection",
+      "finding": "Old fapeap.ap.gov.br has verified TLS hostname mismatch. Legitimate official fapeap.portal.ap.gov.br and /publicacoes both200. Current Centelha/PROFIX/research/startup programmes are out of personnel scope. Old TLS failure is not attributed to new portal.",
+      "captures": [
+        {
+          "source": "fapeap_selection",
+          "url": "https://fapeap.portal.ap.gov.br/",
+          "basis": "Official indexed FAPEAP portal, corroborated by government service directory",
+          "observed_at": "2026-09-08T14:52:10.189969+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 138920,
+          "sha256": "767da6151dcadd3062f7ce8f8a7f1b66790fa5288fd146227f02b6a5f3e7bd97",
+          "file": "fapeap_selection-8f659d09-767da6151d.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeap_selection",
+          "url": "https://fapeap.portal.ap.gov.br/publicacoes",
+          "basis": "Literal publication link in new official portal",
+          "observed_at": "2026-09-08T14:53:40.011142+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 140247,
+          "sha256": "8c4b6b522a1724c8d8c2bbc4f41eac60d9996c16a024cf16bf38caf5e4a472b9",
+          "file": "fapeap_selection-8722e6ce-8c4b6b522a.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\details-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapeap_selection",
+          "url": "https://fapeap.ap.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:53.878788+00:00",
+          "tls_verified": true,
+          "error_type": "ConnectError",
+          "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fapeap.ap.gov.br'. (_ssl.c:1000)",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json"
+        }
+      ]
+    },
+    {
+      "source": "faperr_selection",
+      "finding": "Observed current homepage/public calls do not prove personnel selection. No reliable empty marker or broad coverage conclusion.",
+      "captures": [
+        {
+          "source": "faperr_selection",
+          "url": "https://faperr.rr.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:54.105176+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 211562,
+          "sha256": "d56e1209dd10876a09031e52b6754bf3fa638dc3447985f0a2c1a741e41e2cbb",
+          "file": "faperr_selection-94aa2e3d-d56e1209dd.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapero_selection",
+      "finding": "Official category concursos-e-convocacoes/?e=2503 contains selections of OTHER agencies including SEDAM/IDEP despite FAPERO breadcrumb. Cannot bind those to FAPERO. Institutional publications include procurement/material acquisition. No personnel sample proved; no fake empty contract.",
+      "captures": [
+        {
+          "source": "fapero_selection",
+          "url": "https://rondonia.ro.gov.br/publicacoes/categorias/concursos-e-convocacoes/?e=2503",
+          "basis": "Official category link observed in inventory and initial page",
+          "observed_at": "2026-09-08T14:50:50.235050+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 213096,
+          "sha256": "1fa406d50c242b168bb9174ab38f345e5fe8e2a4f7c69e3a883faef080cdd017",
+          "file": "fapero_selection-15509a7b-1fa406d50c.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\followup-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapero_selection",
+          "url": "https://rondonia.ro.gov.br/fapero/publicacoes/",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:54.582548+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 207193,
+          "sha256": "2f1ab30814d988c7228c9a29e49705f486ea1c7008582e69f1ec9c7ff28eae64",
+          "file": "fapero_selection-eaf59bfc-2f1ab30814.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    },
+    {
+      "source": "fapac_selection",
+      "finding": "Official /98-2/ lists OSC institutional calls, scientific bursaries Maes da Ciencia and Mentes Azuis. Those are outside personnel scope; no scoped sample proved.",
+      "captures": [
+        {
+          "source": "fapac_selection",
+          "url": "https://fapac.ac.gov.br/98-2/",
+          "basis": "Literal navigation link in fapac_selection-45ced2fc-42a83117ad.html",
+          "observed_at": "2026-09-08T14:52:08.675842+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 151526,
+          "sha256": "dd4a85d9b03b0c26f49bb52155831b8cd68ac3e00cc31b6219b90c99e6f39749",
+          "file": "fapac_selection-e377d924-dd4a85d9b0.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\categories-manifest.json",
+          "durable_bytes_sha_verified": true
+        },
+        {
+          "source": "fapac_selection",
+          "url": "https://fapac.ac.gov.br",
+          "basis": "inventory99 listing URL",
+          "observed_at": "2026-09-08T14:49:55.944656+00:00",
+          "tls_verified": true,
+          "status": 200,
+          "location": null,
+          "bytes": 180507,
+          "sha256": "42a83117ad4a84a9c15dc2eadbc5f3537df99e4526694b7d8b93755ac39893cc",
+          "file": "fapac_selection-45ced2fc-42a83117ad.html",
+          "manifest": "tests\\fixtures\\tenderproof_batch99_regions\\initial-manifest.json",
+          "durable_bytes_sha_verified": true
+        }
+      ]
+    }
+  ],
+  "live_report": "..\\docs\\tenderproof-batch99-regions-live.json",
+  "live_samples": [
+    {
+      "source": "fapesc_selection",
+      "cycle": 1,
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HtmlBlockError: resposta não é PDF",
+      "report": "..\\docs\\tenderproof-batch99-regions-live.json",
+      "run_id": "tpr-48f1471acd9b",
+      "driver_cleanup": {
+        "instances": 8,
+        "all_clients_closed": true
+      }
+    },
+    {
+      "source": "fapespa_selection",
+      "cycle": 1,
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "report": "..\\docs\\tenderproof-batch99-regions-live.json",
+      "run_id": "tpr-d9f93461b1f6",
+      "driver_cleanup": {
+        "instances": 8,
+        "all_clients_closed": true
+      },
+      "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+      "bytes": 933613,
+      "pages": 22,
+      "durable_bytes_sha_verified": true,
+      "acquisition_request": null
+    },
+    {
+      "source": "fapesc_selection",
+      "cycle": 2,
+      "execution_status": "failed",
+      "validation_status": "pending",
+      "error": "HtmlBlockError: resposta não é PDF",
+      "report": "..\\docs\\tenderproof-batch99-regions-live.json",
+      "run_id": "tpr-0c5a7411dfe3",
+      "driver_cleanup": {
+        "instances": 8,
+        "all_clients_closed": true
+      }
+    },
+    {
+      "source": "fapespa_selection",
+      "cycle": 2,
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "report": "..\\docs\\tenderproof-batch99-regions-live.json",
+      "run_id": "tpr-f701639cf98b",
+      "driver_cleanup": {
+        "instances": 8,
+        "all_clients_closed": true
+      },
+      "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+      "bytes": 933613,
+      "pages": 22,
+      "durable_bytes_sha_verified": true,
+      "acquisition_request": null
+    },
+    {
+      "source": "fapeg_selection",
+      "cycle": 1,
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "report": "..\\docs\\tenderproof-batch99-fapeg-live.json",
+      "run_id": "tpr-a4a724d5a3f9",
+      "driver_cleanup": {
+        "instances": 4,
+        "all_clients_closed": true
+      },
+      "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+      "bytes": 489850,
+      "pages": 29,
+      "durable_bytes_sha_verified": true,
+      "acquisition_request": {
+        "method": "POST",
+        "body": "177,0",
+        "content_type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "source": "fapeg_selection",
+      "cycle": 2,
+      "execution_status": "completed",
+      "validation_status": "valid",
+      "error": null,
+      "report": "..\\docs\\tenderproof-batch99-fapeg-live.json",
+      "run_id": "tpr-1f50509542f5",
+      "driver_cleanup": {
+        "instances": 4,
+        "all_clients_closed": true
+      },
+      "sha256": "fd9ad5e3fb8490bf8ac5584228e797a03015d95350c6a5a35b6929ef6f359054",
+      "bytes": 489850,
+      "pages": 29,
+      "durable_bytes_sha_verified": true,
+      "acquisition_request": {
+        "method": "POST",
+        "body": "177,0",
+        "content_type": "application/x-www-form-urlencoded"
+      }
+    }
+  ],
+  "counts": {
+    "investigated_sources": 12,
+    "implemented_contracts": 3,
+    "sources_with_two_valid_real_cycles": 2,
+    "valid_real_samples": 4,
+    "sources_without_scoped_contract": 9,
+    "implemented_sources_with_parser_block": 1
+  },
+  "limitations": [
+    "12 investigations are not12integrated adapters",
+    "Historical reviewed archives explicitly narrower than whole institution",
+    "No scoped sample found is not proof of legitimate empty list",
+    "POST method/body identity is persisted; historical GET manifests unchanged",
+    "Live/replay/recovery/capacity gates are separate from capture inspection"
+  ]
+}

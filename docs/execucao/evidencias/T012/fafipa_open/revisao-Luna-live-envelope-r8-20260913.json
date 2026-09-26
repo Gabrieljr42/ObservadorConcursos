@@ -1,0 +1,47 @@
+{
+  "schema": "t012.fafipa_open.luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "FAFIPA live envelope R8; read-only review, no live operation",
+  "evidence": {
+    "envelope": "docs/execucao/evidencias/T012/fafipa_open/live-envelope-ready-r8.json",
+    "receipt": "docs/execucao/evidencias/T012/fafipa_open/live-envelope-ready-r8-receipt.json",
+    "source": "fafipa_open",
+    "external_id": "4208",
+    "run_id": "tp-reviewed-r8-fafipa-open-4208-26c059dcd502f08d",
+    "title": "Concurso Público do Município de Mirador - PR",
+    "artifact_sha256": "26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f",
+    "artifact_bytes": 3630911,
+    "artifact_pages": 38,
+    "field_count": 7,
+    "fields": [
+      "titulo",
+      "orgao",
+      "edital_numero",
+      "inscricao_inicio",
+      "inscricao_fim",
+      "prova_data",
+      "cargos"
+    ],
+    "cargo_count": 14,
+    "cargo_evidence_count": 14,
+    "remuneracao_or_taxa": "absent by deliberate R8 scope"
+  },
+  "checks": {
+    "concurso_id_null": true,
+    "cargo_snippets_have_name_and_vagas_or_cr": true,
+    "fresh_evidence_missing_literals": 0,
+    "r7_rejected_and_not_reused": true,
+    "round_trip_fresh_isolated": "PASS; eligible exactly the seven listed fields",
+    "proposal_version_outbox_notification_created": false,
+    "reference_only": true,
+    "no_live_api_db_pilot_effects": true
+  },
+  "decision_conditions": [
+    "Allocate a fresh canonical concurso_id through the normal duplicate-safe route before live import/proposal.",
+    "Keep remuneração and taxa unpopulated; do not infer or merge them from R7.",
+    "After allocation, rerun the normal live dry-run/proposal gate against this pinned R8 artifact and run."
+  ],
+  "mutations_performed": false
+}

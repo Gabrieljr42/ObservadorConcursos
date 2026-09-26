@@ -1,0 +1,42 @@
+{
+  "evidence_id": "T010-ID7-ui-coordinator-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "decision": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "rerun": false,
+  "mutation": false,
+  "surface": "http://localhost:13000/concurso/7",
+  "asset": {
+    "path": "_expo/static/js/web/entry-d8a42abe581ad6993b2898289ab20fd3.js",
+    "sha256": "11FB506B2CBA72FF50F748608BFCA2798B5A6458745A6FC8BEA9623D8E3918EE"
+  },
+  "observed": {
+    "cargo": "Técnico Legislativo",
+    "vagas_imediatas": 1,
+    "cadastro_reserva": true,
+    "ac": 1,
+    "pcd": 0,
+    "remuneracao": "R$ 3.378,77/mês",
+    "jornada": "35h",
+    "requisito": "Ensino Médio",
+    "taxa": "não confirmada",
+    "prova": "pendente",
+    "historico_versao": 84,
+    "beneficios": [
+      "auxílio alimentação R$ 680,00",
+      "vale-transporte"
+    ],
+    "reload_dom_stable": true,
+    "screenshot_claim": false
+  },
+  "references": [
+    "docs/execucao/tarefas/revisao-independente-beneficios-cargo-20260912-01.md",
+    "docs/execucao/evidencias/T008-web-redeploy-benefits-20260912-224748.json"
+  ],
+  "limits": [
+    "Observação feita pelo CUA do coordenador; não é validação independente.",
+    "Taxa e prova permanecem pendentes.",
+    "Nenhum screenshot é alegado."
+  ]
+}

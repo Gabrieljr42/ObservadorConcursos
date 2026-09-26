@@ -1,0 +1,13 @@
+{
+  "schema":"t012.dry-run.v1",
+  "source":"w2_open",
+  "candidate_external_id":"105",
+  "mode":"offline_revalidate_then_create_proposal",
+  "revalidate":"PASS",
+  "create_proposal":"ELIGIBLE_AFTER_STANDARD_IMPORT_HANDOFF",
+  "identity":{"source":"w2_open","source_number":59,"detail_url":"https://www.w2consultores.com.br/informacoes/105/","document_sha256":"d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd"},
+  "duplicate_check":{"catalogue_snapshot":"sanitized_32_sources","source_59_present":false,"ids_1_33_match":false,"result":"PASS"},
+  "fail_closed":{"canonical_concurso_id":null,"apply":false,"publish":false,"blocked_until":["standard importer allocates canonical concurso_id","reviewer validates preserved PDF bytes" ]},
+  "derivations":["derivation-a.json","derivation-b.json"],
+  "state":"PROPOSTA_PRONTA"
+}

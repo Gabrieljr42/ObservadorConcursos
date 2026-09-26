@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-09-08T14:20:46.360480+00:00",
+  "scope": "Read-only observed URLs; TLS verified; redirects recorded, not followed; max2MiB25s; no PDFs or browser; not adapter certification.",
+  "pages": [
+    {
+      "source": "elo_open",
+      "url": "https://novo.eloassessoriaeservicos.com.br/_astro/ConcursosSection.DhIge_VT.js",
+      "kind": "component",
+      "observed_at": "2026-09-08T14:20:45.930386+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 8755,
+      "sha256": "ba71ff4997c9adab642a070900e85ee7368f158c871ad3d9a61fceb324c2e250",
+      "file": "elo_open-component.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

@@ -1,0 +1,910 @@
+	    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FAVICON -->
+<link rel="SHORTCUT ICON" href="https://www.gualimp.com.br/imagens/favicon.gif" />
+<link rel="icon" type="image/png" href="https://www.gualimp.com.br/imagens/favicon.png" />
+
+<title>Gualimp - Assessoria e Consultoria Ltda</title>
+
+<!-- Metas para o Google -->
+<meta name="description" content="A empresa foi criada em 20 de novembro de 1991. Atua no ramo de prestação de serviços de assessoria e consultoria nas áreas de contabilidade, gestão empresarial, educacional e administração de concurso público.">
+<meta name="keywords" content="" />
+
+<!-- Metas para o Facebook -->
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Gualimp - Assessoria e Consultoria Ltda" />
+<meta property="og:url"         content="https://www.gualimp.com.br/" />
+<meta property="og:site_name"   content="Gualimp - Assessoria e Consultoria Ltda" />
+<meta property="og:description" content="A empresa foi criada em 20 de novembro de 1991. Atua no ramo de prestação de serviços de assessoria e consultoria nas áreas de contabilidade, gestão empresarial, educacional e administração de concurso público." />
+<meta property="og:image"       content="https://www.gualimp.com.br/imagens/logo-facebook<?=?>.jpg" />
+<meta property="og:image:type"  content="image/jpeg" />
+<meta property="og:image:width"     content="200" />
+<meta property="og:image:height"    content="200" />
+
+
+<!-- ESTILO CSS -->
+
+<link href="https://www.gualimp.com.br/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://www.gualimp.com.br/js/slick/slick.css">
+<link rel="stylesheet" href="https://www.gualimp.com.br/css/estilo.css">
+<link rel="stylesheet" href="https://www.gualimp.com.br/js/sweetalert/dist/sweetalert.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://www.gualimp.com.br/js/jquery.maskedinput.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.gualimp.com.br/js/sweetalert/dist/sweetalert-dev.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="https://www.gualimp.com.br/js/mega-dropdown/css/style.css">
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/jquery.menu-aim.js"></script>
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/main.js"></script>
+<script src="https://www.gualimp.com.br/js/mega-dropdown/js/modernizr.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- <script src='https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit'></script>
+<script>
+   // Recapcha do google
+   var recaptcha;
+
+   if ($('#recaptcha').size()) {
+     var myCallBack = function () {
+         //Render the recaptcha1 on the element with ID "recaptcha1"
+         recaptcha = grecaptcha.render('recaptcha', {
+             'sitekey': '6LdmXAsUAAAAAGdCAH_McXziUzHc7XM7PNMErMvQ', //Replace this with your Site key
+             'theme': 'blue'
+         });
+     };
+   }
+</script> -->
+
+
+<script>
+$(function(){
+    setTimeout(function(){
+
+        $('body').animate({
+            opacity:1,
+        },700,function(){
+                    });
+    },200);
+});
+</script>
+
+</head>
+<body>
+
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius:0px !important;">
+            <form action="https://www.gualimp.com.br/?acao=logar" method="post">
+                <input type="hidden" name="url_atual" value="http://www.gualimp.com.br/">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Área do cliente</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="input-login" class="col-xs-2 control-label text-right">Login</label>
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control" id="input-login" name="input_login" required>
+                            </div>
+                        </div>
+
+                        <br clear="all">
+                        <br clear="all">
+
+                        <div class="form-group">
+                            <label for="input-login" class="col-xs-2 control-label text-right">Senha</label>
+                            <div class="col-xs-10">
+                                <input type="password" class="form-control" id="input-senha" name="input_senha" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="javascript:;" class="branco fonte14 btn btn-default link-lembrar-senha" data-toggle="modal" data-target="#lembrarSenha" >
+                       Esqueci minha senha
+                    </a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-vcenter" id="lembrarSenha" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index:9999 !important; display:none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bgModal_buscaAvancada" style="border-radius:0;">
+            <div class="modal-header bg-azul">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="fonte24 branco">×</span>
+                </button>
+
+                <h4 class="modal-title branco" id="myModalLabel">
+                    ESQUECI MINHA SENHA:
+                </h4>
+            </div>
+
+            <form action="" method="post" enctype="multipart/form-data" name="formulario_lembrar" id="formulario_lembrar" onSubmit="lembrarSenha(); return false;">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <span style="width:100%; display:block; font-weight:700; text-align:center; padding-bottom:5px; font-size:14px;">
+                            Caso tenha esquecido sua senha, informe o seu email no campo abaixo.<br />
+                            Sua nova senha será enviada para o email cadastrado.
+                        </span>
+
+                        <div id="ajax_mensagem_lembrar"></div>
+
+                        <br />
+                        <label for="email_lembrar" class="control-label rosa">Email</label>
+                        <input type="text" class="form-control" id="email_lembrar" name="email_lembrar" required>
+                    </div>
+                    <div class="modal-footer" style="padding:15px 0;">
+                        <a href="javascript:;" class="branco fonte14 btn btn-default link-voltar-modal pull-left" data-dismiss="modal" style="border-radius:0px;">
+                           <span class="glyphicon glyphicon-circle-arrow-left"></span>
+                           Voltar para o login
+                        </a>
+                        <right>
+                            <button type="submit" class="btn btn-primary bg-azul"  style="border-radius:0;">
+                                <span class="glyphicon glyphicon-send" /> </span>&nbsp;&nbsp; Enviar
+                            </button>
+                        <right>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+  .close { opacity:.9; }
+  .close span { color: #FFF; }
+  .modal-header {
+    color:#FFF;
+    background: #0a408a;
+    background: -moz-linear-gradient(top, #0a408a 0%, #081a48 100%);
+    background: -webkit-linear-gradient(top, #0a408a 0%, #081a48 100%);
+    background: linear-gradient(to bottom, #0a408a 0%, #081a48 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a408a', endColorstr='#081a48',GradientType=0 );
+  }
+
+  button { border-radius:0px !important; }
+
+  .link-lembrar-senha { position:absolute; display:block; border-radius:0; left:15px; }
+
+</style>
+
+<script>
+    // $(function(){
+        // $('.link-lembrar-senha').click(function(){
+            // $('#modal-login').css("display","none");
+            // $("#lembrarSenha").show();
+        // });
+
+        // $('.link-voltar-modal').click(function(){
+          //$('#lembrarSenha, .fade, .in').css("display","none");
+          // $("#modal-login").show();
+        // });
+    // });
+</script>
+<!-- MODAL BUSCA FULL SCREEN -->
+<div class="modal fade modal-vcenter" id="buscaFull" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 9999 !important;">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+  </button>
+
+	<form action="https://www.gualimp.com.br/busca/" method="post" id="form-busca-rapida-full">
+	   	<div class="col-xs-12">
+	    	<h2> O que está procurando? </h2>
+	   	</div>
+	   	<div class="col-xs-12 col-md-8 col-lg-9">
+	    	<input type="text" name="palavra-chave" class="buscaFullPalavra" autocomplete="off">
+	   	</div>
+	</form>
+</div>
+    <!-- CONTEUDOS POPUP/EXTERNOS -->
+<div class="modal fade modal-vcenter" id="ondeEstamos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 9999 !important;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bgModal_buscaAvancada">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Localização:
+                </h4>
+            </div>
+
+              <div class="modal-body">
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.348945590033!2d-41.67711232337329!3d-20.777166334210975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb93d6e0f84a77%3A0xfdfa0b5e9ae28e87!2sAv.+Manoel+Alves+de+Siqueira+-+Fiat%2C+Gua%C3%A7u%C3%AD+-+ES%2C+29560-000!5e0!3m2!1spt-BR!2sbr!4v1478555064372" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                  <div class="modal-footer">
+                      <center>
+                          <b>[ Rua Manoel Alves de Siqueira, 41 Bela Vista, Guaçuí - ES, CEP: 29.560-000 ]</b>
+                          <b>Telefones: (28) 3553-0291 / 3553-4326 - (28) 98805-0291</b>
+                      <center>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="transparencia"></div>
+
+<div id="envolve-site">
+    <!--############################ TOPO ############################-->
+    <!-- MENU MOBILE -->
+<div class="cd-dropdown-wrapper">
+    <nav class="cd-dropdown">
+        <h2> Menu Principal </h2>
+        <figure style="position:absolute; width:152px; height:57px; top:0; overflow:hidden; z-index:9; padding:0px 0 0px 60px; text-align:center; width: 100%; border-top:3px solid #60ACDA; border-bottom:2px solid #FFF;" class="visible-xs">
+            <a href="https://www.gualimp.com.br/">
+                <img src="https://www.gualimp.com.br/imagens/logo-mobile.png">
+            </a>
+        </figure>
+
+        <a href="javascript:;" class="cd-close"> Close </a>
+
+        <ul class="cd-dropdown-content">
+            <li style="list-style:none; display:block; height: 58px" >
+                <form class="cd-search" id="busca" enctype="multipart/form-data" action="https://www.gualimp.com.br/busca/" method="post" name="form_busca">
+                    <input type="search" class="form-control" id="campo-busca" placeholder="O que você procura?" name="busca-topo" required="required" >
+                    <button type="submit" class="btn-busca pull-right" style="position: absolute; top: 1px;  right: 5px;  padding: 13px 13px; background-color:#60ACDA;  border: none; color: #FFF; display: block; ">
+                        <span class="glyphicon glyphicon-send"> </span> &nbsp;
+                    </button>
+                </form>
+            </li>
+
+            <li>
+                <a href="https://www.gualimp.com.br/" class="fonte16">
+                    <small><b>HOME</b></small>
+                </a>
+            </li>
+
+			<li>
+                <a href="https://www.gualimp.com.br/institucional/" class="fonte16">
+                    <small><b>INSTITUCIONAL</b></small>
+                </a>
+            </li>
+
+            <li class="has-children">
+                <a href="javascript:;" class="fonte16">
+                    <small><b>SERVIÇOS</b></small>
+                </a>
+                <ul class="cd-secondary-dropdown is-hidden" style="display:block;">
+					<li class="go-back">
+					  <a href="#0">Menu</a>
+					</li>
+																		<li>
+						        <a href="https://www.gualimp.com.br/servicos/concursos/">
+						          <small><b>Concursos Públicos</b></small>
+						        </a>
+							</li>
+													<li>
+						        <a href="https://www.gualimp.com.br/servicos/assessoria-e-consultoria/">
+						          <small><b>Assessoria e Consultoria</b></small>
+						        </a>
+							</li>
+													<li>
+						        <a href="https://www.gualimp.com.br/servicos/inventario-patrimonial/">
+						          <small><b>Inventário Patrimonial</b></small>
+						        </a>
+							</li>
+													<li>
+						        <a href="https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/">
+						          <small><b>Treinamentos e Seminários</b></small>
+						        </a>
+							</li>
+													<li>
+						        <a href="https://www.gualimp.com.br/servicos/transporte-e-logistica/">
+						          <small><b>Transporte e Logística</b></small>
+						        </a>
+							</li>
+											                </ul>
+            </li>
+
+			<li>
+				<a href="https://www.gualimp.com.br/clientes/" class="fonte16">
+					<small><b>CLIENTES</b></small>
+				</a>
+			</li>
+
+<!-- 			<li>
+				<a href="https://www.gualimp.com.br/equipe/" class="fonte16">
+					<small><b>EQUIPE</b></small>
+				</a>
+			</li> -->
+
+			<li>
+				<a href="https://www.gualimp.com.br/concursos/" class="fonte16">
+					<small><b>CONCURSOS</b></small>
+				</a>
+			</li>
+
+			<li>
+				<a href="https://www.gualimp.com.br/eventos/" class="fonte16">
+					<small><b>EVENTOS</b></small>
+				</a>
+			</li>
+
+			<li>
+				<a href="https://www.gualimp.com.br/noticias/" class="fonte16">
+					<small><b>NOTÍCIAS</b></small>
+				</a>
+			</li>
+
+			<li>
+				<a href="https://www.gualimp.com.br/contato/" class="fonte16">
+					<small><b>CONTATO</b></small>
+				</a>
+			</li>
+
+            <!-- <li>
+                <a href="javascript:;"  data-toggle="modal" data-target="#modal-login" class="fonte16">
+                    <small><b>ÁREA RESTRITA</b></small>
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+</div>
+<!-- FIM MENU MOBILE -->
+
+<div id="back-header"></div>
+<header id="header">
+	<div id="bg1-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1 col-xs-1 visible-sm visible-xs">
+					<strong id="area-restrita-mobile"  class="formata-botoes-mobile collapsed cd-dropdown-trigger" data-toggle="collapse" data-target="menu_topo" aria-expanded="false">
+						<a href="javascript:;">
+								<span class="glyphicon glyphicon-list"></span>
+						</a>
+					</strong>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+					<h1 id="logo-header">
+						<a href="https://www.gualimp.com.br/">
+							<img src="https://www.gualimp.com.br/imagens/logo-header.png" class="" alt="Gualimp Strategic | Gestão, Assessoria, Serviços e Logística">
+							<!-- <img src="https://www.gualimp.com.br/imagens/logo-mobile.png" class="img-responsive visible-xs" alt="Gualimp Strategic | Gestão, Assessoria, Serviços e Logística"> -->
+						</a>
+					</h1>
+				</div>
+
+				<div class="col-lg-2 col-md-3 col-md-4 hidden-sm hidden-xs">
+					<ul id="redes-sociais-header">
+						<li>
+							<a href="https://www.facebook.com/GStrategic" target="_blank" title="Facebook">
+								<img src="https://www.gualimp.com.br/imagens/icon-facebook.png" alt="Facebook">
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.instagram.com/g_strategic/" target="_blank" title="Instagram">
+								<img src="https://www.gualimp.com.br/imagens/icon-instagram.png" alt="Instagram">
+							</a>
+						</li>
+
+<!-- 						<li>
+							<a href="javascript:;" target="_blank" title="LinkedIn">
+								<img src="https://www.gualimp.com.br/imagens/icon-linkedin.png" alt="LinkedIn">
+							</a>
+						</li> -->
+					</ul>
+				</div>
+
+				<div class="col-md-6 col-sm-8 col-xs-6 pull-right">
+					<!-- <div id="btn-busca-mobile">
+
+					</div> -->
+
+					<div id="btn-area-cliente" class="visible-xs">
+						<!-- LINK MOBILE BUSCA FULL -->
+						<a href="javascript:;" class="visible-xs" data-toggle="modal" data-target="#buscaFull" style="/*margin-right:5px;*/">
+								<img src="https://www.gualimp.com.br/imagens/icon-busca.png" alt="Buscar" width="21">
+						</a>
+
+						<!-- ÁREA DO CLIENTE MOBILE data-toggle="modal" data-target="#modal-login" -->
+						<!-- <a href="javascript:;">
+							<img src="https://www.gualimp.com.br/imagens/icon-area-cliente.png" alt="">
+							<span class="hidden-sm hidden-xs">Área do Cliente</span>
+						</a> -->
+					</div>
+
+					<!-- BUSCA -->
+					<div id="box-busca-rapida" class="hidden-xs">
+						<form id="form-busca-rapida" action="https://www.gualimp.com.br/busca/" method="post">
+							<input type="hidden" name="csrf" value="8cc39d952e5034447919dcdea5f62023">
+							<input type="text" id="palavra-chave" name="palavra-chave" placeholder="O que você procura?" autocomplete="off">
+							<button type="submit" id="btn-busca-rapida">
+								<div>
+									<img src="https://www.gualimp.com.br/imagens/icon-busca.png" alt="Buscar">
+								</div>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bg2-header" class="hidden-sm hidden-xs">
+		<div class="container">
+			<nav id="menu-principal">
+				<ul>
+					<li>
+						<a href="https://www.gualimp.com.br/">Home</a>
+					</li>
+
+					<li>
+						<a href="https://www.gualimp.com.br/institucional/" class=""> Institucional</a>
+					</li>
+
+					<li>
+						<a href="javascript:;"
+            class="" > Serviços </a>
+
+            <ul>
+																								<li><a href="https://www.gualimp.com.br/servicos/concursos/">Concursos Públicos</a></li>
+																	<li><a href="https://www.gualimp.com.br/servicos/assessoria-e-consultoria/">Assessoria e Consultoria</a></li>
+																	<li><a href="https://www.gualimp.com.br/servicos/inventario-patrimonial/">Inventário Patrimonial</a></li>
+																	<li><a href="https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/">Treinamentos e Seminários</a></li>
+																	<li><a href="https://www.gualimp.com.br/servicos/transporte-e-logistica/">Transporte e Logística</a></li>
+																					</ul>
+					</li>
+
+					<li>
+						<a href="https://www.gualimp.com.br/clientes/" class="">Clientes</a>
+					</li>
+
+<!-- 					<li>
+						<a href="https://www.gualimp.com.br/equipe/" class="">Equipe</a>
+					</li>
+ -->
+					<li>
+						<a href="https://www.gualimp.com.br/concursos/">Concursos</a>
+					</li>
+
+					<li>
+						<a href="https://www.gualimp.com.br/eventos/" class="">Eventos</a>
+					</li>
+
+					<li>
+						<a href="https://www.gualimp.com.br/noticias/" class="">Notícias</a>
+					</li>
+
+					<li>
+						<a href="https://www.gualimp.com.br/contato/" class="">Contato</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="telefone-header">
+				<img src="https://www.gualimp.com.br/imagens/icon-telefone.png" alt="Telefone">
+				<span>(28) 3553-1939</span>
+			</div>
+		</div>
+	</div>
+</header>
+    <!--############################ TOPO ############################-->
+
+    <!--############################ SITE ############################-->
+    	<section id="section-banner-principal-home">
+		<div id="control-banner-principal" style="height:0px;">
+				<a href="javascript:;" onClick="$('.slick-prev').click();" id="voltar-banner-principal">
+						<img src="https://www.gualimp.com.br/imagens/voltar-banner-principal.png" alt="Voltar">
+				</a>
+				<a href="javascript:;" onClick="$('.slick-next').click();" id="avancar-banner-principal">
+						<img src="https://www.gualimp.com.br/imagens/avancar-banner-principal.png" alt="Avançar">
+				</a>
+		</div>
+		<div id="banner-principal">
+							<a href="http://www.gualimp.com.br"  class="reg-banner-principal" style="background-image:url(http://www.gualimp.com.br/painel/arquivos/banners_principais/060920161725193.jpg);"></a>
+							<a href="http://www.gualimp.com.br"  class="reg-banner-principal" style="background-image:url(http://www.gualimp.com.br/painel/arquivos/banners_principais/060920161724582.jpg);"></a>
+							<a href="http://www.gualimp.com.br"  class="reg-banner-principal" style="background-image:url(http://www.gualimp.com.br/painel/arquivos/banners_principais/060920161720551.jpg);"></a>
+					</div>
+	</section>
+
+<section id="section-slogan-home">
+	<div class="container">
+		<h2>25 anos de serviços bem prestados.</h2>
+	</div>
+</section>
+
+
+<section id="section-concursos-home">
+	<header class="header-blocos-home">
+		<div class="container">
+			<div class="row">
+				<div class="esquerda-header col-md-8 col-sm-12 col-xs-12">
+					<div>
+						<h2 class="fonte25">Concursos em andamento</h3>
+						<span>Atualizado em 31 de Julho de 2024</span>
+					</div>
+					<a href="https://www.gualimp.com.br/concursos/">Todos os Concursos</a>
+					<!-- <a href="http://www.gualimpconsultoria.com.br/candidato/" target="_blank">Área do Candidato</a> -->
+				</div>
+
+				<div class="lateral-header col-md-4 hidden-sm hidden-xs">
+					<span>Assine nossa Newsletter</span>
+					<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div id="container-concursos">
+									</div>
+			</div>
+
+
+			<div class="lateral-header col-sm-12 col-xs-12 hidden-md hidden-lg">
+				<span>Assine nossa Newsletter</span>
+				<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+			</div>
+
+
+			<div id="container-newsletter" class="col-md-4 col-sm-12 col-xs-12">
+				<h3>
+				Quer ficar por <br />
+				dentro do mundo dos <br />
+				concursos públicos?
+				</h3>
+
+				<p>
+				Cadastre seu e-mail e receba <br />
+				novidades, datas, editaveis, dicas e <br />
+				promoções de apostilas de livros.
+				</p>
+
+				<form id="form-news" method="post" action="#">
+					<input type="hidden" name="csrf" value="8cc39d952e5034447919dcdea5f62023">
+					<input type="text" id="nome-news" name="nome_news" placeholder="Nome" required>
+					<input type="email" id="email-news" name="email_news" placeholder="E-mail" required>
+					<button id="btn-news" type="submit">Cadastrar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+<section id="section-noticias-home">
+	<header class="header-blocos-home">
+		<div class="container">
+			<div class="row">
+				<div class="esquerda-header col-md-6 col-sm-12 col-xs-12">
+					<div>
+						<h2 id="titulo-not-main">Notícias</h3>
+					</div>
+
+					<a href="https://www.gualimp.com.br/noticias/" class="hidden-xs">Todos as Notícias</a>
+					<a href="https://www.gualimp.com.br/noticias/" class="visible-xs" style="width:auto;">
+						<span class="glyphicon glyphicon-plus" style="padding:10px 15px; padding-top:0; margin-top: -3px;"></span>
+					</a>
+				</div>
+
+				<div class="lateral-header col-md-6 hidden-sm hidden-xs">
+					<div>
+						<h2>Eventos</h3>
+					</div>
+
+					<a href="https://www.gualimp.com.br/eventos/">Veja mais sobre nossos eventos</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12" id="box-noticias-home">
+									</div>
+
+
+				<div class="lateral-header col-sm-12 col-xs-12 hidden-lg hidden-md">
+					<div>
+						<h2>Eventos</h3>
+					</div>
+
+					<a href="https://www.gualimp.com.br/eventos/" class="hidden-xs">Veja mais sobre nossos eventos</a>
+					<a href="https://www.gualimp.com.br/eventos/" class="visible-xs" style="width:auto;">
+						<span class="glyphicon glyphicon-plus" style="padding:10px 15px; padding-top:0; margin-top: -3px;"></span>
+					</a>
+				</div>
+
+
+				<div class="col-md-6 col-sm-12 col-xs-12" id="box-eventos-home">
+					<img src="http://www.gualimp.com.br/painel/arquivos/eventos/" class="img-responsive" alt="">
+
+					<p>Organizamos seu evento com qualidade e agilidade, totalmente personalizado buscando sempre divulgar as potencialidades locais. Seu Munic&iacute;pio &eacute; que ir&aacute; brilhar em seu evento!!!</p>
+
+<p>Ao promover eventos presenciais como cursos, palestras, simp&oacute;sios, semanas pedag&oacute;gicas, feiras de livros e ainda oferecer cursos de forma&ccedil;&atilde;o continuada, nosso objetivo &eacute; fazer com que cada profissional adquira novas compet&ecirc;ncias e motive-se para desempenhar sua fun&ccedil;&atilde;o com efici&ecirc;ncia trazendo para o setor p&uacute;blico a qualidade desejada.</p>
+
+<p>Contamos com renomados Palestrantes, o que nos permite, a qualquer momento, preparar e desenvolver um diagn&oacute;stico para identificar as necessidades e a conseq&uuml;ente estrutura&ccedil;&atilde;o de um evento espec&iacute;fico aos nossos clientes.</p>
+
+					<a href="https://www.gualimp.com.br/eventos/">+ Veja a lista de palestrantes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="section-servicos-home">
+		<div class="container">
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xs-100">
+					<a href="https://www.gualimp.com.br/servicos/concursos/">
+						<!-- <span>Assessoria e Consultoria</span> -->
+						<strong>Concursos Públicos</strong>
+<!-- 						<div>
+							<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+						</div> -->
+					</a>
+				</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xs-100">
+					<a href="https://www.gualimp.com.br/servicos/assessoria-e-consultoria/">
+						<!-- <span>Assessoria e Consultoria</span> -->
+						<strong>Assessoria e Consultoria</strong>
+<!-- 						<div>
+							<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+						</div> -->
+					</a>
+				</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xs-100">
+					<a href="https://www.gualimp.com.br/servicos/inventario-patrimonial/">
+						<!-- <span>Assessoria e Consultoria</span> -->
+						<strong>Inventário Patrimonial</strong>
+<!-- 						<div>
+							<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+						</div> -->
+					</a>
+				</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xs-100">
+					<a href="https://www.gualimp.com.br/servicos/treinamentos-e-seminarios/">
+						<!-- <span>Assessoria e Consultoria</span> -->
+						<strong>Treinamentos e Seminários</strong>
+<!-- 						<div>
+							<img src="https://www.gualimp.com.br/imagens/seta-down.png" alt="">
+						</div> -->
+					</a>
+				</div>
+					</div>
+	</section>
+
+
+
+
+
+
+
+<!-- <section id="section-equipe-main">
+	<header class="header-blocos-home">
+		<div class="container">
+			<div class="row">
+				<div class="esquerda-header col-md-12">
+					<div>
+						<h2 style="margin-top:15px;">Equipe e corpo técnico</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<a href="javascript:;" onClick="$('#slick-equipe .slick-prev').click();" id="voltar-slick-equipe">
+			<img src="https://www.gualimp.com.br/imagens/seta-voltar.png" alt="Voltar">
+		</a>
+
+		<div id="slick-equipe">
+					</div>
+
+		<a href="javascript:;" onClick="$('#slick-equipe .slick-next').click();" id="avancar-slick-equipe">
+			<img src="https://www.gualimp.com.br/imagens/seta-avancar.png" alt="Avançar">
+		</a>
+	</div>
+</section> -->
+    <!--############################ SITE ############################-->
+
+    <!--############################ RODAPE ############################-->
+    <section id="section-empresas-main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 hidden-xs hidden-sm">
+				<div id="box-empresas1" class="box-empresas">
+					<h3>Empresa Registrada:</h3>
+
+					<div>
+						<center>
+							<a href="http://www.craes.org.br/home/index.php" target="_blank" title="CRA-ES">
+								<img src="https://www.gualimp.com.br/imagens/logos/cra-es.png" alt="CRA-ES" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://crc-es.org.br/" target="_blank" title="CRC-ES">
+								<img src="https://www.gualimp.com.br/imagens/logos/crc-es.png" alt="CRC-ES" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://www.creaes.org.br/creaes/" target="_blank" title="CREA-ES">
+								<img src="https://www.gualimp.com.br/imagens/logos/crea-es.png" alt="CREA-ES" class="img-responsive">
+							</a>
+						</center>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-8 col-sm-12 hidden-xs hidden-sm">
+				<div id="box-empresas2" class="box-empresas">
+					<div>
+						<center>
+							<a href="http://www.pgfn.fazenda.gov.br/" target="_blank" title="Procuradoria Geral da Fazenda Nacional">
+								<img src="https://www.gualimp.com.br/imagens/logos/procuradoria-geral.png" alt="Procuradoria Geral da Fazenda Nacional" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://idg.receita.fazenda.gov.br/" target="_blank" title="Receita Federal">
+								<img src="https://www.gualimp.com.br/imagens/logos/receita-federal.png" alt="Receita Federal" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://www.mec.gov.br/" target="_blank" title="Ministério da Educação | Governo Federal">
+								<img src="https://www.gualimp.com.br/imagens/logos/ministerio-educacao.png" alt="Ministério da Educação | Governo Federal" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://internet.sefaz.es.gov.br/" target="_blank" title="SEFAZ | Secretaria  do Estado da Fazenda">
+								<img src="https://www.gualimp.com.br/imagens/logos/sefaz.png" alt="SEFAZ | Secretaria  do Estado da Fazenda" class="img-responsive">
+							</a>
+						</center>
+					</div>
+
+					<div>
+						<center>
+							<a href="http://www.previdencia.gov.br/" target="_blank" title="Providência Social">
+								<img src="https://www.gualimp.com.br/imagens/logos/providencia-social.png" alt="Providência Social" class="img-responsive">
+							</a>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<footer id="footer">
+	<div id="bg1-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 hidden-sm hidden-xs">
+					<div id="mapa-footer">
+						<a href="javascript:;" data-toggle="modal" data-target="#ondeEstamos">
+							<img src="https://www.gualimp.com.br/imagens/mapa-footer.jpg" alt="" class="img-responsive">
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-12">
+					<div id="texto-footer">
+						<p class="text-center">
+							<b>(28) 3553-1939 / (28) 99983-4846<br />(28) 98805-0291</b>
+						</p>
+
+						<p class="text-center">
+							Rua Manoel Alves de Siqueira, 41<br />
+							Bela Vista, Guaçuí - ES<br />
+							CEP: 29.560-000
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 hidden-sm hidden-xs">
+					<div id="facebook-footer">
+						<div class="fb-page" data-href="https://www.facebook.com/GStrategic" data-tabs="like" style="width:100%; float:left;" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/GStrategic" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GStrategic">G-Strategic</a></blockquote></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bg2-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="copyright">Copyright @ 2016 GStrategic. Todos os direitos reservados.</div>
+				</div>
+
+				<div class="col-md-6">
+					<div id="link-rd">
+						<a href="http://www.rdweb.com.br" target="blank">
+							<span>Desenvolvimento</span>
+							<img src="https://www.gualimp.com.br/imagens/logo-rd.png" alt="RDWEB">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    <!--############################ RODAPE ############################-->
+</div>
+
+<script src="https://www.gualimp.com.br/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://www.gualimp.com.br/js/slick/slick.min.js"></script>
+<script src="https://www.gualimp.com.br/js/parallax/parallax.min.js" type="text/javascript"></script>
+
+<!-- ###### AUTOCOMPLETE ###### -->
+<script src="https://www.gualimp.com.br/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script> var Jquery = $.noConflict(); </script>
+<script src="https://www.gualimp.com.br/js/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+Jquery(function(){
+  Jquery(".telefone").mask("(99) 99999-999?9").focusout(function(){
+     var phone, element;
+        element = Jquery(this);
+     element.unmask();
+        phone = element.val().replace(/\D/g, '');
+     if(phone.length > 10){
+         element.mask('(99) 99999-999?9');
+
+       }else{
+         element.mask('(99) 9999-9999?9');
+     }
+  }).trigger('focusout');
+});
+</script>
+
+<script src="https://www.gualimp.com.br/js/scripts.js"></script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.7&appId=1443358502652079";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+</html>

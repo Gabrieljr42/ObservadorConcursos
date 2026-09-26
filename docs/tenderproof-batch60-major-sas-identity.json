@@ -1,0 +1,54 @@
+{
+  "source": "cesgranrio_open",
+  "origin_database": "backend/.tenderproof/batch60-major-cesgranrio-live-20260908/operational.sqlite3",
+  "network_requests": 0,
+  "raw_signatures_exposed": false,
+  "observations": [
+    {
+      "run_id": "tpr-143c2fdac179",
+      "path": "/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+      "host": "concursos.cesgranrio.org.br",
+      "query_keys": [
+        "se",
+        "sig",
+        "sp",
+        "sr",
+        "sv"
+      ],
+      "sr": [
+        "c"
+      ],
+      "sp": [
+        "r"
+      ],
+      "signature_fingerprint": "19843ef2d0aaf1bdd2ae94cdc4b3bd85ece32188046d3e45f34dffe21cd5f688",
+      "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+      "doc_id": "cesgranrio_open-ef63456bb29b61f912"
+    },
+    {
+      "run_id": "tpr-6c7af6336a9e",
+      "path": "/media/gpoweb-prd-hibrido3/eventos/27/conteudos/9454893c-7962-4e4f-8be8-fb3c79821d8f.pdf",
+      "host": "concursos.cesgranrio.org.br",
+      "query_keys": [
+        "se",
+        "sig",
+        "sp",
+        "sr",
+        "sv"
+      ],
+      "sr": [
+        "c"
+      ],
+      "sp": [
+        "r"
+      ],
+      "signature_fingerprint": "fbedc6e76ea0079dc19da61601e3102aad439590f3b00130a7a4fd1888b6fef1",
+      "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+      "doc_id": "cesgranrio_open-3956daa8e4cf75d02e"
+    }
+  ],
+  "same_bytes": true,
+  "signature_rotated": true,
+  "same_path": true,
+  "scope": "Read-only evidence from two original public HTTP acquisitions; core signature normalization verified separately by integrating agent."
+}

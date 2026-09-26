@@ -1,0 +1,39 @@
+{
+  "schema": "t012.batch1-repro.luna-review-r2.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read_only; no deploy/live/API/DB/catalogue mutation",
+  "test_run": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_fafipa_dispatch_r5.py backend/tests/test_cpcon_t012.py backend/tests/test_t012_batch2_dispatch.py",
+    "result": "21 passed, 81 warnings in 87.14s",
+    "side_effects": "No publication/version/outbox effects; batch2 regression remains green"
+  },
+  "sha256_snapshot": {
+    "backend/app/tenderproof/fields.py": "BE7EF8C989FCBC080FC5305769060432491F0D995CFDFA98EB4F434B47B1224F",
+    "backend/app/tenderproof/fafipa_t012_r4.py": "65405AECA565C9CFD75145B3B7AE65F8FF529068682DBC512644025B9FBD1751",
+    "backend/app/tenderproof/cpcon_t012.py": "3B07EC09CD41957A52D578685DD4D9B49CE02B94DF770F1B586CC3E37C96CB20",
+    "backend/tests/test_t012_fafipa_dispatch_r5.py": "A0DD10316B7A413354F12682CF05A109629E41FC73D05BF86234BB58DF4DABB2",
+    "backend/tests/test_cpcon_t012.py": "C9D23D0BAA714FD0375703667BCB752130B0A4CA211E341313247F1B10AF0518",
+    "backend/tests/test_t012_batch2_dispatch.py": "4F6CC32BDC6E7420834158C83072E6D0C6E3EACEFD5C09F6EBE6A7806827BBE0"
+  },
+  "cross_review": {
+    "fafipa_4208": "PASS: current fields.py invokes the source parser after strong preflight, replacing generic title/orgao/edital/dates/cargos; exact fresh page evidence and organization+edital fallback survive round-trip.",
+    "cpcon_002_2026": "PASS: current fields.py invokes source extract_fields after identity, replacing generic title/orgao/edital/cargos; six cargo values/evidence are eligible and stale 001/2026 evidence fails _reproduced_evidence.",
+    "contradictions_from_r1": "RESOLVED: no remaining generic-only path for either exact pair; both round-trip tests assert expected eligible values and zero writes.",
+    "batch2": "PRESERVED: 11 dispatch tests remain included and pass."
+  },
+  "conditions": [
+    "Use accepted FAFIPA R4 and CPCON R2 receipts/envelopes only; exclude superseded CPCON artifacts.",
+    "This deploy gate does not authorize canonical import, proposal, approval or apply; target allocation and normal proposal review remain required."
+  ],
+  "evidence_files": [
+    "backend/app/tenderproof/fields.py:489-620",
+    "backend/app/tenderproof/fafipa_t012_r4.py",
+    "backend/app/tenderproof/cpcon_t012.py",
+    "backend/tests/test_t012_fafipa_dispatch_r5.py",
+    "backend/tests/test_cpcon_t012.py",
+    "backend/tests/test_t012_batch2_dispatch.py",
+    "docs/execucao/evidencias/T012/fafipa_open/integration-repro-r1.json",
+    "docs/execucao/evidencias/T012/cpcon_open/integration-repro-r1.json"
+  ]
+}

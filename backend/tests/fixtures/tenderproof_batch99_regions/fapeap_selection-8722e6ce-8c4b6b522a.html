@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://fapeap.portal.ap.gov.br/image/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fapeap.portal.ap.gov.br/image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fapeap.portal.ap.gov.br/image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://fapeap.portal.ap.gov.br/image/favicon/site.webmanifest">
+  <link rel="mask-icon" href="https://fapeap.portal.ap.gov.br/image/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+    <title>FAPEAP - Fundação de Amparo à Pesquisa do Amapá</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+  <link rel="preload" as="style" href="https://fapeap.portal.ap.gov.br/build/assets/app-DYxsC1Xc.css" /><link rel="preload" as="style" href="https://fapeap.portal.ap.gov.br/build/assets/app-iE3dUtAN.css" /><link rel="modulepreload" href="https://fapeap.portal.ap.gov.br/build/assets/app-daAFPWej.js" /><link rel="stylesheet" href="https://fapeap.portal.ap.gov.br/build/assets/app-DYxsC1Xc.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://fapeap.portal.ap.gov.br/build/assets/app-iE3dUtAN.css" data-navigate-track="reload" /><script type="module" src="https://fapeap.portal.ap.gov.br/build/assets/app-daAFPWej.js" data-navigate-track="reload"></script>  <link rel="stylesheet" href="https://fapeap.portal.ap.gov.br/components/owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://fapeap.portal.ap.gov.br/components/owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://fapeap.portal.ap.gov.br/components/lightbox2/dist/css/lightbox.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #topo,
+    #conteudo,
+    #mapa {
+      scroll-margin-top: 1rem;
+    }
+
+    .modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 35px;
+    }
+
+    .modal-body {
+      position: relative;
+      padding: 0;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: -30px;
+      top: 0;
+    }
+
+    /* Setas de navegação do carrossel de Procurados — na mesma linha das bolinhas */
+    #owl-wanted {
+      position: relative;
+    }
+
+    /* faixa inferior das bolinhas (centralizadas) */
+    #owl-wanted .owl-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      margin-top: 0.75rem;
+    }
+
+    /* barra das setas sobreposta exatamente à faixa das bolinhas */
+    #owl-wanted .owl-nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+      /* deixa as bolinhas clicáveis */
+    }
+
+    #owl-wanted .owl-nav button.owl-prev,
+    #owl-wanted .owl-nav button.owl-next {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      transition: background-color 0.2s ease;
+    }
+
+    #owl-wanted .owl-nav button.owl-prev:hover,
+    #owl-wanted .owl-nav button.owl-next:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      var f = localStorage.getItem('acessibilidade-fonte');
+      if (f) document.documentElement.style.fontSize = parseFloat(f) + 'px';
+    })();
+  </script>
+<!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+</head>
+
+<body class="antialiased acessibilidade" x-data="{ darkMode: false }" x-init="if (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    localStorage.setItem('darkMode', JSON.stringify(true));
+}
+darkMode = JSON.parse(localStorage.getItem('darkMode') ?? 'false');
+$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+  x-bind:class="{ 'dark': darkMode, 'tw-dark': darkMode }" x-cloak>
+
+  <!-- Modal Vídeo -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span></button>
+          <!-- 16:9 aspect ratio -->
+          <div class="ratio ratio-16x9">
+            <iframe class="embed-responsive-item" src="" id="video" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <header id="topo">
+    <div :style="darkMode ? 'background-color: #111827' : 'background-color: #0060ae'"
+  class="tw-w-full tw-py-3 tw-text-white tw-text-sm">
+  <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 lg:tw-px-8 tw-flex tw-items-center">
+    <div class="tw-flex tw-items-center tw-flex-1 tw-shrink-0">
+      <a href="https://amapa.gov.br" target="_blank">
+                  <img src="https://fapeap.portal.ap.gov.br/image/brasao.png" class="tw-h-[40px]" alt="">
+              </a>
+    </div>
+
+    
+    <div class="tw-hidden md:tw-flex tw-items-center tw-justify-center tw-gap-1">
+      <a href="http://www.transparencia.ap.gov.br/" target="_blank"
+        class="btn tw-text-white tw-border tw-border-white btn-sm"><i class="fa-solid fa-sitemap tw-mr-1"></i>Portal
+        da Transparência</a>
+      <a href="#conteudo" class="btn btn-sm tw-text-white tw-border tw-border-white"
+        aria-label="Ir para o conteúdo principal">
+        <i class="fa-brands fa-creative-commons-nd tw-mr-1"></i>Ir Para o Conteúdo
+      </a>
+      <a href="#mapa" class="btn btn-sm tw-text-white tw-border tw-border-white"
+        aria-label="Ir para o rodapé do site">
+        <i class="fa-solid fa-sitemap tw-mr-1"></i>Mapa do Site
+      </a>
+
+      
+      <a href="/conteudo/acessibilidade"
+        class="tw-hidden lg:tw-inline-block btn tw-text-white tw-border tw-border-white btn-sm"><i
+          class="fa-solid fa-wheelchair tw-mr-1"></i>Acessibilidade</a>
+      <button class="tw-hidden lg:tw-inline-block btn tw-text-white tw-border tw-border-white btn-sm"
+        onClick="fonte('a');"> A+</button>
+      <button class="tw-hidden lg:tw-inline-block btn tw-text-white tw-border tw-border-white btn-sm"
+        onClick="fonte('r');"> A ( )</button>
+      <button class="tw-hidden lg:tw-inline-block btn tw-text-white tw-border tw-border-white btn-sm"
+        onClick="fonte('b');"> A-</button>
+    </div>
+
+    <div class="tw-flex tw-items-center tw-flex-1 tw-justify-end tw-shrink-0">
+      <button type="button" x-bind:class="darkMode ? 'tw-bg-gray-500' : 'tw-bg-gray-200'"
+        x-on:click="darkMode = !darkMode"
+        class="tw-relative tw-inline-flex tw-h-6 tw-w-11 tw-flex-shrink-0 tw-cursor-pointer tw-rounded-full tw-border-2 tw-border-transparent tw-transition-colors tw-duration-200 tw-ease-in-out focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-indigo-500 focus:tw-ring-offset-2"
+        role="switch" aria-checked="false">
+        <span class="tw-sr-only">Dark mode toggle</span>
+        <span x-bind:class="darkMode ? 'tw-translate-x-5 tw-bg-gray-700' : 'tw-translate-x-0 tw-bg-white'"
+          class="tw-pointer-events-none tw-relative tw-inline-block tw-h-5 tw-w-5 tw-transform tw-rounded-full tw-shadow tw-ring-0 tw-transition tw-duration-200 tw-ease-in-out">
+          <span
+            x-bind:class="darkMode ? 'tw-opacity-0 tw-ease-out tw-duration-100' : 'tw-opacity-100 tw-ease-in tw-duration-200'"
+            class="tw-absolute tw-inset-0 tw-flex tw-h-full tw-w-full tw-items-center tw-justify-center tw-transition-opacity"
+            aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-3 tw-w-3 tw-text-orange-500" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </span>
+          <span
+            x-bind:class="darkMode ? 'tw-opacity-100 tw-ease-in tw-duration-200' : 'tw-opacity-0 tw-ease-out tw-duration-100'"
+            class="tw-absolute tw-inset-0 tw-flex tw-h-full tw-w-full tw-items-center tw-justify-center tw-transition-opacity"
+            aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-3 tw-w-3 tw-text-white" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div :style="darkMode ? 'background-color: #111827' : 'background-color: #0060ae'"
+  class="tw-w-full tw-py-2 tw-text-white tw-text-sm lg:tw-hidden">
+  <div
+    class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 tw-flex tw-flex-wrap tw-items-center tw-justify-center tw-gap-2">
+    <a href="http://www.transparencia.ap.gov.br/" target="_blank"
+      class="md:tw-hidden btn tw-text-white tw-border tw-border-white btn-sm"><i
+        class="fa-solid fa-circle-info tw-mr-1"></i>Portal da Transparência</a>
+    <a href="#mapa" class="md:tw-hidden btn btn-sm tw-text-white tw-border tw-border-white"
+      aria-label="Ir para o rodapé do site">
+      <i class="fa-solid fa-circle-chevron-down tw-mr-1"></i>Ir Para o Rodapé
+    </a>
+    <a href="/conteudo/acessibilidade" class="btn tw-text-white tw-border tw-border-white btn-sm"><i
+        class="fa-solid fa-wheelchair tw-mr-1"></i>Acessibilidade</a>
+    <button class="btn tw-text-white tw-border tw-border-white btn-sm" onClick="fonte('a');"> A+</button>
+    <button class="btn tw-text-white tw-border tw-border-white btn-sm" onClick="fonte('r');"> A ( )</button>
+    <button class="btn tw-text-white tw-border tw-border-white btn-sm" onClick="fonte('b');"> A-</button>
+  </div>
+</div>
+
+
+<div :style="darkMode ? 'background-color: #4b5563' : 'background-color: #00A97A'"
+  class="tw-w-full tw-text-white tw-text-xs">
+  <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 lg:tw-px-8 tw-py-5">
+    <div class="tw-flex tw-flex-wrap tw-gap-y-3">
+      <div class="tw-w-1/2 md:tw-w-1/3 tw-flex tw-space-x-2 tw-items-center">
+        <div class="tw-text-white tw-text-2xl"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <a href="https://fapeap.portal.ap.gov.br/canais-de-atendimento" class="tw-no-underline tw-text-white">
+            <div class="tw-font-semibold">CONTATOS</div>
+            Canais de atendimento
+          </a>
+        </div>
+      </div>
+      <div class="tw-w-1/2 md:tw-w-1/3 tw-flex tw-space-x-2 tw-items-center">
+        <div class="tw-text-white tw-text-2xl"><i class="fa-solid fa-clock"></i></div>
+        <div>
+          <div class="tw-font-semibold">ATENDIMENTOS</div>
+                      <div>Segunda a sexta, 08:00h às
+              14:00h</div>
+                  </div>
+      </div>
+      <div class="tw-w-full md:tw-w-1/3 tw-flex tw-items-center tw-mt-3 md:tw-mt-0">
+        <select class="form-select" aria-label="Órgãos do estado..." id="select-company"
+          onchange="location = this.value;">
+          <option selected>Órgãos do estado...</option>
+                      <option value="https://diagro.portal.ap.gov.br">Agência de Defesa e Inspeção Agropecuária do Estado do Amapá</option>
+                      <option value="https://agenciaamapa.portal.ap.gov.br/">Agência de Desenvolvimento Econômico</option>
+                      <option value="https://arsap.portal.ap.gov.br">Agência Reguladora de Serviços Públicos Delegados do Estado do Amapá</option>
+                      <option value="https://www.prodap.ap.gov.br/">Centro de Gestão de Tecnologia da Informação</option>
+                      <option value="http://www.creap.ap.gov.br/">Centro de Reabilitação do Amapá</option>
+                      <option value="https://ceas.portal.ap.gov.br">Conselho Estadual de Assistência Social</option>
+                      <option value="https://cee.portal.ap.gov.br">Conselho  Estadual de Educação</option>
+                      <option value="https://secult.portal.ap.gov.br/pagina/conselho-estadual-de-politica-cultural/publicacoes">Conselho Estadual de Política Cultural</option>
+                      <option value="http://www.ces.ap.gov.br/">Conselho Estadual de Saúde</option>
+                      <option value="https://celgbt.portal.ap.gov.br/">Conselho Estadual Dos Direitos Da População LGBT</option>
+                      <option value="https://cge.portal.ap.gov.br">Controladoria Geral do Estado do Amapá</option>
+                      <option value="https://bombeiros.portal.ap.gov.br/">Corpo de Bombeiros Militar do Amapá</option>
+                      <option value="https://esap.portal.ap.gov.br/">Escola de Saberes Públicos do Estado do Amapá</option>
+                      <option value="https://esp.portal.ap.gov.br/">Escola de Saúde Pública	</option>
+                      <option value="https://fapeap.portal.ap.gov.br/">Fundação de Amparo à Pesquisa do Amapá	</option>
+                      <option value="https://fundesa.portal.ap.gov.br">Fundação de Saúde Amapaense</option>
+                      <option value="https://fundacaomarabaixo.portal.ap.gov.br/">Fundação Estadual de Políticas de Promoção da Igualdade Racial do Amapá</option>
+                      <option value="https://fsa.portal.ap.gov.br/">Fundação Socioeducativa do Amapá</option>
+                      <option value="http://defesacivil.ap.gov.br/">Gabinete de Proteção e Defesa Civil</option>
+                      <option value="https://amapa.gov.br/">Governo do Estado do Amapá</option>
+                      <option value="https://iapen.portal.ap.gov.br/">Instituto de Administração Penitenciária do Amapá</option>
+                      <option value="https://procon.portal.ap.gov.br/">Instituto de Defesa do Consumidor do Amapá</option>
+                      <option value="https://iesp.portal.ap.gov.br/">Instituto De Ensino De Segurança Pública Do Estado Do Amapá</option>
+                      <option value="https://rurap.portal.ap.gov.br">Instituto de extensão, assistência e desenvolvimento rural do Amapá</option>
+                      <option value="http://www.hemoap.ap.gov.br/">Instituto de Hematologia e Hemoterapia do Amapá	</option>
+                      <option value="http://www.ipem.ap.gov.br/">Instituto de Pesos e Medidas do Amapá	</option>
+                      <option value="http://www.iepa.ap.gov.br/">Instituto de Pesquisas Científicas e Tecnológicas do Estado do Amapá	</option>
+                      <option value="https://amapaterras.portal.ap.gov.br/">Instituto de Terras do Estado do Amapá</option>
+                      <option value="https://jucap.portal.ap.gov.br">Junta Comercial do Amapá</option>
+                      <option value="http://museusacaca.ap.gov.br/">Museu Sacaca</option>
+                      <option value="http://policiacientifica.ap.gov.br/">Polícia Cientifica do Estado do Amapá	</option>
+                      <option value="https://policiacivil.portal.ap.gov.br">Polícia Civil do Estado do Amapá</option>
+                      <option value="https://pm.portal.ap.gov.br/">Polícia Militar do Estado do Amapá	</option>
+                      <option value="https://pge.portal.ap.gov.br/">Procuradoria Geral do Estado	</option>
+                      <option value="http://tesouroverde.ap.gov.br/">Programa voltado para o desenvolvimento econômico sustentável no Estado do Amapá	</option>
+                      <option value="https://saude.portal.ap.gov.br/">Secretaria da Saúde	</option>
+                      <option value="https://compras.portal.ap.gov.br/">Secretaria de Compras e Licitações Sustentáveis do Estado do Amapá</option>
+                      <option value="https://secult.portal.ap.gov.br">Secretaria de Cultura</option>
+                      <option value="https://sdr.portal.ap.gov.br">Secretaria de  Desenvolvimento Rural</option>
+                      <option value="https://direitoshumanos.portal.ap.gov.br/">Secretaria de Direitos Humanos</option>
+                      <option value="https://sead.portal.ap.gov.br">Secretaria de Estado da Administração</option>
+                      <option value="https://seas.portal.ap.gov.br">Secretaria de Estado da Assistência Social</option>
+                      <option value="https://setec.portal.ap.gov.br/">Secretaria de Estado da Ciência e Tecnologia</option>
+                      <option value="https://seed.portal.ap.gov.br/">Secretaria de Estado da Educação</option>
+                      <option value="https://sefaz.portal.ap.gov.br/">Secretaria de Estado da Fazenda</option>
+                      <option value="https://sehab.portal.ap.gov.br">Secretaria de Estado da Habitação   </option>
+                      <option value="http://www.seinf.ap.gov.br/">Secretaria de Estado da Infraestrutura</option>
+                      <option value="https://sejuv.portal.ap.gov.br">Secretaria de Estado da Juventude</option>
+                      <option value="https://semin.portal.ap.gov.br">Secretaria de Estado da Mineração</option>
+                      <option value="https://sepaq.portal.ap.gov.br">Secretaria de Estado da Pesca e Aquicultura</option>
+                      <option value="https://seat.portal.ap.gov.br">Secretaria de Estado de Assuntos da Transposição</option>
+                      <option value="https://setrap.portal.ap.gov.br">Secretaria de Estado de Transporte</option>
+                      <option value="https://sedel.portal.ap.gov.br">Secretaria de Estado do Desporto e do Lazer</option>
+                      <option value="https://seplan.portal.ap.gov.br">Secretaria de Estado do Planejamento</option>
+                      <option value="https://sete.portal.ap.gov.br/">Secretaria de Estado do Trabalho e Empreededorismo</option>
+                      <option value="https://sejusp.portal.ap.gov.br">Secretaria de Justiça e Segurança Pública</option>
+                      <option value="http://secretariadamulher.ap.gov.br/">Secretaria de Políticas para Mulheres</option>
+                      <option value="https://amapainternacional.amapa.gov.br/">Secretaria de Relações Internacionais e Comércio Exterior do Estado do Amapá	</option>
+                      <option value="https://setur.portal.ap.gov.br/">Secretaria de Turismo</option>
+                      <option value="https://secbea.amapa.gov.br/">Secretaria do Bem Estar Animal	</option>
+                      <option value="https://cidades.portal.ap.gov.br/">Secretaria do Desenvolvimento das Cidades</option>
+                      <option value="https://meioambiente.portal.ap.gov.br">Secretaria do Meio Ambiente</option>
+                      <option value="http://www.seafro.ap.gov.br/">Secretaria Extraordinária de Políticas para Afrodescendentes	</option>
+                      <option value="https://seab.portal.ap.gov.br/">Secretaria Extraordinária de Representação do Governo do Amapá em Brasilia	</option>
+                      <option value="https://superfacil.portal.ap.gov.br/">Super Fácil</option>
+                      <option value="https://svs.portal.ap.gov.br">Superintendência de Vigilância em Saúde</option>
+                      <option value="https://amapa.gov.br/vice-governadoria">Vice-Governadoria</option>
+                      <option value="https://zee.portal.ap.gov.br/">Zoneamento Ecológico Econômico do Amapá	</option>
+                  </select>
+      </div>
+
+      <div class="tw-w-full tw-block lg:tw-hidden">
+        <nav class="navbar navbar-dark navbar-expand-lg tw-text-sm">
+          <a class="navbar-brand lg:tw-hidden" href="https://fapeap.portal.ap.gov.br">
+            <i class="fa-solid fa-house tw-text-white"></i>
+          </a>
+          <span
+            class="tw-inline-flex tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-white/30 tw-px-2 tw-py-1">
+            <button class="navbar-toggler shadow-none border-0 tw-p-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars tw-text-white tw-text-lg" aria-hidden="true"></i>
+            </button>
+          </span>
+
+          <div class="collapse navbar-collapse tw-mt-3 tw-pt-3 tw-border-t tw-border-white/20" id="navbar">
+            <ul class="navbar-nav me-auto tw-gap-0.5">
+                                                <li class="nav-item dropdown">
+                    <a class="nav-link tw-text-white tw-font-medium tw-py-2 tw-px-3 tw-rounded-md hover:tw-bg-white/15 tw-transition-colors dropdown-toggle"
+                      href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Institucional 
+                    </a>
+                    <ul
+                      class="dropdown-menu tw-shadow-lg tw-rounded-lg tw-overflow-hidden
+                               tw-bg-white dark:tw-bg-gray-800
+                               tw-border tw-border-gray-100 dark:tw-border-gray-700">
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo" >
+                            Objetivo 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/normas" >
+                            Normas
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/missao" >
+                            Missão 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/historia" >
+                            História 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional" >
+                            Estrutura Funcional  
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior" >
+                            Conselho Superior 
+                          </a>
+                        </li>
+                                          </ul>
+                  </li>
+                                                                <li class="nav-item dropdown">
+                    <a class="nav-link tw-text-white tw-font-medium tw-py-2 tw-px-3 tw-rounded-md hover:tw-bg-white/15 tw-transition-colors dropdown-toggle"
+                      href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Programas
+                    </a>
+                    <ul
+                      class="dropdown-menu tw-shadow-lg tw-rounded-lg tw-overflow-hidden
+                               tw-bg-white dark:tw-bg-gray-800
+                               tw-border tw-border-gray-100 dark:tw-border-gray-700">
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3" >
+                            Centelha 3
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias" >
+                            Rede Ciências
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/ppsus" >
+                            PPSUS
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia" >
+                            NexBio Amazônia 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii" >
+                            Tecnova III
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/profix" >
+                            PROFIX 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal" >
+                            Rede de Pesquisa e Desenvolvimento da Amazonia Legal 
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade" >
+                            Bolsa Produtividade
+                          </a>
+                        </li>
+                                              <li>
+                          <a class="dropdown-item tw-text-gray-700 dark:tw-text-gray-200 tw-font-medium tw-text-sm tw-py-2 tw-px-4
+                                     hover:tw-bg-gray-100 dark:hover:tw-bg-gray-700 tw-transition-colors"
+                                                          href="https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026" >
+                            Desafio Startup Amapá 2026
+                          </a>
+                        </li>
+                                          </ul>
+                  </li>
+                                                                <li class="nav-item">
+                                          <a class="nav-link tw-text-white tw-font-medium tw-py-2 tw-px-3 tw-rounded-md hover:tw-bg-white/15 tw-transition-colors"
+                        aria-current="page" href="https://fapeap.portal.ap.gov.br/pagina/contatos">
+                        Contatos
+                      </a>
+                                      </li>
+                                          </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+    <div
+  class="tw-w-full dark:tw-bg-gray-900 tw-border-0 md:tw-border-b-2 tw-border-b-gov-green dark:tw-border-white/30 tw-pb-0 md:tw-pb-5">
+  <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 lg:tw-px-4">
+    <div class="tw-flex tw-flex-wrap md:tw-items-start tw-pt-10">
+      <div class="tw-w-full tw-flex tw-flex-wrap md:tw-flex-nowrap md:tw-items-center tw-gap-5">
+        <div class="tw-w-full md:tw-w-3/4 tw-mb-3 md:tw-mb-0 tw-items-center tw-text-center md:tw-text-justify">
+                      <div class="tw-items-center md:tw-text-start">
+              <a href="https://fapeap.portal.ap.gov.br" class="tw-no-underline tw-inline-flex tw-flex-col tw-w-fit">
+                <div class="tw-text-3xl tw-font-black tw-text-gov-blue dark:tw-text-white">
+                  FAPEAP
+                </div>
+                <h2 class="tw-font-normal tw-text-lg">Fundação de Amparo à Pesquisa do Amapá	</h2>
+              </a>
+            </div>
+                            </div>
+                  <div class="tw-w-full md:tw-w-2/4 lg:tw-w-1/4 tw-text-center">
+            <a href="https://amapa.gov.br/" target="_blank">
+              <img src="https://matrix.amapa.gov.br//storage/logos/01M12J2PZ1TA4J35JSSMJVGYWG.svg"
+                class="tw-max-h-[130px] tw-max-w-full tw-mx-auto tw-block" alt="">
+            </a>
+          </div>
+              </div>
+      <div class="tw-w-full tw-hidden lg:tw-flex lg:tw-items-center lg:tw-mt-5">
+        <nav class="tw-w-full" x-data="{ open: false }">
+          <button type="button"
+            @click="open = !open"
+            :aria-expanded="open.toString()"
+            aria-controls="navbar"
+            aria-label="Toggle navigation"
+            class="lg:tw-hidden tw-p-2 tw-rounded tw-text-gov-blue dark:tw-text-white">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+
+          <div
+            x-show="open"
+            x-transition:enter="tw-transition-opacity tw-ease-out tw-duration-200"
+            x-transition:enter-start="tw-opacity-0"
+            x-transition:enter-end="tw-opacity-100"
+            x-transition:leave="tw-transition-opacity tw-ease-in tw-duration-150"
+            x-transition:leave-start="tw-opacity-100"
+            x-transition:leave-end="tw-opacity-0"
+            class="tw-flex tw-flex-wrap tw-items-center tw-justify-start tw-gap-x-1 tw-gap-y-1 lg:!tw-flex"
+            id="navbar">
+
+            <a href="https://fapeap.portal.ap.gov.br"
+              class="tw-px-3 tw-py-2 tw-text-sm tw-whitespace-nowrap tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-text-gov-blue dark:hover:tw-text-yellow-400 tw-transition-colors">
+              Início
+            </a>
+
+                                          <div class="tw-relative" x-data="{ dropOpen: false }" @click.outside="dropOpen = false">
+                  <button type="button"
+                    @click="dropOpen = !dropOpen"
+                    :aria-expanded="dropOpen.toString()"
+                    class="tw-flex tw-items-center tw-gap-1 tw-px-3 tw-py-2 tw-text-sm tw-whitespace-nowrap tw-bg-transparent tw-border-0 tw-cursor-pointer tw-text-gray-700 dark:tw-text-white hover:tw-text-gov-blue dark:hover:tw-text-yellow-400 tw-transition-colors">
+                    Institucional 
+                    <i class="fas fa-chevron-down tw-text-xs tw-transition-transform tw-duration-200"
+                      :class="{ 'tw-rotate-180': dropOpen }"></i>
+                  </button>
+                  <div
+                    x-show="dropOpen"
+                    x-transition:enter="tw-transition tw-ease-out tw-duration-100"
+                    x-transition:enter-start="tw-opacity-0 tw-scale-95"
+                    x-transition:enter-end="tw-opacity-100 tw-scale-100"
+                    x-transition:leave="tw-transition tw-ease-in tw-duration-75"
+                    x-transition:leave-start="tw-opacity-100 tw-scale-100"
+                    x-transition:leave-end="tw-opacity-0 tw-scale-95"
+                    class="tw-absolute tw-left-0 tw-top-full tw-z-50 tw-min-w-[160px] tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-600 tw-bg-white dark:tw-bg-gray-700 tw-shadow-lg tw-py-1">
+                                                                  <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Objetivo 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/normas"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Normas
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/missao"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Missão 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/historia"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          História 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Estrutura Funcional  
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Conselho Superior 
+                        </a>
+                                                            </div>
+                </div>
+                                                        <div class="tw-relative" x-data="{ dropOpen: false }" @click.outside="dropOpen = false">
+                  <button type="button"
+                    @click="dropOpen = !dropOpen"
+                    :aria-expanded="dropOpen.toString()"
+                    class="tw-flex tw-items-center tw-gap-1 tw-px-3 tw-py-2 tw-text-sm tw-whitespace-nowrap tw-bg-transparent tw-border-0 tw-cursor-pointer tw-text-gray-700 dark:tw-text-white hover:tw-text-gov-blue dark:hover:tw-text-yellow-400 tw-transition-colors">
+                    Programas
+                    <i class="fas fa-chevron-down tw-text-xs tw-transition-transform tw-duration-200"
+                      :class="{ 'tw-rotate-180': dropOpen }"></i>
+                  </button>
+                  <div
+                    x-show="dropOpen"
+                    x-transition:enter="tw-transition tw-ease-out tw-duration-100"
+                    x-transition:enter-start="tw-opacity-0 tw-scale-95"
+                    x-transition:enter-end="tw-opacity-100 tw-scale-100"
+                    x-transition:leave="tw-transition tw-ease-in tw-duration-75"
+                    x-transition:leave-start="tw-opacity-100 tw-scale-100"
+                    x-transition:leave-end="tw-opacity-0 tw-scale-95"
+                    class="tw-absolute tw-left-0 tw-top-full tw-z-50 tw-min-w-[160px] tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-600 tw-bg-white dark:tw-bg-gray-700 tw-shadow-lg tw-py-1">
+                                                                  <a href="https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Centelha 3
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Rede Ciências
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/ppsus"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          PPSUS
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          NexBio Amazônia 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Tecnova III
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/profix"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          PROFIX 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Rede de Pesquisa e Desenvolvimento da Amazonia Legal 
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Bolsa Produtividade
+                        </a>
+                                                                                        <a href="https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026"
+                          class="tw-block tw-px-4 tw-py-2 tw-text-sm tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-bg-gray-100 dark:hover:tw-bg-gray-900 dark:hover:tw-text-yellow-400 tw-transition-colors">
+                          Desafio Startup Amapá 2026
+                        </a>
+                                                            </div>
+                </div>
+                                                                          <a href="https://fapeap.portal.ap.gov.br/pagina/contatos"
+                    class="tw-px-3 tw-py-2 tw-text-sm tw-whitespace-nowrap tw-no-underline tw-text-gray-700 dark:tw-text-white hover:tw-text-gov-blue dark:hover:tw-text-yellow-400 tw-transition-colors">
+                    Contatos
+                  </a>
+                                                    </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main id="conteudo">
+    <div wire:snapshot="{&quot;data&quot;:{&quot;search&quot;:&quot;&quot;,&quot;pagina&quot;:10,&quot;orderBy&quot;:&quot;date&quot;,&quot;selectedYear&quot;:&quot;&quot;,&quot;selectedMonth&quot;:&quot;&quot;,&quot;orderDesc&quot;:true,&quot;selectedCategory&quot;:&quot;&quot;,&quot;paginators&quot;:[{&quot;page&quot;:1},{&quot;s&quot;:&quot;arr&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;ggHoLpragXfrNygvP3Fh&quot;,&quot;name&quot;:&quot;pages.publications&quot;,&quot;path&quot;:&quot;publicacoes&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:{&quot;lw-2153314489-0&quot;:[&quot;div&quot;,&quot;zDUJtziHOCX6Snbz8uJs&quot;]},&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;pt_BR&quot;},&quot;checksum&quot;:&quot;dbeab4206403b9a19ca2a2f877964e7ec83b0811a597bf09187e2d8afd4ef5fd&quot;}" wire:effects="{&quot;url&quot;:{&quot;selectedCategory&quot;:{&quot;as&quot;:&quot;selectedCategory&quot;,&quot;use&quot;:&quot;push&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;selectedYear&quot;:{&quot;as&quot;:&quot;selectedYear&quot;,&quot;use&quot;:&quot;push&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;selectedMonth&quot;:{&quot;as&quot;:&quot;selectedMonth&quot;,&quot;use&quot;:&quot;push&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;paginators.page&quot;:{&quot;as&quot;:&quot;page&quot;,&quot;use&quot;:&quot;push&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:null}}}" wire:id="ggHoLpragXfrNygvP3Fh" class="tw-w-full dark:tw-bg-gray-900 tw-py-5">
+  <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4">
+    <div class="tw-hidden md:tw-block">
+      <div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb" class="tw-mb-5 tw-border-b">
+            <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+          <a href="https://fapeap.portal.ap.gov.br" class="tw-text-gov-blue dark:tw-text-white">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li class="breadcrumb-item active">
+          <span class="tw-link-alt dark:tw-text-gov-yellow">Publicações</span>
+        </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+    </div>
+
+    <div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-6 tw-my-5">
+      
+      <div class="tw-w-full lg:tw-w-3/4">
+        <div class="tw-mb-5 tw-text-center md:tw-text-left">
+          <div wire:loading.class="tw-opacity-50 tw-transition-opacity tw-duration-150"
+            wire:target="selectedCategory, updatingSelectedCategory">
+            <div class="tw-font-extrabold tw-text-xl tw-text-gov-blue dark:tw-text-yellow-400">
+              <!--[if BLOCK]><![endif]-->                Publicações
+              <!--[if ENDBLOCK]><![endif]-->            </div>
+            <div class="tw-text-md tw-text-gray-500 dark:tw-text-white">
+              <!--[if BLOCK]><![endif]-->                Arquivos para download
+              <!--[if ENDBLOCK]><![endif]-->            </div>
+          </div>
+        </div>
+
+        
+        <div class="tw-mb-6">
+          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-3 tw-mb-4">
+            
+            <div
+              class="tw-flex tw-items-center tw-rounded-md tw-border tw-border-gray-300 tw-overflow-hidden tw-bg-white dark:tw-border-gray-600 dark:tw-bg-gray-800 tw-col-span-2">
+              <input type="text"
+                class="tw-flex-1 tw-min-w-0 tw-px-3 tw-py-2 tw-text-sm tw-outline-none tw-bg-transparent tw-text-gray-800 dark:tw-bg-gray-800 dark:tw-text-white placeholder:tw-text-gray-400"
+                placeholder="Buscar..." wire:model.debounce.300ms.live="search">
+              <span
+                class="tw-shrink-0 tw-px-3 tw-py-2 tw-border-l tw-border-gray-200 tw-text-gray-400 dark:tw-border-gray-600">
+                <i class="fas fa-magnifying-glass tw-text-xs"></i>
+              </span>
+            </div>
+
+            
+            <div
+              class="tw-flex tw-items-center tw-rounded-md tw-border tw-border-gray-300 tw-overflow-hidden tw-bg-white dark:tw-border-gray-600 dark:tw-bg-gray-800">
+              <select wire:model.live="selectedCategory"
+                class="tw-flex-1 tw-min-w-0 tw-px-3 tw-py-2 tw-text-sm tw-outline-none tw-bg-transparent tw-text-gray-800 dark:tw-bg-gray-800 dark:tw-text-white tw-border-0 tw-appearance-none tw-capitalize">
+                <option value="">Todas as categorias</option>
+                <!--[if BLOCK]><![endif]-->                  <option value="anexo">Anexo </option>
+                                  <option value="chamadas">Chamadas</option>
+                                  <option value="cronograma">Cronograma</option>
+                                  <option value="edital">Edital </option>
+                                  <option value="formularios">Formulários </option>
+                                  <option value="portaria">Portaria</option>
+                                  <option value="programa-centelha-2">Programa Centelha 2</option>
+                                  <option value="resultados">Resultados </option>
+                                  <option value="retificacao">Retificação </option>
+                <!--[if ENDBLOCK]><![endif]-->              </select>
+              <span
+                class="tw-shrink-0 tw-px-3 tw-py-2 tw-border-l tw-border-gray-200 tw-text-gray-400 dark:tw-border-gray-600">
+                <i class="fas fa-sort tw-text-xs"></i>
+              </span>
+            </div>
+
+            
+            <div
+              class="tw-flex tw-items-center tw-rounded-md tw-border tw-border-gray-300 tw-overflow-hidden tw-bg-white dark:tw-border-gray-600 dark:tw-bg-gray-800">
+              <select wire:model.debounce.300ms.live="orderDesc"
+                class="tw-flex-1 tw-min-w-0 tw-px-3 tw-py-2 tw-text-sm tw-outline-none tw-bg-transparent tw-text-gray-800 dark:tw-bg-gray-800 dark:tw-text-white tw-border-0 tw-appearance-none tw-capitalize">
+                <option value="1">Mais recentes</option>
+                <option value="0">Mais antigos</option>
+              </select>
+              <span
+                class="tw-shrink-0 tw-px-3 tw-py-2 tw-border-l tw-border-gray-200 tw-text-gray-400 dark:tw-border-gray-600">
+                <i class="fas fa-sort tw-text-xs"></i>
+              </span>
+            </div>
+
+            
+            <div
+              class="tw-flex tw-items-center tw-rounded-md tw-border tw-border-gray-300 tw-overflow-hidden tw-bg-white dark:tw-border-gray-600 dark:tw-bg-gray-800">
+              <select id="publication-year-filter" wire:model.live="selectedYear"
+                class="tw-flex-1 tw-min-w-0 tw-px-3 tw-py-2 tw-text-sm tw-outline-none tw-bg-transparent tw-text-gray-800 dark:tw-bg-gray-800 dark:tw-text-white tw-border-0 tw-appearance-none tw-capitalize">
+                <option value="">Todos os anos</option>
+                <!--[if BLOCK]><![endif]-->                  <option value="2026">2026</option>
+                                  <option value="2025">2025</option>
+                                  <option value="2024">2024</option>
+                                  <option value="2018">2018</option>
+                <!--[if ENDBLOCK]><![endif]-->              </select>
+              <span
+                class="tw-shrink-0 tw-px-3 tw-py-2 tw-border-l tw-border-gray-200 tw-text-gray-400 dark:tw-border-gray-600">
+                <i class="fas fa-calendar tw-text-xs"></i>
+              </span>
+            </div>
+
+            
+            <button type="button"
+              class="tw-inline-flex tw-items-center tw-justify-center tw-gap-2 tw-w-full tw-rounded-md tw-px-4 tw-py-2 tw-text-sm tw-font-semibold tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95 tw-select-none"
+              x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'"
+              wire:click="resetFilters">
+              Limpar filtros
+            </button>
+          </div>
+
+          
+          <div class="tw-mb-2 tw-text-sm tw-font-medium tw-text-gray-700 dark:tw-text-white">
+            Filtrar por mês
+          </div>
+          <div class="tw-grid tw-grid-cols-4 tw-gap-2 sm:tw-grid-cols-6 md:tw-grid-cols-6 xl:tw-grid-cols-12">
+            <!--[if BLOCK]><![endif]-->              <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(1)" wire:key="publications-month-1">
+                JAN
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(2)" wire:key="publications-month-2">
+                FEV
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(3)" wire:key="publications-month-3">
+                MAR
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(4)" wire:key="publications-month-4">
+                ABR
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(5)" wire:key="publications-month-5">
+                MAI
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(6)" wire:key="publications-month-6">
+                JUN
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(7)" wire:key="publications-month-7">
+                JUL
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(8)" wire:key="publications-month-8">
+                AGO
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(9)" wire:key="publications-month-9">
+                SET
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(10)" wire:key="publications-month-10">
+                OUT
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(11)" wire:key="publications-month-11">
+                NOV
+              </button>
+                          <button type="button" class="tw-w-full tw-rounded-md tw-border tw-px-2 tw-py-2 tw-text-xs tw-font-semibold tw-transition-all tw-select-none active:tw-scale-95 tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400"
+                aria-pressed="false"
+                wire:click="selectMonth(12)" wire:key="publications-month-12">
+                DEZ
+              </button>
+            <!--[if ENDBLOCK]><![endif]-->          </div>
+        </div>
+
+        
+        <!--[if BLOCK]><![endif]-->          
+          <div class="md:tw-hidden tw-space-y-3">
+            <!--[if BLOCK]><![endif]-->              <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      21/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                       Retificação Cronograma do PROFIX - Chamada nº 002/2026 - CNPq/CAPES/FAPEAP
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/122320-Portaria nº 0642026 – 1ª Retificação do Cronograma da Chamada Pública nº 0022026 – PROFIXAmapá.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      20/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      Lista dos Projetos Suplentes Habilitados e Inabilitados à Contratação – Programa Centelha 3 ( Chamada Pública nº 007/2025)
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/050013-PORTARIA_063_2026_CENTELHA_3_SUPLENTES_E_CONVOCACAO_54.docx (1).pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      20/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                       Resultado da Análise Técnica – Rede de Pesquisa e Desenvolvimento da Amazônia Legal (Chamada Pública nº 003/2026)
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/024402-_Portaria Nº62- Resultado da Análise Técnica (PDPG 2026) ASS.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      15/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      Resultado Final –  Programa Prêmio Desafio Startup Amapá 2026 
+                    </div>
+                    <!--[if BLOCK]><![endif]-->                      <div class="tw-text-xs tw-text-gray-500 tw-capitalize dark:tw-text-gray-400 tw-mt-0.5"
+                        style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                        resultado final da Chamada Pública Simplificada nº 004/2026 –  FAPEAP/SETEC, no âmbito do Programa Prêmio Desafio Startup Amapá 2026, nos termos dos  itens 13.3 e 13.4 da Chamada. 
+                      </div>
+                    <!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/095101-_Portaria 059 de resultado final Desafio Startup 2026. ASS.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      14/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      2ª Retificação - REDE DE PESQUISA E DESENVOLVIMENTO DA AMAZÔNIA LEGAL
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/071052-Portaria_0061_2026_FAPEAP_2_Retificacao_PDPG V.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      11/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      1ª Retificação CHAMADA PÚBLICA SIMPLIFICADA Nº 004/2026 – FAPEAP/SETEC PROGRAMA PRÊMIO DESAFIO STARTUP AMAPÁ 2026
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/044410-_Portaria  de retificação Desafio Startup 2026.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      11/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      Resultado final da Etapa I – Programa Prêmio Desafio Startup Amapá 2026,
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/044619-Portaria Enquadramento final Desafio Startup 2026.pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      10/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      Resultado preliminar da Etapa I – Enquadramento da Chamada Pública Simplificada nº 004/2026 - Programa Prêmio Desafio Startup Amapá 2026
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/040222-Portaria Enquadramento preliminar Desafio Startup 2026.PDF" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Portaria
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      06/08/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      1ª Retificação  CHAMADA PÚBLICA Nº 003/2026 – PROGRAMA DE DESENVOLVIMENTO DA PÓS-GRADUAÇÃO (PDPG) – PARCERIAS ESTRATÉGICAS NOS ESTADOS V  REDE DE PESQUISA E DESENVOLVIMENTO DA AMAZÔNIA LEGAL  
+                    </div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/034744-1ª retificação PDPG.docx (1).pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+                          <div
+                class="tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700 tw-bg-white dark:tw-bg-gray-800 tw-p-3">
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-3">
+                  <div class="tw-flex-1 tw-min-w-0">
+                    <!--[if BLOCK]><![endif]-->                      <span
+                        class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                        style="background-color: ; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                        Edital 
+                      </span>
+                    <!--[if ENDBLOCK]><![endif]-->                    <div class="tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mb-0.5">
+                      20/07/2026
+                    </div>
+                    <div
+                      class="tw-font-medium tw-text-sm tw-text-gray-800 tw-capitalize dark:tw-text-white tw-leading-snug">
+                      PROGRAMA PRÊMIO DESAFIO STARTUP AMAPÁ 2026 
+                    </div>
+                    <!--[if BLOCK]><![endif]-->                      <div class="tw-text-xs tw-text-gray-500 tw-capitalize dark:tw-text-gray-400 tw-mt-0.5"
+                        style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                        CHAMADA PÚBLICA SIMPLIFICADA Nº 004/2026 - FAPEAP/SETEC. Convida as startups  expositoras da 55ª Expofeira do Amapá a participarem do Prêmio Desafio Startup Amapá 2026,  destinado ao reconhecimento de soluções inovadoras, modelos de negócios e tecnologias com  potencial de impacto econômico, social, ambiental e tecnológico, observadas as condições  estabelecidas neste instrumento.
+                      </div>
+                    <!--[if ENDBLOCK]><![endif]-->                  </div>
+                  <!--[if BLOCK]><![endif]-->                    <a href="https://matrix.amapa.gov.br//storage/publications/66/095633-MINUTA FINAL - PROGRAMA PREMIO DESAFIO STARTUP AMAPA 2026.docx (1).pdf" download target="_blank"
+                      class="tw-flex-shrink-0 tw-inline-flex tw-items-center tw-justify-center tw-gap-1 tw-rounded-md tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                      x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                      <i class="fas fa-download"></i>
+                      Baixar
+                    </a>
+                  <!--[if ENDBLOCK]><![endif]-->                </div>
+              </div>
+            <!--[if ENDBLOCK]><![endif]-->          </div>
+
+          
+          <div class="tw-hidden md:tw-block tw-rounded-md tw-border tw-border-gray-200 dark:tw-border-gray-700">
+            <table class="tw-w-full tw-text-sm tw-text-left">
+              <thead>
+                <tr class="tw-border-b tw-border-gray-200 dark:tw-border-gray-700 tw-bg-gray-50 dark:tw-bg-gray-800">
+                  <th
+                    class="tw-px-4 tw-py-3 tw-text-center tw-whitespace-nowrap tw-font-semibold tw-text-gray-600 dark:tw-text-yellow-400">
+                    Data</th>
+                  <th class="tw-px-4 tw-py-3 tw-font-semibold tw-text-gray-600 dark:tw-text-yellow-400">Descrição</th>
+                  <th
+                    class="tw-px-4 tw-py-3 tw-text-center tw-whitespace-nowrap tw-font-semibold tw-text-gray-600 dark:tw-text-yellow-400">
+                    Arquivo</th>
+                </tr>
+              </thead>
+              <tbody class="tw-divide-y tw-divide-gray-100 dark:tw-divide-gray-700">
+                <!--[if BLOCK]><![endif]-->                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      21/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                         Retificação Cronograma do PROFIX - Chamada nº 002/2026 - CNPq/CAPES/FAPEAP
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/122320-Portaria nº 0642026 – 1ª Retificação do Cronograma da Chamada Pública nº 0022026 – PROFIXAmapá.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      20/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        Lista dos Projetos Suplentes Habilitados e Inabilitados à Contratação – Programa Centelha 3 ( Chamada Pública nº 007/2025)
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/050013-PORTARIA_063_2026_CENTELHA_3_SUPLENTES_E_CONVOCACAO_54.docx (1).pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      20/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                         Resultado da Análise Técnica – Rede de Pesquisa e Desenvolvimento da Amazônia Legal (Chamada Pública nº 003/2026)
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/024402-_Portaria Nº62- Resultado da Análise Técnica (PDPG 2026) ASS.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      15/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        Resultado Final –  Programa Prêmio Desafio Startup Amapá 2026 
+                      </div>
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-text-xs tw-text-gray-500 tw-capitalize dark:tw-text-gray-400 tw-mt-0.5"
+                          style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                          resultado final da Chamada Pública Simplificada nº 004/2026 –  FAPEAP/SETEC, no âmbito do Programa Prêmio Desafio Startup Amapá 2026, nos termos dos  itens 13.3 e 13.4 da Chamada. 
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/095101-_Portaria 059 de resultado final Desafio Startup 2026. ASS.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      14/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        2ª Retificação - REDE DE PESQUISA E DESENVOLVIMENTO DA AMAZÔNIA LEGAL
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/071052-Portaria_0061_2026_FAPEAP_2_Retificacao_PDPG V.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      11/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        1ª Retificação CHAMADA PÚBLICA SIMPLIFICADA Nº 004/2026 – FAPEAP/SETEC PROGRAMA PRÊMIO DESAFIO STARTUP AMAPÁ 2026
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/044410-_Portaria  de retificação Desafio Startup 2026.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      11/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        Resultado final da Etapa I – Programa Prêmio Desafio Startup Amapá 2026,
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/044619-Portaria Enquadramento final Desafio Startup 2026.pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      10/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        Resultado preliminar da Etapa I – Enquadramento da Chamada Pública Simplificada nº 004/2026 - Programa Prêmio Desafio Startup Amapá 2026
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/040222-Portaria Enquadramento preliminar Desafio Startup 2026.PDF" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      06/08/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: #20ced4; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Portaria
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        1ª Retificação  CHAMADA PÚBLICA Nº 003/2026 – PROGRAMA DE DESENVOLVIMENTO DA PÓS-GRADUAÇÃO (PDPG) – PARCERIAS ESTRATÉGICAS NOS ESTADOS V  REDE DE PESQUISA E DESENVOLVIMENTO DA AMAZÔNIA LEGAL  
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/034744-1ª retificação PDPG.docx (1).pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                                  <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td
+                      class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap tw-text-gray-600 dark:tw-text-white">
+                      20/07/2026
+                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-align-middle">
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-mb-1">
+                          <span
+                            class="tw-inline-block tw-rounded tw-px-2 tw-py-0.5 tw-text-xs tw-font-semibold tw-capitalize tw-text-white tw-mb-1"
+                            style="background-color: ; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+                            Edital 
+                          </span>
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                      <div class="tw-font-medium tw-text-gray-800 tw-capitalize dark:tw-text-white">
+                        PROGRAMA PRÊMIO DESAFIO STARTUP AMAPÁ 2026 
+                      </div>
+                      <!--[if BLOCK]><![endif]-->                        <div class="tw-text-xs tw-text-gray-500 tw-capitalize dark:tw-text-gray-400 tw-mt-0.5"
+                          style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                          CHAMADA PÚBLICA SIMPLIFICADA Nº 004/2026 - FAPEAP/SETEC. Convida as startups  expositoras da 55ª Expofeira do Amapá a participarem do Prêmio Desafio Startup Amapá 2026,  destinado ao reconhecimento de soluções inovadoras, modelos de negócios e tecnologias com  potencial de impacto econômico, social, ambiental e tecnológico, observadas as condições  estabelecidas neste instrumento.
+                        </div>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                    <td class="tw-px-4 tw-py-3 tw-text-center tw-align-middle tw-whitespace-nowrap">
+                      <!--[if BLOCK]><![endif]-->                        <a href="https://matrix.amapa.gov.br//storage/publications/66/095633-MINUTA FINAL - PROGRAMA PREMIO DESAFIO STARTUP AMAPA 2026.docx (1).pdf" download target="_blank"
+                          class="tw-inline-flex tw-items-center tw-gap-1.5 tw-rounded-md tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-no-underline tw-transition-opacity hover:tw-opacity-85 active:tw-scale-95"
+                          x-bind:class="darkMode ? 'tw-bg-amber-400 tw-text-black' : 'tw-bg-gov-blue tw-text-white'">
+                          <i class="fas fa-download tw-text-xs"></i>
+                          Baixar
+                        </a>
+                      <!--[if ENDBLOCK]><![endif]-->                    </td>
+                  </tr>
+                <!--[if ENDBLOCK]><![endif]-->              </tbody>
+            </table>
+          </div>
+        <!--[if ENDBLOCK]><![endif]-->
+        <div class="tw-mt-4">
+          <div>
+  <!--[if BLOCK]><![endif]-->    <nav role="navigation" aria-label="Navegação de páginas"
+      class="tw-flex tw-items-center tw-justify-between tw-mt-2">
+
+      
+      <div class="tw-flex tw-justify-between tw-flex-1 md:tw-hidden tw-gap-2">
+        <!--[if BLOCK]><![endif]-->          <span
+            class="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-400 tw-cursor-default dark:tw-border-gray-600 dark:tw-bg-gray-800 dark:tw-text-gray-600">
+            Anterior
+          </span>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->          <button type="button"
+            wire:click="nextPage('page')"
+            x-on:click=""
+            wire:loading.attr="disabled"
+            dusk="nextPage.before"
+            class="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-700 hover:tw-bg-gray-50 tw-transition-colors dark:tw-border-gray-600 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-bg-gray-700">
+            Próximo
+          </button>
+        <!--[if ENDBLOCK]><![endif]-->      </div>
+
+      
+      <div class="tw-hidden md:tw-flex tw-flex-1 tw-items-center tw-justify-between">
+
+        
+        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-300">
+          Exibindo
+          <!--[if BLOCK]><![endif]-->            <span class="tw-font-semibold tw-text-gray-800 dark:tw-text-white">1</span>
+            a
+            <span class="tw-font-semibold tw-text-gray-800 dark:tw-text-white">10</span>
+          <!--[if ENDBLOCK]><![endif]-->          de
+          <span class="tw-font-semibold tw-text-gray-800 dark:tw-text-white">72</span>
+          resultados
+        </p>
+
+        
+        <div class="tw-inline-flex tw-items-center tw-gap-1">
+
+          
+          <!--[if BLOCK]><![endif]-->            <span aria-disabled="true" aria-label="Anterior"
+              class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-400 tw-cursor-default dark:tw-border-gray-700 dark:tw-bg-gray-800">
+              <svg class="tw-w-4 tw-h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+          <!--[if ENDBLOCK]><![endif]-->
+          
+          <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+            <!--[if BLOCK]><![endif]-->              <!--[if BLOCK]><![endif]-->                <span wire:key="paginator-page-page1">
+                  <!--[if BLOCK]><![endif]-->                    <span aria-current="page"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-text-sm tw-font-semibold tw-cursor-default tw-border-gov-blue tw-bg-gov-blue tw-text-white dark:tw-border-yellow-400 dark:tw-bg-yellow-400 dark:tw-text-black">
+                      1
+                    </span>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page2">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(2, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 2"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      2
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page3">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(3, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 3"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      3
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page4">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(4, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 4"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      4
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page5">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(5, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 5"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      5
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page6">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(6, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 6"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      6
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page7">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(7, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 7"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      7
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+                              <span wire:key="paginator-page-page8">
+                  <!--[if BLOCK]><![endif]-->                    <button type="button"
+                      wire:click="gotoPage(8, 'page')"
+                      x-on:click=""
+                      aria-label="Go to page 8"
+                      class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors tw-text-sm dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+                      8
+                    </button>
+                  <!--[if ENDBLOCK]><![endif]-->                </span>
+              <!--[if ENDBLOCK]><![endif]-->            <!--[if ENDBLOCK]><![endif]-->          <!--[if ENDBLOCK]><![endif]-->
+          
+          <!--[if BLOCK]><![endif]-->            <button type="button"
+              wire:click="nextPage('page')"
+              x-on:click=""
+              dusk="nextPage.after"
+              aria-label="Próxima"
+              class="tw-inline-flex tw-items-center tw-justify-center tw-w-9 tw-h-9 tw-rounded-md tw-border tw-border-gray-200 tw-bg-white tw-text-gray-600 hover:tw-border-gov-blue hover:tw-text-gov-blue tw-transition-colors dark:tw-border-gray-700 dark:tw-bg-gray-800 dark:tw-text-gray-300 dark:hover:tw-border-yellow-400 dark:hover:tw-text-yellow-400">
+              <svg class="tw-w-4 tw-h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          <!--[if ENDBLOCK]><![endif]-->
+        </div>
+      </div>
+    </nav>
+  <!--[if ENDBLOCK]><![endif]--></div>
+
+        </div>
+      </div>
+
+      
+      <div class="tw-w-full lg:tw-w-1/4">
+        <div wire:snapshot="{&quot;data&quot;:[],&quot;memo&quot;:{&quot;id&quot;:&quot;zDUJtziHOCX6Snbz8uJs&quot;,&quot;name&quot;:&quot;components.last-posts&quot;,&quot;path&quot;:&quot;publicacoes&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;pt_BR&quot;},&quot;checksum&quot;:&quot;1dab7345e0cbaafce27f2cebd0b1395ce10e025f9bfde38857cef3663975547d&quot;}" wire:effects="[]" wire:id="zDUJtziHOCX6Snbz8uJs">
+  <!--[if BLOCK]><![endif]-->    <div class="tw-flex tw-flex-col tw-gap-3 tw-mb-4">
+      <h2 class="tw-font-extrabold tw-text-xl tw-text-gov-blue dark:tw-text-yellow-400">
+        ÚLTIMAS NOTÍCIAS
+      </h2>
+    </div>
+
+    <div class="tw-grid lg:tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4">
+      <!--[if BLOCK]><![endif]-->        <a href="https://fapeap.portal.ap.gov.br/noticia/05-08-2026-iniciativa-amazonia10-lanca-chamada-de-r-107-milhoes-para-fortalecer-sociobioeconomia-da-amazonia" class="tw-no-underline tw-group tw-flex tw-flex-col tw-gap-2">
+          <span class="tw-self-start tw-badge tw-text-white tw-text-xs tw-capitalize tw-font-semibold"
+            style="background-color: #2ccf2e; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+            Programa 
+          </span>
+          <div
+            class="tw-relative tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-100 dark:tw-bg-gray-800 tw-aspect-video">
+            <img src="https://matrix.amapa.gov.br//storage/posts/66/01KZ953KJEFMX507R45545N910.jpg"
+              class="tw-absolute tw-inset-0 tw-w-full tw-h-full" alt="Iniciativa Amazônia+10 lança chamada de R$ 107 milhões para fortalecer sociobioeconomia da Amazônia">
+          </div>
+
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div class="tw-text-xs tw-font-medium tw-capitalize tw-text-gray-400 dark:tw-text-yellow-400">
+              <i class="fa-solid fa-calendar-days tw-mr-0.5"></i>
+              1 julho 2026
+            </div>
+            <div
+              class="tw-text-sm tw-font-bold tw-text-gray-700 dark:tw-text-white tw-leading-snug group-hover:tw-text-gov-green dark:group-hover:tw-text-yellow-300 tw-transition-colors"
+              style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+              Iniciativa Amazônia+10 lança chamada de R$ 107 milhões para fortalecer sociobioeconomia da Amazônia
+            </div>
+          </div>
+        </a>
+              <a href="https://fapeap.portal.ap.gov.br/noticia/24-06-2026-fapeap-lanca-edital-no-0032026-para-integrar-rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal" class="tw-no-underline tw-group tw-flex tw-flex-col tw-gap-2">
+          <span class="tw-self-start tw-badge tw-text-white tw-text-xs tw-capitalize tw-font-semibold"
+            style="background-color: #2ccf2e; text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.35);">
+            Programa 
+          </span>
+          <div
+            class="tw-relative tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-100 dark:tw-bg-gray-800 tw-aspect-video">
+            <img src="https://matrix.amapa.gov.br//storage/posts/66/01KVY1DGB2CKMH5TDTR1DZSS7W.png"
+              class="tw-absolute tw-inset-0 tw-w-full tw-h-full" alt="FAPEAP lança Edital nº 003/2026 para integrar Rede de Pesquisa e Desenvolvimento da Amazônia Legal">
+          </div>
+
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div class="tw-text-xs tw-font-medium tw-capitalize tw-text-gray-400 dark:tw-text-yellow-400">
+              <i class="fa-solid fa-calendar-days tw-mr-0.5"></i>
+              24 junho 2026
+            </div>
+            <div
+              class="tw-text-sm tw-font-bold tw-text-gray-700 dark:tw-text-white tw-leading-snug group-hover:tw-text-gov-green dark:group-hover:tw-text-yellow-300 tw-transition-colors"
+              style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+              FAPEAP lança Edital nº 003/2026 para integrar Rede de Pesquisa e Desenvolvimento da Amazônia Legal
+            </div>
+          </div>
+        </a>
+      <!--[if ENDBLOCK]><![endif]-->    </div>
+    <div class="tw-mt-5">
+      <a href="https://fapeap.portal.ap.gov.br/noticias" class="tw-btn-gov-primary tw-text-sm">Ler
+        todas</a>
+    </div>
+  <!--[if ENDBLOCK]><![endif]--></div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <footer>
+    <div id="mapa">
+  <div :style="darkMode ? 'background-color: #1f2937' : 'background-color: #00A97A'"
+    class="tw-w-full tw-text-white tw-py-10 tw-text-sm">
+    <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 lg:tw-px-8">
+      <div class="tw-flex tw-flex-wrap">
+
+        
+        <div class="tw-w-full md:tw-w-1/2 tw-mb-8 md:tw-mb-0">
+          <div class="tw-font-bold tw-text-sm tw-border-b-2 tw-border-white/30 tw-pb-3 tw-mb-5">
+            MAPA DO SITE
+          </div>
+          <div class="tw-grid tw-grid-cols-2 tw-gap-x-6 tw-gap-y-1">
+
+            <div>
+              <a href="https://fapeap.portal.ap.gov.br"
+                class="tw-text-white tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5">
+                Página inicial
+              </a>
+            </div>
+
+                                          <div class="tw-col-span-2 tw-mt-2">
+                  <div class="tw-font-semibold tw-py-0.5">Institucional </div>
+                  <div class="tw-pl-3 tw-grid tw-grid-cols-2 tw-gap-x-6 tw-gap-y-0.5 tw-mt-0.5">
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/objetivo">
+                            Objetivo 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/normas">
+                            Normas
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/missao">
+                            Missão 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/historia">
+                            História 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/estrutura-funcional">
+                            Estrutura Funcional  
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/institucional/conselho-superior">
+                            Conselho Superior 
+                          </a>
+                                              </div>
+                                      </div>
+                </div>
+                                                        <div class="tw-col-span-2 tw-mt-2">
+                  <div class="tw-font-semibold tw-py-0.5">Programas</div>
+                  <div class="tw-pl-3 tw-grid tw-grid-cols-2 tw-gap-x-6 tw-gap-y-0.5 tw-mt-0.5">
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/centelha-3">
+                            Centelha 3
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-ciencias">
+                            Rede Ciências
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/ppsus">
+                            PPSUS
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/nexbio-amazonia">
+                            NexBio Amazônia 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/tecnova-iii">
+                            Tecnova III
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/profix">
+                            PROFIX 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/rede-de-pesquisa-e-desenvolvimento-da-amazonia-legal">
+                            Rede de Pesquisa e Desenvolvimento da Amazonia Legal 
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/bolsa-produtividade">
+                            Bolsa Produtividade
+                          </a>
+                                              </div>
+                                          <div>
+                                                  <a class="tw-text-white/90 tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                            href="https://fapeap.portal.ap.gov.br/pagina/programas/desafio-startup-amapa-2026">
+                            Desafio Startup Amapá 2026
+                          </a>
+                                              </div>
+                                      </div>
+                </div>
+                                                        <div>
+                                      <a class="tw-text-white tw-no-underline hover:tw-text-gov-yellow tw-block tw-py-0.5"
+                      href="https://fapeap.portal.ap.gov.br/pagina/contatos">
+                      Contatos
+                    </a>
+                                  </div>
+                          
+          </div>
+        </div>
+
+        
+        <div class="tw-w-full md:tw-w-1/2 md:tw-pl-10">
+          <div class="tw-font-bold tw-text-sm tw-border-b-2 tw-border-white/30 tw-pb-3 tw-mb-5">
+            SOBRE O ÓRGÃO
+          </div>
+          <div class="tw-space-y-2">
+            <div class="tw-font-extrabold">
+              FAPEAP - Fundação de Amparo à Pesquisa do Amapá	
+            </div>
+                                          <div class="tw-flex tw-gap-2">
+                  <i class="fas fa-location-dot tw-mt-0.5 tw-shrink-0"></i>
+                  <span>Av. Coaraci Nunes, nº 377 , bairro
+                    Central - Cep: 68900-010,
+                    Macapá - AP</span>
+                </div>
+                                                                                                          <div class="tw-flex tw-gap-2 tw-items-center">
+                  <i class="fas fa-envelope tw-shrink-0"></i>
+                  <span>fapeap@amapa.gov.br</span>
+                </div>
+                                                    <div class="tw-flex tw-gap-2 tw-items-center">
+                <i class="fas fa-clock tw-shrink-0"></i>
+                <span>Horário de Atendimento:</span>
+              </div>
+                              <div class="tw-pl-5 tw-text-white/80">
+                  Segunda a sexta,
+                  08:00h às
+                  14:00h
+                </div>
+                                    </div>
+                      <div class="tw-flex tw-flex-wrap tw-gap-2 tw-mt-6">
+                              <a href="https://www.instagram.com/fapeap_?igsh=cHJ2YmF4NjY4NnRw" target="_blank"
+                  class="tw-inline-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-lg tw-bg-white/20 hover:tw-bg-white/30 tw-transition-colors tw-text-white tw-no-underline">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                              <a href="https://youtube.com/@fapeap?si=oAa5LtCOiU4brfP-" target="_blank"
+                  class="tw-inline-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-lg tw-bg-white/20 hover:tw-bg-white/30 tw-transition-colors tw-text-white tw-no-underline">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                              <a href="https://www.linkedin.com/company/funda%C3%A7%C3%A3o-de-amparo-%C3%A0-pesquisa-do-amap%C3%A1-fapeap/posts/?feedView=all" target="_blank"
+                  class="tw-inline-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-lg tw-bg-white/20 hover:tw-bg-white/30 tw-transition-colors tw-text-white tw-no-underline">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                          </div>
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tw-w-full tw-bg-gray-900 tw-text-white tw-text-sm tw-py-5">
+  <div class="tw-max-w-[1320px] tw-mx-auto tw-px-4 md:tw-px-6 lg:tw-px-8">
+    <div class="tw-flex tw-flex-wrap tw-items-center">
+      <div class="tw-w-full md:tw-w-2/3">
+        <div>Site desenvolvido e hospedado por:
+          <span class="tw-font-bold">PRODAP - Centro de Gestão da Tecnologia da Informação</span>
+        </div>
+        <div class="tw-text-white/60 tw-mt-0.5">2017 - 2026 Licença Creative Commons 3.0
+          International</div>
+      </div>
+      <div class="tw-w-full md:tw-w-1/3 tw-flex tw-justify-center md:tw-justify-end">
+        <img src="https://fapeap.portal.ap.gov.br/image/brasao.png" class="tw-mt-5 md:tw-mt-0" alt="Brasão">
+      </div>
+    </div>
+  </div>
+</div>
+  </footer>
+
+  
+  <a href="#topo" x-data="{ show: false }" x-init="show = window.pageYOffset > 400;
+  window.addEventListener('scroll', () => show = window.pageYOffset > 400, { passive: true })"
+    x-bind:class="show ? 'tw-opacity-100 tw-pointer-events-auto' : 'tw-opacity-0 tw-pointer-events-none'"
+    aria-label="Voltar ao topo"
+    class="tw-fixed tw-bottom-5 tw-right-5 tw-z-50 tw-flex tw-h-12 tw-w-12 tw-items-center tw-justify-center tw-rounded-full tw-no-underline tw-shadow-lg tw-transition-opacity tw-duration-300 tw-bg-gov-blue dark:tw-bg-white/90 dark:hover:tw-bg-white">
+    <i class="fa-solid fa-arrow-up tw-text-white dark:tw-text-gray-900"></i>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+  <script src="https://fapeap.portal.ap.gov.br/components/owlcarousel/owl.carousel.min.js"></script>
+  <script src="https://fapeap.portal.ap.gov.br/components/lightbox2/dist/js/lightbox.js"></script>
+    
+  <script>
+    // Acessibilidade: escala a fonte do site inteiro alterando o font-size do <html> (root).
+    // Como as utilidades de texto do Tailwind/Bootstrap usam rem (relativo ao root),
+    // mudar o root faz menu, títulos e demais componentes variarem juntos.
+    const FONTE_BASE = 16; // px
+    const FONTE_MIN = 14;
+    const FONTE_MAX = 26;
+    const FONTE_KEY = 'acessibilidade-fonte';
+
+    function aplicarFonte(px) {
+      document.documentElement.style.fontSize = px ? px + 'px' : '';
+    }
+
+    function fonte(e) {
+      let atual = parseFloat(localStorage.getItem(FONTE_KEY)) ||
+        parseFloat(getComputedStyle(document.documentElement).fontSize) || FONTE_BASE;
+
+      if (e === 'r') {
+        localStorage.removeItem(FONTE_KEY);
+        aplicarFonte('');
+        return;
+      }
+
+      let novo = e === 'a' ?
+        Math.min(atual + 1, FONTE_MAX) :
+        Math.max(atual - 1, FONTE_MIN);
+
+      localStorage.setItem(FONTE_KEY, novo);
+      aplicarFonte(novo);
+    }
+
+    // Reaplica a preferência salva em todas as páginas
+    (function() {
+      let salvo = localStorage.getItem(FONTE_KEY);
+      if (salvo) aplicarFonte(parseFloat(salvo));
+    })();
+    $(function() {
+      //LINK TR
+      $(".clickable-row").click(function() {
+        window.open($(this).data("href"), '_blank');
+      });
+      // GALLERY
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': "Imagem %1 de %2",
+      })
+
+
+      // Select Company
+      $('#select-company').select2({
+        width: '100%',
+        theme: 'bootstrap-5',
+        selectionCssClass: "select2--small",
+        dropdownCssClass: "select2--small",
+        "language": {
+          "noResults": function() {
+            return "Órgão não encontrado!";
+          }
+        },
+        escapeMarkup: function(markup) {
+          return markup;
+        }
+      });
+      // Carousel
+
+      $('#owl-service').owlCarousel({
+        loop: false,
+        margin: 15,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      })
+
+      $('#owl-wanted').owlCarousel({
+        loop: true,
+        margin: 15,
+        dots: true,
+        nav: true,
+        navText: [
+          '<i class="fas fa-chevron-left"></i>',
+          '<i class="fas fa-chevron-right"></i>'
+        ],
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+          // celular: 1 coluna (2 cards empilhados por slide)
+          0: {
+            items: 1
+          },
+          // tablet (largura cheia): 2 colunas lado a lado
+          768: {
+            items: 2
+          },
+          // desktop (lg): volta a 1 coluna, na sidebar estreita de 4 colunas
+          1024: {
+            items: 1
+          }
+        }
+      })
+
+      $('#owl-link-image').owlCarousel({
+        loop: true,
+        margin: 15,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+
+      $('#owl-geral-link').owlCarousel({
+        loop: true,
+        margin: 15,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoHeight: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          900: {
+            items: 3
+          },
+          1200: {
+            items: 4
+          }
+        }
+      })
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LB7Q8CYVG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0LB7Q8CYVG');
+  </script>
+
+<script src="/livewire/livewire.min.js?id=a60c5ee6"   data-csrf="naIS8QPDtSRkxqnpEIXRuZFZ7h2bGDkYVoSkrkQf" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+
+</html>

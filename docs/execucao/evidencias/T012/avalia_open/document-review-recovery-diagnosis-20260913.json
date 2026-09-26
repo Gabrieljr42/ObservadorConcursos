@@ -1,0 +1,88 @@
+{
+  "schema": "t012.avalia.document-review-recovery-diagnosis.v1",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only",
+  "verdict": "AVALIA_RECOVERY_ACTION",
+  "action_status": "BLOCKED_UNTIL_SUPPORTED_BATCH_RECONCILIATION",
+  "run": {
+    "run_id": "tpr-8079a5856a43",
+    "source": "avalia_open",
+    "source_id": 39,
+    "external_id": "631",
+    "owner_precondition": "same authenticated owner as the completed run"
+  },
+  "pending_to_preserved_mapping": [
+    {
+      "pending_id": "pending-url-d8974aea-a734-4741-9f8a-011b75c0953a",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "sha256": "e8853dce1e756741e850a21fe9004585b35243bc67d806d6bd91c8a3abd17f8f",
+      "byte_len": 102501,
+      "pages": 1,
+      "artifact_path": "artifacts/document-review/pending-url-d8974aea-a734-4741-9f8a-011b75c0953a.pdf",
+      "case_id": "drc-preserved-4895165fa1925ab73a872b01ad4898aa",
+      "case_membership": "first document only"
+    },
+    {
+      "pending_id": "pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38",
+      "url": "https://arquivos-site.avalia.org.br/publicacoes/83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "sha256": "8de3f149e76c2978d04765dc330fc28bff976feabe1012b6a1a600d365b437a2",
+      "byte_len": 634236,
+      "pages": 22,
+      "artifact_path": "artifacts/document-review/pending-url-83d1c417-4dca-420b-be4c-d03fbbdf4f38.pdf",
+      "case_id": null,
+      "case_membership": "preserved locally, not persisted into a review case"
+    }
+  ],
+  "state_evidence": {
+    "revision_hash": "73e5b8f68e04ab9bbaf3fc9aa43c8deb4a0e0d50f3885225840f95ab98480d36",
+    "pending_count": 2,
+    "first_case_unapproved": true,
+    "second_prepare_preserved": "409 Já existe uma revisão preservada diferente para esta pendência",
+    "normal_prepare": "409 Documento pendente não está mais disponível na lista oficial",
+    "proposal_id": null,
+    "catalogue_mutated": false
+  },
+  "code_path_finding": {
+    "current_read_api": "GET /tenderproof/continuous/document-review/tpr-8079a5856a43",
+    "current_read_behavior": "returns one latest unapproved case for the exact owner/run/revision/method",
+    "preserved_prepare_api": "POST /tenderproof/continuous/document-review/tpr-8079a5856a43/prepare-preserved",
+    "preserved_prepare_shape": "one document + one artifact + expected_page_count",
+    "why_second_cannot_merge": "prepare_preserved calls current() and rejects a different existing one-document case; draft/select-document only edit/select documents already in that case",
+    "normal_prepare_failure_reason": "it re-observes the official manifest and fails closed when the pending item is no longer listed",
+    "no_supported_merge_or_delete": true
+  },
+  "safe_official_recovery_plan": {
+    "do_not_call_now": [
+      "POST /tenderproof/continuous/document-review/tpr-8079a5856a43/prepare-preserved for the second document",
+      "POST /tenderproof/continuous/document-review/tpr-8079a5856a43/prepare",
+      "approve the partial case or retry proposal"
+    ],
+    "required_supported_action": "An authenticated, idempotent batch-preserved reconciliation route (or equivalent integrator-supported change) must create one case containing exactly both preserved documents, without arbitrary URL fetch, SQL, deletion, or approval of the partial case.",
+    "required_preconditions": [
+      "GET the current document-review state and confirm the same owner/run, revision_hash, two pending IDs and no drift",
+      "exact multiset match of pending IDs, title/kind/url, including no missing, extra, or duplicate document",
+      "each local artifact exists, is application/pdf, has the recorded URL requested/final, SHA-256, byte length and page count",
+      "artifact bytes are rehashed locally and the principal run identity/source/method remains unchanged",
+      "the complete case is deterministic and idempotent; an existing same complete payload is returned, while a different/partial payload fails closed"
+    ],
+    "then_only": [
+      "POST /tenderproof/continuous/document-review/{run_id}/cases/{complete_case_id}/approve with revision_hash and exactly two ACCEPT decisions keyed by the two recorded SHAs",
+      "regenerate a new SHA-bound reviewed run/proposal through the normal proposal flow after pending is cleared",
+      "inspect proposal before any approve/apply; no catalog fields may be promoted from the decision manifest alone"
+    ]
+  },
+  "precise_blocker": "Current backend has only singular prepare-preserved and no supported case merge/reconciliation or safe removal of drc-preserved-4895165fa1925ab73a872b01ad4898aa. Therefore no safe official command can reconcile both pending documents today; the partial case must remain unapproved and proposal retry must remain blocked.",
+  "evidence": [
+    "live-proposal-r2-receipt-20260913.json",
+    "content-receipts-r2.json",
+    "decision-manifest-r2.json",
+    "gate-document-review-r2.json",
+    "revisao-Luna-document-review-r2-20260913.json",
+    "backend/app/tenderproof/review_cases.py",
+    "backend/app/tenderproof/continuous_router.py",
+    "docs/execucao/evidencias-integracao-t007-t008-2026-09-12.md",
+    "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avalia_open/test_document_review_r2.py (2 passed)"
+  ],
+  "mutations_performed": false,
+  "network_or_api_calls": false
+}

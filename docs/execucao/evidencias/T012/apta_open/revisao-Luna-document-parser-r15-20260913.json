@@ -1,0 +1,38 @@
+{
+  "schema": "t012.apta.document-parser-r15.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "REJECT",
+  "gate": "APTA_DOCUMENT_PARSER_R15",
+  "scope": "offline read-only; no live API, pilot, Docker or deployment",
+  "confirmed": {
+    "principal": {
+      "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+      "byte_len": 362093,
+      "pages": 20,
+      "fields": ["titulo", "orgao", "edital_numero"]
+    },
+    "retification": {
+      "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786",
+      "byte_len": 76767,
+      "pages": 1,
+      "kind": "retificacao",
+      "title": "Edital de Retificação I ao Edital de Abertura de Inscrições",
+      "promoted_fields": []
+    },
+    "routing": "review_fields routes only apta_open/708 kind=retificacao to validate_retification; principal path remains strict 20-page parser"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_apta_retification_review.py backend/tests/test_t012_apta_open_selection.py backend/tests/test_t012_apta_strong_preflight.py",
+    "result": "11 passed",
+    "document_review_command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_document_review_gate.py backend/tests/test_tenderproof_review_cases.py",
+    "document_review_result": "42 passed, 1 failed",
+    "compileall": "PASS"
+  },
+  "blocker": {
+    "test": "backend/tests/test_tenderproof_review_cases.py::test_busy_processing_is_actionable_and_cannot_approve_review",
+    "observed": "expected HTTP 409 detail containing 'Processamento ocupado', got 'Documento preservado falhou na validação específica; nenhuma revisão foi aprovada.'",
+    "cause": "ProcessingError subclasses ValueError; review_cases.py prepare() catches ValueError at line 209 before ProcessingError at line 211, so concurrency_limit is misclassified as parser validation and the actionable processing error is masked.",
+    "required_fix": "Handle ProcessingError before ValueError (or exclude it from the ValueError handler), preserving 409 while retaining the specific busy-processing response; rerun the failed regression and directed APTA suite."
+  },
+  "side_effects": {"proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

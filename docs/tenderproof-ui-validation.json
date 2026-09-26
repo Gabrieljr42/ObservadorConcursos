@@ -1,0 +1,72 @@
+{
+  "observed_at": "2026-09-08T00:03:22.157835+00:00",
+  "synthetic_only": true,
+  "run_id": "tpr-bb9d13b0844f",
+  "databases": [
+    {
+      "directory": "C:\\Users\\gabri\\AppData\\Local\\Temp\\tenderproof-review-g9xffejn",
+      "users": [
+        "tenderproof@example.test"
+      ],
+      "contests": [
+        {
+          "id": 1,
+          "titulo": "Concurso Prefeitura Municipal de Exemplo MG cod 42",
+          "status": null,
+          "inscricao_inicio": "2026-03-10 00:00:00.000000",
+          "inscricao_fim": "2026-04-19 00:00:00.000000"
+        }
+      ],
+      "counts": {
+        "concurso_versions": 2,
+        "notifications": 0,
+        "tenderproof_publication_proposals": 1,
+        "tenderproof_publication_outbox": 2
+      },
+      "proposals": [
+        {
+          "state": "rolled_back",
+          "version_id": 1,
+          "rollback_version_id": 2,
+          "rollback_reason": "Ensaio sintético da interface: restaurar prazo anterior"
+        }
+      ]
+    },
+    {
+      "directory": "C:\\Users\\gabri\\AppData\\Local\\Temp\\tenderproof-review-ee4bp4po",
+      "users": [
+        "tenderproof@example.test"
+      ],
+      "contests": [
+        {
+          "id": 1,
+          "titulo": "Concurso Prefeitura Municipal de Exemplo MG cod 42",
+          "status": "arquivado",
+          "inscricao_inicio": null,
+          "inscricao_fim": null
+        }
+      ],
+      "counts": {
+        "concurso_versions": 2,
+        "notifications": 0,
+        "tenderproof_publication_proposals": 1,
+        "tenderproof_publication_outbox": 2
+      },
+      "proposals": [
+        {
+          "state": "rolled_back",
+          "version_id": 1,
+          "rollback_version_id": 2,
+          "rollback_reason": "Ensaio sintético: reverter criação preservando histórico"
+        }
+      ]
+    }
+  ],
+  "production_changed": false,
+  "cleanup": {
+    "browser_tab_closed": true,
+    "servers_stopped": true,
+    "temporary_databases_removed": true,
+    "listening_ports_after": []
+  }
+}

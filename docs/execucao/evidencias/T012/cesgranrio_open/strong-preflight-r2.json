@@ -1,0 +1,41 @@
+{
+  "schema": "t012.cesgranrio.strong-preflight-r2.v1",
+  "status": "PARSER_MODULE_R2_READY",
+  "scope": "offline real bytes; ephemeral SQLite only; no pilot/API/DB persistence",
+  "source": "cesgranrio_open",
+  "source_id": 12,
+  "external_id": "27",
+  "run_id": "tpr-143c2fdac179",
+  "artifact": {
+    "sha256": "e053d5c0f3f81b0fa93eb47912fe34398c7dd7d4a9be759ad43c96054d7ef39f",
+    "byte_len": 1166736,
+    "preserved_pages_receipt": 81,
+    "local_text_pages": 60
+  },
+  "fresh_checks": {
+    "orgao_generic": "UNKNOWN",
+    "orgao_pinned_parser": "SUPPORTED: Secretaria de Estado de Meio Ambiente do Estado de Mato Grosso - SEMA/MT",
+    "edital_numero_generic": "SUPPORTED: 01/2026",
+    "edital_numero_pinned_parser": "SUPPORTED: 01/2026",
+    "identity_ids": "EMPTY_IN_PDF; strong binding falls back to exact orgao+edital_numero baseline match",
+    "source_external_sha_binding": "PASS"
+  },
+  "revalidate": {
+    "attempted": true,
+    "result": "FAIL_CLOSED",
+    "http_status": 422,
+    "detail": "TenderProof: processamento documental falhou ou excedeu limites",
+    "root_cause": "global extract_pages_isolated limit=60 rejects this preserved document before identity revalidation; historical receipt reports 81 physical pages",
+    "canonical_concurso_id": null,
+    "proposal": false,
+    "apply": false
+  },
+  "parser": {
+    "path": "cesgranrio27_parser_r2.py",
+    "pins": ["source", "external_id", "artifact SHA-256", "byte length", "SEMA/MT masthead", "EDITAL 1 - SEMA/MT"],
+    "fail_closed_tests": ["wrong source", "wrong external_id", "wrong SHA", "wrong byte length"],
+    "shared_fields_modified": false
+  },
+  "tests": {"command": "pytest docs/execucao/evidencias/T012/cesgranrio_open/test_strong_preflight_r2.py", "result": "2 passed"},
+  "next_gate": "Resolve bounded page-capacity policy for this exact SHA or obtain an already approved page-limit exception; then rerun _revalidate with pinned parser output and fresh orgao+edital binding."
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "t012.publiconsult-strong-preflight-r5.v1",
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "selection_guard": "prepare_for_revalidate filters source+external_id and requires exactly one match plus selected_candidate_id; it never relies on candidates[0]",
+  "artifact_guards": ["artifact exists", "SHA exact", "byte length exact", "URL contains /681/ and ends .pdf"],
+  "dispatch_test": {"result": "passed", "test_file": "test_publiconsult_parser_r3.py", "pytest": "4 passed", "path": "real publication._revalidate with controlled source-field dispatch", "strong_binding": true, "eligible": ["orgao", "edital_numero"], "baseline_preserved_blocked": ["titulo", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"], "side_effects": "no TenderProofRun persisted; SQLite/artifact store ephemeral"},
+  "warnings": ["one expected Pydantic schema-shadow warning; no test failure"],
+  "handoff": "PUBLICONSULT_PARSER_R5_READY"
+}

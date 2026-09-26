@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-09-08T14:23:56.967647+00:00",
+  "scope": "Read-only observed URLs; TLS verified; redirects recorded, not followed; max2MiB25s; no PDFs or browser; not adapter certification.",
+  "pages": [
+    {
+      "source": "elo_open",
+      "url": "https://api.gestaoselecoes.com.br/api/editais?page=0&size=9&situacao=PUBLICADO,INSCRICAO_ABERTA,ANDAMENTO&order=DESC",
+      "kind": "api-listing",
+      "observed_at": "2026-09-08T14:23:55.635757+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 6139,
+      "sha256": "d5409afa6f39ac32acc0a15602f9376866ef6e55566305e921f3d135a909a013",
+      "file": "elo_open-api-listing.html",
+      "encoding": "utf-8",
+      "title": null,
+      "links": [],
+      "scripts": []
+    }
+  ]
+}

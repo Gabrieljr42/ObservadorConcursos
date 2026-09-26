@@ -1,0 +1,19 @@
+{
+  "schema":"t012.publiconsult.document-review-live-r5-receipt.v1",
+  "timestamp":"2026-09-13T14:31:00Z",
+  "status":"BLOCKED_MANIFEST_IDENTITY_409",
+  "source_id":56,
+  "source":"publiconsult_open",
+  "external_id":"681",
+  "owner_user_id":1,
+  "run_id":"tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "get_before":{"current":null,"pending":true,"pending_count":1,"candidate_key":"681"},
+  "artifact_store":{"operation":"save_artifact_file","artifact_id":"publiconsult-open-taf-681-r2","storage_path":"publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf","sha256":"d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7","byte_len":341466},
+  "prepare_payload":{"title":"Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II","kind":"outro","semantic_kind":"convocacao_taf","expected_page_count":6},
+  "prepare":{"http":409,"body":{"detail":"Documento não corresponde exatamente ao manifesto pendente"},"retry":false},
+  "proposal":false,
+  "approve":false,
+  "apply":false,
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"reconcile exact manifest URL identity (pending signed URL includes raw=1) before any new prepare"
+}

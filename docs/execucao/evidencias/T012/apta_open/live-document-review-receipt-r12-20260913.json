@@ -1,0 +1,17 @@
+{
+  "schema": "t012.apta.live-document-review-receipt.v1",
+  "recorded_at": "2026-09-13T13:16:18.8688379-03:00",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "owner_user_id": 1,
+  "preflight": {"health": 200, "login": 200, "checkpoint_contests": 34, "catalogue_match": []},
+  "artifact": {"artifact_id": "art-apta-ret2-708", "sha256": "ee8de6a5031ec0de0f8ed1a6b77d85bbceac44e82b545b04896bc08cf1d48786", "byte_len": 76767, "pages": 1, "content_type": "application/pdf", "staged_formally": true},
+  "pending_before": {"pending": true, "manifest_title": "Edital de Retificação I ao Edital de Abertura de Inscrições", "url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf"},
+  "request": {"title": "1ª Retificação do Edital do Concurso Público nº 01/2026", "kind": "retificacao", "expected_page_count": 1},
+  "prepare": {"status_code": 409, "body": {"detail": "Documento não corresponde exatamente ao manifesto pendente"}},
+  "result": "APTA_R12_BLOCKED_MANIFEST_TITLE_MISMATCH",
+  "effects": {"document_approved": false, "proposal_created": false, "canonical_mutation": false, "retry": false, "approve": false, "apply": false},
+  "stop_rule": "409; no retry"
+}

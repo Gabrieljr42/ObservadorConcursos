@@ -1,0 +1,80 @@
+{
+  "validated_at": "2026-09-08T15:49:12.509943+00:00",
+  "scope": "offline process crash/recovery; original captures and PDFs; no source availability claim",
+  "original_read_only": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replayfapese",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killfapese",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "controlled_fixture": "Only new isolated crashed job lease_until set to0; real os._exit73 after run commit; max_attempts1 final-attempt recovery.",
+  "sources": [
+    {
+      "source": "fapese_selection",
+      "passed": true,
+      "commands": [
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replayfapese",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killfapese\\fapese_selection",
+          "--source",
+          "fapese_selection",
+          "--phase",
+          "crash"
+        ],
+        [
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\scripts\\tenderproof_batch30_recovery_validation.py",
+          "--original",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replayfapese",
+          "--root",
+          "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99killfapese\\fapese_selection",
+          "--source",
+          "fapese_selection",
+          "--phase",
+          "recover"
+        ]
+      ],
+      "crash_exitcode": 73,
+      "recover_exitcode": 0,
+      "crash": {
+        "pid": 41900,
+        "run_id": "tp-tcj-a7919e94b61d59c98da1df962726e9bc-1",
+        "job_id": "tcj-a7919e94b61d59c98da1df962726e9bc",
+        "cycle": "tcc-b69b7d8a92e3474ca2405f8081c7b71b",
+        "fence": 1,
+        "attempt": 1,
+        "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+        "point": "completed run persisted; queue.complete_detail not called; observations=0"
+      },
+      "before": [
+        "running",
+        1,
+        1
+      ],
+      "after": [
+        "succeeded",
+        1,
+        2
+      ],
+      "recovered": {
+        "pid": 48208,
+        "result": {
+          "status": "succeeded",
+          "observation_id": "tco-208a65d49a0d16ddea7166d8f05b9bee969380da2307b88c07d06dea4596e427",
+          "recovered": true
+        },
+        "observations": 1,
+        "repeat_result": {
+          "status": "not_claimed"
+        },
+        "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+        "driver_calls": 0,
+        "downloads": 0
+      }
+    }
+  ],
+  "passed": true
+}

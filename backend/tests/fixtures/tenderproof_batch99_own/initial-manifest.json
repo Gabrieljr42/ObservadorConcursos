@@ -1,0 +1,1578 @@
+{
+  "observed_at": "2026-09-08T14:49:34.473031+00:00",
+  "scope": "Observed public routes; TLS verified; redirects recorded only; 2MiB25s per request; no browser or PDF acquisition; not certification.",
+  "pages": [
+    {
+      "source": "verbena_selection",
+      "url": "https://institutoverbena.ufg.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:30.546493+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 102839,
+      "sha256": "fa7aa569a37b606673074eca772f558bc42f0679bcb23065180343d52dde3ac8",
+      "file": "verbena_selection-listing0.html",
+      "encoding": "utf-8",
+      "title": "Instituto Verbena",
+      "links": [
+        {
+          "url": "http://portais.ufg.br/login?back_url=https%3A%2F%2Finstitutoverbena.ufg.br%2F",
+          "title": ""
+        },
+        {
+          "url": "http://brasil.gov.br",
+          "title": "Portal do Governo Brasileiro"
+        },
+        {
+          "url": "http://epwg.governoeletronico.gov.br/barra/atualize.html",
+          "title": "Atualize sua Barra de Governo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br#content",
+          "title": "Ir para o conteúdo"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br#component_47382",
+          "title": "Ir para o menu"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br#search",
+          "title": "Ir para busca"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/?atr=pt-BR&locale=pt-BR",
+          "title": "Português (Brasil)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43639-apresentacao",
+          "title": "Apresentação"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43635-estrutura-organizacional",
+          "title": "Diretoria"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/43637-equipe",
+          "title": "Equipe"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42954-nossos-servicos",
+          "title": "Nossos serviços"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=clientes",
+          "title": "Instituições Atendidas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/52430-biblioteca-virtual-iv-ufg",
+          "title": "Acervo Documental IV/UFG"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/sistema/cadastro_colaborador/",
+          "title": "Seja colaborador(a)"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-novo",
+          "title": "Novos Editais"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-inscricao",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-concurso-andamento",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/login",
+          "title": "Portal do(a) candidato(a)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/sistema/arquivos/editais/VESTIBULAR_UFG_2027_EDITAL_.pdf",
+          "title": "Edital de Abertura"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Resultados"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/concursos/inscricoes-abertas",
+          "title": "Realizar Inscrição"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/recurso/create",
+          "title": "Protocolar Recurso"
+        },
+        {
+          "url": "https://sisu.ufg.br/",
+          "title": "Sisu"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "Vestibular UFG 2027"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/SiSU+/",
+          "title": "SiSU+ / UFG 2026"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=ProcessosSeletivos",
+          "title": "Processos Seletivos e Outros"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=card-ProcessosSeletivos-inscricoes",
+          "title": "Inscrições abertas"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/44300-conheca-nossos-cursos-de-formacao-e-qualificacao",
+          "title": "Conheça nossos cursos"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/iv/projeto-fatos-e-fotos/",
+          "title": "Fatos e Fotos"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2027/ps-intercultural/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-pires-do-rio/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-minacu/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/ps-sebrae-trainee/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-camara-mutunopolis/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-carmo-do-rio-verde/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/concurso-prefeitura-sao-miguel-do-araguaia/",
+          "title": ""
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.updated_at&tags=ProcessosSeletivos",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.created_at",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204179-instituto-verbena-ufg-abre-inscricoes-para-o-processo-seletivo-educacao-intercultural-2027",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204179-instituto-verbena-ufg-abre-inscricoes-para-o-processo-seletivo-educacao-intercultural-2027",
+          "title": "Instituto Verbena/UFG abre inscrições para o Processo Seletivo Educação Intercultural – 2027"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204179-instituto-verbena-ufg-abre-inscricoes-para-o-processo-seletivo-educacao-intercultural-2027",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio",
+          "title": "Instituto Verbena/UFG publica edital do Concurso Público da Câmara Municipal de Pires do Rio"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/204116-instituto-verbena-ufg-publica-edital-do-concurso-publico-da-camara-municipal-de-pires-do-rio",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203718-processo-seletivo-para-o-programa-trainee-sebrae-goias-oferece-seis-vagas-com-remuneracao-de-r-5-521-8",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203718-processo-seletivo-para-o-programa-trainee-sebrae-goias-oferece-seis-vagas-com-remuneracao-de-r-5-521-8",
+          "title": "Processo Seletivo para o Programa Trainee Sebrae Goiás oferece seis vagas com remuneração de R$ 5.521,8"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203718-processo-seletivo-para-o-programa-trainee-sebrae-goias-oferece-seis-vagas-com-remuneracao-de-r-5-521-8",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203903-inscricoes-abertas-para-o-processo-seletivo-do-programa-trainee-sebrae-goias",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203903-inscricoes-abertas-para-o-processo-seletivo-do-programa-trainee-sebrae-goias",
+          "title": "Inscrições abertas para o Processo Seletivo do Programa Trainee Sebrae Goiás"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203903-inscricoes-abertas-para-o-processo-seletivo-do-programa-trainee-sebrae-goias",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203998-instituto-verbena-ufg-publica-edital-do-processo-seletivo-educacao-intercultural-2027",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203998-instituto-verbena-ufg-publica-edital-do-processo-seletivo-educacao-intercultural-2027",
+          "title": "Instituto Verbena/UFG publica edital do Processo Seletivo Educação Intercultural 2027"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203998-instituto-verbena-ufg-publica-edital-do-processo-seletivo-educacao-intercultural-2027",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203997-aula-inaugural-marca-inicio-do-curso-de-formacao-do-concurso-da-guarda-municipal-de-valparaiso-de-goias",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203997-aula-inaugural-marca-inicio-do-curso-de-formacao-do-concurso-da-guarda-municipal-de-valparaiso-de-goias",
+          "title": "Aula inaugural marca início do curso de formação do Concurso da Guarda Municipal de Valparaíso de Goiás"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203997-aula-inaugural-marca-inicio-do-curso-de-formacao-do-concurso-da-guarda-municipal-de-valparaiso-de-goias",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203922-o-instituto-verbena-da-universidade-federal-de-goias-iv-ufg-informa-que-estao-abertas-as-inscricoes-para-o-cronograma-b-do-concurso-publico-de-minacu",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203922-o-instituto-verbena-da-universidade-federal-de-goias-iv-ufg-informa-que-estao-abertas-as-inscricoes-para-o-cronograma-b-do-concurso-publico-de-minacu",
+          "title": "O Instituto Verbena da Universidade Federal de Goiás (IV/UFG) informa que estão abertas as inscrições para o Cronograma B do Concurso Público de Minaçu."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203922-o-instituto-verbena-da-universidade-federal-de-goias-iv-ufg-informa-que-estao-abertas-as-inscricoes-para-o-cronograma-b-do-concurso-publico-de-minacu",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203878-atencao-local-de-prova-do-cronograma-a-do-concurso-publico-de-minacu-esta-disponivel",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203878-atencao-local-de-prova-do-cronograma-a-do-concurso-publico-de-minacu-esta-disponivel",
+          "title": "Atenção! Local de prova do Cronograma A do Concurso Público de Minaçu está disponível"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/n/203878-atencao-local-de-prova-do-cronograma-a-do-concurso-publico-de-minacu-esta-disponivel",
+          "title": "Leia mais..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?id=1344",
+          "title": "1"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=2&id=1344",
+          "title": "2"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=3&id=1344",
+          "title": "3"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=4&id=1344",
+          "title": "4"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=5&id=1344",
+          "title": "5"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br",
+          "title": "..."
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=2&id=1344",
+          "title": "Próxima"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/components/94844?front_news94844=112&id=1344",
+          "title": "Última"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/news?direction=desc&sort=journal_news.created_at",
+          "title": "Ver todas"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/portal/",
+          "title": "PORTAL DO(A) CANDIDATO(A)"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/colaborador/",
+          "title": "CADASTRO DE COLABORADORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/cms/home",
+          "title": "CONCURSOS E SELEÇÕES ANTERIORES"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/2026/vestibular-ufg/",
+          "title": "VESTIBULAR UFG"
+        },
+        {
+          "url": "https://institutoverbena.ufg.br/p/42685-duvidas-frequentes",
+          "title": "DÚVIDAS FREQUENTES"
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCUajqRRM2xFuOz-k91fEW-A",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/institutoverbenaufg/",
+          "title": ""
+        },
+        {
+          "url": "https://www.flickr.com/people/197871483@N05/",
+          "title": ""
+        },
+        {
+          "url": "https://goo.gl/maps/UTuBoPa4DsSQ1DjZ6",
+          "title": "Como chegar"
+        },
+        {
+          "url": "https://sistemas.institutoverbena.ufg.br/intranet/login",
+          "title": ""
+        },
+        {
+          "url": "https://sic.ufg.br",
+          "title": ""
+        },
+        {
+          "url": "https://institutoverbena.ufg.br#barra-brasil",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2",
+        "https://www.googletagmanager.com/gtag/js?id=G-ZM2RZ9ZXMJ",
+        "https://files.cercomp.ufg.br/weby/assets/base-7d1e002559959ecfa80acc89fff49e8acf6b79e7d3376ed8cc1f1e64be62d3d5.js",
+        "https://files.cercomp.ufg.br/weby/assets/level2-dd37a8e3f53914297921fc457ec7015c72c48c5bfb9972751d2f1f24b06c45bf.js",
+        "https://files.cercomp.ufg.br/weby/assets/banner_list-830cbfdc1513af120ec85417e8eb29b5a6d9d6f26509fd723dc1a112d408a151.js",
+        "https://files.cercomp.ufg.br/weby/assets/banner_list_jquery.flexslider-1b7e54fd550331abd76ea622d670613e2ba3e76765ec89d4fe9fe85a9d34801e.js",
+        "https://files.cercomp.ufg.br/weby/assets/front_news-2c75c22cf8963cd54004ae42efc0ded430722f245f6c02a4621a3e35e6bee500.js",
+        "https://barra.brasil.gov.br/barra.js",
+        "https://files.cercomp.ufg.br/weby/assets/show-22e5db160cd54185f1184b68589f7e1591f7c7c6256041e08d936e13b375a460.js",
+        "https://files.cercomp.ufg.br/weby/assets/changeContrast-6eb2f5ffd73aa3aed2f2b026fd3cd2e8b6c6b4c72094d2fa54b976bcdc543020.js",
+        "https://files.cercomp.ufg.br/weby/assets/auto_translate-ea6ddb17d6b45ab26d74097be79d6f5cbea4197434fc7852bd84428ef18ff7d3.js",
+        "https://files.cercomp.ufg.br/weby/assets/search_action-f5db909a939074bf3312b935d3028ca99704739dc4c5aa967fcc268c83228f3a.js"
+      ]
+    },
+    {
+      "source": "nossorumo_open",
+      "url": "https://nossorumo.org.br/",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:30.547502+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 487474,
+      "sha256": "d2c8c75a0ae960e3d0b0749f3fe66c4b5a8ef32cc09aa15fe8768926f4404bc2",
+      "file": "nossorumo_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Nosso Rumo | Início",
+      "links": [
+        {
+          "url": "https://nossorumo.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/Painel",
+          "title": "Minha Área"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/#emandamento",
+          "title": "Certames em Andamento"
+        },
+        {
+          "url": "https://nossorumo.org.br/#proximos",
+          "title": "Próximos Certames"
+        },
+        {
+          "url": "https://nossorumo.org.br/#finalizados",
+          "title": "Certames Finalizados"
+        },
+        {
+          "url": "https://nossorumo.org.br/Cargo",
+          "title": "Tabela de Cargos"
+        },
+        {
+          "url": "https://nossorumo.org.br/#historia",
+          "title": "História"
+        },
+        {
+          "url": "https://nossorumo.org.br/#mvv",
+          "title": "Missão, Visão, Valores"
+        },
+        {
+          "url": "https://nossorumo.org.br/#escolar",
+          "title": "Gestão Escolar Digital"
+        },
+        {
+          "url": "https://nossorumo.org.br/#sustentabilidade",
+          "title": "Sustentabilidade"
+        },
+        {
+          "url": "https://nossorumo.org.br/#portifolio",
+          "title": "Portifólio"
+        },
+        {
+          "url": "https://nossorumo.org.br/#validar",
+          "title": "Validar Certificado"
+        },
+        {
+          "url": "https://nossorumo.org.br/Contato",
+          "title": "Contato"
+        },
+        {
+          "url": "https://nossorumo.org.br/LGPD",
+          "title": "LGPD"
+        },
+        {
+          "url": "https://nossorumo.org.br/Duvida",
+          "title": "Dúvidas"
+        },
+        {
+          "url": "https://nossorumo.org.br/Painel",
+          "title": "Minha Área"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA4",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA3",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA2",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NTky",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NTg3",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosselemandamento",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosselemandamento",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA4",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA3",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NjA2",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NTky",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/Inscricao/ValidarCpf/NTg3",
+          "title": "Inscreva-se"
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosselfinalizados",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosselfinalizados",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodos",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodos",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodos2",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodos2",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodosmobile",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#carrosseltodosmobile",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/#topnav",
+          "title": "Início"
+        },
+        {
+          "url": "https://nossorumo.org.br/#emandamento",
+          "title": "Certames em Andamento"
+        },
+        {
+          "url": "https://nossorumo.org.br/#proximos",
+          "title": "Próximos Certames"
+        },
+        {
+          "url": "https://nossorumo.org.br/#finalizados",
+          "title": "Certames Finalizados"
+        },
+        {
+          "url": "https://nossorumo.org.br/Cargo",
+          "title": "Tabela de Cargos"
+        },
+        {
+          "url": "https://nossorumo.org.br/#validar",
+          "title": "Validador de Certificado"
+        },
+        {
+          "url": "https://nossorumo.org.br/#historia",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://nossorumo.org.br/#historia",
+          "title": "História"
+        },
+        {
+          "url": "https://nossorumo.org.br/#mvv",
+          "title": "Missão, Visão e Valores"
+        },
+        {
+          "url": "https://nossorumo.org.br/#escolar",
+          "title": "Social"
+        },
+        {
+          "url": "https://nossorumo.org.br/#escolar",
+          "title": "Gestão Escolar Digital"
+        },
+        {
+          "url": "https://nossorumo.org.br/#sustentabilidade",
+          "title": "Sustentabilidade"
+        },
+        {
+          "url": "https://nossorumo.org.br/#portifolio",
+          "title": "Portifólio"
+        },
+        {
+          "url": "https://nossorumo.org.br/Duvida",
+          "title": "Dúvidas"
+        },
+        {
+          "url": "https://nossorumo.org.br/Painel",
+          "title": "Minha Área"
+        },
+        {
+          "url": "https://nossorumo.org.br/Contato",
+          "title": "Contato"
+        },
+        {
+          "url": "https://nossorumo.org.br/LGPD",
+          "title": "LGPD"
+        },
+        {
+          "url": "https://www.facebook.com/nossorumo/",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/nossorumoinstituto/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/nossorumo/",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/nossorumoinstituto/",
+          "title": ""
+        },
+        {
+          "url": "https://nossorumo.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-VLE4XJGFJ2",
+        "https://nossorumo.org.br/js/jquery-3.7.1.min.js",
+        "https://nossorumo.org.br/libs/bootstrap/js/bootstrap.bundle.min.js",
+        "https://nossorumo.org.br/libs/mdb5/js/mdb.umd.min.js",
+        "https://nossorumo.org.br/js/jquery.easing.min.js",
+        "https://nossorumo.org.br/js/jquery-confirm.min.js",
+        "https://nossorumo.org.br/js/toastr.min.js",
+        "https://nossorumo.org.br/js/plugins.js?v=oL7jpKjbVwmpLJ-vj9OSSOc-vc_bChtwnRRqq3OJRCY",
+        "https://nossorumo.org.br/js/counter.int.js",
+        "https://nossorumo.org.br/js/app.min.js?v=JnLcYL2fLEV6lXk09aQKqoefm0WAp5A8hCjVcYWwcv4",
+        "https://nossorumo.org.br/js/smooth-scroll.js",
+        "https://nossorumo.org.br/js/jquery.mask.min.js",
+        "https://nossorumo.org.br/js/moment-with-locales.min.js",
+        "https://nossorumo.org.br/js/jspdf.min.js",
+        "https://nossorumo.org.br/js/cookieconsent.min.js",
+        "https://acrobatservices.adobe.com/view-sdk/viewer.js",
+        "https://nossorumo.org.br/js/site.min.js?v=PIHz2RsX16gXi1ZVskxhTdZF7oXBZHfj9LrQFlc7Gzo",
+        "https://nossorumo.org.br/Views/Shared/_Layout.cshtml.min.js?v=L5r6UjJK2vMIA1P9N7nsKwNWLodfxEUUV_auC5IotYE",
+        "https://nossorumo.org.br/Views/Shared/_HeaderPartial.cshtml.min.js?v=euc3HqrC2Yteb_CfH9zMtqBFqW2WJi33LfXvBSA1MKw",
+        "https://nossorumo.org.br/Views/Login/Index.cshtml.min.js?v=oye3SUk16kbzkciWH4Id4TRqei_O7WvvVKmVWVuJTqk",
+        "https://nossorumo.org.br/Views/Modais/_SobreModal.cshtml.js?v=oMsEnDVWJYacHYDEpWddBI_760bDLXMrIzu5PJz7bmA",
+        "https://nossorumo.org.br/Views/Modais/_ImpugnacaoModal.cshtml.min.js?v=xO4261CmDGY4vdnlsKrqSVOqMLqwrUjmtXuzygWPHIU",
+        "https://nossorumo.org.br/Views/Modais/_LembrarCertameModal.cshtml.js?v=DDRJaq5wtbFaAwMas7b2QNan_zm-cw1OCoObYpawguk",
+        "https://nossorumo.org.br/Views/Modais/_PublicacoesModal.cshtml.min.js?v=8h3C80bjrLrOBibYtrpu9Icn51zZwM7wUPlYNHZuRZo",
+        "https://nossorumo.org.br/Views/Modais/_ComunicadoModal.cshtml.js?v=i9o8VdbbAsjN3H7KuXHmnxae8vvCT1VZZOG5_CfNJT4"
+      ]
+    },
+    {
+      "source": "klc_open",
+      "url": "https://www.klcconcursos.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:30.547502+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 18782,
+      "sha256": "ae3b125bd17f31e1f0d17376abfd4d279951861af66929471b14a87438324837",
+      "file": "klc_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "KLC Concursos e Consultoria em Gestão Pública",
+      "links": [
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Acesso ao Menu do Candidato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/index.php",
+          "title": ""
+        },
+        {
+          "url": "https://www.klcconcursos.com.br/visao/home.php",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=nos",
+          "title": "Nossa Empresa"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Inscrições"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=rec",
+          "title": "Recursos"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=ctt",
+          "title": "Contato"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=ES",
+          "title": "ES"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=GO",
+          "title": "GO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MG",
+          "title": "MG"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MS",
+          "title": "MS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=MT",
+          "title": "MT"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=PR",
+          "title": "PR"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RJ",
+          "title": "RJ"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=RS",
+          "title": "RS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SC",
+          "title": "SC"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=con&s=&uf=SP",
+          "title": "SP"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=cpf",
+          "title": "Consulte sua Inscrição"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=1",
+          "title": "CONCURSOS ABERTOS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=2",
+          "title": "CONCURSOS EM ANDAMENTO"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=0",
+          "title": "CONCURSOS FUTUROS"
+        },
+        {
+          "url": "https://www.klcconcursos.com.br?pag=&sub=3",
+          "title": "CONCURSOS ENCERRADOS"
+        }
+      ],
+      "scripts": [
+        "https://www.klcconcursos.com.br/js/estado_cidade.js",
+        "https://www.klcconcursos.com.br/js/javascript.js",
+        "https://www.google.com/recaptcha/api.js?hl=pt-BR",
+        "https://code.jquery.com/jquery-2.0.0.js",
+        "https://malsup.github.io/jquery.cycle.all.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "oppus_open",
+      "url": "https://www.oppusconcursos.com.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:30.548496+00:00",
+      "status": 301,
+      "location": "https://oppusconcursos.com.br/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file": "oppus_open-listing0.html",
+      "encoding": null,
+      "title": null,
+      "links": [],
+      "scripts": []
+    },
+    {
+      "source": "legatus_open",
+      "url": "https://www.legatus.org.br",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:31.388789+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 57197,
+      "sha256": "ddd0624f4678b783f607c8ed701aedfbd6392cc4321b36c9f84d06d4934466c8",
+      "file": "legatus_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Instituto Legatus",
+      "links": [
+        {
+          "url": "https://www.legatus.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/",
+          "title": "PÁGINA INICIAL (current)"
+        },
+        {
+          "url": "https://www.legatus.org.br",
+          "title": "INSTITUCIONAL"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/sobre-o-instituto-legatus/",
+          "title": "Sobre\n            Nós"
+        },
+        {
+          "url": "https://www.legatus.org.br",
+          "title": "O que fazemos"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/concursos-e-processos-seletivos/",
+          "title": "Concursos\n                e Processos seletivos"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/capacitacao/",
+          "title": "Capacitação"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/pesquisas/",
+          "title": "Pesquisas"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/compliance/",
+          "title": "Compliance"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/diretiva-de-privacidade/",
+          "title": "Diretiva de\n            Privacidade"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/trabalhe-conosco/",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br",
+          "title": "CONCURSO"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/abertos/",
+          "title": "Inscrições Abertas"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/proximos-concursos/",
+          "title": "Próximos"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/andamento/",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/homologados/",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/",
+          "title": "NOTÍCIAS"
+        },
+        {
+          "url": "https://www.legatus.org.br/perguntas-frequentes/",
+          "title": "PERGUNTAS FREQUENTES"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "ATENDIMENTO"
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "title": "Veja Mais"
+        },
+        {
+          "url": "https://www.legatus.org.br#pills-emaberto",
+          "title": "Inscrições Abertas"
+        },
+        {
+          "url": "https://www.legatus.org.br#pills-emandamento",
+          "title": "Em Andamento"
+        },
+        {
+          "url": "https://www.legatus.org.br#pills-proximos",
+          "title": "Próximos"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/homologados/",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/abertos/",
+          "title": "Veja mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/159/municipio-de-caxingo-pi/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/157/municipio-de-sao-mateus-do-maranhao-ma/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/154/municipio-de-hugo-napoleao-pi/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/151/municipio-de-croata-ce/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/147/municipio-de-caxias-ma-guarda-municipal/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/146/municipio-de-turilandia-ma/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/130/municipio-de-caxias-ma/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/129/municipio-de-codo-ma/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/128/municipio-de-codo-ma-procurador/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/127/municipio-de-codo-ma-guarda-municipal/",
+          "title": "Ver mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/andamento/",
+          "title": "Veja mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/concursos/proximos-concursos/",
+          "title": "Veja mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/sobre-o-instituto-legatus/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/perguntas-frequentes/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": ""
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/98/tanque-do-piaui-abre-concurso-com-50-vagas-e-cadastro-reserva/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/97/prefeitura-de-sao-pedro-do-piaui-abre-concurso-com-104-vagas-e-cadastro-reserva/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/96/sao-mateus-do-maranhao-abre-selecao-para-acs-e-ace/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/95/prefeitura-de-hugo-napoleao-reabre-inscricoes-para-concurso-publico-na-area-da-educacao/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/94/domingos-mourao-pi-abre-inscricoes-de-concurso-com-57-vagas-e-cadastro-reserva/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/93/caxias-ma-tem-concursos-para-provimento-de-cerca-de-1-300-vagas/",
+          "title": "Leia mais"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/",
+          "title": "Veja mais"
+        },
+        {
+          "url": "https://www.institutolegatus.com.br/candidatos/login/",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://www.legatus.org.br/cdn-cgi/l/email-protection",
+          "title": "[email protected]"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/sobre-o-instituto-legatus/",
+          "title": "Sobre Nós"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/concursos-e-processos-seletivos/",
+          "title": "Concursos e Seleções"
+        },
+        {
+          "url": "https://www.legatus.org.br/candidatos/login/",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Atendimento"
+        },
+        {
+          "url": "https://www.legatus.org.br/perguntas-frequentes/",
+          "title": "Perguntas Frequentes"
+        },
+        {
+          "url": "https://www.legatus.org.br/institucional/trabalhe-conosco/",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/atendimento/",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://www.legatus.org.br/noticias/",
+          "title": "Notícias"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-65QGBHL283",
+        "https://www.legatus.org.br/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "https://static.zdassets.com/ekr/snippet.js?key=32f2a096-c08b-433c-a045-3bd7cfb403ed",
+        "https://www.legatus.org.br/front/assets/js/vendor.js?id=58d9a3c8980722cb20e60fd0371ac09b",
+        "https://www.legatus.org.br/front/assets/js/front.js?id=fd79e2ca1fe4401c361f376f3816af49",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "fepese_open",
+      "url": "https://fepese.org.br/concursos/",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:31.753350+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 56295,
+      "sha256": "f66b69a77f1f054a30d4d5a94161686574b1a5bbac75d32c44cb2f813968858d",
+      "file": "fepese_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "Concursos | Fundação de Estudos e Pesquisas Socioeconômicos",
+      "links": [
+        {
+          "url": "https://api.whatsapp.com/send/?phone=5548991422736",
+          "title": "clique aqui"
+        },
+        {
+          "url": "https://api.whatsapp.com/send/?phone=5548991422736&text&type=phone_number&app_absent=0",
+          "title": "clique aqui"
+        },
+        {
+          "url": "https://fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.linkedin.com/company/fepese/",
+          "title": ""
+        },
+        {
+          "url": "https://fepese.org.br/",
+          "title": "Página Principal"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://fepese.org.br/vagas/",
+          "title": "Vagas"
+        },
+        {
+          "url": "https://fepese.org.br/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://fepese.org.br/projetos/",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://fepese.org.br/capacitacao/",
+          "title": "Capacitação"
+        },
+        {
+          "url": "https://fepese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fepese.org.br/contato-2/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://fepese.org.br/orcamento/",
+          "title": "Orçamento"
+        },
+        {
+          "url": "https://transparencia.fepese.org.br",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.linkedin.com/company/fepese/",
+          "title": ""
+        },
+        {
+          "url": "https://fepese.org.br/orcamento",
+          "title": "Orçamento"
+        },
+        {
+          "url": "https://fepese.org.br/vagas/",
+          "title": "Vagas"
+        },
+        {
+          "url": "https://fepese.org.br/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://fepese.org.br/projetos/",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://fepese.org.br/capacitacao/",
+          "title": "Capacitação"
+        },
+        {
+          "url": "https://fepese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fepese.org.br/contato-2/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://fepese.org.br/agenda/",
+          "title": "Agenda"
+        },
+        {
+          "url": "https://fepese.org.br",
+          "title": "Homepage"
+        },
+        {
+          "url": "https://fepese.org.br/concursos/",
+          "title": "Solicite seu orçamento"
+        },
+        {
+          "url": "https://fepese.org.br/concursos/#listaconcursos",
+          "title": "Acesse os concursos"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br",
+          "title": "Processo Seletivo – Magistério – Edital 005/2026/SME"
+        },
+        {
+          "url": "https://2026pseducasj.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br",
+          "title": "Processo Seletivo – Edital 001/2026"
+        },
+        {
+          "url": "https://2026seletivocomcap.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br",
+          "title": "Concurso Público – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpcelesc.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026pschapecoprof.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026pschapecoprof.fepese.org.br",
+          "title": "Processo Seletivo – Professor Ano Letivo 2027 – Edital 006/2026"
+        },
+        {
+          "url": "https://2026pschapecoprof.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpjuritajai.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpjuritajai.fepese.org.br",
+          "title": "Concurso Público – Procurador do Município e Assistente Jurídico – Edital 003/2026"
+        },
+        {
+          "url": "https://2026cpjuritajai.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026gmitajai.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026gmitajai.fepese.org.br",
+          "title": "Concurso Público – Guarda Municipal – Edital 002/2026"
+        },
+        {
+          "url": "https://2026gmitajai.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpadmitajai.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpadmitajai.fepese.org.br",
+          "title": "Concurso Público – Administração – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpadmitajai.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026psconcordiasaude.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026psconcordiasaude.fepese.org.br/",
+          "title": "Processo Seletivo – Saúde – Edital 003/2026"
+        },
+        {
+          "url": "https://2026psconcordiasaude.fepese.org.br/",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpcisgranfpolis.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpcisgranfpolis.fepese.org.br",
+          "title": "Concurso Público – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpcisgranfpolis.fepese.org.br/",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpbrusque.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpbrusque.fepese.org.br",
+          "title": "Concurso Público – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpbrusque.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpsapesc.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpsapesc.fepese.org.br",
+          "title": "Concurso Público – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpsapesc.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026cpcunhapora.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026cpcunhapora.fepese.org.br",
+          "title": "Concurso Público – Edital 001/2026"
+        },
+        {
+          "url": "https://2026cpcunhapora.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "https://2026pscunhapora.fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://2026pscunhapora.fepese.org.br",
+          "title": "Processo Seletivo – Edital 001/2026"
+        },
+        {
+          "url": "https://2026pscunhapora.fepese.org.br",
+          "title": "Saiba mais"
+        },
+        {
+          "url": "http://fiscais.fepese.org.br/",
+          "title": "Faça seu cadastro"
+        },
+        {
+          "url": "https://fepese.org.br/orcamento",
+          "title": "Acesse aqui"
+        },
+        {
+          "url": "https://fepese.org.br",
+          "title": ""
+        },
+        {
+          "url": "https://fepese.org.br/",
+          "title": "Página Principal"
+        },
+        {
+          "url": "https://fepese.org.br/vagas/",
+          "title": "Vagas"
+        },
+        {
+          "url": "https://fepese.org.br/concursos/",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://fepese.org.br/projetos/",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://fepese.org.br/capacitacao/",
+          "title": "Capacitação"
+        },
+        {
+          "url": "https://fepese.org.br/noticias/",
+          "title": "Notícias"
+        },
+        {
+          "url": "https://fepese.org.br/contato-2/",
+          "title": "Contato"
+        },
+        {
+          "url": "https://fepese.org.br/orcamento/",
+          "title": "Orçamento"
+        },
+        {
+          "url": "https://fepese.org.br/faq/",
+          "title": "FAQ"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/historico/",
+          "title": "Histórico"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/conselho/",
+          "title": "Conselho"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/diretoria-executiva/",
+          "title": "Diretoria Executiva"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/direcionamento-estrategico/",
+          "title": "Direcionamento Estratégico"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/legislacao/",
+          "title": "Legislação"
+        },
+        {
+          "url": "https://fepese.org.br/credenciamento-enap-2/",
+          "title": "Credenciamento ENAP"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/credenciamento/",
+          "title": "Credenciamento MEC | MCTI"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/relatorio-de-gestao/",
+          "title": "Relatório de Gestão"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/demonstracoes-financeiras/",
+          "title": "Demonstrações Financeiras"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/parceiros/",
+          "title": "Parceiros"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/estatuto/",
+          "title": "Conheça nosso Estatuto"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/regimento-interno-2/",
+          "title": "Regimento Interno"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/organograma/",
+          "title": "Organograma"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/agendas/",
+          "title": "Agendas"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/integridade/",
+          "title": "Integridade"
+        },
+        {
+          "url": "https://fepese.org.br/selecoespublicas/",
+          "title": "Seleções Públicas"
+        },
+        {
+          "url": "https://transparencia.fepese.org.br",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://fepese.org.br/institucional/integridade/",
+          "title": "Integridade"
+        },
+        {
+          "url": "https://fepese.org.br/politica_de_privacidade",
+          "title": "Política de Privacidade"
+        },
+        {
+          "url": "https://fepese.org.br/avaliacoes-de-desempenho-2/",
+          "title": "Avaliações de Desempenho"
+        },
+        {
+          "url": "https://g.page/FEPESE-SC?share",
+          "title": "Veja como chegar"
+        },
+        {
+          "url": "https://www.facebook.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.instagram.com/somosfepese/",
+          "title": ""
+        },
+        {
+          "url": "https://www.linkedin.com/company/fepese/",
+          "title": ""
+        },
+        {
+          "url": "https://grisestudio.co",
+          "title": "gris"
+        },
+        {
+          "url": "https://fepese.org.br/politica_de_privacidade/",
+          "title": "Política de Privacidade"
+        },
+        {
+          "url": "https://wordpress.org/plugins/gdpr-cookie-compliance/",
+          "title": "Powered by GDPR Cookie Compliance"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=UA-138240380-1",
+        "https://fepese.org.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp",
+        "https://fepese.org.br/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2.2",
+        "https://www.google.com/recaptcha/api.js?render=6LcNVoAUAAAAAICenelkaDRNlGwxDrVwxGuR_bz_&ver=3.0",
+        "https://fepese.org.br/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=5.2.2",
+        "https://fepese.org.br/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js?ver=4.12.2",
+        "https://fepese.org.br/wp-includes/js/wp-embed.min.js?ver=5.5.1",
+        "https://fepese.org.br/wp-content/themes/fepese-gris/dist/assets/js/app.js",
+        "https://fepese.org.br/wp-content/themes/fepese-gris/src/assets/js/menu.js",
+        "https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js",
+        "https://fepese.org.br/wp-content/themes/fepese-gris/src/assets/js/jquery.mask.min.js",
+        "https://fepese.org.br/wp-content/themes/fepese-gris/src/assets/js/masks.js"
+      ]
+    },
+    {
+      "source": "ieses_open",
+      "url": "https://ieses.org/projetos",
+      "kind": "listing0",
+      "observed_at": "2026-09-08T14:49:31.937958+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 5852,
+      "sha256": "d023b9183c674be6ee9677a360331af0b2141787e39592205825eb951e92e6eb",
+      "file": "ieses_open-listing0.html",
+      "encoding": "utf-8",
+      "title": "IESES Concursos - Últimos Projetos",
+      "links": [],
+      "scripts": [
+        "https://ieses.org/static/js/jquery.min.js",
+        "https://ieses.org/static/js/logger.js",
+        "https://ieses.org/static/js/recaptchaConfig.js",
+        "https://ieses.org/static/js/googleRecaptcha.js",
+        "https://ieses.org/static/js/format.js",
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
+        "https://ieses.org/projetos-static/projetos.js"
+      ]
+    }
+  ]
+}

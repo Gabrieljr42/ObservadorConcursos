@@ -1,0 +1,23 @@
+{
+  "schema": "t012.publiconsult.document-review-live-r6-receipt.v1",
+  "timestamp": "2026-09-13T14:19:57Z",
+  "status": "BLOCKED_PREPARE_409",
+  "source_id": 56,
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "preflight": {"health": 200, "login": 200, "checkpoint": {"contests": 34, "sources": 33, "canonical_cargos": 182, "publications": 34, "versions": 92, "notifications": 91}, "run_get": 200, "pending": true, "pending_count": 1, "current_before": null},
+  "request": {
+    "endpoint": "POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+    "document": {"title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II", "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1", "kind": "outro", "file_format": "pdf"},
+    "artifact": {"artifact_id": "publiconsult-open-taf-681-r2", "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "byte_len": 341466, "pages": 6, "url_requested_final_equal": true, "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf"},
+    "expected_page_count": 6
+  },
+  "response": {"http": 409, "body": "not captured by the client exception wrapper; API access log confirms 409 Conflict", "log": "POST .../prepare-preserved HTTP/1.1 409 Conflict"},
+  "retry": false,
+  "approve_document": false,
+  "proposal": false,
+  "apply": false,
+  "next_gate": "diagnose this R6 409 from server-side response before any further prepare attempt"
+}

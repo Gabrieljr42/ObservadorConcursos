@@ -1,0 +1,62 @@
+{
+  "schema": "t012.avancasp.document-review-package-luna-r2.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only package review; no prepare/approve/apply/live mutation",
+  "verdict": "ACCEPT_FOR_SINGLE_DOCUMENT_PREPARE",
+  "identity": {
+    "source": "avancasp_open",
+    "source_id": 54,
+    "external_id": "272",
+    "owner_user_id": 1,
+    "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+    "selection": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "manifest_title": "EDITAL COMPLETO 04/09/2026",
+    "manifest_kind": "edital"
+  },
+  "documents": [
+    {
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce.pdf",
+      "artifact_id": "avancasp-open-edital-272-bbc8f6fc",
+      "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637",
+      "byte_len": 750381,
+      "pages": 48,
+      "revision": "Anexo V - Cronograma",
+      "local_integrity": "PASS: PDF and page receipt agree; 48/48 pages non-empty and not truncated."
+    },
+    {
+      "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/6d52089a-0ad3-4a18-bef5-306c27315785.pdf",
+      "artifact_id": "avancasp-open-edital-272-6d52089a",
+      "sha256": "49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd",
+      "byte_len": 749582,
+      "pages": 49,
+      "revision": "Anexo VI - Cronograma; materially distinct revision",
+      "local_integrity": "PASS: PDF and page receipt agree; 49/49 pages non-empty and not truncated."
+    }
+  ],
+  "revision_policy": {
+    "same_selection": true,
+    "distinct": "PASS: URLs, SHA, byte lengths, page counts and chronology markers differ.",
+    "normative_order": "NOT INFERRED: no publication precedence is asserted from identical 04/09/2026 titles or filenames.",
+    "dedupe": "PASS: preserve both provenance records; they are not the same document content.",
+    "prepare_scope": "Exactly one selected document per prepare operation; never combine both revisions into one canonical payload."
+  },
+  "round_trip": {
+    "save_artifact_file": "PASS in isolated store for both artifacts; returned basenames are artifact_id-SHA.pdf and bytes reload exactly.",
+    "commit_run_artifact": "PASS in isolated store using distinct child run IDs; committed runs reload exact bytes.",
+    "test": "3 passed: test_document_review_package_r2.py",
+    "shared_live_write": false
+  },
+  "guardrails": [
+    "Use owner 1 and the exact reviewed run binding.",
+    "Select the exact URL/SHA/page revision before one prepare call.",
+    "Do not infer temporal precedence or collapse the sibling revision.",
+    "No approve/apply authorization is implied by this document-package acceptance."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/avancasp_open/document-review-package-r2.json",
+    "docs/execucao/evidencias/T012/avancasp_open/test_document_review_package_r2.py",
+    "docs/execucao/evidencias/T012/avancasp_open/document-review-decision-r1.json",
+    "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-bbc8f6fc-a0a1-49ef-aa1d-7d5d2403f7ce-pages.json",
+    "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-272-6d52089a-0ad3-4a18-bef5-306c27315785-pages.json"
+  ]
+}

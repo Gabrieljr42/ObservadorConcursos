@@ -1,0 +1,28 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "ufu_selection",
+  "concurso_id": null,
+  "external_id": "1843",
+  "title": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes",
+  "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+  "artifact": {
+    "artifact_id": "ufu-selection-1843-detail-2026",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "url_requested": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+    "url_final": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80",
+    "downloaded_at": "2026-09-13T10:00:00Z",
+    "content_path": "backend/tests/fixtures/tenderproof_batch30_institutional/ufu_selection-cycle1-detail-9088337b8d.html"
+  },
+  "fields": [
+    {"field_name": "titulo", "value": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "evidence": [{"evidence_id": "ufu-1843-titulo", "artifact_id": "ufu-selection-1843-detail-2026", "document_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843", "page_number": 1, "snippet": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "json_path": "identity.title", "method": "offline-html-text", "method_version": "ufu-selection-r2"}]},
+    {"field_name": "orgao", "value": "Universidade Federal de Uberlândia", "evidence": [{"evidence_id": "ufu-1843-orgao", "artifact_id": "ufu-selection-1843-detail-2026", "document_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843", "page_number": 1, "snippet": "Universidade Federal de Uberlândia", "json_path": "identity.orgao", "method": "offline-html-text", "method_version": "ufu-selection-r2"}]},
+    {"field_name": "edital_numero", "value": "144/2026", "evidence": [{"evidence_id": "ufu-1843-edital", "artifact_id": "ufu-selection-1843-detail-2026", "document_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843", "page_number": 1, "snippet": "144/2026", "json_path": "identity.edital_numero", "method": "offline-html-text", "method_version": "ufu-selection-r2"}]},
+    {"field_name": "inscricao_inicio", "value": "2026-08-19T15:00:00", "evidence": [{"evidence_id": "ufu-1843-inscricao", "artifact_id": "ufu-selection-1843-detail-2026", "document_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843", "page_number": 1, "snippet": "19/08/2026 15:00 03/09/2026 14:59 Inscrições", "json_path": "inscricao_inicio", "method": "offline-html-text", "method_version": "ufu-selection-r2"}]},
+    {"field_name": "inscricao_fim", "value": "2026-09-03T14:59:00", "evidence": [{"evidence_id": "ufu-1843-inscricao-fim", "artifact_id": "ufu-selection-1843-detail-2026", "document_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf", "source_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843", "page_number": 1, "snippet": "19/08/2026 15:00 03/09/2026 14:59 Inscrições", "json_path": "inscricao_fim", "method": "offline-html-text", "method_version": "ufu-selection-r2"}]}
+  ],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-13T10:00:00Z"
+}

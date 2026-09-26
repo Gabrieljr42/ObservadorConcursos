@@ -1,0 +1,25 @@
+{
+  "schema": "t010.id8.prova-data-supplement.receipt.v1",
+  "record_id": 8,
+  "purpose": "normal_proposal_repair_without_mutating_version_87",
+  "cause_confirmed": "The applied run contained fields=[cargos] only; prova_data was not a top-level ReviewedField and therefore was not eligible.",
+  "published_version_preserved": 87,
+  "prior_payload_untouched": true,
+  "supplement": {
+    "path": "docs/execucao/evidencias/T010/T010-reviewed-run-id8-prova-data-supplement.json",
+    "sha256": "536e464cf6f5d05ccae963086b689e306f5e1e3ef07763c10b41c5869c9b5375",
+    "run_id": "tp-reviewed-ea4b278d48957c543fed74edd6b8222b",
+    "field": "prova_data",
+    "value": "2026-12-06",
+    "evidence_page": 68,
+    "evidence_snippet": "15 Realização das Provas Objetivas 06/12/2026",
+    "artifact_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a"
+  },
+  "validation": {
+    "reviewed_run_model": "pass",
+    "import_dry_run": {"status": "validated", "run_id": "tp-reviewed-ea4b278d48957c543fed74edd6b8222b", "fields": ["prova_data"]},
+    "isolated_revalidate": {"eligible": ["prova_data"], "blocked_expected": ["cargos", "titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"]},
+    "isolated_create_proposal": {"status": "PASS", "state": "proposed", "approved_fields": ["prova_data"], "database": "disposable SQLite only"}
+  },
+  "repair_gate": "independent_review_then_normal_approve_apply_against_current_baseline_version_87; do not reapply cargos"
+}

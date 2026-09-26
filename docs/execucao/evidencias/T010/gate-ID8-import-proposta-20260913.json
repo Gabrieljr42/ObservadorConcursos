@@ -1,0 +1,14 @@
+{
+  "schema": "t010.id8.import-proposal.v1",
+  "timestamp": "2026-09-13T00:44:14.9399280-03:00",
+  "envelope": {"path": "docs/execucao/evidencias/T010/T010-reviewed-run-id8.json", "sha256": "81c37dc42f00d4189607bab6029e7476ce86dac363f58dfd0abeb59d850a469c", "bytes": 3466, "run_id": "tp-reviewed-02d010f96360843e2cd9e5181b0f432e"},
+  "artifact": {"path": "docs/execucao/evidencias/T010/id8.pdf", "sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a", "bytes": 1048994, "pages": 75},
+  "import": {"status": "imported", "fields": ["cargos"]},
+  "proposal": {"id": "tpp-9f545731df8ae21c456385bd3f1d9d4b", "hash": "c04210fd203f657cb4f196012497e4c93176b54f4c5e35b3ae77d361e6e78f6e", "state": "proposed", "concurso_id": 8, "source_id": 45, "eligible_fields": ["cargos"], "baseline_version": 57, "baseline_cargos": null, "cargo_count": 1, "vagas_imediatas": 9, "cadastro_reserva": 11, "vagas_ac": 6, "vagas_pcd": 1, "vagas_ppp": 2, "remuneracao": "salário-mínimo + 30% (periculosidade) + adicional noturno", "taxa": "156.67"},
+  "counts_before": {"proposals": 89, "versions": 85, "outbox": 85, "notifications": 84},
+  "counts_after": {"proposals": 90, "versions": 85, "outbox": 85, "notifications": 84},
+  "health": 200,
+  "approve_apply": false,
+  "other_proposals_untouched": ["tpp-c52d279519f1596ed57ab9a1976775b8", "tpp-f1a450209aec0ad7af09922440daf557"],
+  "next_gate": "independent post-import review"
+}

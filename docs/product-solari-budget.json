@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "authorized_at_date": "2026-09-08",
+  "authorization_source": "User reply in this task: 20 dólares",
+  "scope": "New Solari Browser and Sandbox sessions for completing all 99 sources in this task",
+  "currency": "USD",
+  "total_authorized_usd": "20.00",
+  "new_session_reservations": [
+    {
+      "id": "sbr-af62adac990f4a2a8a707fe8869e8d2d",
+      "kind": "sandbox",
+      "cents": 1,
+      "seconds": 120.0,
+      "tariff": "https://docs.getsolari.com/pricing (2026-09-07; Free 1 vCPU/2 GB)",
+      "created_at": 1788889034.4948614,
+      "closed_at": 1788889039.6171093
+    },
+    {
+      "id": "sbr-b3f507405c3646e1abd4d8fb7070daac",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-08; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788908380.3879018,
+      "closed_at": 1788908392.8363485
+    },
+    {
+      "id": "sbr-64e76d0583d94b19a95200f89ec023ee",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788966963.2695093,
+      "closed_at": 1788966972.7378335
+    },
+    {
+      "id": "sbr-52b32912a1ed4f0fad38568cadbcc65e",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788968888.1572106,
+      "closed_at": 1788968904.0614746
+    },
+    {
+      "id": "sbr-8beaaf7b081843ca8174977ad2f4608d",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788969027.1175015,
+      "closed_at": 1788969072.1619966
+    },
+    {
+      "id": "sbr-74b8efdf249c475abb89b91e7b444b3b",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788969179.3161323,
+      "closed_at": 1788969498.8573828
+    },
+    {
+      "id": "sbr-d5611a60a5b04a71860bb269c450abae",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788972327.2195163,
+      "closed_at": 1788972354.8294961
+    },
+    {
+      "id": "sbr-71fd8a35325044f9ae82553dc4398a29",
+      "kind": "browser",
+      "cents": 75,
+      "seconds": 18000.0,
+      "tariff": "https://docs.getsolari.com/pricing; checked 2026-09-09; conservative Free rate, Starter 5h maximum",
+      "created_at": 1788972480.9543695,
+      "closed_at": 1788972486.0687473
+    }
+  ],
+  "confirmed_billed_usd": null,
+  "provider_available_balance_usd": null,
+  "rules": [
+    "Reserve an upper bound before each resource creation, including retries and closure time.",
+    "Refuse creation when cumulative reservations would exceed the authorization.",
+    "Do not treat estimated cost or provider usage as a confirmed charge.",
+    "Do not release reservations while resource closure or billing remains uncertain.",
+    "Never use an old consumed one-session authorization for new resources."
+  ],
+  "reserved_usd": 5.26,
+  "runtime_ledger": "/var/lib/observador/tenderproof/solari-budget.sqlite3",
+  "provider_console_observation": {
+    "observed_at_date": "2026-09-08",
+    "plan": "Starter",
+    "max_session_seconds": 18000,
+    "displayed_balance_usd": "0.00",
+    "warning": "Console shows no history despite successful API processing; do not infer invoice or API balance from console alone."
+  }
+}

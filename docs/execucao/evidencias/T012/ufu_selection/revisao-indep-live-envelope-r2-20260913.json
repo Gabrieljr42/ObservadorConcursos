@@ -1,0 +1,55 @@
+{
+  "schema": "t012.independent-live-envelope-review.v2",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only independent review; no live/import/API/DB effects",
+  "source": "ufu_selection",
+  "source_id": 40,
+  "external_id": "1843",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "envelope": "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r2.json",
+  "identity": {
+    "title": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes",
+    "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "identity_confirmed": true,
+    "currentness": "PASS: preserved 2026 selection; registration window 2026-08-19T15:00 through 2026-09-03T14:59 is historical as of review date and no future stage was promoted"
+  },
+  "artifact": {
+    "artifact_id": "ufu-selection-1843-detail-2026",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "pages": 1,
+    "url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "receipt": "docs/execucao/evidencias/T012/ufu_selection/content-receipt.json",
+    "pins_verified": true
+  },
+  "promoted_fields_exactly": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+  "field_review": {
+    "literal_evidence": true,
+    "json_paths_present": true,
+    "all_evidence_sha_bound": true,
+    "cronograma_proximo": "absent",
+    "prova_data": "absent",
+    "taxa": "absent",
+    "cargos": "absent",
+    "remuneracao": "absent",
+    "documentos": "absent"
+  },
+  "parser": {
+    "path": "backend/app/tenderproof/ufu_selection_parser.py",
+    "dispatch_does_not_promote_stage": true,
+    "evidence_does_not_promote_prova_or_taxa": true
+  },
+  "round_trip": {
+    "reviewed_run_model_validate": true,
+    "import_dry_run": "validated/idempotent for accepted five-field payload",
+    "sqlite_revalidate": "PASS for accepted five-field payload",
+    "tests": "7 passed",
+    "publication_effects": 0
+  },
+  "negatives": {
+    "sixth_cronograma_proximo_field": "rejected by prior R1 blocker",
+    "prova_data_inference": "not performed",
+    "taxa_cargos_remuneracao_inference": "not performed",
+    "stale_or_drift_artifact": "fail-closed by pin checks"
+  }
+}

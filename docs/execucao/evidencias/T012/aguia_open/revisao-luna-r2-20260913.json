@@ -1,0 +1,53 @@
+{
+  "schema": "t012.aguia.review.r2.v1",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only_offline",
+  "verdict": "ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "scope": "Somente proposta de alocação/importação; sem apply, API, Docker ou DB",
+  "identity": {
+    "source": "aguia_open",
+    "source_number": 27,
+    "external_id": "43",
+    "title": "Prefeitura Municipal de Bálsamo",
+    "selection": "Processo Seletivo 01/2025",
+    "detail_url": "https://portal.institutoaguia.org.br/edital/ver/43",
+    "identity_status": "confirmed_by_listing_and_detail"
+  },
+  "artifact": {
+    "artifact_id": "aguia-open-43-pdf-r2",
+    "path": "docs/execucao/evidencias/T012/aguia_open/artifacts/aguia-43.pdf",
+    "url": "https://cdn.institutoaguia.org.br/edital/1/43/c382a2aac7251c1a31c0b734cd3540df.pdf",
+    "url_final_equals_requested": true,
+    "content_type": "application/pdf",
+    "byte_len": 501543,
+    "pages": 18,
+    "sha256": "f039e9961f625c23f3a0ec9f60d51ce87534d2a7d96cdfdaab029efba7aa47c7",
+    "receipt": "docs/execucao/evidencias/T012/aguia_open/artifacts/receipt.json"
+  },
+  "fields": {
+    "edital_numero": "01/2025",
+    "orgao": "Prefeitura Municipal de Bálsamo",
+    "inscricao": ["2025-12-05T00:00:00", "2025-12-16T23:59:00"],
+    "taxa": "65.00",
+    "prova_data": "2026-01-25",
+    "cargo_count": 4,
+    "cargos": ["300", "301", "302", "303"],
+    "snippets_have_no_u_fffd": true,
+    "pdf_text_has_no_u_fffd": true
+  },
+  "duplication_and_allocation": {
+    "listing_candidate_43_to_one_detail": true,
+    "canonical_source_id": null,
+    "canonical_concurso_id": null,
+    "cross_catalogue_duplicate_clearance": "must be performed by standard allocation flow",
+    "template": "standard reviewed-run import; allocate canonical source/concurso, preserve artifact receipt, then normal human review",
+    "reference_only": true,
+    "apply": false,
+    "catalogue_mutated": false
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/aguia_open/test_proposal_fail_closed.py",
+    "result": "3 passed"
+  },
+  "guard": "This acceptance does not authorize catalogue publication or version/outbox effects; fail closed if allocation finds an existing canonical identity or any SHA/URL/field drift."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "t012.apta.document-review-package-r11-receipt.v1",
+  "status": "BLOCKED_MISSING_PRESERVED_BYTES",
+  "package": "document-review-package-r11.json",
+  "run_id": "tp-reviewed-9ca7ffc16743d555cc227a038f337bfa",
+  "source_id": 48,
+  "external_id": "708",
+  "pending_count": 1,
+  "pending_positions": [1],
+  "pending": [{"kind":"retificacao","title":"Edital de Retificação I ao Edital de Abertura de Inscrições","url":"https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Retificacao_2_2026_07_28_17_32_37.pdf","sha256":null,"byte_len":null,"pages":null}],
+  "decision": "NEEDS_HUMAN",
+  "reason": "Receipt names the document but provides no preserved bytes/SHA/page metadata and no local artifact was found.",
+  "next_gate": "Normal document-review acquisition/preserve, then independent content decision; no proposal retry.",
+  "network": false,
+  "live_mutation": false
+}

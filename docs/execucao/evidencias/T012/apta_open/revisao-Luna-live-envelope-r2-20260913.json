@@ -1,0 +1,36 @@
+{
+  "schema": "t012.apta.live-envelope.luna-review-r2.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "BLOCKER",
+  "scope": "read_only; no live import/proposal/API/DB mutation",
+  "pins": {
+    "source": "apta_open",
+    "external_id": "708",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "detail_document_urls": "exact and unchanged",
+    "status": "PASS"
+  },
+  "path_check": {
+    "envelope_storage_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "relative_and_no_traversal": true,
+    "recorded_file_exists": true,
+    "recorded_file_hash_and_bytes": "PASS",
+    "dispatcher_resolved_path": "backend/.tenderproof/artifacts/<basename>",
+    "dispatcher_resolved_file_exists": false,
+    "finding": "The current resolver discards the recorded relative directory and resolves only the basename under artifact_dir; the R2 envelope path is therefore not consumable by the real dispatcher."
+  },
+  "scope_checks": {
+    "currentness": "PASS: proven 17/08/2026–20/09/2026 window contains 13/09/2026",
+    "fallback": "PASS: organization + edital 01/2026",
+    "eligible_intent": ["titulo", "orgao", "edital_numero"],
+    "reference_only": ["cargos", "remuneracao", "taxa"]
+  },
+  "test": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_apta_open_selection.py",
+    "result": "1 failed, 5 passed",
+    "failure": "test_apta_reviewed_selection_extracts_provenanced_public_fields: title FAILED; dispatcher reports Permission denied/not consumable backend/.tenderproof/artifacts path"
+  },
+  "required_fix": "Either place/copy the pinned PDF under the configured artifact_dir with a verified hash, or make the resolver safely accept the recorded workspace-relative storage_path (confined to approved artifact roots, no traversal), then rerun this exact gate. Do not live import/propose until pass."
+}

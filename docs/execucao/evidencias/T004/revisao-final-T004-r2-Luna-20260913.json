@@ -1,0 +1,17 @@
+{
+  "schema": "t004.luna.final-review-r2.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "T004_FINAL_ACCEPT",
+  "scope": "read-only",
+  "checks": {
+    "historical_sections": "PASS: r4 and prior ID5 checkpoints are explicitly marked historical/superseded",
+    "r5_link": "PASS: matrix review path resolves under evidencias/T004",
+    "id5_hashes": "PASS: envelope SHA bd1f...275a7 and PDF artifact SHA 9bdb...dac32 are separately labeled; run remains non-live",
+    "pointers": "PASS: all markdown links resolve",
+    "state_and_gates": "PASS: EM_REVISAO/PARCIAL; Garibaldi blocker; IDs 18/20/22-25 blocked; ID15 mismatch; ID21 DO_NOT_RETRY; owner/conditions explicit",
+    "adapter_and_overlay": "PASS: runtime_factory_absent=0 and r5 accepted overlays are not promoted to global completion",
+    "test_receipt": "PASS: local gate receipt supports 14 passed/0 failed/0 skipped"
+  },
+  "conclusion": "T004 now accurately distinguishes historical checkpoints from final r5 posture, preserves non-application gates, and contains no unresolved pointer or hash-label error."
+}

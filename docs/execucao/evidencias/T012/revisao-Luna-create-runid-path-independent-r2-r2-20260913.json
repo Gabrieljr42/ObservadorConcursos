@@ -1,0 +1,22 @@
+{
+  "schema": "t012.reviewed-run-path-independent-r2-independent-review.v2",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only run identity/import review; no live, pilot, Docker, or source mutation",
+  "checks": {
+    "transport_independence": "PASS: Windows/CodexSandboxOffline/container content_path variants, base64/path representation, staging location, downloaded_at and evidence_id changes preserve the same ID",
+    "semantic_binding": "PASS: owner, source, external_id, concurso_id, artifact_id, URL, SHA, bytes, content type, evidence page, snippets, values, units and field changes produce distinct IDs",
+    "replay": "PASS: new deterministic replay is idempotent; differing semantic content at a forced same ID raises strong conflict",
+    "legacy": "PASS: pre-r2 ID is read-only/deduplicated only after complete semantic comparison; no takeover or rewrite",
+    "isolation": "PASS: owner-scoped IDs and stored owner prevent cross-owner reuse",
+    "atomicity": "PASS: bad bytes/pending fields do not persist artifacts; commit/replay regressions pass",
+    "regressions": "PASS: CREATE publication, APTA, KLC and Avança dispatch remain green"
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_tenderproof_canonical.py backend/tests/test_tenderproof_publication_post.py backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_batch2_dispatch.py -k 'run_id or reviewed_import or null_target or legacy or create or update or apta or dispatch'", "result": "24 passed, 16 deselected"},
+    {"command": "Independent ID matrix script over transport/runtime and semantic mutations", "result": "PASS: all required equal/different pairs behaved as specified"},
+    {"command": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof/reviewed_run_import.py backend/tests/test_reviewed_run_import.py", "result": "PASS"}
+  ],
+  "warnings": ["Only local SQLite/import/publication regressions were exercised; no PostgreSQL/Docker/live test was attempted per scope."],
+  "live_mutation": false
+}

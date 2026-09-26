@@ -1,0 +1,793 @@
+{
+  "observed_at": "2026-09-08T14:09:28.631297+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r60own",
+  "cycles": [
+    {
+      "source": "msconcursos_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-28ccb4719b56",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://msconcursos.com.br/",
+          "file": "msconcursos_open-cycle1-listing-ba5a8753a7.html",
+          "sha256": "7b33e582a242670316e7d3e0e87433924e3b4cd51d1c79276d22bc6c4a6aa803",
+          "bytes": 36132,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:29.191261+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-158d03b28af9",
+          "candidate": {
+            "candidate_id": "msconcursos_open-54",
+            "title_observed": "Concurso Público | CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA - PREFEITURA DE SANTANA DE PARNAÍBA, SP - EDITAL N.º 05/2026",
+            "detail_url_observed": "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+            "external_id": "54",
+            "observed_at": "2026-09-08T14:09:29.317850Z",
+            "source": "msconcursos_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+              "file": "msconcursos_open-cycle1-detail-30da94060c.html",
+              "sha256": "9f4b639bec93fd8e8779a560fc62415dfae350cbd3ae87f488a2c712cb65e3ee",
+              "bytes": 31734,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:29.738358+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "msconcursos_open-doc-9617890048bcc61b",
+            "title": "EDITAL DE ABERTURA N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA",
+            "url_requested": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "url_final": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: COMUNICADO N.º 01 - EDITAL N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO)."
+          },
+          "artifact": {
+            "artifact_id": "art-2d64ebc1f6",
+            "sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+            "byte_len": 495590,
+            "url_requested": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "url_final": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:29.934592Z",
+            "storage_path": "art-2d64ebc1f6-db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122.pdf"
+          },
+          "total_pages": 25,
+          "processed_pages": 25,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=25/25",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.234
+    },
+    {
+      "source": "consep_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-5e521b5e478c",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.consep-pi.com.br/concursos",
+          "https://www.consep-pi.com.br/status-concurso/Aberto/1/",
+          "https://www.consep-pi.com.br/status-concurso/Em-Andamento/2/",
+          "https://www.consep-pi.com.br/status-concurso/Encerrado/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.consep-pi.com.br",
+          "file": "consep_open-cycle1-listing-27ac9f4226.html",
+          "sha256": "50ced57ce15f29d4bcb9a3094846744862b3b9169a918773df94519b300d95e5",
+          "bytes": 11790,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:32.282545+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d7a02132ec99",
+          "candidate": {
+            "candidate_id": "consep_open-203",
+            "title_observed": "TESTE SELETIVO EDITAL N 002/2026 - BAIXA GRANDE DO RIBEIRO",
+            "detail_url_observed": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-EDITAL-N-002-2026-BAIXA-GRANDE-D0-RIBEIR0/203/",
+            "external_id": "203",
+            "observed_at": "2026-09-08T14:09:32.311588Z",
+            "source": "consep_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-EDITAL-N-002-2026-BAIXA-GRANDE-D0-RIBEIR0/203/",
+              "file": "consep_open-cycle1-detail-970894c22e.html",
+              "sha256": "7c9455cee81cc1e2f34dd830888ff952e204694f7f902b976a29a68ad4cee20e",
+              "bytes": 11482,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:32.786317+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "consep_open-doc-c4cc229e28076c05",
+            "title": "BAIXA GRANDE DO RIBEIRO - EDITAL - TESTE SELETIVO 2026",
+            "url_requested": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "url_final": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'BAIXA GRANDE DO RIBEIRO - EDITAL - TESTE SELETIVO 2026' por conter 'edital' no título/URL; 12 documento(s) ignorado(s) (ex.: RESULTADO FINAL - PROVA OBJETIVA E TITULOS; RESULTADO PRELIMINAR - PROVA OBJETIVA E TITULOS; NOTA - RESULTADO PRELIMINAR; Nota das Provas de TĂ­tulos; Nota das Provas de TĂ­tulos - Justificativa)."
+          },
+          "artifact": {
+            "artifact_id": "art-dc052ed0e0",
+            "sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+            "byte_len": 625770,
+            "url_requested": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "url_final": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:32.907932Z",
+            "storage_path": "art-dc052ed0e0-460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e.pdf"
+          },
+          "total_pages": 34,
+          "processed_pages": 34,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=34/34",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.36
+    },
+    {
+      "source": "funvapi_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-a8b110d0fe34",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funvapi.com.br/index.php/category/concursos/",
+          "https://funvapi.com.br/index.php/category/concursos-em-andamento/",
+          "https://funvapi.com.br/index.php/category/concursos-realizados/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funvapi.com.br/",
+          "file": "funvapi_open-cycle1-listing-0fc71ea701.html",
+          "sha256": "e48f9c66429c630f7f55fd37798c3dd97c1902e90ce133eeb309ea3c3ffad799",
+          "bytes": 79036,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:35.664670+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-414e34bcf45a",
+          "candidate": {
+            "candidate_id": "funvapi_open-/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "title_observed": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE",
+            "detail_url_observed": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "external_id": "/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "observed_at": "2026-09-08T14:09:35.741325Z",
+            "source": "funvapi_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+              "file": "funvapi_open-cycle1-detail-984f555766.html",
+              "sha256": "f161f428a95a3069b439d73c9db4ce07f14772db5647a81ab454331b98b1f094",
+              "bytes": 54224,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:36.187384+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funvapi_open-doc-af2e21a0c7539e92",
+            "title": "EDITAL DE CONCURSO PÚBLICO Nº 001/2026",
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE CONCURSO PÚBLICO Nº 001/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-31b2e4d442",
+            "sha256": "7e75b5eca9a1a826c15013ee4b4a10114a7d2df7646ceb960d02e1240949407a",
+            "byte_len": 1961648,
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:36.361315Z",
+            "storage_path": "art-31b2e4d442-7e75b5eca9a1a826c15013ee4b4a10114a7d2df7646ceb960d02e1240949407a.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-4975de79251d",
+          "candidate": {
+            "candidate_id": "funvapi_open-/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "title_observed": "CÂMARA MUNICIPAL DE VERA MENDES – PI",
+            "detail_url_observed": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "external_id": "/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "observed_at": "2026-09-08T14:09:35.741325Z",
+            "source": "funvapi_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+              "file": "funvapi_open-cycle1-detail-02c5f3c4be.html",
+              "sha256": "9b02bbb15a0d3824f9eb97a6b37379a19b684fe8a5f9eefee19c4bd691fcdafa",
+              "bytes": 64292,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:37.800966+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funvapi_open-doc-99be537a46eae5bc",
+            "title": "EDITAL DE CONCURSO PÚBLICO Nº 001/2026",
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE CONCURSO PÚBLICO Nº 001/2026' por conter 'edital' no título/URL; 8 documento(s) ignorado(s) (ex.: EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO; EDITAL DE JULGAMENTO DE RECURSOS CONTRA O INDEFERIMENTO DOS PEDIDOS DE ISENÇÃO; EDITAL DE RETIFICAÇÃO Nº.001/2026; CONCORRÊNCIA AMPLA - RETIFICADA; CONCORRÊNCIA - PCD)."
+          },
+          "artifact": {
+            "artifact_id": "art-fe79d9ce3e",
+            "sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+            "byte_len": 1053021,
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:37.971365Z",
+            "storage_path": "art-fe79d9ce3e-a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360.pdf"
+          },
+          "total_pages": 46,
+          "processed_pages": 46,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=46/46",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.843
+    },
+    {
+      "source": "msconcursos_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-ea8501a557c7",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://msconcursos.com.br/",
+          "file": "msconcursos_open-cycle2-listing-ba5a8753a7.html",
+          "sha256": "7b33e582a242670316e7d3e0e87433924e3b4cd51d1c79276d22bc6c4a6aa803",
+          "bytes": 36132,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:40.542876+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-546e35b6e25a",
+          "candidate": {
+            "candidate_id": "msconcursos_open-54",
+            "title_observed": "Concurso Público | CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA - PREFEITURA DE SANTANA DE PARNAÍBA, SP - EDITAL N.º 05/2026",
+            "detail_url_observed": "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+            "external_id": "54",
+            "observed_at": "2026-09-08T14:09:40.658420Z",
+            "source": "msconcursos_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://msconcursos.com.br/concurso/54/concurso-publico-para-medico-e-medico-plantonista-prefeitura-de-santana-de-parnaiba-sp",
+              "file": "msconcursos_open-cycle2-detail-30da94060c.html",
+              "sha256": "9f4b639bec93fd8e8779a560fc62415dfae350cbd3ae87f488a2c712cb65e3ee",
+              "bytes": 31734,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:41.080321+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "msconcursos_open-doc-9617890048bcc61b",
+            "title": "EDITAL DE ABERTURA N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA",
+            "url_requested": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "url_final": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE ABERTURA N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO E MÉDICO PLANTONISTA' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: COMUNICADO N.º 01 - EDITAL N.º 05.2026 - CONCURSO PÚBLICO PARA MÉDICO)."
+          },
+          "artifact": {
+            "artifact_id": "art-ea338cea78",
+            "sha256": "db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122",
+            "byte_len": 495590,
+            "url_requested": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "url_final": "https://msconcursos.com.br/arquivos/cp0526/documentos/2-edital-de-abertura-n-o-05-2026-concurso-publico-para-medico-e-medico-plantonista.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:41.316282Z",
+            "storage_path": "art-ea338cea78-db667d1309eba4fcb9a58659a17c58c7f3f06714ac8fddaa0d0b85847c16b122.pdf"
+          },
+          "total_pages": 25,
+          "processed_pages": 25,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=25/25",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.188
+    },
+    {
+      "source": "consep_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-4857c0b0f55f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.consep-pi.com.br/concursos",
+          "https://www.consep-pi.com.br/status-concurso/Aberto/1/",
+          "https://www.consep-pi.com.br/status-concurso/Em-Andamento/2/",
+          "https://www.consep-pi.com.br/status-concurso/Encerrado/3/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.consep-pi.com.br",
+          "file": "consep_open-cycle2-listing-27ac9f4226.html",
+          "sha256": "50ced57ce15f29d4bcb9a3094846744862b3b9169a918773df94519b300d95e5",
+          "bytes": 11790,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:43.640958+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-cac4e5b80f90",
+          "candidate": {
+            "candidate_id": "consep_open-203",
+            "title_observed": "TESTE SELETIVO EDITAL N 002/2026 - BAIXA GRANDE DO RIBEIRO",
+            "detail_url_observed": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-EDITAL-N-002-2026-BAIXA-GRANDE-D0-RIBEIR0/203/",
+            "external_id": "203",
+            "observed_at": "2026-09-08T14:09:43.667948Z",
+            "source": "consep_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.consep-pi.com.br/concurso/TESTE-SELETIV0-EDITAL-N-002-2026-BAIXA-GRANDE-D0-RIBEIR0/203/",
+              "file": "consep_open-cycle2-detail-970894c22e.html",
+              "sha256": "7c9455cee81cc1e2f34dd830888ff952e204694f7f902b976a29a68ad4cee20e",
+              "bytes": 11482,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:44.058306+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "consep_open-doc-c4cc229e28076c05",
+            "title": "BAIXA GRANDE DO RIBEIRO - EDITAL - TESTE SELETIVO 2026",
+            "url_requested": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "url_final": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'BAIXA GRANDE DO RIBEIRO - EDITAL - TESTE SELETIVO 2026' por conter 'edital' no título/URL; 12 documento(s) ignorado(s) (ex.: RESULTADO FINAL - PROVA OBJETIVA E TITULOS; RESULTADO PRELIMINAR - PROVA OBJETIVA E TITULOS; NOTA - RESULTADO PRELIMINAR; Nota das Provas de TĂ­tulos; Nota das Provas de TĂ­tulos - Justificativa)."
+          },
+          "artifact": {
+            "artifact_id": "art-275c61754e",
+            "sha256": "460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e",
+            "byte_len": 625770,
+            "url_requested": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "url_final": "https://www.consep-pi.com.br/admin/upload/documentos/c58adb2e88.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:44.166706Z",
+            "storage_path": "art-275c61754e-460b6416c3ea68fd247230574fa54232370db887f159e1187c5c5565ae0a0b2e.pdf"
+          },
+          "total_pages": 34,
+          "processed_pages": 34,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=34/34",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.187
+    },
+    {
+      "source": "funvapi_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-28b1f08cd310",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://funvapi.com.br/index.php/category/concursos/",
+          "https://funvapi.com.br/index.php/category/concursos-em-andamento/",
+          "https://funvapi.com.br/index.php/category/concursos-realizados/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://funvapi.com.br/",
+          "file": "funvapi_open-cycle2-listing-0fc71ea701.html",
+          "sha256": "e48f9c66429c630f7f55fd37798c3dd97c1902e90ce133eeb309ea3c3ffad799",
+          "bytes": 79036,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:09:46.849250+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-96b8b516b224",
+          "candidate": {
+            "candidate_id": "funvapi_open-/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "title_observed": "PREFEITURA MUNICIPAL DE BELO JARDIM – PE",
+            "detail_url_observed": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "external_id": "/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+            "observed_at": "2026-09-08T14:09:46.931459Z",
+            "source": "funvapi_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funvapi.com.br/index.php/2026/08/27/prefeitura-municipal-de-belo-jardim-pe/",
+              "file": "funvapi_open-cycle2-detail-984f555766.html",
+              "sha256": "f161f428a95a3069b439d73c9db4ce07f14772db5647a81ab454331b98b1f094",
+              "bytes": 54224,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:47.347769+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funvapi_open-doc-af2e21a0c7539e92",
+            "title": "EDITAL DE CONCURSO PÚBLICO Nº 001/2026",
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE CONCURSO PÚBLICO Nº 001/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-c5b141f004",
+            "sha256": "7e75b5eca9a1a826c15013ee4b4a10114a7d2df7646ceb960d02e1240949407a",
+            "byte_len": 1961648,
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/08/EDITAL-DE-CONCURSO-PUBLICO-BELO-JARDIM-PERNAMBUCO-001-2026.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:48.113762Z",
+            "storage_path": "art-c5b141f004-7e75b5eca9a1a826c15013ee4b4a10114a7d2df7646ceb960d02e1240949407a.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-918b6ad2e33e",
+          "candidate": {
+            "candidate_id": "funvapi_open-/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "title_observed": "CÂMARA MUNICIPAL DE VERA MENDES – PI",
+            "detail_url_observed": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "external_id": "/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+            "observed_at": "2026-09-08T14:09:46.931459Z",
+            "source": "funvapi_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://funvapi.com.br/index.php/2026/07/06/camara-municipal-de-vera-mendes-pi/",
+              "file": "funvapi_open-cycle2-detail-02c5f3c4be.html",
+              "sha256": "9b02bbb15a0d3824f9eb97a6b37379a19b684fe8a5f9eefee19c4bd691fcdafa",
+              "bytes": 64292,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:09:49.020786+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "funvapi_open-doc-99be537a46eae5bc",
+            "title": "EDITAL DE CONCURSO PÚBLICO Nº 001/2026",
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL DE CONCURSO PÚBLICO Nº 001/2026' por conter 'edital' no título/URL; 8 documento(s) ignorado(s) (ex.: EDITAL DE JULGAMENTO DOS PEDIDOS DE ISENÇÃO; EDITAL DE JULGAMENTO DE RECURSOS CONTRA O INDEFERIMENTO DOS PEDIDOS DE ISENÇÃO; EDITAL DE RETIFICAÇÃO Nº.001/2026; CONCORRÊNCIA AMPLA - RETIFICADA; CONCORRÊNCIA - PCD)."
+          },
+          "artifact": {
+            "artifact_id": "art-f26ef64529",
+            "sha256": "a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360",
+            "byte_len": 1053021,
+            "url_requested": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "url_final": "https://funvapi.com.br/wp-content/uploads/2026/07/EDITAL-DE-CONCURSO-PUBLICO-CAMARA-DE-VEREADORES-VERA-MENDES-PIAUI.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:49.420752Z",
+            "storage_path": "art-f26ef64529-a83ea095b5de267bed9f627f51109f1828b59b4ec67c6aaaf38488eceb24c360.pdf"
+          },
+          "total_pages": 46,
+          "processed_pages": 46,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=46/46",
+              "titulo_corroborado=4/4"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.281
+    }
+  ]
+}

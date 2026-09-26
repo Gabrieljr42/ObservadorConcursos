@@ -1,0 +1,20 @@
+{
+  "schema": "t012.reviewed-envelope-receipt.v1",
+  "envelope_path": "docs/execucao/evidencias/T012/publiconsult_open/reviewed-envelope-publiconsult-681.json",
+  "envelope_sha256": "0bcbe57c7d4c6b1ca815fcf73856c55b50df27f3a6ce7c129c69e3158e0d9c6c",
+  "envelope_byte_len": 6145,
+  "source": "publiconsult_open",
+  "source_number": 56,
+  "run_id": "tpr-d2bc11468688",
+  "observation_id": "tpr-d2bc11468688",
+  "external_id": "681",
+  "artifact_id": "art-74ea1bc8f9",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "pending_fields": [],
+  "reference_only": true,
+  "network": false,
+  "pilot_touched": false,
+  "proposal_state": "PROPOSTA_PRONTA",
+  "next_owner": "integrador",
+  "next_action": "revisar receipt/envelope e submeter pelo fluxo normal; não aprovar/aplicar neste handoff"
+}

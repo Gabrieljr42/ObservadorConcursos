@@ -1,0 +1,42 @@
+{
+  "schema": "t004.adapter-gap-inventory.v1",
+  "generated_at": "2026-09-13",
+  "scope": "offline bounded audit; 99 matrix configs; no network/docker/implementation",
+  "inputs": [
+    "docs/execucao/tarefas/T005-matriz-candidata-20260912.json",
+    "backend/app/tenderproof/connectors/registry.py",
+    "backend/app/tenderproof/source_adapters.py",
+    "backend/app/tenderproof/fields.py",
+    "backend/tests/fixtures",
+    "docs/T004-LOTE-GARIBALDI-20260912.json",
+    "docs/execucao/evidencias/revisao-inventario-adapters-T004-Luna-r2-20260913.json"
+  ],
+  "matrix_totals": {"configs": 99, "adapter_state_implemented": 71, "partial": 20, "pending": 8, "historical_adapter_current_null": 8, "runtime_factory_absent": 0},
+  "classification": {
+    "runtime_factory_instantiation": [
+      {"matrix_source_number": 3, "source": "aocp_open", "adapter_class": "AOCPConnector", "registration": "dedicated/aocp.py + registry", "instantiable": true, "integration_status": "not_certified", "gap": "acquisition/identity/escopo/homologação", "fixture": "none identified", "owner": "T004", "priority": "P2"},
+      {"matrix_source_number": 8, "source": "seprod_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "aquisição TLS bloqueada", "fixture": "none identified", "owner": "T004", "priority": "P2"},
+      {"matrix_source_number": 23, "source": "unifil_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "aquisição 403 bloqueada", "fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/unifil_open-6012f5f7f665.html; tenderproof_batch60_own/unifil_open-listing0.html", "owner": "T004", "priority": "P2"},
+      {"matrix_source_number": 25, "source": "leandroferreira_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "identidade/DNS não provados", "fixture": "none identified", "owner": "T004", "priority": "P2"},
+      {"matrix_source_number": 28, "source": "iuds_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "TLS bloqueado", "fixture": "none identified", "owner": "T004", "priority": "P3"},
+      {"matrix_source_number": 41, "source": "idgran_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "DNS/identidade pendentes", "fixture": "none identified", "owner": "T004", "priority": "P3"},
+      {"matrix_source_number": 61, "source": "oppus_open", "adapter_class": "ConfigurableHTMLConnector", "registration": "MASTER_SOURCES fallback", "instantiable": true, "integration_status": "not_certified", "gap": "identidade/escopo incompatível não homologados", "fixture": "none identified", "owner": "T004", "priority": "P3"},
+      {"matrix_source_number": 90, "source": "fapemat_selection", "adapter_class": "InstitutionalSelectionConnector", "registration": "MASTER_SOURCES institutional_selection fallback", "instantiable": true, "integration_status": "not_certified", "gap": "aquisição reset pendente", "fixture": "none identified", "owner": "T004", "priority": "P2"}
+    ],
+    "content_runner_or_document_gap": [
+      {"concurso_id": 5, "source": "institutoconsulplan_open", "matrix_source_number": 38, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 5", "gap": "runner not identified; API fields cargos/vagas/remuneracao/taxa/prova absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "identity/document replay if preserved bytes are located", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 18, "source": "quadrix_open", "matrix_source_number": 42, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 18", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "bounded document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 20, "source": "legatus_open", "matrix_source_number": 62, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 20", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "bounded document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 22, "source": "funcern_selection", "matrix_source_number": 64, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 22", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "selection/document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 23, "source": "fgv_open", "matrix_source_number": 10, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 23", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "bounded document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 24, "source": "fcc_open", "matrix_source_number": 9, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 24", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "bounded document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 25, "source": "facet_open", "matrix_source_number": 31, "adapter": "not identified in distribution runner", "config": "docs/T004-DISTRIBUICAO-32-20260912.md row 25", "gap": "runner not identified; API cargo fields absent", "fixture": "runtime artifact from distribution index; no content fixture identified", "test_possible": "bounded document identity test", "owner": "T004-content", "priority": "P1"},
+      {"concurso_id": 33, "source": "legalle_open", "matrix_source_number": 49, "adapter": "EditalVerAdapter", "config": "docs/T004-LOTE-GARIBALDI-20260912.json; backend/app/tenderproof/pilot_adapters.py", "gap": "Garibaldi cargo table unknown; three retificações have effects not composed", "fixture": "backend/tests/fixtures/tenderproof_pilot/legalle_open-*; docs/T004-LOTE-GARIBALDI-20260912.json", "test_possible": "replay and field-level retification tests", "owner": "T004-conteudo", "priority": "P0"},
+      {"concurso_id": 32, "source": "elo_open", "matrix_source_number": 47, "adapter": "ReisAdapter/Barra Longa targeted parser", "config": "backend/app/tenderproof/batch60_elo_adapter.py; barra_longa_parser.py; fields.py pinned branch", "gap": "no remaining gap; T005 accepted", "fixture": "docs/execucao/evidencias/T005/artifacts/T005-concurso32-art-07b137af65.pdf", "test_possible": "already covered", "owner": "T005-closed", "priority": "done"}
+    ],
+    "all_other_configs": {"count": 91, "finding": "registry/config is present or partial; no bounded evidence here supports labeling them absent. Remaining work is source-specific content/document coverage, not an inferred adapter absence.", "owner": "T004", "priority": "P2/P3"}
+  },
+  "executable_gaps": [],
+  "reconciliation": {"runtime_factory_absence": 0, "runtime_factory_instantiable_historical_pending": 8, "runner_or_document_gap_focal": 7, "opened_lot_ready": 1, "no_executable_gaps_proven_for_the_eight": true, "no_import_or_proposal": true},
+  "review": "independent review requested; no implementation authorized by this inventory"
+}

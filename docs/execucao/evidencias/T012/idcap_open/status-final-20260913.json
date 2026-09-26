@@ -1,0 +1,38 @@
+{
+  "task": "T012",
+  "source_id": 13,
+  "source": "idcap_open",
+  "candidate": {
+    "external_id": "252",
+    "title": "Processo Seletivo Privado 001/2026 - OGMO Itajaí - Categoria Capatazia/Arrumador",
+    "detail_url": "https://www.idcap.org.br/informacoes/252/",
+    "document_url": "https://anexos-r2.selecao.net.br/uploads/227/concursos/252/anexos/ccdccdda-da42-4392-9751-7ae9c5d14c0f.pdf",
+    "document_title": "Edital de Abertura 001/2026",
+    "artifact_sha256": "163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b",
+    "artifact_bytes": 800586,
+    "artifact_pages": 30,
+    "local_artifact": "backend/.tenderproof/r30new/idcap_open/artifacts/art-4faa23079f-163aa90df1c2e2808aede4fab6e02df12c579057cf2d4f7fed6ac1ddb35ed46b.pdf",
+    "extracted_text": "backend/.tenderproof/r30new/idcap_open/processing/fa88d374b9cf5e059fad4a2fe406feae4c49cbf4803083ec521d3c75ee22557c/3248bf2c2949432f9f676aa654f03fc6/output.json"
+  },
+  "decision": "BLOCKER_ESPECIFICO",
+  "reason": "O artefato preservado prova identidade e campos do processo, mas não prova vigência em 13/09/2026: o PDF termina na página 30, declara Anexo I – Cronograma no item 37.11 e remete a ele nos itens 4.3, 4.4, 5.1 e 5.3, porém não contém o Anexo I nem qualquer período/data de inscrição. Sem cronograma ou confirmação documental equivalente, não é seguro classificar a seleção como vigente nem gerar proposta.",
+  "evidence": [
+    {"page": 1, "snippet": "PROCESSO SELETIVO PRIVADO Nº 001/2026 ... EDITAL DE ABERTURA Nº 001/2026, DE 31 DE AGOSTO DE 2026"},
+    {"page": 2, "snippet": "TRABALHADOR PORTUÁRIO AVULSO (TPA) ... 101 Capatazia/Arrumador 0+BR 122 ... Remuneração Variável, de acordo com a quantidade de engajamentos do trabalhador (CCTs e ACTs)."},
+    {"page": 3, "snippet": "4.3. As inscrições para o Processo Seletivo Privado estarão abertas no período previsto no Cronograma deste Edital"},
+    {"page": 3, "snippet": "4.18. O valor correspondente à taxa de inscrição será de R$150,00 (cento e cinquenta reais)."},
+    {"page": 30, "snippet": "Página 30 de 30 ... Anexo I – Cronograma ... Itajaí/SC, 31 de agosto de 2026."}
+  ],
+  "duplicate_check": {
+    "catalog_snapshot": "docs/execucao/evidencias/T012/auth-catalog-snapshot-20260913.json",
+    "published_inventory": "docs/entrega-fontes-atual.csv",
+    "source_13_external_252_found_in_published_34": false,
+    "result": "NOT_DUPLICATE_BUT_NOT_ELIGIBLE"
+  },
+  "revalidation": {
+    "status": "NOT_RUN",
+    "reason": "Sem vigência documental comprovada, não há alvo elegível para _revalidate; nenhuma mutação SQLite foi feita."
+  },
+  "resume_condition": "Obter PDF/retificação/cronograma oficial contendo as datas de inscrição e confirmar que o período inclui 13/09/2026; então repetir strong-preflight e _revalidate por vínculo source_id=13/external_id=252/artifact_sha256.",
+  "mutations": {"db": false, "services": false, "shared_dispatch": false, "pilot": false, "import": false, "proposal": false, "apply": false}
+}

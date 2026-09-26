@@ -1,0 +1,33 @@
+{
+  "schema": "t012.shdias-parser-evidence.v1",
+  "state": "SHDIAS_TAX_R6_READY",
+  "module": "backend/app/tenderproof/shdias_hortolandia.py",
+  "pinned_artifact_sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+  "identity": {"source": "shdias_open", "external_id": "MTEw/MzA4", "process_id": "00308"},
+  "canonical_tax_mapping": {
+    "source_label": "taxa_inscricao",
+    "canonical_field": "taxa",
+    "value": "63.25",
+    "evidence_key": "taxa",
+    "literal_snippet": "ENSINO MÉDIO COMPLETO VALOR DA INSCRIÇÃO: R$ 63,25",
+    "page": 2,
+    "json_path": "taxa",
+    "no_invention": true
+  },
+  "diagnosis": {
+    "parser": "now emits parsed[taxa] plus parsed[taxa_inscricao] with identical evidence",
+    "fields_shared_dispatch": "currently omits taxa; SHDias branch replaces titulo/orgao/edital_numero/prova_data/remuneracao/cargos only",
+    "publication_shared_filter": "PUBLISHABLE currently excludes taxa",
+    "eligible_fields_effect": "taxa cannot enter eligible_fields until the minimal shared patch is applied",
+    "side_effects": "none; no proposal/catalogue mutation"
+  },
+  "minimal_shared_patch_for_T007": [
+    "backend/app/tenderproof/fields.py: in the SHDias replacements branch, add replacements['taxa'] = reviewed_field('taxa', parsed['taxa'], ['taxa'])",
+    "backend/app/tenderproof/publication.py: add 'taxa' to PUBLISHABLE",
+    "keep canonical value scalar 63.25; apply path already supports Concurso.taxa through VERSIONED_FIELDS"
+  ],
+  "tests": "backend/tests/test_shdias_hortolandia_r4.py",
+  "network": false,
+  "catalogue_mutated": false,
+  "apply": false
+}

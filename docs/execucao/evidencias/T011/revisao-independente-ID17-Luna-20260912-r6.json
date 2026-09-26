@@ -1,0 +1,61 @@
+{
+  "schema": "t011.independent-review.v6",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "ACEITO_CONDICIONAL",
+  "read_only": true,
+  "mutations": [],
+  "envelope": {
+    "path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json",
+    "sha256": "58d7d17f88e43239cf31030369c59083d95a63d6e11e6ae994b4bdf6dda730f0",
+    "byte_len": 43397,
+    "receipt_sha256": "268ad42fe25768cd7b83908c9f54a06a0751adf71c70bab8c7e37d06e90e4d5c",
+    "preflight_sha256": "ee49f0c96cd7c212198a2a9ee61e1985890ef06ef09e5e80f533b41490b4c5b1",
+    "schema": "tenderproof.reviewed-run.v1",
+    "owner_user_id": 1,
+    "reference_only": true,
+    "pending_fields": []
+  },
+  "artifact": {
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "sha_bytes_verified": true,
+    "identity": "contemax_open / concursos-em-andamento/prefeitura-municipal-de-cubati-pb / Concurso 17 / Cubati-PB / Edital 001/2024",
+    "table_pages": [19, 20]
+  },
+  "content_audit": {
+    "rows": 27,
+    "vagas_total": 79,
+    "ac": 74,
+    "pcd": 5,
+    "cadastro_reserva": null,
+    "requirements_nonempty": 27,
+    "requirements_trailing_R": 0,
+    "replacement_characters": 0,
+    "evidence_count": 27,
+    "evidence_sha_and_artifact_match": true,
+    "evidence_pages": [19, 20],
+    "direct_parser_compare": "supported; 27 rows; material names/vagas/salaries identical; totals 79/74/5",
+    "source_semantics": "AC/PCD/Total are explicit columns; CR is absent and remains null; p19 subtotal typo 33/03/35 is not promoted"
+  },
+  "determinism": {
+    "process_1": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+    "process_2": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+    "expected": "tp-reviewed-090aa78b89d1a70b8ec89112000546cc",
+    "same": true,
+    "dry_run": "two validated runs; network=false; pilot_touched=false; isolated_only=true"
+  },
+  "pilot_gate": {
+    "baseline_cargos": null,
+    "canonical_run_or_proposal": "corrected run/proposal absent per preflight; legacy tp-tcj/tpp-02c... explicitly not reused",
+    "isolated_import_proposal": "parser/preflight records validated_then_imported_to_isolated_store and isolated_proposal_state=proposed, eligible=cargos",
+    "approve_apply": "not authorized"
+  },
+  "release": "ACEITO para uma única importação do envelope SHA 58d7d17f...730f e uma única criação de proposta. Backup/deploy já aprovados. Exigir confirmação pós-import antes de approve/apply; approve/apply permanecem bloqueados.",
+  "conditions": [
+    "Use exactly run_id tp-reviewed-090aa78b89d1a70b8ec89112000546cc and the recorded envelope SHA.",
+    "Do not retry or reuse the legacy run/proposal.",
+    "Preserve reference_only=true and the null CR/unit-unknown semantics."
+  ]
+}

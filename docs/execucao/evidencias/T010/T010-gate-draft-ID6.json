@@ -1,0 +1,13 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "draft": true,
+  "validatable_only": true,
+  "reference_only": true,
+  "pending_fields": ["prova_data", "microareas_individuais"],
+  "record_id": 6,
+  "artifact": {"path": "docs/execucao/evidencias/T010/id6.pdf", "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc", "pages": [1, 2, 20]},
+  "expected_checked_scope": {"cargos": [{"nome": "Agente Comunitário de Saúde — microáreas 1–11", "vagas": {"immediate": 11, "cadastro_reserva": true}, "remuneracao": {"amount": 3242.0, "currency": "BRL", "unit": "mensal"}, "jornada": "40 horas semanais", "requisitos": "Ensino Médio e residência na área", "taxa": {"amount": 120.0, "currency": "BRL", "unit": "por vaga"}}], "registration_window": "2026-10-13 10:00 a 2026-11-13 17:00"},
+  "required_before_gate": ["targeted parser output", "literal Evidence snippets with artifact SHA/page/source URL", "exact candidate/document identity preflight"],
+  "imported": false,
+  "proposal_created": false
+}

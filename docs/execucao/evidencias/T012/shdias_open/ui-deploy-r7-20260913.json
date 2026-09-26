@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-09-13T09:58:23.8620596-03:00",
+  "result": "SHDIAS_UI_R7_DEPLOYED_READY_FOR_LIVE_VALIDATION",
+  "scope": "somente mobile web R7; sem API/worker/scheduler/PG/Redis restart e sem dados",
+  "preflight": {"api_health": "ok", "checkpoint": {"concursos": 34, "distinct_sources": 33, "cargos": 196}},
+  "build": {"command": "scripts/observador-pilot.ps1 -Action BuildWeb", "static_routes": 23, "entry_asset": "_expo/static/js/web/entry-f0ee1b137a5733d51b2966a2d697d63b.js", "entry_sha256": "337B8304F702341E10B46696FAE30AE10EB8B2D4517E3100F4E70B8F524C20D3", "worker_asset": "_expo/static/js/web/worker-7d5df0c0d1a18556afd6d35cf3040e51.js", "worker_sha256": "498D9A1F2ADBF6D6F97B304444FDF9AD1A09E1F84BC1845BAA971855BC15DE93"},
+  "deploy": {"service": "web", "method": "docker compose up -d --no-deps --force-recreate web", "other_services_preserved": true, "volumes_preserved": true},
+  "validation": {"http_inicio": 200, "http_concurso_34": 200, "api_health": "ok", "checkpoint_after": {"concursos": 34, "distinct_sources": 33, "cargos": 196}},
+  "next_gate": "CUA/live visual validation; no proposal/apply performed"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "t012.klc_open.luna-parser-r8-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "KLC_PARSER_R8_ACCEPT_FOR_INTEGRATION",
+  "scope": "read_only; wiring/canonical import remain outside this gate",
+  "checks": {
+    "artifact_pin": "PASS: local artifact is 348300 bytes with SHA256 84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "dispatch_pins": "PASS: dispatch rejects artifact SHA, byte_len, url_requested and url_final drift before parsing",
+    "guards": "PASS: unconditional U+FFFD, global truncated/errors, PageText.truncated/error/processing_error, exact page count/order, source/external/SHA and document URL",
+    "typed_output": "PASS: dispatch returns list[ExtractedField] with formal Evidence bound to artifact/SHA/URL/page/snippet/json_path/validation",
+    "reproduced_evidence": "PASS: dedicated _reproduced_evidence test remains present",
+    "tests": "12 tests declared/present, including each R7/R8 regression; pytest execution was unavailable because Python/pytest is not installed",
+    "strong_fallback": "PASS as a source-specific typed boundary; generic strong binding remains fail-closed until wiring, which is the next explicitly separate step"
+  },
+  "release": "Integration wiring may proceed using dispatch only; do not import, create canonical proposal, approve, or apply from this review."
+}

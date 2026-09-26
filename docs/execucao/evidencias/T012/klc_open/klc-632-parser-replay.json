@@ -1,0 +1,13 @@
+{
+  "source": "klc_open",
+  "external_id": "632",
+  "artifact_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+  "extractor": "extract_pages_isolated",
+  "pages": 10,
+  "runs": [],
+  "deterministic": null,
+  "review_status": "KLC_REVIEW_R2",
+  "dry_run_blocker": "Não executado: concurso_id canônico nulo; o importador rejeita source_number como target.",
+  "promoted_fields": ["titulo","orgao","edital_numero","inscricao_inicio","inscricao_fim","cargos"],
+  "proof_date_not_promoted": true
+}

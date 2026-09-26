@@ -1,0 +1,28 @@
+{
+  "schema": "t012.publiconsult.luna-parser-r5-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "REJECT",
+  "requested_gate": "PUBLICONSULT_PARSER_R5_ACCEPT_FOR_INTEGRATION",
+  "findings": [
+    {
+      "severity": "P1",
+      "path": "docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py:70-78",
+      "finding": "The claimed real dispatcher proof is still controlled: publication.extract_fields is monkeypatched to prepared.fields. No production fields.py/source-adapter hook calls this parser, so the actual _revalidate path remains unproven and prior generic extraction still blocks strong binding.",
+      "required_fix": "Register the source-specific dispatch in the normal fields/publication path and rerun _revalidate without monkeypatching extract_fields; prove the same eligible/blocked result and zero persistence."
+    },
+    {
+      "severity": "P2",
+      "path": "docs/execucao/evidencias/T012/publiconsult_open/publiconsult_parser_r3.py:63-64",
+      "finding": "Artifact URL validation is only substring '/681/' plus '.pdf'; it does not enforce the preserved official host/URL or content type. The parser also relies on run.artifact.byte_len rather than a pinned expected byte length.",
+      "required_fix": "Pin the exact approved document URL/host and expected byte length (or prove the equivalent canonical artifact receipt) before field promotion."
+    }
+  ],
+  "positive_checks": {
+    "selection": "PASS: source/external filtering requires exactly one Publiconsult/681 candidate and selected_candidate_id points to it.",
+    "artifact": "PASS: pinned SHA, page count 25, non-empty pages and U+FFFD guard; URL shape and PDF suffix checked.",
+    "types": "PASS: fields_for_run returns ExtractedField, ValidationResult and evidence-compatible identity data.",
+    "tests": "4 passed, 1 warning in 8.94s; compileall PASS.",
+    "side_effects": "PASS: controlled disposable revalidation leaves no TenderProofRun persisted."
+  },
+  "gate": "Do not accept R5 for integration until production dispatch is wired and exercised without monkeypatching; preserve reference_only/no-approval boundaries."
+}

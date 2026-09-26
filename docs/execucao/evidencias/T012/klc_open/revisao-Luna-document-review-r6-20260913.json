@@ -1,0 +1,51 @@
+{
+  "review": "Luna KLC document-review prepare R6 diagnosis",
+  "date": "2026-09-13",
+  "verdict": "READY_FOR_PRESERVED_DOCUMENT_OPERATION_NO_BACKEND_PATCH",
+  "scope": "offline/read-only; no API, Docker, live or backend mutation",
+  "receipt": "document-review-live-receipt-r5-20260913.json",
+  "receipt_facts": {
+    "run_id": "tp-reviewed-8dc0f15d53da4a5037d515b2888a14fc",
+    "owner_user_id": 1,
+    "source_id": 57,
+    "external_id": "632",
+    "pending": true,
+    "documents": 1,
+    "http": 409,
+    "response_body": "not captured because client disposed response; no retry",
+    "counts_unchanged": true
+  },
+  "pinned_manifest": {
+    "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+    "kind": "edital",
+    "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "artifact_id": "art-96637dad76",
+    "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "byte_len": 348300,
+    "pages": 10
+  },
+  "offline_reproduction": {
+    "fixture": "backend/tests/fixtures/tenderproof_batch99_own/klc_open-detail0.html",
+    "adapter": "backend/app/tenderproof/batch99_own_adapters.py::KLCAdapter",
+    "observed_document_count": 7,
+    "observed_principal": {"title": "Edital de Processo Seletivo", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf", "kind": "edital"},
+    "pending_identity": ["https", "www.klcconcursos.com.br", "/editais/4fe007a9a3f5afb03835272439f1812f.pdf", [], "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP", "edital"],
+    "observed_principal_identity": ["https", "www.klcconcursos.com.br", "/editais/4fe007a9a3f5afb03835272439f1812f.pdf", [], "Edital de Processo Seletivo", "edital"],
+    "identity_equal": false,
+    "conclusion": "The normal prepare path fails its exact official-manifest identity comparison before parser, page-count, snippet or concurrency processing. This is a title/manifest identity mismatch (and, with only the one pending item supplied, also an observed-set cardinality mismatch), not an absent KLC parser or artifact SHA/URL/page failure."
+  },
+  "minimum_safe_fix": {
+    "operation": "Use authenticated prepare-preserved for the exact pending manifest and already registered artifact, expected_page_count=10; do not retry normal prepare and do not alter the envelope.",
+    "document": {"title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP", "url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf", "kind": "edital", "file_format": "pdf"},
+    "artifact": {"artifact_id": "art-96637dad76", "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4", "byte_len": 348300, "content_type": "application/pdf", "url_requested_and_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf"},
+    "expected_page_count": 10,
+    "guards": "The route must recheck owner/run, exact pending document identity, URL/host, registered bytes/SHA, main artifact identity and complete extraction; then approve no_field_change only after literal page evidence review.",
+    "backend_bundle": "No KLC parser change is indicated or required by this diagnosis; R17 need not include a KLC code patch."
+  },
+  "tests_proposed": [
+    "Offline regression: assert KLC normal prepare rejects the full-title versus adapter-title identity mismatch with captured detail, without changing pending state.",
+    "Offline preserved-path test: exact title/URL/kind/artifact SHA/bytes/pages creates one idempotent case; wrong title, URL, SHA, pages or owner fail closed.",
+    "Existing KLC parser/dispatch suite remains the parser/pin coverage (no parser failure observed)."
+  ],
+  "mutations_by_review": false
+}

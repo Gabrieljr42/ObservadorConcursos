@@ -1,0 +1,9 @@
+{
+  "schema": "observador.t010.id14.web_deploy.v1",
+  "recorded_at": "2026-09-13T02:08:35.0833286-03:00",
+  "scope": "web only; no API/data mutation; ID14 not applied",
+  "image": "sha256:1dd0e07a1f00ae6fc84fb2d9abb94738594455f3ce1288b0ddccf26ae23cc01f",
+  "asset": {"name": "entry-ed357d6cd1c2750f556e9ffd48d77343.js", "sha256": "a6e23e542061001a138168b69cd1da5ce314ccad3550388fab2519795643e5ab"},
+  "routes": {"ok": 23, "total": 23, "failed": []},
+  "gate": "PASS; awaiting visual/review gate before ID14 apply"
+}

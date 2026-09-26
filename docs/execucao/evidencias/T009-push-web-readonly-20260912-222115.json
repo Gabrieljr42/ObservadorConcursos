@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-12T22:21:15-03:00",
+  "operator": "Luna integrador",
+  "scope": "T009 read-only post-smoke web check",
+  "database": {
+    "push_devices": 0,
+    "push_deliveries": 0,
+    "push_delivery_attempts": 0,
+    "query": "SELECT count(*) from each push table; no write"
+  },
+  "runtime": {
+    "push_dispatch_enabled": false,
+    "drain_scheduled": false,
+    "beat_keys": [
+      "crawl-active-sources-hourly",
+      "heartbeat-crawler",
+      "tenderproof-continuous",
+      "tenderproof-internal-notifications"
+    ]
+  },
+  "web_activate_push": {
+    "canonical_effect": "none observed; no dialog and no POST",
+    "source": "docs/execucao/evidencias/evidencia-piloto-T010-ID6-gate-2026-09-13.json",
+    "no_device_create_or_revoke": true
+  }
+}

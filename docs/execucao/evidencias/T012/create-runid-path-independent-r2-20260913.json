@@ -1,0 +1,31 @@
+{
+  "schema": "t012.reviewed-run-path-independent-r2.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "ReviewedRun identity/import only; offline",
+  "change": {
+    "semantic_identity": ["owner_user_id", "source", "external_id", "concurso_id nullable", "artifact_id", "url_requested", "url_final", "sha256", "byte_len", "content_type", "reviewed fields", "evidence values/URLs/SHA/page/snippets/method/units"],
+    "excluded_runtime": ["artifact.content_path", "artifact.content_base64", "artifact.storage_path", "downloaded_at", "evidence_id", "run timestamps"],
+    "safety": "SHA/URL/bytes/pages/evidence/value/units/owner drift changes the ID; path-only changes do not.",
+    "legacy": "If a pre-r2 run ID exists, replay compares complete semantic run content and returns idempotent_legacy without takeover; divergence raises a strong conflict."
+  },
+  "files_modified": [
+    "backend/app/tenderproof/reviewed_run_import.py",
+    "backend/tests/test_reviewed_run_import.py",
+    "backend/tests/test_ufu_selection_preflight.py"
+  ],
+  "proof": {
+    "runtime_paths": "Windows/CodexSandboxOffline/container path variants derive the same ID",
+    "owner": "different owners derive different IDs",
+    "artifact_drift": "URL, artifact_id and evidence page changes derive different IDs",
+    "legacy_replay": "old-ID store row is read-only/idempotent after algorithm upgrade",
+    "ufu_new_id": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_reviewed_run_import.py backend/tests/test_ufu_selection_preflight.py -k 'run_id or reviewed_import or null_target or legacy or r4_run_serialization'",
+    "result": "7 passed, 10 deselected",
+    "regression": "reviewed importer + CREATE publication + JWT owner isolation: 10 passed",
+    "compileall": "PASS"
+  },
+  "preserved": ["create-contract", "KLC", "AvançaSP", "APTA"],
+  "side_effects": {"docker": false, "network": false, "live_or_pilot": false, "proposal_or_apply": false}
+}

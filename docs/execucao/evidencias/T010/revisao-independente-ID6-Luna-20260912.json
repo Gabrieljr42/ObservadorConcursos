@@ -1,0 +1,46 @@
+{
+  "schema": "t010.id6.independent-parser-gate.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "decision": "ACEITA",
+  "decision_scope": "Implementar somente parser SHA-pinned fail-closed para ID6; não autoriza proposta, aprovação, aplicação ou edição de quadro.",
+  "read_only": true,
+  "mutations_by_reviewer": [],
+  "artifact": {
+    "path": "docs/execucao/evidencias/T010/id6.pdf",
+    "sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "bytes": 597314,
+    "sha_check": "Get-FileHash SHA256: match"
+  },
+  "identity": {
+    "pdf": "PREFEITURA MUNICIPAL DE BERIZAL/MG; PROCESSO SELETIVO PÚBLICO; EDITAL Nº 001/2026; Instituto IMESO",
+    "catalog_get": "GET /sync/checkpoint (read-only): id=6, source_id=17, external_id=139, orgao=Prefeitura Municipal De Berizal, edital_numero=001/2026, banca=IMESO - Concursos e Seletivos",
+    "canonical_page": "https://portal.imeso.com.br/edital/ver/139",
+    "canonical_pdf": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf",
+    "finding": "Identidade edital/órgão/banca confere; preflight ainda deve provar source=imeso_open, external_id=139 e URL final exatamente escolhida para o artefato."
+  },
+  "checked_values": {
+    "role": "Agente Comunitário de Saúde — microáreas 1–11",
+    "immediate_vacancies": 11,
+    "reserve": "CR por microárea; total geral 11 + CR",
+    "salary": {"amount": 3242.0, "currency": "BRL", "unit": "mensal"},
+    "hours": "40h semanais",
+    "requirement": "Residir na área da comunidade que irá atuar desde a data da publicação do Edital do Processo Seletivo / Ensino Médio Completo",
+    "fee": {"amount": 120.0, "currency": "BRL", "unit": "por vaga"},
+    "proof_date": "pending; não inferir"
+  },
+  "evidence": [
+    {"page": 1, "snippet": "PREFEITURA MUNICIPAL DE BERIZAL/MG PROCESSO SELETIVO PÚBLICO - EDITAL Nº 001/2026", "source_url": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf", "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc"},
+    {"page": 2, "snippet": "O candidato ao cargo de Agente Comunitário de Saúde deverá residir no município e na área da comunidade", "source_url": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf", "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc"},
+    {"page": 22, "snippet": "AGENTE COMUNITÁRIO DE SAÚDE - MICRO ÁREA 1 UBS Beriza Residir na área da comunidade que irá atuar desde a data da publicação do Edital do Processo Seletivo / Ensino Médio Completo R$ 120,00 1+CR 0 R$ 3.242,00 40h", "source_url": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf", "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc"},
+    {"page": 22, "snippet": "AGENTE COMUNITÁRIO DE SAÚDE - MICRO ÁREA 11 UBS Barreiros Residir na área da comunidade que irá atuar desde a data da publicação do Edital do Processo Seletivo / Ensino Médio Completo R$ 120,00 1+CR 0 R$ 3.242,00 40h", "source_url": "https://s3.us-east-1.amazonaws.com/cdn.imeso.com.br/edital/1/139/402c39f4f7ecc38a1905e41163fdc4be.pdf", "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc"}
+  ],
+  "mandatory_corrections": [
+    "Parser deve ser exclusivo para source=imeso_open, external_id=139, edital 001/2026 e SHA acima; falhar fechado em qualquer divergência.",
+    "Usar página 22 para a tabela (o draft listava 20); preservar 11 linhas microárea 1–11, cada uma 1+CR e VAGAS DEFICIENTES=0. Não converter em PcD agregado nem chamar 11 de vagas totais.",
+    "Prova/data permanece pending; microáreas individuais deixam de ser pending somente se as 11 linhas forem extraídas literalmente.",
+    "Antes de qualquer proposta, executar preflight de identidade e produzir reviewed_run; no estado consultado cargos do catálogo são null e não existe proposta/diff material confirmado."
+  ],
+  "api_observation": "GET /sync/checkpoint read-only confirmou catálogo ID6; nenhuma escrita, proposta, aprovação, versão ou evento foi realizada.",
+  "gate_conclusion": "ACEITA para implementação condicionada às correções acima; não aceita payload agregado nem qualquer dispatch sem reviewed_run canônico e evidência SHA/página/URL alinhada."
+}

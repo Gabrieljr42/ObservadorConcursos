@@ -1,0 +1,25 @@
+{
+  "schema": "t012.apta.staging-package-r6.v1",
+  "source": "apta_open",
+  "source_id": 48,
+  "external_id": "708",
+  "owner_user_id": 1,
+  "artifact_id": "art-18bef50e17",
+  "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+  "byte_len": 362093,
+  "pages": 20,
+  "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+  "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+  "storage_root": "docs/execucao/evidencias/T012/apta_open/staging-r6/artifacts",
+  "storage_basename": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+  "content_path": "docs/execucao/evidencias/T012/apta_open/staging-r6/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+  "identity": {
+    "title": "Câmara Municipal de Aragarças",
+    "orgao": "Câmara Municipal De Aragarças",
+    "edital_numero": "01/2026",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708"
+  },
+  "staging": "offline copy verified against SHA/byte_len; save_artifact_file/commit_run_artifact produced the same hash-addressed basename in disposable storage",
+  "canonical_target": null,
+  "live": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "tenderproof.t010.id16.document-review-gate.v1",
+  "recorded_at": "2026-09-13T02:32:39-03:00",
+  "run_id": "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc",
+  "backup": {
+    "bundle_prefix": "pilot-20260913T052751638Z",
+    "postgres_dump": "pilot-20260913T052751638Z-postgres.dump",
+    "restore_isolated": true,
+    "restore_counts": {"concursos": 33, "versions": 90, "proposals": 93, "outbox": 90, "notifications": 89}
+  },
+  "amendment_artifact": {
+    "path": "docs/execucao/evidencias/T010/artifacts/id16-retificacao01.pdf",
+    "sha256": "e5d57b83713d09e9095a23fd7767f3ab8f9c109cad8aa1636cb4f1bd13b38f05",
+    "bytes": 397534,
+    "pages": 23
+  },
+  "document_review": {
+    "get_pending": true,
+    "prepare_attempted": true,
+    "prepare_http": 409,
+    "prepare_detail": "Documento pendente não está mais disponível na lista oficial",
+    "draft_submitted": false,
+    "approved": false,
+    "pending_cleared": false
+  },
+  "proposal_retry": {"attempted": false, "reason": "STOP at document-review prepare divergence"},
+  "mutation_scope": {"catalogue": false, "versions": 90, "outbox": 90, "notifications": 89},
+  "next_gate": "Reconcile the official document manifest/materialization through the normal collection flow; do not bypass with SQL or submit a draft without a prepared case."
+}

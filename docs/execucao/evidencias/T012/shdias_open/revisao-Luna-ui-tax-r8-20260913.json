@@ -1,0 +1,21 @@
+{
+  "schema": "t012.shdias.ui-tax-r8-luna-review.v1",
+  "verdict": "ACCEPT_FOR_BUILD_DEPLOY",
+  "scope": "mobile-only top-level taxa alias and cargo normalization",
+  "checks": {
+    "contract": "PASS: Concurso accepts canonical top-level taxa while retaining legacy taxa_inscricao; repositories pass value.taxa_inscricao ?? value.taxa into generic normalizarCargo.",
+    "precedence": "PASS: an existing cargo taxa_inscricao wins; null/undefined cargo fee falls back to contest fee only. No SHDias-specific hardcoding.",
+    "formatting": "PASS: numeric/string 63.25 normalizes to '63.25' and renders as R$ 63,25 through Intl pt-BR formatting.",
+    "regressions": "PASS: cargo aliases/benefits/quotas/search/amendments and offline transaction/favorite/alert checkpoint tests remain green."
+  },
+  "tests": [
+    {"command": "node mobile/tests/cargo-formatting.test.cjs", "result": "9 passed, including 63.25 -> R$ 63,25 and legacy alias cases"},
+    {"command": "node mobile/tests/search-filters.test.cjs; node mobile/tests/amendment-effects.test.cjs; node mobile/tests/local-transaction.test.cjs", "result": "8 passed"},
+    {"command": "node mobile/tests/alert-state.test.cjs; node mobile/tests/auth-initialization.test.cjs; node mobile/tests/checkpoint-pending.test.cjs", "result": "9 passed"},
+    {"command": "cd mobile; npx tsc --noEmit", "result": "PASS"}
+  ],
+  "notes": [
+    "No hardcoded contest/source value was found; no backend, build, deploy or data mutation performed.",
+    "mobile/package.json has no test script, so direct TAP entrypoints were used."
+  ]
+}

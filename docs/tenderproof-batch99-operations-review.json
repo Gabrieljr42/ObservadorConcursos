@@ -1,0 +1,98 @@
+{
+  "review_date": "2026-09-08",
+  "scope": "Independent operations review for stages 11-13. Current preserved batch99 evidence, inherited operational evidence and untested deployment behavior are distinguished. This is not batch-gate acceptance.",
+  "outcome": "operational_evidence_consistent_with_bounded_single_host_scope",
+  "passed": true,
+  "blocking_product_defects_found": [],
+  "core_changes": [],
+  "current_proofs": [
+    {
+      "area": "Operational SQLite backup and restore of preserved batch99 evidence",
+      "report": "tenderproof-batch99-operations-storage-backup.json",
+      "command": "backend/.venv/Scripts/python.exe backend/scripts/tenderproof_batch99_operations_review.py",
+      "passed": true,
+      "basis": "Root explicitly confirmed writers to r99replay13 and r99replaysections had finished. Other validation used read-only access or separate volumes. Root subsequently confirmed r99replayfapese quiet; --append-fapese added its independent backup/restore without repeating the other two volumes.",
+      "procedure": "Read original file hashes, run/artifact references and every SQLite table; invoke existing operational_backup.backup with stopped-writer attestation; verify manifest; restore to a new separate directory; compare original-before/original-after/restored PDF hashes and all logical table contents.",
+      "results": ["SQLite integrity_check ok", "all logical table row counts and digests identical", "all original PDF hashes unchanged", "all restored PDF hashes identical", "source IDs and artifact references identical", "zero deleted files"],
+      "preserved_new_directories": ["backend/.tenderproof/r99opsbackup13", "backend/.tenderproof/r99opsrestore13", "backend/.tenderproof/r99opsbackupsections", "backend/.tenderproof/r99opsrestoresections", "backend/.tenderproof/r99opsbackupfapese", "backend/.tenderproof/r99opsrestorefapese"],
+      "limits": "No PostgreSQL canonical backup/restore, production cutover or distributed/cloud-sync storage guarantee. SQLite WAL is folded into destination database files, so logical table digests are compared rather than requiring identical SQLite file hashes."
+    },
+    {
+      "area": "Current bounded operational regressions",
+      "command": "backend/.venv/Scripts/python.exe -m pytest tests/test_tenderproof_operational_backup.py tests/test_tenderproof_browser_closure_confirmation.py tests/test_tenderproof_continuous.py::test_auth_owner_limits_and_manual_enqueue_survive_broker_down tests/test_tenderproof_continuous.py::test_duplicate_broker_delivery_no_network_and_dispatch_failure_retries tests/test_tenderproof_continuous.py::test_checkpoints_atomic_and_new_process_sees_continuation tests/test_tenderproof_continuous.py::test_browser_intent_without_id_survives_crash_and_blocks_new_launch tests/test_tenderproof_continuous.py::test_unknown_browser_closure_holds_only_paid_fallback -q --junitxml=.tenderproof/batch99-operations-review.xml",
+      "cwd": "backend",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.81,
+      "junit": "backend/.tenderproof/batch99-operations-review.xml",
+      "proved": ["backup rejects corruption/path escape/existing target and requires stopped writers", "API enqueues into durable SQLite without broker access", "dispatch exception leaves ready work eligible", "duplicate delivery creates no second acquisition", "fresh process reads committed continuation after atomic rollback test", "unknown browser creation/closure survives reopening the queue and blocks another paid launch", "DELETE alone or provider404 does not prove browser closure; released state does"],
+      "limits": "Broker unavailability is injected in dispatch; API uses TestClient. No real Redis outage or new paid browser in these 13 tests."
+    },
+    {
+      "area": "Batch99 completed-result crash recovery",
+      "report": "tenderproof-batch99-recovery-validation13.json",
+      "classification": "current batch99 evidence, inspected rather than repeated",
+      "source_count": 13,
+      "mechanism": "Real os._exit73 after completed run persistence, another process recovers the final-attempt job without new driver/download; isolated lease timestamp advanced only after confirmed process exit.",
+      "limits": "Covers the 13-source replay volume; does not silently include fatec_selection/fappr_selection from the separate sections replay. No source availability or Celery/Redis claim."
+    },
+    {
+      "area": "Mixed queue and scheduler-facing metrics",
+      "report": "tenderproof-batch99-mixed-validation.json",
+      "classification": "current batch99 evidence, inspected rather than repeated",
+      "passed": true,
+      "scope": "Two actual same-host consumer processes, 13 preserved valid sources and 3 explicit failed-source fixtures, two rounds, retries, queue metrics and zero unconfirmed browser attempts.",
+      "limits": "Direct ContinuousEngine consumers, not Celery/Redis. Does not include fatec_selection/fappr_selection, and its list of sources without contract is a dated snapshot. Metrics include queue waiting and concurrent host work, not isolated production throughput."
+    }
+  ],
+  "inherited_proofs": [
+    {
+      "area": "Real Redis/Celery worker loss and redispatch",
+      "report": "tenderproof-rollout-continuous-validation.json",
+      "validated_at": "2026-09-07T23:47:04.029939+00:00",
+      "passed_checks": 8,
+      "checks": ["duplicate_delivery_single_claim", "checkpoint_before_download", "worker_confirmed_dead", "durable_tick_redispatch", "cycle_completed", "one_review_observation", "fence_incremented_after_worker_death", "separate_process_reads_run_pdf"],
+      "cleanup": "Report confirms all workers stopped and dedicated Redis container removed with absence confirmed.",
+      "limits": "Explicit synthetic fixture; Redis remained available. This is eight queue checks, not eight browser closures. No claim that actual API server or Celery beat was killed/restarted; a fresh reader process and direct continuous_tick invocation exercised durable state."
+    },
+    {
+      "area": "Real browser closure",
+      "report": "tenderproof-expansion-validation.json",
+      "validated_at": "2026-09-07T23:14:51.187639+00:00",
+      "scope": "One actual IBGP listing, nine candidates, one browser session with confirmed closure and zero pending browser journal entries; source paused afterward.",
+      "limits": "Inherited single-listing scope, no new browser request in batch99 operations review and no full-source browser certification."
+    },
+    {
+      "area": "Earlier authenticated artifact and session evidence",
+      "report": "tenderproof-validation.json",
+      "validated_at": "2026-09-07T21:05:25.601510+00:00",
+      "scope": "One preserved run with authenticated PDF bytes/SHA and discovery/detail sessions marked confirmed closed.",
+      "limits": "Report itself says zero new browser sessions and replay pending; this is not a new live closure check or evidence that a replay404 means closed."
+    }
+  ],
+  "restart_assessment": {
+    "sqlite_authority": "backend/app/tenderproof/continuous_tasks.py:1 states broker deliveries are hints; every tick constructs a fresh engine, schedules due sources and redispatches ready jobs. No sent flag can permanently lose a broker delivery.",
+    "api": "Current TestClient proof accepts durable enqueue without Redis; current child-process test reads committed queue state. Inherited real Celery proof includes another process loading run and PDF. An actual production API-server restart was not performed.",
+    "worker": "Actual process death/recovery is proven in inherited Redis/Celery execution and current batch99 13-source completed-result recovery.",
+    "scheduler": "Durable redispatch is proven by the inherited real broker tick and current injected dispatch-failure test. A separate Celery beat service restart and wall-clock downtime were not exercised.",
+    "redis": "No current full Redis stop/restart experiment. Failure behavior is covered at the broker call boundary and real Redis delivery is inherited. SQLite remains authoritative; no production Redis availability claim.",
+    "judgment": "No additional mandatory product defect was found for the stated bounded local/offline acceptance. Actual service orchestration restart, production storage setup and coordinated canonical backup remain deployment validation, not evidence silently supplied by these tests."
+  },
+  "storage_measurement": {
+    "detailed_report": "tenderproof-batch99-operations-storage-backup.json",
+    "r99replay13": {"sources": 13, "durable_artifact_pdf_files": 26, "durable_artifact_bytes": 28921758, "processing_input_pdf_files": 26, "processing_input_bytes": 28921758, "distinct_pdf_hashes": 13, "deduplicated_pdf_bytes": 14460879, "all_files_bytes_including_sqlite_sidecars_at_measurement": 64369420},
+    "r99replaysections": {"sources": 2, "source_ids": ["fappr_selection", "fatec_selection"], "durable_artifact_pdf_files": 4, "durable_artifact_bytes": 1321506, "processing_input_pdf_files": 4, "processing_input_bytes": 1321506, "distinct_pdf_hashes": 2, "deduplicated_pdf_bytes": 660753, "all_files_bytes_including_sqlite_sidecars_at_measurement": 4334926},
+    "initial_two_roots_combined": {"distinct_sources": 15, "durable_artifact_pdf_files": 30, "durable_artifact_bytes": 30243264, "processing_input_pdf_files": 30, "processing_input_bytes": 30243264, "all_physical_pdf_files": 60, "all_physical_pdf_bytes": 60486528, "distinct_pdf_hashes": 15, "deduplicated_pdf_bytes": 15121632},
+    "r99replayfapese": {"sources": 1, "source_ids": ["fapese_selection"], "durable_artifact_pdf_files": 2, "durable_artifact_bytes": 691948, "processing_input_pdf_files": 2, "processing_input_bytes": 691948, "distinct_pdf_hashes": 1, "deduplicated_pdf_bytes": 345974, "original_and_restored_sqlite_tables_identical": true, "pdf_hashes_unchanged": true},
+    "combined": {"distinct_sources": 16, "durable_artifact_pdf_files": 32, "durable_artifact_bytes": 30935212, "processing_input_pdf_files": 32, "processing_input_bytes": 30935212, "all_physical_pdf_files": 64, "all_physical_pdf_bytes": 61870424, "distinct_pdf_hashes": 16, "deduplicated_pdf_bytes": 15467606},
+    "counting_notes": ["Two durable artifact files per source come from the two replay cycles; processing input copies are additional files, not additional notices or sources.", "The live-evidence audit count of31 files refers to other original capture roots; it is not the count of these two replay volumes.", "Processing PDFs not pointed to by run.artifact are reported separately, not declared corrupt/orphaned or eligible for deletion.", "Storage totals include WAL/SHM at a timestamp and must not be confused with snapshot_html_bytes metrics.", "Each source/run/file association, physical path, byte size and SHA256 is recorded in the detailed report."]
+  },
+  "operations_limits": [
+    "Production collection/publication were not enabled or changed by this audit.",
+    "No artifacts, failed reports, original PDFs, backups or restored volumes were deleted.",
+    "Workspace resides under OneDrive; this offline validation does not endorse synchronized/network storage for live SQLite operation. The operations runbook requires local storage outside OneDrive/NFS.",
+    "Operational backup intentionally excludes the separate canonical database; coordinated canonical backup remains necessary before real deployment/cutover.",
+    "No new paid session, external notification or official-source HTTP request was issued."
+  ]
+}

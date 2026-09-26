@@ -1,0 +1,51 @@
+{
+  "schema": "t012.independent-live-envelope-review.v1",
+  "verdict": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "source": "avancasp_open",
+  "source_number": 54,
+  "external_id": "272",
+  "identity": {
+    "detail_url": "https://avancasp.selecao.net.br/informacoes/272/",
+    "title": "CONCURSO PÚBLICO 01/2026 - PREFEITURA MUNICIPAL DE CABREÚVA",
+    "identity_confirmed": true,
+    "html_artifact_sha256": "8f84661e03be3aaac0022a91f680c2c25e98ef8d1682e90c75be0f60061d59e3",
+    "html_route": "rejected/not used for live document; PDF is sole artifact"
+  },
+  "pdf": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf",
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "byte_len": 742298,
+    "pages": 48,
+    "url": "https://anexos-r2.selecao.net.br/uploads/301/concursos/272/anexos/aa3e927b-faeb-414e-ae6c-28800427a051.pdf",
+    "verified_against_local_bytes": true
+  },
+  "envelope": {
+    "path": "docs/execucao/evidencias/T012/avancasp_open/live-envelope-ready-r1.json",
+    "schema": "tenderproof.reviewed-run.v1",
+    "run_id": "tp-reviewed-99b7976845305f188d176677963fc079",
+    "run_id_new_deterministic": true,
+    "fields_count": 7,
+    "fields": ["titulo","orgao","inscricao_inicio","inscricao_fim","prova_data","edital_numero","cargos"],
+    "pending_fields": [],
+    "reference_only": true,
+    "owner_user_id": 1
+  },
+  "evidence_review": {
+    "all_evidence_sha_bound_to_pdf": true,
+    "literal_snippets_verified": true,
+    "cargo_count": 14,
+    "currentness": "2026 edital; dates and current opening artifact match the preserved source snapshot"
+  },
+  "round_trip": {
+    "reviewed_run_model_validate": true,
+    "import_dry_run": "validated",
+    "revalidate_sqlite_ephemeral": "PASS",
+    "tests": "10 passed",
+    "negative_html_sha_8f8466": "rejected/not routable",
+    "negative_stale_external_id": "rejected",
+    "negative_sha_drift": "rejected",
+    "pilot_called": false,
+    "catalogue_mutated": false
+  },
+  "scope": "independent read-only review; no code/live envelope/API/DB/pilot edits"
+}

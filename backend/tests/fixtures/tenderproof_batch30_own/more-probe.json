@@ -1,0 +1,42 @@
+[
+  {
+    "source": "reis_detail",
+    "url": "https://novo.reisauditores.com.br/editais/70",
+    "observed_at": "2026-09-08T00:05:16.266563+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 51402,
+    "sha256": "bd9b023ac76fd1be454118e7c11a5b62d33c3352a70ca9120c16aaf3cfdfad01",
+    "file": "reis_detail-listing.html"
+  },
+  {
+    "source": "ibfc_detail2",
+    "url": "https://concursos.ibfc.org.br/informacoes/485/",
+    "observed_at": "2026-09-08T00:05:16.267549+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 234089,
+    "sha256": "0ccd0b1faf1df97c38b8410d8a5a79a3359aa45fe13faa46fd1d4c63fdaa0d0a",
+    "file": "ibfc_detail2-listing.html"
+  },
+  {
+    "source": "admtec_detail2",
+    "url": "https://admtec.org.br/concursos/publicacoes/MTA4/MTE2",
+    "observed_at": "2026-09-08T00:05:16.267549+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 1165047,
+    "sha256": "4ab80ce235b80c215edae42d2a2fc99cc7a8aa74772b84207b5620f95314f918",
+    "file": "admtec_detail2-listing.html"
+  },
+  {
+    "source": "institutomais_detail3",
+    "url": "https://www.institutomais.org.br/Concursos/Detalhe/10648",
+    "observed_at": "2026-09-08T00:05:16.267549+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 12499,
+    "sha256": "578110ff21c611cfa07d72c111653ad0b3923df3a43fd5ead50dc7f0c03b606e",
+    "file": "institutomais_detail3-listing.html"
+  }
+]

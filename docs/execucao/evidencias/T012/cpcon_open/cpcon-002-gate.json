@@ -1,0 +1,9 @@
+{
+  "schema":"t012.cpcon_open.gate.v1",
+  "status":"CPCON_REVIEWED_R2_TARGET_UNALLOCATED",
+  "run_id":null,
+  "checks":{"CPCONAdapter_identity": "PASS", "official_detail_document_binding":"PASS", "artifact_sha256_byte_len":"PASS", "pdf_pages":"13/13 PASS", "cargo_cardinality":"6 PASS", "unknown_fields_not_promoted":"PASS", "literal_substrings":"9/9 PASS; U+FFFD=0", "reviewed_run_model":"BLOCKED only because concurso_id=null", "import_dry_run":"WAITING_CANONICAL_TARGET", "network":"NOT_USED", "proposal_post":"NOT_USED", "apply":"NOT_USED"},
+  "fail_closed":{"required_identity":["source=cpcon_open","external_id=processo-seletivo-simplificado-no-002-2026","detail_url exact","artifact SHA exact"],"required_fields":["titulo","orgao","edital_numero","cargos"],"omitted_fields":["taxa_inscricao","prova_data"],"reject_if":["artifact hash/bytes drift","detail/document mismatch","cargo count drift","unknown field promotion"]},
+  "integrator_safe_commands":["ReviewedRun(model=docs/execucao/evidencias/T012/cpcon_open/cpcon-002-reviewed-run.json)","import_reviewed_run(..., dry_run=false) only after independent review","create_proposal(concurso_id=34, run_id=tp-reviewed-54c08336f287a1cdef3f0c86df3075f5) only after review gate"],
+  "note":"R2 evidence is verbatim and fail-closed. Canonical target intentionally remains null; do not invent/reserve concurso_id. Integrator must allocate a target before schema/import dry-run."
+}

@@ -1,0 +1,197 @@
+Browser tab: 1, Title: "localhost:3000/tenderproof", URL: "http://localhost:3000/tenderproof?runId=tpr-bb9d13b0844f".
+1 AXWebArea localhost:3000/tenderproof?runId=tpr-bb9d13b0844f
+	2 container
+		3 text TenderProof Observações, documentos e revisão do catálogo
+		4 text Fontes e observações contínuas
+		5 text A coleta prepara evidências. Cada publicação exige revisão dos campos e aplicação autorizada.
+		6 container
+			7 text 99  fontes no inventário ·  10  com adaptador. Implementação não comprova homologação ou cobertura integral.
+		8 text Consultar todas as fontes e pendências
+		9 container
+			10 text Coleta geral:  desativada  ·  consulta de histórico
+		11 text Nenhuma fonte configurada para este usuário. Isso não significa ausência de concursos.
+		12 button Atualizar fontes e observações
+			13 text Atualizar fontes e observações
+		14 text Nenhuma observação nesta página. Consulte a situação e a cobertura das fontes acima.
+		15 container
+			16 text Anteriores
+			17 text Próximas
+		18 text Amostra limitada de até 5 candidatos; não é o catálogo completo da banca. Demonstração offline com material sintético (não é observação oficial).
+		34 text Iniciar
+		35 text Candidatos
+		36 text Edital
+		37 text Comparar
+		38 text Execução:  completed  · Validação documental:  valid  (identidade do edital confirmada — não significa todos os campos preenchidos) Candidatos observados ( 2 )
+		89 text Concurso Prefeitura Municipal de Exemplo MG cod 42
+		90 text Selecionado
+		41 text Processo Seletivo Saude Exemplo cod 77
+		42 text Não selecionado nesta execução
+		51 text Documento escolhido
+		52 text Edital n. 01/2026 Prefeitura Municipal de Exemplo
+		53 text Escolhido 'Edital n. 01/2026 Prefeitura Municipal de Exemplo' por conter 'edital' no título/URL; 2 documento(s) ignorado(s) (ex.: Gabarito oficial da prova objetiva; Comunicado 01).
+		54 container
+			55 text PDF preservado ( 1 / 1  páginas ) · sha256  4551f5e88dec6adb …
+		56 text Verificar PDF autenticado
+		57 text Campos: baseline × TenderProof
+		58 container
+			59 text Baseline:  mock: snapshot sintético prévio (demonstração offline)  (coletada em 01/03/2026, 09:00:00)
+		60 container
+			61 text Título
+			62 text Concordância
+			63 text Baseline:  Concurso Prefeitura Municipal de Exemplo MG cod 42 TenderProof:  Concurso Prefeitura Municipal de Exemplo MG cod 42 Evidência , página 1 : PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Admin valores concordam após normalização de apresentação
+		64 container
+			65 text Órgão
+			66 text Concordância
+			67 text Baseline:  Prefeitura Municipal De Exemplo TenderProof:  Prefeitura Municipal De Exemplo Evidência , página 1 : PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com venci valores concordam após normalização de apresentação
+		68 container
+			69 text Número do edital
+			70 text Concordância
+			71 text Baseline:  01/2026 TenderProof:  01/2026 Evidência , página 1 : PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com vencimento de R$ 3.500,00 mensais.
+concurso.jsp?cod=42 valores concordam após normalização de apresentação
+		72 container
+			73 text Início das inscrições
+			74 text Concordância
+			75 text Baseline:  2026-03-10 TenderProof:  2026-03-10 Evidência , página 1 : As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 valores concordam após normalização de apresentação
+		76 container
+			77 text Fim das inscrições
+			78 text Divergência
+			79 text Baseline:  2026-04-19 TenderProof:  2026-04-20 Evidência , página 1 : As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 baseline '2026-04-19' ≠ TenderProof '2026-04-20'
+		80 container
+			81 text Remuneração
+			82 text Concordância
+			83 text Baseline:  3500 / 3500 TenderProof:  3500.00 Evidência , página 1 : PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com vencimento de R$ 3.500,00 mensais.
+concurso.jsp?cod=42 valor observado com escopo coincide com a faixa da baseline
+		84 text Revisar publicação no catálogo
+		85 container
+			86 text Fonte:  ibgp_open  ·  Concurso Prefeitura Municipal de Exemplo MG cod 42
+		87 text Deixe o ID vazio para conferir a identidade e preparar cadastro novo ou atualização. Para associar a um concurso conhecido, informe seu ID; a evidência será conferida pelo servidor.
+		88 text field (settable) ID do concurso existente, opcional
+		171 text Conferir identidade e preparar proposta
+		93 text Atualização do concurso 1
+		94 text Revertida
+		95 container
+			96 text Associação:  Fonte, identificador e endereço correspondem ao cadastro  · ID na fonte:  42
+		97 container
+			98 text Página oficial:  https://novo.ibgpconcursos.com.br/concurso.jsp?cod=42
+		99 text Somente os campos aprovados abaixo serão publicados. Informações desconhecidas ou conflitantes preservam os valores existentes.
+		100 container
+			101 checkbox (disabled) Value: 0, ☐ Título Atual: Concurso Prefeitura Municipal de Exemplo MG cod 42 Publicar: Concurso Prefeitura Municipal de Exemplo MG cod 42
+				102 container
+					103 text ☐ Título
+				104 container
+					105 text Atual:  Concurso Prefeitura Municipal de Exemplo MG cod 42
+				106 container
+					107 text Publicar:  Concurso Prefeitura Municipal de Exemplo MG cod 42
+			108 text SHA-256 do documento:  4551f5e88dec6adb3aa58663f26c9a003666f9945120a5147fdf88ee9270a19e
+			109 button Documento preservado · página física 1: PREFEITURA MUNICIPAL DE EXEMPLO Concurso Publico Prefeitura Municipal de Exemplo MG Edital n. 01/2026 de abertura de concurso publico As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca. Cargo de Agente Admin https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+				110 container
+					111 text Documento preservado · página física  1 :  PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Admin
+				112 text https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+		113 container
+			114 checkbox (disabled) ☐ Órgão Atual: Prefeitura Municipal De Exemplo Publicar: Prefeitura Municipal De Exemplo, Value: 0
+				115 container
+					116 text ☐ Órgão
+				117 container
+					118 text Atual:  Prefeitura Municipal De Exemplo
+				119 container
+					120 text Publicar:  Prefeitura Municipal De Exemplo
+			121 text SHA-256 do documento:  4551f5e88dec6adb3aa58663f26c9a003666f9945120a5147fdf88ee9270a19e
+			122 button Documento preservado · página física 1: PREFEITURA MUNICIPAL DE EXEMPLO Concurso Publico Prefeitura Municipal de Exemplo MG Edital n. 01/2026 de abertura de concurso publico As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca. Cargo de Agente Administrativo com venci https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+				123 container
+					124 text Documento preservado · página física  1 :  PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com venci
+				125 text https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+		126 container
+			127 checkbox (disabled) ☐ Número do edital Atual: 01/2026 Publicar: 01/2026, Value: 0
+				128 container
+					129 text ☐ Número do edital
+				130 container
+					131 text Atual:  01/2026
+				132 container
+					133 text Publicar:  01/2026
+			134 text SHA-256 do documento:  4551f5e88dec6adb3aa58663f26c9a003666f9945120a5147fdf88ee9270a19e
+			135 button Documento preservado · página física 1: PREFEITURA MUNICIPAL DE EXEMPLO Concurso Publico Prefeitura Municipal de Exemplo MG Edital n. 01/2026 de abertura de concurso publico As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca. Cargo de Agente Administrativo com vencimento de R$ 3.500,00 mensais. concurso.jsp?cod=42 https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+				136 container
+					137 text Documento preservado · página física  1 :  PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com vencimento de R$ 3.500,00 mensais.
+concurso.jsp?cod=42
+				138 text https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+		139 container
+			140 checkbox (disabled) ☐ Início das inscrições Atual: 2026-03-10T00:00:00 Publicar: 2026-03-10, Value: 0
+				141 container
+					142 text ☐ Início das inscrições
+				143 container
+					144 text Atual:  2026-03-10T00:00:00
+				145 container
+					146 text Publicar:  2026-03-10
+			147 text SHA-256 do documento:  4551f5e88dec6adb3aa58663f26c9a003666f9945120a5147fdf88ee9270a19e
+			148 button Documento preservado · página física 1: As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+				149 container
+					150 text Documento preservado · página física  1 :  As inscricoes estarao abertas de 10/03/2026 a 20/04/2026
+				151 text https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+		152 container
+			153 checkbox (disabled) ☑ Fim das inscrições Atual: 2026-04-19T00:00:00 Publicar: 2026-04-20, Value: 0
+				154 container
+					155 text ☑ Fim das inscrições
+				156 container
+					157 text Atual:  2026-04-19T00:00:00
+				158 container
+					159 text Publicar:  2026-04-20
+			160 text SHA-256 do documento:  4551f5e88dec6adb3aa58663f26c9a003666f9945120a5147fdf88ee9270a19e
+			161 button Documento preservado · página física 1: As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+				162 container
+					163 text Documento preservado · página física  1 :  As inscricoes estarao abertas de 10/03/2026 a 20/04/2026
+				164 text https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/42/?file=site/anexos/42/edital_01_2026.pdf
+		165 container
+			166 text Remuneração : impedido —  escopo observado não equivale à faixa salarial canônica; merge não suportado Valor atual preservado:  Não informado Página  1 :  PREFEITURA MUNICIPAL DE EXEMPLO
+Concurso Publico Prefeitura Municipal de Exemplo MG
+Edital n. 01/2026 de abertura de concurso publico
+As inscricoes estarao abertas de 10/03/2026 a 20/04/2026 pelo site da banca.
+Cargo de Agente Administrativo com vencimento de R$ 3.500,00 mensais.
+concurso.jsp?cod=42
+		179 container
+			180 text Aprovar os  1  campos selecionados
+		188 text Aplicar alterações aprovadas
+		170 text Consultar situação da proposta
+		183 text Concurso 1 · versão 1
+		184 container
+			185 text Fim das inscrições :  2026-04-19T00:00:00  →  2026-04-20T00:00:00
+		186 container
+			187 text Notificações:  evento registrado após publicação; consultar processamento
+		177 container
+			178 text Aprovação: operador  1  ·  2026-09-07T23:57:23.727289
+		189 container
+			190 text Reversão confirmada · versão  2  ·  Ensaio sintético da interface: restaurar prazo anterior
+		43 text Sessões e replay
+		44 text Registros abaixo são doubles offline; não são sessões nem replays do provedor.
+		45 container
+			46 text Discovery  · sessão  mock-session-001 Encerramento:  confirmado  · Registro simulado; sem replay do provedor
+		47 text Limitações e diagnóstico:  fim da listagem sem evidência explícita; cobertura desconhecida · fake: material sintético, sem sessão real
+
+The focused UI element is 1 AXWebArea localhost:3000/tenderproof?runId=tpr-bb9d13b0844f

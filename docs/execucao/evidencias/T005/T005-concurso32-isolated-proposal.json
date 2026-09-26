@@ -1,0 +1,19 @@
+{
+  "schema": "t005.isolated-reference-proposal.v1",
+  "state": "prepared",
+  "apply": false,
+  "catalogue_mutated": false,
+  "concurso_id": 32,
+  "source_id": 47,
+  "external_id": "129",
+  "run_id": "tp-reviewed-511f58b869b35d449311e6184b2d3dea",
+  "reference_only": true,
+  "eligible_fields": [
+    "cargos"
+  ],
+  "blocked_fields": {
+    "retificacoes": "nenhuma comprovada no artefato",
+    "publicacoes": "nenhuma comprovada no artefato"
+  },
+  "artifact_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2"
+}

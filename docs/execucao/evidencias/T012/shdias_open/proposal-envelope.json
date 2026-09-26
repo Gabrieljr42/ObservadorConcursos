@@ -1,0 +1,78 @@
+{
+  "schema": "t012.source-proposal.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "shdias_open",
+  "source_number": 51,
+  "adapter": "SHDIASAdapter",
+  "candidate": {
+    "external_id": "MTEw/MzA4",
+    "title": "CONCURSO PÚBLICO MUNICÍPIO DE HORTOLÂNDIA-SP",
+    "selection_type": "Concurso Público 001/2026 - Guarda",
+    "detail_url": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+    "process_id": "00308",
+    "inscription_fee": "R$ 63,25",
+    "exam_date_observed": "27/09/2026",
+    "cargo_count": 2,
+    "vacancy_count": 40,
+    "cargos": [
+      {
+        "code": "301",
+        "title": "Guarda Municipal – 4ª Classe (Feminino)",
+        "remuneration": "até R$ 3.971,37",
+        "vacancies": 12
+      },
+      {
+        "code": "302",
+        "title": "Guarda Municipal – 4ª Classe (Masculino)",
+        "remuneration": "até R$ 3.971,37",
+        "vacancies": 28
+      }
+    ]
+  },
+  "artifact": {
+    "fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-detail-e633962f88.html",
+    "url": "https://www.shdias.com.br/concursos/publicacoes/MTEw/MzA4",
+    "mime": "text/html",
+    "byte_len": 31265,
+    "sha256": "CC9E151C7CAE26D0C92BDE911C9D89F5B06706F3DF7EB4FB565FB2F892320D99"
+  },
+  "documents": {
+    "opening_notice": {
+      "title": "Edital Completo com Programa de Prova",
+      "kind": "edital",
+      "url": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+      "status": "preserved_and_hashed",
+      "artifact": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+      "bytes": 697485,
+      "pages": 44,
+      "sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7"
+    },
+    "field_evidence_manifest": "docs/execucao/evidencias/T012/shdias_open/field-evidence.json"
+  },
+  "provenance": {
+    "listing_fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/shdias_open-cycle1-listing-d24cf41921.html",
+    "listing_sha256": "C7DE29E4BBE049AFCAE09F9ABDB3173EC93A1A088C2EE76761667EA95702DDF2",
+    "listing_byte_len": 57544,
+    "observed_at": "2026-09-08T14:07:32.165650+00:00",
+    "identity_rule": "SHDIASAdapter decodes both base64 path components, validates numeric tenant/process IDs, and binds CDN documents to process 00308",
+    "duplicate_check": "No Hortolândia/MTEw/MzA4/00308 match found in the preserved repository catalog/fixtures search; candidate identity is source+external_id bound",
+    "opening_pdf_artifact": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "opening_pdf_sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "opening_pdf_bytes": 697485,
+    "opening_pdf_pages": 44,
+    "network_used": true,
+    "catalogue_mutated": false
+  },
+  "import_handoff": {
+    "mode": "standard_reviewed_run_import",
+    "owner_user_id": 1,
+    "concurso_id": null,
+    "reference_only": true,
+    "apply": false,
+    "next_step": "allocate canonical source/concurso via standard flow and perform human review before catalog mutation",
+    "fail_closed_reasons": [
+      "canonical ID intentionally not invented",
+      "proposal does not authorize publication or catalog mutation"
+    ]
+  }
+}

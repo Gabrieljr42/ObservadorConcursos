@@ -1,0 +1,34 @@
+{
+  "schema": "t012.publiconsult.document-review-r7-prepared-independent.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_DOCUMENT_APPROVE_THEN_SINGLE_PROPOSAL",
+  "scope": "read-only review of the prepared case; no approval or proposal mutation by reviewer",
+  "case": {
+    "case_id": "drc-preserved-5b8ae617394ffc55fa7f3f2321677c81",
+    "revision_hash": "cb5ea0d5910df1e4c4ccb990f4a309c3674f0abdfe4f82c2cd125f8cbf42b0ca",
+    "owner_user_id": 1,
+    "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "artifact_sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6
+  },
+  "checks": {
+    "receipt": "PASS: HTTP 200, one prepared document, current case confirmed, approved_at remains null",
+    "url": "PASS: exact signed URL used in memory; requested/final equal; no secret persisted/logged in the integrator receipt",
+    "revalidation": "PASS: principal artifact hash and identity revalidated; preserved PDF extracted completely with 6 pages and pinned SHA/bytes",
+    "cas_idempotency": "PASS: revision hash and case operation are deterministic; prepared case is owner/run-bound and incompatible cases are rejected",
+    "effects": "PASS: checkpoint unchanged (34 contests, 33 sources, 182 cargos, 34 publications, 92 versions, 91 notifications); pending remains true and no proposal effects",
+    "approval_boundary": "PASS: document approval is a separate effect-case decision; it does not approve/apply catalog changes"
+  },
+  "required_next_step": "Operator may approve only this document case with the same owner/run/revision and exact field decisions. After pending clears, make exactly one owner-authenticated proposal attempt; stop on any pending/409/error and do not retry or approve/apply automatically.",
+  "tests": [
+    "test_document_review_r7_url_match.py and test_document_review_r6_409.py: 2 passed",
+    "offline receipt assertions: PASS"
+  ],
+  "live_mutation_by_reviewer": false
+}

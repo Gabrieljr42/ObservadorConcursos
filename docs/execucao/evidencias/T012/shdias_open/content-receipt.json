@@ -1,0 +1,27 @@
+{
+  "schema": "t012.content-receipt.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "shdias_open",
+  "candidate_external_id": "MTEw/MzA4",
+  "document": {
+    "title": "Edital Completo com Programa de Prova",
+    "url_requested": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "url_final": "https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "fixture": "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf",
+    "mime": "application/pdf",
+    "bytes": 697485,
+    "pages": 44,
+    "sha256": "F7DEAACF2D2C6C02195CD84D3DA9C8AB3527E3FC03062AC8EBB8E321F3A750C7",
+    "pdf_header": "%PDF-1.7"
+  },
+  "acquisition": {
+    "mechanism": "BoundedHTTPDriver",
+    "tls_verified": true,
+    "allowlist_validated": true,
+    "redirects": [],
+    "network_scope": "single official CDN document URL",
+    "cookies": false,
+    "browser": false,
+    "catalogue_mutated": false
+  }
+}

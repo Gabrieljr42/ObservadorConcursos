@@ -1,0 +1,20 @@
+{
+  "schema":"t012.publiconsult.document-review-live-r3-receipt.v1",
+  "timestamp":"2026-09-13T14:08:00Z",
+  "status":"BLOCKED_PREPARE_409",
+  "source_id":56,
+  "source":"publiconsult_open",
+  "external_id":"681",
+  "owner_user_id":1,
+  "run_id":"tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "payload":{"title":"Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II","kind":"outro","semantic_kind":"convocacao_taf","expected_page_count":6},
+  "artifact":{"artifact_id":"publiconsult-open-taf-681-r2","sha256":"d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7","byte_len":341466,"pages":6},
+  "endpoint":"POST /tenderproof/continuous/document-review/{run_id}/prepare-preserved",
+  "http":409,
+  "retry":false,
+  "proposal_retry":false,
+  "approve":false,
+  "apply":false,
+  "counts":{"contests":34,"sources_configured":99,"canonical_published_cargos":182,"raw_run_cargos":196,"proposals":98,"versions":92,"outbox":92,"notifications":91},
+  "next_gate":"diagnose this exact 409 before any further prepare or proposal call"
+}

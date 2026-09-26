@@ -1,0 +1,374 @@
+{
+  "observed_at": "2026-09-08T14:11:16.525514+00:00",
+  "scope": "Read-only observed URLs; TLS verified; redirects recorded, not followed; max2MiB25s; no PDFs or browser; not adapter certification.",
+  "pages": [
+    {
+      "source": "consulplan_open",
+      "url": "https://institutoconsulplan.org.br/unai2026",
+      "kind": "sample-detail",
+      "observed_at": "2026-09-08T14:11:15.483436+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 15295,
+      "sha256": "a083ed321e5717fbc6e3b0ebae6a11fe74f5dc94e48f573f62036df34485977b",
+      "file": "consulplan_open-sample-detail.html",
+      "encoding": "utf-8",
+      "title": "Câmara Municipal de Unaí/MG — Instituto Consulplan",
+      "links": [
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": "Principal"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Institucional",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Projetos",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/FaleConosco",
+          "title": "Fale Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/TrabalheConosco",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Certificados",
+          "title": "Certificados"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/unai2026",
+          "title": "Buscar"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/unai2026",
+          "title": "Área do Candidato"
+        },
+        {
+          "url": "https://concurso4.institutoconsulplan.org.br/Candidato/Cadastro",
+          "title": "CADASTRAR"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdGLK_3ypnX4Tg9qFJEiqZT8-sUxsATPCZK-oHcyI3FP0ub4g/viewform?usp=publish-editor",
+          "title": "Clique aqui"
+        },
+        {
+          "url": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+          "title": "Edital nº 1/2026 - Abertura"
+        },
+        {
+          "url": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+          "title": "26/08/2026"
+        },
+        {
+          "url": "https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+          "title": ""
+        },
+        {
+          "url": "https://pdfviewer.consulplan.net/Edital/https://cdnsite.institutoconsulplan.org.br/concursos/1333/dc1fe1e393a346f0803722772b630442.pdf",
+          "title": ""
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/",
+          "title": "Principal"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Institucional",
+          "title": "Institucional"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/Concursos",
+          "title": "Projetos / Concursos"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/FaleConosco",
+          "title": "Contato"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/TrabalheConosco",
+          "title": "Trabalhe Conosco"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/PoliticaPrivacidade",
+          "title": "Política de Privacidade"
+        },
+        {
+          "url": "https://institutoconsulplan.org.br/PoliticaCookies",
+          "title": "Política de Cookies"
+        }
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-HM2YZXN9QX",
+        "https://institutoconsulplan.org.br/lib/jquery/dist/jquery.min.js",
+        "https://institutoconsulplan.org.br/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "https://unpkg.com/htmx.org@1.9.11",
+        "https://institutoconsulplan.org.br/lib/plugins/jquery.mask.min.js",
+        "https://institutoconsulplan.org.br/lib/plugins/select2.min.js",
+        "https://institutoconsulplan.org.br/js/site.min.js?v=xfUueBjRFbyxiLDc0ivGceM_bReTe2IuZABq4eomurU",
+        "https://institutoconsulplan.org.br/js/Global/cookie-consent.js?v=AajOozgmJiDubipIDJUptobC5OPIDS7FZFdKxGUZ6oI",
+        "https://vlibras.gov.br/app/vlibras-plugin.js"
+      ]
+    },
+    {
+      "source": "zambini_open",
+      "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+      "kind": "sample-detail",
+      "observed_at": "2026-09-08T14:11:15.484429+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 32369,
+      "sha256": "0cac5d313adce097823af22294afc3260a57724df9dfc027186f182fa7f07b83",
+      "file": "zambini_open-sample-detail.html",
+      "encoding": "utf-8",
+      "title": "Zambini",
+      "links": [
+        {
+          "url": "https://www.zambini.org.br/portal/azambini",
+          "title": "Instituto Zambini"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/producaocultural",
+          "title": "Produção Cultural"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+          "title": "Serviços"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/cursosgcms",
+          "title": ">Cursos para GCMs"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/servicosgraficos",
+          "title": "Serviços Gráficos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/servicosconsultoria",
+          "title": "Serviço de Consultoria em Administração Pública"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/instituicoes",
+          "title": "Instituições atendidas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/contatos",
+          "title": "Contatos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/",
+          "title": ""
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/",
+          "title": "Início"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+          "title": "Concursos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/encerrados",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+          "title": "Processos Seletivos"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/processosseletivos",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/processosseletivos/encerrados",
+          "title": "Encerrados"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966",
+          "title": "Residências Médicas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/residencias",
+          "title": "Em andamento"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/residencias/encerradas",
+          "title": "Encerradas"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966#editaisPublicacoes",
+          "title": "Editais e publicações"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966#cronograma",
+          "title": "Cronograma"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966#gabaritos",
+          "title": "Gabaritos e Resultados"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/concursos/ver/1966#localProva",
+          "title": "Local da prova"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/3b2c279e8266d7eb9942f9e56b9fbc88.pdf",
+          "title": "Homologação GCM_ Bombeiro Civil _Cabreuva"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/38b729ae21afc2201427d3f6d80feb82.pdf",
+          "title": "Classificação Final Teste de Aptidão Física"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/26afce7f16a95fd6b0843f2bdc4273b8.pdf",
+          "title": "EDITAL DE HOMOLOGAÇÃO PARCIAL"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/968e2e0f8d6e64d4c10f528bc378375e.pdf",
+          "title": "EDITAL DE RETIFICAÇÃO DE CRONOGRAMA 01-22"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/0f7256c16e7e4405791ebe01bc03feb1.pdf",
+          "title": "Edital de convocação 2-22"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/ddf245004689dbd335a17e6ba6fed94c.pdf",
+          "title": "EDITAL DE DIVULGAÇÃO DE INSCRITOS"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/1d3395ed4834249cc1b50df27c8a71b1.pdf",
+          "title": "RETIFICAÇÃO 02 - CABREUVA CP 01- 2022 v1"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/6437e221ffd3a7bccb2d24176898a76a.pdf",
+          "title": "Retificação 01 - CABREUVA CP 01-2022 v1"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/188f71ac8c9671464d3e6b48f2f927de.pdf",
+          "title": "Edital 01 - CABREUVA CP 01-2022"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/6a9fa095d87249f3507d941f57c65237.pdf",
+          "title": "EDITAL DE DIVULGAÇÃO DE PONTUAÇÃO DA PROVA DE APTIÇÃO FISICA GUARDA CIVIL MUNICIPAL E BOMBEIRO CIVIL"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/edad3d2bff0171a215e61b1b6151c0ee.pdf",
+          "title": "Resultado Final"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/ba51895448e9a04484e30322919abdea.pdf",
+          "title": "Gabarito Pós Recurso"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/cd7108f53f572b19d722924e1d0a92c0.pdf",
+          "title": "Resultado Preliminar Cabreuva 2022"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/55b96c9865e36d7b0762b1b076921346.pdf",
+          "title": "GABARITO Edital 01/2022 - Prova 03/04/2022"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/93b402e045c3d73833f7dae3f58513dd.pdf",
+          "title": "Convocação para prova Teste de Aptidão Física"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/2c94be98982795d4ae2652736086b886.pdf",
+          "title": "Edital de convocação 2-22"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/d3d338c19b2e16fbf9e8b95264c1c292.pdf",
+          "title": "ATENÇÃO: Turma da manhã os portões serão abertos às 8h30 min e fecharão as 9h  - Turma da tarde os  portões serão abertos às 13h30 min e fecharão as 14h"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/e4aad47aa16c524e3051b686cae62ef1.pdf",
+          "title": "Consulte seu local de prova e horário AQUI - Atualização"
+        },
+        {
+          "url": "https://www.zambini.org.br/portal/assets/publicacoes/83de1e51428a1dd9303965a912268418.pdf",
+          "title": "As provas ocorrerão dia 03 de abril de 2022 - Consulte seu local de prova e horário AQUI!"
+        },
+        {
+          "url": "https://www.zambini.org.br/cdn-cgi/l/email-protection",
+          "title": "[email protected]"
+        },
+        {
+          "url": "https://www.instagram.com/institutozambinioficial/",
+          "title": ""
+        },
+        {
+          "url": "https://www.facebook.com/institutozambini/",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCPjgekBfQuF9nQeYQCwOPGg",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://www.zambini.org.br/portal/assets/jquery/jquery-3.5.1.min.js",
+        "https://www.zambini.org.br/portal/assets/bootstrap/popper.min.js",
+        "https://www.zambini.org.br/portal/assets/bootstrap/bootstrap.min.js",
+        "https://www.zambini.org.br/portal/assets/jquery.mask/jquery.mask.js",
+        "https://www.zambini.org.br/portal/assets/js/script.js?v=1788876687",
+        "https://www.zambini.org.br/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ]
+    },
+    {
+      "source": "gualimp_open",
+      "url": "https://gualimpconsultoria.com.br/processos_de_selecao/ps.html?detail=135",
+      "kind": "sample-detail",
+      "observed_at": "2026-09-08T14:11:15.484429+00:00",
+      "status": 200,
+      "location": null,
+      "bytes": 15616,
+      "sha256": "2f9848a442c8446e2ebb58c34d8f5bfc04624ea326b63d5db4e023e21a4e556c",
+      "file": "gualimp_open-sample-detail.html",
+      "encoding": "utf-8",
+      "title": "GSTRATEGIC - Gestão, Assessoria, Serviços e Logística",
+      "links": [
+        {
+          "url": "https://gualimpconsultoria.com.br/processos_de_selecao/index.html",
+          "title": ""
+        },
+        {
+          "url": "https://gualimpconsultoria.com.br/area_do_candidato",
+          "title": "ÁREA DO"
+        },
+        {
+          "url": "https://gualimpconsultoria.com.br/area_do_candidato",
+          "title": "CANDIDATO"
+        },
+        {
+          "url": "https://gualimpconsultoria.com.br/processos_de_selecao/info_ps.html",
+          "title": "FORMULÁRIO DE CONTATO"
+        }
+      ],
+      "scripts": [
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557882127002793",
+        "https://www.googletagmanager.com/gtag/js?id=G-18N5HJEJ7R",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557882127002793",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557882127002793",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557882127002793",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557882127002793",
+        "https://gualimpconsultoria.com.br/assets/js/jquery.min.js",
+        "https://gualimpconsultoria.com.br/assets/bootstrap/js/bootstrap.min.js",
+        "https://gualimpconsultoria.com.br/include/js/funcs.js"
+      ]
+    }
+  ]
+}

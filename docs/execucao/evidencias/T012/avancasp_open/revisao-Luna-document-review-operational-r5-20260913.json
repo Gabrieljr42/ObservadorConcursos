@@ -1,0 +1,38 @@
+{
+  "schema": "t012.luna.avancasp.document-review-operational-review.v5",
+  "verdict": "ACCEPT_FOR_NORMAL_PREPARE_FULL_PENDING_MULTISET",
+  "scope": "read-only offline review; no live/API/Docker/backend mutation",
+  "source": "avancasp_open",
+  "external_id": "272",
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "procedure": {
+    "old_case": {
+      "case_id": "drc-preserved-1d4a34207027a52670a51a736a125257",
+      "action": "retain immutable audit history",
+      "approve": false,
+      "delete_or_invalidate": false,
+      "reason": "one-document stale/failed case; it cannot represent the complete two-document pending manifest"
+    },
+    "retry": "after corrected Avanca pins are deployed, invoke normal prepare exactly once for the exact run; do not invoke prepare-preserved",
+    "manifest_mode": "full pending multiset in one normal prepare case, not two separate normal cases",
+    "expected_documents": [
+      {"sha256":"c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637","byte_len":750381,"pages":48},
+      {"sha256":"49b2137790ee4915ef3ef058e15d94bde937e8bd766840681a278b59d5eb5cfd","byte_len":749582,"pages":49}
+    ],
+    "post_prepare_gate": "stop unless replacement case is current, owner/run/revision/method bound, and contains exactly both SHA/URL/byte/page tuples with registered blobs and supported fields",
+    "approval_limit": "only after independent review, submit SHA-bound decisions for both distinct documents; no proposal retry or apply is authorized by this review"
+  },
+  "code_basis": [
+    "backend/app/tenderproof/review_cases.py compares sorted expected/actual document_identity multisets before reuse",
+    "normal prepare loops the complete pending manifest and persists one new drc-* case without deleting the old row",
+    "prepare_preserved requires an exact single-document identity/blob match and cannot append a sibling",
+    "backend/app/tenderproof/avancasp_t012.py accepts only its pinned artifact tuples and fails closed on drift"
+  ],
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_document_review_operational_r5.py docs/execucao/evidencias/T012/avancasp_open/test_document_review_live_r2_r3.py docs/execucao/evidencias/T012/avancasp_open/test_document_review_package_r2.py",
+    "result": "12 passed",
+    "additional": "avancasp_t012.py + operational_r5: 12 passed; compileall review_cases.py, avancasp_t012.py, fields.py passed",
+    "warning": "pytest emitted only the existing Pydantic Field name schema warning"
+  },
+  "effects": {"api":false,"live":false,"docker":false,"backend_edits":false,"approve":false,"apply":false}
+}

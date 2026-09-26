@@ -1,0 +1,40 @@
+{
+  "schema": "local-backend-gate-r5.v1",
+  "date": "2026-09-13",
+  "timestamp": "2026-09-13T06:52:30.8085146-03:00",
+  "revision": "ID5-r5",
+  "scope": [
+    "backend/tests/test_consulplan_unai_jobs.py",
+    "backend/tests/test_reviewed_run_import.py",
+    "backend/tests/test_tenderproof_unreadable_fields.py",
+    "backend/tests/test_garibaldi_publication_offline.py"
+  ],
+  "pytest": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest tests/test_consulplan_unai_jobs.py tests/test_reviewed_run_import.py tests/test_tenderproof_unreadable_fields.py tests/test_garibaldi_publication_offline.py -q",
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 90,
+    "status": "PASS"
+  },
+  "compileall": {
+    "modules": [
+      "app/tenderproof/consulplan_unai_jobs.py",
+      "app/tenderproof/reviewed_run_import.py",
+      "app/tenderproof/publication.py",
+      "app/tenderproof/fields.py",
+      "app/tenderproof/supplementary_fields.py"
+    ],
+    "status": "PASS"
+  },
+  "warning_summary": [
+    "Pydantic schema field shadow warning",
+    "SQLAlchemy/Python utcnow deprecation warnings"
+  ],
+  "gate": "LOCAL_GATE_R5_PASS",
+  "mutations": {
+    "code": false,
+    "pilot": false,
+    "central_docs": false
+  }
+}

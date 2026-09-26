@@ -1,0 +1,32 @@
+{
+  "schema": "t012.epl52.review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "EPL_ACCEPT_FOR_CANONICAL_ALLOCATION_IMPORT_PROPOSAL",
+  "revision": "R2",
+  "scope": "read_only; no Docker/API/DB",
+  "identity": {
+    "source": "epl_open",
+    "external_id": "52",
+    "title": "Fundação Hospitalar Santa Terezinha de Erechim",
+    "selection_type": "Concurso Público nº 01/2023",
+    "status": "confirmed_across_two_preserved_cycles"
+  },
+  "artifact": {
+    "path": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+    "byte_len": 784614,
+    "pages": 43,
+    "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+    "content_type": "application/pdf",
+    "verified_local": true
+  },
+  "checks": {
+    "public_employment_scope": true,
+    "not_funding_or_scholarship": true,
+    "duplicate_replay": "two cycles resolve to same external_id/detail/document SHA",
+    "provenance": "listing/detail plus PDF pages 1-3 preserved",
+    "fail_closed_tests": "4 proposal tests + 16 recovered regression tests passed",
+    "unknown_fields_explicit": true,
+    "canonical_target": "pending: concurso_id=null and reference_only=true are correct before standard allocation"
+  },
+  "decision": "Accept as a conditional canonical-allocation import/proposal handoff. The content receipt and reviewed-run template are intentionally unallocated; allocate canonical IDs without using source_number=21, validate this exact body with ReviewedRun/import_reviewed_run(dry_run=true), then run the normal proposal gate. Keep unknown fields unknown."
+}

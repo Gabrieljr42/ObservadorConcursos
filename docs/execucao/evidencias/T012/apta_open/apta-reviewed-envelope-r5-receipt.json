@@ -1,0 +1,28 @@
+{
+  "schema": "t012.apta.reviewed-run-r5-receipt.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "apta_open",
+  "external_id": "708",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-8360804341f8c6db9b7640cd0b84a1a1",
+  "concurso_id": 1,
+  "concurso_id_scope": "disposable isolated SQLite validation only; not preallocated canonically and not live",
+  "fields": ["titulo", "orgao", "edital_numero"],
+  "artifact": {
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "storage_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "checks": {
+    "pydantic_reviewed_run_validation": "PASS",
+    "dry_run": {"status": "validated", "mutation": false},
+    "isolated_import": {"status": "imported", "mutation_scope": "temporary SQLite only"},
+    "same_owner_replay": "idempotent",
+    "different_owner_run_id": "distinct",
+    "legacy_run_migration": "none"
+  },
+  "live": false,
+  "network": false,
+  "supersedes": ["live-envelope-ready-r4.json", "live-proposal-receipt-r4-owner1-20260913.json"]
+}

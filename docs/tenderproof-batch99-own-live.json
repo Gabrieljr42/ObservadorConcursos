@@ -1,0 +1,241 @@
+{
+  "observed_at": "2026-09-08T14:56:05.410061+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99own",
+  "cycles": [
+    {
+      "source": "legatus_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-f362d0471ba1",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.legatus.org.br/",
+          "https://www.legatus.org.br/concursos/abertos/",
+          "https://www.legatus.org.br/concursos/proximos-concursos/",
+          "https://www.legatus.org.br/concursos/andamento/",
+          "https://www.legatus.org.br/concursos/homologados/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.legatus.org.br",
+          "file": "legatus_open-cycle1-listing-d3a7c4944e.html",
+          "sha256": "7e4720ef59827fbb164a89d8fce5a7083d9fec28caccc14fd559136728401c90",
+          "bytes": 39370,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:56:06.188440+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-60a5ed607732",
+          "candidate": {
+            "candidate_id": "legatus_open-160",
+            "title_observed": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI",
+            "detail_url_observed": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+            "external_id": "160",
+            "observed_at": "2026-09-08T14:56:06.296942Z",
+            "source": "legatus_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+              "file": "legatus_open-cycle1-detail-10273a0d4a.html",
+              "sha256": "90a6168f842fad57ce736ffd2e7ed6db725df04a6f8edf7c49811d72d0442559",
+              "bytes": 18695,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:56:06.921039+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legatus_open-23f0f63162500175d8",
+            "title": "EDITAL Nº 01/2026 - ABERTURA DO CONCURSO",
+            "url_requested": "https://www.legatus.org.br/concursos/3181/download/",
+            "url_final": "https://www.legatus.org.br/concursos/3181/download/",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 01/2026 - ABERTURA DO CONCURSO' por conter 'edital' no título/URL; 7 documento(s) ignorado(s) (ex.: EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA; RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA; RELAÇÃO PRELIMINAR DE CANDIDATOS COM PEDIDO DE ATENDIMENTO ESPECIAL; EDITAL N° 02/2026 - PRORROGAÇÃO DAS INSCRIÇÕES; RESULTADO DA ANÁLISE DE RECURSOS INTERPOSTOS CONTRA O RESULTADO DOS PEDIDOS DE ISENÇÃO)."
+          },
+          "artifact": {
+            "artifact_id": "art-93290e544d",
+            "sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+            "byte_len": 745821,
+            "url_requested": "https://www.legatus.org.br/concursos/3181/download/",
+            "url_final": "https://www.legatus.org.br/concursos/3181/download/",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:56:07.320320Z",
+            "storage_path": "art-93290e544d-0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4.pdf"
+          },
+          "total_pages": 45,
+          "processed_pages": 45,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=45/45",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.078
+    },
+    {
+      "source": "legatus_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-513ccc771f16",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.legatus.org.br/",
+          "https://www.legatus.org.br/concursos/abertos/",
+          "https://www.legatus.org.br/concursos/proximos-concursos/",
+          "https://www.legatus.org.br/concursos/andamento/",
+          "https://www.legatus.org.br/concursos/homologados/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.legatus.org.br",
+          "file": "legatus_open-cycle2-listing-b2d89c71cb.html",
+          "sha256": "e85dad224f2d0b4f22fe36bf94428f7c5aa27fcdc255de9513a553bdc18a64c2",
+          "bytes": 39370,
+          "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+          "observed_at": "2026-09-08T14:56:10.107059+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-12c1188e359f",
+          "candidate": {
+            "candidate_id": "legatus_open-160",
+            "title_observed": "MUNICÍPIO DE TANQUE DO PIAUÍ - PI",
+            "detail_url_observed": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+            "external_id": "160",
+            "observed_at": "2026-09-08T14:56:10.201219Z",
+            "source": "legatus_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.legatus.org.br/concursos/160/municipio-de-tanque-do-piaui-pi/",
+              "file": "legatus_open-cycle2-detail-ecef7b27ec.html",
+              "sha256": "992b13ac88fe7aad4b15d9efa0a9fe951f92ca2a2841e2a5378afe99144ea6ee",
+              "bytes": 18695,
+              "format": "decoded HTML; hidden values and public signed queries removed; fixture hash only",
+              "observed_at": "2026-09-08T14:56:10.801331+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "legatus_open-23f0f63162500175d8",
+            "title": "EDITAL Nº 01/2026 - ABERTURA DO CONCURSO",
+            "url_requested": "https://www.legatus.org.br/concursos/3181/download/",
+            "url_final": "https://www.legatus.org.br/concursos/3181/download/",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL Nº 01/2026 - ABERTURA DO CONCURSO' por conter 'edital' no título/URL; 7 documento(s) ignorado(s) (ex.: EDITAL Nº 03/2026 - ALTERA O CRONOGRAMA; RELAÇÃO PRELIMINAR DE CANDIDATOS CONCORRENTES ÀS VAGAS DESTINADAS A PESSOAS COM DEFICIÊNCIA; RELAÇÃO PRELIMINAR DE CANDIDATOS COM PEDIDO DE ATENDIMENTO ESPECIAL; EDITAL N° 02/2026 - PRORROGAÇÃO DAS INSCRIÇÕES; RESULTADO DA ANÁLISE DE RECURSOS INTERPOSTOS CONTRA O RESULTADO DOS PEDIDOS DE ISENÇÃO)."
+          },
+          "artifact": {
+            "artifact_id": "art-1b962bc8a8",
+            "sha256": "0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4",
+            "byte_len": 745821,
+            "url_requested": "https://www.legatus.org.br/concursos/3181/download/",
+            "url_final": "https://www.legatus.org.br/concursos/3181/download/",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:56:11.186453Z",
+            "storage_path": "art-1b962bc8a8-0d4442e35af90600ee8126fcfdd42062b53b9c94fc42932ac0d77185ff7bf2c4.pdf"
+          },
+          "total_pages": 45,
+          "processed_pages": 45,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=45/45",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 3.844
+    }
+  ]
+}

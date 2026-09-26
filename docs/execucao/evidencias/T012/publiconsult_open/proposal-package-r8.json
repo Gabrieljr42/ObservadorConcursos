@@ -1,0 +1,26 @@
+{
+  "schema": "t012.publiconsult.proposal-package-r8.v1",
+  "status": "READY_FOR_BACKEND_REVIEW",
+  "scope": "offline source-specific package; no API/live/DB mutation",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "principal_artifact": {
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "content_path": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"
+  },
+  "fields": [
+    {"field_name": "titulo", "value": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026", "state": "supported", "page": 1, "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo N� 1/2026"},
+    {"field_name": "orgao", "value": "Prefeitura Municipal de Votuporanga/SP", "state": "supported", "page": 1, "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo N� 1/2026"},
+    {"field_name": "edital_numero", "value": "1/2026", "state": "supported", "page": 1, "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo N� 1/2026"}
+  ],
+  "omitted_fields": ["cargos", "remuneracao", "taxa", "prova_data", "documentos"],
+  "reference_only": true,
+  "provenance": "publiconsult_proposal_r8.py; approved principal artifact pin; reviewed-envelope-publiconsult-681.json"
+}

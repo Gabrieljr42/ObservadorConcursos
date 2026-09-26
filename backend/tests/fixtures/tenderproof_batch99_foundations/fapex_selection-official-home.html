@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Fapex - Fundação de apoio à pesquisa e à extensão</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Fapex - Fundação de Apoio à Pesquisa e a Extensão">
+	<meta name="keywords" content="Fapex,Fundaçao,Projetos">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <!--[if (gte IE 9)|!(IE)]>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <![endif]-->   
+        <noscript>
+            <META http-equiv="refresh" content="0;URL=https://fapex.org.br:443/Fapex/Geral/Excecao/Home/noscript"> 
+        </noscript>
+        <!-- Favicon -->
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/css/style.css"/>
+        <link rel="shortcut icon" type="image/png" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/img/favicon.png"/>
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/contrast.css" type="text/css"/>
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/css/toastr8.css">
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/bootstrap-override.css" rel="stylesheet">
+        <!-- Font Avesome Styles -->
+        <link href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/font-awesome/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/m-personal.css" type="text/css"/>    
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/css/flexslider.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/material-design-icons/www/css/material-icons.css"/> 
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/w3-personalized.css"> 
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.css"/>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/HarpNotify/HarpNotify.js"></script>        
+		<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/high-contrast.js"></script>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/toastr8/dist/js/toastr8.js"></script>
+        <script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/loader-gif/loader-gif.js"></script>
+
+    <script>
+        function getUrlWithoutParameter(url) 
+        {
+            var urlparts= url.split('/p/');
+
+            return urlparts.length == 2 ? urlparts[0].trim() : url.trim();
+        }
+
+        var pagesUrl = 
+        [
+            'https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Projeto/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Edital/index',
+            'https://fapex.org.br:443/Fapex/Site/Principal/Home/index'
+        ];
+               
+        var urlWithoutParams = getUrlWithoutParameter(window.location.href);
+
+        if(jQuery.inArray(urlWithoutParams,pagesUrl) != -1)
+        {
+            window.history.pushState(window.location.href,null,getUrlWithoutParameter(window.location.href));
+        }    
+        
+        function notify(cls,title,message)
+        {
+            jQuery('.HarpNotify').children().eq(0).attr('class',cls);
+            jQuery('.bg').show();
+            jQuery('.'+cls).find('.n-icon').show();
+            jQuery('.'+cls).find('p').text(title);
+            jQuery('.'+cls).find('span').text(message);
+            jQuery('.HarpNotify').show();
+        }
+    </script>        
+    </head>
+   <body style="background-color:#E4E4E4;">
+       
+	   <div id="cAll">
+        <!-- Header -->
+          <header id="header">
+    <div class="container">
+        <div class="row t-container" >
+        <!-- logo -->
+        <div class="span3" style="padding-top:1.8%;float:left;">
+          <div class="logo" id="logoImagem">
+              <a href="https://fapex.org.br:443/Fapex/Site" accesskey="h"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/pessoaJuridica/3a5082fbf2cb8a7e4f208a461f5b524c.png" alt=""></a>
+          </div>            
+        </div>
+		<div style="padding-top:5px;float:right;text-align:right; margin-right:10px;font-weight:bold;font-size:8pt;color:#27408B;">
+			<a accesskey="p" href="https://master.fapex.org.br/portaltransparencia/emendas.aspx" target="_blank">EMENDAS PARLAMENTARES</a> |
+			<a accesskey="a" href="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuInw--">ACESSIBILIDADE</a> | 
+			<a accesskey="c" href="#altocontraste" id="altocontraste" onclick="window.toggleContrast()">ALTO CONTRASTE</a>
+		</div>
+        <input type="hidden" name="fingerprintCurrent">
+        <div class="container" id="lnksImgs"  style="padding-top:2.5%;">
+            <ul id="linksCabecalho"> 
+                    
+                        <li>
+							<a href="https://master.fapex.org.br/sapro/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/f06741218e2a823b04c62d1d43e897d9.png" alt="ACOMPANHAMENTO DE PROJETOS" style="width:60px;height:45px;" title="ACOMPANHAMENTO DE PROJETOS" class="linksUteis"></a>
+						</li>
+                    
+                        <li>
+							<a href="https://accounts.google.com/AddSession?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=fapex.org.br&sacu=1#identifier" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/b80dc7521637dd66b6840ad394e11026.png" alt="WEBMAIL" style="width:60px;height:45px;" title="WEBMAIL" class="linksUteis"></a>
+						</li>
+                    
+            </ul>  
+        </div>            
+        <!-- fim logo -->
+
+        <!-- menu -->
+            <style>
+#nav ul li:active
+{
+	background-color:#6CA6CD !important;
+}
+#nav ul li a:active
+{
+	background-color:#6CA6CD !important;
+}
+.mn-1
+{
+    display:block;
+    width:100%;
+    text-align:center;	
+}
+</style>
+<div class="row-fluid">
+    <div class="span12" style="padding-top:2%;padding-left:4px;">
+         <nav id="nav" role="navigation" class="menu-h">
+                <ul class="clearfix menuSite">
+                    <li id="li-institucional">
+						<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional" title="Institucional" id="mn-1" class="mn-1">Quem Somos</a>
+						<div class="dropdown" style="display:none;">
+						  <div class="dropdown-content">
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional" accesskey="0">A FAPEX</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#identidade">Identidade</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#deliberativo">Estrutura</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#nrqN">Documentos</a>
+							<a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional#contatos">Contatos</a>
+							<a href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/faq/index.html">FAQ</a>
+						  </div>
+						</div>
+					</li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Coordenador/index" title="" id="mn-2" accesskey="1">Coordenador</a></li>
+                    <li><a href="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbuKng--" title="" id="mn-4">Credenciamento</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index" title="Notícias" id="mn-3" accesskey="2">Notícias</a></li>                  
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/index" title="" id="mn-5" accesskey="3">Editais</a></li>  
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Fundacao/legislacao" title="Legislação" id="mn-6">Legislação</a></li>
+                    <li><a href="https://master.fapex.org.br/portaltransparencia/" title="Transparência" target="_blank" id="mn-7" accesskey="4">Transparência</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/PortalLicitacao/Principal/Home/index" title="Licitação" target="_blank" id="mn-9">Licitação</a></li>
+                    <li><a href="https://fapex.org.br:443/Fapex/Site/Principal/Home/ouvidoria" title="Ouvidoria" id="mn-8">Ouvidoria</a></li>
+               </ul>
+        </nav>
+    </div> 
+</div> 
+<style>
+    .menu-h-li a:hover{ color: #FF0000; }
+</style>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-1.11.3.min.js"></script>
+<script>
+jQuery(document).ready(function()
+{
+	var urlCurrent = window.location.href;
+	var urlBase = urlCurrent;
+	var uc = urlCurrent.split('/');
+	if(uc.length > 6)
+	{
+		var hsh = uc[7].indexOf("#");
+		var lurl = uc[7];
+		
+		if(hsh > 0)
+		{
+			lurl = lurl.substr(0,hsh);
+		}
+		urlBase = uc[0]+'/'+uc[1]+'/'+uc[2]+'/'+uc[3]+'/'+uc[4]+'/'+uc[5]+'/'+uc[6]+'/'+lurl;
+		var urlV = 'https://fapex.org.br:443/Fapex/Site/Principal/Home/institucional';
+	}
+	console.log(urlV,urlBase);
+	if(urlV == urlBase)
+	{
+		var mn1 = jQuery('#mn-1').clone().removeClass('mn-1');
+		jQuery('body').remove('dropdown');
+		jQuery('#li-institucional').empty().append(mn1);
+		console.log('ok 2');
+		//jQuery('body').removeClass('dropdown-content');
+	}
+	
+	jQuery('#li-institucional').hover(function()
+	{
+		console.log('hovered in!');
+		jQuery('.dropdown').show(200);
+	},function()
+	{
+		console.log('hovered out!');
+		jQuery('.dropdown').hide(200);
+	});
+});  	
+jQuery(document).ready(function()
+{
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+    {
+      jQuery('.menu-h').removeAttr('id');  
+      jQuery('.menu-h ul').css({
+          'list-style-type':'none',
+          'color': '#27408B'
+      });
+      jQuery('.menu-h ul li').hover(function(){
+          jQuery(this).addClass('menu-h-li');
+      });    
+    }
+});    
+
+jQuery(document).ready(function()
+{
+    jQuery('a').on('click',function()
+    {
+        var hrf = jQuery(this).attr('href');
+       // console.log(hrf);
+        if(typeof hrf != 'undefined')
+        {
+            localStorage.removeItem(hrf);
+            localStorage.setItem(jQuery(this).attr('id'),hrf);
+        }
+    });
+});
+
+var pages = {'Edital':'mn-5','Noticia':'mn-3','Projeto':'mn-4','Coordenador':'mn-2','Fundacao':'mn-6','legislacao':'mn-6','institucional':'mn-1','index#atuacao':'mn-1','index#historico':'mn-1','index#deliberativo':'mn-1','index#fiscal':'mn-1','index#setores':'mn-1','index#nrqN':'mn-1','index#nrqO':'mn-1','index#nrqP':'mn-1','index#nrqA':'mn-1','index#contato':'mn-1','ouvidoria':'mn-8'};
+
+jQuery(window).on('load', function() 
+{
+        var k = null;
+        var k2 = null;
+    
+        var url = window.location.href;
+         
+        var sp = url.split('/');
+    
+        if(typeof sp[7] != 'undefined')
+        {
+             if(sp[7] in pages)
+             { 
+                k = pages[sp[7]];
+             }  
+        }
+        
+        
+        if(typeof sp[6] != 'undefined')
+        {   
+             if(sp[6] in pages)
+             { 
+                k2 = pages[sp[6]];
+             }
+        }
+        console.log(k,k2,sp);
+        if(k != null)
+        {
+            jQuery('#'+k).css({'background-color':'#6CA6CD'});
+        }
+        else if(k2 != null)
+        {
+            jQuery('#'+k2).css({'background-color':'#6CA6CD'});
+        }
+});
+</script>
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width:520px;
+    height:37px;
+    padding:0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content 
+{
+    position: absolute;
+    min-width: 590px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a 
+{
+    padding: 9px 17px 9px 18px;
+    text-decoration: none;
+    display: block;
+    color:#273E74 !important;
+    height:23px;
+    float:left;
+    margin-right:1px !important;
+    background-color:#E4E4E4;
+}
+.dropdown-content:active 
+{
+   background-color:#273E74 !important;
+}
+.dropdown-content a:active 
+{
+   background-color:#273E74 !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #6CA6CD;height:20px;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+
+
+        <!-- fim menu -->
+        </div>   
+  </div> 
+    <div class="container">
+            <!-- slider -->
+                 <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/51ade9d1cf1bbf1418bdb9775b1b9112.png" data-link="https://www.fapex.org.br/Fapex/Harp/sys/web/pub/arquivos/pdf/documentos/tmp6a99934d928a3_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Declaração de Igualdade Salarial e de Créditos Remuneratórios - Segundo  Semestre de 2026
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/35919b1ca3b77686e4e11c7a4a292925.png" data-link="https://master.fapex.org.br/ouvidoria/" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Canal de Ouvidoria da FAPEX
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/e83ae37b8d3de09264aa58b8301503b6.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbiImg--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Compromisso com a integridade: FAPEX  marca presença em um dos principais eventos  promovidos pela CGU
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/b8a14a4e5e50d0830b2e018d27f16714.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbiImA--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX e FEALQ promovem troca de experiências em agenda institucional realizada em Salvador
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/44b8166c76f199822e96005f437dbf77.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBkQ--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX recebe visita institucional da FAPESE para troca de experiências na gestão de projeto
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/ce7a777ae38213c97373cb2752158b0e.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBnw--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX e FADE alinham estratégias em visita voltada à cooperação institucional
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/8115f2d2041785e37ffeae92e755d2b6.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBng--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Visitas institucionais fortalecem o diálogo interfundacional da FAPEX
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/d8491aa179325404c4ef9eeb6d1cd8f8.png" data-link="https://master.fapex.org.br/portalrh/" data-target="_self">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Informe de Rendimentos 2025
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/7b2e95079dd6f82638125142a014e359.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBnA--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX recebe gestão da UNEB para visita institucional e fortalecimento de parcerias.
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/c26cc90ccb85791e6316f131bed654f6.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBmw--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        A FAPEX, por meio de seu Conselho Deliberativo, entregou uma Moção de Congratulação ao professor Olival Freire Júnior, em reconhecimento à s
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/cbbe6fba1168b8675c19939b8b4e5c32.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBmg--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX e FUNAPE fortalecem laços institucionais com a visita da Diretora Executiva Sandramara Matias a Salvador.
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/ab8d077479c6ee5f87744f1148d57df3.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmBmA--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX recebeu o Diretor Presidente da FUNPEC, Professor Aldo Dantas, para uma visita institucional voltada ao fortalecimento de parcerias e
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/2450c3c35768975156985ab3692e7b55.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmAkQ--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        A FAPEX realizou, entre 21 e 23 de outubro, a 2ª SIPAT, promovendo palestras e atividades voltadas à saúde, segurança e bem-estar dos colabo
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/ddab158ab6ef7a3029af6e68b0d2c69b.png" data-link="https://www.fapex.org.br/Fapex/Harp/sys/web/pub/arquivos/pdf/documentos/tmp68da984194992_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Relatório de Igualdade Salarial - Segundo Semetre 2025
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/18efb45603b006bd6bcd63cff0980d58.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmAng--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX Fortalece Parceria com a UFOB em Agenda Institucional
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/1fad81d14f050e0fe44a1033b8ec1aa9.png" data-link="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbmAmA--" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        FAPEX adere ao Pacto Brasil pela Integridade Empresarial e Reafirma seu Compromisso Público com a Ética e a Transparência
+                    </div>-->
+            </div>
+            
+            <div  data-src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/726ae6eb50a06d474b7e3fdbab41fafc.png" data-link="https://www.fapex.org.br/Fapex/Harp/sys/web/pub/arquivos/pdf/documentos/tmp67f3e1ffa9044_xeuFxaWm!5ge!gxbpDVgVhsTZautSNotcyVGsorbThI-.pdf" data-target="_blank">
+                   <!-- <div class="camera_caption fadeFromBottom">
+                        Banner do novo Código de Ética e Conduta
+                    </div>-->
+            </div>
+                        
+</div>
+<link rel='stylesheet'  href='https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/css/camera.css' type='text/css' media='all'> 
+<script type='text/javascript' src='https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/jquery.easing.1.3.js'></script> 
+<script type='text/javascript' src='https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/camera-plugin/scripts/camera.min.js'></script>
+<script>
+        jQuery(function()
+        {
+                jQuery('#camera_wrap_1').camera({
+                        height: '360px',
+                        loader:  'pie',
+                        pagination: true,
+                        thumbnails: false
+                });
+        });
+</script>
+
+
+            <!-- fim slider -->
+    </div>
+</header> 
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/multilevel-accordion-menu/js/main.js"></script>
+
+<style>
+    #linksCabecalho
+    {
+        float:right;
+        height:47px;
+        text-align:left;
+        list-style-type:none;
+    }
+    #linksCabecalho li
+    {
+        float:left;
+        border:1px dotted #8DB6CD;
+        height:47px;
+    } 
+    #linksCabecalho img
+    {
+        height:47px;
+    } 
+    
+    #linksCabecalho a
+    {
+        display:inline-block;
+        height:47px;
+    }     
+    .clear-both-left
+    {
+        clear:both;
+        float:left;
+    }
+    .clear-both-right
+    {
+        clear:both;
+        float:right;
+    }   
+    .tituloHome
+    {
+        color:#444444;
+        font-size:18px;
+        font-weight:bold;
+        text-align:left;
+    }
+	
+	.vpw-settings-btn-close { height:28px !important; width:28px !important;}
+	.vpw-component-play { height:20px !important; width:24px !important;}
+	.vpw-component-pause { height:15px !important; width:23px !important;}
+	.vpw-component-restart { height:34px !important; width:33px !important;}
+</style>
+        <link rel="stylesheet" type="text/css" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/css/jquery-ui-1.10.3.custom.min.css"/>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/fingerprintjs2/fingerprint2.js"></script>
+        
+<script>
+  jQuery(function() 
+  {         
+         /*   var fingerPrint = new Fingerprint2();
+
+            fingerPrint.get(function (result, components) 
+            {
+                jQuery('input[name="fingerprintCurrent"]').val(result);
+
+            }); 
+        
+            var result = jQuery('input[name="fingerprintCurrent"]').val();
+
+            var s = localStorage.getItem(result);
+            //execute para limpar e depois comente
+         // localStorage.removeItem(result);
+            if(s == null)
+            {
+                jQuery('#linksCabecalho').find('div').remove('.tooltip');
+                
+                localStorage.setItem(result,jQuery('#linksCabecalho').parent().html());             
+            }
+            
+            if(s != null )
+            {
+					var prevC = jQuery(s).find('li').length;
+					var currentC = jQuery('#linksCabecalho').find('li').length;
+					
+					if(prevC != currentC)
+					{
+						localStorage.setItem(result,jQuery('#linksCabecalho').parent().html());  
+					}
+			}
+          //  console.log(jQuery(s).find('li').length);
+            
+            s = localStorage.getItem(result);
+            
+            jQuery('#lnksImgs').empty().append(s).show();
+            jQuery('#linksCabecalho').show();
+
+            jQuery( "#linksCabecalho" ).sortable
+            ({
+                revert: true,
+                scroll: false,
+                stop: function (event, ui) 
+                {
+                    jQuery('#linksCabecalho').find('div').remove('.tooltip');
+                    
+                    
+                    localStorage.setItem(result,jQuery('#linksCabecalho').parent().html()); 
+                }             
+            }); 
+            
+             jQuery('.linksUteis').tooltip();
+            //localStorage.removeItem(result);
+           // jQuery('.linksUteis').tooltip();*/
+            jQuery('.linksUteis').tooltip();
+            jQuery( "#linksCabecalho" ).disableSelection();   
+  });
+  </script>
+
+        <!--End Header-->
+        
+         <!-- content -->
+         <div>
+            <div id="content" style="background-color:#FFFFFF;">
+                <div class="container"> 
+                    
+                      <div class="HarpNotify">
+                          <div class="hidden">
+                              <div class="bg"></div>
+                              <div class="n-icon"></div>
+                              <p></p>
+                              <span></span>
+                          </div>
+                      </div>
+                                        
+                    <style>
+    .f-hover:hover
+    {
+        color:#27408B;
+    }
+</style> 
+<!-- financiadores -->
+<div class="container">
+
+<!--<div class="row">
+    <div class="span12" style="margin-top:10px;">
+		<center>
+		<a href="https://www.fapex.org.br/Fapex/Site/Principal/Noticia/detalhe/id/nbqMmw--"><img src="https://www.fapex.org.br/Fapex/Harp/sys/web/pub/img/card_ig_sul_land.png" 
+		alt=":nome}" width="98%" style="min-width:940px;"></a>
+		</center>
+	</div>  
+</div>-->  
+
+<div class="row">
+    <div class="span12">
+      <h3 class="tituloHome">INSTITUIÇÕES APOIADAS</h3>
+    </div>
+    <div class="span12">
+      <ul class="slides">
+          
+        <li>
+            <div class="row">  
+            
+                  <div class="span2 detalhar" data-modal-id="mr8-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d8d9cdda272e41982f54d0045fa39283.png" alt="UFBA - UNIVERSIDADE FEDERAL DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes mr8-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d8d9cdda272e41982f54d0045fa39283.png" alt="UFBA - UNIVERSIDADE FEDERAL DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFBA - UNIVERSIDADE FEDERAL DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal da Bahia (UFBA) é uma instituição de ensino superior pública brasileira, considerada a maior e mais influente Universidade do Estado da Bahia e uma das mais importantes no país.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufba.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/mr8-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="mr4-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/5d12d7586668937db5047921a22dd43c.png" alt="UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes mr4-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/5d12d7586668937db5047921a22dd43c.png" alt="UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Recôncavo da Bahia (UFRB) é uma universidade pública brasileira sediada na cidade de Cruz das Almas, com campi em Amargosa, Cachoeira, Feira de Santana, Santo Amaro e Santo Antônio de Jesus.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufrb.edu.br/portal/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/mr4-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m78-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/ac628b77939188becc1b23d8428b2b51.jpeg" alt="UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m78-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/ac628b77939188becc1b23d8428b2b51.jpeg" alt="UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Sul da Bahia (UFSB) é uma instituição de ensino superior federal brasileira, localizada no Sul e Extremo Sul do estado da Bahia. Está estruturada em 3 campi: o Campus Jorge Amado, o Campus Sosígenes Costa e o Campus Paulo Freire.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.ufsb.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m78-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m74-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/cd89c10eb6d6fc844f22e084fe4be085.png" alt="UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m74-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/cd89c10eb6d6fc844f22e084fe4be085.png" alt="UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Oeste da Bahia é uma instituição de ensino superior pública, sediada na cidade de Barreiras, Bahia.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.ufob.edu.br" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m74-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m70-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/013f86cec92be40e9b1f65929096d5fb.png" alt="IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m70-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/013f86cec92be40e9b1f65929096d5fb.png" alt="IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: O Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA) é uma instituição de ensino, criada mediante transformação do Centro Federal de Educação Tecnológica da Bahia (CEFET/BA), através da Lei Federal 11.892.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portal.ifba.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m70-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+          
+        <li>
+            <div class="row">  
+            
+                  <div class="span2 detalhar" data-modal-id="m7w-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/b5ed72766669c5643b398db32e69fb9e.png" alt="CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7w-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/b5ed72766669c5643b398db32e69fb9e.png" alt="CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico" width="130" height="80">
+                                  </span>
+                                  <p>Nome: CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: O CNPq é uma agência do Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC), que tem como principais atribuições fomentar a pesquisa científica e tecnológica e incentivar a formação de pesquisadores brasileiros.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.cnpq.br" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7w-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7s-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c07bd9e3d46141b47a44c18bd5f7c6cb.png" alt="UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7s-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c07bd9e3d46141b47a44c18bd5f7c6cb.png" alt="UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade da Integração Internacional da Lusofonia Afro-Brasileira é uma autarquia vinculada ao Ministério da Educação da República Federativa do Brasil, com sede na cidade de Redenção, estado do Ceará.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.unilab.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7s-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7k-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/4932945061920dc58c146ee98284bf39.png" alt="UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7k-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/4932945061920dc58c146ee98284bf39.png" alt="UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade do Vale do São Francisco (UNIVASF) foi criada em 2002, por meio da Lei N° 10.473, de 27 de junho de 2002, com sede na cidade de Petrolina, em Pernambuco.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portais.univasf.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7k-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7g-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d754303e65382ca85175f53e054e886d.png" alt="HU Brasil - Empresa Brasileira de Serviços Hospitalares" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7g-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d754303e65382ca85175f53e054e886d.png" alt="HU Brasil - Empresa Brasileira de Serviços Hospitalares" width="130" height="80">
+                                  </span>
+                                  <p>Nome: HU Brasil - Empresa Brasileira de Serviços Hospitalares</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: A Empresa Brasileira de Serviços Hospitalares (HU Brasil) foi criada por meio da Lei nº 12.550, de 15 de dezembro de 2011.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.gov.br/ebserh/pt" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7g-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7c-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c36efbbdd4014d4a1323cb37000315a7.png" alt="Universidade Federal de São João del-Rei" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7c-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c36efbbdd4014d4a1323cb37000315a7.png" alt="Universidade Federal de São João del-Rei" width="130" height="80">
+                                  </span>
+                                  <p>Nome: Universidade Federal de São João del-Rei</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: Universidade Federal com unidades educacionais em Ouro Branco, Divinópolis e Sete Lagoas, todas localizadas no estado de Minas Gerais.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufsj.edu.br/ascom/material_padronizado.php" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7c-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+          
+        <li>
+            <div class="row">  
+            
+                  <div class="span2 detalhar" data-modal-id="m7Y-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/9035b04b7d80bb27ebe6b96ebcde289f.png" alt="Universidade do Estado da Bahia" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7Y-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/9035b04b7d80bb27ebe6b96ebcde289f.png" alt="Universidade do Estado da Bahia" width="130" height="80">
+                                  </span>
+                                  <p>Nome: Universidade do Estado da Bahia</p>
+                                  <p>Natureza: Estaduais</p>
+                                  <p>Descrição: A Universidade do Estado da Bahia é a maior instituição pública de ensino superior multicampi do estado da Bahia, estruturada em 24 campi.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portal.uneb.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/m7Y-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="lL8-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/247d8bc26dc592c36ee9231b3a781d13.png" alt="UEFS - Universidade Federal de Feira de Santana" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes lL8-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/247d8bc26dc592c36ee9231b3a781d13.png" alt="UEFS - Universidade Federal de Feira de Santana" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UEFS - Universidade Federal de Feira de Santana</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: Universidade Estadual de Feira de Santana (UEFS), também conhecida como Universidade de Feira de Santana, é uma instituição pública brasileira de ensino superior sediada na cidade de Feira de Santana.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.uefs.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/lL8-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="lL4-" style="width:187px;height:123px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/18969f606c5183cfbda2cdc0dbe09040.jpeg" alt="IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes lL4-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/18969f606c5183cfbda2cdc0dbe09040.jpeg" alt="IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional" width="130" height="80">
+                                  </span>
+                                  <p>Nome: IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: O Instituto do Patrimônio Histórico e Artístico Nacional (Iphan) é uma autarquia federal vinculada ao Ministério da Cultura que responde pela preservação do Patrimônio Cultural Brasileiro.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.portal.iphan.gov.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                                  <a class="btn btn-info btn-xs links-edicao" target="_blank" style="display:none;cursor:pointer;font-size:11px;font-size:11px;width:60px;height:25px;line-height:25px;padding:0;float:right;margin-right:4px;" href="https://fapex.org.br:443/Fapex/GerenciadorSite/Site/Financiador/editar/id/lL4-">EDITAR</a>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+        
+      </ul>
+        <div class="modal-detalhes-financiadores"></div>
+    </div> 
+</div>
+</div>  
+<!--<div class="container">
+<div id="financiador">
+    <div class="slider2 flexslider">
+      <ul class="slides">
+          
+        <li>
+            <div class="row">
+            
+                  <div class="span2 detalhar" data-modal-id="mr8-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d8d9cdda272e41982f54d0045fa39283.png" alt="UFBA - UNIVERSIDADE FEDERAL DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes mr8-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d8d9cdda272e41982f54d0045fa39283.png" alt="UFBA - UNIVERSIDADE FEDERAL DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFBA - UNIVERSIDADE FEDERAL DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal da Bahia (UFBA) é uma instituição de ensino superior pública brasileira, considerada a maior e mais influente Universidade do Estado da Bahia e uma das mais importantes no país.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufba.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="mr4-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/5d12d7586668937db5047921a22dd43c.png" alt="UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes mr4-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/5d12d7586668937db5047921a22dd43c.png" alt="UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFRB - UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Recôncavo da Bahia (UFRB) é uma universidade pública brasileira sediada na cidade de Cruz das Almas, com campi em Amargosa, Cachoeira, Feira de Santana, Santo Amaro e Santo Antônio de Jesus.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufrb.edu.br/portal/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m78-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/ac628b77939188becc1b23d8428b2b51.jpeg" alt="UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m78-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/ac628b77939188becc1b23d8428b2b51.jpeg" alt="UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFSB - UNIVERSIDADE FEDERAL DO SUL DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Sul da Bahia (UFSB) é uma instituição de ensino superior federal brasileira, localizada no Sul e Extremo Sul do estado da Bahia. Está estruturada em 3 campi: o Campus Jorge Amado, o Campus Sosígenes Costa e o Campus Paulo Freire.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.ufsb.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m74-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/cd89c10eb6d6fc844f22e084fe4be085.png" alt="UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m74-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/cd89c10eb6d6fc844f22e084fe4be085.png" alt="UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UFOB - UNIVERSIDADE FEDERAL DO OESTE DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade Federal do Oeste da Bahia é uma instituição de ensino superior pública, sediada na cidade de Barreiras, Bahia.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.ufob.edu.br" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m70-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/013f86cec92be40e9b1f65929096d5fb.png" alt="IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m70-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/013f86cec92be40e9b1f65929096d5fb.png" alt="IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA" width="130" height="80">
+                                  </span>
+                                  <p>Nome: IFBA -INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DA BAHIA</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: O Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA) é uma instituição de ensino, criada mediante transformação do Centro Federal de Educação Tecnológica da Bahia (CEFET/BA), através da Lei Federal 11.892.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portal.ifba.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+          
+        <li>
+            <div class="row">
+            
+                  <div class="span2 detalhar" data-modal-id="m7w-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/b5ed72766669c5643b398db32e69fb9e.png" alt="CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7w-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/b5ed72766669c5643b398db32e69fb9e.png" alt="CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico" width="130" height="80">
+                                  </span>
+                                  <p>Nome: CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: O CNPq é uma agência do Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC), que tem como principais atribuições fomentar a pesquisa científica e tecnológica e incentivar a formação de pesquisadores brasileiros.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.cnpq.br" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7s-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c07bd9e3d46141b47a44c18bd5f7c6cb.png" alt="UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7s-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c07bd9e3d46141b47a44c18bd5f7c6cb.png" alt="UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade da Integração Internacional da Lusofonia Afro-Brasileira é uma autarquia vinculada ao Ministério da Educação da República Federativa do Brasil, com sede na cidade de Redenção, estado do Ceará.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.unilab.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7k-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/4932945061920dc58c146ee98284bf39.png" alt="UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7k-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/4932945061920dc58c146ee98284bf39.png" alt="UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UNIVASF - UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO</p>
+                                  <p>Natureza: Ensino Superior</p>
+                                  <p>Descrição: A Universidade do Vale do São Francisco (UNIVASF) foi criada em 2002, por meio da Lei N° 10.473, de 27 de junho de 2002, com sede na cidade de Petrolina, em Pernambuco.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portais.univasf.edu.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7g-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d754303e65382ca85175f53e054e886d.png" alt="HU Brasil - Empresa Brasileira de Serviços Hospitalares" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7g-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/d754303e65382ca85175f53e054e886d.png" alt="HU Brasil - Empresa Brasileira de Serviços Hospitalares" width="130" height="80">
+                                  </span>
+                                  <p>Nome: HU Brasil - Empresa Brasileira de Serviços Hospitalares</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: A Empresa Brasileira de Serviços Hospitalares (HU Brasil) foi criada por meio da Lei nº 12.550, de 15 de dezembro de 2011.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.gov.br/ebserh/pt" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="m7c-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c36efbbdd4014d4a1323cb37000315a7.png" alt="Universidade Federal de São João del-Rei" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7c-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/c36efbbdd4014d4a1323cb37000315a7.png" alt="Universidade Federal de São João del-Rei" width="130" height="80">
+                                  </span>
+                                  <p>Nome: Universidade Federal de São João del-Rei</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: Universidade Federal com unidades educacionais em Ouro Branco, Divinópolis e Sete Lagoas, todas localizadas no estado de Minas Gerais.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.ufsj.edu.br/ascom/material_padronizado.php" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+          
+        <li>
+            <div class="row">
+            
+                  <div class="span2 detalhar" data-modal-id="m7Y-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/9035b04b7d80bb27ebe6b96ebcde289f.png" alt="Universidade do Estado da Bahia" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes m7Y-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/9035b04b7d80bb27ebe6b96ebcde289f.png" alt="Universidade do Estado da Bahia" width="130" height="80">
+                                  </span>
+                                  <p>Nome: Universidade do Estado da Bahia</p>
+                                  <p>Natureza: Estaduais</p>
+                                  <p>Descrição: A Universidade do Estado da Bahia é a maior instituição pública de ensino superior multicampi do estado da Bahia, estruturada em 24 campi.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.portal.uneb.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="lL8-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/247d8bc26dc592c36ee9231b3a781d13.png" alt="UEFS - Universidade Federal de Feira de Santana" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes lL8-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/247d8bc26dc592c36ee9231b3a781d13.png" alt="UEFS - Universidade Federal de Feira de Santana" width="130" height="80">
+                                  </span>
+                                  <p>Nome: UEFS - Universidade Federal de Feira de Santana</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: Universidade Estadual de Feira de Santana (UEFS), também conhecida como Universidade de Feira de Santana, é uma instituição pública brasileira de ensino superior sediada na cidade de Feira de Santana.</p>
+                                  <p style="color:#72AADA;"><a href="https://www.uefs.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+                  <div class="span2 detalhar" data-modal-id="lL4-" style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;cursor:zoom-in;">
+                          <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/18969f606c5183cfbda2cdc0dbe09040.jpeg" alt="IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional" width="170" height="120">
+                  </div>     
+                    <div class="w3-modal modal-detalhes lL4-">
+                        <div class="w3-modal-content w3-animate-zoom w3-card-8">
+                            <header class="w3-container" style="background-color:#EEEEEE;"> 
+                              <span class="w3-closebtn">×</span>
+                            </header>
+                            <div class="w3-container" style="text-align:left;">  
+                              <span style="font-weight:bold;">
+                                  <span style="width:121px;height:80px;border:1px dotted #CCCCCC;padding:10px;display:inline-block;">
+                                    <img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/financiador/18969f606c5183cfbda2cdc0dbe09040.jpeg" alt="IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional" width="130" height="80">
+                                  </span>
+                                  <p>Nome: IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional</p>
+                                  <p>Natureza: Federal</p>
+                                  <p>Descrição: O Instituto do Patrimônio Histórico e Artístico Nacional (Iphan) é uma autarquia federal vinculada ao Ministério da Cultura que responde pela preservação do Patrimônio Cultural Brasileiro.</p>
+                                  <p style="color:#72AADA;"><a href="http://www.portal.iphan.gov.br/" class="f-hover" target="_blank">Visitar Website</a></p>
+                              </span>                                                                 
+                            </div>
+                        </div>
+                    </div>             
+            
+            </div>            
+        </li>
+        
+      </ul>          
+    </div>
+</div>
+<div class="modal-detalhes-financiadores"></div>
+</div>-->
+ <!-- fim financiadores -->
+ <script>
+    jQuery(document).ready(function()
+    {
+        jQuery('.detalhar').click(function()
+        {
+            var idModal = jQuery(this).attr('data-modal-id');
+           
+            if(idModal != '')
+            {              
+                var modal = jQuery('.'+idModal).clone(true,true);
+                
+                jQuery(modal).attr('id',idModal);
+                
+                jQuery('.modal-detalhes-financiadores').empty().append(jQuery(modal).html());
+
+                jQuery('#'+idModal).css({'display':'block'});
+            }
+        });
+        
+        jQuery('body').on('click','.w3-closebtn',function()
+        {
+           jQuery(this).parent().parent().css({'display':'none'}); 
+        });
+    });      
+ </script>
+
+<div class="row space40"></div>
+    <div class="row">
+        <div class="span6"><h4 class="tituloHome">EDITAIS PARA SELEÇÃO</h4></div>
+        <div class="span6"><h4 class="tituloHome" style="padding-left:15%;">ÚLTIMAS NOTÍCIAS</h4></div>
+    </div>
+<div class="row">
+    <div class="span5 ultimasNoticias">
+     
+     <div class="sectNoticia">
+        <div class="diaMes">
+            <span>3</span> 
+            <div>JUL</div> 
+        </div>
+        <div class="tituloNoticia">
+               <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImg--">Compromisso com a integridade: FAPEX marca presença em um dos principais eventos nacionais promovidos pela CGU.</a>
+        </div>
+     </div>    
+     
+     <div class="sectNoticia">
+        <div class="diaMes">
+            <span>19</span> 
+            <div>JUN</div> 
+        </div>
+        <div class="tituloNoticia">
+               <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImQ--">FAPEX fortalece parcerias e amplia conexões durante a Bahia Farm Show 2026</a>
+        </div>
+     </div>    
+     
+     <div class="sectNoticia">
+        <div class="diaMes">
+            <span>2</span> 
+            <div>JUN</div> 
+        </div>
+        <div class="tituloNoticia">
+               <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbiImA--">FAPEX e FEALQ promovem troca de experiências em agenda institucional realizada em Salvador</a>
+        </div>
+     </div>    
+     
+     <div class="sectNoticia">
+        <div class="diaMes">
+            <span>19</span> 
+            <div>MAI</div> 
+        </div>
+        <div class="tituloNoticia">
+               <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbmBkQ--">FAPEX recebe visita institucional da FAPESE para troca de experiências na gestão de projetos</a>
+        </div>
+     </div>    
+     
+     <div class="sectNoticia">
+        <div class="diaMes">
+            <span>30</span> 
+            <div>ABR</div> 
+        </div>
+        <div class="tituloNoticia">
+               <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/nbmBkA--">50 Anos de dedicação à Universidade Federal da Bahia - UFBA</a>
+        </div>
+     </div>    
+     
+     <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/index" style="color:#888888;float:right;width:100%;display:block;text-align:right;">Mais notícias</a>
+</div>    
+<style>
+    .ultimasNoticias
+    {
+        border:1px dotted #CCCCCC;
+        padding:8px;
+        float:right;
+    }
+    .diaMes
+    {
+        background-color:#132959;
+        width:45px;
+        height:45px;
+        color:#FFFFFF;
+        text-align:center;
+        margin:2px;
+        display:inline-block;
+        float:left;
+    }
+    .tituloNoticia
+    {
+        color:#132959;
+        width:415px;
+        height:45px;
+        text-align:justify;
+        margin:2px;
+        display:inline-block;
+        font-size:12px;
+        float:left;
+        text-transform:uppercase;
+    } 
+    .tituloNoticia a
+    {
+        width:100%;
+        height:45px;
+        display:inline-block;
+    }
+    .tituloNoticia a:hover
+    {
+        color:#fb8865;
+    }    
+    .diaMes span
+    {
+        font-size:18px;
+    }
+    .diaMes div
+    {
+        font-size:10px;
+    }   
+    .sectNoticia
+    {
+        display:block;
+        float:left;
+    }
+</style>
+    <div class="span6">
+<style type="text/css">
+.flex-caption 
+{
+  width: 98%;
+  padding: 1%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+</style>
+<div class="slider1 flexslider" id="banners">  
+        <ul class="slides">
+            
+            <li>
+                <a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2P" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/950f25bf189d87bdc2bce99a70a4152d.png" alt="Chamada Pública para seleção de projetos de pesquisa em cooperação UFBA" style="width:100%;height:222px;"></a>
+                <p class="flex-caption">Chamada Pública para seleção de projetos de pesquisa em cooperação UFBA</p>
+            </li>
+            
+            <li>
+                <a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2O" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/912ea329f1482f1df7f5ae34569620c5.png" alt="Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA" style="width:100%;height:222px;"></a>
+                <p class="flex-caption">Seleção de estagiários(as) para o projeto Programa Nubank de Parceria com a UFBA e o IFBA</p>
+            </li>
+            
+            <li>
+                <a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2N" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/7d84d7b417b9cbcdf60c70fef215f764.png" alt="Seleção de Bolsistas para o Projeto MAIS GESTÃO Bahia: promoção e fortalecimento das organizações da agricultura familiar dos Povos e Comunidades Tradicionais (associações/ cooperativas) para comercialização e acesso aos mercados do Estado da Bahia" style="width:100%;height:222px;"></a>
+                <p class="flex-caption">Seleção de Bolsistas para o Projeto MAIS GESTÃO Bahia: promoção e fortalecimento das organizações da agricultura familiar dos Povos e Comunidades Tradicionais (associações/ cooperativas) para comercialização e acesso aos mercados do Estado da Bahia</p>
+            </li>
+            
+            <li>
+                <a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2L" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/457398752ab58a788cdc737a6e720a03.png" alt="Seleção de estagiários(as) de Comunicação para o projeto Programa Nubank de Parceria com a UFBA e o IFBA" style="width:100%;height:222px;"></a>
+                <p class="flex-caption">Seleção de estagiários(as) de Comunicação para o projeto Programa Nubank de Parceria com a UFBA e o IFBA</p>
+            </li>
+            
+            <li>
+                <a href="https://fapex.org.br:443/Fapex/Site/Principal/Edital/detalhe/id/nr2M" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/0d0b34fb2dba74040f370d2febabbefb.png" alt="Seleção de estagiários(as) de Redes de Computadores para o projeto Programa Nubank de Parceria com a UFBA e o IFBA" style="width:100%;height:222px;"></a>
+                <p class="flex-caption">Seleção de estagiários(as) de Redes de Computadores para o projeto Programa Nubank de Parceria com a UFBA e o IFBA</p>
+            </li>
+            
+        </ul>
+</div>
+    </div> 
+</div>
+<div class="row space40"></div>
+<div class="row">
+    <div class="span7">
+        <h4 class="tituloHome">PORTAIS</h4>
+    </div>
+    <div class="span5">
+        <h4 class="tituloHome">PROJETOS ASSINADOS</h4>       
+    </div>
+</div>
+<div class="row">
+    
+    <div class="span7" style="text-align:center;margin:0;padding:0;">
+            <ul id="linksPortais" >
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/portalfornecedor" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/388fa2d074df2955a96784c5e6d8a58f.png" alt="Fornecedor" style="width:120px;height:120px;" title="Fornecedor"></a>
+                            <div style="text-align:center;">Fornecedor</div>
+                        </li>
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/portalfinanciador/Login" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/31a592860e4950f40ae0b42a6a9332d5.png" alt="Financiador" style="width:120px;height:120px;" title="Financiador"></a>
+                            <div style="text-align:center;">Financiador</div>
+                        </li>
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/portalcoordenador" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/7d8647d0a148ae29805df8d29f8c373f.png" alt="Coordenador" style="width:120px;height:120px;" title="Coordenador"></a>
+                            <div style="text-align:center;">Coordenador</div>
+                        </li>
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/portalrh/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/d80bb6d18c48cf05dbdbc562937d19b9.png" alt="Funcionário" style="width:120px;height:120px;" title="Funcionário"></a>
+                            <div style="text-align:center;">Funcionário</div>
+                        </li>
+                    
+            </ul>   
+    </div>      
+    <div class="span5" style="border:1px dotted #EEEEEE;float:right;padding:9px;height:277px;max-height:277px;">
+        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/index"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/home/BannerProjetos.png" style="height:277px;"></a>
+<!--        <div class="slider1 flexslider" id="projetosAssinados">  
+                <ul class="slides" style="height:280px;">
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2NmQ--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="CURSO DE ESPECIALIZAÇÃO EM EMPREENDEDORISMO E GESTÃO DO DESENVOLVIMENTO TERRITORIAL" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">CURSO DE ESPECIALIZAÇÃO EM EMPREENDEDORISMO E GESTÃO DO DESENVOLVIMENTO TERRITORIAL</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Pmw--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="CENTRO DE FORMAÇÃO EM EDUCAÇÃO QUILOMBOLA – APROFUNDANDO AS AÇÕES PNEERQ NA BAHIA" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">CENTRO DE FORMAÇÃO EM EDUCAÇÃO QUILOMBOLA – APROFUNDANDO AS AÇÕES PNEERQ NA BAHIA</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Pmg--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="CURSO DE ESPECIALIZAÇÃO, EM DIREITOS DIGITAIS E SEGURANÇA CIBERNÉTICA" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">CURSO DE ESPECIALIZAÇÃO, EM DIREITOS DIGITAIS E SEGURANÇA CIBERNÉTICA</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Mnw--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="TESTE DE RESPONSIVIDADE A SEPIAPTERINA EM CRIANÇAS, ADOLESCENTES E ADULTOS BRASILEIROS COM FENILCETONURIA (PKU)" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">TESTE DE RESPONSIVIDADE A SEPIAPTERINA EM CRIANÇAS, ADOLESCENTES E ADULTOS BRASILEIROS COM FENILCETONURIA (PKU)</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2NkQ--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="AÇÃO SABERES INDÍGENAS NA ESCOLA NÚCLEO UFBA - ANO 2026" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">AÇÃO SABERES INDÍGENAS NA ESCOLA NÚCLEO UFBA - ANO 2026</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Nnw--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="PROGRAMA DE FORMAÇÃO CONTINUADA PARA PROFISSIONAIS DA EDUCAÇÃO BÁSICA NA PERSPECTIVA DA EDUCAÇÃO INTEGRAL EM TEMPO INTEGRAL (ETAPA 3)
+" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">PROGRAMA DE FORMAÇÃO CONTINUADA PARA PROFISSIONAIS DA EDUCAÇÃO BÁSICA NA PERSPECTIVA DA EDUCAÇÃO INTEGRAL EM TEMPO INTEGRAL (ETAPA 3)
+</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Nmg--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt=" FORMAÇÃO CONTINUADA E EM SERVIÇO 2026 – ESTADO BAHIA" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;"> FORMAÇÃO CONTINUADA E EM SERVIÇO 2026 – ESTADO BAHIA</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Nmw--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="ARTE E EDUCAÇÃO: FORMAÇÃO DE PROFESSORES DA EDUCAÇÃO BÁSICA, PARA DIFUSÃO DE ARTE E DA CULTURA POPULAR EM TERRITÓRIOS DE IDENTIDADE DO ESTADO DA BAHIA." style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">ARTE E EDUCAÇÃO: FORMAÇÃO DE PROFESSORES DA EDUCAÇÃO BÁSICA, PARA DIFUSÃO DE ARTE E DA CULTURA POPULAR EM TERRITÓRIOS DE IDENTIDADE DO ESTADO DA BAHIA.</p>
+                    </li>
+                    
+                    <li>
+                        <a href="https://fapex.org.br:443/Fapex/Site/Principal/Projeto/detalhe/id/mr2Jmw--"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/banners/default.gif" alt="PAISAGEM SONORA - II SEMINÁRIO NACIONAL E MOSTRA PEDAGÓGICA DE EDUCAÇÃO E MÚSICA AFRO-BRASILEIRA" style="width:100%;height:237px;"></a>
+                        <p class="flex-caption" style="font-size:10px;min-height:98px;background-color:#142859;color:#FFFFFF;margin:0;text-align:justify;padding:8px 5px 5px 5px;">PAISAGEM SONORA - II SEMINÁRIO NACIONAL E MOSTRA PEDAGÓGICA DE EDUCAÇÃO E MÚSICA AFRO-BRASILEIRA</p>
+                    </li>
+                    
+                </ul>
+        </div> -->
+    </div>
+    <div class="span5"><h4 class="tituloHome">LINKS FAPEX</h4></div>
+    <div class="span6" style="text-align:center;margin:0;padding:0;">
+            <ul id="linksFapex" style="margin: 0 0 10px 20px; !important" >
+                    
+                        <li>
+                            <a href="https://www.catho.com.br/vagas/fapex/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/539df2c462be81213b9d6c8101efe759.png" alt="Trabalhe Conosco" style="width:90px;height:60px;" title="Trabalhe Conosco"></a>
+                            <div style="text-align:center;">Trabalhe Conosco</div>
+                        </li>
+                    
+                        <li>
+                            <a href="http://confies.org.br/institucional/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/8abdc38fb786180aee458549acd347e8.png" alt="CONFIES" style="width:90px;height:60px;" title="CONFIES"></a>
+                            <div style="text-align:center;">CONFIES</div>
+                        </li>
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/sapro/documentos/validacao/checkauth.aspx" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/4fee9d82afe1c430a5320184ebc49c7f.png" alt="Validador de Documentos" style="width:90px;height:60px;" title="Validador de Documentos"></a>
+                            <div style="text-align:center;">Validador de Documentos</div>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.fapex.org.br/Fapex/PortalTransparencia" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/b9da8a8b43f2ac14b96d8e7902c27466.png" alt="Portal da Transparência" style="width:90px;height:60px;" title="Portal da Transparência"></a>
+                            <div style="text-align:center;">Portal da Transparência</div>
+                        </li>
+                    
+            </ul>   
+    </div>     
+</div>
+<div class="row space40"></div>
+<!--<div class="row">
+    <div class="span12"><h4 class="tituloHome">LINKS FAPEX</h4></div>
+</div>
+<div class="row">
+    <div class="span6" style="text-align:center;margin:0;padding:0;">
+            <ul id="linksFapex" >
+                    
+                        <li>
+                            <a href="https://www.catho.com.br/vagas/fapex/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/539df2c462be81213b9d6c8101efe759.png" alt="Trabalhe Conosco" style="width:100px;height:60px;" title="Trabalhe Conosco"></a>
+                            <div style="text-align:center;">Trabalhe Conosco</div>
+                        </li>
+                    
+                        <li>
+                            <a href="http://confies.org.br/institucional/" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/8abdc38fb786180aee458549acd347e8.png" alt="CONFIES" style="width:100px;height:60px;" title="CONFIES"></a>
+                            <div style="text-align:center;">CONFIES</div>
+                        </li>
+                    
+                        <li>
+                            <a href="https://master.fapex.org.br/sapro/documentos/validacao/checkauth.aspx" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/4fee9d82afe1c430a5320184ebc49c7f.png" alt="Validador de Documentos" style="width:100px;height:60px;" title="Validador de Documentos"></a>
+                            <div style="text-align:center;">Validador de Documentos</div>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.fapex.org.br/Fapex/PortalTransparencia" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/links/b9da8a8b43f2ac14b96d8e7902c27466.png" alt="Portal da Transparência" style="width:100px;height:60px;" title="Portal da Transparência"></a>
+                            <div style="text-align:center;">Portal da Transparência</div>
+                        </li>
+                    
+            </ul>   
+    </div>      
+</div>-->
+<div class="row space40"></div>
+<!--notícias importanes-->
+<!--<div id="noticias-importantes">
+    
+</div>-->
+<!--fim notícias importanes-->
+
+<!--<div class="row">
+    <div class="span12">
+        <h3>NOTÍCIA DESTAQUE</h3>
+    </div>
+</div> -->
+<div class="row">
+<!--<div class="span12">
+    <h3></h3>
+</div>-->
+<div class="span12" id="imgNoticias" style="display:none">
+<!--          
+          <img src="" alt="" style="width:280px;height:200px;">
+    -->
+</div>    
+<!--<div class="span12"> 
+    <div class="text-1" style="text-align:justify;padding:10px 10px 10px 2px;font-size:16px;float:left;">
+        
+    </div>  
+    <a href="https://fapex.org.br:443/Fapex/Site/Principal/Noticia/detalhe/id/" style="color:#fb8865;"><div class="ic-1" style="float:right;padding:0;margin:0;width:100px;"><span style="display:inline-block;float:left;font-size:12px;">Leia Mais...</span><i class="material-icons"></i></div></a>
+</div>       -->
+</div>
+
+<!--<div class="row space20"></div>-->
+<!--<div style="border:1px dotted #214897;padding:1rem;float:left;margin-top:1em;margin-bottom:1em;width:100%;">
+    <a class = "twitter-timeline" href = "https://twitter.com/fapex" data-chrome = "nofooter noborders" data-lang="pt">
+        Tweets por @Fapex
+    </a> 
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div>-->
+<style>
+    #linksPortais
+    {
+        height:120px;
+        text-align:center;
+        list-style-type:none;
+    }
+    #linksPortais li
+    {
+        float:left;
+/*        border:1px dotted #8DB6CD;*/
+        height:120px;
+        text-align:center;
+        margin:1%;
+    } 
+    #linksPortais img
+    {
+        height:120px;
+    } 
+    
+    #linksPortais a
+    {
+        display:inline-block;
+        height:120px;
+    }  
+    #linksPortais li div
+    {
+        font-size:11px;
+        font-weight:bold;
+    } 
+    #linksFapex
+    {
+        height:60px;
+        text-align:center;
+        list-style-type:none;
+    }
+    #linksFapex li
+    {
+        float:left;
+        height:60px;
+        text-align:center;
+        margin:1%;
+    } 
+    #linksFapex img
+    {
+        height:60px;
+    } 
+    
+    #linksFapex a
+    {
+        display:inline-block;
+        height:60px;
+    }  
+    #linksFapex li div
+    {
+        font-size:11px;
+        font-weight:bold;
+    }    
+</style>
+<script>
+jQuery(function() 
+{
+    jQuery('#linksPortais li a img').tooltip();
+});
+</script>
+
+
+                </div>
+            </div>
+         </div>    
+         <!-- fim content -->
+         <!--Footer-->
+            <script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-date-clock.js"></script>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/js/m-js.js"></script>        
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js"></script>
+<!-- Footer -->
+    <div class="enviarMensagemLoader" style="width:300px;">    
+        <div class="w3-row w3-right-align">
+                 <div class="div-container-loader w3-right w3-col s12"></div>
+        </div>        
+    </div>  
+
+<style>
+    .overlay {
+background:transparent;
+position:relative;
+width:640px; /* your iframe width */
+height:480px; /* your iframe height */
+top:480px; /* your iframe height */
+margin-top:-480px; /* your iframe height */
+}
+</style>
+
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+        <a name="contato" accesskey="5" href="#footer"></a> 
+            
+<!--            <div class="span5">  -->
+            <h3>FALE CONOSCO</h3>
+                <div>         
+                    <form action="https://fapex.org.br:443/Fapex/Site/Principal/Contato/enviar" method="post" id="form-contato">
+                      <input name="Contato[nome]" value="" id="name" type="text" data-validetta="required,minLength[8],regExp[nome]"  data-vd-message-required="Nome deve ser informado!" data-vd-message-minlength="Nome muito curto informe pelo menos 8 caractéres!" placeholder="Nome"  style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;">
+                      <input  name="Contato[email]" value="" id="email" type="text" data-validetta="required,email"  data-vd-message-required="E-Mail deve ser informado!" data-vd-message-email="O E-Mail informado é inválido!" placeholder="E-Mail"  style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;" class="email">
+                      <input  name="Contato[telefone]" value="" id="telefone" type="text" placeholder="Telefone" data-validetta="required,regExp[telefone]"  data-vd-message-required="Telefone deve ser informado!" style="background-color:#464646;color:#FFFFFF;height:50px;width:100%;border:none;" class="phone">
+                          <select  name="Contato[idEstruturaLogica]" data-validetta="required"  data-vd-message-required="Selecione o setor de destino para sua mensagem!" style="background-color:#464646;color:#FFFFFF;height:50px;width:103%;border:none;">
+                            <option value="">SELECIONE UM SETOR</option>
+                            
+                                <option value="lA--">DIRETORIA EXECUTIVA (DIREX)</option>
+                            
+                                <option value="nb8-">SUPERINTENDÊNCIA (SUPER)</option>
+                            
+                                <option value="nbw-">ASSESSORIA JURÍDICA (ASJUR)</option>
+                            
+                                <option value="nb4-">ASSESSORIA DE COMUNICAÇÃO (ASCOM)</option>
+                            
+                                <option value="nb0-">ASSESSORIA DE SAÚDE OCUPACIONAL E SEGURANÇA DO TRABALHO (ASOST)</option>
+                            
+                                <option value="lQ--">ASSESSORIA DE TECNOLOGIA DA INFORMAÇÃO (ASTIN)</option>
+                            
+                                <option value="nro-">COORDENAÇÃO DE COMPRAS E SERVIÇOS</option>
+                            
+                                <option value="nbc-">GERÊNCIA ADMINISTRATIVA (GERAD)</option>
+                            
+                                <option value="nrs-">COORDENAÇÃO DE RH (COORH)</option>
+                            
+                                <option value="nbY-">COORDENAÇÃO DE LOGÍSTICA (COLOG)</option>
+                            
+                                <option value="nrc-">COORDENAÇÃO DE LICITAÇÃO E CONTRATOS</option>
+                            
+                                <option value="nrk-">GERÊNCIA FINANCEIRA (GEFIN)</option>
+                            
+                                <option value="nbs-">COORDENAÇÃO DE PESSOAL (COOPE)</option>
+                            
+                                <option value="nr0-">COORDENAÇÃO DE CONTABILIDADE (CCONT)</option>
+                            
+                                <option value="nr8-">COORDENAÇÃO DE PRESTAÇÃO DE CONTAS (CPCON)</option>
+                            
+                                <option value="nr4-">COORDENAÇÃO FINANCEIRA (COFIN)</option>
+                            
+                                <option value="nbo-">GERÊNCIA DE PROJETOS (GEPRO)</option>
+                            
+                          </select>
+                      <textarea  name="Contato[mensagem]" id="message" data-validetta="required,minLength[8]"  data-vd-message-required="Mensagem deve ser informada!" data-vd-message-minlength="Mensagem muito curta informe pelo menos 8 caractéres!" placeholder="Mensagem" style="background-color:#464646;color:#FFFFFF;height:100px;width:100%;border:none;resize:none;"></textarea><br>
+                      <textarea name="Contato[mensagemNaoPreenchida]"></textarea>
+                      <input type="hidden" name="Contato[tempoDeEspera]" value="">
+                      <div class="g-recaptcha" data-sitekey="6Lcha1EUAAAAAJrNEm3pE7P5L8uhZ-Kvwx8wyBQN" data-callback="recaptchaCallback"></div>
+                      
+                      <button type="submit" class="btn f-right" id="enviarMensagem" disabled>ENVIAR<i class="icon-ok"></i></button>
+                      <script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
+                      <script>
+						function recaptchaCallback() 
+						{
+								jQuery('#enviarMensagem').removeAttr('disabled');
+						};
+                      </script>
+                    </form>
+                </div>              
+            </div>    
+            <div class="span4">
+                 <h3>MAPA</h3>
+                  <div style="border:none;">  	  
+                    <iframe
+                    width="100%" 
+                    height="370" 
+                    frameborder="0" 
+                    style="border:none;"
+                    pointer-events:none
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQ1y-wSKeN8qckR9sQ4LR_hp7k2SxfzWs
+                      &q=FAPEX,Salvador+Pituba+BA" allowfullscreen>
+                  </iframe> 
+                  </div>                 
+            </div>            
+            <div class="span4">
+                        
+                      
+                            <h3>ENDEREÇO</h3>
+                            Rua Professor Edgard Mata, Nº 001, Ondina, 
+                            
+                            <br/>CEP: 40.170-140<br/>Salvador - BA<br/><br/>
+                            <i class="icon-phone"></i>+55(71) 3183-8400<br/>
+                            <i class="icon-envelope"></i>
+                            <a href="mailto:contato@fapex.org.br">contato@fapex.org.br</a><br/>
+                            <i class="icon-home"></i><a href="#">http://www.fapex.org.br</a><br/>
+                            <i class="icon-book" style="color:#273E74;"></i><a href="#" style="color:#273E74;">14.645.162/0001-91</a>
+                            <div class="row space40"></div>    
+                    
+            <div style="height:100px; float:left;">
+            <script language="JavaScript" src="https://dunsregistered.dnb.com" type="text/javascript"></script>
+            </div>
+			<div style="height:100px; float:left; margin-left:20px;">
+			<a href="https://www.gov.br/cgu/pt-br/assuntos/integridade-privada/pacto-brasil" target="_blank"><img src="https://www.fapex.org.br:443/Fapex/Harp/sys/web/pub/img/selo-empresa-color.png" style="width:180px;" /></a>
+			</div>
+<div class="clear"></div>			
+                   <div style="height:50px;width:215px;position: relative;">
+                       <span style="position: absolute;bottom: 0;right: 0;font-size:11px;">Última atualização: 22/07/2026 09:57</span>
+                   </div>
+            </div> 
+            
+<!--        </div>-->
+
+
+      </div>
+<!--      <div class="row">
+          <div clas="span12" style="float:right;">
+                <div id="redesSciais">
+                    
+                        <a href="" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/redesSociais/" alt="" style="width:32px;height:32px;"></a>
+                    
+                </div>
+          </div>
+      </div>-->
+      <div class="row space50"></div>
+      <div class="row">
+        <div class="span6">
+          <div class="logo-footer">
+              <a href="http://www.computacaobrasil.com.br" target="_blank"><img src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/img/logo_cb_rodape_branca.png" style="width:208px;height:65px;"/></a>
+          </div>                       
+        </div>
+        <div class="span6 right">
+          © 2026. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+</div>
+	
+  </footer>
+  
+  <style>
+      textarea[name="Contato[mensagemNaoPreenchida]"]
+      {
+          display:none;
+      }
+  </style>
+<script language="javascript" type="text/javascript">
+//   jQuery('#enviarMensagem').click(function()
+//   {
+//        scrollToTop('.enviarMensagemLoader');
+//   });
+   // loaderGif('#enviarMensagem','140px','137px',true);
+    var tempoEspera = jQuery('input[name="Contato\[tempoDeEspera\]"]').val();
+    //console.log(tempoEspera);
+    if(tempoEspera > 0)
+    {
+        jQuery('#enviarMensagem').prop('disabled',true);
+        window.setTimeout(function(){jQuery('#enviarMensagem').prop('disabled',false);},(parseInt(tempoEspera) * 100000));
+    }
+    jQuery(document).ready(function()
+    {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+        {
+          jQuery('#form-contato input').css({'width':(parseInt(window.innerWidth) - 32)+'px'});
+          jQuery('#form-contato select').css({'width':(parseInt(window.innerWidth) - 20)+'px'});
+          jQuery('#form-contato textarea').css({'width':(parseInt(window.innerWidth) - 32)+'px'});
+          
+     //     jQuery('#linksCabecalho').css({'float':'left'});
+        }
+    });      
+</script>
+<!--<link rel="stylesheet" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/jquery-validation-1.16.0/demo/css/screen.css"/> -->
+<link rel="stylesheet" type="text/css" media="screen" href="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.min.css"/>
+<script src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/lib/validetta-1.0.1/dist/validetta.js"></script>        
+<script type="text/javascript">
+jQuery('#form-contato').validetta
+({
+    validators: {
+        regExp: {
+            nome : {
+                pattern :  /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
+                errorMessage : 'Nome inválido números e alguns caractéres especiais não são válidos!'
+            },
+            telefone:
+            {
+                pattern : /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4,}))$/,
+                errorMessage : 'Telefone inválido!'
+            }
+        }
+    },    
+    onValid : function() 
+    {
+        scrollToTop('.enviarMensagemLoader');
+    },
+    onError : function( event )
+    {
+        event.preventDefault();  
+    }
+});
+</script>
+  <!-- Footer End -->
+ 
+  
+
+         <!--fim Footer-->
+        </div>
+		<div vw class="enabled">
+		<div vw-access-button class="active"></div>
+		<div vw-plugin-wrapper>
+		  <div class="vw-plugin-top-wrapper"></div>
+		</div>
+		</div>
+		  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		  <script>
+			new window.VLibras.Widget('https://vlibras.gov.br/app');
+		  </script>
+   </body> 
+</html>
+<!-- JavaScripts -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150104269-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150104269-1');
+</script>
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/functions.js"></script>
+<script type="text/javascript" defer src="https://fapex.org.br:443/Fapex/Harp/sys/web/pub/DHTML/TemplateFapex/templates/ucorpora/js/jquery.flexslider.js"></script>
+<script>
+    jQuery(document).ready(function()
+    {
+        var currentPage = jQuery('input[name="paginacao\[currentPage\]"]').val();
+        
+        jQuery('#page-'+currentPage).css({'background-color':'#132959','color':'#FFFFFF'});
+        var urlBase = 'https://fapex.org.br:443/Fapex/GerenciadorSite/Autenticacao/AutenticacaoUsuario/hasAuth';
+
+        jQuery.ajax({
+            'url':urlBase,
+            'async':true,
+            'method':'POST',
+            'dataType': 'json',
+            success:function(result)
+            {
+              
+                if(result.session == 1)
+                {  console.log(result);
+                    if(jQuery('.links-edicao').length > 0)
+                    {
+                       jQuery('.links-edicao').show(); 
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+
+           
+

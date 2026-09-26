@@ -1,0 +1,14 @@
+{
+  "schema": "t011.id17.r8.import-proposal.v1",
+  "timestamp": "2026-09-13T00:41:17.4476126-03:00",
+  "backup": "/backups/pilot-20260913T033543801Z",
+  "restore": {"database": "gate_r8_restore_20260913", "concursos": 33, "versions": 85, "proposals": 87},
+  "deploy": {"api_image": "sha256:fd650965d57d2e9cdc43561a5b5ae4cf98a9dc90b9420ed68a35748b3fc2693a", "health": 200, "web_routes": 23, "web_failures": []},
+  "envelope": {"path": "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json", "sha256": "60afc4ad5b0f8eba96def9817e04f994b9abafad3819815fd8ee392ce3182174", "bytes": 43388, "run_id": "tp-reviewed-b64ff5228138c8157f8c5e4960046c79"},
+  "import": {"status": "imported", "fields": ["titulo", "orgao", "edital_numero", "cargos"]},
+  "proposal": {"id": "tpp-c52d279519f1596ed57ab9a1976775b8", "hash": "17748a23820576e34905312c9df3aefd2a3414f54fbf2a75af234e1884c006d2", "state": "proposed", "concurso_id": 17, "baseline_version": 85, "eligible_fields": ["cargos"], "baseline_cargos_present": true},
+  "counts_before": {"proposals": 87, "versions": 85, "outbox": 85, "notifications": 84},
+  "counts_after": {"proposals": 89, "versions": 85, "outbox": 85, "notifications": 84},
+  "approve_apply": false,
+  "next_gate": "independent post-import review"
+}

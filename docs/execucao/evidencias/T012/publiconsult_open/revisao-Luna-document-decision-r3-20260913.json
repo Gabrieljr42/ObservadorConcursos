@@ -1,0 +1,27 @@
+{
+  "schema": "t012.publiconsult.document-review-luna-r3.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "read-only reconciliation; no live/API/DB mutation",
+  "verdict": "BLOCKER",
+  "reason": "The exact payload is prepared offline, but the only live prepare-preserved attempt still returned HTTP 409 and no accepted document-review state is evidenced.",
+  "checks": {
+    "manifest_title": "PASS in corrected payload: exact byte-for-byte title is 'Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II'.",
+    "kind": "PASS: API payload correctly retains manifest kind='outro'; convocacao_taf is semantic classification only, not an invented API enum.",
+    "identity": "PASS: source publiconsult_open/source_id 56, external_id 681 and candidate_key 681 are bound to the same selection; no principal-edital mixing.",
+    "owner_run": "PASS in corrected payload: owner_user_id=1 and run_id=tp-reviewed-bea209a94599014adb6a275693a9e107 are explicit and paired.",
+    "artifact": "PASS: requested/final URL exact; application/pdf; SHA d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7; 341466 bytes; 6 pages.",
+    "live_result": "FAIL/BLOCKER: document-review-live-r2-receipt reports HTTP 409 BLOCKER_MANIFEST_TITLE_MISMATCH because the submitted decision_title was abbreviated (' - TAF'); prepare-preserved was not accepted and no approve/apply occurred.",
+    "test": "PASS: test_document_review_r3_exact.py -> 1 passed; it proves the manifest title, pins, owner/run and kind contract, but intentionally records the prior failed request rather than a successful API replay."
+  },
+  "required_before_acceptance": [
+    "Submit exactly the corrected owner/run-bound payload from document-review-decision-r3-exact.json: full manifest title, same URL, kind='outro', and unchanged SHA/bytes/pages.",
+    "Require a successful prepare-preserved response that references the same pending case and artifact; then perform normal document-review approval once. Do not retry proposal until that accepted state is persisted.",
+    "Record zero side effects beyond the document-review case; preserve principal edital and all canonical publication fields unchanged."
+  ],
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-decision-r3-exact.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r2-receipt-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-taf-acquisition-r2.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/test_document_review_r3_exact.py"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "gate": "T012-APTA-OWNER-HANDOFF-R4",
+  "result": "READY_FOR_REVIEW",
+  "envelope": "docs/execucao/evidencias/T012/apta_open/live-envelope-ready-r4.json",
+  "supersedes": ["live-envelope-ready-r3.json"],
+  "run_id": "tp-reviewed-apta-708-owner1-r4",
+  "owner": {"accepted": 1, "previous_blocked_owner": 901, "divergent_owner_status": 404},
+  "pins": "SHA db9c6d26...5975d79c; 362093 bytes; 20 pages; canonical storage basename",
+  "eligible": ["titulo", "orgao", "edital_numero"],
+  "harness": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_publication.py::test_real_jwt_authorization_and_owner_isolation; PASS",
+  "mutations": "none; no live/shared changes"
+}

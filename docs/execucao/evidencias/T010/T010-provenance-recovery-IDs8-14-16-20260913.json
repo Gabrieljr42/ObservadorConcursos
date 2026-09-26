@@ -1,0 +1,60 @@
+{
+  "schema": "t010.provenance-recovery.v1",
+  "timestamp": "2026-09-13T00:08:13.1891835-03:00",
+  "network": false,
+  "service_mutation": false,
+  "records": [
+    {
+      "record_id": 8,
+      "run_id": "tp-tcj-b6372819d87e51c185e6427865a5bf62-1",
+      "status": "FOUND",
+      "owner_user_id": 1,
+      "source": "idib_open",
+      "external_id": "362",
+      "detail_url": "https://concurso.idib.org.br/Concurso.aspx?ID=362",
+      "pdf_url": "https://concurso.idib.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=2NE0DR7D5WNQ1HHTFKLL1EBYIDK0D4IYCVEYN9LOUYXEN3D79CLMPUEBP1R1FJJ0SVBCY1EXX58BLVU18957.pdf",
+      "observed_at": "2026-09-08T21:00:00.096867Z",
+      "artifact_id": "art-cdeead8742",
+      "artifact_sha256": "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a",
+      "artifact_storage_path": "art-cdeead8742-fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a.pdf",
+      "local_pdf": "docs/execucao/evidencias/T010/id8.pdf",
+      "local_pdf_sha_match": true,
+      "local_pdf_bytes": 1048994
+    },
+    {
+      "record_id": 14,
+      "run_id": "tpr-e46272ce7476",
+      "status": "FOUND",
+      "owner_user_id": 1,
+      "source": "fapese_selection",
+      "external_id": "007/2026",
+      "detail_url": "https://www.fapese.org.br/pronera/",
+      "pdf_url": "https://www.fapese.org.br/wp-content/uploads/2026/09/Edital-007.2026-RPA-PRONERA-2026_assinado_assinado.pdf",
+      "observed_at": "2026-09-09T21:16:56.621551Z",
+      "artifact_id": "art-2addf5fed2",
+      "artifact_sha256": "c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b",
+      "artifact_storage_path": "art-2addf5fed2-c713476bc98b5455f12a210ab8a7e7e83ef09b429cf1c6884abfcc277d71217b.pdf",
+      "local_pdf": "docs/execucao/evidencias/T010/id14.pdf",
+      "local_pdf_sha_match": true,
+      "local_pdf_bytes": 345974
+    },
+    {
+      "record_id": 16,
+      "run_id": "tp-tcj-59347827080f515f92f18723759a231d-1",
+      "status": "FOUND",
+      "owner_user_id": 1,
+      "source": "omni_open",
+      "external_id": "246",
+      "detail_url": "https://portal.omniconcursospublicos.com.br/informacoes/246/",
+      "pdf_url": "https://anexos.cdn.selecao.net.br/uploads/412/concursos/246/anexos/C2cjgnwNV6LmKcL1xoFVN7ptWDimvRO8VEU8TnJB.pdf",
+      "observed_at": "2026-09-08T21:27:59.982220Z",
+      "artifact_id": "art-0a483f2ba1",
+      "artifact_sha256": "3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb",
+      "artifact_storage_path": "art-0a483f2ba1-3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb.pdf",
+      "local_pdf": "docs/execucao/evidencias/T010/id16.pdf",
+      "local_pdf_sha_match": true,
+      "local_pdf_bytes": 396219
+    }
+  ],
+  "interpretation": "Todos os três runs e PDFs locais foram encontrados com SHA/bytes correspondentes; nenhuma URL foi inventada e nenhuma proposta/catálogo foi alterada."
+}

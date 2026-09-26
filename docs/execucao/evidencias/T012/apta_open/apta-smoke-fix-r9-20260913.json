@@ -1,0 +1,34 @@
+{
+  "schema": "t012.apta.smoke-fix.v1",
+  "date": "2026-09-13",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "root_cause": {
+    "test": "backend/tests/test_t012_apta_open_selection.py",
+    "failure": "titulo state=failed instead of supported",
+    "proof": "the historical fixture constructed Artifact without storage_path; the strict dispatch resolved the configured artifact directory (a directory) and returned PermissionError. SHA, byte length, URL, page count and markers were otherwise pinned.",
+    "contract_drift": "the unversioned envelope asserted the pre-R8 remuneration field; R8 intentionally exposes only titulo, orgao and edital_numero for APTA/708."
+  },
+  "fix": {
+    "files": ["backend/tests/test_t012_apta_open_selection.py"],
+    "changes": [
+      "bind the historical Artifact fixture to the pinned PDF through storage_path",
+      "use the current R6 reviewed envelope",
+      "assert the restricted three-field APTA contract and no remuneration"
+    ],
+    "application_code_changed": false,
+    "pilot_changed": false
+  },
+  "commands": {
+    "smoke": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_open_selection.py",
+    "apta": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests -k 'apta or APTA'",
+    "regression": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py backend/tests/test_avancasp_r4_dispatch.py backend/tests/test_publiconsult_r10_dispatch.py backend/tests/test_reviewed_run_import.py",
+    "compile": "backend/.venv/Scripts/python.exe -m compileall -q backend/app/tenderproof backend/tests/test_t012_apta_open_selection.py"
+  },
+  "results": {
+    "smoke": "3 passed",
+    "apta": "12 passed, 2087 deselected",
+    "regression": "37 passed",
+    "compile": "PASS"
+  },
+  "scope": "offline; no Docker, network, live API, pilot, service restart or deployment"
+}

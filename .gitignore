@@ -2,9 +2,14 @@
 __pycache__/
 *.py[cod]
 .env
+.env.pilot
 .venv/
 venv/
 celerybeat-schedule.db
+
+# TenderProof (fases 0–3): execuções e PDFs isolados; nunca commitar artefatos
+.tenderproof/
+backend/.tenderproof/
 
 # Node / Expo
 node_modules/
@@ -17,3 +22,16 @@ build/
 Thumbs.db
 .vscode/
 .idea/
+
+# Scratch local: extratos, logs e bancos de execução
+.tmp_*
+/debug.log
+*.log
+*.sqlite3
+/tmp_p*.txt
+/pdfplumber-*
+/fapesc_extract.txt
+/id16_extract_record.json
+/lote01-output.json
+/lote01-output-final.json
+backend/.tmp-*

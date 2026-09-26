@@ -1,0 +1,24 @@
+{
+  "schema": "t012.publiconsult-strong-preflight-r4.v1",
+  "source": "publiconsult_open",
+  "external_id": "681",
+  "artifact_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+  "parser": {
+    "module": "publiconsult_parser_r3.py",
+    "result": "PARSER_MODULE_R3_READY",
+    "guards": ["25 pages complete", "no U+FFFD", "source/external/SHA pinned", "identity text present"],
+    "identity_ids": [],
+    "fresh_orgao": "Prefeitura Municipal de Votuporanga/SP",
+    "fresh_edital_numero": "1/2026"
+  },
+  "real_contracts": {
+    "fields": ["orgao", "edital_numero"],
+    "state": "supported",
+    "evidence": "Artifact/Evidence models with page/snippet/source/SHA",
+    "validation": "ValidationResult.valid"
+  },
+  "adapter_sqlite_ephemeral": {"result": "passed", "candidate_external_id": "681", "artifact_bytes": 720592, "catalog_mutated": false},
+  "tests": {"path": "test_publiconsult_parser_r3.py", "result": "3 passed", "guards": ["identity", "real field/validation contracts", "wrong source/external/SHA fail closed"]},
+  "shared_revalidate_limit": "The unmodified shared extract_fields path still returns orgao/edital_numero unknown; integrator must review this source-scoped prepared run before wiring it into normal _revalidate.",
+  "handoff": "PUBLICONSULT_PARSER_R4_READY"
+}

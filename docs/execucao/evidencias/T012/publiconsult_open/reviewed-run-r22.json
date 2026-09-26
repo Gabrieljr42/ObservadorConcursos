@@ -1,0 +1,81 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "publiconsult_open",
+  "concurso_id": null,
+  "external_id": "681",
+  "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+  "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+  "artifact": {
+    "artifact_id": "art-74ea1bc8f9",
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T12:51:29.654529Z",
+    "content_path": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"
+  },
+  "fields": [
+    {
+      "field_name": "titulo",
+      "value": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+      "evidence": [
+        {
+          "evidence_id": "ev-publiconsult-681-r4-titulo",
+          "artifact_id": "art-74ea1bc8f9",
+          "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+          "source_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+          "page_number": 1,
+          "snippet": "Prefeitura Municipal de VOTUPORANGA Processo Seletivo Nº 1/2026",
+          "method": "publiconsult-source-parser",
+          "method_version": "t012-publiconsult-r4",
+          "validation": {
+            "ok": true
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "orgao",
+      "value": "Prefeitura Municipal de Votuporanga/SP",
+      "evidence": [
+        {
+          "evidence_id": "ev-publiconsult-681-r4-orgao",
+          "artifact_id": "art-74ea1bc8f9",
+          "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+          "source_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+          "page_number": 1,
+          "snippet": "A Prefeitura Municipal de VOTUPORANGA , Estado de São Paulo, torna público o Edital de Abertura de Inscrições  para o",
+          "method": "publiconsult-source-parser",
+          "method_version": "t012-publiconsult-r4",
+          "validation": {
+            "ok": true
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "edital_numero",
+      "value": "1/2026",
+      "evidence": [
+        {
+          "evidence_id": "ev-publiconsult-681-r4-edital_numero",
+          "artifact_id": "art-74ea1bc8f9",
+          "document_sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+          "source_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+          "page_number": 1,
+          "snippet": "Processo Seletivo nº 1/2026  visando a contratação temporária para as funções de Professor de Educação Básica I e Técnico",
+          "method": "publiconsult-source-parser",
+          "method_version": "t012-publiconsult-r4",
+          "validation": {
+            "ok": true
+          }
+        }
+      ]
+    }
+  ],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-13T16:00:00-03:00"
+}

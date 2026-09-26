@@ -1,0 +1,16 @@
+{
+  "provenance": "live public HTTP capture; sanitized hidden values and public signed URL queries; no browsers or credential use;2MiB/page20s",
+  "pages": [
+    {
+      "name": "uniselva-main-js",
+      "url": "https://inscricao.fundacaouniselva.org.br/main-CUVRP5XO.js",
+      "observed_at": "2026-09-08T00:08:17.996812+00:00",
+      "status": 200,
+      "bytes": 990101,
+      "original_sha256": "48a1e7d74f06fc1b30a452d58311a03568b2558bf7fdf0e8ceaf80be8e4ddd50",
+      "fixture_sha256": "66eae421d77ea5c621a05ede4dca95fe9b2385c0c79dc1e4927e8df952c60295",
+      "redacted_signed_links": 0,
+      "file": "uniselva-main-js.html"
+    }
+  ]
+}

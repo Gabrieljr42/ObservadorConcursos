@@ -1,0 +1,21 @@
+{
+  "schema": "t012.avalia.luna-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "AVALIA_ACCEPT_FOR_IMPORT_PROPOSAL",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "reviewed_run": "PASS: TenderProofRun.model_validate succeeds; source=avalia_open; selected_candidate_id=avalia_open-631; mode=real; completed/valid; only supported fields titulo/orgao",
+    "identity": "PASS: external_id=631; detail id=631; title Superintendência Municipal de Segurança e Mobilidade de Caldas Novas - GO; organization Prefeitura Municipal De Caldas Novas; source label Instituto Avalia",
+    "artifact": "PASS: preserved PDF SHA256 55db4a53d1209add553416736741c7f7b3e7a8a9088be37a21c87962133dde98, 628134 bytes, 22/22 pages; local artifact independently matched",
+    "publicability": "PASS: Concurso Público / Edital de Abertura 001/2026 is a personnel-selection document; no annex-only inference",
+    "duplicate_snapshot": "PASS against persisted 33-selection/32-source snapshot and underlying catalogue snapshot: Avalia absent; no Caldas Novas/EPAGRI or matching title/organization identity among catalogue entries. Live duplicate query remains an explicit dispatch prerequisite.",
+    "fail_closed": "PASS: unknown edital_numero, inscrições and remuneração excluded; dispatch authorized=false; no DB/service query or mutation",
+    "tests": "PASS: local test_avalia_proposal.py executed from backend, 2 passed"
+  },
+  "conditions": [
+    "Before dispatch, perform the required normal-flow live duplicate/CAS check using source=avalia_open, external_id=631 and artifact SHA.",
+    "Do not add unknown fields or infer edital/registration/remuneration; retain reference_only and proposal-only scope."
+  ],
+  "conclusion": "Envelope is importable and proposal-ready after the explicit live duplicate check; this review authorizes neither dispatch nor apply."
+}

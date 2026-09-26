@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-09-08T15:42:47.542939+00:00",
+  "scope": "real preserved pilot PDFs; disposable SQLite publication; no production writes or network",
+  "input_operational_db": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections\\operational.sqlite3",
+  "samples": [
+    {
+      "run_id": "tp-tcj-97e74043f63e56feb58a51374497af8f-1",
+      "source": "fatec_selection",
+      "document_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+      "fields": {
+        "titulo": {
+          "value": null,
+          "state": "unknown"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-6181c7da18ce5db5bf3077c1afb59786-1",
+      "source": "fatec_selection",
+      "document_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+      "fields": {
+        "titulo": {
+          "value": null,
+          "state": "unknown"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida"
+    },
+    {
+      "run_id": "tp-tcj-4c69c58f4b1b5655861b791a1c4f6e73-1",
+      "source": "fappr_selection",
+      "document_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+      "fields": {
+        "titulo": {
+          "value": "Fundação Araucária - PS 03/2026: Estágio no Setor de Ciência e Tecnologia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: origem documental ou identidade fora do contrato da fonte"
+    },
+    {
+      "run_id": "tp-tcj-db90135b212453638d4aadac65935768-1",
+      "source": "fappr_selection",
+      "document_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+      "fields": {
+        "titulo": {
+          "value": "Fundação Araucária - PS 03/2026: Estágio no Setor de Ciência e Tecnologia",
+          "state": "supported"
+        },
+        "orgao": {
+          "value": null,
+          "state": "unknown"
+        },
+        "edital_numero": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_inicio": {
+          "value": null,
+          "state": "unknown"
+        },
+        "inscricao_fim": {
+          "value": null,
+          "state": "unknown"
+        },
+        "remuneracao": {
+          "value": null,
+          "state": "unknown"
+        }
+      },
+      "synthetic": false,
+      "state": "blocked",
+      "status_code": 422,
+      "reason": "TenderProof: origem documental ou identidade fora do contrato da fonte"
+    }
+  ],
+  "network_requests": 0,
+  "production_enabled": false,
+  "max_pages": 60,
+  "source_filter": null,
+  "counts": {
+    "concursos": 0,
+    "versions": 0,
+    "outbox": 0,
+    "notifications": 0
+  },
+  "states": {
+    "blocked": 4
+  },
+  "sources_with_creation": [],
+  "temporary_database_removed": true
+}

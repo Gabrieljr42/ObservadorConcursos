@@ -1,0 +1,153 @@
+{
+  "validated_at": "2026-09-08T15:41:48.944352+00:00",
+  "scope": "offline official capture replay",
+  "network_requests": 0,
+  "browser_sessions": 0,
+  "canonical_writes": 0,
+  "clock_fixture": "Between cycles only: advance selected candidate priority/due timestamp in isolated queue; preserve all other known candidates.",
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99replaysections",
+  "sources": [
+    {
+      "source": "fatec_selection",
+      "candidate": "2026/3010088-01",
+      "document_sha256": "3d964c56dec23500df646a6d6059384a887627de28217e97f54185ab07d727dc",
+      "origin_report": "..\\docs\\tenderproof-batch99-sections-live.json",
+      "max_pdf_pages": 80,
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-5ff8863df3cb7cd34e5d4a5f0bac7804629b1ed78d7a99df8d9553eaa15e14e7"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-5ff8863df3cb7cd34e5d4a5f0bac7804629b1ed78d7a99df8d9553eaa15e14e7"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "listing_terminal_evidence": null,
+      "coverage_scope": "captured listing/filter only; not all historical or other portal scopes",
+      "passed": true
+    },
+    {
+      "source": "fappr_selection",
+      "candidate": "03/2026",
+      "document_sha256": "dfa5f4dfb3538d0e0e1a856a1b28bb90241b6bb0eac414e7126643fac2386903",
+      "origin_report": "..\\docs\\tenderproof-batch99-sections-live.json",
+      "max_pdf_pages": 80,
+      "cycles": [
+        {
+          "iteration": 1,
+          "status": "partial",
+          "reasons": [
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "observation_id": "tco-d27e936b93ac1287f8ab6f27adc86adf0a0dc8c228e412ff45f7da6d01bd9b3d"
+            },
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        },
+        {
+          "iteration": 2,
+          "status": "partial",
+          "reasons": [
+            "known_candidate_limit",
+            "listing_candidates_truncated",
+            "candidate_limit",
+            "listing_exhaustiveness_unproven"
+          ],
+          "job_results": [
+            {
+              "status": "succeeded",
+              "kind": "listing",
+              "candidates": 1
+            },
+            {
+              "status": "succeeded",
+              "observation_id": "tco-d27e936b93ac1287f8ab6f27adc86adf0a0dc8c228e412ff45f7da6d01bd9b3d"
+            }
+          ],
+          "observations": 1,
+          "valid_observations": 1
+        }
+      ],
+      "listing_terminal_evidence": null,
+      "coverage_scope": "captured listing/filter only; not all historical or other portal scopes",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "measured_at": 1788882120.3004725,
+    "jobs_by_status": {
+      "succeeded": 8
+    },
+    "retry_attempts": 0,
+    "oldest_ready_delay_seconds": 0,
+    "completed_cycles_by_source": [
+      {
+        "source": "fappr_selection",
+        "cycles": 2,
+        "mean_seconds": 2.578494906425476,
+        "max_seconds": 2.622204303741455
+      },
+      {
+        "source": "fatec_selection",
+        "cycles": 2,
+        "mean_seconds": 2.133515954017639,
+        "max_seconds": 2.2978579998016357
+      }
+    ],
+    "snapshot_pages": 8,
+    "snapshot_html_bytes": 1329976,
+    "unconfirmed_browser_attempts": 0,
+    "scope": "owner_history; cycle duration includes queue delay; retries are attempts after the first"
+  },
+  "expected_sources": [
+    "fatec_selection",
+    "fappr_selection"
+  ],
+  "passed": true
+}

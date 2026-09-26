@@ -1,0 +1,18 @@
+{
+  "schema": "t012.avancasp.document-review-live-r2-first-artifact.v1",
+  "timestamp": "2026-09-13T14:23:39Z",
+  "status": "PREPARED_PARSER_ARTIFACT_PIN_BLOCKER",
+  "source_id": 54,
+  "source": "avancasp_open",
+  "external_id": "272",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-d3f322671865f3ceea32af3be85ede50",
+  "preflight": {"health": 200, "login": 200, "run_get": 200, "catalog_matches": 0, "pending_before": 2, "current_before": null, "checkpoint": {"contests": 34, "sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "notifications": 91}},
+  "staging": {"artifact_id": "avancasp-open-edital-272-bbc8f6fc", "sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "byte_len": 750381, "pages": 48, "basename": "avancasp-open-edital-272-bbc8f6fc-c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637.pdf"},
+  "prepare": {"http": 200, "case_id": "drc-preserved-1d4a34207027a52670a51a736a125257", "revision_hash": "c21011514850037fc88f733b9e148baf062d884d0a63718d36cc82984fe553c2", "documents": 1, "stored_sha256": "c60fcc60f0037c4f28907460cf8a60ec6832b115b28988e81d77ebbb66441637", "extracted_pages": 48, "field_states": "all failed", "failure_reason": "avancasp_open/272 indisponível ou divergente: avancasp 272 artifact is not pinned"},
+  "proposal": false,
+  "approve_document": false,
+  "apply": false,
+  "checkpoint_after": {"contests": 34, "sources": 33, "canonical_cargos": 182, "proposals": 98, "versions": 92, "outbox": 92, "notifications": 91},
+  "next_gate": "parser pin/revalidation correction and independent document review; do not create proposal from this failed-field case"
+}

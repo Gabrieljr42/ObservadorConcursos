@@ -1,7 +1,9 @@
 from contextlib import asynccontextmanager
+import hashlib
 import logging
 
 from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
 
@@ -11,9 +13,10 @@ from app.crawl_lock import (
     release_crawl_all_lock,
 )
 from app.config import get_settings
+from app.auth import get_current_user
 from app.connectors import seed_master_sources
 from app.database import Base, engine, get_db
-from app.models import Concurso, ConcursoPublication, ConcursoVersion, CrawlRun, Source
+from app.models import Concurso, ConcursoPublication, ConcursoVersion, CrawlRun, Source, User, PushDevice
 from app.schemas import (
     ConcursoOut,
     ConcursoPublicationOut,
@@ -26,6 +29,13 @@ from app.schemas import (
 )
 from app.schema_migrations import ensure_runtime_schema
 from app.tasks import crawl_active_sources, crawl_source
+from app.tenderproof.router import router as tenderproof_router
+from app.tenderproof.publication_router import router as tenderproof_publication_router
+from app.tenderproof.recovery_router import router as tenderproof_recovery_router
+from app.tenderproof.processing_router import router as tenderproof_processing_router
+from app.tenderproof.continuous_router import router as tenderproof_continuous_router
+from app.tenderproof.continuous_store import get_continuous_store
+from app.tenderproof.publication_models import PublicationProposal
 
 settings = get_settings()
 logger = logging.getLogger(__name__)
@@ -39,6 +49,19 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title=settings.app_name, lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[origin.strip() for origin in settings.cors_origins.split(',') if origin.strip()],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
+)
+
+# TenderProof: aquisição, revisão/publicação controlada, jobs e recuperação assistida.
+app.include_router(tenderproof_router)
+app.include_router(tenderproof_publication_router)
+app.include_router(tenderproof_recovery_router)
+app.include_router(tenderproof_processing_router)
+app.include_router(tenderproof_continuous_router)
 
 
 @app.get('/health')
@@ -470,6 +493,28 @@ def get_concurso(concurso_id: int, db: Session = Depends(get_db)):
     return concurso
 
 
+@app.get('/concursos/{concurso_id}/review-status')
+def get_concurso_review_status(concurso_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    concurso = db.get(Concurso, concurso_id)
+    if not concurso:
+        raise HTTPException(status_code=404, detail='Concurso não encontrado')
+    source = db.get(Source, concurso.source_id)
+    if not source:
+        return {'pending': False, 'documents': [], 'reason': '', 'evidence': 'none'}
+    # Published proposals are the public ownership boundary. Queue evidence
+    # from another operator must never leak into a caller's catalogue view.
+    owners = db.execute(select(PublicationProposal.owner_user_id).where(
+        PublicationProposal.concurso_id == concurso.id,
+        PublicationProposal.state == 'applied')).scalars().all()
+    results = [get_continuous_store().catalogue_review(owner, source.source_type,
+        external_id=concurso.external_id, link=concurso.link_pagina) for owner in set(owners)]
+    pending = [item for item in results if item.get('pending')]
+    return {'pending': bool(pending),
+            'documents': sum((item.get('documents') or [] for item in pending), []),
+            'reason': 'Há documentos novos aguardando conferência. As datas abaixo são da última versão aprovada e podem ter mudado.' if pending else '',
+            'evidence': 'document_review' if pending else ('known_candidate' if results else 'none')}
+
+
 @app.delete('/sources/{source_id}/concursos')
 def delete_concursos_from_source(source_id: int, db: Session = Depends(get_db)):
     source = db.get(Source, source_id)
@@ -487,8 +532,14 @@ def delete_concursos_from_source(source_id: int, db: Session = Depends(get_db)):
     }
 
 
+def require_legacy_crawler():
+    if not get_settings().legacy_crawler_enabled:
+        raise HTTPException(status_code=409, detail='Coletor antigo desativado; use a coleta e revisão TenderProof')
+
+
 @app.post('/crawl/all')
 def enqueue_crawl_all(db: Session = Depends(get_db)):
+    require_legacy_crawler()
     try:
         lock_token = acquire_crawl_all_lock()
     except CrawlLockUnavailable as exc:
@@ -524,6 +575,7 @@ def enqueue_crawl_all(db: Session = Depends(get_db)):
 
 @app.post('/crawl/all/sync')
 def run_crawl_all_sync(db: Session = Depends(get_db)):
+    require_legacy_crawler()
     from app.services import CrawlService
 
     try:
@@ -614,6 +666,7 @@ def run_crawl_all_sync_alias(db: Session = Depends(get_db)):
 
 @app.post('/crawl/{source_id}')
 def enqueue_crawl(source_id: int, db: Session = Depends(get_db)):
+    require_legacy_crawler()
     source = db.get(Source, source_id)
     if not source:
         raise HTTPException(status_code=404, detail='Fonte não encontrada')
@@ -628,6 +681,7 @@ def enqueue_crawl(source_id: int, db: Session = Depends(get_db)):
 
 @app.post('/crawl/{source_id}/sync')
 def run_crawl_sync(source_id: int, db: Session = Depends(get_db)):
+    require_legacy_crawler()
     source = db.get(Source, source_id)
     if not source:
         raise HTTPException(status_code=404, detail='Fonte não encontrada')
@@ -686,6 +740,8 @@ from app.schemas import (
     UserPreferenceIn,
     UserPreferenceOut,
     UserRegister,
+    PushDeviceOut,
+    PushDeviceRegister,
 )
 
 
@@ -971,6 +1027,67 @@ def list_my_notifications(
     if unread_only:
         query = query.where(Notification.read_at.is_(None))
     return db.execute(query).scalars().all()
+
+
+@app.get('/me/push/devices', response_model=list[PushDeviceOut])
+@app.get('/me/push-tokens', response_model=list[PushDeviceOut], include_in_schema=False)
+def list_my_push_devices(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """Return metadata only; provider tokens are never serialized."""
+    return db.execute(select(PushDevice).where(
+        PushDevice.user_id == current_user.id
+    ).order_by(PushDevice.updated_at.desc())).scalars().all()
+
+
+@app.post('/me/push/devices', response_model=PushDeviceOut, status_code=200)
+@app.put('/me/push/devices', response_model=PushDeviceOut, status_code=200, include_in_schema=False)
+@app.post('/me/push-tokens', response_model=PushDeviceOut, status_code=200, include_in_schema=False)
+def register_my_push_device(payload: PushDeviceRegister, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    existing_by_token = db.execute(select(PushDevice).where(PushDevice.token == payload.token)).scalar_one_or_none()
+    if existing_by_token is not None and existing_by_token.user_id != current_user.id:
+        raise HTTPException(status_code=409, detail='Token de push já pertence a outro usuário')
+    device = db.execute(select(PushDevice).where(
+        PushDevice.user_id == current_user.id, PushDevice.device_id == payload.device_id
+    )).scalar_one_or_none()
+    if device is None:
+        device = PushDevice(user_id=current_user.id, device_id=payload.device_id, platform=payload.platform,
+                            token=payload.token, token_fingerprint=hashlib.sha256(payload.token.encode()).hexdigest())
+        db.add(device)
+    else:
+        device.platform = payload.platform
+        device.token = payload.token
+        device.token_fingerprint = hashlib.sha256(payload.token.encode()).hexdigest()
+        device.active = True
+        device.revoked_at = None
+        device.revoke_reason = None
+        device.last_seen_at = datetime.utcnow()
+    try:
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail='Token ou dispositivo já registrado') from exc
+    db.refresh(device)
+    return device
+
+
+@app.delete('/me/push/devices/{device_id}', status_code=204)
+@app.delete('/me/push-tokens/{device_id}', status_code=204, include_in_schema=False)
+def remove_my_push_device(device_id: int, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    device = db.execute(select(PushDevice).where(
+        PushDevice.id == device_id, PushDevice.user_id == current_user.id
+    )).scalar_one_or_none()
+    if device is None:
+        raise HTTPException(status_code=404, detail='Dispositivo não encontrado')
+    device.active = False
+    device.token = None
+    device.token_fingerprint = None
+    device.revoked_at = datetime.utcnow()
+    device.revoke_reason = 'user_revoked'
+    for delivery in device.deliveries:
+        if delivery.status in {'pending', 'retry', 'processing'}:
+            delivery.status = 'canceled'
+            delivery.last_error = 'device revoked by user'
+    db.commit()
+    return None
 
 
 @app.get('/me/updates', response_model=list[UpdateOut])

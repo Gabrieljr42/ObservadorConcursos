@@ -1,0 +1,31 @@
+{
+  "schema": "observador.t010.id8.pos_apply.v1",
+  "recorded_at": "2026-09-13T00:50:55.6992428-03:00",
+  "scope": "ID8 only; T005 and ID17 untouched",
+  "proposal": {
+    "id": "tpp-9f545731df8ae21c456385bd3f1d9d4b",
+    "proposal_hash": "c04210fd203f657cb4f196012497e4c93176b54f4c5e35b3ae77d361e6e78f6e",
+    "contest_id": 8,
+    "cas_before": {"state": "proposed", "baseline_version": 57, "baseline_cargos_present": false},
+    "approved_fields": ["cargos"],
+    "final_state": "applied",
+    "version_id": 87
+  },
+  "replay": {"http": 200, "same_proposal": true, "same_version_id": 87, "new_version": false, "new_outbox": false, "new_notification": false},
+  "counts": {
+    "before": {"proposals": 90, "versions": 86, "outbox": 86, "notifications": 85},
+    "after": {"proposals": 90, "versions": 87, "outbox": 87, "notifications": 86}
+  },
+  "receipts": {
+    "outbox": {"id": 87, "version_id": 87, "proposal_id": "tpp-9f545731df8ae21c456385bd3f1d9d4b", "state": "delivered", "attempts": 1},
+    "notification": {"id": 86, "concurso_id": 8, "notification_type": "version_update_87"}
+  },
+  "contest8_api": {
+    "cargo_count": 1,
+    "cargo": {"vagas_imediatas": 9, "vagas_ampla_concorrencia": 6, "vagas_pcd": 1, "ppp": 2, "cadastro_reserva": 11, "jornada": "40h semanais", "requisitos": "Ensino Médio Completo; CNH ou Permissão para Dirigir categoria AB ou superior", "remuneracao": "salário-mínimo + 30% (periculosidade) + adicional noturno", "taxa_inscricao": "156.67"},
+    "prova_data_expected": "2026-12-06",
+    "prova_data_actual": null,
+    "health": 200
+  },
+  "gate": "APPLY_PASS; payload mismatch remains: API prova_data is null instead of expected 2026-12-06"
+}

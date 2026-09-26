@@ -1,0 +1,59 @@
+{
+  "schema": "t011.independent-review.v3",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-12",
+  "target": "T011/ID17",
+  "decision": "ACEITO_CONDICIONAL",
+  "read_only": true,
+  "mutations": [],
+  "artifact": {
+    "path": "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf",
+    "source": "contemax_open",
+    "external_id": "concursos-em-andamento/prefeitura-municipal-de-cubati-pb",
+    "identity": "Prefeitura Municipal de Cubati/PB; Concurso/Edital 001/2024; Contemax",
+    "artifact_id": "art-06e60acb05-6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "sha256": "6caf7901eb5e7a803488d98fa2744167d4de52924784e384857dfe31235f7e1f",
+    "byte_len": 1094969,
+    "pages": 50,
+    "sha_byte_len_recomputed": true,
+    "reference_only": true
+  },
+  "table_audit": {
+    "pages": [19, 20],
+    "rows": 27,
+    "total_vagas": 79,
+    "row_sums": {"AC": 74, "PCD": 5, "CR": null, "Total": 79},
+    "source_semantics": "Header columns AC/PCD/Total; each row's Total equals AC+PCD. PCD is not treated as overlap, minimum reserve, rodizio, or CR.",
+    "printed_subtotal_note": "p19 prints 33/03/35, while its nine physical rows sum 32/03/35; this is documented and excluded. No 75 aggregate remains in parser/preflight/envelope.",
+    "sample_literal_evidence": [
+      "p19 row 02: 13 AC, 02 PCD, 15 Total",
+      "p19 row 09: 02 AC, 01 PCD, 03 Total",
+      "p19 row 17: 13 AC, 02 PCD, 15 Total",
+      "p20 rows 22–27: totals 02, 02, 02, 01, 01, 01"
+    ],
+    "parser_output": "27 rows carry per-row vagas_ampla_concorrencia/vagas_pcd; cadastro_reserva=null; units aggregate AC=74, PCD=5, Total=79"
+  },
+  "fields_and_absences": {
+    "remuneration": "R$ 1.412,00 and R$ 2.640,00; BRL, temporal unit unspecified",
+    "workload": "40hrs",
+    "requirements": "literal cargo requirements from p19–20, including schooling/CNH/CRO/CREA/COREN/ACS-ACE conditions",
+    "fees": "R$40/R$50/R$65 preserved separately, not promoted into cargos",
+    "exam_dates": "20/10/2024 and 27/10/2024 preserved separately",
+    "cadastro_reserva": null,
+    "reference_only": true
+  },
+  "run_gate": {
+    "run_id": "t011-reviewed-17-6caf7901",
+    "receipt_preflight": "tenderproof.reviewed-run.v1; owner_user_id=1; fields titulo/orgao/edital_numero/cargos; pending_fields=[]",
+    "dry_run_and_isolated_proposal": "5 parser tests plus real-PDF test pass; isolated temporary store only; network=false; pilot_touched=false; proposal eligible=cargos",
+    "baseline": "read-only artifact receipt records concurso 17 baseline cargos=null",
+    "canonical_absence": "no corrected-run import/proposal/apply is evidenced; an older tpp-02c... belongs to legacy tp-tcj run and is not reused",
+    "fail_closed": "source/SHA/byte_len, row drift, U+FFFD, page error/truncation guards present and tested"
+  },
+  "release_scope": "ACEITO somente backup verificado + deploy do parser + import único do run t011-reviewed-17-6caf7901 + criação de uma proposta. Não autoriza approve/apply, retry do legado, ou quadro/UI.",
+  "conditions": [
+    "Use exactly the corrected run/artifact SHA and preserve reference_only=true.",
+    "Do not regenerate AC=75 or import the printed 33/03/35 subtotal.",
+    "After proposal creation, perform a fresh independent post-import review before any approval/apply."
+  ]
+}

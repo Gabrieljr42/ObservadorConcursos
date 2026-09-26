@@ -1,0 +1,27 @@
+{
+  "schema": "t012.proposal-receipt.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "epl_open",
+  "source_number": 21,
+  "candidate_external_id": "52",
+  "identity": "confirmed",
+  "duplicate_check": "passed_across_two_preserved_cycles",
+  "scope": "public employment / concurso público",
+  "not_funding_or_scholarship": true,
+  "adapter": "EPLAdapter",
+  "evidence": {
+    "listing": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-listing-dc7d20e042.html",
+    "detail": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-detail-2e60516108.html",
+    "opening_document": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+    "opening_document_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+    "provenance_pages": [1, 2, 3],
+    "runs": ["tpr-9e2c3d45a3e8", "tpr-1fc2120d6f06"]
+  },
+  "proven_fields": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "regime", "prova", "cargos_sample", "remuneracao", "taxa_por_escolaridade"],
+  "unknown_or_blocked": ["lista completa de cargos normalizados", "prova_data", "taxa por cargo", "retificações como efeitos", "canonical_concurso_id"],
+  "catalogue_mutated": false,
+  "network": false,
+  "apply": false,
+  "review_required": true,
+  "handoff": "Usar o envelope apenas como preparação de run revisado; confirmar identidade canônica e escopo dos campos no fluxo padrão antes de qualquer import/publicação."
+}

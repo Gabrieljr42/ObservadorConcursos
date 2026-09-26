@@ -1,0 +1,55 @@
+{
+  "schema": "t012.epl.live-envelope-r1-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_LIVE_IMPORT_PROPOSAL",
+  "scope": "read_only pre-live review; no live/API/DB/catalogue mutation",
+  "identity": {
+    "source": "epl_open",
+    "source_number": 21,
+    "external_id": "52",
+    "detail_url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+    "orgao": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)",
+    "edital_numero": "01/2023",
+    "currentness": "two preserved cycles resolve to same external/detail/document SHA; listing category was observed as Em andamento on 2026-09-08"
+  },
+  "artifact": {
+    "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+    "byte_len": 784614,
+    "pages": 43,
+    "url_requested_final_exact": true,
+    "content_type": "application/pdf",
+    "literal_evidence": ["A Fundação Hospitalar Santa Terezinha de Erechim – FHSTE", "CONCURSO PÚBLICO N° 01/2023"],
+    "source_url_and_page_bound": true
+  },
+  "safety": {
+    "source21_vs_concurso21": "No conflict: source_number 21 is not a canonical concurso_id and the referenced concurso 21 DO_NOT_RETRY must not be reused.",
+    "target": "The envelope's concurso_id=1 is only a positive ephemeral SQLite fixture target in round-trip tests; do not send this literal target to live import.",
+    "required_live_precondition": "Allocate a fresh canonical concurso/source target through the normal flow (never source_number 21, never existing concurso 21), rewrite only the target linkage, rerun ReviewedRun validation/import dry-run and normal proposal gate.",
+    "unknowns_preserved": ["complete normalized cargo list", "prova_data", "per-cargo taxa", "catalogue effects from retificações"],
+    "reference_only": true,
+    "effects": "No proposal, apply, version, outbox, notification or catalogue effects in evidence."
+  },
+  "negative_checks": {
+    "stale_url": "PASS",
+    "artifact_sha_drift": "PASS",
+    "page/error/truncation/U+FFFD": "PASS",
+    "duplicate_or_ambiguous_document": "PASS",
+    "old_run_reused": false,
+    "proposal_or_apply": false
+  },
+  "tests": {
+    "command": "$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/epl_open/test_live_envelope_roundtrip.py docs/execucao/evidencias/T012/epl_open/test_strong_preflight_r3.py docs/execucao/evidencias/T012/epl_open/test_proposal_fail_closed.py",
+    "result": "22 passed, 65 warnings",
+    "compileall": "epl_parser_r3.py passed"
+  },
+  "evidence": [
+    "live-envelope-ready-r1.json",
+    "live-envelope-ready-r1-receipt.json",
+    "epl_parser_r3.py",
+    "test_live_envelope_roundtrip.py",
+    "test_strong_preflight_r3.py",
+    "test_proposal_fail_closed.py"
+  ],
+  "mutations_performed": false
+}

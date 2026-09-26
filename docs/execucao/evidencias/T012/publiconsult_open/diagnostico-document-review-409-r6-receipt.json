@@ -1,0 +1,10 @@
+{
+  "schema": "t012.publiconsult.document-review-409-diagnosis-receipt-r6.v1",
+  "diagnosis": "docs/execucao/evidencias/T012/publiconsult_open/diagnostico-document-review-409-r6.json",
+  "status": "BLOCKER_ARTIFACT_REGISTRATION_OR_SERVER_STATE_UNPROVEN",
+  "r6_http": 409,
+  "identity": "title/full, kind=outro, raw=1 URL, SHA/bytes/pages all match offline package",
+  "local_test": "test_document_review_r6_409.py: 1 passed",
+  "r7": "not generated; no proven payload correction",
+  "live_effects": false
+}

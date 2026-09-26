@@ -1,0 +1,50 @@
+[
+  {
+    "name": "fcc-abgf",
+    "url": "https://www.concursosfcc.com.br/concursos/abgfg126/index.html",
+    "observed_at": "2026-09-08T14:04:17.987284+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 22606,
+    "original_sha256": "25a2e77dbe263fee034d87c5bd843582f4fd1faa27933b96f4a31e92483bd5e1",
+    "fixture_sha256": "53538dece35e19f2c0f18b1bc0cbbfa0d119205c556f4e5734c0a26fcbdc6200",
+    "file": "fcc-abgf.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "cesgranrio-sema",
+    "url": "https://www.cesgranrio.org.br/concurso/sema-mt-2026/",
+    "observed_at": "2026-09-08T14:04:17.988793+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 83342,
+    "original_sha256": "ea1c89bdcbb2896f6666e1b3d238bebbc81146ee21c422cde75c307fae0cc745",
+    "fixture_sha256": "1b261c99c98c2f3cf6d60e2f06acc07634582261cc604df60788f8a84cde1a41",
+    "file": "cesgranrio-sema.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "avalia634",
+    "url": "https://www2.avalia.org.br/concurso.jsp?id=634",
+    "observed_at": "2026-09-08T14:04:17.989804+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 11918,
+    "original_sha256": "51af0726b999f574d946a3c824c317c9159cd33d4838eb3186faf3a8905b6d39",
+    "fixture_sha256": "6914c8701ce9cf8589fd6f521e2d0903054350cdad8d2b5607d10833b1df7f48",
+    "file": "avalia634.html",
+    "format": "decoded UTF8 HTML; hidden values removed"
+  },
+  {
+    "name": "cebraspe-main",
+    "url": "https://www.cebraspe.org.br/concursos/static/js/main.68af135b.chunk.js",
+    "observed_at": "2026-09-08T14:04:17.991803+00:00",
+    "status": 200,
+    "location": null,
+    "bytes": 47108,
+    "original_sha256": "34c3de4829a34294e664826a35c6c7ec9a79db6c56451e9efa1c88dea084f42c",
+    "fixture_sha256": "34c3de4829a34294e664826a35c6c7ec9a79db6c56451e9efa1c88dea084f42c",
+    "file": "cebraspe-main.js",
+    "format": "raw JavaScript"
+  }
+]

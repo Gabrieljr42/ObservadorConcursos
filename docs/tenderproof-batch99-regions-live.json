@@ -1,0 +1,363 @@
+{
+  "observed_at": "2026-09-08T15:06:24.986955+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\r99regions",
+  "cycles": [
+    {
+      "source": "fapesc_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-e54b2d21edbf",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesc.fepese.org.br/",
+          "file": "fapesc_selection-cycle1-listing-d62ecbcf5c.html",
+          "sha256": "53efcfac6400ab9d7543cd1e74a452ead84e1b268d975fdaa2b8d02c6701cbeb",
+          "bytes": 15415,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:06:25.602578+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-48f1471acd9b",
+          "candidate": {
+            "candidate_id": "fapesc_selection-1",
+            "title_observed": "2022 - FAPESC",
+            "detail_url_observed": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+            "external_id": "1",
+            "observed_at": "2026-09-08T15:06:25.672122Z",
+            "source": "fapesc_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HtmlBlockError: resposta não é PDF",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+              "file": "fapesc_selection-cycle1-detail-f69bd3ca40.html",
+              "sha256": "c487a549fc44148d0a2811b1f0580cd5da1778a7a0ea3f210a3651fe4648bdf5",
+              "bytes": 3571,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:06:26.111164+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 1.313
+    },
+    {
+      "source": "fapespa_selection",
+      "cycle": 1,
+      "listing_run_id": "tpr-92c19da892da",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapespa.pa.gov.br/chamadas/",
+          "file": "fapespa_selection-cycle1-listing-391a6e53e5.html",
+          "sha256": "53f67e47b69fb490bad2253bc890adfde5dfb9e24e66a92f6dc204dec0bf5c5b",
+          "bytes": 93524,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:06:27.087385+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d9f93461b1f6",
+          "candidate": {
+            "candidate_id": "fapespa_selection-001-2025",
+            "title_observed": "EDITAL Nº. 001/2025 PSS/FAPESPA – PROCESSO SELETIVO SIMPLIFICADO PARA CONTRATAÇÃO TEMPORÁRIA – NÍVEL SUPERIOR",
+            "detail_url_observed": "https://www.fapespa.pa.gov.br/chamadas/",
+            "external_id": "001/2025",
+            "observed_at": "2026-09-08T15:06:27.159602Z",
+            "source": "fapespa_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapespa.pa.gov.br/chamadas/",
+              "file": "fapespa_selection-cycle1-detail-3eaabca6f4.html",
+              "sha256": "32c447af3281010e2c322760855d044f1ea67401bae8d249df20a3efa119143a",
+              "bytes": 93524,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:06:28.079488+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapespa_selection-reviewed-original-001-2025",
+            "title": "Edital 001/2025 PSS/FAPESPA",
+            "url_requested": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2025 PSS/FAPESPA' por conter 'edital' no título/URL; 5 documento(s) ignorado(s) (ex.: Resultado Preliminar; Cronograma atualizado; RESULTADO FINAL; CONVOCAÇÃO PARA ENTREVISTA; RESULTADO FINAL)."
+          },
+          "artifact": {
+            "artifact_id": "art-df5e9d7fe1",
+            "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+            "byte_len": 933613,
+            "url_requested": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:06:47.262058Z",
+            "storage_path": "art-df5e9d7fe1-b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 22.078
+    },
+    {
+      "source": "fapesc_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-fe58bc84b764",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://fapesc.fepese.org.br/",
+          "file": "fapesc_selection-cycle2-listing-d62ecbcf5c.html",
+          "sha256": "53efcfac6400ab9d7543cd1e74a452ead84e1b268d975fdaa2b8d02c6701cbeb",
+          "bytes": 15415,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:06:48.868317+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-0c5a7411dfe3",
+          "candidate": {
+            "candidate_id": "fapesc_selection-1",
+            "title_observed": "2022 - FAPESC",
+            "detail_url_observed": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+            "external_id": "1",
+            "observed_at": "2026-09-08T15:06:48.920317Z",
+            "source": "fapesc_selection"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "HtmlBlockError: resposta não é PDF",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+              "file": "fapesc_selection-cycle2-detail-f69bd3ca40.html",
+              "sha256": "c487a549fc44148d0a2811b1f0580cd5da1778a7a0ea3f210a3651fe4648bdf5",
+              "bytes": 3571,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:06:49.358101+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 1.187
+    },
+    {
+      "source": "fapespa_selection",
+      "cycle": 2,
+      "listing_run_id": "tpr-5a93c26df563",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 1,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": []
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.fapespa.pa.gov.br/chamadas/",
+          "file": "fapespa_selection-cycle2-listing-7e9b98734c.html",
+          "sha256": "99461d7c6c61b5625f61026a670cd12359768aabf088b69821d00af55fe7f4ae",
+          "bytes": 93524,
+          "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+          "observed_at": "2026-09-08T15:06:50.369526+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f701639cf98b",
+          "candidate": {
+            "candidate_id": "fapespa_selection-001-2025",
+            "title_observed": "EDITAL Nº. 001/2025 PSS/FAPESPA – PROCESSO SELETIVO SIMPLIFICADO PARA CONTRATAÇÃO TEMPORÁRIA – NÍVEL SUPERIOR",
+            "detail_url_observed": "https://www.fapespa.pa.gov.br/chamadas/",
+            "external_id": "001/2025",
+            "observed_at": "2026-09-08T15:06:50.441555Z",
+            "source": "fapespa_selection"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.fapespa.pa.gov.br/chamadas/",
+              "file": "fapespa_selection-cycle2-detail-0b1abfc76d.html",
+              "sha256": "885e18f69a51853eb0ca9cd1c0f8da21c99aa707c57be0a1e522238bdda62b29",
+              "bytes": 93524,
+              "format": "decoded public HTML; hidden input values removed with html.parser; fixture hash only",
+              "observed_at": "2026-09-08T15:06:51.408072+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "fapespa_selection-reviewed-original-001-2025",
+            "title": "Edital 001/2025 PSS/FAPESPA",
+            "url_requested": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital 001/2025 PSS/FAPESPA' por conter 'edital' no título/URL; 5 documento(s) ignorado(s) (ex.: Resultado Preliminar; Cronograma atualizado; RESULTADO FINAL; CONVOCAÇÃO PARA ENTREVISTA; RESULTADO FINAL)."
+          },
+          "artifact": {
+            "artifact_id": "art-31dde927ad",
+            "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+            "byte_len": 933613,
+            "url_requested": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T15:07:10.134918Z",
+            "storage_path": "art-31dde927ad-b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=6/6"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "unknown"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 21.672
+    }
+  ],
+  "driver_cleanup": {
+    "instances": 8,
+    "all_clients_closed": true
+  }
+}

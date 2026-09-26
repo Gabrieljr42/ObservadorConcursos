@@ -1,0 +1,11 @@
+{
+  "schema": "t012.dispatch-batch2.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "epl_open",
+  "external_id": "52",
+  "artifact": {"sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f", "byte_len": 784614, "pages": 43},
+  "strict_branch": "fields.py exact source/external; parser SHA/bytes/URL/pages fail-closed",
+  "tests": {"dispatch": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "dispatch_result": "11 passed", "parser_suite": "38 passed", "side_effects": "no proposal/version/outbox writes; offline only"},
+  "network": false,
+  "pilot_mutated": false
+}

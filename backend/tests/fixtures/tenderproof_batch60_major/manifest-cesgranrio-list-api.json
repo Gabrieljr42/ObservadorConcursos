@@ -1,0 +1,15 @@
+[
+  {
+    "name": "cesgranrio-list-api",
+    "url": "https://concursos.cesgranrio.org.br/api/PortalEventos?nome=&status=&page=1&pageSize=10",
+    "observed_at": "2026-09-08T14:17:05.926945+00:00",
+    "max_bytes": 2097152,
+    "status": 200,
+    "location": null,
+    "bytes": 10748,
+    "original_sha256": "4586f85a0d8b93d771713953c8776955002b7535c07c76a4cc6ce26fad82cd86",
+    "fixture_sha256": "0705142f79aa40d296b70f6b42505d1e2909244410a1345aad415c3c1a3f9426",
+    "file": "cesgranrio-list-api.json",
+    "format": "public JSON; signed URL queries removed"
+  }
+]

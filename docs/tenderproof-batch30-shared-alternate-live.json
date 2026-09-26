@@ -1,0 +1,899 @@
+{
+  "observed_at": "2026-09-08T00:09:51.634918+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\batch30-shared-live-20260908",
+  "cycles": [
+    {
+      "source": "cotec_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-44f01ea65037",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.cotec.fadenor.com.br/index/abertos/",
+          "https://www.cotec.fadenor.com.br/index/3/",
+          "https://www.cotec.fadenor.com.br/index/2/",
+          "https://www.cotec.fadenor.com.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.cotec.fadenor.com.br/index/1/",
+          "file": "cotec_open-cycle1-listing-5f8e1f29c8.html",
+          "sha256": "8018b9863e20f529549f7dcadd5d8191e22bc2db228c93c077d07cecf400d80e",
+          "bytes": 65743,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:52.456514+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-7bdbbb81ce75",
+          "candidate": {
+            "candidate_id": "cotec_open-31",
+            "title_observed": "Câmara Municipal de Pedras de Maria da Cruz/MG",
+            "detail_url_observed": "https://www.cotec.fadenor.com.br/informacoes/31/",
+            "external_id": "31",
+            "observed_at": "2026-09-08T00:09:52.593194Z",
+            "source": "cotec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.cotec.fadenor.com.br/informacoes/31/",
+              "file": "cotec_open-cycle1-detail-2e28236ed4.html",
+              "sha256": "26c23c1f573195489517edd51e8be49ef9f3e8640ca9d1c99bf181203ef00bda",
+              "bytes": 29476,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:53.342268+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-83e4a986f95f",
+          "candidate": {
+            "candidate_id": "cotec_open-32",
+            "title_observed": "Câmara Municipal de Itacarambi/MG",
+            "detail_url_observed": "https://www.cotec.fadenor.com.br/informacoes/32/",
+            "external_id": "32",
+            "observed_at": "2026-09-08T00:09:52.593194Z",
+            "source": "cotec_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.cotec.fadenor.com.br/informacoes/32/",
+              "file": "cotec_open-cycle1-detail-291e3246b8.html",
+              "sha256": "b521bb0cd4e5d0f24ec36509f2d47960032712d0a14b7688260f1a92f42a17be",
+              "bytes": 28934,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:54.102148+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cotec_open-doc-d5dafe9af53eec8c",
+            "title": "EDITAL 26/06/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 26/06/2026' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: ANEXO I - ESPECIFICAÇÃO DOS CARGOS 26/06/2026; ANEXO II - ESPECIFICAÇÃO DAS PROVAS DE MÚLTIPLA ESCOLHA 26/06/2026; ANEXO III - ATRIBUIÇÕES DOS CARGOS 26/06/2026; ANEXO IV - PROGRAMA DAS PROVAS DE MÚLTIPLA ESCOLHA 26/06/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-cc904cee33",
+            "sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+            "byte_len": 280641,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:09:54.269331Z",
+            "storage_path": "art-cc904cee33-b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626.pdf"
+          },
+          "total_pages": 19,
+          "processed_pages": 19,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=19/19",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.359
+    },
+    {
+      "source": "rbo_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-89b4a1da0c0f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://rboconcursos.selecao.net.br/index/abertos/",
+          "https://rboconcursos.selecao.net.br/index/2/",
+          "https://rboconcursos.selecao.net.br/index/3/",
+          "https://rboconcursos.selecao.net.br/index/4/",
+          "https://rboconcursos.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://rboconcursos.selecao.net.br/index/1/",
+          "file": "rbo_open-cycle1-listing-7f0e8c0470.html",
+          "sha256": "bc39d294994e07991bcf06b2c5f63326757255e016f62f9dc5921f89326c52ca",
+          "bytes": 40388,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:56.642932+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-de05c61588d9",
+          "candidate": {
+            "candidate_id": "rbo_open-203",
+            "title_observed": "Concurso Público - 02/2026 - Prefeitura da Estância Turística de Jahu- SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/203/",
+            "external_id": "203",
+            "observed_at": "2026-09-08T00:09:56.707711Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/203/",
+              "file": "rbo_open-cycle1-detail-2b1797a334.html",
+              "sha256": "61576362bb13a4443be7f5da965e6567f57fba9481695f1073c9662bb5581f72",
+              "bytes": 23769,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:57.375449+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-af3e147f4e91",
+          "candidate": {
+            "candidate_id": "rbo_open-210",
+            "title_observed": "Processo Seletivo - 038/2026 - Serviço de Apoio às Micro e Pequenas Empresas do Estado de São Paulo  SEBRAE-SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/210/",
+            "external_id": "210",
+            "observed_at": "2026-09-08T00:09:56.707711Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade sem documento vinculado ao ID e tenant",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/210/",
+              "file": "rbo_open-cycle1-detail-53b9b463f4.html",
+              "sha256": "24c57b1f8c437286299ed0af0126a485e5ab775ba0681456dad06c3d1c64bf67",
+              "bytes": 16243,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:57.924419+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-4461a0dde5d0",
+          "candidate": {
+            "candidate_id": "rbo_open-209",
+            "title_observed": "Processo Seletivo - 037/2026 - Serviço de Apoio às Micro e Pequenas Empresas do Estado de São Paulo  SEBRAE-SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/209/",
+            "external_id": "209",
+            "observed_at": "2026-09-08T00:09:56.707711Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade sem documento vinculado ao ID e tenant",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/209/",
+              "file": "rbo_open-cycle1-detail-a54a9e635a.html",
+              "sha256": "17e4e38c35cacdda25b35a6a7eb53c68a6ce55aa2b5ce88d55eb39a8b215f64a",
+              "bytes": 16242,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:09:58.634013+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.672
+    },
+    {
+      "source": "quadrix_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-be5a98cbe26d",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://quadrix.org.br/index/abertos/",
+          "https://quadrix.org.br/index/3/",
+          "https://quadrix.org.br/index/4/",
+          "https://quadrix.org.br/index/6/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://quadrix.org.br/index/1/",
+          "file": "quadrix_open-cycle1-listing-b7efe2006f.html",
+          "sha256": "42b4c7cc0fd3701c4e5836ccb7b7b06e2cf32367824cbfba9be3178eb8f2f979",
+          "bytes": 44327,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:09:59.452912+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-f6db703473d9",
+          "candidate": {
+            "candidate_id": "quadrix_open-3056",
+            "title_observed": "Secretaria de Desenvolvimento Social do Distrito Federal (Sedes/DF)",
+            "detail_url_observed": "https://quadrix.org.br/informacoes/3056/",
+            "external_id": "3056",
+            "observed_at": "2026-09-08T00:09:59.525296Z",
+            "source": "quadrix_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://quadrix.org.br/informacoes/3056/",
+              "file": "quadrix_open-cycle1-detail-3d551e8fb8.html",
+              "sha256": "ac3b5016d2cce96a099f263cab57f71bb3c4f6c681c655782ff5cf438856d792",
+              "bytes": 84146,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:00.327829+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-66da424d2087",
+          "candidate": {
+            "candidate_id": "quadrix_open-3073",
+            "title_observed": "Prefeitura Municipal de Valença",
+            "detail_url_observed": "https://quadrix.org.br/informacoes/3073/",
+            "external_id": "3073",
+            "observed_at": "2026-09-08T00:09:59.525296Z",
+            "source": "quadrix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://quadrix.org.br/informacoes/3073/",
+              "file": "quadrix_open-cycle1-detail-c9720361db.html",
+              "sha256": "841ba8133c204e51ba86cea4fe43592ff403309c04fad66c132f2401102d3404",
+              "bytes": 29525,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:01.320080+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "quadrix_open-doc-d45a66f0621fc3fd",
+            "title": "Edital nº 1 (abertura) 31/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1 (abertura) 31/08/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Cronograma 31/08/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-621a53d392",
+            "sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+            "byte_len": 665614,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:10:01.498399Z",
+            "storage_path": "art-621a53d392-9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384.pdf"
+          },
+          "total_pages": 34,
+          "processed_pages": 34,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=34/34",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.547
+    },
+    {
+      "source": "cotec_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-a4463cbbfc17",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.cotec.fadenor.com.br/index/abertos/",
+          "https://www.cotec.fadenor.com.br/index/3/",
+          "https://www.cotec.fadenor.com.br/index/2/",
+          "https://www.cotec.fadenor.com.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.cotec.fadenor.com.br/index/1/",
+          "file": "cotec_open-cycle2-listing-5f8e1f29c8.html",
+          "sha256": "8018b9863e20f529549f7dcadd5d8191e22bc2db228c93c077d07cecf400d80e",
+          "bytes": 65743,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:10:04.938157+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-7d2f6fd93f6f",
+          "candidate": {
+            "candidate_id": "cotec_open-31",
+            "title_observed": "Câmara Municipal de Pedras de Maria da Cruz/MG",
+            "detail_url_observed": "https://www.cotec.fadenor.com.br/informacoes/31/",
+            "external_id": "31",
+            "observed_at": "2026-09-08T00:10:05.050291Z",
+            "source": "cotec_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.cotec.fadenor.com.br/informacoes/31/",
+              "file": "cotec_open-cycle2-detail-01936952b2.html",
+              "sha256": "e80bc80b6b63153624e810ea2f485de3aa190fab740fe81ca472103213e27c9d",
+              "bytes": 29476,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:05.791014+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-f0492b1c53a4",
+          "candidate": {
+            "candidate_id": "cotec_open-32",
+            "title_observed": "Câmara Municipal de Itacarambi/MG",
+            "detail_url_observed": "https://www.cotec.fadenor.com.br/informacoes/32/",
+            "external_id": "32",
+            "observed_at": "2026-09-08T00:10:05.051292Z",
+            "source": "cotec_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://www.cotec.fadenor.com.br/informacoes/32/",
+              "file": "cotec_open-cycle2-detail-7429e8c7eb.html",
+              "sha256": "1dfb8c635a7acc8313b6082d21459ec09318fa207c94d39b1c2ecbec4226b70d",
+              "bytes": 28934,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:06.546721+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "cotec_open-doc-d5dafe9af53eec8c",
+            "title": "EDITAL 26/06/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL 26/06/2026' por conter 'edital' no título/URL; 4 documento(s) ignorado(s) (ex.: ANEXO I - ESPECIFICAÇÃO DOS CARGOS 26/06/2026; ANEXO II - ESPECIFICAÇÃO DAS PROVAS DE MÚLTIPLA ESCOLHA 26/06/2026; ANEXO III - ATRIBUIÇÕES DOS CARGOS 26/06/2026; ANEXO IV - PROGRAMA DAS PROVAS DE MÚLTIPLA ESCOLHA 26/06/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-59177d1933",
+            "sha256": "b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626",
+            "byte_len": 280641,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/846/concursos/32/anexos/d6d56a28-ed7e-4d05-bd78-c8f75d79f0d3.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:10:06.694596Z",
+            "storage_path": "art-59177d1933-b6f8fcb5ec3f1ff27269f93175ac5bc7c0f807c503522935dcfc5c7c12dc3626.pdf"
+          },
+          "total_pages": 19,
+          "processed_pages": 19,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=19/19",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "supported"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.125
+    },
+    {
+      "source": "rbo_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-ab9573df34ae",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://rboconcursos.selecao.net.br/index/abertos/",
+          "https://rboconcursos.selecao.net.br/index/2/",
+          "https://rboconcursos.selecao.net.br/index/3/",
+          "https://rboconcursos.selecao.net.br/index/4/",
+          "https://rboconcursos.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://rboconcursos.selecao.net.br/index/1/",
+          "file": "rbo_open-cycle2-listing-7f0e8c0470.html",
+          "sha256": "bc39d294994e07991bcf06b2c5f63326757255e016f62f9dc5921f89326c52ca",
+          "bytes": 40388,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:10:08.998562+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-b52d01b0f234",
+          "candidate": {
+            "candidate_id": "rbo_open-203",
+            "title_observed": "Concurso Público - 02/2026 - Prefeitura da Estância Turística de Jahu- SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/203/",
+            "external_id": "203",
+            "observed_at": "2026-09-08T00:10:09.066562Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/203/",
+              "file": "rbo_open-cycle2-detail-5b90616dbf.html",
+              "sha256": "40bdc8427b06a8d0d566e6c23c0868eb1adba2425b6e913d10b567d64fca95ad",
+              "bytes": 23769,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:09.775155+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-5163c40f9ff6",
+          "candidate": {
+            "candidate_id": "rbo_open-210",
+            "title_observed": "Processo Seletivo - 038/2026 - Serviço de Apoio às Micro e Pequenas Empresas do Estado de São Paulo  SEBRAE-SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/210/",
+            "external_id": "210",
+            "observed_at": "2026-09-08T00:10:09.066562Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade sem documento vinculado ao ID e tenant",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/210/",
+              "file": "rbo_open-cycle2-detail-fd7b2f9ea7.html",
+              "sha256": "3c0190bfd71f0029e80978e856bb45a1621f06f912b575df8f79aa0f23940880",
+              "bytes": 16243,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:10.336056+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-5bc4342ac847",
+          "candidate": {
+            "candidate_id": "rbo_open-209",
+            "title_observed": "Processo Seletivo - 037/2026 - Serviço de Apoio às Micro e Pequenas Empresas do Estado de São Paulo  SEBRAE-SP",
+            "detail_url_observed": "https://rboconcursos.selecao.net.br/informacoes/209/",
+            "external_id": "209",
+            "observed_at": "2026-09-08T00:10:09.066562Z",
+            "source": "rbo_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade sem documento vinculado ao ID e tenant",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://rboconcursos.selecao.net.br/informacoes/209/",
+              "file": "rbo_open-cycle2-detail-4ed6b1b87c.html",
+              "sha256": "3b3054ea5cc9db69d398c03eca4954dca8f1a7199b1cf3c8421b8198f74c5068",
+              "bytes": 16242,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:10.919344+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.641
+    },
+    {
+      "source": "quadrix_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-67a3f5d19469",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://quadrix.org.br/index/abertos/",
+          "https://quadrix.org.br/index/3/",
+          "https://quadrix.org.br/index/4/",
+          "https://quadrix.org.br/index/6/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://quadrix.org.br/index/1/",
+          "file": "quadrix_open-cycle2-listing-b7efe2006f.html",
+          "sha256": "42b4c7cc0fd3701c4e5836ccb7b7b06e2cf32367824cbfba9be3178eb8f2f979",
+          "bytes": 44327,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T00:10:11.770313+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-d8ae2cef5012",
+          "candidate": {
+            "candidate_id": "quadrix_open-3056",
+            "title_observed": "Secretaria de Desenvolvimento Social do Distrito Federal (Sedes/DF)",
+            "detail_url_observed": "https://quadrix.org.br/informacoes/3056/",
+            "external_id": "3056",
+            "observed_at": "2026-09-08T00:10:11.844856Z",
+            "source": "quadrix_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: nenhum edital principal inequívoco; anexos e retificações exigem revisão",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://quadrix.org.br/informacoes/3056/",
+              "file": "quadrix_open-cycle2-detail-418036c1fd.html",
+              "sha256": "aa210c99cdda7b2b8c129fac750fb8da8b52ee4584b22dd028c6bfdcef723a6b",
+              "bytes": 84146,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:12.633460+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-da1e2f6e5909",
+          "candidate": {
+            "candidate_id": "quadrix_open-3073",
+            "title_observed": "Prefeitura Municipal de Valença",
+            "detail_url_observed": "https://quadrix.org.br/informacoes/3073/",
+            "external_id": "3073",
+            "observed_at": "2026-09-08T00:10:11.844856Z",
+            "source": "quadrix_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://quadrix.org.br/informacoes/3073/",
+              "file": "quadrix_open-cycle2-detail-f18c7d4565.html",
+              "sha256": "1a4e6c364a4c60fdd0a7ddee565a513bb67584b19f30f2112c8567f755fed92b",
+              "bytes": 29525,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T00:10:13.263207+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "quadrix_open-doc-d45a66f0621fc3fd",
+            "title": "Edital nº 1 (abertura) 31/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital nº 1 (abertura) 31/08/2026' por conter 'edital' no título/URL; 1 documento(s) ignorado(s) (ex.: Cronograma 31/08/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-7809898093",
+            "sha256": "9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384",
+            "byte_len": 665614,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/861/concursos/3073/anexos/c62b14c4-4749-407b-9104-547b320ab778.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T00:10:13.443366Z",
+            "storage_path": "art-7809898093-9bc4c9d21c6aeaa7e72d140a6a31931688ac2e84f91657801b25606818795384.pdf"
+          },
+          "total_pages": 34,
+          "processed_pages": 34,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=34/34",
+              "titulo_corroborado=3/3"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "supported"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 4.921
+    }
+  ]
+}

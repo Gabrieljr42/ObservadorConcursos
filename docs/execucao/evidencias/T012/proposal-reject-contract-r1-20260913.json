@@ -1,0 +1,27 @@
+{
+  "schema": "t012.proposal-reject-contract-r1.v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "scope": "authenticated owner-bound proposal review; no live API, Docker or pilot",
+  "diagnosis": {
+    "receipt": "docs/execucao/evidencias/T012/cpcon_open/live-proposal-receipt-r11-20260913.json",
+    "old_proposal": "tpp-4d947337190bc96d5bdf1d6b30f992ab",
+    "404_cause": "No /tenderproof/publications/proposals/{id}/reject route existed. Existing rollback is intentionally limited to applied proposals and cannot reject proposed creates."
+  },
+  "implementation": {
+    "route": "POST /tenderproof/publications/proposals/{proposal_id}/reject",
+    "payload": {"reason": "required non-empty string, max 2000"},
+    "service": "reject_proposal",
+    "transition": "proposed -> rejected only",
+    "guards": ["publisher authorization", "owner-bound lookup/404", "CAS state=proposed", "approved/applied/rolled_back/rejected-invalid states"],
+    "audit": ["rejected_by", "rejected_at", "rejection_reason"],
+    "side_effects": "no Concurso, ConcursoVersion, PublicationOutbox or Notification writes",
+    "replay": "rejected is idempotent and returns original audit reason; divergent reason does not overwrite history",
+    "migration": "additive idempotent columns in ensure_publication_schema"
+  },
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_proposal_rejection.py",
+    "result": "2 passed",
+    "coverage": ["owner/cross-owner authorization", "pending rejection", "idempotent replay", "approved rejection blocked", "zero publication side effects"]
+  },
+  "known_unrelated": "Combined publication/canonical suite had 42 passed and one pre-existing FileNotFoundError for backend/tests/test_tenderproof_publication.py::test_access_birigui_reviewed_run_revalidates_cargos_and_material_diff (missing docs/execucao/evidencias/T010/id1.pdf)."
+}

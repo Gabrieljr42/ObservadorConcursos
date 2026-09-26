@@ -1,0 +1,57 @@
+{
+  "schema": "t012.publiconsult.document-review-409-diagnosis-r6.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "offline/read-only diagnosis; no new prepare/approve/proposal/API/DB mutation",
+  "verdict": "BLOCKER_ARTIFACT_REGISTRATION_OR_SERVER_STATE_UNPROVEN",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "r6_receipt": "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r6-receipt-20260913.json",
+  "observed_state": {
+    "run_get": 200,
+    "pending": true,
+    "pending_count": 1,
+    "current_before": null,
+    "http": 409,
+    "response_detail": "not captured by client wrapper; only API access-log 409 is preserved",
+    "proposal_approve_apply": false
+  },
+  "identity_checks": {
+    "result": "PASS_OFFLINE",
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+    "requested_final_equal": true,
+    "matcher": "document_identity retains raw=1; title and kind match the R6 package"
+  },
+  "matcher_store_order": {
+    "source": "backend/app/tenderproof/review_cases.py:235-260",
+    "order": [
+      "current case collision (409 if incompatible)",
+      "pending document_identity exact match (409 if mismatch)",
+      "store.load_artifact_bytes hash/byte check (409 if absent/divergent)",
+      "page extraction and identity revalidation"
+    ],
+    "most_supported_condition": "R6 proves only that save_artifact_file ran in the client-side receipt; it does not prove the API process used the same TENDERPROOF_ARTIFACT_DIR/blob registry. The local unregistered-path branch deterministically returns None and maps to 409 artifact absent/divergent.",
+    "not_proven": ["API-visible blob registration", "incompatible current case after the preflight snapshot", "server response detail"]
+  },
+  "artifact": {
+    "artifact_id": "publiconsult-open-taf-681-r2",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf"
+  },
+  "correction_status": {
+    "r7": "NOT_GENERATED",
+    "reason": "R6 payload identity is already exact; changing title, kind, URL, SHA or pages would be unsupported. The remaining correction is deployment/state coordination: prove/register the blob in the API's configured store or capture the owner-authenticated current-case response before any single retry."
+  },
+  "test": {
+    "path": "docs/execucao/evidencias/T012/publiconsult_open/test_document_review_r6_409.py",
+    "result": "1 passed",
+    "expected": "unregistered exact artifact => load_artifact_bytes None (409 precondition); canonical registration => hash/bytes load pass"
+  },
+  "next_gate": "No retry. Obtain server-side response detail and owner-authenticated current state, then verify the same configured artifact root contains the canonical PDF blob. Only if those checks pass may one prepare-preserved attempt be considered."
+}

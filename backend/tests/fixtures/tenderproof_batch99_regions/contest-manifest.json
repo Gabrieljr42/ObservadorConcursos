@@ -1,0 +1,72 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fapesc_selection",
+      "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+      "basis": "literal observed edital navigation in official contest homepage",
+      "observed_at": "2026-09-08T14:59:45.603101+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 3829,
+      "sha256": "9152b4d458c239b1f7a3e282fbee42dda0262ffe9be28602b0d3441f895ee4fd",
+      "file": "fapesc_selection-37b522c0-9152b4d458.html",
+      "encoding": "iso-8859-1",
+      "title": "2022 - FAPESC",
+      "links": [
+        {
+          "url": "https://fapesc.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/inscricao/#!/edital/bc587815337561e1739faa9ba8eabd87",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&arquivo=TA_02_FAPESC_Ed_001.pdf&inline=1",
+          "title": "Termo Aditivo nº 2"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&arquivo=TA_01_FAPESC_Ed_001.pdf&inline=1",
+          "title": "Termo Aditivo nº 1"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&arquivo=2022_001_CP_FAPESC.pdf&inline=1",
+          "title": "Edital 001/2022"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapesc.fepese.org.br/class/funcoes.js"
+      ]
+    }
+  ]
+}

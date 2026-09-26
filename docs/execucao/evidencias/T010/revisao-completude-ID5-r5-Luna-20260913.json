@@ -1,0 +1,22 @@
+{
+  "schema": "t010.id5.luna-r5-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ID5_R5_ACCEPT_FINAL",
+  "ready_for_import": true,
+  "scope": "read-only; no network, proposal, approval, apply or pilot/quadro mutation",
+  "verified": {
+    "pdf_sha256": "9bdb0e77fde501c33363ce636744b8be8107c64a996c1bde6b4aa2faa96dac32",
+    "pdf_bytes": 565628,
+    "pages_total": 31,
+    "parser_version": "consulplan-unai-2026/5",
+    "guard": "parser exige I - DAS VAGAS, NOTAS EXPLICATIVAS, 1.1.1, 1.1.2, exatamente 3 marcadores e p2 iniciando 1.2 sem marcador/continuação",
+    "fee": "p3 literal, três evidências, json_paths cargos[0..2].taxa_inscricao",
+    "envelope_sha256": "bd1f190f6dfd7170e22b9ef7ac44ed530012bbdfe1b8c768d49f42eb4b7275a7",
+    "run_id": "tp-reviewed-40120e7a2b6662b131075dc416d2cb18",
+    "determinism": "two independent _run_id derivations returned the same run_id",
+    "validation": "ReviewedRun pass; importer dry-run validated; targeted tests 4 passed; network/proposal/apply false",
+    "supersession": "r4 receipt explicitly superseded; proof-data supplement remains separate"
+  },
+  "conclusion": "The three cargo rows and p1/p2 boundary are fully supported, fee evidence is field-linked on p3, and provenance now matches executable parser /5. Release only import+proposal gate; approval/apply require a later review."
+}

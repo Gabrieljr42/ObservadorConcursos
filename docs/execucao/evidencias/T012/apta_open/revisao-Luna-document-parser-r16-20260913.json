@@ -1,0 +1,20 @@
+{
+  "schema": "t012.apta.document-parser-r16.luna-review.v1",
+  "reviewer": "Luna",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "gate": "APTA_DOCUMENT_PARSER_R16",
+  "scope": "offline read-only; no live API, pilot, Docker or deployment",
+  "checks": {
+    "handler_order": "ProcessingError is caught before ValueError in review_cases.py; concurrency_limit is no longer misclassified",
+    "busy_boundary": "busy processing remains HTTP 409 with actionable Processamento ocupado response and no review approval path",
+    "parser_boundary": "source-specific parser validation remains bounded HTTP 409",
+    "routing": "principal APTA/708 remains strict 20-page path; retificacao remains exact 1-page pinned validator with zero promoted fields"
+  },
+  "tests": {
+    "command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_review_cases.py::test_busy_processing_is_actionable_and_cannot_approve_review backend/tests/test_tenderproof_review_cases.py::test_processing_error_is_actionable backend/tests/test_tenderproof_document_review_gate.py backend/tests/test_tenderproof_review_cases.py backend/tests/test_apta_retification_review.py backend/tests/test_t012_apta_open_selection.py backend/tests/test_t012_apta_strong_preflight.py",
+    "result": "54 passed, 628 warnings",
+    "compileall": "PASS"
+  },
+  "prior_blocker": "R15 regression is resolved: the expected Processamento ocupado assertion now passes",
+  "side_effects": {"proposal": 0, "version": 0, "outbox": 0, "notification": 0, "catalog": 0}
+}

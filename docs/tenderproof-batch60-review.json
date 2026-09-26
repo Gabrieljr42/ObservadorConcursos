@@ -1,0 +1,45 @@
+{
+  "status": "corrected_and_focal_tests_passed",
+  "scope": [
+    "Gualimp structured contest number/year corroboration"
+  ],
+  "finding": {
+    "severity": "P2",
+    "trigger": "Observed candidate 135 title contains 002/2019 while load_ps.nr_concurso is 999/2099",
+    "before": "compose_detail and confirm_identity accepted the contradictory structured response in an in-memory mutation of real captures",
+    "after": "confirm_identity rejects mismatch, absent structured number, and missing identity evidence when listing explicitly contains NNN/YYYY",
+    "implementation": "Read nr_concurso from existing escaped gualimp-transport-evidence JSON; compare observed NNN/YYYY identifiers; preserve transport evidence and existing composed snapshot format",
+    "no_inference": "No number/year is required when the listing title does not contain the observed NNN/YYYY format"
+  },
+  "evidence": {
+    "listing": "backend/tests/fixtures/tenderproof_batch60_own/gualimp_open-detail0.html",
+    "detail_shell": "backend/tests/fixtures/tenderproof_batch60_own/gualimp_open-sample-detail.html",
+    "resource_manifest": "backend/tests/fixtures/tenderproof_batch60_extended/ajax-manifest.json",
+    "external_id": "135"
+  },
+  "validation": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_tenderproof_batch60_extended.py tests/test_tenderproof_detail_resources.py",
+    "working_directory": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend",
+    "exit_code": 0,
+    "passed": 28,
+    "duration_s": 5.91,
+    "cases": [
+      "real captured identity and principal document remain accepted",
+      "999/2099, 999/2019 and 002/2099 rejected against 002/2019",
+      "unrelated heading with correct number cannot hide incorrect nr_concurso",
+      "missing structured number rejected when listing explicit",
+      "listing without number remains accepted",
+      "transport resources unchanged after successful validation",
+      "bounded resource transport regression"
+    ]
+  },
+  "limits": [
+    "Offline real fixtures plus controlled mutations; no new live request",
+    "Only observed NNN/YYYY notation compared; no inference of alternative formats",
+    "No core or HTTP acquisition changes; no full regression suite repeated"
+  ],
+  "files_sha256": {
+    "backend/app/tenderproof/batch60_extended_adapters.py": "50daa4aca02218e326af4b098730a321219cba5094894ee8e5b05e9a64e00c0e",
+    "backend/tests/test_tenderproof_batch60_extended.py": "77f40169f033f9869cef771a8a0954d147cec50c4f0d0aa4b645086a567ea3b9"
+  }
+}

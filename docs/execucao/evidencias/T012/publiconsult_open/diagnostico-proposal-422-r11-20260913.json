@@ -1,0 +1,30 @@
+{
+  "schema": "t012.publiconsult.proposal-422-diagnosis-r11.v1",
+  "status": "PROCEDURE_READY",
+  "scope": "offline/read-only diagnosis; no API mutation, live retry, Docker or deployment",
+  "publiconsult": {
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "owner_user_id": 1,
+    "live_run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+    "live_receipt": "docs/execucao/evidencias/T012/publiconsult_open/live-proposal-receipt-r10-20260913.json",
+    "observed_422": "TenderProof: criação exige título, órgão e número do edital com evidência reproduzida",
+    "guard": "canonical.resolve -> REQUIRED=(titulo, orgao, edital_numero)",
+    "persisted_shape_provenance": "The live canonical35 envelope bound to the legacy run contains only orgao and edital_numero. Therefore the 422 occurs before publication _revalidate and before proposal persistence.",
+    "offline_r10_shape": ["titulo", "orgao", "edital_numero"],
+    "identity_mismatch": {
+      "legacy_live_run": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+      "current_path_independent_id_for_reviewed-envelope-publiconsult-681": "tp-reviewed-6bbf4fcfd0a5a6274bd0a59820d5710d",
+      "meaning": "R10 parser/package output was not the persisted live run; changing parser code cannot add title to the already stored run."
+    },
+    "procedure": "Regenerate a complete owner-1 tenderproof.reviewed-run.v1 envelope from the pinned principal PDF, with exactly the current parser fields/evidence, derive its run_id with the current importer, dry-run then import idempotently, GET-verify fields, and only then create one normal proposal. Do not reuse/take over bea209... and do not use the TAF document as identity."
+  },
+  "comparative_ufu": {
+    "run": "tp-reviewed-f3e9c58974f5f13419565aa22ded286d",
+    "distinct_cause": "UFU artifact URL is the pinned administrative DOCUMENT_URL while candidate detail_url is DETAIL_URL; fields.py previously compared both to DETAIL_URL. Its parser also has no proven prova_data, which must remain unpromoted.",
+    "fix": ["fields.py compares artifact to DOCUMENT_URL and candidate to DETAIL_URL", "ufu parser evidence binds to DOCUMENT_URL", "prova_data is not promoted"]
+  },
+  "no_publiconsult_parser_change": true,
+  "side_effects": {"proposal": 0, "version": 0, "outbox": 0, "notification": 0, "live_mutation": false}
+}

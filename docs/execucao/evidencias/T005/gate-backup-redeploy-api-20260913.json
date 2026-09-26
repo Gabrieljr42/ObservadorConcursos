@@ -1,0 +1,26 @@
+{
+  "schema": "observador.t005.backup_redeploy_api.v1",
+  "recorded_at": "2026-09-13T01:16:15.8507074-03:00",
+  "recovery": {
+    "docker_runtime_stale": "C:\\Users\\gabri\\AppData\\Local\\Docker\\run.stale-20260913-010943",
+    "engine": "28.1.1",
+    "runtime_preserved": true
+  },
+  "backup": {
+    "bundle": "/backups/pilot-20260913T041035938Z",
+    "postgres_dump": "/backups/pilot-20260913T041035938Z-postgres.dump",
+    "operational_files_verified": 14347,
+    "isolated_restore_database": "gate_t005_restore_20260913",
+    "isolated_restore_counts": {"concursos": 33, "versions": 87, "proposals": 90, "outbox": 87, "notifications": 86},
+    "isolated_database_removed": true
+  },
+  "deploy": {
+    "scope": "api only",
+    "image": "sha256:8bbcce79ebdb74ef0e157189b03e171f0d7ec204d0ff5b22a72a68d255a257f9",
+    "health": 200
+  },
+  "read_only_regression": {"contest8_cargo_count": 1, "contest17_cargo_count": 27},
+  "canonical_counts_after": {"proposals": 90, "versions": 87, "outbox": 87, "notifications": 86},
+  "t005_imported": false,
+  "gate": "PASS backup/restore/redeploy; awaiting T005 import authorization"
+}

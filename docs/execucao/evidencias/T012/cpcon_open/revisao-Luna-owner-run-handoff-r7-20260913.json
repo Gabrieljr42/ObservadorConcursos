@@ -1,0 +1,33 @@
+{
+  "schema": "t012.cpcon_open.owner-run-handoff-luna-review-r7.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_REIMPORT_REPROPOSAL",
+  "scope": "read-only handoff review; no reimport, proposal, approve or apply",
+  "handoff": {
+    "file": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r7.json",
+    "run_id": "tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2",
+    "owner_user_id": 1,
+    "source_id": 35,
+    "source": "cpcon_open",
+    "external_id": "processo-seletivo-simplificado-no-002-2026",
+    "concurso_id": null,
+    "fields": ["titulo", "orgao", "edital_numero", "cargos"],
+    "artifact_sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05",
+    "artifact_bytes": 498894,
+    "artifact_pages": 13,
+    "cargo_count": 6
+  },
+  "checks": {
+    "explicit_new_run": true,
+    "owner_one_bound": true,
+    "create_payload_omits_target": true,
+    "source_id_not_used_as_concurso_id": true,
+    "id999_only_harness": true,
+    "round_trip": "PASS in R7 receipt: R6 validation/dry-run/revalidate against preserved bytes; no persistent write",
+    "r6_and_old_proposal": "superseded/blocked; must be rejected by the normal flow and not reused",
+    "r5_or_source35_target_reuse": false
+  },
+  "next_gate": "Run the normal owner-authenticated import/revalidation with this explicit run handoff and create a fresh action=create proposal with concurso_id omitted/null; only then conduct independent proposal review. Do not approve/apply in this package.",
+  "mutations_performed": false
+}

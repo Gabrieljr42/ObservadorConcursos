@@ -1,0 +1,65 @@
+{
+  "schema": "t010.id6.operational-gate.v1",
+  "recorded_at": "2026-09-12T21:47:15-03:00",
+  "scope": "T009 push PostgreSQL/API plus T010 ID6 import and proposal; no approve/apply",
+  "fixture": {
+    "container": "t009-push-gate-postgres",
+    "network": false,
+    "push_dispatch_enabled": false,
+    "fresh_schema": {"pytest": "tests/test_t009_push.py: 12 passed", "postgres_runtime": "PASS"},
+    "legacy_schema": {"upgrade_runs": 2, "upgrade": "PASS", "token_nullable": true, "token_fingerprint_nullable": true},
+    "api_smoke": {
+      "health": 200,
+      "user_a": {"id": 1, "post_id": 1, "delete_http": 204, "get_after": {"active": false, "token": null, "token_fingerprint": null}},
+      "user_b": {"id": 2, "cannot_see_a": true, "post_same_token_after_a_revoke_id": 2, "delete_http": 204},
+      "audit": "A and B rows retained with revoked_at and revoke_reason=user_revoked",
+      "drain_or_external_network": false
+    }
+  },
+  "tests": {"directed": "18 passed, 1 skipped", "compileall": "PASS"},
+  "deploy": {
+    "api_web": "recreated only api and web; postgres/redis/volumes untouched",
+    "image": "sha256:d1f37f69977f98fe1738fa9d5bf5dd54a4d54f546fc128c5cdf1af6715badb76",
+    "health_http": 200,
+    "web_inicio_http": 200,
+    "web_static_routes": 23,
+    "pilot_push_dispatch_enabled": false,
+    "push_columns": {"token": "YES", "token_fingerprint": "YES"}
+  },
+  "pilot_counts": {
+    "before": {"concursos": 33, "versions": 82, "notifications": 81, "proposals": 84, "outbox": 82},
+    "after_import_and_proposal": {"concursos": 33, "versions": 82, "notifications": 81, "proposals": 85, "outbox": 82}
+  },
+  "envelope": {
+    "path": "docs/execucao/evidencias/T010/T010-reviewed-run-id6.json",
+    "sha256": "23D7A5AC0E005DEF90FD45C19AF3E6663BB012A7E3F49436907EBD16C329F80C",
+    "owner_user_id": 1,
+    "source": "imeso_open",
+    "concurso_id": 6,
+    "source_id": 17,
+    "external_id": "139",
+    "artifact_sha256": "8e6fbc48ac7f54c492cc2beba78adc9216ba25fa781ba753d3e9e410fc7dd6dc",
+    "artifact_byte_len": 597314,
+    "dry_run": {"status": "validated", "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18"},
+    "import": {"status": "imported", "run_id": "tp-reviewed-e43e5fa09a366aaa91b6c7cb1b054f18", "count": 1},
+    "run_persisted_operational_sqlite": true
+  },
+  "proposal": {
+    "id": "tpp-b47411064f1b447b5a6f519c5b925f42",
+    "http_create": 201,
+    "http_get": 200,
+    "state": "proposed",
+    "proposal_hash": "8655bd498afcfa7d51e2c3f0e930f3178420d8446edbf7e919eddcfd593114a9",
+    "owner_user_id": 1,
+    "concurso_id": 6,
+    "source_id": 17,
+    "eligible_fields": ["cargos"],
+    "baseline_cargos": null,
+    "proposed_cargos_rows": 11,
+    "version_id": null,
+    "approved_at": null,
+    "applied_at": null,
+    "approve_apply": false
+  },
+  "next_gate": "revisao independente real do run/proposta; nenhum approve/apply ou outro registro"
+}

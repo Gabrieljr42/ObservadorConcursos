@@ -1,0 +1,32 @@
+{
+  "schema": "t012.publiconsult.document-review-r7-independent.v1",
+  "date": "2026-09-13",
+  "verdict": "ACCEPT_FOR_SINGLE_IN_MEMORY_PREPARE",
+  "scope": "read-only offline review; no signed URL acquisition, live call, or mutation",
+  "identity": {
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "owner_user_id": 1,
+    "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "artifact": {"sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7", "byte_len": 341466, "pages": 6}
+  },
+  "findings": {
+    "cause": "PASS: pending manifest retains AWSAccessKeyId, Expires, Signature and raw=1; R6 sent only raw=1",
+    "matcher": "PASS: document_identity strips only recognized AWS signature parameters while retaining raw=1; literal artifact URL equality remains enforced",
+    "guards": "PASS: prepare_preserved is owner/run-bound, exact pending identity, exact requested/final URL, allowlisted host, PDF/MIME, SHA/bytes, page count, main-edital revalidation, CAS and idempotent case insert",
+    "procedure": "PASS conditionally: obtain exact URL through authenticated owner-bound manifest, keep it only in process memory, submit one exact prepare-preserved payload, stop on any error/409; never retry proposal/approve/apply",
+    "secrets": "PASS for package: signed values are redacted and absent from local evidence; do not print/log/store them in the integrator"
+  },
+  "tests": [
+    {"command": "PYTHONPATH=backend backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/publiconsult_open/test_document_review_r7_url_match.py docs/execucao/evidencias/T012/publiconsult_open/test_document_url_r6_exact.py", "result": "2 passed"}
+  ],
+  "blocking_conditions": [
+    "No live dispatch is authorized by this review while the signed URL remains redacted/unavailable.",
+    "The single attempt must use identical signed URL bytes in artifact.url_requested and artifact.url_final, including query order/encoding and raw=1."
+  ],
+  "live": false,
+  "secrets_persisted_by_reviewer": false
+}

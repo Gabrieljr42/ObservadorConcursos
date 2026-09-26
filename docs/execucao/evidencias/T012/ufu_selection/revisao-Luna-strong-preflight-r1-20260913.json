@@ -1,0 +1,33 @@
+{
+  "schema": "t012.ufu_selection.luna-strong-preflight-review.v1",
+  "reviewed_at": "2026-09-13",
+  "verdict": "ACCEPT_FOR_INTEGRATION_CURRENT",
+  "scope": "read_only; no integration, API, DB, catalogue or publication mutation",
+  "identity_and_pins": {
+    "source": "ufu_selection",
+    "source_id": 40,
+    "external_id": "1843",
+    "edital": "144/2026",
+    "title": "Edital 144/2026 - Processo Seletivo Simplificado para Docentes",
+    "artifact_sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "detail_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "status": "PASS"
+  },
+  "guards_and_evidence": {
+    "status": "PASS",
+    "checks": ["UTF-8 HTML", "U+FFFD", "truncated/error page", "exact SHA/bytes", "UFU detail marker", "literal title/orgao/edital/registration/exam evidence"],
+    "test_result": "5 passed, 16 warnings",
+    "pending_fields_preserved": ["taxa", "cargos", "remuneracao"],
+    "document_urls": "collected as observed links only; no linked document fields promoted"
+  },
+  "scope": {
+    "publicable_nature": "PASS: Processo Seletivo Simplificado para Docentes is public institutional employment selection",
+    "currentness_as_of": "2026-09-13",
+    "registration_window": "2026-08-19 15:00 through 2026-09-03 14:59 (closed)",
+    "next_exam": "2026-10-15 09:00 (future)",
+    "current": true,
+    "reason": "Registration is closed, but the documented selection has a future objective-stage date; it is not a concluded selection."
+  },
+  "gate": "Integration may proceed as reference-only identity/timeline data. Do not promote taxa, cargos, remuneration, or linked-document content until separately evidenced; do not publish a completed-result status."
+}

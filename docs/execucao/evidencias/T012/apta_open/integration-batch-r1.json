@@ -1,0 +1,11 @@
+{
+  "schema": "t012.dispatch-batch2.v1",
+  "status": "READY_FOR_REVIEW",
+  "source": "apta_open",
+  "external_id": "708",
+  "artifact": {"sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c", "byte_len": 362093, "pages": 20, "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708", "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf"},
+  "strict_branch": "fields.py exact source/external; parser SHA/bytes/currentness fail-closed",
+  "tests": {"dispatch": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_batch2_dispatch.py", "dispatch_result": "11 passed", "parser_suite": "38 passed", "side_effects": "no proposal/version/outbox writes; offline only"},
+  "network": false,
+  "pilot_mutated": false
+}

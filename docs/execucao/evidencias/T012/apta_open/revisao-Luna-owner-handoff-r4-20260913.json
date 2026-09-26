@@ -1,0 +1,42 @@
+{
+  "schema": "t012.apta-owner-handoff-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_REIMPORT_REPROPOSAL",
+  "scope": "read-only; no live import, proposal, approval, apply, or quadro mutation",
+  "active_r4": {
+    "envelope": "live-envelope-ready-r4.json",
+    "run_id": "tp-reviewed-apta-708-owner1-r4",
+    "owner_user_id": 1,
+    "source": "apta_open",
+    "external_id": "708",
+    "concurso_id": null,
+    "fields": ["titulo", "orgao", "edital_numero"],
+    "reference_only_fields": ["cargos", "remuneracao", "taxa"],
+    "artifact_id": "art-18bef50e17",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "storage_path": "art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf",
+    "storage_sha_recomputed": true,
+    "storage_bytes_recomputed": true,
+    "supersedes": ["live-envelope-ready-r3.json"]
+  },
+  "handoff": {
+    "previous_owner": 901,
+    "mismatch_policy": "GET/prepare by any other owner returns 404",
+    "stale_run": "tp-reviewed-29cef0e686375ff7492478042aa6162f",
+    "stale_run_status": "BLOCKED_OWNER_MISMATCH",
+    "stale_proposal_attempt_http": 404,
+    "stale_retry_approve_apply": false,
+    "active_payload_uses_owner_901": false,
+    "owner_isolation_test": "PASS (1 passed)"
+  },
+  "evidence": [
+    "live-envelope-ready-r4.json",
+    "live-envelope-receipt-r4.json",
+    "live-proposal-receipt-20260913.json",
+    "backend/tests/test_tenderproof_publication.py::test_real_jwt_authorization_and_owner_isolation"
+  ],
+  "release": "Reimport/reproposal only with owner 1 and the explicit R4 run; approve/apply remain outside this gate."
+}

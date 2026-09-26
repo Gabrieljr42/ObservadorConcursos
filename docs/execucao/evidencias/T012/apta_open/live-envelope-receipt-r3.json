@@ -1,0 +1,10 @@
+{
+  "gate": "T012-APTA-LIVE-ENVELOPE-R3",
+  "result": "READY_FOR_REVIEW",
+  "envelope": "docs/execucao/evidencias/T012/apta_open/live-envelope-ready-r3.json",
+  "supersedes": ["live-envelope-ready-r1.json", "live-envelope-ready-r2.json"],
+  "storage_contract": "canonical basename art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf under configured TENDERPROOF_ARTIFACT_DIR",
+  "pins": "SHA db9c6d26...5975d79c; 362093 bytes; 20 pages; exact URLs",
+  "validation": "test_storage_path_r3.py PASS; APTA strong preflight/dispatch suite PASS; compileall PASS",
+  "live": false
+}

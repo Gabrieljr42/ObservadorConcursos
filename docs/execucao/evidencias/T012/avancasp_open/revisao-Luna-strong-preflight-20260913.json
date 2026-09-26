@@ -1,0 +1,50 @@
+{
+  "schema": "t012.avancasp.strong-preflight-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "verdict": "AVANCASP_STRONG_PREFLIGHT_ACCEPT_FOR_INTEGRATION",
+  "scope": "read_only; no network/API/DB/catalogue mutation",
+  "verified": {
+    "source": "avancasp_open",
+    "external_id": "272",
+    "artifact_path": "docs/execucao/evidencias/T012/avancasp_open/avancasp-open-edital-272.pdf",
+    "sha256": "b0ba7e154786ce20c7bbe5fd454933c552558c4dfcfc588b60a71eab6a4ca06a",
+    "byte_len": 742298,
+    "document_type": "application/pdf",
+    "bounded_acquisition": "Receipt records BoundedHTTPDriver/TLS verified, one allowlisted URL, no redirect and no credentials",
+    "identity": {
+      "orgao": "Prefeitura Municipal De Cabreúva",
+      "edital_numero": "01/2026",
+      "identity_ids": ["272"],
+      "validity_fields": ["inscricao_inicio", "inscricao_fim"],
+      "document_title": "EDITAL COMPLETO 04/09/2026"
+    },
+    "fields_and_evidence": "Parser combines generic fields with source-specific edital_numero and cargos; evidence remains SHA/page/snippet bound and reference_only. Receipt lists titulo, orgao, edital_numero, inscription dates, prova_data and cargos; remuneracao remains blocked."
+  },
+  "revalidate": {
+    "result": "PASS",
+    "mode": "ephemeral SQLite fixture",
+    "method": "app.tenderproof.publication._revalidate",
+    "eligible": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+    "blocked": {"remuneracao": "generic field outside canonical publishable range"}
+  },
+  "test_result": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py",
+    "result": "9 passed, 15 warnings",
+    "compileall": "backend/.venv/Scripts/python.exe -m compileall -q docs/execucao/evidencias/T012/avancasp_open/avancasp_parser.py: passed"
+  },
+  "production_wiring_audit": {
+    "backend_parser_module": "not present",
+    "backend_references": "no backend/app or backend/tests reference to docs parser module",
+    "pass_dependency": "test_avancasp_strong_preflight monkeypatches publication.extract_fields and publication.document_identity_ids with the evidence-local parser; this is not production wiring",
+    "live_import": false,
+    "required_next_step": "Move or register the pinned parser through the normal source/field dispatch, preserve fail-closed identity/SHA/evidence guards, then rerun isolated revalidation and import dry-run before proposal/apply."
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/avancasp_open/strong-preflight-receipt.json",
+    "docs/execucao/evidencias/T012/avancasp_open/avancasp_parser.py",
+    "docs/execucao/evidencias/T012/avancasp_open/test_avancasp_strong_preflight.py",
+    "docs/execucao/evidencias/T012/avancasp_open/test_avancasp_t012.py"
+  ],
+  "mutations_performed": false
+}

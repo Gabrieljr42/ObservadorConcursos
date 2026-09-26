@@ -1,0 +1,22 @@
+{
+  "schema": "t012.fafipa.luna-r2-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "FAFIPA_ACCEPT_FOR_IMPORT_PROPOSAL",
+  "scope": "read-only; no Docker/API/DB/write/dispatch/apply",
+  "checks": {
+    "schema": "PASS: standard tenderproof.reviewed-run.v1 validates; derived run_id tp-reviewed-80178cee43defc8dae09b4918c3ee547 matches receipt",
+    "identity": "PASS: source #69 fafipa_open, external_id=4208, concurso_id=4208, Município de Mirador/PR, edital 001/2026",
+    "artifact": "PASS: local artifact bytes hash a8f7a62bb0bdfe0be26b4931167aadf33db9c78b39822f5da289b566b68b0f4c and 33162 bytes; receipt preflight SHA/byte_len/UTF-8/identity all true; envelope SHA ab717e6c937b99d14c7dda72b1128d495f1cab999bb864de550d7556c37cb9bf",
+    "content": "PASS: 14 cargos; 27 immediate vacancies plus four cadastro-reserva entries; dates, edital and title/orgao supported; remuneração/taxa/requisitos/retificações explicitly excluded",
+    "publicability": "PASS: municipal Concurso Público with edital identity and detail provenance",
+    "duplicate": "PASS against sanitized 32-source/33-selection snapshot: FAFIPA absent and no Mirador/PR or external_id 4208 catalogue match",
+    "fail_closed": "PASS: reference_only=true, not_applied=true, normal proposal endpoint required; no mutation",
+    "provenance": "All field evidences carry artifact SHA; artifact is the preserved HTML detail (content_type text/html), not a PDF; no PDF claim is needed for this detail-stage envelope"
+  },
+  "conditions": [
+    "Keep reference_only=true and use normal reviewed-run proposal flow only.",
+    "Do not add excluded fields or treat the HTML detail artifact as a PDF; retain receipt and SHA binding."
+  ],
+  "conclusion": "Bytes and receipt are locally present and standard import validation passes; release import-to-proposal handoff, with approval/apply requiring later review."
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "t012.luna.proposal-reject-review-r1.v1",
+  "verdict": "ACCEPT_FOR_DEPLOY",
+  "scope": "read-only offline review; no live/pilot mutation",
+  "contract": {
+    "route": "POST /tenderproof/publications/proposals/{proposal_id}/reject",
+    "body": "RejectIn requires non-empty reason, max 2000, extra fields forbidden",
+    "success": "200; proposed -> rejected with rejected_by/rejected_at/rejection_reason",
+    "missing_or_foreign": "404 through owner-bound _owned lookup, without disclosure",
+    "invalid_state": "409; only proposed may transition",
+    "replay": "rejected replay returns original audit reason and does not overwrite divergent reason",
+    "rollback_boundary": "rollback remains applied-only; reject is a distinct terminal transition"
+  },
+  "migration": {
+    "implementation": "ensure_publication_schema adds rejected_by/rejected_at/rejection_reason idempotently and preserves existing ledger",
+    "coverage": "nullable migration test passed twice with applied version/outbox preserved; PostgreSQL-specific test skipped because no disposable PG URL was configured"
+  },
+  "race": {
+    "reject_vs_approve_apply": "state/CAS predicates permit one terminal winner; loser receives 409 or idempotent rejected replay; apply requires approved state, so rejected proposals cannot apply",
+    "tested": "existing concurrent application tests passed; rejection service CAS and lock path inspected; no publication side effects on rejection"
+  },
+  "offline_route_smoke": {
+    "GET": 405,
+    "authorized_valid_body_with_mock_service": 200,
+    "authorized_missing_reason": 422,
+    "authorized_extra_body": 422,
+    "unauthenticated_valid_body": 401
+  },
+  "tests": [
+    {"command":"pytest -q backend/tests/test_tenderproof_proposal_rejection.py backend/tests/test_tenderproof_publication_post.py backend/tests/test_tenderproof_publication.py -k 'reject or rollback or concurrent or authorization'","result":"13 passed, 26 deselected"},
+    {"command":"pytest -q backend/tests/test_tenderproof_canonical.py backend/tests/test_tenderproof_publication_postgres.py -k 'schema or migration or reject'","result":"2 passed, 2 skipped (PostgreSQL unavailable)"},
+    {"command":"compileall backend/app/tenderproof/publication.py publication_router.py publication_models.py","result":"PASS"}
+  ],
+  "known_warning": "Existing datetime.utcnow deprecations only; no functional failures.",
+  "side_effects": {"catalog":false,"versions":false,"outbox":false,"notifications":false,"live":false}
+}

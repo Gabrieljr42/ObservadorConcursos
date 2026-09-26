@@ -1,0 +1,32 @@
+{
+  "schema": "t012.apta-live-envelope-ready.v1",
+  "status": "PROPOSTA_PRONTA",
+  "source": "apta_open",
+  "external_id": "708",
+  "owner_user_id": 1,
+  "concurso_id": null,
+  "identity": {
+    "title": "Câmara Municipal de Aragarças",
+    "orgao": "Câmara Municipal de Aragarças",
+    "edital_numero": "01/2026",
+    "detail_url": "https://www.aptaconcursos.com.br/concursos/publicacoes/Câmara+Municipal+de+Aragarças+/708"
+  },
+  "artifact": {
+    "artifact_id": "apta-live-708-r1",
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "url_requested": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "url_final": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf",
+    "preserved_path": "backend/.tenderproof/r60rec/artifacts/art-18bef50e17-db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c.pdf"
+  },
+  "fields": ["titulo", "orgao", "edital_numero"],
+  "reference_only": ["cargos", "remuneracao", "taxa"],
+  "binding": "organization+edital fallback; exact source/external/detail/document pins",
+  "fresh_evidence": "APTA/708 pinned parser plus offline field extraction; no historical run reused",
+  "tests": {
+    "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_t012_apta_strong_preflight.py backend/tests/test_t012_batch2_dispatch.py -k 'apta or dispatch'",
+    "result": "14 passed; compileall separately required"
+  },
+  "side_effects": "zero proposal/version/outbox; no live API/pilot mutation"
+}

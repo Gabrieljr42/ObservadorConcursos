@@ -1,0 +1,10 @@
+{
+  "receipt_schema":"tenderproof.artifact-receipt.v1",
+  "source":"fafipa_open","external_id":"4208","title":"Concurso Público do Município de Mirador - PR",
+  "url":"https://anexos-r2.selecao.net.br/uploads/281/concursos/4208/anexos/7c626742-c657-4e0c-b36c-7d59336ee942.pdf",
+  "artifact_id":"fafipa-4208-edital","sha256":"26c059dcd502f08d6476d68b41ceed056d2b5be803d17cbdedce9734a241276f","byte_len":3630911,"pages":38,"content_type":"application/pdf",
+  "mechanism":"BoundedHTTPDriver","allowlist_hosts":["anexos-r2.selecao.net.br"],"redirect_chain":["https://anexos-r2.selecao.net.br/uploads/281/concursos/4208/anexos/7c626742-c657-4e0c-b36c-7d59336ee942.pdf"],
+  "identity_bound_to":"fafipa_open/4208/https://concursos.fundacaofafipa.org.br/informacoes/4208/",
+  "preflight":{"pdf_header":true,"sha256":true,"byte_len":true,"pages":true,"replacement_characters_absent":true,"replacement_characters_present_in_extracted_text":false,"identity_fields_unaffected":true},
+  "not_applied":true
+}

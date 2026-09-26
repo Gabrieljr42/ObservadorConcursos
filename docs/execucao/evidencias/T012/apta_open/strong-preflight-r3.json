@@ -1,0 +1,44 @@
+{
+  "schema": "t012.apta_open.strong-preflight.v3",
+  "status": "PARSER_READY",
+  "source": "apta_open",
+  "external_id": "708",
+  "artifact": {
+    "sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+    "byte_len": 362093,
+    "pages": 20,
+    "document_url": "https://cdn-arquivo.concursos.srv.br/APTA/00708/PUBLICACOES/Edital_Completo_2026_07_31_09_13_43.pdf"
+  },
+  "fresh_replay": {
+    "titulo": "supported",
+    "orgao": "supported",
+    "edital_numero": "supported",
+    "identity_ids": [],
+    "identity_reason": "source-specific parser pins edital 01/2026; publication strong binding uses exact orgao+edital fallback"
+  },
+  "currentness": {
+    "as_of": "2026-09-13",
+    "inscription_window_verbatim": "no período de 17 de agosto a 20 de setembro de 2026",
+    "current": true,
+    "historical_or_expired": false
+  },
+  "real_revalidate": {
+    "database": "disposable SQLite fixture",
+    "result": "PASS via exact orgao+edital fallback",
+    "publication_created": false,
+    "versions_created": false,
+    "outbox_created": false,
+    "notifications_created": false
+  },
+  "bounded_parser": {
+    "module": "backend/app/tenderproof/apta_aragarcas_parser.py",
+    "routing": "fields.py exact apta_open/708 branch with DETAIL_URL/DOCUMENT_URL and parser pins",
+    "output": "edital_numero=01/2026 with PDF page-1 evidence",
+    "guards": ["source", "external_id", "SHA256", "byte_len", "20 pages", "non-empty/no U+FFFD", "identity markers", "inscription window", "page error/truncation"]
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_t012_apta_strong_preflight.py tests/test_t012_apta_open_selection.py",
+    "result": "6 passed, 15 warnings"
+  },
+  "network_or_pilot": "not used"
+}

@@ -1,0 +1,1019 @@
+function limparCheckedReservaVagasParaNegros() {
+    document.getElementById('confirmaReservaVagaRacial').checked = false;
+    document.getElementById('indiReservaVagaRacialS').checked = false;
+    document.getElementById('indiDefinicaoCotaRacialD').checked = false;
+    document.getElementById('indiDefinicaoCotaRacialP').checked = false;
+    document.getElementById('indiReservaVagaRacialN').checked = true;
+    $('#alertaReservaRacial').css('display', 'none');
+    $('#reservaVagaRacialQuadro').css('display', 'none')
+}
+$(function () {
+
+    $('.chosen-select').chosen();
+
+    $('#idItemEdital1_chosen').css('width', '100%');
+    $(".solicitaImpugnacao").click(function () {
+        $("#listaPublicacao").hide();
+        $("#formularioImpugnacao").show();
+    });
+
+    $("#btnCancelar").click(function () {
+        $("#listaPublicacao").show();
+        $("#formularioImpugnacao").hide();
+        limpaMensagem();
+        limparForm();
+        $(".itemEdital").each(function (index, element) {
+            if ($(element).hasClass('hide') === false) {
+                if ($(".itemEdital").length != 2) {
+                    $(element).remove();
+                    reordenaItensEdital();
+                }
+            }
+        });
+        $('#idItemEdital1').val('');
+        $('#idItemEdital1').chosen("destroy");
+        $('#idItemEdital1').chosen();
+        $('#idItemEdital1').css('width', '100%');
+        $('#idItemEdital1_chosen').css('width', '100%');
+    });
+
+    $(".exportEditalPdf").click(function () {
+        var idEditalCertameVersao = $(this).attr('data-id');
+        $('.loading').show();
+        new jsFileDownloader({url: '/exportarEditalPdf', forceDesktopMode: true, method: 'POST', body: idEditalCertameVersao + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportEditalAvalMultpfs").click(function () {
+        var idEditalAvaliacaoMultpfs = $(this).attr('data-id');
+        new jsFileDownloader({url: '/exportarEditalAvalMultpfs', forceDesktopMode: true, method: 'POST', body: idEditalAvaliacaoMultpfs + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+    $(".exportEditalAvaliRacial").click(function () {
+        var idEditalAvaliacaoRacial = $(this).attr('data-id');
+        new jsFileDownloader({url: '/exportarEditalAvaliRacial', forceDesktopMode: true, method: 'POST', body: idEditalAvaliacaoRacial + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportArquivoFaseDinamica").click(function () {
+        $('.loading').show();
+        var idFaseEtapaEdital = $(this).attr('data-id');
+        new jsFileDownloader({url: '/downloadArquivoFaseDinamica', forceDesktopMode: true, method: 'POST', body: idFaseEtapaEdital + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                if (error == 'DownloadException: Downloader error: status code [410]') {
+                    mensagemNotificacao('error', 'Anexo invalido');
+                } else {
+                    mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                }
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportArquivoDigitalizadoFaseDinamica").click(function () {
+        $('.loading').show();
+        var idFaseEtapaEdital = $(this).attr('data-id');
+        new jsFileDownloader({url: '/exportarFaseDigitalPdf', forceDesktopMode: true, method: 'POST', body: idFaseEtapaEdital + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                if (error == 'DownloadException: Downloader error: status code [410]') {
+                    mensagemNotificacao('error', 'Anexo invalido');
+                } else {
+                    mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                }
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportarRetificacaoPdf").click(function () {
+        $('.loading').show();
+        var idEditalCertameVersao = $(this).attr('data-id');
+        new jsFileDownloader({url: '/exportarRetificacaoPdf', forceDesktopMode: true, method: 'POST', body: idEditalCertameVersao + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $("#exportAta").click(function () {
+        $('.loading').show();
+        var idEditalCertame = $("#idEditalCertameFixo").val();
+        new jsFileDownloader({url: '/exportarAtaImpugnacao', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportResultadoPdf").click(function () {
+        $('.loading').show();
+        var idEditalCertame = $("#idEditalCertameFixo").val();
+        var idFaseCertame = $(this).attr('data-id')
+
+        new jsFileDownloader({url: '/exportarResultadoCertamePdf', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',' + idFaseCertame})
+            .then(function (e) {
+                $('#avisoResultado' + idFaseCertame).hide();
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                if (error == 'DownloadException: Downloader error: status code [410]') {
+                    mensagemNotificacao('error', 'Edital invalido');
+                } else if (error == 'DownloadException: Downloader error: status code [411]') {
+                    mensagemNotificacao('error', 'Fase Invalida');
+                } else if (error == 'DownloadException: Downloader error: status code [412]') {
+                    mensagemNotificacao('error', 'Documento Inválido');
+                } else if (error == 'DownloadException: Downloader error: status code [417]') {
+                    mensagemNotificacao('info', '<strong>Informação!</strong> Esse documento está sendo gerado! Tente novamente em alguns minutos.');
+                    $('#avisoResultado' + idFaseCertame).show();
+                } else if (error == 'DownloadException: Downloader error: status code [418]') {
+                    mensagemNotificacao('error', 'Aguarde fase(s) dependente ser finalizada');
+                } else {
+                    mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                }
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportAtaPdf").click(function () {
+        var idEditalCertame = $("#idEditalCertameFixo").val();
+        var idFaseCertame = $(this).attr('data-id')
+
+        new jsFileDownloader({url: '/exportarAtaCertamePdf', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',' + idFaseCertame})
+            .then(function (e) {
+                $('#avisoResultado' + idFaseCertame).hide();
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                if (error == 'DownloadException: Downloader error: status code [410]') {
+                    mensagemNotificacao('error', 'Edital invalido');
+                } else if (error == 'DownloadException: Downloader error: status code [411]') {
+                    mensagemNotificacao('error', 'Fase Invalida');
+                } else if (error == 'DownloadException: Downloader error: status code [412]') {
+                    mensagemNotificacao('error', 'Documento Inválido');
+                } else if (error == 'DownloadException: Downloader error: status code [417]') {
+                    mensagemNotificacao('info', '<strong>Informação!</strong> Esse documento está sendo gerado! Tente novamente em alguns minutos.');
+                    $('#avisoResultado' + idFaseCertame).show();
+                } else if (error == 'DownloadException: Downloader error: status code [418]') {
+                    mensagemNotificacao('error', 'Aguarde fase(s) dependente ser finalizada');
+                } else {
+                    mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                }
+                $('.loading').hide();
+            });
+    });
+
+
+
+    $('.abreModalFazerInscricao').click(function (event) {
+        $("#modalFazerInscricao").html('');
+        event.preventDefault();
+        $.post("/edital/modal-inscricao", {idEditalCertame: $("#idEditalCertameFixo").val()})
+            .done(function (data) {
+                if (data == 'deslogado') {
+                    window.location = '/login';
+                } else {
+
+                    $("#banner-inscricao").remove();
+                    $("#modalFazerInscricao").html(data);
+                    $(".numerico4").mask('0000');
+                    $('#idCargoEdital').chosen();
+                    $('#idCargoEdital').change(function () {
+                        $(".loadingModalFazerInscricao").show();
+                        $("#quadroEstagiario").html('');
+
+                        $("#reservaVagaRecemFormadoMaster").hide();
+                        $("#indiReservaVagaRecemFormadoN").prop("checked", true);
+                        $("#indiReservaVagaRacialN").prop("checked", true);
+                        $('#alertaReservaRacial').css('display', 'block');
+
+                        $("#indiReservaVagaRecemFormadoS").prop("checked", false);
+                        $("#infoObservacaoRecemFormado").val('');
+
+                        $(document).on('change', 'input[name="indiReservaVagaRacial[]"]', function () {
+                            var reservaRecemformado = false;
+                            try { reservaRecemformado = document.getElementById('indiReservaVagaRecemFormadoS').checked; } catch (e) { reservaRecemformado = false; }
+
+                            if (reservaRecemformado) {
+                                limparCheckedReservaVagasParaNegros();
+                            } else {
+                                if ($('#indiReservaVagaRacialN').is(':checked')) {
+                                    $('#alertaReservaRacial').css('display', 'block');
+                                    $('#reservaVagaRacialQuadro').css('display', 'none')
+                                } else {
+                                    $('#alertaReservaRacial').css('display', 'none');
+                                    $('#reservaVagaRacialQuadro').css('display', 'block')
+                                }
+                            }
+                        });
+
+                        if ($(this).val() == '') {
+                            $('#idCidadeCargoEdital').chosen('destroy');
+                            $('#idCidadeCargoEdital').val('');
+                            $('#idCidadeCargoEdital').chosen();
+                            $("#confirmaInscricao").prop("checked", false);
+                            $('#complementoInscricao').hide();
+                            $('#complementoFormacao').hide();
+                            $("#numrVagaDisponivel").html('');
+                            $("#numrVagaPne").html('');
+                            $("#numrVagaRecemFormado").html('');
+                            $("#numrVagaDisponivelBanco").html('');
+                            $("#numrVagaPneBanco").html('');
+                            $("#numrVagaRacial").html('');
+                            $("#numrVagaRacialBanco").html('');
+                            //$("#numrVagaRacialQd").html('');
+                            $("#numrVagaRacialBancoQd").html('');
+                            $("#numrVagaRecemFormadoBanco").html('');
+                            $('#numrVagaDisponivelQd').hide();
+                            $('#numrVagaPneQd').hide();
+                            $('#numrVagaRacialQd').hide();
+                            $('#numrVagaRecemFormadoQd').hide();
+                            $('#numrVagaDisponivelBancoQd').hide();
+                            $('#numrVagaPneBancoQd').hide();
+                            $('#numrVagaRecemFormadoBancoQd').hide();
+                            $(".loadingModalFazerInscricao").hide();
+
+                        } else {
+                            $("#confirmaInscricao").prop("checked", false);
+                            $('#complementoInscricao').hide();
+                            $("#numrVagaDisponivel").html('');
+                            $("#numrVagaPne").html('');
+                            $("#numrVagaRecemFormado").html('');
+                            $("#numrVagaDisponivelBanco").html('');
+                            $("#numrVagaPneBanco").html('');
+                            $("#numrVagaRacial").html('');
+                            $("#numrVagaRacialBanco").html('');
+                            //$("#numrVagaRacialQd").html('');
+                            $("#numrVagaRacialBancoQd").html('');
+                            $("#numrVagaRecemFormadoBanco").html('');
+                            $('#numrVagaDisponivelQd').hide();
+                            $('#numrVagaPneQd').hide();
+                            $('#numrVagaRacialQd').hide();
+                            $('#numrVagaRecemFormadoQd').hide();
+                            $('#numrVagaDisponivelBancoQd').hide();
+                            $('#numrVagaPneBancoQd').hide();
+                            $('#numrVagaRecemFormadoBancoQd').hide();
+                            var idCargoEdital = $(this).val();
+                            $.ajax(
+                                {
+                                    url: '/edital/select-cidade-cargo',
+                                    type: "POST",
+                                    data: {idCargoEdital: idCargoEdital},
+                                    dataType: 'json'
+                                }
+                            ).done(function (data)
+                                {
+                                if (data.atualizaFormacao == true) {
+                                    $('#idCidadeCargoEdital').chosen('destroy');
+                                    $('#idCidadeCargoEdital').val('');
+                                    $('#idCidadeCargoEdital').chosen();
+                                    $("#confirmaInscricao").prop("checked", false);
+                                    $('#complementoInscricao').hide();
+                                    $("#numrVagaDisponivel").html('');
+                                    $("#numrVagaPne").html('');
+                                    $("#numrVagaRecemFormado").html('');
+                                    $("#numrVagaDisponivelBanco").html('');
+                                    $("#numrVagaPneBanco").html('');
+                                    $("#numrVagaRecemFormadoBanco").html('');
+                                    $('#numrVagaDisponivelQd').hide();
+                                    $('#numrVagaPneQd').hide();
+                                    $('#numrVagaRecemFormadoQd').hide();
+                                    $('#numrVagaDisponivelBancoQd').hide();
+                                    $('#numrVagaPneBancoQd').hide();
+                                    $('#numrVagaRecemFormadoBancoQd').hide();
+                                    $('#numrVagaRacial').hide();
+                                    $('#numrVagaRacialQd').hide();
+                                    $('#numrVagaRacialBanco').hide();
+                                    $('#numrVagaRacialBancoQd').hide();
+                                    $('#complementoFormacao').show();
+                                    $(".loadingModalFazerInscricao").hide();
+                                } else {
+                                    $('#complementoFormacao').hide();
+                                    $('#idCidadeCargoEdital').chosen('destroy');
+                                    $('#idCidadeCargoEdital').html('');
+                                    $('#idCidadeCargoEdital').html('<option value="">Selecione</option>');
+                                    var requisitoRecemFormado = data.requisitoRecemFormado;
+                                    $.each(data.cidades, function (index, value) {
+                                        if (value.tpCidadeMigroRegiao == 'MR') {
+                                            $('#idCidadeCargoEdital').append('<option value="' + value.idCidadeCargoEdital + '-' + value.numrVagaDisponivel + '-' + value.numrVagaPne + '-' + value.qtdeInscResultadoFinal + '-' + value.qtdeInscResultadoFinalPne + '-' + value.numrVagaRecemFormado + '-' + value.qtdeInscResultadoFinalRecemFormado + '-' + requisitoRecemFormado + '-' + value.numrVagaRacial + '" style="font-weight: bold; color: #dd4b39;">[Micro-Região] ' + value.nomeCidadeMicroRegiao + '</option>');
+                                        } else if (value.tpCidadeMigroRegiao == 'RE') {
+                                            $('#idCidadeCargoEdital').append('<option value="' + value.idCidadeCargoEdital + '-' + value.numrVagaDisponivel + '-' + value.numrVagaPne + '-' + value.qtdeInscResultadoFinal + '-' + value.qtdeInscResultadoFinalPne + '-' + value.numrVagaRecemFormado + '-' + value.qtdeInscResultadoFinalRecemFormado + '-' + requisitoRecemFormado + '-' + value.numrVagaRacial + '" style="font-weight: bold; color: #00A000;">[Regional] ' + value.nomeCidadeMicroRegiao + '</option>');
+                                        } else {
+                                            $('#idCidadeCargoEdital').append('<option value="' + value.idCidadeCargoEdital + '-' + value.numrVagaDisponivel + '-' + value.numrVagaPne + '-' + value.qtdeInscResultadoFinal + '-' + value.qtdeInscResultadoFinalPne + '-' + value.numrVagaRecemFormado + '-' + value.qtdeInscResultadoFinalRecemFormado + '-' + requisitoRecemFormado + '-' + value.numrVagaRacial + '">' + value.nomeCidadeMicroRegiao + '</option>');
+                                        }
+                                    });
+                                    $('#idCidadeCargoEdital').chosen();
+                                    $('#idCidadeCargoEdital').css('width', '100%');
+
+                                    $("#valrInscricaoCargo").html(data.valrInscricaoCargo);
+
+                                    $("#qtdeCargaHoraria").html(data.qtdeCargaHoraria);
+                                    $("#tipoCargaHoraria").html(data.tipoCargaHoraria);
+                                    $("#indiGeneroCargo").html(data.indiGeneroCargo);
+                                    if (data.infoAtribuicaoCargo != "") {
+                                        $("#infoAtribuicaoCargo").html(data.infoAtribuicaoCargo);
+                                        $("#quadroInfoAtribuicaoCargo").show();
+                                    } else {
+                                        $("#quadroInfoAtribuicaoCargo").hide();
+                                    }
+                                    if (data.infoRequisitoCargo != "") {
+                                        $("#infoRequisitoCargo").html(data.infoRequisitoCargo);
+                                        $("#quadroInfoRequisitoCargo").show();
+                                    } else {
+                                        $("#quadroInfoRequisitoCargo").hide();
+                                    }
+                                    if (data.valrSalarioCargo != "") {
+                                        $("#valrSalarioCargo").html(data.valrSalarioCargo);
+                                        $("#quadroValrSalarioCargo").show();
+                                    } else {
+                                        $("#quadroValrSalarioCargo").hide();
+                                    }
+                                    $('#complementoInscricao').show();
+                                    $("#quadroAnaliseCurricular").html('');
+                                    if ($("#analiseCurricular").val() == 1) {
+                                            $.post("/edital/analise-curricular", {idCargoEdital: idCargoEdital})
+                                            .done(function (data) {
+                                                $("#quadroAnaliseCurricular").html(data);
+                                                $(".loadingModalFazerInscricao").hide();
+                                            });
+                                    } else {
+                                        $(".loadingModalFazerInscricao").hide();
+                                    }
+                                }
+                            }
+                            ).fail(function (jqXHR, ajaxOptions, thrownError) {
+                                mensagemNotificacao('error', 'Não foi possível carregar Micro Região/Cidade! Tente novamente!')
+                                $(".loadingModalFazerInscricao").hide();
+                            });
+                        }
+                    });
+                    $('#idCidadeCargoEdital').change(function () {
+                        if ($(this).val() != "") {
+                            var dados = $(this).val().split('-');
+                            $("#indiReservaVagaS").prop("checked", false);
+                            $("#indiReservaVagaN").prop("checked", true);
+                            $("#indiReservaVagaRecemFormadoS").prop("checked", false);
+                            $("#indiReservaVagaRecemFormadoN").prop("checked", true);
+                            $("#reservaVagaMaster").hide();
+                            $("#reservaVagaRacialMaster").hide();
+                            $("#reservaVagaQuadro").hide();
+                            $("#reservaVagaRecemFormadoMaster").hide();
+                            $("#reservaVagaQuadroRecemFormado").hide();
+                            $("#numrVagaDisponivel").html('');
+                            $("#numrVagaPne").html('');
+                            $("#numrVagaRacial").html('');
+                            $("#numrVagaRecemFormado").html('');
+                            $("#numrVagaDisponivelBanco").html('');
+                            $("#numrVagaPneBanco").html('');
+                            $("#numrVagaRecemFormadoBanco").html('');
+                            $('#numrVagaDisponivelQd').hide();
+                            $('#numrVagaPneQd').hide();
+                            $('#numrVagaRacialQd').hide();
+                            $('#numrVagaRecemFormadoQd').hide();
+                            $('#numrVagaDisponivelBancoQd').hide();
+                            $('#numrVagaPneBancoQd').hide();
+                            $('#numrVagaRecemFormadoBancoQd').hide();
+
+                            $("#numrVagaDisponivel").html(dados[1]);
+                            $("#numrVagaPne").html(dados[2]);
+                            $("#numrVagaRacial").html(dados[8]);
+                            $("#numrVagaRecemFormado").html(dados[5]);
+
+                            if (dados[3] == 'null') {
+                                $("#numrVagaDisponivelBanco").html("Todos na fase Resultado Definitivo do Certame");
+                            } else {
+                                $("#numrVagaDisponivelBanco").html(dados[3]);
+                            }
+                            if (dados[4] == 'null') {
+                                $("#numrVagaPneBanco").html("Todos na fase Resultado Definitivo do Certame");
+                            } else {
+                                $("#numrVagaPneBanco").html(dados[4]);
+                            }
+                            if (dados[6] == 'null') {
+                                $("#numrVagaRecemFormadoBanco").html("Todos na fase Resultado Definitivo do Certame");
+                            } else {
+                                $("#numrVagaRecemFormadoBanco").html(dados[6]);
+                            }
+
+                            if (dados[1] > 0 || (dados[3] == 'null' || dados[3] > 0)) {
+                                $('#numrVagaDisponivelQd').show();
+                                $('#numrVagaDisponivelBancoQd').show();
+                            }
+                            if (dados[2] > 0 || (dados[4] == 'null' || dados[4] > 0)) {
+                                $('#numrVagaPneQd').show();
+                                $('#numrVagaPneBancoQd').show();
+                            }
+
+                            //se fase cota racial estiver ativa no edital, e estiver com qtd de vaga na cidade maior que zero, então mostrar opção.
+                            if (dados[8] > 0 && $("#reservaVagaRacial").val() == 1) {
+                                $('#numrVagaRacialQd').show();
+                                $('#numrVagaRacialBancoQd').show();
+                                $("#reservaVagaRacialMaster").show();
+                            }
+
+                            if (dados[5] > 0 || (dados[6] == 'null' || dados[6] > 0)) {
+                                $('#numrVagaRecemFormadoQd').show();
+                                $('#numrVagaRecemFormadoBancoQd').show();
+                            }
+                            if ((dados[5] > 0 || (dados[6] == 'null' || dados[6] > 0)) && dados[7] == 'true') {
+                                $("#reservaVagaRecemFormadoMaster").show();
+                            }
+
+                            if (((dados[2] > 0) || (dados[4] == 'null' || dados[4] > 0)) && $("#reservaVaga").val() == 1) {
+                                if ($("#codgCid").val() != '') {
+                                    $("#indiReservaVagaS").prop("checked", true);
+                                    $("#indiReservaVagaN").prop("checked", false);
+                                    $("#reservaVagaQuadro").show();
+                                    $("#indiReservaVagaRecemFormadoS").prop("checked", false);
+                                    $("#indiReservaVagaRecemFormadoN").prop("checked", true);
+                                }
+                                $("#reservaVagaMaster").show();
+                            }
+                        } else {
+                            $("#numrVagaDisponivel").html('');
+                            $("#numrVagaPne").html('');
+                            $("#numrVagaRecemFormado").html('');
+                            $("#numrVagaDisponivelBanco").html('');
+                            $("#numrVagaPneBanco").html('');
+                            $("#numrVagaRecemFormadoBanco").html('');
+                            $('#numrVagaDisponivelQd').hide();
+                            $('#numrVagaPneQd').hide();
+                            $('#numrVagaRacialQd').hide();
+                            $('#numrVagaRecemFormadoQd').hide();
+                            $('#numrVagaDisponivelBancoQd').hide();
+                            $('#numrVagaPneBancoQd').hide();
+                            $('#numrVagaRecemFormadoBancoQd').hide();
+                            $("#indiReservaVagaS").prop("checked", false);
+                            $("#indiReservaVagaN").prop("checked", true);
+                            $("#indiReservaVagaRecemFormadoS").prop("checked", false);
+                            $("#indiReservaVagaRecemFormadoN").prop("checked", true);
+                            $("#reservaVagaMaster").hide();
+                            $("#reservaVagaRacialMaster").hide();
+                            $("#reservaVagaQuadro").hide();
+                            $("#reservaVagaRecemFormadoMaster").hide();
+                            $("#reservaVagaQuadroRecemFormado").hide();
+                        }
+                    });
+                    $(".indiReservaVaga").change(function () {
+                        if ($(this).val() == "S") {
+                            $("#reservaVagaQuadro").show();
+                            $("#indiReservaVagaRecemFormadoS").prop("checked", false);
+                            $("#indiReservaVagaRecemFormadoN").prop("checked", true);
+                            $("#infoObservacaoRecemFormado").val('');
+                            $("#reservaVagaQuadroRecemFormado").hide();
+                        } else {
+                            $("#infoObservacao").val('');
+                            $("#reservaVagaQuadro").hide();
+                        }
+                    });
+                    $(".indiReservaVagaRecemFormado").change(function () {
+                        if ($(this).val() == "S") {
+                            $("#reservaVagaQuadroRecemFormado").show();
+                            $("#indiReservaVagaS").prop("checked", false);
+                            $("#indiReservaVagaN").prop("checked", true);
+                            $("#reservaVagaQuadro").hide();
+                            limparCheckedReservaVagasParaNegros();
+                        } else {
+                            $("#infoObservacaoRecemFormado").val('');
+                            $("#reservaVagaQuadroRecemFormado").hide();
+                        }
+                    });
+                    $(".indiCondicaoEspecial").change(function () {
+                        if ($(this).val() == "S") {
+                            $("#condicaoEspecialQuadro").show();
+                        } else {
+                            $('#idTipoReqmtoEspecial').chosen("destroy");
+                            $("#idTipoReqmtoEspecial").val('');
+                            $('#idTipoReqmtoEspecial').chosen();
+                            $('#idTipoReqmtoEspecial').css('width', '100%');
+                            $("#descCondicaoEspecial").val('');
+                            $("#infoJustificativaCondicao").val('');
+                            $("#condicaoEspecialQuadro").hide();
+                        }
+                    });
+
+                    $(".exportEditalPdfInsc").click(function () {
+                        var idEditalCertameVersao = $(this).attr('data-id');
+                        $.fileDownload('/exportarEditalPdf', {
+                            httpMethod: "POST",
+                            data: {idEditalCertameVersao: idEditalCertameVersao},
+                            successCallback: function (url) {
+                                $('.loadingModalFazerInscricao').hide();
+                            },
+                            prepareCallback: function (url) {
+                                $('.loadingModalFazerInscricao').show();
+                            },
+                            failCallback: function (responseHtml, url) {
+                                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!')
+                                $('.loadingModalFazerInscricao').hide();
+                            }
+                        });
+                    });
+                    $(".downloadAnexo").click(function () {
+                        $('.loading').show();
+                        var tipoDocumento = $(this).attr('data-id');
+                        new jsFileDownloader({url: '/candidato/downloadDocumento', forceDesktopMode: true, method: 'POST', body: tipoDocumento + ',0'})
+                            .then(function (e) {
+                                $('.loading').hide();
+                            })
+                            .catch(function (error) {
+                                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                                $('.loading').hide();
+                            });
+                    });
+                    $('#arquivo').change(function (evt) {
+                        $("#labelarquivo").html($(this).val());
+                    });
+                    $('#arquivoEspecial').change(function (evt) {
+                        $("#labelarquivoEspecial").html($(this).val());
+                    });
+                    $('#arquivoMemorial').change(function (evt) {
+                        $("#labelarquivoMemorial").html($(this).val());
+                    });
+                    $('#arquivoExposicao').change(function (evt) {
+                        $("#labelarquivoExposicao").html($(this).val());
+                    });
+                    $('#arquivoInstrutorEscolar').change(function (evt) {
+                        $("#labelarquivoInstrutorEscolar").html($(this).val());
+                    });
+                }
+            });
+        $(this).modal({
+            escapeClose: false,
+            clickClose: false
+        });
+    });
+
+    $(".exportEditalEntrevista").click(function () {
+        $('.loading').show();
+        var idEditalCertame = $(this).attr('data-id');
+        new jsFileDownloader({url: '/exportarEditalEntrevista', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportEditalProvaDidatica").click(function () {
+        var idEditalCertame = $(this).attr('data-id');
+        $('.loading').show();
+        new jsFileDownloader({url: '/exportarEditalProvaDidatica', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+    $(".exportEditalTaf").click(function () {
+        var idEditalCertame = $(this).attr('data-id');
+        $('.loading').show();
+        new jsFileDownloader({url: '/exportarEditalTaf', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+
+
+    $(".exportLocalProva").click(function () {
+        var idEditalCertame = $(this).attr('data-id');
+        $('.loading').show();
+        new jsFileDownloader({url: '/exportarLocalProva', forceDesktopMode: true, method: 'POST', body: idEditalCertame + ',0'})
+            .then(function (e) {
+                $('.loading').hide();
+            })
+            .catch(function (error) {
+                mensagemNotificacao('error', 'Não foi possível efetuar o download! Tente novamente!');
+                $('.loading').hide();
+            });
+    });
+
+
+});
+
+function submitForm(idForm, btn) {
+    if ($('.' + btn).attr('disabled') !== 'disabled') {
+        //Travar o duplo click
+        $('.' + btn).attr('disabled', true);
+        //Chama Carregando
+        $('.loading').show();
+        $.ajax({
+            url: '/enviar-impugnacao',
+            method: $('#' + idForm).attr('method'),
+            data: $('#' + idForm).serialize(),
+            dataType: 'json'
+        }).done(function (data) {
+            limpaMensagem();
+            mensagemNotificacao(data.class, data.msg);
+
+            limparForm();
+            $(".itemEdital").each(function (index, element) {
+                if ($(element).hasClass('hide') === false) {
+                    if ($(".itemEdital").length != 2) {
+                        $(element).remove();
+                        reordenaItensEdital();
+                    }
+                }
+            });
+            $('#idItemEdital1').val('');
+            $('#idItemEdital1').chosen("destroy");
+            $('#idItemEdital1').chosen();
+            $('#idItemEdital1').css('width', '100%');
+            $("#formularioImpugnacao").hide();
+            $("#listaPublicacao").show();
+            $('.loading').hide();
+        }).fail(function (settings) {
+            limpaMensagem();
+            $('.' + btn).attr('disabled', false);
+            if (settings.status === 400) {
+                if (settings.responseJSON.return !== 'error') {
+                    mensagemNotificacao('error', "<strong>Erro!</strong> Existe(m) Inconsitência(s).")
+                    var i = 1;
+                    $.each(settings.responseJSON, function (index, value) {
+                        //Seta o foco no primeiro elemento encontrado
+                        if (i === 1) {
+                            $("#" + index).focus();
+                        }
+                        $("#" + index).addClass('is-invalid');
+                        $("#" + index.replace('-', '_') + "_chosen a").css('border-color', '#dc3545');
+                        var mensagem = '';
+                        $.each(value, function (indexMs, ms) {
+                            mensagem += ms + '<br>';
+                        });
+                        $("#" + index + 'MsgError').html(mensagem);
+                        i++;
+                    });
+                } else {
+                    mensagemNotificacao(settings.responseJSON.return, settings.responseJSON.msg)
+                }
+            } else if (settings.status === 401) {
+                window.location = '/401'
+            } else if (settings.status === 403) {
+                window.location = '/403'
+            } else if (settings.status === 404) {
+                window.location = '/404'
+            } else if (settings.status >= 500) {
+                window.location = '/500'
+            }
+            //Habilita botão
+            $('.' + btn).attr('disabled', false);
+            //Remove Carregando
+            $('.loading').hide();
+        });
+    }
+}
+
+function limparForm() {
+    $(':input', '#formulario')
+        .not(':button, :submit, :reset')
+        .val('')
+        .removeAttr('checked')
+        .removeAttr('selected');
+    $('#idEditalCertame').val($('#idEditalCertameFixo').val());
+
+}
+
+
+/**
+ *
+ * Remove o Item do Edital
+ */
+function addItemEdital() {
+    var clone = $('.panel-indicador.itemEdital.hide').clone();
+    var numTela = $(".itemEdital").length;
+    clone.attr('id', 'panel-indicador-itemEdital-' + numTela);
+    clone.find('.nrTela').html(numTela);
+    clone.find('.idItemEdital').attr('id', 'idItemEdital' + numTela);
+    clone.find('.idItemEdital').attr('name', 'idItemEdital[' + numTela + ']');
+    clone.find('.msgErroidItemEdital').attr('id', 'idItemEdital' + numTela + 'MsgError');
+
+    clone.find('.infoJustificaImpugnacaoItem').attr('id', 'infoJustificaImpugnacaoItem' + numTela);
+    clone.find('.infoJustificaImpugnacaoItem').attr('name', 'infoJustificaImpugnacaoItem[' + numTela + ']');
+    clone.find('.msgErroinfoJustificaImpugnacaoItem').attr('id', 'infoJustificaImpugnacaoItem' + numTela + 'MsgError');
+    clone.find('.removeItemEdital').attr('id', 'removeItemEdital' + numTela);
+    clone.find('.removeItemEdital').attr('rel', numTela);
+    $('#paineis-itemEdital').append(clone);
+    clone.removeClass('hide');
+    $('#idItemEdital' + numTela).chosen("destroy");
+    $('#idItemEdital' + numTela).chosen();
+    $('#idItemEdital' + numTela).css('width', '100%');
+}
+/**
+ *
+ * Remove o Item do Edital
+ */
+function removerItemEdital(element) {
+    if ($(".itemEdital").length != 2) {
+        $("#panel-indicador-itemEdital-" + $(element).attr('rel')).remove();
+        reordenaItensEdital();
+    }
+}
+
+/**
+ *
+ * Reordena as ordens de Itens do Edital
+ */
+function reordenaItensEdital() {
+    var totalTela = $(".itemEdital").length - 1;
+    if (totalTela > 0) {
+        var i = 1;
+        /**
+         * Reordena a numeração das telas
+         */
+        $(".itemEdital").each(function (index, element) {
+            if ($(element).hasClass('hide') === false) {
+                $(element).attr('id', 'panel-indicador-itemEdital-' + i);
+                $(element).find('.nrTela').html(i);
+                $(element).find('.idItemEdital').attr('id', 'idItemEdital' + i);
+                $(element).find('.idItemEdital').attr('name', 'idItemEdital[' + i + ']');
+                $(element).find('.msgErroidItemEdital').attr('id', 'idItemEdital' + i + 'MsgError');
+                $('#idItemEdital' + i).chosen("destroy");
+                $('#idItemEdital' + i).chosen();
+                $('#idItemEdital' + i).css('width', '100%');
+                $(element).find('.infoJustificaImpugnacaoItem').attr('id', 'infoJustificaImpugnacaoItem' + i);
+                $(element).find('.infoJustificaImpugnacaoItem').attr('name', 'infoJustificaImpugnacaoItem[' + i + ']');
+                $(element).find('.msgErroinfoJustificaImpugnacaoItem').attr('id', 'infoJustificaImpugnacaoItem' + i + 'MsgError');
+                $(element).find('.removeItemEdital').attr('id', 'removeItemEdital' + i);
+                $(element).find('.removeItemEdital').attr('rel', i);
+                i++;
+            }
+        });
+    }
+}
+
+function saveInscricao() {
+    if ($(".saveInscricao").attr('disabled') !== 'disabled') {
+        //Travar o duplo click
+        $(".saveInscricao").attr('disabled', true);
+        if ($('#idCargoEdital').val() != '' && $('#idCidadeCargoEdital').val() != '') {
+            $.confirm({
+                title: 'Confirma Inscrição?',
+                content: 'Tem certeza que deseja efetuar inscrição para Cargo/Função: <b>' + $('#idCargoEdital option:selected').text() + '</b>, Micro-Região/Cidade: <b>' + $('#idCidadeCargoEdital option:selected').text() + '</b>?',
+                buttons: {
+                    confirm: {
+                        text: 'Sim',
+                        btnClass: 'btn-green',
+                        action: function () {
+                            //Chama Carregando
+                            $('.loadingModalFazerInscricao').show();
+                            $.ajax({
+                                url: '/edital/save-inscricao',
+                                method: $('#formularioInscricao').attr('method'),
+                                data: new FormData($('#formularioInscricao').get(0)),
+                                dataType: 'json',
+                                contentType: false,
+                                processData: false
+                            }).done(function (data) {
+                                limpaMensagem();
+                                window.sessionStorage.setItem('msgAlert', data.class);
+                                window.sessionStorage.setItem('msgAlertMs', data.msg);
+                                window.location = data.url;
+                            }).fail(function (settings) {
+                                limpaMensagem();
+                                if (settings.status === 400) {
+                                    if (settings.responseJSON.return !== 'error') {
+                                        mensagemNotificacao('error', "<strong>Erro!</strong> Existe(m) Inconsitência(s).")
+                                        var i = 1;
+                                        $.each(settings.responseJSON, function (index, value) {
+                                            //Seta o foco no primeiro elemento encontrado
+                                            if (i === 1) {
+                                                if ($("#" + index + '_chosen').length > 0) {
+                                                    $('#' + index).trigger('chosen:activate');
+                                                } else {
+                                                    $("#" + index).focus();
+                                                }
+                                                $('html, body').animate({
+                                                    scrollTop: $("#" + index + 'MsgError').offset().top
+                                                }, 'slow');
+                                            }
+                                            $("#" + index).addClass('is-invalid');
+                                            $("#" + index.replace('-', '_') + "_chosen a").css('border-color', '#dc3545');
+                                            var mensagem = '';
+                                            $.each(value, function (indexMs, ms) {
+                                                mensagem += ms + '<br>';
+                                            });
+                                            $("#" + index + 'MsgError').html(mensagem);
+                                            i++;
+                                        });
+                                    } else {
+                                        mensagemNotificacao(
+                                            settings.responseJSON.return,
+                                            settings.responseJSON.msg
+                                        )
+                                    }
+                                } else if (settings.status === 401) {
+                                    window.location = '/401'
+                                } else if (settings.status === 402) {
+                                    mensagemNotificacao(
+                                        settings.responseJSON.return,
+                                        settings.responseJSON.msg
+                                    );
+                                    $('#btnFechaModalInscricao').trigger('click');
+                                } else if (settings.status === 403) {
+                                    window.location = '/403'
+                                } else if (settings.status === 404) {
+                                    window.location = '/404'
+                                } else if (settings.status >= 500) {
+                                    window.location = '/500'
+                                }
+                                //Habilita botão
+                                $('.saveInscricao').attr('disabled', false);
+                                //Remove Carregando
+                                $('.loadingModalFazerInscricao').hide();
+                            });
+                        }
+                    },
+                    cancel: {
+                        text: 'Não',
+                        btnClass: 'btn-red',
+                        action: function () {
+                            //Habilita botão
+                            $('.saveInscricao').attr('disabled', false);
+                            //Remove Carregando
+                            $('.loadingModalFazerInscricao').hide();
+                        }
+                    }
+                }
+            });
+
+        } else {
+            //Chama Carregando
+            $('.loadingModalFazerInscricao').show();
+            $.ajax({
+                url: '/edital/save-inscricao',
+                method: $('#formularioInscricao').attr('method'),
+                data: new FormData($('#formularioInscricao').get(0)),
+                dataType: 'json',
+                contentType: false,
+                processData: false
+            }).done(function (data) {
+                limpaMensagem();
+                window.sessionStorage.setItem('msgAlert', data.class);
+                window.sessionStorage.setItem('msgAlertMs', data.msg);
+                window.location = data.url;
+            }).fail(function (settings) {
+                limpaMensagem();
+                if (settings.status === 400) {
+                    if (settings.responseJSON.return !== 'error') {
+                        mensagemNotificacao('error', "<strong>Erro!</strong> Existe(m) Inconsitência(s).")
+                        var i = 1;
+                        $.each(settings.responseJSON, function (index, value) {
+                            //Seta o foco no primeiro elemento encontrado
+                            if (i === 1) {
+                                if ($("#" + index + '_chosen').length > 0) {
+                                    $('#' + index).trigger('chosen:activate');
+                                } else {
+                                    $("#" + index).focus();
+                                }
+                                $('html, body').animate({
+                                    scrollTop: $("#" + index + 'MsgError').offset().top
+                                }, 'slow');
+                            }
+                            $("#" + index).addClass('is-invalid');
+                            $("#" + index.replace('-', '_') + "_chosen a").css('border-color', '#dc3545');
+                            var mensagem = '';
+                            $.each(value, function (indexMs, ms) {
+                                mensagem += ms + '<br>';
+                            });
+                            $("#" + index + 'MsgError').html(mensagem);
+                            i++;
+                        });
+                    } else {
+                        mensagemNotificacao(settings.responseJSON.return, settings.responseJSON.msg)
+                    }
+                } else if (settings.status === 401) {
+                    window.location = '/401'
+                } else if (settings.status === 402) {
+                    mensagemNotificacao(settings.responseJSON.return, settings.responseJSON.msg);
+                    $('#btnFechaModalInscricao').trigger('click');
+                } else if (settings.status === 403) {
+                    window.location = '/403'
+                } else if (settings.status === 404) {
+                    window.location = '/404'
+                } else if (settings.status >= 500) {
+                    window.location = '/500'
+                }
+                //Habilita botão
+                $('.saveInscricao').attr('disabled', false);
+                //Remove Carregando
+                $('.loadingModalFazerInscricao').hide();
+            });
+        }
+    }
+}
+
+function acessoPainel() {
+    window.location = '/candidato/painel';
+}
+
+
+$(document).on("input", "#descCondicaoEspecial", function () {
+    var limite = 1000;
+    var caracteresDigitados = $(this).val().length;
+    var caracteresRestantes = limite - caracteresDigitados;
+
+    $("#contDescCondicaoEspecial").text(caracteresRestantes);
+});
+
+$(document).on("input", "#infoJustificativaCondicao", function () {
+    var limite = 3000;
+    var caracteresDigitados = $(this).val().length;
+    var caracteresRestantes = limite - caracteresDigitados;
+
+    $("#contInfoJustificativaCondicao").text(caracteresRestantes);
+});
+
+$(document).on("input", "#infoObservacao", function () {
+    var limite = 3000;
+    var caracteresDigitados = $(this).val().length;
+    var caracteresRestantes = limite - caracteresDigitados;
+
+    $("#contInfoObservacao").text(caracteresRestantes);
+});
+
+$(document).on("input", "#infoObservacaoRecemFormado", function () {
+    var limite = 3000;
+    var caracteresDigitados = $(this).val().length;
+    var caracteresRestantes = limite - caracteresDigitados;
+
+    $("#contInfoObservacaoRecemFormado").text(caracteresRestantes);
+});
+
+
+function inscricaoTemporaria() {
+    //Chama Carregando
+    $('.loadingModalFazerInscricao').show();
+    $.ajax({
+        url: '/edital/inscricao-temporaria',
+        method: $('#formularioInscricao').attr('method'),
+        data: new FormData($('#formularioInscricao').get(0)),
+        dataType: 'json',
+        contentType: false,
+        processData: false
+    }).done(function (data) {
+        window.location = data.url;
+    }).fail(function (settings) {
+        if (settings.status === 401) {
+            window.location = '/401'
+        } else if (settings.status === 403) {
+            window.location = '/403'
+        } else if (settings.status === 404) {
+            window.location = '/404'
+        } else if (settings.status >= 500) {
+            window.location = '/500'
+        }
+        //Remove Carregando
+        $('.loadingModalFazerInscricao').hide();
+    });
+}
+function verificaEstagio(elem) {
+    $(".loadingModalFazerInscricao").show();
+    $(".saveInscricao").show();
+    if ($(elem).val() != "") {
+        $.post("/edital/verifica-estagio", {idCidadeCargoEdital: $(elem).val()})
+            .done(function (data) {
+                $("#quadroEstagiario").html(data);
+                $(".loadingModalFazerInscricao").hide();
+            });
+    } else {
+        $("#quadroEstagiario").html('');
+        $(".loadingModalFazerInscricao").hide();
+    }
+}

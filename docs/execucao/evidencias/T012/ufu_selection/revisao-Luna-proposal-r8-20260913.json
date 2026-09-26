@@ -1,0 +1,37 @@
+{
+  "schema": "t012.ufu.proposal-r8-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_BACKEND_INTEGRATION",
+  "scope": "offline review; no backend edit, API, DB, Docker or live mutation",
+  "422": {
+    "confirmed": true,
+    "cause": "fields.py compares artifact.url_requested/url_final to the detail-page URL before invoking the strict parser, while the reviewed HTML artifact correctly stores the linked administrative DOCUMENT_URL",
+    "minimum_fix": "compare artifact metadata to pinned DOCUMENT_URL, separately require candidate.detail_url_observed == pinned DETAIL_PAGE_URL, then invoke parser"
+  },
+  "pins": {
+    "source": "ufu_selection",
+    "source_id": 40,
+    "external_id": "1843",
+    "sha256": "72d8f9c6c18c734e8227a14c036ca32b8b9f705b2db507c8cd0169f939dc0daf",
+    "byte_len": 26619,
+    "pages": 1,
+    "detail_page_url": "https://www.portalselecao.ufu.br/servicos/Edital/cronograma/1843",
+    "document_url": "https://www.portalselecao.ufu.br/servicos/ArquivoAdministrativo/download/ed123099e7f76388ae6c3a83ba7c6b80"
+  },
+  "fields": {
+    "promoted": ["titulo", "orgao", "edital_numero", "inscricao_inicio", "inscricao_fim"],
+    "literal_identity": ["Edital 144/2026 - Processo Seletivo Simplificado para Docentes", "Universidade Federal de Uberlândia", "144/2026"],
+    "dates": ["2026-08-19T15:00:00", "2026-09-03T14:59:00"],
+    "prova_data": "absent/not promoted",
+    "omitted": ["taxa", "cargos", "remuneracao", "documentos"]
+  },
+  "guards": ["source/external", "SHA/bytes", "UTF-8/U+FFFD", "HTML truncation/error", "required markers", "exact detail marker", "exact document URL"],
+  "tests": {
+    "preflight": "9 passed",
+    "observed_contract_regression": "5 passed",
+    "commands": ["backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_ufu_selection_preflight.py", "backend/.venv/Scripts/python.exe -m pytest -q backend/tests/test_tenderproof_ufu_observed_contract.py"]
+  },
+  "condition": "Integrate only the two-URL dispatch separation with exact constants and add a dispatch regression; do not accept arbitrary URL or promote prova_data.",
+  "live": false
+}

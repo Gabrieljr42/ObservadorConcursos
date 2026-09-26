@@ -1,0 +1,22 @@
+{
+  "schema": "t012.apta_open.receipt.v1",
+  "source": "apta_open",
+  "run_id": "tpr-d5d2acb482b9",
+  "repeated_run": "tpr-3e3c92c05409",
+  "candidate": "apta_open-708",
+  "artifact_sha256": "db9c6d26a285102ae051761500d893c81616b07b69a086ec5353307d5975d79c",
+  "artifact_byte_len": 362093,
+  "pages": 20,
+  "identity": "PASS",
+  "document_selection": "PASS",
+  "duplicate_check": "PASS; source absent from current catalogue snapshot",
+  "field_provenance": "PASS; title/orgao/remuneracao only; unknowns retained",
+  "reviewed_run_schema": "tenderproof.reviewed-run.v1",
+  "concurso_id_handoff": null,
+  "controlled_dry_run": {"allocated_id": 1, "scope": "schema-only isolated validation; not canonical and not persisted", "result": "validated"},
+  "fields": ["titulo", "orgao", "remuneracao"],
+  "unknown_fields": ["edital_numero", "inscricao_inicio", "inscricao_fim", "prova_data", "cargos"],
+  "proposal": "PROPOSTA_PRONTA (review-only handoff; canonical import pending concurso_id allocation)",
+  "tests": {"command":".venv/Scripts/python.exe -m pytest -q tests/test_t012_apta_open_selection.py tests/test_tenderproof_batch60_recovered.py","result":"19 passed, 1 warning","compileall":"PASS"},
+  "network_or_pilot": "not used"
+}

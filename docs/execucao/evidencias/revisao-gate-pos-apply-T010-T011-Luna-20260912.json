@@ -1,0 +1,23 @@
+{
+  "schema": "independent-review.t010-post-apply.v1",
+  "reviewer": "Luna-independent",
+  "scope": ["docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md", "T010 manifest/package", "read-only GET proposals and checkpoint"],
+  "checks": {
+    "six_no_change": "GET 200 for records 1,5,6,7,8,14; state no_change; result.diff={}; version_id null; proposed/eligible fields and evidence SHA align with checked package; current catalog fields equal after_revision",
+    "record16": "GET tpp-9ea32737dd8f9112a06ced5bb707a36c state applied, concurso_id 16, same run and SHA 3503bf2995deba3d836da647369fd7a83ef2b220de10179900eafa4667841deb, version 24; payload/diff are identity/registration fields and match run/package scope",
+    "record16_current": "GET concurso/checkpoint 16 confirms title/orgao/edital/registration dates and no cargos; no competing mutation observed",
+    "t011": "dispatch evidence records T011 not sent; no T011 proposal IDs created",
+    "writes": "review performed read-only; no approval/apply/retry"
+  },
+  "records": [
+    {"record_id": 1, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 5, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 6, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 7, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 8, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 14, "decision": "ACEITO", "classification": "idempotent no_change", "correction": "Nenhuma."},
+    {"record_id": 16, "proposal_id": "tpp-9ea32737dd8f9112a06ced5bb707a36c", "decision": "ACEITO", "classification": "409 idempotente; entrega já aplicada na mesma run/artifact; version 24", "correction": "Nenhuma; não criar duplicata."}
+  ],
+  "t011": {"decision": "ACEITO", "classification": "não enviado", "correction": "Nenhuma; permanece bloqueado pelo gate do primeiro erro."},
+  "gate": "Aceites não autorizam novas mutações; preservar 15 do_not_dispatch e retomar somente sob coordenação."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "t012.apta.document-parser-r16.v1",
+  "status": "READY_FOR_FINAL_REVIEW",
+  "supersedes": "apta-document-parser-r15-20260913.json",
+  "fix": "ProcessingError inherits ValueError; review_cases now catches ProcessingError before ValueError, preserving the actionable concurrency_limit response and preventing approval while busy. Source-specific validation failures remain bounded HTTP 409.",
+  "tests": {
+    "busy": "2 passed",
+    "document_review_regression": "43 passed",
+    "apta_parser_and_strong_preflight": "11 passed",
+    "compileall": "PASS"
+  },
+  "scope": "offline only; no Docker, live API, pilot, deployment or publication side effects"
+}

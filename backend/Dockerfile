@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     g++ \
     libpq-dev \
+    poppler-utils \
+    tesseract-ocr \
+    tesseract-ocr-por \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .

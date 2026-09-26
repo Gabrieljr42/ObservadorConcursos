@@ -1,0 +1,39 @@
+{
+  "schema": "t012.publiconsult.proposal-r9-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "ACCEPT_FOR_BACKEND_INTEGRATION",
+  "scope": "offline review only; no backend edit, API, DB, Docker or live retry",
+  "pins": {
+    "source": "publiconsult_open",
+    "source_id": 56,
+    "external_id": "681",
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "pages": 25,
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf"
+  },
+  "422_fix": "R9 returns the three reproduced identity fields titulo/orgao/edital_numero; the separately reviewed TAF remains excluded.",
+  "guards": {
+    "source_external": "PASS",
+    "requested_final_url": "PASS exact",
+    "sha_bytes": "PASS",
+    "page_count_nonempty": "PASS",
+    "ordered_page_index_number": "PASS via page_records",
+    "error_truncated_processing_error": "PASS via page_records and PdfReader exception fail-closed",
+    "U+FFFD": "PASS",
+    "markers": "PASS VOTUPORANGA, Processo Seletivo 1/2026, edital de abertura de inscrições",
+    "strict_output": "PASS; cargos/remuneracao/taxa/prova_data/documentos omitted"
+  },
+  "tests": {
+    "r9_command": "backend/.venv/Scripts/python.exe -m pytest -q ../docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_proposal_r8.py",
+    "r9_result": "15 passed",
+    "parser_regression_command": "backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py",
+    "parser_regression_result": "5 passed"
+  },
+  "hashes": {
+    "publiconsult_proposal_r8.py": "31ba59984b952845b0af1a9496e852c5bcc0201f24c388c56f0a42ed60b0619d",
+    "test_publiconsult_proposal_r8.py": "7d03995b883b73c30f91d04bfbf63c386048b95afc4e17c67f7f935ee9fcc629"
+  },
+  "release": "Allow backend integration review; proposal retry remains blocked until integrator wires the R9 page-record contract and reruns live-path regressions."
+}

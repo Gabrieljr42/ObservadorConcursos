@@ -1,0 +1,14 @@
+{
+  "schema":"t012.cpcon_open.reviewed-run-r2-receipt.v1",
+  "status":"CPCON_REVIEWED_R2_TARGET_UNALLOCATED",
+  "source":"cpcon_open","source_number":35,
+  "selection":"PROCESSO SELETIVO SIMPLIFICADO Nº 002/2026","external_id":"processo-seletivo-simplificado-no-002-2026",
+  "canonical_target":null,
+  "envelope":"cpcon-002-reviewed-run-r2.json","envelope_sha256":"b17697a1b718667147753c627ab915de4db2d28535ca4688b4335462442808f4",
+  "artifact":{"sha256":"6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05","byte_len":498894,"pages":"13/13"},
+  "checked_fields":["titulo","orgao","edital_numero","cargos"],"cargo_count":6,
+  "unknown_not_promoted":["taxa_inscricao","prova_data"],
+  "literal_gate":{"raw_pages_U+FFFD":0,"evidence_count":9,"verbatim_substrings":"9/9 PASS","encoding":"UTF-8 JSON with escaped parser codepoints","fail_closed":"PASS"},
+  "schema_precheck":{"ReviewedRun":"BLOCKED as intended: concurso_id must be positive; null canonical target is not importable","import_dry_run":"NOT_RUN until integrator allocates canonical concurso_id"},
+  "next_gate":"Integrator allocates canonical target; rerun ReviewedRun/import dry-run without changing fields or evidence. No API/DB/proposal/apply performed."
+}

@@ -1,0 +1,751 @@
+{
+  "scope": "Read-only public official URLs; TLS verified; no redirects followed; 25s/2MiB; no PDF/browser/login/publication",
+  "pages": [
+    {
+      "source": "fapesc_selection",
+      "url": "https://fapesc.fepese.org.br/",
+      "basis": "Official Diario SC 20221011/3003.pdf names fapesc.fepese.org.br as sole official contest site; TLS upgrade same host",
+      "observed_at": "2026-09-08T14:58:49.118247+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 16377,
+      "sha256": "e045ec0201a717b4a402fc8ea8112b3e56dbe44daade5739bb5c8d4da1a64515",
+      "file": "fapesc_selection-cd1fb755-e045ec0201.html",
+      "encoding": "iso-8859-1",
+      "title": "2022 - FAPESC",
+      "links": [
+        {
+          "url": "https://fapesc.fepese.org.br/",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=home&mn=106a6c241b8797f52e1e77317b96a201&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=edital&mn=1151b3eab3b069d5112ccae1943307c4&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=faq&mn=da75cd652254fce37e953d7f261f132d&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=legislacao&mn=c6cfe4ce88e6d35690b85536e2299c73&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=cronograma&mn=625d69d053916d80fff62985adc219cb&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/inscricao/#!/edital/bc587815337561e1739faa9ba8eabd87",
+          "title": ""
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=contatos&mn=bff6fb1fff985abf401180316b7558ea&edital=1",
+          "title": ""
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/area-restrita/#!/acessar",
+          "title": "Acesso restrito ao Candidato"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Homologacao_CP.pdf",
+          "title": "Portaria GABP nº 119/2022 Homologação do Concurso Público"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Homologacao_CP.pdf",
+          "title": "15/02/2023 às 10:12"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=14&edital=1",
+          "title": "Resultado Final - Classificação Geral Após Recursos"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=14&edital=1",
+          "title": "29/12/2022 às 17:11"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=15&edital=1",
+          "title": "Resultado Final - Vagas Reservadas - Pessoas com Deficiência Após Recursos"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=15&edital=1",
+          "title": "29/12/2022 às 17:11"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=16&edital=1",
+          "title": "Listagem Geral de Resultado - Resultado Final Após Recursos"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=16&edital=1",
+          "title": "29/12/2022 às 17:11"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recursos_RF.pdf",
+          "title": "Resultado dos Recursos Resultado Final e Classificação"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recursos_RF.pdf",
+          "title": "28/12/2022 às 18:16"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=4",
+          "title": "Interposição de Recurso Resultado Final e Classificação"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=4",
+          "title": "22/12/2022 às 08:00"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=13&edital=1",
+          "title": "Listagem Geral de Resultado - Resultado Final"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=13&edital=1",
+          "title": "21/12/2022 às 18:30"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=12&edital=1",
+          "title": "Resultado Final - Vagas Reservadas - Pessoas com Deficiência"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=12&edital=1",
+          "title": "21/12/2022 às 18:30"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=11&edital=1",
+          "title": "Resultado Final - Classificação Geral"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=11&edital=1",
+          "title": "21/12/2022 às 18:30"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recursos_PE.pdf",
+          "title": "Resultado dos Recursos Resultado da Prova Escrita"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recursos_PE.pdf",
+          "title": "20/12/2022 às 18:18"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recursos_PT.pdf",
+          "title": "Resultado dos Recursos Resultado da Prova de Títulos"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recursos_PT.pdf",
+          "title": "20/12/2022 às 18:18"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=3",
+          "title": "Interposição de Recurso Resultado da Prova de Títulos"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=3",
+          "title": "14/12/2022 às 08:00"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=6",
+          "title": "Interposição de Recurso Resultado da Prova Escrita"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=6",
+          "title": "14/12/2022 às 08:00"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=1&edital=1",
+          "title": "Resultado preliminar da Prova de Títulos"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=1&edital=1",
+          "title": "13/12/2022 às 17:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=9&edital=1",
+          "title": "Listagem Geral de Resultados - Resultado da Prova Escrita"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=resultado&type=9&edital=1",
+          "title": "13/12/2022 às 17:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recursos_QG.pdf",
+          "title": "Resultado dos Recursos Provas e Gabarito Provisório"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recursos_QG.pdf",
+          "title": "12/12/2022 às 21:32"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=2",
+          "title": "Interposição de Recurso Provas e Gabarito Provisório"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=2",
+          "title": "28/11/2022 às 08:00"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=provas&edital=1",
+          "title": "Provas e Gabarito Provisório"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=provas&edital=1",
+          "title": "27/11/2022 às 20:20"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=local&edital=1",
+          "title": "Local de Prova"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=local&edital=1",
+          "title": "23/11/2022 às 18:16"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recursos_HI.pdf",
+          "title": "Resultado dos Recursos Indeferimento da Inscrição e indeferimento dos pedidos de vagas reservadas e/ou condições especiais"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recursos_HI.pdf",
+          "title": "21/11/2022 às 17:31"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=1",
+          "title": "Interposição de Recurso Indeferimento da Inscrição e indeferimento dos pedidos de vagas reservadas e/ou condições especiais"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=1",
+          "title": "14/11/2022 às 08:00"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Requerimentos_CE.pdf",
+          "title": "Resultado dos Pedidos de Condições Especiais"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Requerimentos_CE.pdf",
+          "title": "11/11/2022 às 18:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=homologacao&type=3&edital=1",
+          "title": "Listagem das Inscrições Homologadas - Vagas Reservadas"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=homologacao&type=3&edital=1",
+          "title": "11/11/2022 às 18:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Requerimentos_VR.pdf",
+          "title": "Resultado dos Requerimentos Vagas Reservadas"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Requerimentos_VR.pdf",
+          "title": "11/11/2022 às 18:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=homologacao&type=1&edital=1",
+          "title": "Listagem das Inscrições Homologadas"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=homologacao&type=1&edital=1",
+          "title": "11/11/2022 às 18:38"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_Recurso_IS.pdf",
+          "title": "Resultado dos Recursos Indeferimento dos pedidos de isenção na Taxa de Inscrição"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_Recurso_IS.pdf",
+          "title": "31/10/2022 às 17:18"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=9",
+          "title": "Interposição de Recurso Indeferimento dos pedidos de isenção na Taxa de Inscrição"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=9",
+          "title": "28/10/2022 às 08:00"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=9",
+          "title": "Interposição de Recurso Indeferimento dos pedidos de isenção na Taxa de Inscrição"
+        },
+        {
+          "url": "https://ssl12.fepese.org.br/2022/fapesc/?go=recurso&edital=1&etapa=9",
+          "title": "25/10/2022 às 08:00"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/?go=download&inline=1&arquivo=2022_FAPESC_Resultado_IS.pdf",
+          "title": "Resultado dos Requerimentos de Isenção da Taxa de Inscrição"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/2022_FAPESC_Resultado_IS.pdf",
+          "title": "24/10/2022 às 16:45"
+        },
+        {
+          "url": "https://fapesc.fepese.org.br/",
+          "title": ""
+        }
+      ],
+      "scripts": [
+        "https://fapesc.fepese.org.br/class/funcoes.js"
+      ]
+    },
+    {
+      "source": "fapespa_selection",
+      "url": "https://www.fapespa.pa.gov.br/?action=Conteudo.showPdf&id=258",
+      "basis": "Official indexed homepage with PSS001/2026 and002/2026 literal titles, not assumed PDF",
+      "observed_at": "2026-09-08T14:58:49.118247+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "location": null,
+      "bytes": 110276,
+      "sha256": "532361b34a6d2d992ebf6d7d253e71ba8e7b523661037e132eac50994adcf190",
+      "file": "fapespa_selection-540052a6-532361b34a.html",
+      "encoding": "utf-8",
+      "title": "Fapespa",
+      "links": [
+        {
+          "url": "https://www.fapespa.pa.gov.br/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/?action=Conteudo.showPdf&id=258",
+          "title": "A Fapespa"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/nossos-contatos/",
+          "title": "Nossos Contatos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/decretos/",
+          "title": "Decretos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/leis/",
+          "title": "Leis"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/resolucoes/",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/sustentabilidade/",
+          "title": "Sustentabilidade"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/diretoria/",
+          "title": "Diretoria"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/ascom/",
+          "title": "ASCOM"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/?action=Conteudo.showPdf&id=258",
+          "title": "Apoio"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/programas/",
+          "title": "Programas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/projetos/",
+          "title": "Projetos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/bolsas/",
+          "title": "Bolsas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/eventos-cientificos/",
+          "title": "Eventos Científicos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/formas-de-apoio/",
+          "title": "Formas de apoio"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/parcerias/",
+          "title": "Parcerias"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/?action=Conteudo.showPdf&id=258",
+          "title": "Apoio ao usuário"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/tabelas-vigentes/",
+          "title": "Tabelas vigentes"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/portarias/",
+          "title": "Portarias"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/valores-de-bolsas-e-diarias/",
+          "title": "Valores de bolsas e diárias"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/modelo-de-documentos/",
+          "title": "Modelo de documentos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/prestacao-de-contas/",
+          "title": "PRESTAÇÃO DE CONTAS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/modelo-de-documentos-de-bolsas/",
+          "title": "Modelo de documentos e bolsas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/publicacoes-2/",
+          "title": "PUBLICAÇÕES"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/transparencia/",
+          "title": "Transparência"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://portal.fapespa.pa.gov.br",
+          "title": "Fapespa Digital"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/09/04/chamada-publica-no-016-2026/",
+          "title": "CHAMADA PÚBLICA Nº 016/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/09/04/chamada-publica-no-016-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/25/chamada-publica-no-014-2026/",
+          "title": "CHAMADA PÚBLICA Nº 014/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/25/chamada-publica-no-014-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/20/chamada-publica-no-015-2026/",
+          "title": "CHAMADA PÚBLICA Nº 015/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/20/chamada-publica-no-015-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/13/chamada-publica-no-003-2026/",
+          "title": "CHAMADA PÚBLICA Nº 003/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/13/chamada-publica-no-003-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/03/chamada-publica-no-001-2026/",
+          "title": "CHAMADA PÚBLICA Nº 001/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/03/chamada-publica-no-001-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/27/chamada-publica-no-013-2026-dipea-fapespa-selecao-de-candidatos-para-concessao-de-bolsa/",
+          "title": "CHAMADA PÚBLICA Nº. 013/2026 – DIPEA/FAPESPA SELEÇÃO DE CANDIDATOS PARA CONCESSÃO DE BOLSA"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/27/chamada-publica-no-013-2026-dipea-fapespa-selecao-de-candidatos-para-concessao-de-bolsa/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/16/chamada-publica-fapespa-no-012-2026/",
+          "title": "CHAMADA PÚBLICA FAPESPA – Nº 012/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/16/chamada-publica-fapespa-no-012-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/13/chamada-publica-fapespa-no-011-2026-fapespa-diepsac/",
+          "title": "CHAMADA PÚBLICA FAPESPA – Nº. 011/2026 – FAPESPA/DIEPSAC"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/13/chamada-publica-fapespa-no-011-2026-fapespa-diepsac/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/13/chamada-publica-fapespa-no-010-2026-fapespa-diepsac/",
+          "title": "CHAMADA PÚBLICA FAPESPA – Nº. 010/2026 – FAPESPA/DIEPSAC"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/13/chamada-publica-fapespa-no-010-2026-fapespa-diepsac/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/author/admin/",
+          "title": "admin"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/06/chamada-publica-fapespa-no-008-2026/",
+          "title": "CHAMADA PÚBLICA FAPESPA – Nº. 008/2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/06/chamada-publica-fapespa-no-008-2026/",
+          "title": "LER MAIS"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/page/2/?action=Conteudo.showPdf&id=258#038;id=258",
+          "title": "2"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/page/2/?action=Conteudo.showPdf&id=258#038;id=258",
+          "title": ""
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/page/2/?action=Conteudo.showPdf&id=258",
+          "title": "Next Page"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/a3p/",
+          "title": "A3P"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/chamadas/",
+          "title": "Chamadas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/editais/",
+          "title": "Editais"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/publicacoes/",
+          "title": "Publicações"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/sustentabilidade/",
+          "title": "Sustentabilidade"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/category/videos/",
+          "title": "Videos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/tag/anuario-estatastico-do-para-2021/",
+          "title": "AnuÃ¡rio EstatÃ­stico do ParÃ¡ 2021"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/tag/ods-objetivos-de-desenvolvimento-sustentavel/",
+          "title": "ODS - Objetivos de Desenvolvimento SustentÃ¡vel"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/tag/regiao-baixo-amazonas/",
+          "title": "Região Baixo Amazonas"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/09/",
+          "title": "setembro 2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/08/",
+          "title": "agosto 2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/07/",
+          "title": "julho 2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/2026/03/",
+          "title": "março 2026"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/sobre-nos/",
+          "title": "Sobre nós"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/nossos-contatos/",
+          "title": "Nossos Contatos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/decretos",
+          "title": "Decretos"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/leis",
+          "title": "Leis"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/resolucoes/",
+          "title": "Resoluções"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/sustentabilidade/",
+          "title": "Sustentabilidade"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/diretoria/",
+          "title": "Diretoria"
+        },
+        {
+          "url": "https://www.fapespa.pa.gov.br/ascom/",
+          "title": "Ascom"
+        },
+        {
+          "url": "http://facebook.com/fapespapa",
+          "title": ""
+        },
+        {
+          "url": "http://instagram.com/fapespa",
+          "title": ""
+        },
+        {
+          "url": "https://dj-extensions.com",
+          "title": ""
+        },
+        {
+          "url": "https://dj-extensions.com/yootheme/dj-accessibility",
+          "title": "Web Accessibility plugin"
+        }
+      ],
+      "scripts": [
+        "https://www.fapespa.pa.gov.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "https://www.fapespa.pa.gov.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/ays-popup-box/public/js/ays-pb-public.js?ver=6.2.8",
+        "https://www.googletagmanager.com/gtag/js?id=G-64F5WD5DC1",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/liteweight-podcast/assets/js/jssocials.min.js?ver=2.2.7",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/dj-accessibility/module/assets/js/accessibility.min.js?ver=1.15",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.5",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.5",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/ultimate-post/assets/js/ultp-youtube-gallery-block.js?ver=5.0.22",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/bootstrap.min.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/global.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/idangerous.swiper.min.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/wow.min.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/jquery.sharrre.min.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/subscription.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/themes/omni/js/jquery.magnific-popup.min.js?ver=6.9.7",
+        "https://www.fapespa.pa.gov.br/wp-content/plugins/add-search-to-menu/public/js/ivory-search.min.js?ver=5.5.14"
+      ]
+    }
+  ]
+}

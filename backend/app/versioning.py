@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from typing import Any
+import json
 
 
 VERSIONED_FIELDS: tuple[str, ...] = (
@@ -10,6 +11,7 @@ VERSIONED_FIELDS: tuple[str, ...] = (
     'orgao',
     'modalidade',
     'cargo',
+    'cargos',
     'area',
     'cidade',
     'uf',
@@ -40,6 +42,7 @@ LABELS: dict[str, str] = {
     'orgao': 'órgão',
     'modalidade': 'modalidade',
     'cargo': 'cargo',
+    'cargos': 'dados por cargo',
     'area': 'área',
     'cidade': 'cidade',
     'uf': 'UF',
@@ -131,6 +134,9 @@ def normalize_for_compare(value: Any, *, field: str | None = None) -> str:
     if value is None:
         return ''
 
+    if field == 'cargos':
+        return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':'))
+
     if field in DATE_FIELDS:
         if isinstance(value, (datetime, date)):
             if isinstance(value, datetime):
@@ -203,6 +209,9 @@ def build_change_summary(changed_fields: dict[str, dict[str, Any]], *, is_create
         return 'Nenhuma alteração relevante detectada.'
 
     messages: list[str] = []
+
+    if 'cargos' in changed_fields:
+        messages.append('Vagas, remuneração, jornada e requisitos por cargo foram atualizados.')
 
     if 'publications_added' in changed_fields:
         item = changed_fields['publications_added']

@@ -1,0 +1,48 @@
+{
+  "schema": "t012.epl-document-review-decisions.v1",
+  "state": "BLOCKED_MISSING_BYTES",
+  "reviewed_at": "2026-09-13",
+  "source": {"source_number": 21, "source_id": "epl_open", "external_id": "52", "tenant": "EPL_CONCURSOS", "process_path": "/EPL_CONCURSOS/00052/PUBLICAÇÕES/"},
+  "identity": {
+    "organization": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)",
+    "notice": "Edital 01/2023",
+    "binding": "PASS: each URL is process-scoped to source epl_open / FHSTE candidate 52; URL host, tenant and zero-padded process 00052 validated against the preserved detail fixture",
+    "fixture": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-detail-2e60516108.html"
+  },
+  "local_inventory": {
+    "opening_artifact_only": {"sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f", "byte_len": 784614, "pages": 43},
+    "retification_bytes_preserved": false,
+    "search_scope": ["backend/.tenderproof/r60rec/artifacts", "backend/.tenderproof/r60rec/processing", "backend/tests/fixtures/tenderproof_batch60_blockers"],
+    "acquisition": {"attempted": true, "attempts_per_url": 1, "driver": "BoundedHTTPDriver", "tls": true, "allowlist": ["cdn-arquivo.concursos.srv.br"], "result": "BLOCKED_ENVIRONMENT_NETWORK", "error": "WinError 10013: socket access prohibited by environment; no response bytes persisted", "reason": "The one permitted acquisition attempt per exact URL was made; review remains fail-closed and no external bytes were fabricated or silently substituted."}
+  },
+  "decisions": [
+    {
+      "review_order": 1, "retificacao_number": 10, "publication_position": 14,
+      "kind": "retificacao", "title": "Errata do Edital n° 10",
+      "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/ERRATA%20EDITAL%2010_1705951014.pdf",
+      "url_timestamp_utc": "2024-01-22T19:16:54Z", "date_basis": "timestamp suffix in official filename; not treated as publication date",
+      "doc_id": "epl_open-doc-0d554d19a4e5ad20", "content": {"sha256": null, "byte_len": null, "pages": null, "material_change": "UNDETERMINED: bytes absent"},
+      "dedupe": {"url_unique_in_candidate": true, "doc_id_unique_in_candidate": true, "content_hash_comparable": false},
+      "decision": "BLOCKED_MISSING_BYTES"
+    },
+    {
+      "review_order": 2, "retificacao_number": 9, "publication_position": 16,
+      "kind": "retificacao", "title": "09 - Retificação do Edital de Abertura",
+      "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/09%20-%20RETIFICACAO%20EDITAL%2001_1701470949.pdf",
+      "url_timestamp_utc": "2023-12-01T22:49:09Z", "date_basis": "timestamp suffix in official filename; not treated as publication date",
+      "doc_id": "epl_open-doc-159412f64c2199e6", "content": {"sha256": null, "byte_len": null, "pages": null, "material_change": "UNDETERMINED: bytes absent"},
+      "dedupe": {"url_unique_in_candidate": true, "doc_id_unique_in_candidate": true, "content_hash_comparable": false},
+      "decision": "BLOCKED_MISSING_BYTES"
+    },
+    {
+      "review_order": 3, "retificacao_number": 5, "publication_position": 20,
+      "kind": "retificacao", "title": "05 - Retificação do Edital de Abertura",
+      "url_requested": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/05%20-%20EDITAL%20DE%20RETIFICACAO%20DO%20EDITAL%2001_1701470876.pdf",
+      "url_timestamp_utc": "2023-12-01T22:47:56Z", "date_basis": "timestamp suffix in official filename; not treated as publication date",
+      "doc_id": "epl_open-doc-22e6fbf818ecdf28", "content": {"sha256": null, "byte_len": null, "pages": null, "material_change": "UNDETERMINED: bytes absent"},
+      "dedupe": {"url_unique_in_candidate": true, "doc_id_unique_in_candidate": true, "content_hash_comparable": false},
+      "decision": "BLOCKED_MISSING_BYTES"
+    }
+  ],
+  "gate": {"proposal": false, "approve": false, "apply": false, "next": "Acquire each exact allowlisted URL once with TLS verification, persist byte/content receipts, then rerun this review; do not infer materiality from titles or filename timestamps."}
+}

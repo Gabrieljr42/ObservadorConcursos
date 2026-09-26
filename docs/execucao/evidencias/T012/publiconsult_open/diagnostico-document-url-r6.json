@@ -1,0 +1,69 @@
+{
+  "schema": "t012.publiconsult.document-url-diagnosis-r6.v1",
+  "reviewed_at": "2026-09-13",
+  "scope": "offline URL reconciliation only; no acquisition/prepare/API/live mutation",
+  "verdict": "PUBLICONSULT_EXACT_URL_R6_READY_FOR_REVIEW",
+  "source": "publiconsult_open",
+  "source_id": 56,
+  "external_id": "681",
+  "owner_user_id": 1,
+  "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107",
+  "candidate_key": "681",
+  "r5_observation": {
+    "status": "BLOCKED_MANIFEST_IDENTITY_409",
+    "detail": "Documento não corresponde exatamente ao manifesto pendente",
+    "get_before_current": null,
+    "pending": true,
+    "next_gate": "reconcile exact manifest URL identity (pending signed URL includes raw=1)"
+  },
+  "url_comparison": {
+    "payload_r5_url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf",
+    "manifest_url_exact_r6": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+    "requested_url_exact_r6": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+    "final_url_exact_r6": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+    "difference": "R5 omitted the literal query separator and raw=1; R6 preserves exact path percent-encoding and query bytes",
+    "redirects": "none observed in the acquired R2 receipt; R6 must retain requested==final"
+  },
+  "document_identity": {
+    "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+    "kind": "outro",
+    "semantic_kind": "convocacao_taf",
+    "matcher_rule": "document_identity retains non-ephemeral raw query parameters; only recognized AWS signature parameters are stripped, and raw is not recognized",
+    "unicode": "title retains en dash (U+2013) and URL retains UTF-8 percent-encoding; no normalization or abbreviation"
+  },
+  "artifact": {
+    "artifact_id": "publiconsult-open-taf-681-r2",
+    "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+    "byte_len": 341466,
+    "pages": 6,
+    "content_type": "application/pdf",
+    "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf"
+  },
+  "prepare_preserved_payload_r6": {
+    "document": {
+      "title": "Edital de Convocação para o Teste de Aptidão Física para o cargo Técnico em Educação X – Desenvolvimento Infantil II",
+      "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+      "kind": "outro",
+      "file_format": "pdf"
+    },
+    "artifact": {
+      "artifact_id": "publiconsult-open-taf-681-r2",
+      "sha256": "d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7",
+      "byte_len": 341466,
+      "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+      "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-EDITAL%20DE%20CONVOCA%C3%87%C3%83O%20TAF.pdf?raw=1",
+      "content_type": "application/pdf",
+      "storage_path": "publiconsult-open-taf-681-r2-d358bb8a61fb4e9dcc9c1bf101d28b364af951f0180f3ba8bf0a4c6866732bb7.pdf"
+    },
+    "expected_page_count": 6,
+    "owner_user_id": 1,
+    "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107"
+  },
+  "required_gate": "Use this exact raw=1 URL in one normal prepare-preserved attempt only; stop on any further 409 and do not retry proposal/approve/apply.",
+  "test": {"path": "docs/execucao/evidencias/T012/publiconsult_open/test_document_url_r6_exact.py", "result": "1 passed"},
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-live-r5-receipt-20260913.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/document-review-package-r5.json",
+    "backend/app/tenderproof/document_identity.py"
+  ]
+}

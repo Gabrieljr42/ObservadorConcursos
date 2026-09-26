@@ -1,0 +1,31 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "source": "publiconsult_open",
+  "concurso_id": null,
+  "external_id": "681",
+  "title": "Prefeitura Municipal de Votuporanga - Processo Seletivo - Nº 1/2026",
+  "detail_url": "https://publiconsult.com.br/Concurso/Detail/681?origem=H",
+  "artifact": {
+    "artifact_id": "art-74ea1bc8f9",
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "byte_len": 720592,
+    "url_requested": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "url_final": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "content_type": "application/pdf",
+    "downloaded_at": "2026-09-08T12:51:29.654529Z",
+    "content_path": "backend/.tenderproof/r30bytes/publiconsult_open/artifacts/art-30169711bf-7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f.pdf"
+  },
+  "fields": [
+    {"field_name":"titulo","value":"Processo Seletivo nº 1/2026 — Prefeitura Municipal de Votuporanga/SP","evidence":[{"evidence_id":"ev-publiconsult-681-titulo","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"Prefeitura Municipal de VOTUPORANGA Processo Seletivo Nº 1/2026 EDITAL de ABERTURA de INSCRIÇÕES","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"orgao","value":"Prefeitura Municipal de Votuporanga/SP","evidence":[{"evidence_id":"ev-publiconsult-681-orgao","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"A Prefeitura Municipal de VOTUPORANGA, Estado de São Paulo","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"edital_numero","value":"1/2026","evidence":[{"evidence_id":"ev-publiconsult-681-edital","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"Processo Seletivo nº 1/2026","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"inscricao_inicio","value":"2026-08-07","evidence":[{"evidence_id":"ev-publiconsult-681-inicio","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"inscrições serão efetuadas no período de 07 a 17 de AGOSTO de 2026","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"inscricao_fim","value":"2026-08-17","evidence":[{"evidence_id":"ev-publiconsult-681-fim","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"07 a 17 de AGOSTO de 2026 (até as 21 horas)","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"prova_data","value":"2026-08-30","original_value":"data prevista no edital; confirmação oficial posterior não observada","evidence":[{"evidence_id":"ev-publiconsult-681-prova","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":5,"snippet":"As provas objetivas serão realizadas ... com data prevista para o dia 30 de AGOSTO","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]},
+    {"field_name":"cargos","value":[{"codigo":"01","nome":"Professor de Educação Básica I","vagas_imediatas":20,"cadastro_reserva":true,"jornada":"32 horas semanais","remuneracao":"4429.54","moeda":"BRL","taxa_inscricao":"80.00","requisitos":"Curso Normal em Nível Médio de Magistério com habilitação em pré-escola/anos iniciais do ensino Fundamental I ou Licenciatura Plena em Pedagogia."},{"codigo":"02","nome":"Técnico em Educação X – Desenvolvimento Infantil II","vagas_imediatas":20,"cadastro_reserva":true,"jornada":"40 horas semanais","remuneracao":"2137.84","moeda":"BRL","taxa_inscricao":"65.00","requisitos":"Ensino Médio Completo e boa condição física."}],"evidence":[{"evidence_id":"ev-publiconsult-681-cargos","artifact_id":"art-74ea1bc8f9","document_sha256":"7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f","source_url":"https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf","page_number":1,"snippet":"01 Professor de Educação Básica I 20 + CR ... R$ 4.429,54 ... R$ 80,00; 02 Técnico em Educação X – Desenvolvimento Infantil II 20 + CR ... R$ 2.137,84 ... R$ 65,00","method":"preserved-pdf-review","method_version":"t012/1","validation":{"ok":true}}]}
+  ],
+  "pending_fields": [],
+  "reference_only": true,
+  "owner_user_id": 1,
+  "observed_at": "2026-09-08T12:51:27.164530Z"
+}

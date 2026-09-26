@@ -1,0 +1,42 @@
+{
+  "schema": "t012.publiconsult.luna-parser-r6-review.v1",
+  "reviewer": "Luna",
+  "reviewed_at": "2026-09-13",
+  "decision": "PUBLICONSULT_PARSER_R6_ACCEPT_FOR_INTEGRATION",
+  "scope": "read_only; no network/API/DB/catalogue mutation",
+  "pins": {
+    "source": "publiconsult_open",
+    "external_id": "681",
+    "url": "https://gsistbucket.s3.amazonaws.com/publiconsult/Anexos/681/PM%20VOTUPORANGA%20-%20PS%201-2026%20-%20Edital%20de%20Abertura%20de%20Inscri%C3%A7%C3%B5es.pdf",
+    "url_guard": "exact https scheme, host, path and requested/final URL equality",
+    "byte_len": 720592,
+    "sha256": "7e3bc67ae2d209679dabaa791d7d63fb12369dd53e1da85cda9831721bd9917f",
+    "pages": 25
+  },
+  "checks": {
+    "candidate_selection": "prepare_for_revalidate requires exactly one candidate with source publiconsult_open and external_id 681, and selected_candidate_id must point to it; decoy/candidates[0] regression covered",
+    "identity": "Votuporanga/SP and Processo Seletivo 1/2026 are bound by exact PDF text; artifact identity is source/external/SHA/length/URL pinned",
+    "drift_guards": ["source/external", "SHA", "byte length", "URL host/path", "non-empty exact 25 pages", "U+FFFD rejection", "PDF magic"],
+    "typed_contract": "Artifact, ExtractedField, Evidence and ValidationResult are used; evidence is page/SHA/source-URL bound",
+    "revalidate": "controlled SQLite _revalidate reaches the real publication gate and returns the expected typed fields",
+    "side_effects": "ephemeral store remains without persisted TenderProofRun; no proposal/apply"
+  },
+  "tests": {
+    "command": "$env:PYTHONPATH='backend'; backend/.venv/Scripts/python.exe -m pytest -q docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py",
+    "result": "5 passed, 1 expected warning",
+    "compileall": "backend/.venv/Scripts/python.exe -m compileall -q docs/execucao/evidencias/T012/publiconsult_open/publiconsult_parser_r3.py: passed"
+  },
+  "production_boundary": {
+    "status": "wiring_separate",
+    "finding": "The strong-preflight test monkeypatches publication.extract_fields and document_identity_ids; no backend production registry/dispatcher reference to this evidence-local parser was found.",
+    "safe_next_step": "Register the parser in the normal source-specific dispatch, then rerun unpatched _revalidate and ReviewedRun/import dry-run. Keep reference_only and no apply until normal review passes.",
+    "live_import": false
+  },
+  "evidence": [
+    "docs/execucao/evidencias/T012/publiconsult_open/strong-preflight-r6.json",
+    "docs/execucao/evidencias/T012/publiconsult_open/publiconsult_parser_r3.py",
+    "docs/execucao/evidencias/T012/publiconsult_open/test_publiconsult_parser_r3.py",
+    "docs/execucao/evidencias/T012/publiconsult_open/receipt-publiconsult-681.json"
+  ],
+  "mutations_performed": false
+}

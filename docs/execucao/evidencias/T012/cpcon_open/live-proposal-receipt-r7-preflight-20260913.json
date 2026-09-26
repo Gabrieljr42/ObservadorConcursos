@@ -1,0 +1,26 @@
+{
+  "schema": "t012.cpcon.live-proposal-receipt.r7-preflight.v1",
+  "timestamp": "2026-09-13T14:19:00Z",
+  "status": "BLOCKED_REVIEWED_RUN_CONCURSO_ID_SCHEMA",
+  "source_id": 35,
+  "source": "cpcon_open",
+  "external_id": "processo-seletivo-simplificado-no-002-2026",
+  "owner_user_id": 1,
+  "handoff_run_id": "tp-owner-b3e4f48937d5b3e20f1549b7bae3cbe2",
+  "reviewed_run_path": "docs/execucao/evidencias/T012/cpcon_open/live-envelope-ready-r6.json",
+  "artifact": {"sha256": "6a613684e806b59a350d25a614d6412b86e7daf47bc84c109f37da19fb40ef05", "byte_len": 498894, "pages": 13},
+  "dry_run": {
+    "command": "backend/.venv/Scripts/python.exe scripts/import_reviewed_run.py live-envelope-ready-r6.json --artifact processo-seletivo-002-2026.pdf",
+    "status": "error",
+    "validation_errors": 1,
+    "error": "concurso_id: Input should be a valid integer (received null)",
+    "mutation": false
+  },
+  "live_gate": "not_started",
+  "old_proposal_rejection": "not performed because the reviewed envelope failed canonical preflight",
+  "import": false,
+  "proposal": false,
+  "approve": false,
+  "apply": false,
+  "blocker": "R7 handoff deliberately omits canonical target, but the current ReviewedRun v1 importer requires a positive concurso_id; formal allocation/materialization must produce a schema-valid envelope before any live call."
+}

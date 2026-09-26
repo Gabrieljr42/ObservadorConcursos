@@ -1,0 +1,12 @@
+{
+  "schema_version": "t010.reviewed-run-receipt.v2",
+  "generated_at": "2026-09-12T19:52:00-03:00",
+  "input": "docs/execucao/evidencias/T010/T010-reviewed-run-id1.json",
+  "model": "backend.app.tenderproof.reviewed_run_import.ReviewedRun",
+  "validation": {"json": "pass", "reviewed_run": "pass", "fields": ["cargos"], "pending_fields": [], "reference_only": true, "title": "Prefeitura Municipal de Birigui/SP"},
+  "dry_run": {"status": "validated", "run_id": "tp-reviewed-e35d8a7669ed82e4d74b61e97c663ddb", "persisted": false, "importer": "import_reviewed_run(..., dry_run=True)"},
+  "parser": {"source": "access_open", "external_id": "183", "method": "deterministic-regex", "method_version": "tenderproof-fields/1.21", "artifact_id": "art-5c4c41a458", "page": 2},
+  "cargo_assertions": {"nome": "Professor Auxiliar", "vagas_imediatas": 10, "vagas_ampla_concorrencia": 9, "vagas_pcd": 1, "remuneracao": "30.53", "moeda": "BRL", "remuneracao_observacao": "por hora-aula", "jornada": "até 40 horas semanais", "requisito": "preservado pelo parser"},
+  "publication": "não afirmada; nenhum DB/piloto/rede/publicação",
+  "other_ids": "não convertidos"
+}

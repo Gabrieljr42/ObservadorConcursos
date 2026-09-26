@@ -1,0 +1,54 @@
+{
+  "reviewer": "Luna",
+  "review_type": "independent_pilot_gate_T010_ID1",
+  "reviewed_at": "2026-09-12",
+  "decision": "DEVOLVIDA",
+  "scope": "Gate before apply for T010/catalogue ID 1 cargo correction",
+  "read_only": true,
+  "mutations_performed": [],
+  "reproducible_evidence": {
+    "document": "docs/execucao/evidencias/T010/id1.pdf",
+    "text_extract": "docs/execucao/evidencias/T010/id1.txt",
+    "sha256_expected": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "sha256_recomputed": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "byte_len": 496688,
+    "document_excerpt_location": "id1.txt, page 2, item 3.1",
+    "document_values": {
+      "cargo": "Professor Auxiliar",
+      "vagas": {"ac": 9, "pcd": 1, "total": 10},
+      "remuneracao": {"amount": 30.53, "currency": "BRL", "unit": "hora-aula"},
+      "jornada": "até 40 horas semanais"
+    },
+    "reviewed_run_input": "docs/execucao/evidencias/T010/T010-reviewed-runs-inputs.json",
+    "reviewed_run_id": "t010-reviewed-1-de7a554e5827",
+    "reviewed_run_sha": "de7a554e58278416d88182054a257b4d1439a46ef0730b2cfb3f0996c3731087",
+    "reviewed_run_values": {
+      "cargo": "Professor Auxiliar",
+      "vagas": {"ac": 9, "pcd": 1, "total": 10},
+      "remuneracao": {"amount": 30.53, "currency": "BRL", "unit": "hora-aula"},
+      "jornada": "até 40 horas semanais"
+    }
+  },
+  "gate_findings": {
+    "document_values_match_reviewed_input": true,
+    "reviewed_run_is_canonical_persisted_run": false,
+    "reason": "The only supplied reviewed_run is explicitly offline=true, reference_only=true, dispatchable=false, validation_status=partial; it is an input record, not a persisted canonical TenderProofRun.",
+    "real_proposal": {
+      "proposal_id": "tpp-5867ec21d73ac4fe89418eb466fa0464",
+      "state": "no_change",
+      "result_diff": {},
+      "version_id": null,
+      "run_or_proposal_scope": ["titulo", "orgao", "edital_numero"],
+      "material_cargo_diff": false
+    },
+    "proposal_contains_material_cargo_diff": false,
+    "proposal_gap": "The real proposal is metadata-only/no_change; cargos, vacancies, remuneration, workload and role are not in its canonical run scope."
+  },
+  "required_correction_before_apply": "Create and persist a new canonical TenderProofRun for catalogue ID 1 carrying the structured, SHA-linked cargo evidence; then create a new proposal whose GET diff materially contains the checked cargo fields. Do not manually promote the offline/reference-only input or apply the existing no_change proposal.",
+  "sources": [
+    "docs/execucao/evidencias/T010/T010-reviewed-runs-inputs.json",
+    "docs/execucao/evidencias/T010/T010-rastreio-campos-pos-dispatch.json",
+    "docs/execucao/evidencias/T010/T010-pacotes-revisao.json",
+    "docs/execucao/evidencias-dispatch-T010-T011-2026-09-12.md"
+  ]
+}

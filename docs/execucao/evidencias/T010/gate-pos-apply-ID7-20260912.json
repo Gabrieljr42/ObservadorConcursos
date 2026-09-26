@@ -1,0 +1,51 @@
+{
+  "schema": "t010.id7.post-apply-gate.v1",
+  "timestamp": "2026-09-12T22:37:08-03:00",
+  "operator": "Luna integrador",
+  "proposal": {
+    "id": "tpp-8157df41c8907a5f39cea3aa357c05dc",
+    "hash": "7e211ef682090674ab855a02c3c472093422015988130af96668a248695d3875",
+    "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e",
+    "approve": {"http": 200, "fields": ["cargos"], "state": "approved"},
+    "apply": {"http": 200, "state": "applied", "version_id": 84, "result_diff_old_cargos": null},
+    "final_get": {"state": "applied", "version_id": 84, "approved_fields": ["cargos"], "stale": false}
+  },
+  "effect": {
+    "version_id": 84,
+    "outbox_id": 84,
+    "outbox_state": "delivered",
+    "outbox_attempts": 1,
+    "notification_id": 83,
+    "notification_type": "version_update_84",
+    "contest_id": 7,
+    "one_version_one_outbox_one_version_notification": true
+  },
+  "contest_get": {
+    "http": 200,
+    "id": 7,
+    "source_id": 22,
+    "external_id": "2868",
+    "cargo_count": 1,
+    "cargo": {
+      "nome": "Técnico Legislativo",
+      "vagas_imediatas": 1,
+      "cadastro_reserva": true,
+      "vagas_ampla_concorrencia": 1,
+      "vagas_pcd": 0,
+      "remuneracao": "3378.77",
+      "jornada": "35 horas semanais",
+      "requisitos": "Ensino Médio completo"
+    }
+  },
+  "replays": {
+    "proposal_apply": {"state": "applied", "version_id": 84, "new_version": false},
+    "run_import": {"status": "idempotent", "run_id": "tp-reviewed-8ccd5c0ecc3e98681f44f3773f381e4e"},
+    "counts_before_apply": {"versions": 83, "outbox": 83, "notifications": 82},
+    "counts_after_and_replays": {"versions": 84, "outbox": 84, "notifications": 83},
+    "version84_rows": 1,
+    "version84_outbox_rows": 1,
+    "version84_notification_rows": 1
+  },
+  "health_http": 200,
+  "gate": "apply e replays aceitos; aguardar revisão pós-apply antes de atualizar docs centrais"
+}

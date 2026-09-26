@@ -1,0 +1,38 @@
+{
+  "evidence_id": "T010-ID14-ui-coordinator-v90-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/14",
+  "build_context": "pós-versão 90",
+  "reload_observed": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "observed": {
+    "cards": ["Articulador(a)", "Técnico de apoio"],
+    "immediate_vacancies": "ainda não confirmada em ambos",
+    "cadastro_reserva_note": "PF",
+    "jornada": "não confirmada",
+    "requirements": "presentes",
+    "invalid_tokens": {
+      "null": 0,
+      "undefined": 0,
+      "NaN": 0
+    },
+    "values": {
+      "Articulador(a)": "R$ 60/h; não mensal",
+      "Técnico de apoio": "limite R$ 7.488 por etapa; não mensal"
+    },
+    "inscricoes": "preservadas",
+    "history_version": 90
+  },
+  "not_claimed": [
+    "prova",
+    "quantidade de vagas confirmada"
+  ],
+  "limits": [
+    "Evidência atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado e nenhum piloto foi operado nesta revisão."
+  ]
+}

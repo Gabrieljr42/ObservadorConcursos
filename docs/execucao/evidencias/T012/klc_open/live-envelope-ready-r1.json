@@ -1,0 +1,51 @@
+{
+  "schema": "tenderproof.reviewed-run.v1",
+  "state": "BLOCKER_STRONG_BINDING",
+  "source": "klc_open",
+  "source_number": 57,
+  "canonical_concurso_id": null,
+  "ephemeral_concurso_id": 991,
+  "external_id": "632",
+  "title": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+  "detail_url": "https://www.klcconcursos.com.br?pag=mco&id=632",
+  "artifact": {
+    "artifact_id": "art-96637dad76",
+    "sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "byte_len": 348300,
+    "url_requested": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "url_final": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "content_type": "application/pdf",
+    "content_path": "backend/.tenderproof/r99kill13/klc_open/artifacts/art-96637dad76-84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4.pdf",
+    "pages": 10
+  },
+  "fresh_sha_bound_fields": {
+    "titulo": "Processo Seletivo 002/2026 - Prefeitura Municipal de Teodoro Sampaio - SP",
+    "orgao": "Prefeitura Municipal de Teodoro Sampaio - SP",
+    "edital_numero": "002/2026",
+    "inscricao_inicio": "2026-04-15",
+    "inscricao_fim": "2026-04-26",
+    "cargos": [{"nome":"Monitor de Transporte e Atividade Escolares","cadastro_reserva":true,"remuneracao":"1621.00","jornada":"30 h/s","requisitos":"Ensino Médio completo","taxa_inscricao":"19.75","beneficio":"ticket alimentação; valor atual R$ 715,00"}]
+  },
+  "evidence_contract": {
+    "artifact_id": "art-96637dad76",
+    "document_sha256": "84c944ec1eb0eeadd52ddbc9b8b212ba9dce9072db1f0f51694f198e0f7111b4",
+    "source_url": "https://www.klcconcursos.com.br/editais/4fe007a9a3f5afb03835272439f1812f.pdf",
+    "page": 1,
+    "snippets": ["PROCESSO SELETIVO","Teodoro Sampaio","002/2026","15 de abril","26 de abril de 2026","Monitor de Transporte","1,621,00 +","30 h/s","Ensino Médio completo","19,75","ticket alimentação","R$ 715,00"],
+    "replacement_free": true
+  },
+  "round_trip": {
+    "reviewed_run_import": "validated only with ephemeral positive ID 991",
+    "revalidate": "blocked",
+    "blocker": "document_identity_ids=[]; generic fresh orgao/edital_numero=unknown; strong binding unavailable",
+    "eligible_fields": [],
+    "blocked_fields": {"all": "strong documentary binding prerequisite failed"}
+  },
+  "negative_cases": [
+    {"case":"stale snippet","expected":"reject _reproduced_evidence"},
+    {"case":"artifact SHA/byte/url drift","expected":"reject parser dispatch"},
+    {"case":"source/external substitution","expected":"reject parser dispatch"}
+  ],
+  "next_minimum_step": "Integrate klc_parser_r3.dispatch into the normal extraction path, then repeat full ReviewedRun->SQLite _revalidate after canonical target allocation.",
+  "scope": "offline; no API, Docker, pilot, persistent import, proposal or shared edits"
+}

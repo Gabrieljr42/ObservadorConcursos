@@ -1,0 +1,476 @@
+{
+  "cargos": [
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-1",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 001 - MICRO AREA 03",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-1-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-1-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 001 - MICRO AREA 03",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-2",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 001 - MICROAREA 04",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-2-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-2-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 001 - MICROAREA 04",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-3",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 001 - MICRO AREA 05",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-3-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-3-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 001 - MICRO AREA 05",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-4",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 002 - MICRO AREA 07",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-4-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-4-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 002 - MICRO AREA 07",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-5",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 002 - MICRO AREA 09",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-5-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-5-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 002 - MICRO AREA 09",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-6",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 003 - MICRO AREA 12",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-6-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-6-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 003 - MICRO AREA 12",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    },
+    {
+      "cotas": {
+        "ampla": 1,
+        "pcd": "--"
+      },
+      "evidence": [
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-7",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 18,
+          "snippet": "ACS - PSF 003 - MICRO AREA 15",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-7-schedule-registration",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/08/2026 a 18/09/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        },
+        {
+          "artifact_id": "art-07b137af65",
+          "document_sha256": "a5a7ff5a11bef285d389bd71a5e2d53b8ad5e82dec8d545edcea653c0fbef5a2",
+          "evidence_id": "cargo-7-schedule-exam",
+          "method": "offline-pdf-text",
+          "method_version": "barra-longa-v1",
+          "page_number": 23,
+          "snippet": "18/10/2026",
+          "source_url": "https://s3.amazonaws.com/sgs.eloassessoriaeservicos.com.br/prefeitura-municipal-de-barra-longa/3/1-2025/anexos/edital-n-01-2026.pdf"
+        }
+      ],
+      "jornada": "40h/semana",
+      "nome": "ACS - PSF 003 - MICRO AREA 15",
+      "provas": [
+        {
+          "disciplinas": [
+            "Português",
+            "Matemática",
+            "C. Gerais",
+            "C. Específicos"
+          ],
+          "fechamento_portoes": "08:00",
+          "pontos": 100,
+          "questoes": 20,
+          "tipo": "objetiva_multipla_escolha"
+        },
+        {
+          "comprovado": true,
+          "tipo": "teste_de_aptidao_fisica"
+        }
+      ],
+      "remuneracao": "3242.00",
+      "requisitos": "Possuir Ensino Médio Completo; residir na área da comunidade em que atuar desde a data da publicação do edital do Processo Seletivo Público; ter concluído, com aproveitamento, curso de formação inicial, com carga horária mínima de quarenta horas.",
+      "taxa": "162.10",
+      "unidade_remuneracao": "R$/mês",
+      "vagas": 1,
+      "vagas_ampla": 1,
+      "vagas_pcd": 0
+    }
+  ],
+  "identity": {
+    "concurso_id": 32,
+    "detail_url": "https://novo.eloassessoriaeservicos.com.br/concurso/129",
+    "edital_numero": "01/2026",
+    "external_id": "129",
+    "orgao": "Prefeitura Municipal de Barra Longa",
+    "source": "elo_open",
+    "source_id": 47,
+    "title": "PREFEITURA MUNICIPAL DE BARRA LONGA",
+    "uf": "MG"
+  },
+  "inscricao_fim": "2026-09-18T15:00:00-03:00",
+  "inscricao_inicio": "2026-08-18T15:00:00-03:00",
+  "prova_data": "2026-10-18",
+  "publicacoes": [],
+  "retificacoes": [],
+  "taxa": "162.10"
+}

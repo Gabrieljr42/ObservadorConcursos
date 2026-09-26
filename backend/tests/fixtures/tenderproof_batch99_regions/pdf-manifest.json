@@ -1,0 +1,40 @@
+{
+  "scope": "Public documents only, exact observed requests, TLS verified, no production",
+  "documents": [
+    {
+      "source": "fapeg_selection",
+      "url": "https://selecao.go.gov.br/exportarEditalPdf",
+      "method": "POST",
+      "body": "177,0",
+      "basis": "Official index.js exportEditalPdf body; original publication row177 in contest59",
+      "observed_at": "2026-09-08T15:03:26.149598+00:00",
+      "tls_verified": true,
+      "status": 500,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 27898,
+      "sha256": "f226d84db30c1b12c8127dc89c69a7b113f8297aa90ecfd45f929510eff44e50",
+      "file": "fapeg_selection-f226d84db30c1b12.response",
+      "error": "response not successful PDF",
+      "client_closed": true
+    },
+    {
+      "source": "fapespa_selection",
+      "url": "https://www.fapespa.pa.gov.br/wp-content/uploads/2025/07/EDITAL-001-2025-VIGENTE.pdf",
+      "basis": "Official indexed original FAPESPA PSS001/2025; absent from current calls links, explicit reviewed archive evidence only",
+      "observed_at": "2026-09-08T15:03:26.835447+00:00",
+      "tls_verified": true,
+      "status": 200,
+      "content_type": "application/pdf",
+      "location": null,
+      "bytes": 933613,
+      "sha256": "b7c6e61108b99fee196e62f08ad752e34bd7b139c09991986f7bd75e82b8cd21",
+      "file": "fapespa_selection-b7c6e61108b99fee.pdf",
+      "pages": 22,
+      "text_file": "fapespa_selection-b7c6e61108b99fee.pdf.txt",
+      "text_sha256": "c08016f326cccaece66174a4f9307d04478f47bab7031298955774f4ce6311cf",
+      "first_page_excerpt": " \nEDITAL Nº. 001/2025 PSS/FAPESPA, 02 DE Julho DE 2025. \nPROCESSO SELETIVO SIMPLIFICADO PARA CONTRATAÇÃO TEMPORÁRIA – Nº \n001/2025  NÍVEL SUPERIOR \nA Fundação Amazônia de Amparo a Estudos e Pesquisas - FAPESPA torna \npública a  realização de Processo Seletivo Simplificado - PSS, disciplinado  pelo \nDecreto n°. 1.741, de 19 de abril de 2017 e  alterado pelo Decreto nº.  261, de 13 de \nagosto de 2019,  para contratação em caráter temporário, pela Lei Complementar \nEstadual n°. 07, de 25 de setembro de 1991 c/c as alterações posteriores, pela Lei \nEstadual 5.810/1994 e pela Lei Estadual 8.972/2020. \n1. DAS DISPOSIÇÕES PRELIMINARES \n1.1 Este Processo Seletivo Simplificado será executado pela FAPESPA, por meio da \nComissão do Processo Seletivo Simplificado, constituída pela Portaria nº. 73/2025 – \nGABINETE, de 12 de maio de 2025, a qual caberá o acompanhamento, execução e a  \nsupervisão de todo processo, bem como as deliberações que se fizerem necessárias, \nobjetivando o regular desenvolvimento do PSS. \n1.2 O Processo Seletivo Simplificado nº. 001/202 5 – PSS/FAPESPA será regido por \neste Edital, seus Anexos, eventuais retificações e/ou aditamentos, bem como pelos \ndiplomas legais citados no preâmbulo. \n1.3 O presente Edital destina -se à realização de processo de seleção para \npreenchimento de 08 (oito) vagas distribuídas, conforme Anexo I deste Edital, \nestabelecendo as instruções para contratação de temporários, que poderá a critério e \nnecessidade da administração,  convocar candidatos aprovados por ordem de \nclassificação de forma a atender à necessidade temporária de excepcional interesse \npúblico, não gerando direito adquirido ou expectativa de direito do candidato aprovado \nà vaga ofertada, dependendo a contratação da necessidade da FAPESPA. \n1.4 A jornada de trabalho será de 06 (seis) horas diárias, totalizando 30 (trinta) horas \nsemanais, em horário estabelecido de acordo com a necessidade da Fundação. \n1.5 As atribuições das funções em  contratação temporária constam no Anexo II do \npresente Edital. \n \n1.6 Os requisitos e as remunerações das funções cujas vagas estão sendo ofertadas \nno presente PSS também constam no Anexo II do presente Edital. \n1.7 O PSS compreenderá as seguintes fases: \na) Primeira Fase: Inscrição, de caráter habilitatório. \nb) Segunda Fase: Análise Documental e Curricular, de caráter eliminatório e \nclassificatório. \nc) Terceira Fase: Entrevista individual, de caráter eliminatório e classificatório. \n1.8 A FAPESPA fará divulgação às fases de Chamada do PSS e os resultados de \ntodas as  fases nos endereços eletrônicos www.sipros.pa.gov.br e \nwww.fapespa.pa.gov.br, inclusive a convocação para a fase de entrevista, com a \npublicação dos extratos dos editais no Diário Oficial do Estado do Pará. \n \n1.9 O cronograma para a  realização deste PSS encontra -se no Anexo  V deste \nEdital, estando sujeito a eventuais alterações posteriores, devidamente motivadas e \namplamente divulgadas nos endereços eletrônicos  www.sipros.pa.gov.br e \nwww.fapespa.pa.gov.br. \n1.10 São de inteira responsabilidade do candidato, acompanhar a publicação de \ntodos os  atos, editais e comunicados referentes a este processo seletivo no Diário \nOficial do Estado  do Estado do Pará e nos endereços eletrônicos \nwww.sipros.pa.gov.br e www.fapespa.pa.gov.br. \n1.11 O candidato não pode ser cônjuge, companheiro ou parente consaguíneo, ou \nafim em linha reta, ou colateral, até o terceiro grau de nenhum dos membros da \nComissão organizadora deste Proces",
+      "client_closed": true
+    }
+  ]
+}

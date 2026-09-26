@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-13T08:06:17-03:00",
+  "source": "w2_open",
+  "source_id": 59,
+  "external_id": "105",
+  "artifact_sha256": "d7b91fdaa90ba5081c38752e55e21df5a9ffb4bfcf3dc8ccc96f23cfb51ea2fd",
+  "artifact_bytes": 700244,
+  "backup": "/backups/pilot-20260913T103843603Z-operational",
+  "preflight": {"health":200,"duplicate_count":0,"canonical_source_count":99,"canonical_contest_count":33},
+  "retry": {"status":"NOT_DISPATCHED_AFTER_ROOT_CAUSE","reason":"manual envelope cannot satisfy fresh-byte strong binding","review":"T012/w2_open/revisao-Luna-r2-strong-binding-20260913.json"},
+  "revalidate_criteria": {"source_equals_run_source":true,"candidate_external_id_match":true,"detail_url_match":true,"artifact_sha_byte_match":true,"extraction_complete":true,"fresh_titulo":"supported","fresh_orgao":"supported","fresh_edital_numero":"conflict","explicit_document_ids":[],"strong_binding":false},
+  "proposal_id": null,
+  "approve": false,
+  "apply": false,
+  "canonical_mutation": false,
+  "next_gate":"source-specific fail-closed parser/normalizer must reproduce orgao+edital or explicit PDF ID; then normal allocation/import/revalidate/proposal"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "t012.official-candidate-group-a-review.v1",
+  "reviewed_at": "2026-09-13",
+  "mode": "read_only_offline",
+  "sources": [
+    {
+      "source_id": 59,
+      "source": "w2_open",
+      "verdict": "ELIGIBLE_PENDING_ENVELOPE",
+      "source_absent_from_snapshot": true,
+      "candidate_observation": "bounded official sample reports 5 contest-candidate links (legacy audit found 10 candidates) but no processed detail/sample identity",
+      "duplicate_check": "no exact orgao/edital/external_id can be compared; no match to the 33-contest snapshot was introduced",
+      "publicability": "contest/selection scope is eligible in principle, pending item validation",
+      "minimum_next_evidence": "official detail/artifact with bytes+SHA, source/external_id, orgao, edital, title, publication scope and field-level evidence; then duplicate check"
+    },
+    {
+      "source_id": 57,
+      "source": "klc_open",
+      "verdict": "REJECT_UNCONFIRMED_EMPTY",
+      "source_absent_from_snapshot": true,
+      "candidate_observation": "empty_valid legacy audit; zero candidates and no official detail/document",
+      "duplicate_check": "no candidate identity exists to compare; no duplicate introduced",
+      "publicability": "not established",
+      "minimum_next_evidence": "new bounded observation must identify a personnel selection and official artifact before eligibility can be reconsidered"
+    },
+    {
+      "source_id": 35,
+      "source": "cpcon_open",
+      "verdict": "ELIGIBLE_PENDING_ENVELOPE",
+      "source_absent_from_snapshot": true,
+      "candidate_observation": "official detail candidate Prefeitura Municipal de Guarabira, edital normativo 001/2026, 170 vacancies; 10 candidates processed; 11 publication links observed",
+      "duplicate_check": "Guarabira/CPCon/001-2026 is not among the 33 snapshot selections; exact external_id still missing",
+      "publicability": "contest scope supported by official detail, but audit marks NOT_AUDITED and fields/evidence are not proposal-grade",
+      "minimum_next_evidence": "downloaded artifact bytes+SHA, canonical source/external_id, edital identity, field snippets/pages and retification linkage"
+    },
+    {
+      "source_id": 39,
+      "source": "avalia_open",
+      "verdict": "ELIGIBLE_PENDING_ENVELOPE",
+      "source_absent_from_snapshot": true,
+      "candidate_observation": "EPAGRI Concurso Público Edital 001/2026, detail id=630, official PDF link, 40 vacancies and registration/taxa observations; fields remain UNKNOWN and NOT_AUDITED",
+      "duplicate_check": "EPAGRI/Edital 001/2026 is not present in the 33-contest snapshot; canonical external_id and orgao normalization remain pending",
+      "publicability": "contest scope supported in principle; evidence is not yet hash-bound/proposal-grade",
+      "minimum_next_evidence": "preserve PDF bytes+SHA, source/external_id/orgao/edital, field-level snippets/pages and publication identity"
+    },
+    {
+      "source_id": 27,
+      "source": "aguia_open",
+      "verdict": "REJECT_NO_DETAIL_EVIDENCE",
+      "source_absent_from_snapshot": true,
+      "candidate_observation": "25 listing candidates reported but zero processed and no official detail URL; legacy status EMPTY_VERIFIED with links observed unvalidated",
+      "duplicate_check": "no candidate identity exists to compare; no duplicate introduced",
+      "publicability": "not proven",
+      "minimum_next_evidence": "official detail plus identifiable personnel-selection document/artifact required before reconsideration"
+    }
+  ],
+  "global": {
+    "catalog_snapshot": "docs/execucao/evidencias/T012/auth-catalog-snapshot-20260913.json; 32 distinct sources/33 contests; target five absent",
+    "source_inventory": "docs/tenderproof-sources-99.json; identity_status=no_catalogue_alias_detected for all five",
+    "audit_basis": "backend/audit_live_99_pre_final_pass.json",
+    "no_proposal_or_promotion": true,
+    "minimum_envelope_rule": "artifact bytes/SHA, canonical source/external_id, orgao/edital/title, publishable personnel-selection scope, field evidence and duplicate comparison"
+  }
+}

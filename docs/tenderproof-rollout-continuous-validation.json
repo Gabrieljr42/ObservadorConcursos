@@ -1,0 +1,54 @@
+{
+  "synthetic": true,
+  "canonical_database_used": false,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\rollout-continuous-20260907-a841",
+  "cycle_id": "tcc-74a617441e9a44b3a2250846b5458bb7",
+  "checks": {
+    "duplicate_delivery_single_claim": true,
+    "checkpoint_before_download": true,
+    "worker_confirmed_dead": true,
+    "durable_tick_redispatch": true,
+    "cycle_completed": true,
+    "one_review_observation": true,
+    "fence_incremented_after_worker_death": true,
+    "separate_process_reads_run_pdf": true
+  },
+  "killed_worker_exit_code": 1,
+  "status": "completed",
+  "jobs": [
+    {
+      "job_id": "tcj-6334e14789935a739a910458c86bf09b",
+      "kind": "listing",
+      "status": "succeeded",
+      "attempts": 1,
+      "available_at": 1788824768.1030405,
+      "lease_until": 1788824920.9736035,
+      "fence": 1,
+      "run_id": "tp-tcj-6334e14789935a739a910458c86bf09b-1",
+      "error": null,
+      "updated_at": 1788824771.054457
+    },
+    {
+      "job_id": "tcj-58ad7bec68ad57ad977c0e28568b4bae",
+      "kind": "detail",
+      "status": "succeeded",
+      "attempts": 2,
+      "available_at": 1788824771.054457,
+      "lease_until": 1788824924.0855734,
+      "fence": 2,
+      "run_id": "tp-tcj-58ad7bec68ad57ad977c0e28568b4bae-2",
+      "error": null,
+      "updated_at": 1788824774.914586
+    }
+  ],
+  "browser_reserved_s": 0.0,
+  "clock_fixture": "After confirmed worker death only, leases expired in isolated test databases; no production time or data changed.",
+  "passed": true,
+  "worker_processes_stopped": true,
+  "validated_at": "2026-09-07T23:47:04.029939+00:00",
+  "redis_container": {
+    "id": "78bd7de307282ccd7587d875f71225561dae540552e20be852033f217412c1d4",
+    "image": "redis:7-alpine",
+    "removed_and_absence_confirmed": true
+  }
+}

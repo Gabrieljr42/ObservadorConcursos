@@ -1,0 +1,34 @@
+{
+  "evidence_id": "T011-ID17-ui-coordinator-v86-2026-09-13",
+  "recorded_at": "2026-09-13",
+  "classification": "ACEITA_COMPLEMENTAR_COORDINATOR_CUA",
+  "attribution": "coordinator_cua_observation",
+  "independent": false,
+  "route": "http://localhost:13000/concurso/17",
+  "build_context": "pós-versão 86",
+  "reload_observed": true,
+  "screenshot_claim": false,
+  "app_operated_in_this_review": false,
+  "observed": {
+    "immediate_vacancy_occurrences": 27,
+    "corrected_acs_blocks": 6,
+    "broken_tokens": {
+      "T er": 0,
+      "inicia l": 0,
+      "atua r": 0,
+      "ini cial": 0
+    },
+    "history_update": "Valor estruturado atualizado → Valor estruturado atualizado",
+    "interface_totals": {
+      "vagas": 79,
+      "ac": 74,
+      "pcd": 5
+    },
+    "api_consistency": "conforme estado API informado pelo coordenador"
+  },
+  "limits": [
+    "Evidência atribuída ao CUA do coordenador; não é validação independente.",
+    "Nenhum screenshot é alegado.",
+    "Nenhuma operação de app/piloto foi feita nesta revisão."
+  ]
+}

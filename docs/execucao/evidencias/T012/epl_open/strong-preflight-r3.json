@@ -1,0 +1,40 @@
+{
+  "schema": "t012.strong-preflight.v1",
+  "state": "EPL_PARSER_R6_READY",
+  "revision": "R6",
+  "source": "epl_open",
+  "source_number": 21,
+  "external_id": "52",
+  "attempt": {
+    "mode": "offline",
+    "canonical_target_id": 1,
+    "target_kind": "ephemeral_sqlite_only",
+    "network_used": false,
+    "catalogue_mutated": false
+  },
+  "shared_revalidate": {
+    "result": "PASS_WITH_SOURCE_DISPATCH",
+    "test": "test_shared_revalidate_consumes_source_dispatch_without_side_effects (8 parser tests total)",
+    "observed": "publication._revalidate consumed typed EPL fields via monkeypatched source dispatch; no proposal/apply",
+    "blocked_reason_without_hook": "generic extract_fields returns orgao/edital_numero unknown and document_identity_ids is empty for the preserved PDF",
+    "strong_binding_rule": "fresh supported orgao + edital_numero or explicit document ID",
+    "canonical_target_was_not_created": true
+  },
+  "source_specific_parser": {
+    "module": "epl_parser_r3.py",
+    "status": "READY_R6",
+    "contract": "extract_identity(Artifact, list[PageText|str], source, external_id) -> list[ExtractedField]",
+    "guards": ["PageText.error", "PageText.truncated", "artifact_id", "page_number/order", "43 markers", "empty/U+FFFD", "url_requested and url_final exact official URL"],
+    "pinned_source": "epl_open",
+    "pinned_external_id": "52",
+    "pinned_sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+    "pinned_byte_len": 784614,
+    "fresh_fields": ["orgao", "edital_numero"],
+    "identity_ids": [],
+    "evidence_pages": [1],
+    "snippet_policy": "verbatim containment in pypdf extraction; no U+FFFD; 43/43 page markers",
+    "fail_closed": ["source/external/detail/document substitution", "SHA or byte-length mutation"]
+  },
+  "next_gate": "integrate this parser through an EPL-specific adapter revision, then rerun shared _revalidate/create_proposal with the normal target allocation flow",
+  "apply": false
+}

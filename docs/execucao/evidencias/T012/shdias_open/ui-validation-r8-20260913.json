@@ -1,0 +1,68 @@
+{
+  "mode": "headless_playwright_real_ui",
+  "mutations": false,
+  "errors": [],
+  "screenshots": [
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\shdias_open\\ui-validation-r8-inicio.png",
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\execucao\\evidencias\\T012\\shdias_open\\ui-validation-r8-detail34.png"
+  ],
+  "inicio": {
+    "url": "http://localhost:13000/inicio",
+    "contains_shdias": true,
+    "contains_hortolandia": true,
+    "contains_title": true,
+    "text_excerpt": "\nRadarConcursos\n\n9+\nOlá, concurseiro!\nMantenha o foco. Sua aprovação está mais próxima hoje.\nDados locais atualizados em 13/09/2026, 10:08:32\n\nATUALIZADO\n34\nCONCURSOS LISTADOS\nÚltimas atualizações\nVer todas\n\nNOVO CONCURSO\n13/09/2026\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\nSHDias Consultoria e Concursos\n\nConcurso cadastrado pela primeira vez.\n\nPRAZO ALTERADO\n13/09/2026\nConcurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\nOMNI Concursos Públicos\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados. Data da prova alterada de não informado para 12/01/2025.\n\nATUALIZAÇÃO\n13/09/2026\nFAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\nFAPESE - Fundação de Apoio à Extensão e Pesquisa\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados.\n\nATUALIZAÇÃO\n13/09/2026\nPREFEITURA MUNICIPAL DE BARRA LONGA\nElo Assessoria e Serviços\n\nVagas, remuneração, jornada e requisitos por cargo foram atualizados.\n\nPRAZO ALTERADO\n13/09/2026\nCONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.\nInstituto IDIB\n\nData da prova alterada de não informado para 06/12/2026.\nRecomendados para você\nVer todos\nNÃO INFORMADO\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\nMunicípio de Hortolândia\nBANCA\nSHDias Consultoria e Concursos\nVAGAS NOS CARGOS CADASTRADOS\n40\nLOCAL\nN/I\nENCERRADO\nConcurso Público - 002/2024 - Prefeitura Municipal de Osvaldo Cruz -SP\nPrefeitura Municipal De Osvaldo Cruz- Sp\nBANCA\nOMNI Concursos Públicos\nVAGAS NOS CARGOS CADASTRADOS\n10 + CR\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nFAPESE - PRONERA - EDITAL Nº 007/2026 - CHAMADA PÚBLICA PARA FORMAÇÃO DE CADASTRO RESERVA PARA PRESTADORES DE SERVIÇO/PESSOA FÍSICA\nFUNDAÇÃO DE APOIO À PESQUISA E EXTENSÃO DE SERGIPE (FAPESE)\nBANCA\nFAPESE - Fundação de Apoio à Extensão e Pesquisa\nVAGAS NOS CARGOS CADASTRADOS\nQuantidade de vagas imediatas: ainda não confirmada\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nPREFEITURA MUNICIPAL DE BARRA LONGA\nPrefeitura Municipal De Barra Longa\nBANCA\nElo Assessoria e Serviços\nVAGAS NOS CARGOS CADASTRADOS\n7\nLOCAL\nN/I\nINSCRIÇÕES ABERTAS\nCONCURSO PÚBLICO PREFEITURA MUNICIPAL DE RERIUTABA/CE EDITAL Nº 01/2026, DE 02 DE SETEMBRO DE 2026.\nPrefeitura Municipal De Reriutaba\nBANCA\nInstituto IDIB\nVAGAS NOS CARGOS CADASTRADOS\n9\nLOCAL\nN/I\n\n\nINÍCIO\n\n\nBUSCAR\n\n\nALERTAS\n\n\nSALVOS\n\n\nPERFIL"
+  },
+  "assets": [
+    "http://localhost:13000/_expo/static/js/web/entry-b2ae9a25d81419e54bbbcba531003c30.js"
+  ],
+  "detail": {
+    "url": "http://localhost:13000/concurso/34",
+    "contains_source": true,
+    "contains_orgao": true,
+    "contains_edital": true,
+    "contains_prova": true,
+    "contains_taxa": true,
+    "contains_visible_fee": true,
+    "contains_cargo_301": true,
+    "contains_cargo_302": true,
+    "contains_12": true,
+    "contains_28": true,
+    "contains_salary": true,
+    "no_undefined": true,
+    "reload_no_undefined": true,
+    "reload_contains_visible_fee": true,
+    "reload_contains_codes_and_vacancies": true,
+    "reload_stable": false,
+    "duplicate_title_count": 3,
+    "text_excerpt": "\nDetalhe\n\nNÃO INFORMADO\nCONCURSO PÚBLICO CPMH 001/2026 - Guarda\n Município de Hortolândia\nCARGO\nGuarda Municipal – 4ª Classe (Feminino), Guarda Municipal – 4ª Classe (Masculino)\nCIDADE\nN/I\nBANCA\nSHDias Consultoria e Concursos\nCargos e requisitos\n301 — Guarda Municipal – 4ª Classe (Feminino)\n12 vaga(s) imediata(s)\nCadastro de reserva: ainda não confirmado\nRemuneração: R$ 3.971,37\nJornada: ainda não confirmada\nRequisitos: Requisitos ainda não confirmados\nTaxa de inscrição: R$ 63,25\n302 — Guarda Municipal – 4ª Classe (Masculino)\n28 vaga(s) imediata(s)\nCadastro de reserva: ainda não confirmado\nRemuneração: R$ 3.971,37\nJornada: ainda não confirmada\nRequisitos: Requisitos ainda não confirmados\nTaxa de inscrição: R$ 63,25\nPágina oficial\n\nAbrir edital\n\n\nSALVAR\n\nALERTAR\n\nCronograma\nINSCRIÇÕES\nData não informada a Data não informada\nDATA DA PROVA\n27/09/2026\n\nPublicações e documentos\nNenhuma publicação estruturada encontrada ainda.\n\nHistórico de alterações\n13/09/2026\n\nNOVO CONCURSO\nConcurso cadastrado pela primeira vez.\ntitulo\nNão informado → CONCURSO PÚBLICO CPMH 001/2026 - Guarda\norgao\nNão informado → Município de Hortolândia\nCargos e condições\nNão informado → Valor estruturado atualizado\nTaxa de inscrição\nNão informado → 63.25\nData da prova\nNão informado → 27/09/2026 às 00:00 (UTC+00:00)\nedital_numero\nNão informado → 001/2026\nLink do edital\nNão informado → https://cdn-arquivo.concursos.srv.br/SHDIAS/00308/PUBLICACOES/01_Edital_Completo_2026_07_23_08_20_13.pdf\nConteúdo publicado\nNão informado → 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "salvos": {
+    "url": "http://localhost:13000/salvos",
+    "text_excerpt": "Salvos\n0 itens salvos\nGerencie suas oportunidades favoritas e acompanhe prazos de inscrição.\n\nQuer ver mais?\nContinue explorando novas vagas que combinam com seu perfil.\nExplorar Oportunidades\n\n\n\nINÍCIO\n\n\nBUSCAR\n\n\nALERTAS\n\n\nSALVOS\n\n\nPERFIL",
+    "mutating_controls_clicked": false
+  },
+  "notificacoes": {
+    "url": "http://localhost:13000/notificacoes",
+    "text_excerpt": "\nNotificações\n\nLidas\n\nSincronizar tudo\n\nAtivar push\nCarregando notificações...",
+    "mutating_controls_clicked": false
+  },
+  "checkpoint": {
+    "login_observed": {
+      "observed_after_login": true
+    },
+    "responses": [
+      {
+        "status": 200,
+        "concursos": 34,
+        "fontes": 0,
+        "selections": null
+      },
+      {
+        "status": 200,
+        "json": false
+      }
+    ]
+  },
+  "result": "SHDIAS_UI_VALIDATED_HEADLESS"
+}

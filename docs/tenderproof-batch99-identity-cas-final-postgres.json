@@ -1,0 +1,28 @@
+{
+  "container": "tenderproof-batch99-identity-pg-20260908",
+  "host": "127.0.0.1",
+  "port": 55471,
+  "database": "tenderproof_acceptance",
+  "image": "postgres:16-alpine",
+  "data_mount": "private container tmpfs, no host data volume",
+  "scope": "disposable schema/collector/canonical/publication regression; no production database",
+  "command": [
+    "python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_concurso_identity_migration.py",
+    "--disable-warnings",
+    "--tb=short"
+  ],
+  "exit_code": 1,
+  "duration_s": 8.75,
+  "output_summary": "RES ===================================\n_ test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp[sqlite] _\ntests\\test_concurso_identity_migration.py:279: in test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp\n    assert 'external_id' in diff_concurso(row, {'external_id': 'promoted'})\nE   AssertionError: assert 'external_id' in {'titulo': {'label': 'título', 'old': 'Observed contest', 'new': None}, 'content_hash': {'label': 'hash do conteúdo bruto', 'old': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'new': None}}\nE    +  where {'titulo': {'label': 'título', 'old': 'Observed contest', 'new': None}, 'content_hash': {'label': 'hash do conteúdo bruto', 'old': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'new': None}} = <function diff_concurso at 0x000001D7A51347C0>(<app.models.Concurso object at 0x000001D7A5EB3DA0>, {'external_id': 'promoted'})\n_ test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp[postgresql] _\ntests\\test_concurso_identity_migration.py:279: in test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp\n    assert 'external_id' in diff_concurso(row, {'external_id': 'promoted'})\nE   AssertionError: assert 'external_id' in {'titulo': {'label': 'título', 'old': 'Observed contest', 'new': None}, 'content_hash': {'label': 'hash do conteúdo bruto', 'old': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'new': None}}\nE    +  where {'titulo': {'label': 'título', 'old': 'Observed contest', 'new': None}, 'content_hash': {'label': 'hash do conteúdo bruto', 'old': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'new': None}} = <function diff_concurso at 0x000001D7A51347C0>(<app.models.Concurso object at 0x000001D7A5F8B860>, {'external_id': 'promoted'})\n=========================== short test summary info ===========================\nFAILED tests/test_concurso_identity_migration.py::test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp[sqlite]\nFAILED tests/test_concurso_identity_migration.py::test_claim_preserves_orm_identity_for_audit_and_unchanged_timestamp[postgresql]\n2 failed, 33 passed, 238 warnings in 7.70s\n\n",
+  "test_process_finished": true,
+  "log": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\docs\\tenderproof-batch99-identity-cas-final-postgres.log",
+  "cleanup": {
+    "removal_exit_code": 0,
+    "container_absent": true,
+    "named_volumes_created": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "t012.source-proposal.v1",
+  "state": "PROPOSTA_PRONTA",
+  "source": "epl_open",
+  "source_number": 21,
+  "adapter": "EPLAdapter",
+  "official_listing_url": "https://www.eplconcursos.com.br/concursos/andamento",
+  "candidate": {
+    "external_id": "52",
+    "title": "Fundação Hospitalar Santa Terezinha de Erechim",
+    "detail_url": "https://www.eplconcursos.com.br/concursos/publicacoes/FUNDA%C3%87%C3%83O+HOSPITALAR+SANTA+TEREZINHA+DE+ERECHIM/52",
+    "selection_type": "Concurso Público nº 01/2023",
+    "observed_category": "Em andamento na listagem pública de 2026-09-08",
+    "inscricao_inicio": "2023-10-23T09:00:00",
+    "inscricao_fim": "2023-11-13T17:00:00"
+  },
+  "proven_facts": {
+    "titulo": "Concurso Público nº 01/2023 — Fundação Hospitalar Santa Terezinha de Erechim",
+    "orgao": "Fundação Hospitalar Santa Terezinha de Erechim (FHSTE)",
+    "regime": "celetista",
+    "prova": "prova escrita objetiva para os cargos do edital",
+    "cargos_sample": [
+      {"nome": "Auxiliar de Serviços Gerais", "vagas": "5", "pcd": "0", "carga_horaria_mensal": "200", "remuneracao": "R$ 1.621,05"},
+      {"nome": "Técnico de Enfermagem", "vagas": "9", "pcd": "1", "carga_horaria_mensal": "200", "remuneracao": "R$ 2.377,90"},
+      {"nome": "Auxiliar de Copa e Cozinha", "vagas": "5", "pcd": "0", "carga_horaria_mensal": "200", "remuneracao": "R$ 1.621,05"},
+      {"nome": "Farmacêutico Bioquímico", "vagas": "2", "pcd": "0", "carga_horaria_mensal": "180", "remuneracao": "R$ 4.982,20"}
+    ],
+    "taxa": ["R$ 120,00 para ensino superior", "R$ 70,00 para ensino médio/técnico", "R$ 50,00 para ensino fundamental"]
+  },
+  "unknown_or_blocked": ["lista completa de cargos normalizados", "prova_data", "taxa por cargo", "órgão municipalidade além da FHSTE", "retificações como efeitos de catálogo", "canonical_concurso_id"],
+  "artifact": {
+    "artifact_id": "art-8c5dbef058",
+    "path": "backend/.tenderproof/r60rec/artifacts/art-8c5dbef058-b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f.pdf",
+    "sha256": "b040f8c3ff74845185dfdfec2096b70da84a7ee10c54d228afe7b82ed205805f",
+    "byte_len": 784614,
+    "content_type": "application/pdf",
+    "url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+    "pages": 43,
+    "provenance_pages": [1, 2, 3]
+  },
+  "documents": {
+    "opening_notice": {
+      "title": "01 - Edital de Abertura",
+      "url": "https://cdn-arquivo.concursos.srv.br/EPL_CONCURSOS/00052/PUBLICA%C3%87%C3%95ES/01%20-%20EDITAL%20DE%20ABERTURA%20-%20VERSAO%20FINAL_1701470854.pdf",
+      "kind": "edital",
+      "status": "preserved_and_hash_verified"
+    },
+    "publication_count_observed": 24,
+    "retificacoes_observed": 0,
+    "results_observed": true
+  },
+  "provenance": {
+    "listing_fixture": {"path": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-listing-dc7d20e042.html", "sha256": "1496d880362ce6bb70ce6c9f02a2e313fabe6db97e703a3a1c3a9b345fd0d1ac", "byte_len": 25176},
+    "detail_fixture": {"path": "backend/tests/fixtures/tenderproof_batch60_blockers/epl_open-cycle1-detail-2e60516108.html", "sha256": "98e1c6d9ffa6317796411764067b599189977d5c17fbc832a1f31bae60742922", "byte_len": 23738},
+    "runs": ["tpr-9e2c3d45a3e8", "tpr-1fc2120d6f06"],
+    "observed_at": "2026-09-08T14:13:22.563992Z",
+    "identity_rule": "EPLAdapter candidate external_id=52, official detail path and tenant-bound PDF process 00052",
+    "duplicate_check": "cycle 1 and cycle 2 resolve to the same external_id/detail/document SHA; no catalogue import performed"
+  },
+  "import_handoff": {
+    "mode": "standard_reviewed_run_import",
+    "owner_user_id": 1,
+    "concurso_id": null,
+    "reference_only": true,
+    "apply": false,
+    "next_step": "Integrador deve alocar identidade canônica e revisar os fatos comprovados antes do fluxo padrão; não importar nem publicar diretamente",
+    "fail_closed_reasons": ["canonical_concurso_id não foi inventado", "campos desconhecidos permanecem desconhecidos", "não houve autorização de aplicação/publicação"]
+  }
+}

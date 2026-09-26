@@ -1,0 +1,919 @@
+{
+  "observed_at": "2026-09-08T14:08:42.678065+00:00",
+  "scope": "two bounded public HTTP cycles; no full coverage or canonical publication",
+  "browser_sessions": 0,
+  "tls_verified": true,
+  "root": "C:\\Users\\gabri\\OneDrive\\Documentos\\Pessoal\\Trabalho pessoal\\ObservadorDeCursos\\backend\\.tenderproof\\b60share",
+  "cycles": [
+    {
+      "source": "fundep_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-9c31c8db22b1",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 4,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle1-listing-b233f913e0.html",
+          "sha256": "f94d53bf08df78cdbf001a3f8278af08e31dca204ae1c0e6feca589023db2a31",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:08:43.324570+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-ee02038bdd3e",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso PÃºblico - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:08:43.392366Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle1-detail-aaadbb0961.html",
+              "sha256": "e2867f4b6cebb8b7813dc210c7b7389aebae39728b4a270542169e916b67f27f",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:44.110219+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-2d04139e5cbf",
+          "candidate": {
+            "candidate_id": "fundep_open-63",
+            "title_observed": "Concurso PÃºblico - DMAE UBERLÃNDIA",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/63/",
+            "external_id": "63",
+            "observed_at": "2026-09-08T14:08:43.392366Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/63/",
+              "file": "fundep_open-cycle1-detail-7d8b57f92a.html",
+              "sha256": "c15e24f920f4b55dfa2f0c58c68ce76e6792728b4079b243e0c19b2feab0ce29",
+              "bytes": 58126,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:44.857094+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-9c9c69715f57",
+          "candidate": {
+            "candidate_id": "fundep_open-65",
+            "title_observed": "Concurso PÃºblico - CÃMARA MUNICIPAL DE PASSOS - MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/65/",
+            "external_id": "65",
+            "observed_at": "2026-09-08T14:08:43.392366Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/65/",
+              "file": "fundep_open-cycle1-detail-e17e26f322.html",
+              "sha256": "dcc9726ebeda5b5f4d5eae858d72aa7c9229958a903ceb2193017efcc6275171",
+              "bytes": 53038,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:45.509799+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.953
+    },
+    {
+      "source": "facet_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-e5c1bd00ca20",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle1-listing-e09f1851f4.html",
+          "sha256": "05308c75bd95ac4c96a160f464dd15a2bf8d67e093917bca95063562323371de",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:08:46.425079+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-01496d82dc4d",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:08:46.501781Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle1-detail-05181c7a48.html",
+              "sha256": "e7464d3a851fc64cb723e118bc626e2db54b262e0e0f16c86795977b5c6b9b6a",
+              "bytes": 115999,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:47.313469+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-abfe113927",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:08:47.699146Z",
+            "storage_path": "art-abfe113927-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-324f67f6d6c4",
+          "candidate": {
+            "candidate_id": "facet_open-42",
+            "title_observed": "Processo Seletivo - PREFEITURA MUNICIPAL DE SUMÉ-PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/42/",
+            "external_id": "42",
+            "observed_at": "2026-09-08T14:08:46.501781Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FACET incompatível com dados do detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/42/",
+              "file": "facet_open-cycle1-detail-d85e510cf8.html",
+              "sha256": "35433b10a76d4fd63e98e0e7c32dabd79229bfbc436ea652a78e43f48678d886",
+              "bytes": 78314,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:48.985707+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-264848b4c7ea",
+          "candidate": {
+            "candidate_id": "facet_open-39",
+            "title_observed": "Concurso Público - CÂMARA MUNICIPAL DE BAIA DA TRAIÇÃO - PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/39/",
+            "external_id": "39",
+            "observed_at": "2026-09-08T14:08:46.501781Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FACET incompatível com dados do detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/39/",
+              "file": "facet_open-cycle1-detail-59b9069478.html",
+              "sha256": "4b2de5243d9094b6ef02a0b6023c18bc84336cdcd030d7341e2108165adbda93",
+              "bytes": 67531,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:49.924930+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 4.359
+    },
+    {
+      "source": "educapb_open",
+      "cycle": 1,
+      "listing_run_id": "tpr-715616da00f8",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ps-adm-871.selecao.net.br/index/abertos/",
+          "https://ps-adm-871.selecao.net.br/index/1/",
+          "https://ps-adm-871.selecao.net.br/index/2/",
+          "https://ps-adm-871.selecao.net.br/index/3/",
+          "https://ps-adm-871.selecao.net.br/index/4/",
+          "https://ps-adm-871.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ps-adm-871.selecao.net.br/",
+          "file": "educapb_open-cycle1-listing-8440974369.html",
+          "sha256": "5f58ade5b3e097dfa3cbd92e22b831608716bcc96f327411537a606976268b30",
+          "bytes": 25584,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:08:50.754616+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-23595280bfe7",
+          "candidate": {
+            "candidate_id": "educapb_open-6",
+            "title_observed": "Concurso Público - 01/2026 - Prefeitura Municipal de Cuité de Mamanguape - PB",
+            "detail_url_observed": "https://ps-adm-871.selecao.net.br/informacoes/6/",
+            "external_id": "6",
+            "observed_at": "2026-09-08T14:08:50.813626Z",
+            "source": "educapb_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://ps-adm-871.selecao.net.br/informacoes/6/",
+              "file": "educapb_open-cycle1-detail-290784109a.html",
+              "sha256": "24a7d75975190d66b88d77cfb31b66d908e54e9310ecf32d331f8b32aa4cdded",
+              "bytes": 63978,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:51.609471+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ea05e239d260",
+          "candidate": {
+            "candidate_id": "educapb_open-7",
+            "title_observed": "Concurso Público - 01/2026 - Prefeitura Municipal de Conceição - PB",
+            "detail_url_observed": "https://ps-adm-871.selecao.net.br/informacoes/7/",
+            "external_id": "7",
+            "observed_at": "2026-09-08T14:08:50.813626Z",
+            "source": "educapb_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://ps-adm-871.selecao.net.br/informacoes/7/",
+              "file": "educapb_open-cycle1-detail-e912022b76.html",
+              "sha256": "28f377181e0a36eddc386241fefea8860c38c9835fc603e609674b60e3fd0451",
+              "bytes": 105357,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:52.434434+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "educapb_open-doc-34fe57bf1fe45742",
+            "title": "Edital Normativo nº 01/2026 17/07/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Normativo nº 01/2026 17/07/2026' por conter 'edital' no título/URL; 11 documento(s) ignorado(s) (ex.: Formulário de Recursos 10/07/2026; Formulário de Isenção 16/07/2026; Anexo II - Conteúdo Programático 16/07/2026; Anexo III - Atribuições do Cargo 16/07/2026; Edital Normativo nº 02/2026 - Retificação 17/07/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-cd191bc2aa",
+            "sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+            "byte_len": 1210044,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:08:52.744842Z",
+            "storage_path": "art-cd191bc2aa-54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "conflict"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 6.11
+    },
+    {
+      "source": "fundep_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-462a906b4e9f",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 4,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://www.gestaodeconcursos.com.br/site/site/Default.aspx",
+          "https://www.gestaodeconcursos.com.br/site/Site/Default.aspx"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://www.gestaodeconcursos.com.br/site/site/default.aspx",
+          "file": "fundep_open-cycle2-listing-ebc800ed74.html",
+          "sha256": "595b00dd894873f52016f241c76beb8fb13813efc1affbc5ba38152c3f197a1a",
+          "bytes": 56117,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:08:56.651643+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-e52a4122482e",
+          "candidate": {
+            "candidate_id": "fundep_open-72",
+            "title_observed": "Concurso PÃºblico - FUMEP de Sete Lagoas/MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/72/",
+            "external_id": "72",
+            "observed_at": "2026-09-08T14:08:56.709662Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/72/",
+              "file": "fundep_open-cycle2-detail-85100919aa.html",
+              "sha256": "d86b297e02ffd231709dea31de7a6e6678422ceddac40e8603b2fd865f3826ab",
+              "bytes": 23019,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:57.235391+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-8e53719fb3c4",
+          "candidate": {
+            "candidate_id": "fundep_open-63",
+            "title_observed": "Concurso PÃºblico - DMAE UBERLÃNDIA",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/63/",
+            "external_id": "63",
+            "observed_at": "2026-09-08T14:08:56.710663Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/63/",
+              "file": "fundep_open-cycle2-detail-39f730210f.html",
+              "sha256": "7b37429d11a778cdeab6e8852365a0aa64f80024fb0bb0563a1fd69cb5c2f037",
+              "bytes": 57916,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:57.767940+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-ea60a475e2b7",
+          "candidate": {
+            "candidate_id": "fundep_open-65",
+            "title_observed": "Concurso PÃºblico - CÃMARA MUNICIPAL DE PASSOS - MG",
+            "detail_url_observed": "https://fundep.selecao.net.br/informacoes/65/",
+            "external_id": "65",
+            "observed_at": "2026-09-08T14:08:56.710663Z",
+            "source": "fundep_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FUNDEP não corroborada no detalhe e manifesto",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://fundep.selecao.net.br/informacoes/65/",
+              "file": "fundep_open-cycle2-detail-e30b3d3fcf.html",
+              "sha256": "10387829cbe42f3721b6cb5d51a9fe2b400efe075d532971816eef664315047c",
+              "bytes": 53038,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:08:58.502829+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 2.5
+    },
+    {
+      "source": "facet_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-47249df017c5",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": true,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://concursos.facetconcursos.com.br/index/abertos/",
+          "https://concursos.facetconcursos.com.br/index/1/",
+          "https://concursos.facetconcursos.com.br/index/2/",
+          "https://concursos.facetconcursos.com.br/index/3/",
+          "https://concursos.facetconcursos.com.br/index/4/",
+          "https://concursos.facetconcursos.com.br/index/5/",
+          "https://concursos.facetconcursos.com.br/index/7/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://concursos.facetconcursos.com.br/",
+          "file": "facet_open-cycle2-listing-489ceb7908.html",
+          "sha256": "574d2e09c55462952c4c95b07a7f4c0ef7e10f9c21c953b1dd45001388988ef5",
+          "bytes": 39694,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:08:59.305773+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-abef6b1c6b79",
+          "candidate": {
+            "candidate_id": "facet_open-44",
+            "title_observed": "Prefeitura de Floresta/PE  2026",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/44/",
+            "external_id": "44",
+            "observed_at": "2026-09-08T14:08:59.366314Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ProcessingError: page_limit",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/44/",
+              "file": "facet_open-cycle2-detail-2e4a4fd031.html",
+              "sha256": "ee64cdc2857b67f3ca90144b309916c2801e37ca52899a4827ec5af7cb9bb6cd",
+              "bytes": 115999,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:09:00.211255+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "facet_open-doc-464948c2460451a5",
+            "title": "EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'EDITAL - CONCURSO PÚBLICO DA PREFEITURA MUNICIPAL DE FLORESTA-PE 24/08/2026' por conter 'edital' no título/URL; 0 documento(s) ignorado(s)."
+          },
+          "artifact": {
+            "artifact_id": "art-5afd275e2a",
+            "sha256": "d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221",
+            "byte_len": 1274606,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/781/concursos/44/anexos/6446ac1d-6281-48f7-bdef-c0e5bcaca84e.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:00.515985Z",
+            "storage_path": "art-5afd275e2a-d049b7595f6ed8d7282d82580b0a0de67b24fa8fe2935f1764c3cd5970043221.pdf"
+          },
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": [],
+          "durable_hash_verified": true
+        },
+        {
+          "run_id": "tpr-9dfdb3daa329",
+          "candidate": {
+            "candidate_id": "facet_open-42",
+            "title_observed": "Processo Seletivo - PREFEITURA MUNICIPAL DE SUMÉ-PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/42/",
+            "external_id": "42",
+            "observed_at": "2026-09-08T14:08:59.366314Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FACET incompatível com dados do detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/42/",
+              "file": "facet_open-cycle2-detail-b3e030d43d.html",
+              "sha256": "048b70ccabbd7270a38bdee0d9949731ec3b713c50932b9d6cffef4769e1dca6",
+              "bytes": 78314,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:09:01.704607+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-e5ab6f869865",
+          "candidate": {
+            "candidate_id": "facet_open-39",
+            "title_observed": "Concurso Público - CÂMARA MUNICIPAL DE BAIA DA TRAIÇÃO - PB",
+            "detail_url_observed": "https://concursos.facetconcursos.com.br/informacoes/39/",
+            "external_id": "39",
+            "observed_at": "2026-09-08T14:08:59.366314Z",
+            "source": "facet_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: identidade FACET incompatível com dados do detalhe",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://concursos.facetconcursos.com.br/informacoes/39/",
+              "file": "facet_open-cycle2-detail-c5aadf938c.html",
+              "sha256": "4294b1b818313f4d9d1b3f658f39c13c31da007fa6bcf3fec1c543d0d436fc75",
+              "bytes": 67531,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:09:02.532477+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        }
+      ],
+      "duration_s": 4.0
+    },
+    {
+      "source": "educapb_open",
+      "cycle": 2,
+      "listing_run_id": "tpr-9552073239d3",
+      "listing_status": "awaiting_selection",
+      "candidates_sampled": 5,
+      "coverage": {
+        "scope": "sample",
+        "complete": false,
+        "truncated": false,
+        "empty_evidence": null,
+        "terminal_evidence": null,
+        "next_urls": [
+          "https://ps-adm-871.selecao.net.br/index/abertos/",
+          "https://ps-adm-871.selecao.net.br/index/1/",
+          "https://ps-adm-871.selecao.net.br/index/2/",
+          "https://ps-adm-871.selecao.net.br/index/3/",
+          "https://ps-adm-871.selecao.net.br/index/4/",
+          "https://ps-adm-871.selecao.net.br/index/5/"
+        ]
+      },
+      "captures": [
+        {
+          "kind": "listing",
+          "url": "https://ps-adm-871.selecao.net.br/",
+          "file": "educapb_open-cycle2-listing-8440974369.html",
+          "sha256": "5f58ade5b3e097dfa3cbd92e22b831608716bcc96f327411537a606976268b30",
+          "bytes": 25584,
+          "format": "decoded HTTP HTML normalized to UTF-8",
+          "observed_at": "2026-09-08T14:09:03.328050+00:00"
+        }
+      ],
+      "attempts": [
+        {
+          "run_id": "tpr-104b132aade3",
+          "candidate": {
+            "candidate_id": "educapb_open-6",
+            "title_observed": "Concurso Público - 01/2026 - Prefeitura Municipal de Cuité de Mamanguape - PB",
+            "detail_url_observed": "https://ps-adm-871.selecao.net.br/informacoes/6/",
+            "external_id": "6",
+            "observed_at": "2026-09-08T14:09:03.372373Z",
+            "source": "educapb_open"
+          },
+          "execution_status": "failed",
+          "validation_status": "pending",
+          "error": "ValueError: links de edital ambíguos; seleção documental explícita necessária",
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://ps-adm-871.selecao.net.br/informacoes/6/",
+              "file": "educapb_open-cycle2-detail-64c2b22771.html",
+              "sha256": "2be3738d35fc1e3a31b409979c2fdeecb9b341a18f8c9de29ca50b6c58d877b2",
+              "bytes": 63978,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:09:04.126741+00:00"
+            }
+          ],
+          "document": null,
+          "artifact": null,
+          "total_pages": null,
+          "processed_pages": null,
+          "validation": {
+            "status": "pending",
+            "errors": [],
+            "warnings": [],
+            "checks": []
+          },
+          "fields": []
+        },
+        {
+          "run_id": "tpr-1fc2120d6f06",
+          "candidate": {
+            "candidate_id": "educapb_open-7",
+            "title_observed": "Concurso Público - 01/2026 - Prefeitura Municipal de Conceição - PB",
+            "detail_url_observed": "https://ps-adm-871.selecao.net.br/informacoes/7/",
+            "external_id": "7",
+            "observed_at": "2026-09-08T14:09:03.372373Z",
+            "source": "educapb_open"
+          },
+          "execution_status": "completed",
+          "validation_status": "valid",
+          "error": null,
+          "captures": [
+            {
+              "kind": "detail",
+              "url": "https://ps-adm-871.selecao.net.br/informacoes/7/",
+              "file": "educapb_open-cycle2-detail-19f58cc1d3.html",
+              "sha256": "5d24170f82956d059cfc1e0e959dfc59afe4cc7a018d9454ee2347025c747721",
+              "bytes": 105357,
+              "format": "decoded HTTP HTML normalized to UTF-8",
+              "observed_at": "2026-09-08T14:09:04.943155+00:00"
+            }
+          ],
+          "document": {
+            "doc_id": "educapb_open-doc-34fe57bf1fe45742",
+            "title": "Edital Normativo nº 01/2026 17/07/2026",
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "kind": "edital",
+            "reason_chosen": "Escolhido 'Edital Normativo nº 01/2026 17/07/2026' por conter 'edital' no título/URL; 11 documento(s) ignorado(s) (ex.: Formulário de Recursos 10/07/2026; Formulário de Isenção 16/07/2026; Anexo II - Conteúdo Programático 16/07/2026; Anexo III - Atribuições do Cargo 16/07/2026; Edital Normativo nº 02/2026 - Retificação 17/07/2026)."
+          },
+          "artifact": {
+            "artifact_id": "art-21db0ce35e",
+            "sha256": "54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25",
+            "byte_len": 1210044,
+            "url_requested": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "url_final": "https://anexos-r2.selecao.net.br/uploads/871/concursos/7/anexos/ea627860-8754-4947-abe0-409d00324d91.pdf",
+            "content_type": "application/pdf",
+            "downloaded_at": "2026-09-08T14:09:05.191983Z",
+            "storage_path": "art-21db0ce35e-54ebe7801245eba9362038d9b15f1c06db31b4dc0374ead8ad321aec9e7d7d25.pdf"
+          },
+          "total_pages": 22,
+          "processed_pages": 22,
+          "validation": {
+            "status": "valid",
+            "errors": [],
+            "warnings": [],
+            "checks": [
+              "paginas_com_texto=22/22",
+              "titulo_corroborado=5/5"
+            ]
+          },
+          "fields": [
+            {
+              "field": "titulo",
+              "state": "supported"
+            },
+            {
+              "field": "orgao",
+              "state": "supported"
+            },
+            {
+              "field": "edital_numero",
+              "state": "conflict"
+            },
+            {
+              "field": "inscricao_inicio",
+              "state": "unknown"
+            },
+            {
+              "field": "inscricao_fim",
+              "state": "unknown"
+            },
+            {
+              "field": "remuneracao",
+              "state": "unknown"
+            }
+          ],
+          "durable_hash_verified": true
+        }
+      ],
+      "duration_s": 5.453
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "t012.publiconsult.document-review-409-diagnosis-r4.v1",
+  "verdict": "BLOCKED_NO_RETRY_ARTIFACT_REGISTRATION_UNPROVEN",
+  "scope": "read-only; no API/SQL/pilot mutation",
+  "case": {"source": "publiconsult_open", "source_id": 56, "external_id": "681", "owner_user_id": 1, "run_id": "tp-reviewed-bea209a94599014adb6a275693a9e107"},
+  "comparison": {
+    "r2": {"http": 409, "detail": "Documento não corresponde exatamente ao manifesto pendente", "cause": "abbreviated decision title did not equal pending manifest title"},
+    "r3": {"http": 409, "body_detail": "not captured in receipt; exact payload was documented but no server body/GET/current case was preserved", "payload_identity": "title/full, URL exact, kind=outro, owner/run exact"}
+  },
+  "matcher_order": [
+    "authenticated _review_run enforces owner/run (other owner is 404)",
+    "current case collision is checked before pending matching",
+    "pending document_identity compares decoded URL identity, exact title, and kind",
+    "artifact must already be registered and loadable by TenderProofStore; preserved_path alone is not consumed",
+    "main/preserved SHA/bytes/pages and textual identity are then revalidated"
+  ],
+  "root_cause": "R2 is proven title mismatch. For R3, the receipt omits response detail and does not prove a current case or store registration. The preserved PDF exists only under evidence path; prepare_preserved requires store.load_artifact_bytes(artifact), so an unregistered blob deterministically yields 409 before revalidation. A current different case would independently yield the same 409 retry-blocking outcome.",
+  "unicode_url_kind": "R3 exact title/URL/kind=outro are documented; document_identity retains URL path/query and title/kind, with no generic normalization that would explain a remaining 409.",
+  "minimal_test": "test_document_review_409_r4.py: unregistered preserved path loads None; save_artifact_file canonical registration loads bytes; 2 passed with exact-title test",
+  "decision": "Do not retry. Obtain owner-authenticated GET/current response and register the exact SHA/bytes via save_artifact_file under configured artifact root; only then one prepare call. If current case exists and differs, resolve it through normal owner-bound review, never overwrite or create a second case."
+}
