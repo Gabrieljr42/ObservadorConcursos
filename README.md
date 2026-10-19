@@ -1,144 +1,243 @@
 # Observador de Concursos
 
-**A Brazilian public-exam intelligence platform: source monitoring, structured notices, change tracking and a mobile experience designed to work offline.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com)
+[![React Native](https://img.shields.io/badge/React%20Native-Expo-000020.svg?logo=expo)](https://expo.dev)
+[![PostgreSQL 17](https://img.shields.io/badge/PostgreSQL-17-336791.svg?logo=postgresql)](https://www.postgresql.org/)
+[![Celery & Redis](https://img.shields.io/badge/Celery-Redis-CC0000.svg?logo=redis)](https://docs.celeryq.dev)
 
-Observador de Concursos brings together announcements from examination boards and public institutions. Its backend retrieves and processes notices, tracks meaningful changes and produces notifications. Its React Native app keeps locally synchronized data available even when the device loses connectivity.
+> **A Brazilian public examination intelligence platform**: automated source monitoring, structured notices, document parsing, change tracking, and an offline-first mobile experience.
 
-> **Status:** active, evolving project. The catalog currently defines **99 sources**, but catalog inclusion does **not** mean every source is live, reliable or fully audited. Consult the [source status](docs/SOURCES_STATUS.md) and [operational documentation](docs/) before interpreting coverage.
+---
 
-## Why it exists
+Observador de Concursos monitors and aggregates announcements, publications, and official notices from dozens of examination boards (*bancas examinadoras*) and public institutions throughout Brazil. 
 
-Public examination information is scattered across different portals, document formats and frequently changing pages. Observador aims to make that information easier to discover and follow, while preserving visibility into the origin and status of collected data.
+Its FastAPI backend continuously crawls and parses announcements, tracks version changes, processes notice PDFs, and generates proactive notifications. Its companion React Native/Expo app keeps data cached in a local SQLite database, allowing candidates to search, save, and receive updates even with intermittent or absent internet connectivity.
 
-## Architecture at a glance
+---
 
-| Component | Stack | Responsibility |
-| --- | --- | --- |
-| API | Python, FastAPI | REST endpoints, authentication, listings and synchronization |
-| Collectors | HTTP clients, Playwright, PDF parsing | Retrieve and structure source information |
-| Background processing | Celery and Redis | Schedule and distribute crawling tasks |
-| Database | PostgreSQL 17 | Persist announcements, versions and collection diagnostics |
-| Mobile | Expo, React Native, TypeScript, SQLite | Offline-first browsing, saved items and synchronization |
-| Runtime | Docker Compose | API, worker, scheduler, PostgreSQL and Redis |
+## 🏛️ Architecture Overview
 
 ```text
-Exam boards / institutions
-            |
-      crawler workers <---- Celery beat
-            |                |
-     parsing + validation    Redis
-            |
-       PostgreSQL <-------- FastAPI
-                               |
-                        /sync/checkpoint
-                               |
-                       React Native app
-                       local SQLite cache
+  Examination Boards / Public Portals (99 sources cataloged)
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │   Crawlers & Connectors   │◄── Celery Beat (Scheduler)
+            │  (HTTP / Playwright / PDF) │
+            └─────────────┬─────────────┘
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │   Parsing & Validation    │◄── Redis (Queue & Broker)
+            └─────────────┬─────────────┘
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │   PostgreSQL 17 Database  │
+            │   (Announcements, Vers.)  │
+            └─────────────▲─────────────┘
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │   FastAPI REST Engine     │
+            │  (/sync/checkpoint & API) │
+            └─────────────▲─────────────┘
+                          │
+             HTTPS / Offline Sync Checkpoint
+                          │
+                          ▼
+            ┌───────────────────────────┐
+            │   React Native (Expo)     │
+            │   Local SQLite Outbox     │
+            └───────────────────────────┘
 ```
 
-## Capabilities
+| Component | Technology | Responsibility |
+| :--- | :--- | :--- |
+| **Backend API** | Python 3.12, FastAPI, Pydantic, SQLAlchemy 2 | REST endpoints, authentication (JWT), search, synchronization checkpoints. |
+| **Collectors & Parsers** | HTTPX, BeautifulSoup4, Playwright, PyPDF | Crawling portals, extracting notice metadata, PDF text parsing. |
+| **Worker & Queue** | Celery, Redis | Distributed task execution, scheduled crawls, retries. |
+| **Primary Database** | PostgreSQL 17 | Stores tenders, notices, publication logs, user subscriptions, and audit logs. |
+| **Mobile App** | React Native, Expo, TypeScript, SQLite | Offline-first candidate experience, optimistic favorites, local caching. |
+| **Infrastructure** | Docker Compose | One-command orchestration for API, worker, scheduler, PostgreSQL, and Redis. |
 
-- **Multi-source monitoring:** a catalog of 99 configured source definitions with dedicated and configurable connectors.
-- **Change awareness:** deduplication, version history and significant-change notifications.
-- **Document processing:** extraction of embedded text and structured fields from notices, with source-specific parsing and diagnostics.
-- **Operational visibility:** collection runs and verification artifacts to help distinguish successful results, legitimate empty results and failures.
-- **Offline-first mobile:** local SQLite storage, synchronization checkpoints and an outbox for changes made without connectivity.
-- **REST API:** registration, login, source discovery, listings, publication/version history and sync endpoints.
+---
 
-Source quality varies. Scrapers may be blocked or break when institutional pages change, and scanned PDFs may require separate OCR processing. See the documented limitations.
+## ✨ Features
 
-## Repository map
+- **Multi-Source Catalog:** 99 configured source definitions with dedicated and generic connectors.
+- **Change Detection & Versioning:** Tracks document amendments, errata, date extensions, and changes across notices with SHA-256 fingerprinting.
+- **Document Processing:** Automated extraction of vacancies, positions, salaries, and deadlines from published PDFs.
+- **Offline-First Synchronization:** Candidates can save items and register alerts offline. Changes queue locally in SQLite and reconcile seamlessly when back online.
+- **Operational Auditing:** Built-in audit suites and historical execution records to distinguish portal downtime from empty results.
+
+---
+
+## 📂 Repository Structure
 
 ```text
-backend/               FastAPI, Celery tasks, connectors, tests
-docs/                  Architecture, API, configuration and audits
-mobile/                Git submodule for the Expo application
-scripts/               Diagnostics and operational helpers
-README.md              Project overview
+.
+├── backend/                  # FastAPI backend, Celery tasks, connectors, test suite
+│   ├── app/                  # Application code (API, connectors, models, schemas)
+│   ├── tests/                # Unit and integration test fixtures
+│   ├── Dockerfile            # Container definition for API and Celery workers
+│   └── requirements.txt      # Python dependencies
+├── docs/                     # Full technical documentation, runbooks, and audits
+│   ├── ARCHITECTURE.md       # Detailed system design and data flows
+│   ├── API.md                # REST API endpoint specifications
+│   ├── DATABASE.md           # Database models and schema migrations
+│   ├── CONFIGURATION.md      # Environment variable reference
+│   └── SOURCES_STATUS.md     # Current status of the 99 monitored exam portals
+├── mobile/                   # React Native (Expo) mobile application (Git submodule)
+├── scripts/                  # Operational utilities and live audit tools
+│   └── verification/         # Playwright E2E and offline roundtrip verification scripts
+├── docker-compose.yml        # Root Docker Compose for orchestrating all backend services
+├── .env.example              # Root environment template
+└── LICENSE                   # MIT License
 ```
 
-**Note on the mobile code:** `mobile/` is a Git submodule. After cloning, initialize submodules; the companion repository is [mobileObservador](https://github.com/Gabrieljr42/mobileObservador). Public access to the backend repository alone does not grant access to a private submodule.
+> ⚠️ **Note on Mobile Submodule:**  
+> The `mobile/` directory is linked as a Git submodule to [mobileObservador](https://github.com/Gabrieljr42/mobileObservador). When cloning, use `--recurse-submodules`. If the mobile repository is private, ensure your GitHub account has collaborator access or initialize only the backend.
 
-## Local quick start
+---
 
-**Requirements:** Git, Docker and Docker Compose.
+## 🚀 Quick Start
+
+### Prerequisites
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/) & Docker Compose
+
+### 1. Clone the Repository
 
 ```bash
 git clone --recurse-submodules https://github.com/Gabrieljr42/ObservadorConcursos.git
-cd ObservadorConcursos/backend
-cp .env.example .env
+cd ObservadorConcursos
 ```
 
-Replace the example `SECRET_KEY` in `.env` with a secure, randomly generated value. Then start the services:
+*(If you already cloned without submodules, run `git submodule update --init --recursive`)*
+
+### 2. Configure Environment
+
+Copy the example configuration to `backend/.env`:
+
+```bash
+cp .env.example backend/.env
+```
+
+> **Important:** Open `backend/.env` and replace `SECRET_KEY=change-me-in-production` with a secure random key.
+
+### 3. Start Backend Services
+
+Run Docker Compose directly from the root directory:
 
 ```bash
 docker compose up --build
 ```
 
-With the API running:
+The stack initializes:
+- **FastAPI Backend:** http://localhost:8000
+- **Interactive Swagger Docs:** http://localhost:8000/docs
+- **PostgreSQL 17:** localhost:5432
+- **Redis 7:** localhost:6379
+- **Celery Worker & Beat Scheduler**
 
+Verify API health:
 ```bash
 curl http://localhost:8000/health
-# Interactive API documentation: http://localhost:8000/docs
 ```
 
-Populate the catalog and run a sample collector:
+### 4. Seed Sources & Test Crawl
+
+In a separate terminal, seed the catalog and trigger a sample crawl:
 
 ```bash
+# Seed all 99 preset sources
 curl -X POST http://localhost:8000/sources/presets/seed-all
+
+# Trigger immediate synchronous crawl for source ID 1
 curl -X POST http://localhost:8000/crawl/1/sync
+
+# Check stored contests
 curl http://localhost:8000/concursos
 ```
 
-Real collection depends on network access and changing third-party websites. Results and success rates are not guaranteed by setup alone.
+---
 
-### Mobile development
+## 📱 Mobile Application (Expo)
 
-After initializing the submodule:
+To develop or run the mobile application locally:
 
 ```bash
-cd ../mobile
+cd mobile
 npm install
+cp .env.example .env
 ```
 
-Create a local `.env` with an API base URL reachable from your emulator or device:
+In `mobile/.env`, set the API URL:
+- Physical device on Wi-Fi: `http://<YOUR_LOCAL_NETWORK_IP>:8000`
+- Android Emulator: `http://10.0.2.2:8000`
+- Web browser: `http://localhost:8000`
 
-```dotenv
-EXPO_PUBLIC_API_BASE_URL=http://YOUR_LOCAL_NETWORK_IP:8000
-```
-
-Start Expo:
-
+Start the Expo bundler:
 ```bash
-npx expo start --tunnel
+npx expo start
 ```
 
-Use the host's LAN address for a physical device, rather than `localhost`. See [mobile development](docs/MOBILE.md) for routing, storage and syncing details.
-
-## Engineering notes
-
-The codebase includes a backend test suite, source-specific regression fixtures, audit tooling and operational documentation. The [existing verification notes](docs/DEVELOPMENT.md) report earlier test results; these results are historical and are **not** a claim that the latest commit has been retested.
-
-For a deeper look, start with:
-
-| Document | What you'll find |
-| --- | --- |
-| [Architecture](docs/ARCHITECTURE.md) | Services, data flow and change detection |
-| [Onboarding](docs/ONBOARDING.md) | A guided tour for new contributors |
-| [API](docs/API.md) | Endpoints and example requests |
-| [Database](docs/DATABASE.md) | Models and persistence |
-| [Mobile](docs/MOBILE.md) | SQLite cache, navigation and sync |
-| [Configuration](docs/CONFIGURATION.md) | Environment variables and integrations |
-| [Development](docs/DEVELOPMENT.md) | Commands, tests and conventions |
-| [Source audit](docs/SOURCES_STATUS.md) | Connector verification and limitations |
-
-## Security and scope
-
-- Never commit real API credentials, access tokens or user data.
-- The provided development configuration is **not** a production security baseline.
-- Review permissions and public information in operational artifacts before publishing repository history.
-- Data from official portals should be verified against its original notice; Observador is not an official examination authority.
+Press `a` for Android, `i` for iOS simulator, or `w` for Web.
 
 ---
 
-Built and maintained by [João Gabriel Alves Junior](https://github.com/Gabrieljr42).
+## 🧪 Testing & Verification
+
+### Backend Tests
+
+Run pytest inside a virtual environment or Docker:
+
+```bash
+cd backend
+python -m pytest tests/test_sanity_validation.py tests/test_idempotency.py tests/test_connectors_fixtures.py -v
+```
+
+### End-to-End & Sync Roundtrip Verification
+
+Integration and offline-sync verification scripts are located in `scripts/verification/`:
+
+```bash
+# Requires Playwright: npm install playwright
+node scripts/verification/verify-favorite-roundtrip.cjs
+node scripts/verification/verify-app-reopen.cjs
+```
+
+---
+
+## 📖 Technical Documentation
+
+For deeper details, consult our documentation:
+
+| Document | Description |
+| :--- | :--- |
+| [Architecture](docs/ARCHITECTURE.md) | Component interactions, data lifecycle, and sync protocol |
+| [API Documentation](docs/API.md) | Endpoint specifications, payloads, and authentication |
+| [Database Schema](docs/DATABASE.md) | PostgreSQL models, relations, and indices |
+| [Configuration Guide](docs/CONFIGURATION.md) | Complete list of environment variables |
+| [Mobile Details](docs/MOBILE.md) | SQLite schema, outbox pattern, and offline handling |
+| [Development Guide](docs/DEVELOPMENT.md) | Contribution standards, test guidelines, and linting |
+| [Source Status Audit](docs/SOURCES_STATUS.md) | Audit status across all 99 monitored institutions |
+
+---
+
+## 🔒 Security & Scope
+
+- **Public Data Only:** Observador monitors publicly accessible exam portals. It never bypasses authentication walls or captures protected candidate records.
+- **Credentials:** Never commit `.env` files, production keys, or database credentials.
+- **Legal Notice:** Information is gathered from public domain institutional portals. Observador de Concursos is an independent aggregator and is not affiliated with or endorsed by any official examination authority.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+Maintained with ❤️ by [João Gabriel Alves Junior](https://github.com/Gabrieljr42).

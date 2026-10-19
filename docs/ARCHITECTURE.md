@@ -132,7 +132,7 @@ Detalhes em [MOBILE.md](MOBILE.md). O app nunca consulta a API para listagens: `
 
 - `docs/SOURCES_STATUS.md`, `docs/LIVE_AUDIT_ISSUES.md`, `docs/LIVE_SOURCES_AUDIT.md`, `docs/source_research_batches/` — snapshots da pesquisa dos portais.
 - `backend/docs/`: `CRAWL_INVESTIGATION_2026-08-30.md`, `LIVE_AUDIT_DEEP_RESOLUTION.md`, `LIVE_AUDIT_ISSUES.md`, `LIVE_SOURCES_AUDIT.md`, `SOURCES_STATUS.md`.
-- `SOURCE_SITE_RESEARCH_AND_CODEX_RUNBOOK.md` (raiz) — runbook da pesquisa externa das 99 fontes (contagens = snapshot de 30/08/2026, não estado atual).
+- `docs/SOURCE_SITE_RESEARCH_AND_CODEX_RUNBOOK.md` — runbook da pesquisa externa das 99 fontes (contagens = snapshot de 30/08/2026, não estado atual).
 - `backend/audit_live_99*.json`, `live_evidence.json` — evidências geradas pelos scripts (não editar à mão).
 
 ## Integrações externas
