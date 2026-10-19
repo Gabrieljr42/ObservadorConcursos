@@ -1,128 +1,144 @@
 # Observador de Concursos
 
-Agregador de concursos públicos brasileiros: o **backend** coleta editais nos portais das bancas, versiona mudanças e gera notificações; o **mobile** (Expo/React Native) funciona **offline-first** e sincroniza com o servidor quando há rede.
+**A Brazilian public-exam intelligence platform: source monitoring, structured notices, change tracking and a mobile experience designed to work offline.**
 
-## Projeto at a glance
+Observador de Concursos brings together announcements from examination boards and public institutions. Its backend retrieves and processes notices, tracks meaningful changes and produces notifications. Its React Native app keeps locally synchronized data available even when the device loses connectivity.
 
-| Parte | Stack | Entrada principal |
-|---|---|---|
-| `backend/` | FastAPI + PostgreSQL 17 + Redis + Celery (worker/beat) + crawlers (httpx/Playwright) | `backend/app/main.py` |
-| `mobile/` | Expo SDK 54 + React Native + TypeScript + expo-router + SQLite local | `mobile/app/_layout.tsx` |
+> **Status:** active, evolving project. The catalog currently defines **99 sources**, but catalog inclusion does **not** mean every source is live, reliable or fully audited. Consult the [source status](docs/SOURCES_STATUS.md) and [operational documentation](docs/) before interpreting coverage.
 
-- Catálogo de **99 fontes** (bancas e seleções institucionais) em `backend/app/connectors/registry.py`.
-- Autenticação própria: JWT HS256 + refresh tokens persistidos (`backend/app/auth.py`).
-- Mobile lê tudo do SQLite local (`observador.db`) e sincroniza via `GET /sync/checkpoint`.
+## Why it exists
 
-## Quick start — backend
+Public examination information is scattered across different portals, document formats and frequently changing pages. Observador aims to make that information easier to discover and follow, while preserving visibility into the origin and status of collected data.
 
-Pré-requisitos: Docker + Docker Compose.
+## Architecture at a glance
 
-```powershell
-cd backend
-copy .env.example .env   # ajuste SECRET_KEY
+| Component | Stack | Responsibility |
+| --- | --- | --- |
+| API | Python, FastAPI | REST endpoints, authentication, listings and synchronization |
+| Collectors | HTTP clients, Playwright, PDF parsing | Retrieve and structure source information |
+| Background processing | Celery and Redis | Schedule and distribute crawling tasks |
+| Database | PostgreSQL 17 | Persist announcements, versions and collection diagnostics |
+| Mobile | Expo, React Native, TypeScript, SQLite | Offline-first browsing, saved items and synchronization |
+| Runtime | Docker Compose | API, worker, scheduler, PostgreSQL and Redis |
+
+```text
+Exam boards / institutions
+            |
+      crawler workers <---- Celery beat
+            |                |
+     parsing + validation    Redis
+            |
+       PostgreSQL <-------- FastAPI
+                               |
+                        /sync/checkpoint
+                               |
+                       React Native app
+                       local SQLite cache
+```
+
+## Capabilities
+
+- **Multi-source monitoring:** a catalog of 99 configured source definitions with dedicated and configurable connectors.
+- **Change awareness:** deduplication, version history and significant-change notifications.
+- **Document processing:** extraction of embedded text and structured fields from notices, with source-specific parsing and diagnostics.
+- **Operational visibility:** collection runs and verification artifacts to help distinguish successful results, legitimate empty results and failures.
+- **Offline-first mobile:** local SQLite storage, synchronization checkpoints and an outbox for changes made without connectivity.
+- **REST API:** registration, login, source discovery, listings, publication/version history and sync endpoints.
+
+Source quality varies. Scrapers may be blocked or break when institutional pages change, and scanned PDFs may require separate OCR processing. See the documented limitations.
+
+## Repository map
+
+```text
+backend/               FastAPI, Celery tasks, connectors, tests
+docs/                  Architecture, API, configuration and audits
+mobile/                Git submodule for the Expo application
+scripts/               Diagnostics and operational helpers
+README.md              Project overview
+```
+
+**Note on the mobile code:** `mobile/` is a Git submodule. After cloning, initialize submodules; the companion repository is [mobileObservador](https://github.com/Gabrieljr42/mobileObservador). Public access to the backend repository alone does not grant access to a private submodule.
+
+## Local quick start
+
+**Requirements:** Git, Docker and Docker Compose.
+
+```bash
+git clone --recurse-submodules https://github.com/Gabrieljr42/ObservadorConcursos.git
+cd ObservadorConcursos/backend
+cp .env.example .env
+```
+
+Replace the example `SECRET_KEY` in `.env` with a secure, randomly generated value. Then start the services:
+
+```bash
 docker compose up --build
 ```
 
-Confirmar que subiu:
+With the API running:
 
-```powershell
-Invoke-RestMethod http://localhost:8000/health
-# status: ok
+```bash
+curl http://localhost:8000/health
+# Interactive API documentation: http://localhost:8000/docs
 ```
 
-Swagger: `http://localhost:8000/docs`
+Populate the catalog and run a sample collector:
 
-Popular o banco e rodar a primeira coleta (dentro do `backend/`):
-
-```powershell
-# Cadastra/atualiza as 99 fontes do catálogo
-Invoke-RestMethod -Method POST http://localhost:8000/sources/presets/seed-all
-
-# Coleta síncrona de uma fonte (troque 1 pelo id desejado)
-Invoke-RestMethod -Method POST http://localhost:8000/crawl/1/sync
-
-# Listar concursos
-Invoke-RestMethod http://localhost:8000/concursos
+```bash
+curl -X POST http://localhost:8000/sources/presets/seed-all
+curl -X POST http://localhost:8000/crawl/1/sync
+curl http://localhost:8000/concursos
 ```
 
-Criar usuário e autenticar:
+Real collection depends on network access and changing third-party websites. Results and success rates are not guaranteed by setup alone.
 
-```powershell
-$body = @{ name = "Seu Nome"; email = "voce@test.com"; password = "123456" } | ConvertTo-Json
-$auth = Invoke-RestMethod -Method POST -Uri "http://localhost:8000/auth/register" -ContentType "application/json" -Body $body
-$headers = @{ Authorization = "Bearer $($auth.access_token)" }
-Invoke-RestMethod -Method GET -Uri "http://localhost:8000/auth/me" -Headers $headers
-```
+### Mobile development
 
-## Quick start — mobile
+After initializing the submodule:
 
-Pré-requisitos: Node.js LTS + app Expo Go no celular (ou emulador).
-
-```powershell
-cd mobile
+```bash
+cd ../mobile
 npm install
+```
+
+Create a local `.env` with an API base URL reachable from your emulator or device:
+
+```dotenv
+EXPO_PUBLIC_API_BASE_URL=http://YOUR_LOCAL_NETWORK_IP:8000
+```
+
+Start Expo:
+
+```bash
 npx expo start --tunnel
 ```
 
-O app precisa alcançar a API. Defina em `mobile/.env`:
+Use the host's LAN address for a physical device, rather than `localhost`. See [mobile development](docs/MOBILE.md) for routing, storage and syncing details.
 
-```text
-EXPO_PUBLIC_API_BASE_URL=http://SEU_IP_LOCAL:8000
-```
+## Engineering notes
 
-- Celular físico na mesma rede: use o IP LAN da máquina (ex.: `http://192.168.0.105:8000`).
-- Emulador Android: `http://10.0.2.2:8000`.
-- `localhost` só funciona no navegador (`npx expo start --web`).
+The codebase includes a backend test suite, source-specific regression fixtures, audit tooling and operational documentation. The [existing verification notes](docs/DEVELOPMENT.md) report earlier test results; these results are historical and are **not** a claim that the latest commit has been retested.
 
-> O `mobile/README.md` anterior era um template genérico e foi substituído. O fluxo oficial é o descrito aqui.
+For a deeper look, start with:
 
-## Estrutura do repositório
+| Document | What you'll find |
+| --- | --- |
+| [Architecture](docs/ARCHITECTURE.md) | Services, data flow and change detection |
+| [Onboarding](docs/ONBOARDING.md) | A guided tour for new contributors |
+| [API](docs/API.md) | Endpoints and example requests |
+| [Database](docs/DATABASE.md) | Models and persistence |
+| [Mobile](docs/MOBILE.md) | SQLite cache, navigation and sync |
+| [Configuration](docs/CONFIGURATION.md) | Environment variables and integrations |
+| [Development](docs/DEVELOPMENT.md) | Commands, tests and conventions |
+| [Source audit](docs/SOURCES_STATUS.md) | Connector verification and limitations |
 
-```text
-ObservadorDeCursos/
-  README.md            # este arquivo
-  docs/                # documentação por tema (arquitetura, API, banco, guias)
-    ARCHITECTURE.md
-    DATABASE.md
-    API.md
-    MOBILE.md
-    CONFIGURATION.md
-    DEVELOPMENT.md
-    DEPLOYMENT_TROUBLESHOOTING.md
-    ONBOARDING.md
-    LIVE_*.md / SOURCES_STATUS.md   # auditoria das fontes (material existente, preservado)
-  backend/             # API + workers + crawlers
-    app/               # main.py, models.py, services.py, auth.py, connectors/, pdf/
-    tests/             # pytest (SQLite em memória; testes live são opt-in)
-    scripts/           # auditoria live e empacotamento
-    docker-compose.yml # api, worker, scheduler, postgres, redis (+ pgadmin opcional)
-  mobile/              # app Expo offline-first
-    app/               # rotas expo-router (onboarding, login, (tabs)/, concurso/[id])
-    src/api|db|sync|storage|providers/  # acesso local + sincronização + sessão
-  scripts/             # utilitários na raiz (auditoria, empacotamento)
-```
+## Security and scope
 
-## Documentação
+- Never commit real API credentials, access tokens or user data.
+- The provided development configuration is **not** a production security baseline.
+- Review permissions and public information in operational artifacts before publishing repository history.
+- Data from official portals should be verified against its original notice; Observador is not an official examination authority.
 
-| Documento | Conteúdo |
-|---|---|
-| [docs/ONBOARDING.md](docs/ONBOARDING.md) | **Comece aqui.** Checklist da primeira execução, ordem de leitura e primeira alteração guiada |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Serviços, fluxos de coleta/sync/alertas e mapa do repositório |
-| [docs/API.md](docs/API.md) | Rotas, auth, exemplos de request/response |
-| [docs/DATABASE.md](docs/DATABASE.md) | Tabelas, relacionamentos, migrações e reset local |
-| [docs/MOBILE.md](docs/MOBILE.md) | App offline-first: telas, SQLite, outbox e background sync |
-| [docs/CONFIGURATION.md](docs/CONFIGURATION.md) | Variáveis de ambiente e serviços externos |
-| [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Comandos, padrões de código, testes e como contribuir |
-| [docs/DEPLOYMENT_TROUBLESHOOTING.md](docs/DEPLOYMENT_TROUBLESHOOTING.md) | O que existe de deploy/operação + falhas comuns |
+---
 
-Guias específicos já existentes e preservados: [backend/README.md](backend/README.md) (fluxo IBFC e extração de PDF), auditoria das fontes em [docs/SOURCES_STATUS.md](docs/SOURCES_STATUS.md) e `backend/docs/`.
-
-## Status de verificação
-
-Testado durante a escrita desta documentação:
-
-- `pytest -q -m "not live"` no `backend/`: **145 passed, 2 deselected**.
-- `docker compose config`: válido.
-- `npx tsc --noEmit` no `mobile/`: 1 erro pré-existente em `components/ExternalLink.tsx` (tipo de `href` com `typedRoutes`) — ver [troubleshooting](docs/DEPLOYMENT_TROUBLESHOOTING.md).
-
-Não testado (requer rede/containers ou decisão do mantenedor): `docker compose up`, `expo start`, scripts de auditoria live (`-m live`), URLs de produção (`https://api.observador.tech`).
+Built and maintained by [João Gabriel Alves Junior](https://github.com/Gabrieljr42).
