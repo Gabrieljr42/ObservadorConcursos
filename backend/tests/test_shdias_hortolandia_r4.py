@@ -18,7 +18,7 @@ from app.tenderproof.shdias_hortolandia import (
 )
 
 
-PDF = Path("docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf")
+PDF = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T012/shdias_open/artifacts/01_Edital_Completo_2026_07_23_08_20_13.pdf")
 
 
 @pytest.fixture()

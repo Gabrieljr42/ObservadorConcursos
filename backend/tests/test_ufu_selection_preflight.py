@@ -13,8 +13,8 @@ from app.tenderproof.ufu_selection_parser import (ARTIFACT_ID, DETAIL_URL, DOCUM
 from test_tenderproof_publication import env  # noqa: F401
 
 HTML = Path("backend/tests/fixtures/tenderproof_batch30_institutional/ufu_selection-cycle1-detail-9088337b8d.html")
-R3 = Path("docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r3.json")
-R10 = Path("docs/execucao/evidencias/T012/ufu_selection/reviewed-run-r10.json")
+R3 = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T012/ufu_selection/live-envelope-ready-r3.json")
+R10 = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T012/ufu_selection/reviewed-run-r10.json")
 
 
 def test_ufu_current_detail_is_strongly_pinned_and_fail_closed():

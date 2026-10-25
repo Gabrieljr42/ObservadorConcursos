@@ -37,7 +37,7 @@ from app.tenderproof.contracts import (
 from app.tenderproof.validation import title_is_corroborated
 
 METHOD = "deterministic-regex"
-METHOD_VERSION = "tenderproof-fields/1.22"
+METHOD_VERSION = "tenderproof-fields/1.23"
 
 _SALARY_CTX = re.compile(r"sal[aá]rio|vencimento|remunera|subs[ií]dio|provento|retribui", re.I)
 _FEE_BENEFIT_CTX = re.compile(
@@ -818,6 +818,26 @@ def _extract_titulo(candidate, artifact, pages) -> ExtractedField:
 
 
 def _extract_orgao(candidate, artifact, pages) -> ExtractedField:
+    if candidate.source == 'access_open':
+        # ACCESS also hosts selections issued by institutes, whose mastheads
+        # do not match the municipal issuer patterns below. Require the first
+        # page, a nearby selection heading and the same institution observed
+        # in the official candidate title before accepting its name.
+        title = ' '.join((candidate.title_observed or '').casefold().split())
+        for page in pages:
+            if page.page_number != 1 or page.error or page.truncated:
+                continue
+            lines = page.text.splitlines()[:12]
+            for index, line in enumerate(lines):
+                issuer = ' '.join(line.split())
+                if not re.fullmatch(r'INSTITUTO\s+[A-ZÀ-Ý][A-ZÀ-Ý .\-–]{10,180}', issuer):
+                    continue
+                name = re.split(r'\s+[–-]\s+', issuer, maxsplit=1)[0]
+                context = '\n'.join(lines[index:index + 4])
+                if name.casefold() not in title or not re.search(r'\b(?:CONCURSO P[ÚU]BLICO|PROCESSO SELETIVO)\b', context):
+                    continue
+                return ExtractedField(field_name='orgao', state=FieldState.SUPPORTED,
+                    value=issuer, evidence=[_evidence(artifact=artifact, page=page, snippet=context)])
     if candidate.source == 'fumarc_open':
         for page in pages:
             if page.page_number != 1 or page.error or page.truncated:

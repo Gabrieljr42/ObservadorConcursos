@@ -12,7 +12,7 @@ from app.tenderproof.omni_osvaldo_cruz_jobs import (
 from app.tenderproof.reviewed_run_import import ReviewedRun, _run_id, import_reviewed_run
 from app.tenderproof.store import TenderProofStore
 
-PDF = Path("../docs/execucao/evidencias/T010/id16.pdf")
+PDF = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id16.pdf")
 
 
 def test_id16_extract_fields_uses_pinned_parser_and_relative_store_path(monkeypatch, tmp_path):
@@ -58,6 +58,8 @@ def test_id16_reviewed_envelope_is_deterministic_for_same_stored_artifact():
     content = PDF.read_bytes()
     payload_1 = build_reviewed_payload(content, observed_at="2026-09-13T00:00:00Z")
     payload_2 = build_reviewed_payload(content, observed_at="2026-09-13T00:00:00Z")
-    assert _run_id(ReviewedRun.model_validate(payload_1)) == "tp-reviewed-1f9a51cc55dc7312c5153645b45ab9bc"
+    assert _run_id(ReviewedRun.model_validate(payload_1)) == "tp-reviewed-31aab6eedecc18062fb5469e42d194d6"
     assert _run_id(ReviewedRun.model_validate(payload_1)) == _run_id(ReviewedRun.model_validate(payload_2))
+    other_owner = build_reviewed_payload(content, owner_user_id=2, observed_at="2026-09-13T00:00:00Z")
+    assert _run_id(ReviewedRun.model_validate(payload_1)) != _run_id(ReviewedRun.model_validate(other_owner))
     assert import_reviewed_run(payload_1, TenderProofStore(), dry_run=True)["run_id"] == _run_id(ReviewedRun.model_validate(payload_1))

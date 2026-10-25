@@ -49,7 +49,7 @@ Tabela rápida aparelho × URL: navegador `http://localhost:8000`; físico `http
 | Redis 7 | container `redis` (volume `redis_data`, porta 6379; DB 0 broker/lock, DB 1 resultados) | não configurado no repo |
 | pgAdmin | container `pgadmin` só com `--profile tools` (porta 5050) | n/a |
 | Portais das 99 bancas | leitura pública via crawlers (respeitar robots/termos de cada portal; alguns exigem Playwright/Cloudflare bypass) | mesmo |
-| `https://api.observador.tech` | — | URL de produção referenciada no `mobile/.env.example`, `eas.json` e fallback do `client.ts`. **Não verificado**: sem DNS/conectividade testada aqui; confirmar com o mantenedor |
+| `https://api.observador.tech` | túnel Cloudflare para o computador local do mantenedor | Referenciada no `mobile/.env.example`, `eas.json` e fallback do `client.ts`. Depende do computador, API e túnel ativos; não representa hospedagem permanente. Em 25/10/2026 retornou HTTP 530 com o túnel indisponível. Para desenvolvimento, defina a URL local adequada ao dispositivo |
 | EAS (`eas.json`, `projectId` em `app.json`) | builds `preview` (APK) e `production` (AAB) | requer conta Expo + credenciais; nunca executado neste trabalho |
 
 Nada no código envia e-mail, SMS ou push: “notificações” são registros internos. Quaisquer segredos futuros (Sentry, provedores de push) devem entrar via `.env` + `.env.example` com placeholder, nunca com valor real.

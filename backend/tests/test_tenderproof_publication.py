@@ -99,7 +99,7 @@ def test_access_birigui_reviewed_run_revalidates_cargos_and_material_diff(env):
     contest.orgao = "Prefeitura Municipal De Birigui-Sp"
     contest.edital_numero = "179/2026"
     contest.link_pagina = "https://access.selecao.net.br/informacoes/183/"
-    content = Path("../docs/execucao/evidencias/T010/id1.pdf").read_bytes()
+    content = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id1.pdf").read_bytes()
     document_url = "https://anexos-r2.selecao.net.br/uploads/422/concursos/183/anexos/7dec9d89-d5ee-4948-bddb-46a2496f13f5.pdf"
     artifact = Artifact(artifact_id="art-5c4c41a458", sha256=hashlib.sha256(content).hexdigest(),
                         byte_len=len(content), url_requested=document_url,
@@ -124,7 +124,7 @@ def test_access_birigui_reviewed_run_revalidates_cargos_and_material_diff(env):
         "artifact": {"artifact_id": artifact.artifact_id, "sha256": artifact.sha256, "byte_len": artifact.byte_len,
                       "url_requested": document_url, "url_final": document_url,
                       "content_type": "application/pdf", "downloaded_at": "2026-09-08T16:11:28.760592Z",
-                      "content_path": "../docs/execucao/evidencias/T010/id1.pdf"},
+                      "content_path": str(Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id1.pdf")},
         "fields": imported_fields,
     }
     imported = __import__("app.tenderproof.reviewed_run_import", fromlist=["import_reviewed_run"])

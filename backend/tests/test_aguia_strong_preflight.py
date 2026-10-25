@@ -11,7 +11,7 @@ from sqlalchemy import func, select
 from app.tenderproof.aguia_balsamo import EXPECTED_BYTES, EXPECTED_PAGES, EXPECTED_SHA256, derive, parse, preflight
 from test_tenderproof_publication import env  # noqa: F401
 
-PDF = Path("docs/execucao/evidencias/T012/aguia_open/artifacts/aguia-43.pdf")
+PDF = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T012/aguia_open/artifacts/aguia-43.pdf")
 
 
 def test_strong_preflight_and_semantic_revalidation_are_pinned():

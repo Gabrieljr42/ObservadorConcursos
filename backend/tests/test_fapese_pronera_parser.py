@@ -77,7 +77,7 @@ def test_id14_fields_route_and_isolated_proposal(env):
     db.commit()
     eligible, blocked = pub._revalidate(run, contest, source, store)
     assert list(eligible) == ["cargos"]
-    assert set(blocked) == {"titulo", "orgao", "edital_numero", "prova_data", "inscricao_inicio", "inscricao_fim"}
+    assert set(blocked) == {"titulo", "orgao", "edital_numero", "prova_data", "inscricao_inicio", "inscricao_fim", "taxa"}
     assert all(item["vagas_imediatas"] is None and item["cadastro_reserva"] is None for item in eligible["cargos"])
     proposal = pub.create_proposal(db, run=run, concurso_id=contest.id, user=user, store=store)
     assert proposal["state"] == "proposed"

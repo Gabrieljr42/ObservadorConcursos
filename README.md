@@ -191,6 +191,8 @@ Press `a` for Android, `i` for iOS simulator, or `w` for Web.
 
 ## 🧪 Testing & Verification
 
+[Verificação local de 25/10/2026](docs/VERIFICACAO-REAL-2026-10-25.md): coleta oficial ACCESS/IPSEMG, publicação revisada sem duplicação, busca e detalhe no navegador, favoritos e alertas com a origem indisponível e sincronização após reconectar. O relatório distingue esse fluxo web dos testes ainda pendentes em dispositivos nativos.
+
 ### Backend Tests
 
 Run pytest inside a virtual environment or Docker:

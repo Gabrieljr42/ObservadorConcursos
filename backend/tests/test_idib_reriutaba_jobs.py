@@ -7,7 +7,7 @@ from app.tenderproof.processing import pinned_page_limit, is_pinned_id8
 
 
 SHA = "fef17aa38c078810cbfedfa999782c3d02318bd9e5fa764502b5c4bb116ab28a"
-PDF = Path("docs/execucao/evidencias/T010/id8.pdf")
+PDF = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id8.pdf")
 
 
 def _artifact(sha=SHA):

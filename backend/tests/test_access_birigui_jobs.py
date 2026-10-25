@@ -16,7 +16,7 @@ def _evidence(**kwargs):
 
 
 def test_birigui_targeted_extractor_is_supported_and_exact():
-    text = Path("../docs/execucao/evidencias/T010/id1.txt").read_text(encoding="utf-8")
+    text = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id1.txt").read_text(encoding="utf-8")
     page = text.split("PAGE 2", 1)[1].split("PAGE 3", 1)[0]
     result = extract_birigui_jobs(_artifact(), [PageText(artifact_id="art-5c4c41a458", page_number=2, text=page)], _evidence, source="access_open", external_id="183")
     assert result.state.value == "supported"
@@ -30,7 +30,7 @@ def test_birigui_targeted_extractor_is_supported_and_exact():
 
 
 def test_birigui_targeted_extractor_fails_closed_on_sha_or_structure():
-    text = Path("../docs/execucao/evidencias/T010/id1.txt").read_text(encoding="utf-8")
+    text = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id1.txt").read_text(encoding="utf-8")
     page = text.split("PAGE 2", 1)[1].split("PAGE 3", 1)[0]
     failed_sha = extract_birigui_jobs(_artifact("0" * 64), [PageText(artifact_id="x", page_number=2, text=page)], _evidence, source="access_open", external_id="183")
     assert failed_sha is None

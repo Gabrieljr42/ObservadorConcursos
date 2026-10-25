@@ -21,8 +21,6 @@ class SourceOut(BaseModel):
     list_url: str | None
     source_type: str
     active: bool
-    revoked_at: datetime | None
-    revoke_reason: str | None
     frequency_minutes: int
     created_at: datetime
     updated_at: datetime

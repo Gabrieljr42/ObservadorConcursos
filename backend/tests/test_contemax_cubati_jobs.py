@@ -89,7 +89,7 @@ def test_extract_fields_routes_only_pinned_id17_targeted_jobs():
 
 
 def test_cubati_parser_validates_preserved_primary_pdf():
-    pdf = Path("../docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf")
+    pdf = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf")
     content = pdf.read_bytes()
     assert len(content) == 1_094_969
     artifact = _artifact().model_copy(update={"byte_len": len(content)})
@@ -128,7 +128,7 @@ def test_cubati_parser_validates_preserved_primary_pdf():
 
 def test_real_pdf_reviewed_run_dry_run_and_isolated_proposal(env):
     db, _, user, contest, _, store = env
-    pdf = Path("../docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf")
+    pdf = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T011/artifacts/T011-ID17-contemax-001-2024-art-06e60acb05.pdf")
     content = pdf.read_bytes()
     detail_url = "https://www.contemaxconsultoria.com.br/site/concursos-em-andamento/prefeitura-municipal-de-cubati-pb"
     document_url = "https://www.contemaxconsultoria.com.br/site/wp-content/uploads/2024/09/Edital-CUBATI.pdf"
@@ -176,12 +176,14 @@ def test_real_pdf_reviewed_run_dry_run_and_isolated_proposal(env):
 
 
 def test_checked_in_reviewed_run_envelope_is_deterministic():
-    path = Path("../docs/execucao/evidencias/T011/T011-reviewed-run-id17.json")
+    path = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T011/T011-reviewed-run-id17.json")
     raw = path.read_bytes()
     payload = json.loads(raw)
     from app.tenderproof.reviewed_run_import import ReviewedRun, _run_id
     model = ReviewedRun.model_validate(payload)
-    assert hashlib.sha256(raw).hexdigest() == "60afc4ad5b0f8eba96def9817e04f994b9abafad3819815fd8ee392ce3182174"
-    assert _run_id(model) == "tp-reviewed-b64ff5228138c8157f8c5e4960046c79"
+    # Git checkouts may use LF or CRLF; pin the same document content on both.
+    assert hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest() == "cf8e8f6ae54896e891bc976ae9891e541758974ca81c82217f08fb51544d473d"
+    assert _run_id(model) == "tp-reviewed-049f715cb7d94621711aa666392fb9cb"
+    assert _run_id(model) != _run_id(model.model_copy(update={"owner_user_id": 2}))
     assert payload["owner_user_id"] == 1 and payload["reference_only"] is True
     assert [field["field_name"] for field in payload["fields"]] == ["titulo", "orgao", "edital_numero", "cargos"]

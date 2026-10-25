@@ -61,4 +61,4 @@ jobs:
           CELERY_RESULT_BACKEND: redis://localhost:6379/1
           SECRET_KEY: ci-test-secret-key-32-characters-minimum!
         run: |
-          pytest -q tests/test_sanity_validation.py tests/test_idempotency.py tests/test_connectors_fixtures.py
+          pytest -q tests/test_sanity_validation.py tests/test_idempotency.py tests/test_connectors_fixtures.py tests/test_source_response.py tests/test_access_institute_identity.py

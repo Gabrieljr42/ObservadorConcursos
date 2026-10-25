@@ -5,7 +5,7 @@ from app.tenderproof.fields import extract_fields
 from app.tenderproof.processing import extract_pages_isolated
 
 
-PDF = Path("docs/execucao/evidencias/T010/id7.pdf")
+PDF = (Path(__file__).resolve().parents[2] / "docs/execucao/evidencias/T010/id7.pdf")
 SHA = "00dc6e0d8e560b8b0a5aae557016d7e6a169b1ebc00aeb31d7ff95babf497b2a"
 URL = "https://anexos-r2.selecao.net.br/uploads/567/concursos/2868/anexos/6b72e3c6-333b-49b5-b871-801295856d49.pdf"
 
